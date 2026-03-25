@@ -59,141 +59,95 @@ export async function getFilteredRecipes(
   let categoryFilterIds: string[] | null = null;
   let modelFilterIds: string[] | null = null;
 
-  const categorySlugs = [...(flavor ?? []), ...(dietary ?? [])];
-  if (categorySlugs.length > 0) {
-    const { data: cats } = await client
-      .from('categories')
-      .select('id')
-      .in('slug', categorySlugs) as { data: { id: string }[] | null };
-    if (cats && cats.length > 0) {
-      const { data: rcLinks } = await client
-        .from('recipe_categories')
-        .select('recipe_id')
-        .in('category_id', cats.map((c) => c.id)) as { data: { recipe_id: string }[] | null };
-      categoryFilterIds = [...new Set((rcLinks ?? []).map((r) => r.recipe_id))];
-    } else {
-      categoryFilterIds = [];
-    }
-  }
-
-  if (model && model.length > 0) {
-    const { data: models } = await client
-      .from('creami_models')
-      .select('id')
-      .in('slug', model) as { data: { id: string }[] | null };
-    if (models && models.length > 0) {
-      const { data: rmLinks } = await client
-        .from('recipe_models')
-        .select('recipe_id')
-        .in('model_id', models.map((m) => m.id)) as { data: { recipe_id: string }[] | null };
-      modelFilterIds = [...new Set((rmLinks ?? []).map((r) => r.recipe_id))];
-    } else {
-      modelFilterIds = [];
-    }
-  }
-
-  // Intersect category and model filter IDs
-  let constrainedIds: string[] | null = null;
-  if (categoryFilterIds !== null && modelFilterIds !== null) {
-    const modelSet = new Set(modelFilterIds);
-    constrainedIds = categoryFilterIds.filter((id) => modelSet.has(id));
-  } else if (categoryFilterIds !== null) {
-    constrainedIds = categoryFilterIds;
-  } else if (modelFilterIds !== null) {
-    constrainedIds = modelFilterIds;
-  }
-
-  // Early return if junction filters produced zero results
-  if (constrainedIds !== null && constrainedIds.length === 0) {
-    return { recipes: [], total: 0, facets: {} };
-  }
-
-  // Step 2: Build main query
-  let query = client
-    .from('recipes')
-    .select('id, title, slug, description, difficulty, base_type, hero_image_url, avg_rating, rating_count, prep_time_minutes', { count: 'exact' })
-    .eq('status', 'published');
-
-  // Text search — search both English and translated titles/descriptions
+  // Step 1: Resolve search IDs (for text search across translations)
+  let searchIds: string[] | null = null;
   if (q) {
-    let searchIds: string[] | null = null;
+    const ids = new Set<string>();
 
-    // Search translations table for non-English locales
+    // Search English titles/descriptions
+    let enPage = 0;
+    while (true) {
+      const { data: batch } = await client
+        .from('recipes')
+        .select('id')
+        .eq('status', 'published')
+        .or(`title.ilike.%${q}%,description.ilike.%${q}%`)
+        .range(enPage * 1000, (enPage + 1) * 1000 - 1) as { data: { id: string }[] | null };
+      if (!batch || batch.length === 0) break;
+      for (const r of batch) ids.add(r.id);
+      if (batch.length < 1000) break;
+      enPage++;
+    }
+
+    // Also search translations if non-English
     if (locale !== 'en') {
-      const { data: transMatches } = await client
-        .from('recipe_translations')
-        .select('recipe_id')
-        .eq('locale', locale)
-        .or(`title.ilike.%${q}%,description.ilike.%${q}%`) as { data: { recipe_id: string }[] | null };
-      if (transMatches && transMatches.length > 0) {
-        searchIds = transMatches.map((r) => r.recipe_id);
+      let trPage = 0;
+      while (true) {
+        const { data: batch } = await client
+          .from('recipe_translations')
+          .select('recipe_id')
+          .eq('locale', locale)
+          .or(`title.ilike.%${q}%,description.ilike.%${q}%`)
+          .range(trPage * 1000, (trPage + 1) * 1000 - 1) as { data: { recipe_id: string }[] | null };
+        if (!batch || batch.length === 0) break;
+        for (const r of batch) ids.add(r.recipe_id);
+        if (batch.length < 1000) break;
+        trPage++;
       }
     }
 
-    // Also search English titles/descriptions
-    const { data: enMatches } = await client
-      .from('recipes')
-      .select('id')
-      .eq('status', 'published')
-      .or(`title.ilike.%${q}%,description.ilike.%${q}%`) as { data: { id: string }[] | null };
-    const enIds = (enMatches ?? []).map((r) => r.id);
-
-    // Combine both result sets
-    const allMatchIds = [...new Set([...(searchIds ?? []), ...enIds])];
-    if (allMatchIds.length === 0) {
-      return { recipes: [], total: 0, facets: {} };
-    }
-    query = query.in('id', allMatchIds);
+    searchIds = ids.size > 0 ? [...ids] : [];
+    if (searchIds.length === 0) return { recipes: [], total: 0, facets: {} };
   }
 
-  // Base type filter (slug → name)
-  if (base && base.length > 0) {
-    const names = base.map((s) => BASE_TYPE_FROM_SLUG[s]).filter(Boolean);
-    if (names.length > 0) query = query.in('base_type', names);
-  }
+  // Step 2: Use Postgres RPC for filtered, paginated recipe IDs
+  // This handles junction table joins server-side, avoiding URL length limits
+  const categorySlugs = [...(flavor ?? []), ...(dietary ?? [])];
+  const baseTypeNames = (base && base.length > 0)
+    ? base.map((s) => BASE_TYPE_FROM_SLUG[s]).filter(Boolean)
+    : null;
 
-  // Difficulty filter
-  if (difficulty && difficulty.length > 0) {
-    query = query.in('difficulty', difficulty);
-  }
+  const { data: rpcResult, error: rpcError } = await client.rpc('get_filtered_recipe_ids', {
+    p_status: 'published',
+    p_base_types: baseTypeNames,
+    p_difficulties: (difficulty && difficulty.length > 0) ? difficulty : null,
+    p_category_slugs: categorySlugs.length > 0 ? categorySlugs : null,
+    p_model_slugs: (model && model.length > 0) ? model : null,
+    p_min_rating: (rating && rating > 0) ? rating : null,
+    p_search_ids: searchIds,
+    p_sort: sort,
+    p_limit: pageSize,
+    p_offset: (page - 1) * pageSize,
+  }) as { data: { recipe_id: string; total_count: number }[] | null; error: { message: string } | null };
 
-  // Rating filter
-  if (rating && rating > 0) {
-    query = query.gte('avg_rating', rating);
-  }
-
-  // Junction table filter (category + model IDs)
-  if (constrainedIds !== null) {
-    query = query.in('id', constrainedIds);
-  }
-
-  // Sort
-  switch (sort) {
-    case 'rating': query = query.order('avg_rating', { ascending: false }); break;
-    case 'reviews': query = query.order('rating_count', { ascending: false }); break;
-    case 'prep-time': query = query.order('prep_time_minutes', { ascending: true, nullsFirst: false }); break;
-    default: query = query.order('published_at', { ascending: false }); break;
-  }
-
-  // Pagination
-  const from = (page - 1) * pageSize;
-  const to = from + pageSize - 1;
-  query = query.range(from, to);
-
-  const { data: rawData, count, error } = await query;
-  if (error || !rawData) {
-    console.warn('getFilteredRecipes error:', error?.message);
+  if (rpcError || !rpcResult) {
+    console.warn('getFilteredRecipes RPC error:', rpcError?.message);
     return { recipes: [], total: 0, facets: {} };
   }
 
-  const data = rawData as unknown as { id: string; title: string; slug: string; description: string; difficulty: string; base_type: string; hero_image_url: string | null; avg_rating: number; rating_count: number; prep_time_minutes: number | null }[];
-  const recipeIds = data.map((r) => r.id);
-  if (recipeIds.length === 0) return { recipes: [], total: count ?? 0, facets: {} };
+  const totalCount = rpcResult.length > 0 ? Number(rpcResult[0].total_count) : 0;
+  const recipeIds = rpcResult.map((r) => r.recipe_id);
+
+  if (recipeIds.length === 0) return { recipes: [], total: totalCount, facets: {} };
+
+  // Step 3: Fetch full recipe data for just this page of IDs (max 48)
+  const { data: rawData } = await client
+    .from('recipes')
+    .select('id, title, slug, description, difficulty, base_type, hero_image_url, avg_rating, rating_count, prep_time_minutes')
+    .in('id', recipeIds) as { data: { id: string; title: string; slug: string; description: string; difficulty: string; base_type: string; hero_image_url: string | null; avg_rating: number; rating_count: number; prep_time_minutes: number | null }[] | null };
+
+  if (!rawData) return { recipes: [], total: totalCount, facets: {} };
+
+  // Preserve the sort order from the RPC
+  const orderMap = new Map(recipeIds.map((id, i) => [id, i]));
+  const data = rawData.sort((a, b) => (orderMap.get(a.id) ?? 0) - (orderMap.get(b.id) ?? 0));
+  const pageIds = data.map((r) => r.id);
+  if (pageIds.length === 0) return { recipes: [], total: totalCount, facets: {} };
 
   // Step 3: Enrich with categories and models (only for this page of results)
   const [catRes, modelRes] = await Promise.all([
-    client.from('recipe_categories').select('recipe_id, category:categories (slug)').in('recipe_id', recipeIds) as unknown as { data: Record<string, unknown>[] | null },
-    client.from('recipe_models').select('recipe_id, model:creami_models (slug)').in('recipe_id', recipeIds) as unknown as { data: Record<string, unknown>[] | null },
+    client.from('recipe_categories').select('recipe_id, category:categories (slug)').in('recipe_id', pageIds) as unknown as { data: Record<string, unknown>[] | null },
+    client.from('recipe_models').select('recipe_id, model:creami_models (slug)').in('recipe_id', pageIds) as unknown as { data: Record<string, unknown>[] | null },
   ]);
 
   const catMap = new Map<string, string[]>();
@@ -221,7 +175,7 @@ export async function getFilteredRecipes(
       .from('recipe_translations')
       .select('recipe_id, title, description')
       .eq('locale', locale)
-      .in('recipe_id', recipeIds) as { data: { recipe_id: string; title: string; description: string }[] | null };
+      .in('recipe_id', pageIds) as { data: { recipe_id: string; title: string; description: string }[] | null };
     if (translations) {
       transMap = new Map(translations.map((tr) => [tr.recipe_id, tr]));
     }
@@ -261,7 +215,7 @@ export async function getFilteredRecipes(
     },
   };
 
-  return { recipes, total: count ?? 0, facets };
+  return { recipes, total: totalCount, facets };
 }
 
 /** Get all published recipes as cards for listing pages */
