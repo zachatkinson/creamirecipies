@@ -3,15 +3,10 @@ import BaseLayout from '../../components/layout/BaseLayout.astro';
 import ScrollReveal from '../../components/animations/ScrollReveal.astro';
 import { supabase } from '../../lib/supabase';
 import { getPublishedPosts } from '../../lib/posts';
+import { t } from '../../i18n';
 
+const locale = Astro.locals.locale;
 const posts = await getPublishedPosts(supabase);
-
-const categoryLabels: Record<string, string> = {
-  news: 'News',
-  tips: 'Tips & Tricks',
-  reviews: 'Reviews',
-  guides: 'Guides',
-};
 
 const categoryColors: Record<string, string> = {
   news: 'bg-lavender/20 text-lavender-dark',
@@ -21,16 +16,16 @@ const categoryColors: Record<string, string> = {
 };
 ---
 
-<BaseLayout title="Blog" description="News, tips, reviews, and guides for Ninja Creami owners.">
+<BaseLayout title={t('blog.title', locale)} description={t('blog.description', locale)}>
   <section class="py-12 md:py-16">
     <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
       <ScrollReveal>
         <div class="text-center mb-12">
           <h1 class="font-display text-4xl md:text-5xl font-bold text-chocolate mb-4">
-            Blog
+            {t('blog.title', locale)}
           </h1>
           <p class="text-slate-500 max-w-lg mx-auto">
-            News, tips, machine reviews, and guides for Ninja Creami enthusiasts.
+            {t('blog.description', locale)}
           </p>
         </div>
       </ScrollReveal>
@@ -60,10 +55,10 @@ const categoryColors: Record<string, string> = {
                 <div class="p-5">
                   <div class="flex items-center gap-2 mb-2">
                     <span class:list={['text-xs font-medium px-2.5 py-0.5 rounded-full', categoryColors[post.category] ?? 'bg-slate-100 text-slate-600']}>
-                      {categoryLabels[post.category] ?? post.category}
+                      {t(`blog.${post.category}`, locale)}
                     </span>
                     <span class="text-xs text-slate-500">
-                      {new Date(post.published_at ?? post.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                      {new Date(post.published_at ?? post.created_at).toLocaleDateString(locale, { month: 'short', day: 'numeric', year: 'numeric' })}
                     </span>
                   </div>
                   <h2 class="font-display text-lg font-bold text-chocolate group-hover:text-berry transition-colors line-clamp-2 mb-2">
@@ -80,8 +75,8 @@ const categoryColors: Record<string, string> = {
       ) : (
         <div class="text-center py-20 bg-white/50 rounded-2xl">
           <span class="text-5xl mb-4 block">📝</span>
-          <h2 class="font-display text-2xl font-bold text-chocolate mb-2">Articles Coming Soon</h2>
-          <p class="text-slate-500">We're working on tips, guides, and news for the Creami community.</p>
+          <h2 class="font-display text-2xl font-bold text-chocolate mb-2">{t('blog.comingSoon', locale)}</h2>
+          <p class="text-slate-500">{t('blog.comingSoonDesc', locale)}</p>
         </div>
       )}
     </div>

@@ -20,13 +20,13 @@ export const onRequest = defineMiddleware(async (context, next) => {
     if (detected) locale = detected;
   }
 
-  context.locals.locale = locale;
+  (context.locals as Record<string, unknown>).locale = locale;
 
   // --- Supabase Auth ---
-  const supabase = createServerClient<Database>(supabaseUrl, supabaseAnonKey, {
+  const supabase = createServerClient(supabaseUrl, supabaseAnonKey, {
     cookies: {
       getAll() {
-        return parseCookieHeader(context.request.headers.get('cookie') ?? '');
+        return parseCookieHeader(context.request.headers.get('cookie') ?? '') as { name: string; value: string }[];
       },
       setAll(cookiesToSet) {
         for (const { name, value, options } of cookiesToSet) {
@@ -39,7 +39,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
     },
   });
 
-  context.locals.supabase = supabase;
+  (context.locals as Record<string, unknown>).supabase = supabase;
 
   return next();
 });

@@ -11,7 +11,8 @@ export const prerender = false;
 import { supabase } from '../../lib/supabase';
 import { getRecipeBySlug, getCreamiModels } from '../../lib/recipes';
 import { buildRecipeJsonLd, buildBreadcrumbJsonLd, buildRecipeFaqJsonLd, generateRecipeFaqs } from '../../lib/seo';
-import { getRecipeTranslation, applyTranslation, getIngredientTranslations, translateStep, ui } from '../../lib/translations';
+import { getRecipeTranslation, applyTranslation, getIngredientTranslations, getStepTranslations, ui } from '../../lib/translations';
+import { t } from '../../i18n';
 
 const { slug } = Astro.params;
 const locale = Astro.locals.locale;
@@ -27,8 +28,9 @@ if (translation) {
   recipe = applyTranslation(recipe, translation);
 }
 
-// Get ingredient name translations
+// Get ingredient and step translations
 const ingredientNames = await getIngredientTranslations(supabase, locale);
+const stepTranslations = await getStepTranslations(supabase, locale);
 
 // Translate ingredient names using master_ingredient links
 if (locale !== 'en') {
@@ -41,7 +43,7 @@ if (locale !== 'en') {
 
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
 const recipeJsonLd = buildRecipeJsonLd(recipe, siteUrl);
-const recipeFaqs = generateRecipeFaqs(recipe);
+const recipeFaqs = generateRecipeFaqs(recipe, locale);
 const recipeFaqJsonLd = buildRecipeFaqJsonLd(recipe);
 
 // Collect allergens from all ingredients via their master_ingredient links
@@ -81,8 +83,8 @@ for (const [allergen, keywords] of Object.entries(allergenKeywords)) {
   }
 }
 const breadcrumbs = [
-  { name: 'Home', url: siteUrl },
-  { name: 'Recipes', url: `${siteUrl}/recipes` },
+  { name: t('breadcrumb.home', locale), url: siteUrl },
+  { name: t('breadcrumb.recipes', locale), url: `${siteUrl}/recipes` },
   { name: recipe.title, url: `${siteUrl}/recipes/${recipe.slug}` },
 ];
 
@@ -92,9 +94,11 @@ const currentModels = allModels
   .filter((m: any) => !m.is_discontinued)
   .map((m: any) => ({ slug: m.slug, name: m.name, pint_size_oz: m.pint_size_oz ?? 16 }));
 
-// Prepare ingredient data for the scaler
+// Prepare ingredient data for the scaler (with translated names)
 const scalableIngredients = recipe.ingredients.map((i: any) => ({
-  name: i.name,
+  name: (locale !== 'en' && i.master_ingredient_id && ingredientNames.has(i.master_ingredient_id))
+    ? ingredientNames.get(i.master_ingredient_id)!
+    : i.name,
   amount: i.amount,
   unit: i.unit,
   group_name: i.group_name ?? 'base',
@@ -128,10 +132,10 @@ const totalTimeLabel = totalTime >= 60
     <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
       <ScrollReveal animation="fade-up">
         <!-- Breadcrumb -->
-        <nav class="flex items-center gap-2 text-sm text-slate-500 mb-6">
-          <a href="/" class="hover:text-berry transition-colors">Home</a>
+        <nav class="flex items-center gap-2 text-sm text-slate-600 mb-6">
+          <a href="/" class="hover:text-berry transition-colors">{t('breadcrumb.home', locale)}</a>
           <span>/</span>
-          <a href="/recipes" class="hover:text-berry transition-colors">Recipes</a>
+          <a href="/recipes" class="hover:text-berry transition-colors">{t('breadcrumb.recipes', locale)}</a>
           <span>/</span>
           <span class="text-slate-600">{recipe.title}</span>
         </nav>
@@ -160,7 +164,7 @@ const totalTimeLabel = totalTime >= 60
                 {recipe.sponsor_logo_url && (
                   <img src={recipe.sponsor_logo_url} alt={recipe.sponsor_name ?? 'Sponsor'} class="w-6 h-6 rounded-full object-contain" />
                 )}
-                <span class="text-xs text-slate-500">
+                <span class="text-xs text-slate-600">
                   Sponsored by
                   {recipe.sponsor_url ? (
                     <a
@@ -180,10 +184,10 @@ const totalTimeLabel = totalTime >= 60
 
             <div class="flex flex-wrap items-center gap-2 mb-4">
               <span class:list={['text-xs font-medium px-3 py-1 rounded-full', difficultyColors[recipe.difficulty]]}>
-                {recipe.difficulty}
+                {ui(recipe.difficulty, locale)}
               </span>
               <span class="text-xs font-medium px-3 py-1 rounded-full bg-lavender/20 text-lavender-dark">
-                {recipe.base_type}
+                {ui(recipe.base_type, locale)}
               </span>
               {recipe.models.map((model) => (
                 <span class="text-xs font-medium px-3 py-1 rounded-full bg-slate-100 text-slate-600">
@@ -201,8 +205,8 @@ const totalTimeLabel = totalTime >= 60
             <!-- Rating -->
             <div class="flex items-center gap-3 mb-6">
               <RatingStars rating={recipe.avg_rating} size="lg" showValue />
-              <span class="text-sm text-slate-500">
-                ({recipe.rating_count} review{recipe.rating_count !== 1 ? 's' : ''})
+              <span class="text-sm text-slate-600">
+                ({recipe.rating_count} {recipe.rating_count !== 1 ? ui('reviews', locale) : ui('review', locale)})
               </span>
             </div>
 
@@ -210,20 +214,20 @@ const totalTimeLabel = totalTime >= 60
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 bg-white rounded-xl border border-slate-100">
               {recipe.prep_time_minutes && (
                 <div class="text-center">
-                  <div class="text-xs text-slate-500 mb-1">{ui("prep", locale)}</div>
+                  <div class="text-xs text-slate-600 mb-1">{ui("prep", locale)}</div>
                   <div class="font-semibold text-chocolate">{recipe.prep_time_minutes}m</div>
                 </div>
               )}
               <div class="text-center">
-                <div class="text-xs text-slate-500 mb-1">{ui("freeze", locale)}</div>
+                <div class="text-xs text-slate-600 mb-1">{ui("freeze", locale)}</div>
                 <div class="font-semibold text-chocolate">{recipe.freeze_time_hours ?? 24}h</div>
               </div>
               <div class="text-center">
-                <div class="text-xs text-slate-500 mb-1">{ui("total", locale)}</div>
+                <div class="text-xs text-slate-600 mb-1">{ui("total", locale)}</div>
                 <div class="font-semibold text-chocolate">{totalTimeLabel}</div>
               </div>
               <div class="text-center">
-                <div class="text-xs text-slate-500 mb-1">{ui("servings", locale)}</div>
+                <div class="text-xs text-slate-600 mb-1">{ui("servings", locale)}</div>
                 <div class="font-semibold text-chocolate">{recipe.servings ?? 4}</div>
               </div>
             </div>
@@ -231,7 +235,7 @@ const totalTimeLabel = totalTime >= 60
             {recipe.churn_program && (
               <div class="mt-4 p-4 bg-mint/10 rounded-xl border border-mint/20">
                 <span class="text-sm font-medium text-mint-dark">{ui("creamiProgram", locale)}</span>
-                <span class="ml-2 text-sm text-slate-600">{recipe.churn_program}</span>
+                <span class="ml-2 text-sm text-slate-600">{ui(recipe.churn_program, locale)}</span>
               </div>
             )}
 
@@ -244,7 +248,7 @@ const totalTimeLabel = totalTime >= 60
                 <span class="text-sm font-medium text-chocolate">
                   {recipe.author.display_name || recipe.author.username}
                 </span>
-                <div class="text-xs text-slate-500">
+                <div class="text-xs text-slate-600">
                   {new Date(recipe.published_at ?? recipe.created_at).toLocaleDateString('en-US', {
                     month: 'long',
                     day: 'numeric',
@@ -261,13 +265,13 @@ const totalTimeLabel = totalTime >= 60
               />
               <button
                 onclick="window.print()"
-                class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-500 hover:text-berry rounded-full border border-slate-200 hover:border-blush transition-colors"
-                aria-label="Print recipe"
+                class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-600 hover:text-berry rounded-full border border-slate-200 hover:border-blush transition-colors"
+                aria-label={ui('print', locale)}
               >
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
                 </svg>
-                Print
+                {ui('print', locale)}
               </button>
             </div>
             </div>
@@ -308,7 +312,7 @@ const totalTimeLabel = totalTime >= 60
     </section>
   )}
 
-  <!-- Before You Begin -->
+  <!-- {ui("beforeYouBegin", locale)} -->
   <section class="py-6">
     <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="rounded-2xl p-6 md:p-8 border-2 border-mint bg-gradient-to-br from-mint/5 to-cream shadow-sm">
@@ -316,13 +320,13 @@ const totalTimeLabel = totalTime >= 60
           <svg class="w-6 h-6 text-mint-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          Before You Begin
+          {ui("beforeYouBegin", locale)}
         </h2>
 
         <!-- Model Selection -->
         <div class="mb-5">
           <label for="byb-model-select" class="block text-sm font-semibold text-slate-700 mb-2">
-            What Creami model do you have?
+            {ui("yourModel", locale)}
           </label>
           <select
             id="byb-model-select"
@@ -330,18 +334,19 @@ const totalTimeLabel = totalTime >= 60
             style="height: 64px; -webkit-appearance: none; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%235C3D2E'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 16px center; background-size: 20px;"
             aria-label="Select your Ninja Creami model"
           >
-            <option value="">Select your Creami model...</option>
+            <option value="">{ui("selectYourModel", locale)}</option>
             {currentModels.map((m) => (
               <option value={`${m.slug}|${m.pint_size_oz}`}>
-                {m.name} — {m.pint_size_oz}oz pint
+                {m.name} — {m.pint_size_oz}{ui('ozPint', locale)}
               </option>
             ))}
           </select>
-          <div id="byb-scale-note" class="hidden mt-2 text-sm text-mint-dark bg-mint/15 px-4 py-3 rounded-xl font-medium">
+          <div id="byb-scale-note" class="hidden mt-2 text-sm text-mint-dark bg-mint/15 px-4 py-3 rounded-xl font-medium"
+            data-template={ui('ingredientsScaled', locale)}>
           </div>
         </div>
 
-        <!-- Allergen Warning (inside Before You Begin) -->
+        <!-- Allergen Warning (inside {ui("beforeYouBegin", locale)}) -->
         {detectedAllergens.length > 0 && (
           <div class="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-xl">
             <svg class="w-5 h-5 text-red-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -350,9 +355,9 @@ const totalTimeLabel = totalTime >= 60
             <div>
               <span class="text-sm font-bold text-red-800">{ui("allergenWarning", locale)} </span>
               <span class="text-sm text-red-700 font-semibold">
-                {detectedAllergens.join(', ')}
+                {detectedAllergens.map(a => ui(a, locale)).join(', ')}
               </span>
-              <p class="text-xs text-red-600 mt-1">{ui("checkLabels", locale)}</p>
+              <p class="text-xs text-red-700 mt-1">{ui("checkLabels", locale)}</p>
             </div>
           </div>
         )}
@@ -375,6 +380,7 @@ const totalTimeLabel = totalTime >= 60
                 models={currentModels}
                 recipePintSize={recipe.pint_size ?? '16oz'}
                 isSwirl={recipe.is_swirl_recipe ?? false}
+                locale={locale}
               />
             </div>
             <!-- Ad: sidebar medium rectangle (sticky with ingredients) -->
@@ -390,17 +396,25 @@ const totalTimeLabel = totalTime >= 60
               id="cook-mode-btn"
               class="px-5 py-2.5 bg-berry text-white text-sm font-medium rounded-full hover:bg-berry/90 transition-colors shadow-sm"
             >
-              Cook Mode
+              {ui("cookMode", locale)}
             </button>
           </div>
 
           <!-- Step Timeline -->
           <div id="step-timeline" class="space-y-2">
-            {recipe.steps.map((step) => (
-              <ScrollReveal animation="fade-up" delay={step.step_number * 0.05}>
-                <StepCard step={step} totalSteps={recipe.steps.length} />
-              </ScrollReveal>
-            ))}
+            {recipe.steps.map((step) => {
+              const stepTrans = stepTranslations.get(step.instruction);
+              const translatedStep = stepTrans ? {
+                ...step,
+                instruction: stepTrans.instruction,
+                hint: stepTrans.hint ?? step.hint,
+              } : step;
+              return (
+                <ScrollReveal animation="fade-up" delay={step.step_number * 0.05}>
+                  <StepCard step={translatedStep} totalSteps={recipe.steps.length} />
+                </ScrollReveal>
+              );
+            })}
           </div>
 
           <!-- Ad: after recipe steps (in-article) -->
@@ -410,14 +424,17 @@ const totalTimeLabel = totalTime >= 60
           {(recipe.categories.length > 0 || recipe.tags.length > 0) && (
             <div class="mt-10 pt-8 border-t border-slate-100">
               <div class="flex flex-wrap gap-2">
-                {recipe.categories.map((cat) => (
-                  <a
-                    href={`/recipes?base=${cat.slug}`}
-                    class="px-3 py-1 bg-blush/15 text-berry text-xs font-medium rounded-full hover:bg-blush/25 transition-colors"
-                  >
-                    {cat.name}
-                  </a>
-                ))}
+                {recipe.categories.map((cat) => {
+                  const paramKey = cat.type === 'base_type' ? 'base' : cat.type === 'flavor_profile' ? 'flavor' : 'dietary';
+                  return (
+                    <a
+                      href={`/recipes?${paramKey}=${cat.slug}`}
+                      class="px-3 py-1 bg-blush/15 text-berry text-xs font-medium rounded-full hover:bg-blush/25 transition-colors"
+                    >
+                      {ui(cat.name, locale)}
+                    </a>
+                  );
+                })}
                 {recipe.tags.map((tag) => (
                   <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">
                     #{tag.name}
@@ -427,7 +444,7 @@ const totalTimeLabel = totalTime >= 60
             </div>
           )}
 
-          <!-- Allergen info is in "Before You Begin" section above -->
+          <!-- Allergen info is in "{ui("beforeYouBegin", locale)}" section above -->
 
           <!-- FAQ Section -->
           {recipeFaqs.length > 0 && (
@@ -438,7 +455,7 @@ const totalTimeLabel = totalTime >= 60
                   <details class="group bg-cream/50 rounded-xl border border-slate-100">
                     <summary class="flex items-center justify-between px-5 py-3 cursor-pointer text-sm font-medium text-chocolate hover:text-berry transition-colors">
                       {faq.question}
-                      <svg class="w-4 h-4 shrink-0 ml-3 transition-transform duration-200 group-open:rotate-180 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <svg class="w-4 h-4 shrink-0 ml-3 transition-transform duration-200 group-open:rotate-180 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                       </svg>
                     </summary>
@@ -461,7 +478,7 @@ const totalTimeLabel = totalTime >= 60
 <div id="cook-mode-overlay" class="fixed inset-0 z-50 bg-chocolate/95 text-white hidden flex-col">
   <div class="flex items-center justify-between p-4 border-b border-white/10">
     <h3 class="font-display text-lg font-bold">{ui("cookMode", locale)}</h3>
-    <button id="cook-mode-close" class="p-2 hover:bg-white/10 rounded-lg transition-colors">
+    <button id="cook-mode-close" class="p-2 hover:bg-white/10 rounded-lg transition-colors" aria-label="Close">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
@@ -543,7 +560,7 @@ const totalTimeLabel = totalTime >= 60
     if (e.key === 'Escape') closeBtn?.click();
   });
 
-  // Before You Begin: model selector → dispatches custom event
+  // {ui("beforeYouBegin", locale)}: model selector → dispatches custom event
   const bybSelect = document.getElementById('byb-model-select');
   const bybNote = document.getElementById('byb-scale-note');
 
@@ -569,7 +586,7 @@ const totalTimeLabel = totalTime >= 60
     // Show scale note
     if (bybNote) {
       if (scale !== 1) {
-        bybNote.textContent = `Ingredients scaled to ${pintSize}oz for your model.`;
+        bybNote.textContent = (bybNote.dataset.template || 'Ingredients scaled to {size}oz for your model.').replace('{size}', String(pintSize));
         bybNote.classList.remove('hidden');
       } else {
         bybNote.classList.add('hidden');

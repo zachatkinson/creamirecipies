@@ -34,8 +34,13 @@
   },
   "devDependencies": {
     "@axe-core/cli": "^4.11.1",
+    "@eslint/js": "^10.0.1",
     "@vitejs/plugin-basic-ssl": "^2.3.0",
+    "eslint": "^10.1.0",
+    "lighthouse": "^13.0.3",
     "pa11y": "^9.1.1",
-    "tsx": "^4.21.0"
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.57.2"
   }
 }

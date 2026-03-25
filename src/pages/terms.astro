@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import { t } from '../i18n';
+
+const locale = Astro.locals.locale;
+---
+
+<BaseLayout title={t('terms.title', locale)}>
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl font-bold mb-4 text-center" style="color: #5C3D2E;">
+        {t('terms.title', locale)}
+      </h1>
+      <p class="text-center text-sm text-slate-600 mb-10">{t('terms.lastUpdated', locale)}</p>
+
+      <div class="prose prose-lg max-w-none text-slate-600">
+        <p>{t('terms.intro', locale)}</p>
+
+        <h2 class="font-display text-2xl font-bold text-chocolate mt-10 mb-4">{t('terms.useTitle', locale)}</h2>
+        <p>{t('terms.useDesc', locale)}</p>
+
+        <h2 class="font-display text-2xl font-bold text-chocolate mt-10 mb-4">{t('terms.disclaimerTitle', locale)}</h2>
+        <p>{t('terms.disclaimerDesc', locale)}</p>
+
+        <h2 class="font-display text-2xl font-bold text-chocolate mt-10 mb-4">{t('terms.ipTitle', locale)}</h2>
+        <p>{t('terms.ipDesc', locale)}</p>
+
+        <h2 class="font-display text-2xl font-bold text-chocolate mt-10 mb-4">{t('terms.affiliateTitle', locale)}</h2>
+        <p>{t('terms.affiliateDesc', locale)}</p>
+
+        <h2 class="font-display text-2xl font-bold text-chocolate mt-10 mb-4">{t('terms.liabilityTitle', locale)}</h2>
+        <p>{t('terms.liabilityDesc', locale)}</p>
+
+        <h2 class="font-display text-2xl font-bold text-chocolate mt-10 mb-4">{t('terms.changesTitle', locale)}</h2>
+        <p>{t('terms.changesDesc', locale)}</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

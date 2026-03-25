@@ -13,19 +13,35 @@ interface Model {
   pint_size_oz: number;
 }
 
+type Locale = 'en' | 'fr' | 'es' | 'de' | 'pt';
+
 interface Props {
   ingredients: Ingredient[];
   models: Model[];
   recipePintSize: '16oz' | '24oz';
   isSwirl: boolean;
   modelOnly?: boolean;
+  locale?: Locale;
 }
 
-const GROUP_LABELS: Record<string, string> = {
-  base: 'Base Ingredients',
-  'mix-ins': 'Mix-Ins',
-  topping: 'Toppings',
-  swirl: 'Swirl',
+const GROUP_LABELS: Record<string, Record<Locale, string>> = {
+  base: { en: 'Base Ingredients', fr: 'Ingrédients de Base', es: 'Ingredientes Base', de: 'Grundzutaten', pt: 'Ingredientes Base' },
+  'mix-ins': { en: 'Mix-Ins', fr: 'Garnitures', es: 'Complementos', de: 'Mix-Ins', pt: 'Complementos' },
+  topping: { en: 'Toppings', fr: 'Garniture', es: 'Cobertura', de: 'Topping', pt: 'Cobertura' },
+  swirl: { en: 'Swirl', fr: 'Spirale', es: 'Espiral', de: 'Wirbel', pt: 'Espiral' },
+};
+
+const UNIT_LABELS: Record<Locale, string> = {
+  en: 'Units:', fr: 'Unités :', es: 'Unidades:', de: 'Einheiten:', pt: 'Unidades:',
+};
+
+const UNIT_TRANSLATIONS: Record<string, Record<Locale, string>> = {
+  'cup': { en: 'cup', fr: 'tasse', es: 'taza', de: 'Tasse', pt: 'xícara' },
+  'tablespoon': { en: 'tablespoon', fr: 'c. à soupe', es: 'cucharada', de: 'EL', pt: 'colher de sopa' },
+  'teaspoon': { en: 'teaspoon', fr: 'c. à café', es: 'cucharadita', de: 'TL', pt: 'colher de chá' },
+  'oz': { en: 'oz', fr: 'oz', es: 'oz', de: 'oz', pt: 'oz' },
+  'lb': { en: 'lb', fr: 'lb', es: 'lb', de: 'lb', pt: 'lb' },
+  'fl oz': { en: 'fl oz', fr: 'fl oz', es: 'fl oz', de: 'fl oz', pt: 'fl oz' },
 };
 
 const GROUP_ORDER = ['base', 'mix-ins', 'swirl', 'topping'];
@@ -114,7 +130,7 @@ function formatNumber(n: number): string {
   return n % 1 === 0 ? String(n) : n.toFixed(1);
 }
 
-export default function ScalableIngredients({ ingredients, models, recipePintSize, isSwirl, modelOnly = false }: Props) {
+export default function ScalableIngredients({ ingredients, models, recipePintSize, isSwirl, modelOnly = false, locale = 'en' }: Props) {
   const [scale, setScale] = useState(1);
   const [measureSystem, setMeasureSystem] = useState<MeasurementSystem>(() => {
     if (typeof document !== 'undefined') {
@@ -159,7 +175,7 @@ export default function ScalableIngredients({ ingredients, models, recipePintSiz
     <div>
       {/* US / Metric toggle */}
       <div className="flex items-center gap-2 mb-4 pb-3 border-b border-slate-100">
-        <span className="text-xs text-slate-500">Units:</span>
+        <span className="text-xs text-slate-500">{UNIT_LABELS[locale]}</span>
         <button
           onClick={toggleMeasureSystem}
           className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${
@@ -183,7 +199,7 @@ export default function ScalableIngredients({ ingredients, models, recipePintSiz
           <div key={groupName}>
             {sortedGroups.length > 1 && (
               <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">
-                {GROUP_LABELS[groupName] ?? groupName}
+                {GROUP_LABELS[groupName]?.[locale] ?? GROUP_LABELS[groupName]?.['en'] ?? groupName}
               </h4>
             )}
             <ul className="space-y-2">
@@ -194,6 +210,10 @@ export default function ScalableIngredients({ ingredients, models, recipePintSiz
                 // Apply metric conversion if needed
                 let displayAmount = scaledAmount;
                 let displayUnit = ingredient.unit ?? '';
+                // Translate unit name for non-English locales (US mode only)
+                if (locale !== 'en' && measureSystem === 'us' && displayUnit) {
+                  displayUnit = UNIT_TRANSLATIONS[displayUnit.toLowerCase()]?.[locale] ?? displayUnit;
+                }
                 if (measureSystem === 'metric' && ingredient.unit) {
                   const scaledNum = parseFloat(scaledAmount.replace(/\s+/g, '+').split('+').reduce((a, b) => {
                     const frac = b.match(/^(\d+)\/(\d+)$/);

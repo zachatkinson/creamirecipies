@@ -2,124 +2,108 @@
 export const prerender = false;
 
 import BaseLayout from '../../components/layout/BaseLayout.astro';
+import RecipeCard from '../../components/recipe/RecipeCard.astro';
 import RecipeFilters from '../../components/recipe/RecipeFilters';
 import AdUnit from '../../components/ads/AdUnit.astro';
 import { supabase } from '../../lib/supabase';
-import { getPublishedRecipes, getCategories, getCreamiModels } from '../../lib/recipes';
-import { DEFAULT_LOCALE } from '../../i18n';
+import { getFilteredRecipes, getCategories, getCreamiModels } from '../../lib/recipes';
+import type { RecipeQueryParams } from '../../lib/recipes';
+import { DEFAULT_LOCALE, t } from '../../i18n';
+import { ui } from '../../lib/translations';
 
 const locale = Astro.locals.locale;
-const recipes = await getPublishedRecipes(supabase);
+const url = Astro.url;
 
-// Apply translations to recipe cards if locale isn't English
-if (locale !== DEFAULT_LOCALE) {
-  const { data: translations } = await supabase
-    .from('recipe_translations')
-    .select('recipe_id, title, description')
-    .eq('locale', locale)
-    .in('recipe_id', recipes.map((r) => r.id))
-    .limit(1000);
+// Read URL params so the server-rendered page matches the user's filter state
+const initialParams: RecipeQueryParams = {
+  q: url.searchParams.get('q') || undefined,
+  base: url.searchParams.getAll('base').filter(Boolean),
+  difficulty: url.searchParams.getAll('difficulty').filter(Boolean),
+  flavor: url.searchParams.getAll('flavor').filter(Boolean),
+  dietary: url.searchParams.getAll('dietary').filter(Boolean),
+  model: url.searchParams.getAll('model').filter(Boolean),
+  rating: url.searchParams.get('rating') ? Number(url.searchParams.get('rating')) : undefined,
+  sort: (url.searchParams.get('sort') as RecipeQueryParams['sort']) || 'newest',
+  page: 1,
+  pageSize: 24,
+  locale,
+};
 
-  if (translations) {
-    const transMap = new Map(translations.map((t) => [t.recipe_id, t]));
-    for (const recipe of recipes) {
-      const t = transMap.get(recipe.id);
-      if (t) {
-        (recipe as any).title = t.title;
-        (recipe as any).description = t.description;
-      }
-    }
-  }
-}
-const categories = await getCategories(supabase);
-const models = await getCreamiModels(supabase);
+const { recipes: initialRecipes, total, facets } = await getFilteredRecipes(supabase, initialParams);
 
-// Fetch category and model links for each recipe
-const recipeIds = recipes.map((r) => r.id);
-
-// Fetch ALL category and model links in pages of 1000 (PostgREST default limit)
-async function fetchAll(table: string, select: string) {
-  const allRows: any[] = [];
-  let page = 0;
-  const pageSize = 1000;
-  while (true) {
-    const { data } = await supabase
-      .from(table)
-      .select(select)
-      .range(page * pageSize, (page + 1) * pageSize - 1);
-    if (!data || data.length === 0) break;
-    allRows.push(...data);
-    if (data.length < pageSize) break;
-    page++;
-  }
-  return allRows;
-}
-
-const recipeCats = await fetchAll('recipe_categories', 'recipe_id, category:categories (slug)');
-const recipeModelLinks = await fetchAll('recipe_models', 'recipe_id, model:creami_models (slug)');
-
-// Build lookup maps
-const catMap = new Map<string, string[]>();
-for (const rc of (recipeCats ?? []) as any[]) {
-  const slug = rc.category?.slug;
-  if (!slug) continue;
-  if (!catMap.has(rc.recipe_id)) catMap.set(rc.recipe_id, []);
-  catMap.get(rc.recipe_id)!.push(slug);
-}
-
-const modelMap = new Map<string, string[]>();
-for (const rm of (recipeModelLinks ?? []) as any[]) {
-  const slug = rm.model?.slug;
-  if (!slug) continue;
-  if (!modelMap.has(rm.recipe_id)) modelMap.set(rm.recipe_id, []);
-  modelMap.get(rm.recipe_id)!.push(slug);
-}
-
-// Build enriched recipe data for the filter component
-const enrichedRecipes = recipes.map((r) => ({
-  id: r.id,
-  title: r.title,
-  slug: r.slug,
-  description: r.description,
-  difficulty: r.difficulty,
-  base_type: r.base_type,
-  avg_rating: r.avg_rating,
-  rating_count: r.rating_count,
-  prep_time_minutes: r.prep_time_minutes,
-  freeze_time_hours: r.freeze_time_hours,
-  hero_image_url: r.hero_image_url,
-  categories: catMap.get(r.id) ?? [],
-  models: modelMap.get(r.id) ?? [],
-  author_name: (r.author as any)?.display_name || (r.author as any)?.username || 'Unknown',
-  author_avatar: (r.author as any)?.avatar_url ?? null,
-}));
+const [categories, models] = await Promise.all([
+  getCategories(supabase),
+  getCreamiModels(supabase),
+]);
 
 const filterConfig = {
-  baseTypes: categories.filter((c) => c.type === 'base_type').map((c) => ({ slug: c.slug, name: c.name })),
-  flavorProfiles: categories.filter((c) => c.type === 'flavor_profile').map((c) => ({ slug: c.slug, name: c.name })),
-  dietary: categories.filter((c) => c.type === 'dietary').map((c) => ({ slug: c.slug, name: c.name })),
+  baseTypes: categories.filter((c) => c.type === 'base_type').map((c) => ({ slug: c.slug, name: ui(c.name, locale) })),
+  flavorProfiles: categories.filter((c) => c.type === 'flavor_profile').map((c) => ({ slug: c.slug, name: ui(c.name, locale) })),
+  dietary: categories.filter((c) => c.type === 'dietary').map((c) => ({ slug: c.slug, name: ui(c.name, locale) })),
   models: models.map((m) => ({ slug: m.slug, name: m.name })),
+};
+
+const filterLabels = {
+  searchPlaceholder: t('nav.searchPlaceholder', locale),
+  sortNewest: t('recipes.sortNewest', locale),
+  sortRating: t('recipes.sortRating', locale),
+  sortReviews: t('recipes.sortReviews', locale),
+  sortPrep: t('recipes.sortPrep', locale),
+  filters: t('recipes.filters', locale),
+  quickFilters: t('recipes.quickFilters', locale),
+  difficulty: t('recipes.difficulty', locale),
+  baseType: t('recipes.baseType', locale),
+  dietary: t('recipes.dietary', locale),
+  minRating: t('recipes.minRating', locale),
+  showing: t('recipes.showing', locale),
+  recipe: locale === 'fr' ? 'recette' : locale === 'es' ? 'receta' : locale === 'de' ? 'Rezept' : locale === 'pt' ? 'receita' : 'recipe',
+  recipes: locale === 'fr' ? 'recettes' : locale === 'es' ? 'recetas' : locale === 'de' ? 'Rezepte' : locale === 'pt' ? 'receitas' : 'recipes',
+  clearAll: t('recipes.clearAll', locale),
+  noResults: t('recipes.noResults', locale),
+  noResultsDesc: t('recipes.noResultsDesc', locale),
+  clearFilters: t('recipes.clearFilters', locale),
+  loadMore: t('home.viewAll', locale),
+  of: locale === 'fr' ? 'sur' : locale === 'es' ? 'de' : locale === 'de' ? 'von' : locale === 'pt' ? 'de' : 'of',
+  stars: locale === 'fr' ? 'Étoiles' : locale === 'es' ? 'Estrellas' : locale === 'de' ? 'Sterne' : locale === 'pt' ? 'Estrelas' : 'Stars',
+  prep: ui('prep', locale).toLowerCase(),
+  easyBeginner: t('recipes.beginner', locale),
+  highProtein: ui('High Protein', locale),
+  vegan: ui('Vegan', locale),
+  ketoFriendly: ui('Keto', locale),
+  dairyFree: ui('Dairy-Free', locale),
+  softServe: ui('Lite Ice Cream', locale),
+  beginner: ui('beginner', locale),
+  intermediate: ui('intermediate', locale),
+  advanced: ui('advanced', locale),
+  baseTypeMap: Object.fromEntries(
+    ['Ice Cream', 'Sorbet', 'Gelato', 'Frozen Yogurt', 'Milkshake', 'Smoothie Bowl', 'Lite Ice Cream', 'Italian Ice']
+      .map(bt => [bt, ui(bt, locale)])
+  ),
+  loading: t('common.loading', locale),
 };
 ---
 
-<BaseLayout title="All Recipes" description="Browse all Ninja Creami recipes — ice cream, sorbet, gelato, and more. Filter by difficulty, dietary needs, flavor, and Creami model.">
+<BaseLayout title={t('recipes.allRecipes', locale)} description={t('recipes.allRecipes', locale)}>
   <section class="py-12 md:py-16">
     <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
         <h1 class="font-display text-4xl md:text-5xl font-bold mb-4" style="color: #5C3D2E;">
-          All Recipes
+          {t('recipes.allRecipes', locale)}
         </h1>
         <p class="max-w-lg mx-auto" style="color: #64748B;">
-          {recipes.length} recipe{recipes.length !== 1 ? 's' : ''} and counting. Find your next frozen creation.
+          {t(total !== 1 ? 'recipes.countLabelPlural' : 'recipes.countLabelSingular', locale).replace('{count}', String(total))}
         </p>
       </div>
 
-      <h2 class="font-display text-2xl font-bold mb-6" style="color: #5C3D2E;">Browse Recipes</h2>
+      <h2 class="font-display text-2xl font-bold mb-6" style="color: #5C3D2E;">{t('recipes.browseAll', locale)}</h2>
 
       <RecipeFilters
         client:load
-        recipes={enrichedRecipes}
+        initialRecipes={initialRecipes}
+        totalRecipes={total}
+        initialFacets={facets}
         filterConfig={filterConfig}
+        labels={filterLabels}
       />
 
       <!-- Ad: bottom of recipe listing -->

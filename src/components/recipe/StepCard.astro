@@ -1,5 +1,6 @@
 ---
 import type { Step } from '../../lib/types';
+import { ui } from '../../lib/translations';
 
 interface Props {
   step: Step;
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const { step, totalSteps } = Astro.props;
+const locale = Astro.locals.locale;
 ---
 
 <div class="step-card group relative pl-12 pb-8" data-step={step.step_number}>
@@ -30,16 +32,16 @@ const { step, totalSteps } = Astro.props;
           <svg class="w-4 h-4 transition-transform group-open/hint:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
           </svg>
-          Pro Tip
+          {ui("proTip", locale)}
         </summary>
-        <div class="mt-2 pl-6 text-sm text-slate-500 bg-mint/10 rounded-lg p-3 border-l-2 border-mint">
+        <div class="mt-2 pl-6 text-sm text-slate-600 bg-mint/10 rounded-lg p-3 border-l-2 border-mint">
           {step.hint}
         </div>
       </details>
     )}
 
     {step.duration_minutes && (
-      <div class="mt-3 flex items-center gap-1.5 text-xs text-slate-500">
+      <div class="mt-3 flex items-center gap-1.5 text-xs text-slate-600">
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>

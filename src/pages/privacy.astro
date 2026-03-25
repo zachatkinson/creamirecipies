@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import { t } from '../i18n';
+
+const locale = Astro.locals.locale;
+---
+
+<BaseLayout title={t('privacy.title', locale)}>
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl font-bold mb-4 text-center" style="color: #5C3D2E;">
+        {t('privacy.title', locale)}
+      </h1>
+      <p class="text-center text-sm text-slate-600 mb-10">{t('privacy.lastUpdated', locale)}</p>
+
+      <div class="prose prose-lg max-w-none text-slate-600">
+        <p>{t('privacy.intro', locale)}</p>
+
+        <h2 class="font-display text-2xl font-bold text-chocolate mt-10 mb-4">{t('privacy.collectTitle', locale)}</h2>
+        <p>{t('privacy.collectDesc', locale)}</p>
+        <ul class="space-y-3">
+          <li><strong class="text-chocolate">Cookies</strong> — {t('privacy.collectCookies', locale).split(' — ')[1]}</li>
+          <li><strong class="text-chocolate">{t('privacy.collectAnalytics', locale).split(' — ')[0]}</strong> — {t('privacy.collectAnalytics', locale).split(' — ')[1]}</li>
+          <li><strong class="text-chocolate">{t('privacy.collectAds', locale).split(' — ')[0]}</strong> — {t('privacy.collectAds', locale).split(' — ')[1]}</li>
+        </ul>
+
+        <h2 class="font-display text-2xl font-bold text-chocolate mt-10 mb-4">{t('privacy.noAccountTitle', locale)}</h2>
+        <p>{t('privacy.noAccountDesc', locale)}</p>
+
+        <h2 class="font-display text-2xl font-bold text-chocolate mt-10 mb-4">{t('privacy.thirdPartyTitle', locale)}</h2>
+        <p>{t('privacy.thirdPartyDesc', locale)}</p>
+
+        <h2 class="font-display text-2xl font-bold text-chocolate mt-10 mb-4">{t('privacy.changesTitle', locale)}</h2>
+        <p>{t('privacy.changesDesc', locale)}</p>
+
+        <h2 class="font-display text-2xl font-bold text-chocolate mt-10 mb-4">{t('privacy.contactTitle', locale)}</h2>
+        <p>{t('privacy.contactDesc', locale)}</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

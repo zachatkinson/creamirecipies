@@ -10,12 +10,9 @@ interface RecipeData {
   avg_rating: number;
   rating_count: number;
   prep_time_minutes: number | null;
-  freeze_time_hours: number | null;
   hero_image_url: string | null;
-  categories: string[];   // category slugs
-  models: string[];       // model slugs
-  author_name: string;
-  author_avatar: string | null;
+  categories: string[];
+  models: string[];
 }
 
 interface FilterConfig {
@@ -25,28 +22,89 @@ interface FilterConfig {
   models: { slug: string; name: string }[];
 }
 
+interface Labels {
+  baseTypeMap?: Record<string, string>;
+  searchPlaceholder: string;
+  sortNewest: string;
+  sortRating: string;
+  sortReviews: string;
+  sortPrep: string;
+  filters: string;
+  quickFilters: string;
+  difficulty: string;
+  baseType: string;
+  dietary: string;
+  minRating: string;
+  showing: string;
+  recipe: string;
+  recipes: string;
+  clearAll: string;
+  noResults: string;
+  noResultsDesc: string;
+  clearFilters: string;
+  loadMore: string;
+  of: string;
+  stars: string;
+  prep: string;
+  easyBeginner: string;
+  highProtein: string;
+  vegan: string;
+  ketoFriendly: string;
+  dairyFree: string;
+  softServe: string;
+  beginner: string;
+  intermediate: string;
+  advanced: string;
+  loading?: string;
+}
+
+const DEFAULT_LABELS: Labels = {
+  searchPlaceholder: 'Search recipes by name or ingredient...',
+  sortNewest: 'Newest First', sortRating: 'Highest Rated', sortReviews: 'Most Reviewed', sortPrep: 'Quickest Prep',
+  filters: 'Filters', quickFilters: 'Quick Filters', difficulty: 'Difficulty', baseType: 'Base Type',
+  dietary: 'Dietary', minRating: 'Minimum Rating', showing: 'Showing', recipe: 'recipe', recipes: 'recipes',
+  clearAll: 'Clear all', noResults: 'No Recipes Found', noResultsDesc: 'Try adjusting your filters or search terms.',
+  clearFilters: 'Clear All Filters', loadMore: 'Load More Recipes', of: 'of', stars: 'Stars', prep: 'prep',
+  easyBeginner: 'Easy & Beginner', highProtein: 'High Protein', vegan: 'Vegan', ketoFriendly: 'Keto Friendly',
+  dairyFree: 'Dairy Free', softServe: 'Soft Serve', beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced',
+  loading: 'Loading...',
+};
+
+interface Facets {
+  difficulty?: Record<string, number>;
+}
+
 interface Props {
-  recipes: RecipeData[];
+  initialRecipes: RecipeData[];
+  totalRecipes: number;
+  initialFacets?: Facets;
   filterConfig: FilterConfig;
-  initialQuery?: string;
+  labels?: Partial<Labels>;
 }
 
 type SortOption = 'newest' | 'rating' | 'reviews' | 'prep-time';
 
-const QUICK_FILTERS = [
-  { label: 'Easy & Beginner', filters: { difficulty: ['beginner'] } },
-  { label: 'High Protein', filters: { dietary: ['high-protein'] } },
-  { label: 'Vegan', filters: { dietary: ['vegan'] } },
-  { label: 'Keto Friendly', filters: { dietary: ['keto'] } },
-  { label: 'Dairy Free', filters: { dietary: ['dairy-free'] } },
-  { label: 'Soft Serve', filters: { baseType: ['lite-ice-cream'] } },
-];
+export default function RecipeFilters({ initialRecipes, totalRecipes, initialFacets, filterConfig, labels: labelsProp }: Props) {
+  const l = { ...DEFAULT_LABELS, ...labelsProp };
 
-export default function RecipeFilters({ recipes, filterConfig, initialQuery }: Props) {
-  // Search
-  const [query, setQuery] = useState(initialQuery ?? '');
+  const QUICK_FILTERS: { label: string; filters: Record<string, string[]> }[] = [
+    { label: l.easyBeginner, filters: { difficulty: ['beginner'] } },
+    { label: l.highProtein, filters: { dietary: ['high-protein'] } },
+    { label: l.vegan, filters: { dietary: ['vegan'] } },
+    { label: l.ketoFriendly, filters: { dietary: ['keto'] } },
+    { label: l.dairyFree, filters: { dietary: ['dairy-free'] } },
+    { label: l.softServe, filters: { baseType: ['lite-ice-cream'] } },
+  ];
+
+  // Recipe data state
+  const [recipes, setRecipes] = useState<RecipeData[]>(initialRecipes);
+  const [total, setTotal] = useState(totalRecipes);
+  const [page, setPage] = useState(1);
+  const [loading, setLoading] = useState(false);
+  const [facets, setFacets] = useState<Facets>(initialFacets ?? {});
 
   // Filter state
+  const [query, setQuery] = useState('');
   const [selectedBaseTypes, setSelectedBaseTypes] = useState<Set<string>>(new Set());
   const [selectedFlavors, setSelectedFlavors] = useState<Set<string>>(new Set());
   const [selectedDietary, setSelectedDietary] = useState<Set<string>>(new Set());
@@ -57,11 +115,55 @@ export default function RecipeFilters({ recipes, filterConfig, initialQuery }: P
 
   // UI state
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
-  const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set(['difficulty', 'base-type']));
-  const [visibleCount, setVisibleCount] = useState(24);
+  const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set());
   const gridRef = useRef<HTMLDivElement>(null);
+  const initializedRef = useRef(false);
+  const abortRef = useRef<AbortController | null>(null);
+  const searchTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Toggle functions
+  // Build query params from current filter state
+  const buildParams = useCallback(() => {
+    const params = new URLSearchParams();
+    if (query) params.set('q', query);
+    selectedBaseTypes.forEach((v) => params.append('base', v));
+    selectedDifficulty.forEach((v) => params.append('difficulty', v));
+    selectedFlavors.forEach((v) => params.append('flavor', v));
+    selectedDietary.forEach((v) => params.append('dietary', v));
+    selectedModels.forEach((v) => params.append('model', v));
+    if (minRating > 0) params.set('rating', String(minRating));
+    if (sortBy !== 'newest') params.set('sort', sortBy);
+    return params;
+  }, [query, selectedBaseTypes, selectedDifficulty, selectedFlavors, selectedDietary, selectedModels, minRating, sortBy]);
+
+  // Fetch recipes from API
+  const fetchRecipes = useCallback(async (pageNum: number, append: boolean) => {
+    // Cancel any in-flight request
+    if (abortRef.current) abortRef.current.abort();
+    const controller = new AbortController();
+    abortRef.current = controller;
+
+    setLoading(true);
+    const params = buildParams();
+    params.set('page', String(pageNum));
+
+    try {
+      const res = await fetch(`/api/recipes?${params.toString()}`, { signal: controller.signal });
+      if (!res.ok) throw new Error('API error');
+      const data = await res.json();
+      setRecipes((prev) => append ? [...prev, ...data.recipes] : data.recipes);
+      setTotal(data.total);
+      setPage(pageNum);
+      if (data.facets) setFacets(data.facets);
+    } catch (err) {
+      if ((err as Error).name !== 'AbortError') {
+        console.warn('Failed to fetch recipes:', err);
+      }
+    } finally {
+      if (!controller.signal.aborted) setLoading(false);
+    }
+  }, [buildParams]);
+
+  // Toggle helpers
   const toggle = useCallback((set: Set<string>, value: string, setter: React.Dispatch<React.SetStateAction<Set<string>>>) => {
     setter((prev) => {
       const next = new Set(prev);
@@ -80,17 +182,21 @@ export default function RecipeFilters({ recipes, filterConfig, initialQuery }: P
     });
   }, []);
 
-  // Apply quick filter
   const applyQuickFilter = useCallback((filters: Record<string, string[] | number>) => {
-    clearAll();
     for (const [key, value] of Object.entries(filters)) {
-      if (key === 'difficulty' && Array.isArray(value)) setSelectedDifficulty(new Set(value));
-      if (key === 'dietary' && Array.isArray(value)) setSelectedDietary(new Set(value));
-      if (key === 'minRating' && typeof value === 'number') setMinRating(value);
+      if (key === 'difficulty' && Array.isArray(value)) {
+        setSelectedDifficulty((prev) => { const next = new Set(prev); const v = value[0]; if (next.has(v)) next.delete(v); else next.add(v); return next; });
+      }
+      if (key === 'dietary' && Array.isArray(value)) {
+        setSelectedDietary((prev) => { const next = new Set(prev); const v = value[0]; if (next.has(v)) next.delete(v); else next.add(v); return next; });
+      }
+      if (key === 'baseType' && Array.isArray(value)) {
+        setSelectedBaseTypes((prev) => { const next = new Set(prev); const v = value[0]; if (next.has(v)) next.delete(v); else next.add(v); return next; });
+      }
+      if (key === 'minRating' && typeof value === 'number') setMinRating((prev) => prev === value ? 0 : value);
     }
   }, []);
 
-  // Clear all filters
   const clearAll = useCallback(() => {
     setQuery('');
     setSelectedBaseTypes(new Set());
@@ -100,38 +206,38 @@ export default function RecipeFilters({ recipes, filterConfig, initialQuery }: P
     setSelectedDifficulty(new Set());
     setMinRating(0);
     setSortBy('newest');
-    setVisibleCount(24);
   }, []);
 
-  // Reset visible count when any filter changes
+  // Read URL params on mount
   useEffect(() => {
-    setVisibleCount(24);
-  }, [query, selectedBaseTypes, selectedDifficulty, selectedFlavors, selectedDietary, selectedModels, minRating, sortBy]);
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('q')) setQuery(params.get('q')!);
+    if (params.getAll('base').length) setSelectedBaseTypes(new Set(params.getAll('base')));
+    if (params.getAll('difficulty').length) setSelectedDifficulty(new Set(params.getAll('difficulty')));
+    if (params.getAll('flavor').length) setSelectedFlavors(new Set(params.getAll('flavor')));
+    if (params.getAll('dietary').length) setSelectedDietary(new Set(params.getAll('dietary')));
+    if (params.getAll('model').length) setSelectedModels(new Set(params.getAll('model')));
+    if (params.get('rating')) setMinRating(Number(params.get('rating')));
+    if (params.get('sort')) setSortBy(params.get('sort') as SortOption);
+    initializedRef.current = true;
+  }, []);
 
-  // Filter recipes
-  const filtered = recipes.filter((r) => {
-    if (query) {
-      const q = query.toLowerCase();
-      if (!r.title.toLowerCase().includes(q) && !r.description.toLowerCase().includes(q)) return false;
-    }
-    if (selectedBaseTypes.size > 0 && !selectedBaseTypes.has(r.base_type.toLowerCase().replace(/\s+/g, '-'))) return false;
-    if (selectedDifficulty.size > 0 && !selectedDifficulty.has(r.difficulty)) return false;
-    if (selectedFlavors.size > 0 && !r.categories.some((c) => selectedFlavors.has(c))) return false;
-    if (selectedDietary.size > 0 && !r.categories.some((c) => selectedDietary.has(c))) return false;
-    if (selectedModels.size > 0 && !r.models.some((m) => selectedModels.has(m))) return false;
-    if (minRating > 0 && r.avg_rating < minRating) return false;
-    return true;
-  });
+  // When any filter/sort changes (after initialization), fetch from API and sync URL
+  useEffect(() => {
+    if (!initializedRef.current) return;
 
-  // Sort
-  const sorted = [...filtered].sort((a, b) => {
-    switch (sortBy) {
-      case 'rating': return b.avg_rating - a.avg_rating;
-      case 'reviews': return b.rating_count - a.rating_count;
-      case 'prep-time': return (a.prep_time_minutes ?? 999) - (b.prep_time_minutes ?? 999);
-      default: return 0; // newest = default order from DB
-    }
-  });
+    // Update URL
+    const params = buildParams();
+    const newUrl = params.toString() ? `?${params.toString()}` : window.location.pathname;
+    window.history.replaceState({}, '', newUrl);
+
+    // Fetch page 1 with new filters (debounce search input)
+    if (searchTimerRef.current) clearTimeout(searchTimerRef.current);
+    const delay = query ? 300 : 0;
+    searchTimerRef.current = setTimeout(() => fetchRecipes(1, false), delay);
+
+    return () => { if (searchTimerRef.current) clearTimeout(searchTimerRef.current); };
+  }, [query, selectedBaseTypes, selectedDifficulty, selectedFlavors, selectedDietary, selectedModels, minRating, sortBy, buildParams, fetchRecipes]);
 
   // Active filter chips
   const activeFilters: { label: string; onRemove: () => void }[] = [];
@@ -141,7 +247,8 @@ export default function RecipeFilters({ recipes, filterConfig, initialQuery }: P
     if (bt) activeFilters.push({ label: bt.name, onRemove: () => toggle(selectedBaseTypes, v, setSelectedBaseTypes) });
   });
   selectedDifficulty.forEach((v) => {
-    activeFilters.push({ label: v.charAt(0).toUpperCase() + v.slice(1), onRemove: () => toggle(selectedDifficulty, v, setSelectedDifficulty) });
+    const diffLabel = v === 'beginner' ? l.beginner : v === 'intermediate' ? l.intermediate : l.advanced;
+    activeFilters.push({ label: diffLabel, onRemove: () => toggle(selectedDifficulty, v, setSelectedDifficulty) });
   });
   selectedFlavors.forEach((v) => {
     const f = filterConfig.flavorProfiles.find((fp) => fp.slug === v);
@@ -155,42 +262,12 @@ export default function RecipeFilters({ recipes, filterConfig, initialQuery }: P
     const m = filterConfig.models.find((md) => md.slug === v);
     if (m) activeFilters.push({ label: m.name, onRemove: () => toggle(selectedModels, v, setSelectedModels) });
   });
-  if (minRating > 0) activeFilters.push({ label: `${minRating}+ Stars`, onRemove: () => setMinRating(0) });
-
-  // Update URL params for shareability
-  useEffect(() => {
-    const params = new URLSearchParams();
-    if (query) params.set('q', query);
-    selectedBaseTypes.forEach((v) => params.append('base', v));
-    selectedDifficulty.forEach((v) => params.append('difficulty', v));
-    selectedFlavors.forEach((v) => params.append('flavor', v));
-    selectedDietary.forEach((v) => params.append('dietary', v));
-    selectedModels.forEach((v) => params.append('model', v));
-    if (minRating > 0) params.set('rating', String(minRating));
-    if (sortBy !== 'newest') params.set('sort', sortBy);
-
-    const newUrl = params.toString() ? `?${params.toString()}` : window.location.pathname;
-    window.history.replaceState({}, '', newUrl);
-  }, [query, selectedBaseTypes, selectedDifficulty, selectedFlavors, selectedDietary, selectedModels, minRating, sortBy]);
-
-  // Read URL params on mount
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('q')) setQuery(params.get('q')!);
-    if (params.getAll('base').length) setSelectedBaseTypes(new Set(params.getAll('base')));
-    if (params.getAll('difficulty').length) setSelectedDifficulty(new Set(params.getAll('difficulty')));
-    if (params.getAll('flavor').length) setSelectedFlavors(new Set(params.getAll('flavor')));
-    if (params.getAll('dietary').length) setSelectedDietary(new Set(params.getAll('dietary')));
-    if (params.getAll('model').length) setSelectedModels(new Set(params.getAll('model')));
-    if (params.get('rating')) setMinRating(Number(params.get('rating')));
-    if (params.get('sort')) setSortBy(params.get('sort') as SortOption);
-  }, []);
+  if (minRating > 0) activeFilters.push({ label: `${minRating}+ ${l.stars}`, onRemove: () => setMinRating(0) });
 
   const FilterSidebar = () => (
     <div className="space-y-5">
-      {/* Quick Filters */}
       <div>
-        <div className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Quick Filters</div>
+        <div className="text-xs font-bold uppercase tracking-wider text-slate-600 mb-3">{l.quickFilters}</div>
         <div className="flex flex-wrap gap-2">
           {QUICK_FILTERS.map((qf) => (
             <button
@@ -204,75 +281,70 @@ export default function RecipeFilters({ recipes, filterConfig, initialQuery }: P
         </div>
       </div>
 
-      {/* Difficulty */}
-      <FilterGroup title="Difficulty" id="difficulty" expanded={expandedGroups.has('difficulty')} onToggle={() => toggleGroup('difficulty')}>
+      <FilterGroup title={l.difficulty} id="difficulty" expanded={expandedGroups.has('difficulty')} onToggle={() => toggleGroup('difficulty')}>
         {['beginner', 'intermediate', 'advanced'].map((d) => (
           <FilterCheckbox
             key={d}
-            label={d.charAt(0).toUpperCase() + d.slice(1)}
+            label={d === 'beginner' ? l.beginner : d === 'intermediate' ? l.intermediate : l.advanced}
             checked={selectedDifficulty.has(d)}
             onChange={() => toggle(selectedDifficulty, d, setSelectedDifficulty)}
-            count={recipes.filter((r) => r.difficulty === d).length}
+            count={facets.difficulty?.[d]}
           />
         ))}
       </FilterGroup>
 
-      {/* Base Type */}
-      <FilterGroup title="Base Type" id="base-type" expanded={expandedGroups.has('base-type')} onToggle={() => toggleGroup('base-type')}>
+      <FilterGroup title={l.baseType} id="base-type" expanded={expandedGroups.has('base-type')} onToggle={() => toggleGroup('base-type')}>
         {filterConfig.baseTypes.map((bt) => (
           <FilterCheckbox
             key={bt.slug}
             label={bt.name}
             checked={selectedBaseTypes.has(bt.slug)}
             onChange={() => toggle(selectedBaseTypes, bt.slug, setSelectedBaseTypes)}
-            count={recipes.filter((r) => r.base_type.toLowerCase().replace(/\s+/g, '-') === bt.slug).length}
           />
         ))}
       </FilterGroup>
 
-      {/* Dietary */}
-      <FilterGroup title="Dietary" id="dietary" expanded={expandedGroups.has('dietary')} onToggle={() => toggleGroup('dietary')}>
+      <FilterGroup title={l.dietary} id="dietary" expanded={expandedGroups.has('dietary')} onToggle={() => toggleGroup('dietary')}>
         {filterConfig.dietary.map((d) => (
           <FilterCheckbox
             key={d.slug}
             label={d.name}
             checked={selectedDietary.has(d.slug)}
             onChange={() => toggle(selectedDietary, d.slug, setSelectedDietary)}
-            count={recipes.filter((r) => r.categories.includes(d.slug)).length}
           />
         ))}
       </FilterGroup>
 
-      {/* Rating */}
-      <FilterGroup title="Minimum Rating" id="rating" expanded={expandedGroups.has('rating')} onToggle={() => toggleGroup('rating')}>
+      <FilterGroup title={l.minRating} id="rating" expanded={expandedGroups.has('rating')} onToggle={() => toggleGroup('rating')}>
         {[4, 3].map((r) => (
           <FilterCheckbox
             key={r}
-            label={`${r}+ Stars`}
+            label={`${r}+ ${l.stars}`}
             checked={minRating === r}
             onChange={() => setMinRating(minRating === r ? 0 : r)}
-            count={recipes.filter((rec) => rec.avg_rating >= r).length}
           />
         ))}
       </FilterGroup>
     </div>
   );
 
+  const hasMore = recipes.length < total;
+
   return (
     <div>
       {/* Search + Sort Bar */}
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
         <div className="relative flex-1">
-          <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-600 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
           <input
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search recipes by name or ingredient..."
-            aria-label="Search recipes"
-            className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-slate-200 text-sm placeholder:text-slate-500 focus:border-[#F4B8C1] focus:ring-1 focus:ring-[#F4B8C1] outline-none transition-colors"
+            placeholder={l.searchPlaceholder}
+            aria-label={l.searchPlaceholder}
+            className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-slate-200 text-sm placeholder:text-slate-600 focus:border-[#F4B8C1] focus:ring-1 focus:ring-[#F4B8C1] outline-none transition-colors"
           />
         </div>
         <div className="flex gap-2">
@@ -284,12 +356,11 @@ export default function RecipeFilters({ recipes, filterConfig, initialQuery }: P
             aria-label="Sort recipes"
             className="px-4 py-3 rounded-xl bg-white border border-slate-200 text-sm text-slate-600 focus:border-[#F4B8C1] outline-none"
           >
-            <option value="newest">Newest First</option>
-            <option value="rating">Highest Rated</option>
-            <option value="reviews">Most Reviewed</option>
-            <option value="prep-time">Quickest Prep</option>
+            <option value="newest">{l.sortNewest}</option>
+            <option value="rating">{l.sortRating}</option>
+            <option value="reviews">{l.sortReviews}</option>
+            <option value="prep-time">{l.sortPrep}</option>
           </select>
-          {/* Mobile filter toggle */}
           <button
             onClick={() => setMobileFilterOpen(true)}
             className="lg:hidden px-4 py-3 rounded-xl bg-white border border-slate-200 text-sm text-slate-600 hover:border-[#F4B8C1] transition-colors flex items-center gap-2"
@@ -298,7 +369,7 @@ export default function RecipeFilters({ recipes, filterConfig, initialQuery }: P
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
             </svg>
-            Filters
+            {l.filters}
             {activeFilters.length > 0 && (
               <span className="w-5 h-5 bg-[#8B3A62] text-white text-xs rounded-full flex items-center justify-center">
                 {activeFilters.length}
@@ -325,33 +396,32 @@ export default function RecipeFilters({ recipes, filterConfig, initialQuery }: P
           ))}
           <button
             onClick={clearAll}
-            className="text-xs text-slate-500 hover:text-[#8B3A62] transition-colors underline"
+            className="text-xs text-slate-600 hover:text-[#8B3A62] transition-colors underline"
           >
-            Clear all
+            {l.clearAll}
           </button>
         </div>
       )}
 
       {/* Result Count */}
-      <div className="text-sm text-slate-500 mb-4">
-        Showing <strong className="text-[#5C3D2E]">{sorted.length}</strong> recipe{sorted.length !== 1 ? 's' : ''}
+      <div className="text-sm text-slate-600 mb-4">
+        {l.showing} <strong className="text-[#5C3D2E]">{total}</strong> {total !== 1 ? l.recipes : l.recipe}
+        {loading && <span className="ml-2 text-slate-400 animate-pulse">...</span>}
       </div>
 
       {/* Layout: Sidebar + Grid */}
       <div className="flex gap-8">
-        {/* Desktop Sidebar */}
         <aside className="hidden lg:block w-64 shrink-0">
           <div className="sticky top-24 bg-white rounded-2xl p-5 shadow-sm border border-slate-100 max-h-[calc(100vh-8rem)] overflow-y-auto">
             <FilterSidebar />
           </div>
         </aside>
 
-        {/* Recipe Grid */}
         <div className="flex-1" ref={gridRef}>
-          {sorted.length > 0 ? (
+          {recipes.length > 0 ? (
             <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-              {sorted.slice(0, visibleCount).map((recipe) => (
+            <div className={`grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 transition-opacity duration-200 ${loading ? 'opacity-60' : ''}`}>
+              {recipes.map((recipe) => (
                 <a
                   key={recipe.id}
                   href={`/recipes/${recipe.slug}`}
@@ -371,14 +441,14 @@ export default function RecipeFilters({ recipes, filterConfig, initialQuery }: P
                         recipe.difficulty === 'advanced' ? 'bg-[#F4B8C1]/40 text-[#6b1d42]' :
                         'bg-[#FDE9B0]/40 text-[#5C3D2E]'
                       }`}>
-                        {recipe.difficulty}
+                        {recipe.difficulty === 'beginner' ? l.beginner : recipe.difficulty === 'intermediate' ? l.intermediate : l.advanced}
                       </span>
-                      <span className="text-xs text-slate-500">{recipe.base_type}</span>
+                      <span className="text-xs text-slate-600">{l.baseTypeMap?.[recipe.base_type] ?? recipe.base_type}</span>
                     </div>
                     <h3 className="text-lg font-bold text-[#5C3D2E] group-hover:text-[#8B3A62] transition-colors line-clamp-2 mb-1.5" style={{ fontFamily: 'Playfair Display, serif' }}>
                       {recipe.title}
                     </h3>
-                    <p className="text-sm text-slate-500 line-clamp-2 mb-3">{recipe.description}</p>
+                    <p className="text-sm text-slate-600 line-clamp-2 mb-3">{recipe.description}</p>
                     <div className="flex items-center justify-between pt-3 border-t border-slate-100">
                       <div className="flex items-center gap-1.5">
                         <div className="flex">
@@ -388,10 +458,10 @@ export default function RecipeFilters({ recipes, filterConfig, initialQuery }: P
                             </svg>
                           ))}
                         </div>
-                        <span className="text-xs text-slate-500">({recipe.rating_count})</span>
+                        <span className="text-xs text-slate-600">({recipe.rating_count})</span>
                       </div>
                       {recipe.prep_time_minutes && (
-                        <span className="text-xs text-slate-500">⏱ {recipe.prep_time_minutes}m prep</span>
+                        <span className="text-xs text-slate-600">⏱ {recipe.prep_time_minutes}m {l.prep}</span>
                       )}
                     </div>
                   </div>
@@ -399,28 +469,41 @@ export default function RecipeFilters({ recipes, filterConfig, initialQuery }: P
               ))}
             </div>
 
-            {/* Load More */}
-            {visibleCount < sorted.length && (
+            {hasMore && (
               <div className="text-center mt-10">
                 <button
-                  onClick={() => setVisibleCount((prev) => prev + 24)}
-                  className="px-8 py-3 bg-white text-[#8B3A62] font-medium rounded-full border-2 border-[#F4B8C1] hover:bg-[#F4B8C1]/10 transition-colors"
+                  onClick={() => fetchRecipes(page + 1, true)}
+                  disabled={loading}
+                  className="px-8 py-3 bg-white text-[#8B3A62] font-medium rounded-full border-2 border-[#F4B8C1] hover:bg-[#F4B8C1]/10 transition-colors disabled:opacity-50"
                 >
-                  Load More Recipes
-                  <span className="ml-2 text-sm text-slate-500">
-                    ({Math.min(visibleCount, sorted.length)} of {sorted.length})
+                  {loading ? (l.loading ?? 'Loading...') : l.loadMore}
+                  <span className="ml-2 text-sm text-slate-600">
+                    ({recipes.length} {l.of} {total})
                   </span>
                 </button>
               </div>
             )}
             </>
+          ) : loading ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm animate-pulse">
+                  <div className="aspect-[4/3] bg-slate-200" />
+                  <div className="p-5 space-y-3">
+                    <div className="h-4 bg-slate-200 rounded w-1/3" />
+                    <div className="h-5 bg-slate-200 rounded w-2/3" />
+                    <div className="h-4 bg-slate-200 rounded w-full" />
+                  </div>
+                </div>
+              ))}
+            </div>
           ) : (
             <div className="text-center py-20 bg-white/50 rounded-2xl">
               <span className="text-5xl mb-4 block">🔍</span>
-              <h3 className="text-xl font-bold text-[#5C3D2E] mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>No Recipes Found</h3>
-              <p className="text-slate-500 mb-6">Try adjusting your filters or search terms.</p>
+              <h3 className="text-xl font-bold text-[#5C3D2E] mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>{l.noResults}</h3>
+              <p className="text-slate-600 mb-6">{l.noResultsDesc}</p>
               <button onClick={clearAll} className="px-6 py-3 bg-[#8B3A62] text-white font-medium rounded-full hover:bg-[#8B3A62]/90 transition-colors">
-                Clear All Filters
+                {l.clearFilters}
               </button>
             </div>
           )}
@@ -430,41 +513,28 @@ export default function RecipeFilters({ recipes, filterConfig, initialQuery }: P
       {/* Mobile Filter Bottom Sheet */}
       {mobileFilterOpen && (
         <div className="fixed inset-0 z-50 lg:hidden">
-          {/* Backdrop */}
-          <div
-            className="absolute inset-0 bg-black/40"
-            onClick={() => setMobileFilterOpen(false)}
-          />
-          {/* Sheet */}
+          <div className="absolute inset-0 bg-black/40" onClick={() => setMobileFilterOpen(false)} />
           <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl max-h-[70vh] flex flex-col">
-            {/* Handle */}
             <div className="flex justify-center pt-3 pb-2">
               <div className="w-10 h-1 bg-slate-200 rounded-full" />
             </div>
-            {/* Header */}
             <div className="flex items-center justify-between px-5 pb-3 border-b border-slate-100">
-              <h3 className="font-bold text-[#5C3D2E]" style={{ fontFamily: 'Playfair Display, serif' }}>Filters</h3>
-              <button
-                onClick={() => setMobileFilterOpen(false)}
-                className="p-2 text-slate-500 hover:text-slate-700"
-                aria-label="Close filters"
-              >
+              <h3 className="font-bold text-[#5C3D2E]" style={{ fontFamily: 'Playfair Display, serif' }}>{l.filters}</h3>
+              <button onClick={() => setMobileFilterOpen(false)} className="p-2 text-slate-600 hover:text-slate-700" aria-label="Close filters">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
-            {/* Scrollable content */}
             <div className="flex-1 overflow-y-auto p-5">
               <FilterSidebar />
             </div>
-            {/* Sticky apply button */}
             <div className="p-4 border-t border-slate-100 bg-white">
               <button
                 onClick={() => setMobileFilterOpen(false)}
                 className="w-full py-3 bg-[#8B3A62] text-white font-medium rounded-xl hover:bg-[#8B3A62]/90 transition-colors"
               >
-                Show {sorted.length} Recipe{sorted.length !== 1 ? 's' : ''}
+                {l.showing} {total} {total !== 1 ? l.recipes : l.recipe}
               </button>
             </div>
           </div>
@@ -476,35 +546,19 @@ export default function RecipeFilters({ recipes, filterConfig, initialQuery }: P
 
 // --- Sub-components ---
 
-function FilterGroup({
-  title,
-  id,
-  expanded,
-  onToggle,
-  children,
-}: {
-  title: string;
-  id: string;
-  expanded: boolean;
-  onToggle: () => void;
-  children: React.ReactNode;
+function FilterGroup({ title, id, expanded, onToggle, children }: {
+  title: string; id: string; expanded: boolean; onToggle: () => void; children: React.ReactNode;
 }) {
   return (
     <div>
       <button
         onClick={onToggle}
-        className="flex items-center justify-between w-full py-2 text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-slate-700 transition-colors"
+        className="flex items-center justify-between w-full py-2 text-xs font-bold uppercase tracking-wider text-slate-600 hover:text-slate-700 transition-colors"
         aria-expanded={expanded}
         aria-controls={`filter-group-${id}`}
       >
         {title}
-        <svg
-          className={`w-4 h-4 transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
+        <svg className={`w-4 h-4 transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
@@ -517,16 +571,8 @@ function FilterGroup({
   );
 }
 
-function FilterCheckbox({
-  label,
-  checked,
-  onChange,
-  count,
-}: {
-  label: string;
-  checked: boolean;
-  onChange: () => void;
-  count: number;
+function FilterCheckbox({ label, checked, onChange, count }: {
+  label: string; checked: boolean; onChange: () => void; count?: number;
 }) {
   return (
     <label className="flex items-center gap-2.5 py-1.5 cursor-pointer group">
@@ -537,7 +583,7 @@ function FilterCheckbox({
         className="w-4 h-4 rounded border-slate-300 text-[#8B3A62] focus:ring-[#F4B8C1] cursor-pointer"
       />
       <span className="text-sm text-slate-600 group-hover:text-slate-800 flex-1">{label}</span>
-      <span className="text-xs text-slate-400">{count}</span>
+      {count !== undefined && <span className="text-xs text-slate-400">{count}</span>}
     </label>
   );
 }

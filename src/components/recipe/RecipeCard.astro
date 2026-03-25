@@ -1,12 +1,14 @@
 ---
 import type { RecipeCard as RecipeCardType } from '../../lib/types';
 import RatingStars from './RatingStars.astro';
+import { ui } from '../../lib/translations';
 
 interface Props {
   recipe: RecipeCardType;
 }
 
 const { recipe } = Astro.props;
+const locale = Astro.locals.locale;
 
 const difficultyColors = {
   beginner: 'bg-mint/40 text-[#1a6b4f]',
@@ -25,7 +27,7 @@ const difficultyColors = {
       {recipe.sponsor_logo_url && (
         <img src={recipe.sponsor_logo_url} alt={recipe.sponsor_name ?? 'Sponsor'} class="w-4 h-4 rounded-full object-contain" />
       )}
-      <span class="text-[10px] font-medium text-slate-500 uppercase tracking-wider">Sponsored</span>
+      <span class="text-[10px] font-medium text-slate-600 uppercase tracking-wider">Sponsored</span>
     </div>
   )}
 
@@ -50,9 +52,9 @@ const difficultyColors = {
     <!-- Meta -->
     <div class="flex items-center gap-2 mb-2">
       <span class:list={['text-xs font-medium px-2.5 py-0.5 rounded-full', difficultyColors[recipe.difficulty]]}>
-        {recipe.difficulty}
+        {ui(recipe.difficulty, locale)}
       </span>
-      <span class="text-xs text-slate-500">{recipe.base_type}</span>
+      <span class="text-xs text-slate-600">{ui(recipe.base_type, locale)}</span>
     </div>
 
     <!-- Title -->
@@ -61,7 +63,7 @@ const difficultyColors = {
     </h3>
 
     <!-- Description -->
-    <p class="text-sm text-slate-500 line-clamp-2 mb-3">
+    <p class="text-sm text-slate-600 line-clamp-2 mb-3">
       {recipe.description}
     </p>
 
@@ -69,11 +71,11 @@ const difficultyColors = {
     <div class="flex items-center justify-between pt-3 border-t border-slate-100">
       <div class="flex items-center gap-2">
         <RatingStars rating={recipe.avg_rating} size="sm" />
-        <span class="text-xs text-slate-500">({recipe.rating_count})</span>
+        <span class="text-xs text-slate-600">({recipe.rating_count})</span>
       </div>
-      <div class="flex items-center gap-3 text-xs text-slate-500">
+      <div class="flex items-center gap-3 text-xs text-slate-600">
         {recipe.prep_time_minutes && (
-          <span>⏱ {recipe.prep_time_minutes}m prep</span>
+          <span>⏱ {recipe.prep_time_minutes}m {ui('prep', locale).toLowerCase()}</span>
         )}
       </div>
     </div>

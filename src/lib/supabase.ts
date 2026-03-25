@@ -14,9 +14,7 @@ export function createSupabaseServerClient(cookies: AstroCookies) {
   return createServerClient<Database>(supabaseUrl, supabaseAnonKey, {
     cookies: {
       getAll() {
-        return cookies.headers().getSetCookie().length > 0
-          ? parseCookieHeader(cookies.headers().get('cookie') ?? '')
-          : getAllCookies(cookies);
+        return getAllCookies(cookies);
       },
       setAll(cookiesToSet: { name: string; value: string; options: CookieOptions }[]) {
         for (const { name, value, options } of cookiesToSet) {
@@ -36,9 +34,15 @@ export function createSupabaseAdmin() {
 }
 
 function getAllCookies(cookies: AstroCookies): { name: string; value: string }[] {
-  // AstroCookies doesn't expose a getAll method directly, so we parse the header
-  const header = cookies.headers().get('cookie') ?? '';
-  return parseCookieHeader(header);
+  // Parse cookies from the header entries
+  const entries: { name: string; value: string }[] = [];
+  for (const header of cookies.headers()) {
+    if (typeof header === 'string' && header.includes('=')) {
+      const [name, ...rest] = header.split('=');
+      entries.push({ name: name.trim(), value: rest.join('=').trim() });
+    }
+  }
+  return entries.length > 0 ? entries : [];
 }
 
 function parseCookieHeader(header: string): { name: string; value: string }[] {
