@@ -1,0 +1,21 @@
+import { c as createComponent } from './astro-component_CdpYp1nz.mjs';
+import 'piccolore';
+import { x as maybeRenderHead, a2 as addAttribute, L as renderTemplate } from './sequence_B8w407xz.mjs';
+import { r as renderComponent } from './entrypoint_yfz4azir.mjs';
+import { $ as $$RatingStars } from './RatingStars_Dd-NYA1I.mjs';
+
+const $$RecipeCard = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$props, $$slots);
+  Astro2.self = $$RecipeCard;
+  const { recipe } = Astro2.props;
+  const difficultyColors = {
+    beginner: "bg-mint/40 text-[#1a6b4f]",
+    intermediate: "bg-vanilla/40 text-[#5C3D2E]",
+    advanced: "bg-blush/40 text-[#6b1d42]"
+  };
+  return renderTemplate`${maybeRenderHead()}<a${addAttribute(`/recipes/${recipe.slug}`, "href")} class="recipe-card group block relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"> <!-- Sponsored Badge --> ${recipe.is_sponsored && renderTemplate`<div class="absolute top-3 left-3 z-10 flex items-center gap-1.5 px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-full shadow-sm"> ${recipe.sponsor_logo_url && renderTemplate`<img${addAttribute(recipe.sponsor_logo_url, "src")}${addAttribute(recipe.sponsor_name ?? "Sponsor", "alt")} class="w-4 h-4 rounded-full object-contain">`} <span class="text-[10px] font-medium text-slate-500 uppercase tracking-wider">Sponsored</span> </div>`} <!-- Image --> <div class="aspect-[4/3] bg-cream-dark overflow-hidden"> ${recipe.hero_image_url ? renderTemplate`<img${addAttribute(recipe.hero_image_url, "src")}${addAttribute(recipe.title, "alt")} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">` : renderTemplate`<div class="w-full h-full flex items-center justify-center text-5xl bg-gradient-to-br from-blush/20 to-lavender/20">
+🍦
+</div>`} </div> <!-- Content --> <div class="p-5"> <!-- Meta --> <div class="flex items-center gap-2 mb-2"> <span${addAttribute(["text-xs font-medium px-2.5 py-0.5 rounded-full", difficultyColors[recipe.difficulty]], "class:list")}> ${recipe.difficulty} </span> <span class="text-xs text-slate-500">${recipe.base_type}</span> </div> <!-- Title --> <h3 class="font-display text-lg font-bold text-chocolate group-hover:text-berry transition-colors line-clamp-2 mb-1.5"> ${recipe.title} </h3> <!-- Description --> <p class="text-sm text-slate-500 line-clamp-2 mb-3"> ${recipe.description} </p> <!-- Footer --> <div class="flex items-center justify-between pt-3 border-t border-slate-100"> <div class="flex items-center gap-2"> ${renderComponent($$result, "RatingStars", $$RatingStars, { "rating": recipe.avg_rating, "size": "sm" })} <span class="text-xs text-slate-500">(${recipe.rating_count})</span> </div> <div class="flex items-center gap-3 text-xs text-slate-500"> ${recipe.prep_time_minutes && renderTemplate`<span>⏱ ${recipe.prep_time_minutes}m prep</span>`} </div> </div> </div> </a>`;
+}, "/Users/zach/web-projects/creami/src/components/recipe/RecipeCard.astro", void 0);
+
+export { $$RecipeCard as $ };

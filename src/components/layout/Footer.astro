@@ -1,0 +1,57 @@
+---
+import { t } from '../../i18n';
+
+const locale = Astro.locals.locale;
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-chocolate text-cream/80 mt-auto">
+  <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Brand -->
+      <div class="md:col-span-1">
+        <a href="/" class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🍦</span>
+          <span class="font-display text-lg font-bold text-cream">Creami Recipes</span>
+        </a>
+        <p class="text-sm text-cream/80">
+          Discover and share delicious Ninja Creami recipes with step-by-step guidance and pro tips.
+        </p>
+      </div>
+
+      <!-- Recipes -->
+      <div>
+        <h2 class="font-display text-sm font-bold text-white mb-4 uppercase tracking-wider">{t('footer.recipes', locale)}</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/recipes" class="hover:text-cream transition-colors">{t('footer.allRecipes', locale)}</a></li>
+          <li><a href="/recipes?base=ice-cream" class="hover:text-cream transition-colors">Ice Cream</a></li>
+          <li><a href="/recipes?base=sorbet" class="hover:text-cream transition-colors">Sorbet</a></li>
+          <li><a href="/recipes?base=gelato" class="hover:text-cream transition-colors">Gelato</a></li>
+          <li><a href="/recipes?base=frozen-yogurt" class="hover:text-cream transition-colors">Frozen Yogurt</a></li>
+        </ul>
+      </div>
+
+      <!-- Community -->
+      <div>
+        <h2 class="font-display text-sm font-bold text-white mb-4 uppercase tracking-wider">{t('footer.community', locale)}</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/about" class="hover:text-cream transition-colors">{t('footer.aboutUs', locale)}</a></li>
+          <li><a href="/blog" class="hover:text-cream transition-colors">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h2 class="font-display text-sm font-bold text-white mb-4 uppercase tracking-wider">{t('footer.legal', locale)}</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/privacy" class="hover:text-cream transition-colors">{t('footer.privacyPolicy', locale)}</a></li>
+          <li><a href="/terms" class="hover:text-cream transition-colors">{t('footer.termsOfUse', locale)}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-10 pt-8 border-t border-cream/10 text-center text-sm text-cream/70">
+      <p>&copy; {currentYear} {t('site.name', locale)}. {t('footer.disclaimer', locale)}</p>
+    </div>
+  </div>
+</footer>

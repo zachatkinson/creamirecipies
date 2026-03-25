@@ -1,0 +1,75 @@
+---
+interface Props {
+  class?: string;
+  animation?: 'fade-up' | 'fade-in' | 'slide-left' | 'slide-right' | 'stagger';
+  delay?: number;
+  staggerAmount?: number;
+}
+
+const {
+  class: className = '',
+  animation = 'fade-up',
+  delay = 0,
+  staggerAmount = 0.1,
+} = Astro.props;
+---
+
+<div
+  class:list={['scroll-reveal', className]}
+  data-animation={animation}
+  data-delay={delay}
+  data-stagger={staggerAmount}
+>
+  <slot />
+</div>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Check for reduced motion preference
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.querySelectorAll('.scroll-reveal').forEach((el) => {
+    const animation = el.getAttribute('data-animation') ?? 'fade-up';
+    const delay = parseFloat(el.getAttribute('data-delay') ?? '0');
+    const stagger = parseFloat(el.getAttribute('data-stagger') ?? '0.1');
+
+    // Determine animation properties
+    const fromProps: gsap.TweenVars = { opacity: 0 };
+
+    if (!prefersReducedMotion) {
+      switch (animation) {
+        case 'fade-up':
+          fromProps.y = 40;
+          break;
+        case 'slide-left':
+          fromProps.x = -40;
+          break;
+        case 'slide-right':
+          fromProps.x = 40;
+          break;
+        case 'stagger':
+          fromProps.y = 30;
+          break;
+      }
+    }
+
+    const targets = animation === 'stagger' ? el.children : el;
+
+    gsap.from(targets, {
+      ...fromProps,
+      duration: prefersReducedMotion ? 0.1 : 0.8,
+      delay,
+      stagger: animation === 'stagger' ? stagger : 0,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 85%',
+        toggleActions: 'play none none none',
+      },
+    });
+  });
+</script>

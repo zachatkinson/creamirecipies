@@ -1,0 +1,582 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import ScalableIngredients from '../../components/recipe/ScalableIngredients';
+import StepCard from '../../components/recipe/StepCard.astro';
+import ShareButtons from '../../components/recipe/ShareButtons.astro';
+import RatingStars from '../../components/recipe/RatingStars.astro';
+import ScrollReveal from '../../components/animations/ScrollReveal.astro';
+import AdUnit from '../../components/ads/AdUnit.astro';
+export const prerender = false;
+
+import { supabase } from '../../lib/supabase';
+import { getRecipeBySlug, getCreamiModels } from '../../lib/recipes';
+import { buildRecipeJsonLd, buildBreadcrumbJsonLd, buildRecipeFaqJsonLd, generateRecipeFaqs } from '../../lib/seo';
+import { getRecipeTranslation, applyTranslation, getIngredientTranslations, translateStep, ui } from '../../lib/translations';
+
+const { slug } = Astro.params;
+const locale = Astro.locals.locale;
+let recipe = await getRecipeBySlug(supabase, slug!);
+
+if (!recipe) {
+  return Astro.redirect('/404');
+}
+
+// Apply translation if user's locale isn't English
+const translation = await getRecipeTranslation(supabase, recipe.id, locale);
+if (translation) {
+  recipe = applyTranslation(recipe, translation);
+}
+
+// Get ingredient name translations
+const ingredientNames = await getIngredientTranslations(supabase, locale);
+
+// Translate ingredient names using master_ingredient links
+if (locale !== 'en') {
+  for (const ing of recipe.ingredients) {
+    if ((ing as any).master_ingredient_id && ingredientNames.has((ing as any).master_ingredient_id)) {
+      (ing as any).translated_name = ingredientNames.get((ing as any).master_ingredient_id);
+    }
+  }
+}
+
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
+const recipeJsonLd = buildRecipeJsonLd(recipe, siteUrl);
+const recipeFaqs = generateRecipeFaqs(recipe);
+const recipeFaqJsonLd = buildRecipeFaqJsonLd(recipe);
+
+// Collect allergens from all ingredients via their master_ingredient links
+// For now, derive from ingredient names (master_ingredient data is in DB)
+const allergenKeywords: Record<string, string[]> = {
+  'Dairy': ['cream', 'milk', 'yogurt', 'cheese', 'butter', 'eggnog', 'mascarpone', 'condensed milk', 'evaporated milk'],
+  'Nuts': ['almond', 'pecan', 'walnut', 'cashew', 'hazelnut', 'pistachio', 'macadamia'],
+  'Peanuts': ['peanut'],
+  'Gluten': ['cookie', 'cracker', 'wafer', 'cereal', 'pretzel', 'ladyfinger', 'shortbread', 'biscoff', 'brownie', 'cake', 'graham'],
+  'Eggs': ['egg', 'eggnog'],
+  'Soy': ['soy'],
+  'Sesame': ['sesame', 'tahini'],
+};
+
+const detectedAllergens: string[] = [];
+const ingredientText = recipe.ingredients.map((i) => i.name.toLowerCase()).join(' ');
+for (const [allergen, keywords] of Object.entries(allergenKeywords)) {
+  if (keywords.some((kw) => ingredientText.includes(kw))) {
+    // Exclude false positives: "coconut cream" is not dairy, "almond milk" is not nuts (it's a milk alternative)
+    if (allergen === 'Dairy' && !keywords.some((kw) => ingredientText.includes(kw) && !ingredientText.match(new RegExp(`coconut\\s+${kw}|almond\\s+${kw}|oat\\s+${kw}|cashew\\s+${kw}`)))) {
+      // More precise: check each ingredient individually
+      const hasDairy = recipe.ingredients.some((i) => {
+        const n = i.name.toLowerCase();
+        return (n.includes('cream') || n.includes('milk') || n.includes('yogurt') || n.includes('cheese') || n.includes('butter') || n.includes('eggnog') || n.includes('mascarpone'))
+          && !n.includes('coconut') && !n.includes('almond') && !n.includes('oat') && !n.includes('cashew') && !n.includes('dairy-free') && !n.includes('vegan') && !n.includes('cookie butter') && !n.includes('peanut butter') && !n.includes('almond butter') && !n.includes('cashew butter');
+      });
+      if (hasDairy) detectedAllergens.push(allergen);
+    } else if (allergen === 'Nuts') {
+      const hasNuts = recipe.ingredients.some((i) => {
+        const n = i.name.toLowerCase();
+        return keywords.some((kw) => n.includes(kw)) && !n.includes('milk') && !n.includes('extract');
+      });
+      if (hasNuts) detectedAllergens.push(allergen);
+    } else {
+      detectedAllergens.push(allergen);
+    }
+  }
+}
+const breadcrumbs = [
+  { name: 'Home', url: siteUrl },
+  { name: 'Recipes', url: `${siteUrl}/recipes` },
+  { name: recipe.title, url: `${siteUrl}/recipes/${recipe.slug}` },
+];
+
+// Fetch all current (non-discontinued) models for the scaler
+const allModels = await getCreamiModels(supabase);
+const currentModels = allModels
+  .filter((m: any) => !m.is_discontinued)
+  .map((m: any) => ({ slug: m.slug, name: m.name, pint_size_oz: m.pint_size_oz ?? 16 }));
+
+// Prepare ingredient data for the scaler
+const scalableIngredients = recipe.ingredients.map((i: any) => ({
+  name: i.name,
+  amount: i.amount,
+  unit: i.unit,
+  group_name: i.group_name ?? 'base',
+}));
+
+const difficultyColors = {
+  beginner: 'bg-mint/40 text-[#1a6b4f]',
+  intermediate: 'bg-vanilla/40 text-[#5C3D2E]',
+  advanced: 'bg-blush/40 text-[#6b1d42]',
+};
+
+const totalTime = (recipe.prep_time_minutes ?? 0) + (recipe.freeze_time_hours ?? 24) * 60;
+const totalTimeLabel = totalTime >= 60
+  ? `${Math.floor(totalTime / 60)}h ${totalTime % 60 > 0 ? `${totalTime % 60}m` : ''}`
+  : `${totalTime}m`;
+---
+
+<BaseLayout
+  title={recipe.meta_title || recipe.title}
+  description={recipe.meta_description || recipe.description}
+  image={recipe.hero_image_url ?? undefined}
+  type="article"
+  jsonLd={recipeJsonLd}
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Recipe FAQ JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify(recipeFaqJsonLd)} slot="head" />
+
+  <!-- Hero -->
+  <section class="relative bg-gradient-to-b from-cream to-white">
+    <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+      <ScrollReveal animation="fade-up">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-sm text-slate-500 mb-6">
+          <a href="/" class="hover:text-berry transition-colors">Home</a>
+          <span>/</span>
+          <a href="/recipes" class="hover:text-berry transition-colors">Recipes</a>
+          <span>/</span>
+          <span class="text-slate-600">{recipe.title}</span>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <!-- Image -->
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-cream-dark shadow-lg">
+            {recipe.hero_image_url ? (
+              <img
+                src={recipe.hero_image_url}
+                alt={recipe.title}
+                class="w-full h-full object-cover"
+              />
+            ) : (
+              <div class="w-full h-full flex items-center justify-center text-8xl bg-gradient-to-br from-blush/20 to-lavender/20">
+                🍦
+              </div>
+            )}
+          </div>
+
+          <!-- Info -->
+          <div>
+            {/* Sponsored banner */}
+            {recipe.is_sponsored && (
+              <div class="flex items-center gap-2 mb-4 px-4 py-2.5 bg-vanilla/20 rounded-xl border border-vanilla/40">
+                {recipe.sponsor_logo_url && (
+                  <img src={recipe.sponsor_logo_url} alt={recipe.sponsor_name ?? 'Sponsor'} class="w-6 h-6 rounded-full object-contain" />
+                )}
+                <span class="text-xs text-slate-500">
+                  Sponsored by
+                  {recipe.sponsor_url ? (
+                    <a
+                      href={recipe.sponsor_url}
+                      rel="nofollow sponsored noopener"
+                      target="_blank"
+                      class="font-medium text-chocolate hover:text-berry transition-colors ml-1"
+                    >
+                      {recipe.sponsor_name}
+                    </a>
+                  ) : (
+                    <span class="font-medium text-chocolate ml-1">{recipe.sponsor_name}</span>
+                  )}
+                </span>
+              </div>
+            )}
+
+            <div class="flex flex-wrap items-center gap-2 mb-4">
+              <span class:list={['text-xs font-medium px-3 py-1 rounded-full', difficultyColors[recipe.difficulty]]}>
+                {recipe.difficulty}
+              </span>
+              <span class="text-xs font-medium px-3 py-1 rounded-full bg-lavender/20 text-lavender-dark">
+                {recipe.base_type}
+              </span>
+              {recipe.models.map((model) => (
+                <span class="text-xs font-medium px-3 py-1 rounded-full bg-slate-100 text-slate-600">
+                  {model.name.replace('Ninja Creami ', '')}
+                </span>
+              ))}
+            </div>
+
+            <h1 class="font-display text-3xl md:text-4xl font-bold text-chocolate mb-4">
+              {recipe.title}
+            </h1>
+
+            <p class="text-slate-600 leading-relaxed mb-6">{recipe.description}</p>
+
+            <!-- Rating -->
+            <div class="flex items-center gap-3 mb-6">
+              <RatingStars rating={recipe.avg_rating} size="lg" showValue />
+              <span class="text-sm text-slate-500">
+                ({recipe.rating_count} review{recipe.rating_count !== 1 ? 's' : ''})
+              </span>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 bg-white rounded-xl border border-slate-100">
+              {recipe.prep_time_minutes && (
+                <div class="text-center">
+                  <div class="text-xs text-slate-500 mb-1">{ui("prep", locale)}</div>
+                  <div class="font-semibold text-chocolate">{recipe.prep_time_minutes}m</div>
+                </div>
+              )}
+              <div class="text-center">
+                <div class="text-xs text-slate-500 mb-1">{ui("freeze", locale)}</div>
+                <div class="font-semibold text-chocolate">{recipe.freeze_time_hours ?? 24}h</div>
+              </div>
+              <div class="text-center">
+                <div class="text-xs text-slate-500 mb-1">{ui("total", locale)}</div>
+                <div class="font-semibold text-chocolate">{totalTimeLabel}</div>
+              </div>
+              <div class="text-center">
+                <div class="text-xs text-slate-500 mb-1">{ui("servings", locale)}</div>
+                <div class="font-semibold text-chocolate">{recipe.servings ?? 4}</div>
+              </div>
+            </div>
+
+            {recipe.churn_program && (
+              <div class="mt-4 p-4 bg-mint/10 rounded-xl border border-mint/20">
+                <span class="text-sm font-medium text-mint-dark">{ui("creamiProgram", locale)}</span>
+                <span class="ml-2 text-sm text-slate-600">{recipe.churn_program}</span>
+              </div>
+            )}
+
+            <!-- Author -->
+            <div class="mt-6 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-lavender/20 flex items-center justify-center text-lavender-dark font-bold text-sm">
+                {(recipe.author.display_name || recipe.author.username).charAt(0).toUpperCase()}
+              </div>
+              <div>
+                <span class="text-sm font-medium text-chocolate">
+                  {recipe.author.display_name || recipe.author.username}
+                </span>
+                <div class="text-xs text-slate-500">
+                  {new Date(recipe.published_at ?? recipe.created_at).toLocaleDateString('en-US', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric',
+                  })}
+                </div>
+              </div>
+            <!-- Share + Print -->
+            <div class="mt-6 flex items-center justify-between">
+              <ShareButtons
+                title={recipe.title}
+                url={`${siteUrl}/recipes/${recipe.slug}`}
+                description={recipe.description}
+              />
+              <button
+                onclick="window.print()"
+                class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-500 hover:text-berry rounded-full border border-slate-200 hover:border-blush transition-colors"
+                aria-label="Print recipe"
+              >
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                </svg>
+                Print
+              </button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+    </div>
+  </section>
+
+  <!-- Video Section (above the fold for SEO) -->
+  {recipe.video_url && (
+    <section class="py-8 bg-white/50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-display text-xl font-bold text-chocolate mb-4 text-center">{ui("watchVideo", locale)}</h2>
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-lg">
+          {recipe.video_url.includes('youtube.com') || recipe.video_url.includes('youtu.be') ? (
+            <iframe
+              src={recipe.video_url.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/')}
+              title={`How to Make ${recipe.title}`}
+              class="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            />
+          ) : (
+            <video
+              src={recipe.video_url}
+              poster={recipe.video_thumbnail_url ?? undefined}
+              controls
+              preload="metadata"
+              class="w-full h-full object-cover"
+            >
+              <track kind="captions" />
+            </video>
+          )}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Before You Begin -->
+  <section class="py-6">
+    <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-2xl p-6 md:p-8 border-2 border-mint bg-gradient-to-br from-mint/5 to-cream shadow-sm">
+        <h2 class="font-display text-xl font-bold text-chocolate mb-5 flex items-center gap-2">
+          <svg class="w-6 h-6 text-mint-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Before You Begin
+        </h2>
+
+        <!-- Model Selection -->
+        <div class="mb-5">
+          <label for="byb-model-select" class="block text-sm font-semibold text-slate-700 mb-2">
+            What Creami model do you have?
+          </label>
+          <select
+            id="byb-model-select"
+            class="w-full px-6 text-lg font-semibold rounded-2xl border-2 border-mint-dark/30 bg-white text-chocolate focus:border-mint-dark focus:ring-2 focus:ring-mint/30 outline-none cursor-pointer shadow-sm hover:shadow-md transition-shadow appearance-none"
+            style="height: 64px; -webkit-appearance: none; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%235C3D2E'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 16px center; background-size: 20px;"
+            aria-label="Select your Ninja Creami model"
+          >
+            <option value="">Select your Creami model...</option>
+            {currentModels.map((m) => (
+              <option value={`${m.slug}|${m.pint_size_oz}`}>
+                {m.name} — {m.pint_size_oz}oz pint
+              </option>
+            ))}
+          </select>
+          <div id="byb-scale-note" class="hidden mt-2 text-sm text-mint-dark bg-mint/15 px-4 py-3 rounded-xl font-medium">
+          </div>
+        </div>
+
+        <!-- Allergen Warning (inside Before You Begin) -->
+        {detectedAllergens.length > 0 && (
+          <div class="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-xl">
+            <svg class="w-5 h-5 text-red-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            </svg>
+            <div>
+              <span class="text-sm font-bold text-red-800">{ui("allergenWarning", locale)} </span>
+              <span class="text-sm text-red-700 font-semibold">
+                {detectedAllergens.join(', ')}
+              </span>
+              <p class="text-xs text-red-600 mt-1">{ui("checkLabels", locale)}</p>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-10 md:py-16">
+    <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <!-- Sidebar: Scalable Ingredients + Ad -->
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24 space-y-6">
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+              <h2 class="font-display text-xl font-bold text-chocolate mb-5">{ui("ingredients", locale)}</h2>
+              <ScalableIngredients
+                client:load
+                ingredients={scalableIngredients}
+                models={currentModels}
+                recipePintSize={recipe.pint_size ?? '16oz'}
+                isSwirl={recipe.is_swirl_recipe ?? false}
+              />
+            </div>
+            <!-- Ad: sidebar medium rectangle (sticky with ingredients) -->
+            <AdUnit size="medium-rectangle" slot="recipe-sidebar" />
+          </div>
+        </aside>
+
+        <!-- Main: Steps -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center justify-between mb-8">
+            <h2 class="font-display text-2xl font-bold text-chocolate">{ui("directions", locale)}</h2>
+            <button
+              id="cook-mode-btn"
+              class="px-5 py-2.5 bg-berry text-white text-sm font-medium rounded-full hover:bg-berry/90 transition-colors shadow-sm"
+            >
+              Cook Mode
+            </button>
+          </div>
+
+          <!-- Step Timeline -->
+          <div id="step-timeline" class="space-y-2">
+            {recipe.steps.map((step) => (
+              <ScrollReveal animation="fade-up" delay={step.step_number * 0.05}>
+                <StepCard step={step} totalSteps={recipe.steps.length} />
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <!-- Ad: after recipe steps (in-article) -->
+          <AdUnit size="in-article" slot="recipe-after-steps" class="mt-10" />
+
+          <!-- Categories & Tags -->
+          {(recipe.categories.length > 0 || recipe.tags.length > 0) && (
+            <div class="mt-10 pt-8 border-t border-slate-100">
+              <div class="flex flex-wrap gap-2">
+                {recipe.categories.map((cat) => (
+                  <a
+                    href={`/recipes?base=${cat.slug}`}
+                    class="px-3 py-1 bg-blush/15 text-berry text-xs font-medium rounded-full hover:bg-blush/25 transition-colors"
+                  >
+                    {cat.name}
+                  </a>
+                ))}
+                {recipe.tags.map((tag) => (
+                  <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">
+                    #{tag.name}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- Allergen info is in "Before You Begin" section above -->
+
+          <!-- FAQ Section -->
+          {recipeFaqs.length > 0 && (
+            <div class="mt-10 pt-8 border-t border-slate-100">
+              <h2 class="font-display text-xl font-bold text-chocolate mb-4">{ui("commonQuestions", locale)}</h2>
+              <div class="space-y-2">
+                {recipeFaqs.map((faq) => (
+                  <details class="group bg-cream/50 rounded-xl border border-slate-100">
+                    <summary class="flex items-center justify-between px-5 py-3 cursor-pointer text-sm font-medium text-chocolate hover:text-berry transition-colors">
+                      {faq.question}
+                      <svg class="w-4 h-4 shrink-0 ml-3 transition-transform duration-200 group-open:rotate-180 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </summary>
+                    <div class="px-5 pb-4 text-sm text-slate-600 leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<!-- Cook Mode Modal -->
+<div id="cook-mode-overlay" class="fixed inset-0 z-50 bg-chocolate/95 text-white hidden flex-col">
+  <div class="flex items-center justify-between p-4 border-b border-white/10">
+    <h3 class="font-display text-lg font-bold">{ui("cookMode", locale)}</h3>
+    <button id="cook-mode-close" class="p-2 hover:bg-white/10 rounded-lg transition-colors">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  <div class="flex-1 flex flex-col items-center justify-center p-8">
+    <div class="text-sm text-white/40 mb-2">
+      Step <span id="cm-current">1</span> of <span id="cm-total">{recipe.steps.length}</span>
+    </div>
+    <p id="cm-instruction" class="text-2xl md:text-3xl text-center leading-relaxed max-w-2xl mb-4"></p>
+    <div id="cm-hint" class="hidden text-white/60 text-center max-w-xl mb-8 bg-white/5 p-4 rounded-xl"></div>
+    <div class="flex items-center gap-4">
+      <button id="cm-prev" class="px-6 py-3 border border-white/20 rounded-full hover:bg-white/10 transition-colors">
+        Previous
+      </button>
+      <button id="cm-next" class="px-6 py-3 bg-blush text-chocolate font-medium rounded-full hover:bg-blush/90 transition-colors">
+        Next
+      </button>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ steps: recipe.steps }}>
+  // Cook Mode
+  const overlay = document.getElementById('cook-mode-overlay');
+  const openBtn = document.getElementById('cook-mode-btn');
+  const closeBtn = document.getElementById('cook-mode-close');
+  const prevBtn = document.getElementById('cm-prev');
+  const nextBtn = document.getElementById('cm-next');
+  const instructionEl = document.getElementById('cm-instruction');
+  const hintEl = document.getElementById('cm-hint');
+  const currentEl = document.getElementById('cm-current');
+
+  let currentStep = 0;
+
+  function updateCookMode() {
+    const step = steps[currentStep];
+    if (!step || !instructionEl || !hintEl || !currentEl || !prevBtn || !nextBtn) return;
+    instructionEl.textContent = step.instruction;
+    currentEl.textContent = String(currentStep + 1);
+    if (step.hint) {
+      hintEl.textContent = step.hint;
+      hintEl.classList.remove('hidden');
+    } else {
+      hintEl.classList.add('hidden');
+    }
+    prevBtn.style.visibility = currentStep === 0 ? 'hidden' : 'visible';
+    nextBtn.textContent = currentStep === steps.length - 1 ? 'Done' : 'Next';
+  }
+
+  openBtn?.addEventListener('click', () => {
+    currentStep = 0;
+    updateCookMode();
+    overlay?.classList.remove('hidden');
+    overlay?.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeBtn?.addEventListener('click', () => {
+    overlay?.classList.add('hidden');
+    overlay?.classList.remove('flex');
+    document.body.style.overflow = '';
+  });
+
+  prevBtn?.addEventListener('click', () => {
+    if (currentStep > 0) { currentStep--; updateCookMode(); }
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    if (currentStep < steps.length - 1) { currentStep++; updateCookMode(); }
+    else { closeBtn?.click(); }
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (overlay?.classList.contains('hidden')) return;
+    if (e.key === 'ArrowRight' || e.key === ' ') nextBtn?.click();
+    if (e.key === 'ArrowLeft') prevBtn?.click();
+    if (e.key === 'Escape') closeBtn?.click();
+  });
+
+  // Before You Begin: model selector → dispatches custom event
+  const bybSelect = document.getElementById('byb-model-select');
+  const bybNote = document.getElementById('byb-scale-note');
+
+  // Load saved model
+  const savedModel = document.cookie.split('; ').find(c => c.startsWith('user_creami_model='))?.split('=')[1];
+  if (savedModel && bybSelect) {
+    const opts = Array.from(bybSelect.options);
+    const match = opts.find(o => o.value.startsWith(savedModel + '|'));
+    if (match) bybSelect.value = match.value;
+  }
+
+  bybSelect?.addEventListener('change', () => {
+    const val = bybSelect.value;
+    if (!val) return;
+    const [slug, sizeStr] = val.split('|');
+    const pintSize = parseInt(sizeStr);
+    const recipePintSize = 16; // all recipes are 16oz
+    const scale = pintSize / recipePintSize;
+
+    // Save to cookie
+    document.cookie = `user_creami_model=${slug}; path=/; max-age=${60 * 60 * 24 * 365}`;
+
+    // Show scale note
+    if (bybNote) {
+      if (scale !== 1) {
+        bybNote.textContent = `Ingredients scaled to ${pintSize}oz for your model.`;
+        bybNote.classList.remove('hidden');
+      } else {
+        bybNote.classList.add('hidden');
+      }
+    }
+
+    // Dispatch event for React ScalableIngredients to pick up
+    window.dispatchEvent(new CustomEvent('creami-model-change', { detail: { slug, pintSize, scale } }));
+  });
+</script>

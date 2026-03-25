@@ -1,0 +1,14 @@
+---
+import type { RecipeWithDetails } from '../../lib/types';
+import { buildRecipeJsonLd } from '../../lib/seo';
+
+interface Props {
+  recipe: RecipeWithDetails;
+}
+
+const { recipe } = Astro.props;
+const siteUrl = Astro.site?.toString() ?? '';
+const jsonLd = buildRecipeJsonLd(recipe, siteUrl);
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

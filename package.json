@@ -1,0 +1,41 @@
+{
+  "name": "creami-recipes",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev --host",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "a11y": "npx axe http://localhost:4321/ http://localhost:4321/recipes http://localhost:4321/about --exit",
+    "a11y:pa11y": "npx pa11y --standard WCAG2AA http://localhost:4321/",
+    "seed": "tsx scripts/seed-recipes.ts"
+  },
+  "dependencies": {
+    "@astrojs/react": "^5.0.1",
+    "@astrojs/sitemap": "^3.7.1",
+    "@astrojs/vercel": "^10.0.2",
+    "@supabase/ssr": "^0.9.0",
+    "@supabase/supabase-js": "^2.100.0",
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^6.0.8",
+    "gsap": "^3.14.2",
+    "pixi.js": "^8.17.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.2.2",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@axe-core/cli": "^4.11.1",
+    "@vitejs/plugin-basic-ssl": "^2.3.0",
+    "pa11y": "^9.1.1",
+    "tsx": "^4.21.0"
+  }
+}

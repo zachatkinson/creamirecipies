@@ -1,0 +1,95 @@
+@media print {
+  /* Hide non-essential elements */
+  header,
+  footer,
+  nav,
+  .ad-zone,
+  .scroll-reveal,
+  #hero-canvas-container,
+  #cook-mode-overlay,
+  #cook-mode-btn,
+  #mobile-menu,
+  #mobile-menu-btn,
+  [data-ad-slot],
+  .ad-banner,
+  .ad-container,
+  button[type="submit"],
+  form,
+  .skip-to-content,
+  [aria-hidden="true"] {
+    display: none !important;
+  }
+
+  /* Reset backgrounds and colors for ink saving */
+  body {
+    background: white !important;
+    color: #000 !important;
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+  }
+
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Show full URLs for links */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666 !important;
+  }
+
+  /* Don't show URL for internal nav links */
+  a[href^="/"]::after {
+    content: none;
+  }
+
+  /* Recipe layout — single column for print */
+  .grid {
+    display: block !important;
+  }
+
+  /* Ensure ingredients and steps are visible */
+  .sticky {
+    position: static !important;
+  }
+
+  /* Page breaks */
+  h1, h2, h3 {
+    page-break-after: avoid;
+    color: #000 !important;
+  }
+
+  .step-card,
+  .recipe-card {
+    page-break-inside: avoid;
+  }
+
+  /* Ingredient checkboxes — show as printable circles */
+  .ingredient-item span.rounded-full {
+    border: 2px solid #000 !important;
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  /* Images — reasonable size */
+  img {
+    max-width: 300px !important;
+    max-height: 200px !important;
+  }
+
+  /* Print header */
+  main::before {
+    content: "Creami Recipes — creami.recipes";
+    display: block;
+    text-align: center;
+    font-size: 10pt;
+    color: #666 !important;
+    margin-bottom: 16pt;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8pt;
+  }
+}

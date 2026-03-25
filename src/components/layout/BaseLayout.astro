@@ -1,0 +1,162 @@
+---
+import '../../styles/global.css';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+
+import { buildWebSiteJsonLd, buildOrganizationJsonLd, buildBreadcrumbJsonLd } from '../../lib/seo';
+import { getAlternateUrls, SUPPORTED_LOCALES } from '../../i18n';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  jsonLd?: Record<string, unknown>;
+  breadcrumbs?: { name: string; url: string }[];
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description = 'Discover and share delicious Ninja Creami recipes. Step-by-step guidance, ratings, and pro tips for perfect frozen treats every time.',
+  image = '/og-default.avif',
+  type = 'website',
+  jsonLd,
+  breadcrumbs,
+  noindex = false,
+} = Astro.props;
+
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
+const isHome = title === 'Home';
+const currentPath = Astro.url.pathname;
+
+const canonicalUrl = new URL(currentPath, Astro.site);
+const fullTitle = title === 'Home' ? 'Creami Recipes' : `${title} | Creami Recipes`;
+const alternateUrls = getAlternateUrls(siteUrl, currentPath);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    {noindex ? (
+      <meta name="robots" content="noindex, nofollow" />
+    ) : (
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    )}
+    <link rel="canonical" href={canonicalUrl.href} />
+
+    <!-- Hreflang (i18n: en, fr, es) -->
+    {alternateUrls.map(({ locale, url }) => (
+      <link rel="alternate" hreflang={locale} href={url} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={canonicalUrl.href} />
+
+    <!-- Webmaster Verification (PLACEHOLDER: replace with real codes) -->
+    <meta name="google-site-verification" content="PLACEHOLDER_GOOGLE_VERIFICATION" />
+    <meta name="msvalidate.01" content="PLACEHOLDER_BING_VERIFICATION" />
+    <meta name="p:domain_verify" content="PLACEHOLDER_PINTEREST_VERIFICATION" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalUrl.href} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Creami Recipes" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Pinterest Rich Pins -->
+    <meta name="pinterest-rich-pin" content="true" />
+
+    <!-- Favicon + PWA -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Preconnect to Supabase for faster API calls -->
+    <link rel="preconnect" href={import.meta.env.PUBLIC_SUPABASE_URL} />
+
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="Creami Recipes" href="/rss.xml" />
+
+    <!-- Mobile / PWA -->
+    <meta name="theme-color" content="#FFF8F0" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Creami Recipes" />
+    <meta name="application-name" content="Creami Recipes" />
+    <meta name="msapplication-TileColor" content="#FFF8F0" />
+
+    <!-- Google Analytics (PLACEHOLDER: replace with real GA4 ID) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script> -->
+
+    <title>{fullTitle}</title>
+
+    {/* Page-specific JSON-LD */}
+    {jsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
+
+    {/* WebSite + Organization JSON-LD (homepage only) */}
+    {isHome && (
+      <>
+        <script type="application/ld+json" set:html={JSON.stringify(buildWebSiteJsonLd(siteUrl))} />
+        <script type="application/ld+json" set:html={JSON.stringify(buildOrganizationJsonLd(siteUrl))} />
+      </>
+    )}
+
+    {/* BreadcrumbList JSON-LD */}
+    {breadcrumbs && breadcrumbs.length > 0 && (
+      <script type="application/ld+json" set:html={JSON.stringify(buildBreadcrumbJsonLd(breadcrumbs))} />
+    )}
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- Skip to main content (WCAG 2.4.1) -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-berry focus:text-white focus:rounded-lg focus:text-sm focus:font-medium focus:shadow-lg"
+    >
+      Skip to main content
+    </a>
+    <Header />
+    <main id="main-content" class="flex-1" role="main">
+      <slot />
+    </main>
+    <Footer />
+
+    <!-- Register Service Worker -->
+    <script is:inline>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+import { c as createComponent } from './astro-component_CdpYp1nz.mjs';
+import 'piccolore';
+import { L as renderTemplate, x as maybeRenderHead } from './sequence_B8w407xz.mjs';
+import { r as renderComponent } from './entrypoint_yfz4azir.mjs';
+import { b as buildFaqJsonLd, $ as $$BaseLayout } from './BaseLayout_C4z3TKmE.mjs';
+import { $ as $$ScrollReveal } from './ScrollReveal_DvuQgtHV.mjs';
+
+const $$About = createComponent(($$result, $$props, $$slots) => {
+  const faqs = [
+    { question: "What is a Ninja Creami?", answer: "The Ninja Creami is a countertop appliance that transforms frozen solid bases into ice cream, sorbet, gelato, frozen yogurt, and more using a powerful blade that shaves and churns the frozen mixture into a creamy texture." },
+    { question: "Which Ninja Creami model should I buy?", answer: "The Original (16oz pints) is great for beginners. The Deluxe (24oz pints) offers larger servings and extra programs like Gelato and Italian Ice. The Breeze is the budget-friendly option with core features." },
+    { question: "How long do I need to freeze the base?", answer: "Most recipes require 24 hours of freezing. Some cream cheese-based recipes can work in as little as 3 hours. Always freeze on a flat, level surface for even results." },
+    { question: "Why is my Creami ice cream crumbly?", answer: "This is normal after the first spin. Simply select Re-Spin for a smoother texture. Protein-based recipes often need 2-3 re-spins. If still crumbly, let the pint sit at room temperature for 3-5 minutes and try again." },
+    { question: "Can I make vegan ice cream in a Ninja Creami?", answer: "Yes! Full-fat coconut milk, oat milk, and almond milk all make excellent dairy-free bases. Check our Vegan and Dairy-Free recipe categories for tested options." },
+    { question: "How do I submit a recipe?", answer: "Create a free account, then click Submit in the navigation. Fill out the multi-step form with your ingredients, step-by-step instructions, and pro tips. Our moderators will review and publish it." }
+  ];
+  const faqJsonLd = buildFaqJsonLd(faqs);
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "About", "description": "About Creami Recipes — a community-driven platform for Ninja Creami ice cream recipes.", "jsonLd": faqJsonLd }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="py-16 md:py-24"> <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8"> ${renderComponent($$result2, "ScrollReveal", $$ScrollReveal, {}, { "default": ($$result3) => renderTemplate` <h1 class="font-display text-4xl md:text-5xl font-bold mb-8 text-center" style="color: #5C3D2E;">
+About Creami Recipes
+</h1> ` })} ${renderComponent($$result2, "ScrollReveal", $$ScrollReveal, { "animation": "fade-up", "delay": 0.1 }, { "default": ($$result3) => renderTemplate` <div class="prose prose-lg max-w-none text-slate-600"> <p>
+Creami Recipes is a community-driven platform dedicated to helping Ninja Creami owners make the most of their machines. Whether you're a beginner making your first pint or an experienced creator experimenting with new flavors, you'll find tested recipes with step-by-step guidance.
+</p> <h2 class="font-display text-2xl font-bold text-chocolate mt-10 mb-4">What Makes Us Different</h2> <ul class="space-y-4"> <li> <strong class="text-chocolate">Step-by-step guidance</strong> — Every recipe walks you through the process with clear instructions and pro tips from experienced Creami users.
+</li> <li> <strong class="text-chocolate">Cook Mode</strong> — A focused, one-step-at-a-time view perfect for following along in the kitchen.
+</li> <li> <strong class="text-chocolate">Community ratings</strong> — Real reviews from real Creami owners help you find the best recipes.
+</li> <li> <strong class="text-chocolate">Model compatibility</strong> — Know which Creami model each recipe is designed for — Original, Deluxe, or Breeze.
+</li> </ul> <h2 class="font-display text-2xl font-bold text-chocolate mt-10 mb-4">Join the Community</h2> <p>
+Have a recipe that always turns out great? Share it with thousands of fellow Creami enthusiasts. Create an account, submit your recipe with ingredients and step-by-step instructions, and help others discover their next favorite frozen treat.
+</p> </div> ` })} <!-- FAQ Section --> ${renderComponent($$result2, "ScrollReveal", $$ScrollReveal, { "animation": "fade-up", "delay": 0.15 }, { "default": ($$result3) => renderTemplate` <div class="mt-14"> <h2 class="font-display text-2xl font-bold text-chocolate mb-6">Frequently Asked Questions</h2> <div class="space-y-3"> ${faqs.map((faq) => renderTemplate`<details class="group bg-white rounded-xl border border-slate-100 shadow-sm"> <summary class="flex items-center justify-between px-6 py-4 cursor-pointer text-sm font-semibold text-chocolate hover:text-berry transition-colors"> ${faq.question} <svg class="w-4 h-4 shrink-0 ml-4 transition-transform duration-200 group-open:rotate-180 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </summary> <div class="px-6 pb-4 text-sm text-slate-600 leading-relaxed"> ${faq.answer} </div> </details>`)} </div> </div> ` })} ${renderComponent($$result2, "ScrollReveal", $$ScrollReveal, { "animation": "fade-up", "delay": 0.2 }, { "default": ($$result3) => renderTemplate` <div class="mt-12 text-center"> <a href="/recipes" class="inline-block px-8 py-3.5 bg-berry text-white font-semibold rounded-full hover:bg-berry/90 transition-colors shadow-lg shadow-berry/25">
+Explore Recipes
+</a> </div> ` })} </div> </section> ` })}`;
+}, "/Users/zach/web-projects/creami/src/pages/about.astro", void 0);
+
+const $$file = "/Users/zach/web-projects/creami/src/pages/about.astro";
+const $$url = "/about";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$About,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

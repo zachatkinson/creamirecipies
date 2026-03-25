@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import ScrollReveal from '../../components/animations/ScrollReveal.astro';
+import AdUnit from '../../components/ads/AdUnit.astro';
+import { supabase } from '../../lib/supabase';
+import { getAllPostSlugs, getPostBySlug } from '../../lib/posts';
+
+export async function getStaticPaths() {
+  const slugs = await getAllPostSlugs(supabase);
+  return slugs.map((slug) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+const post = await getPostBySlug(supabase, slug!);
+
+if (!post) {
+  return Astro.redirect('/404');
+}
+
+const categoryLabels: Record<string, string> = {
+  news: 'News',
+  tips: 'Tips & Tricks',
+  reviews: 'Reviews',
+  guides: 'Guides',
+};
+---
+
+<BaseLayout
+  title={post.title}
+  description={post.excerpt ?? undefined}
+  image={post.hero_image_url ?? undefined}
+  type="article"
+>
+  <article class="py-12 md:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-sm text-slate-500 mb-8">
+        <a href="/" class="hover:text-berry transition-colors">Home</a>
+        <span>/</span>
+        <a href="/blog" class="hover:text-berry transition-colors">Blog</a>
+        <span>/</span>
+        <span class="text-slate-600 truncate">{post.title}</span>
+      </nav>
+
+      <ScrollReveal>
+        <!-- Meta -->
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-xs font-medium px-3 py-1 rounded-full bg-lavender/20 text-lavender-dark">
+            {categoryLabels[post.category] ?? post.category}
+          </span>
+          <span class="text-sm text-slate-500">
+            {new Date(post.published_at ?? post.created_at).toLocaleDateString('en-US', {
+              month: 'long',
+              day: 'numeric',
+              year: 'numeric',
+            })}
+          </span>
+        </div>
+
+        <h1 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-chocolate mb-6">
+          {post.title}
+        </h1>
+
+        <!-- Author -->
+        <div class="flex items-center gap-3 mb-8 pb-8 border-b border-slate-100">
+          <div class="w-10 h-10 rounded-full bg-lavender/20 flex items-center justify-center text-lavender-dark font-bold text-sm">
+            {(post.author.display_name || post.author.username).charAt(0).toUpperCase()}
+          </div>
+          <div>
+            <div class="text-sm font-medium text-chocolate">
+              {post.author.display_name || post.author.username}
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+
+      <!-- Hero Image -->
+      {post.hero_image_url && (
+        <ScrollReveal animation="fade-up" delay={0.1}>
+          <div class="aspect-[16/9] rounded-2xl overflow-hidden mb-10">
+            <img src={post.hero_image_url} alt={post.title} class="w-full h-full object-cover" />
+          </div>
+        </ScrollReveal>
+      )}
+
+      <!-- Body -->
+      <ScrollReveal animation="fade-up" delay={0.15}>
+        <div class="prose prose-lg max-w-none text-slate-600" set:html={post.body} />
+      </ScrollReveal>
+
+      <!-- Ad: bottom of blog post -->
+      <AdUnit size="in-article" slot="post-bottom" class="mt-12" />
+    </div>
+  </article>
+</BaseLayout>
