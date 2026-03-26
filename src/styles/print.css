@@ -78,16 +78,17 @@
     margin: 4pt 0 !important;
   }
 
-  /* Page break before ingredients + directions */
-  .print-page-break {
-    page-break-before: always !important;
-    break-before: page !important;
-  }
-
   /* Kill all section padding for print */
   section {
     padding-top: 4pt !important;
     padding-bottom: 4pt !important;
+  }
+
+  /* Page break before ingredients + directions (must come after section rule) */
+  section.print-page-break {
+    page-break-before: always !important;
+    break-before: page !important;
+    padding-top: 0 !important;
   }
 
   /* Kill extra spacing on content containers */
