@@ -181,17 +181,16 @@
     margin-top: 0 !important;
   }
 
-  /* Ingredients card — keep frame, reduce top padding */
+  /* Ingredients card — tighter internal padding */
   .bg-white.rounded-2xl.p-6 {
-    padding: 8pt !important;
-    padding-top: 6pt !important;
+    padding: 6pt 8pt !important;
   }
 
-  /* Ingredients heading — tighter */
+  /* Ingredients heading — no extra top space */
   .bg-white.rounded-2xl h2 {
-    margin-bottom: 4pt !important;
-    margin-top: 0 !important;
-    font-size: 13pt !important;
+    margin: 0 0 4pt 0 !important;
+    padding: 0 !important;
+    font-size: 12pt !important;
   }
 
   /* Ingredients float left, directions wrap around */
