@@ -172,9 +172,28 @@
     grid-template-columns: repeat(4, 1fr) !important;
   }
 
-  /* Unstick sidebar elements */
+  /* Unstick sidebar elements and kill spacing */
   .sticky {
     position: static !important;
+  }
+
+  .sticky.space-y-6 > * + * {
+    margin-top: 0 !important;
+  }
+
+  /* Ingredients card — strip decorative styling */
+  .bg-white.rounded-2xl.p-6 {
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background: none !important;
+  }
+
+  /* Ingredients heading — tighter */
+  .bg-white.rounded-2xl h2 {
+    margin-bottom: 4pt !important;
+    font-size: 13pt !important;
   }
 
   /* Ingredients float left, directions wrap around */
