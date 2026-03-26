@@ -13,6 +13,15 @@ import { ui } from '../lib/translations';
 const locale = Astro.locals.locale;
 const categories = await getCategories(supabase);
 
+// Get base types that actually have published recipes
+const { data: baseTypeCounts } = await supabase
+  .from('recipes')
+  .select('base_type')
+  .eq('status', 'published')
+  .lte('published_at', new Date().toISOString());
+
+const activeBaseTypes = new Set(baseTypeCounts?.map((r) => r.base_type) ?? []);
+
 // Get total published recipe count for hero stat
 const { count: recipeCount } = await supabase
   .from('recipes')
@@ -48,7 +57,7 @@ const { data: latestPostsRaw } = await supabase
 
 const posts = (latestPostsRaw ?? []) as Record<string, unknown>[];
 
-const baseTypes = categories.filter((c) => c.type === 'base_type');
+const baseTypes = categories.filter((c) => c.type === 'base_type' && activeBaseTypes.has(c.name));
 
 // Translate recipe cards if locale isn't English
 if (locale !== DEFAULT_LOCALE && recipes.length > 0) {
@@ -168,6 +177,12 @@ const categoryColors: Record<string, string> = {
               {ui(cat.name, locale)}
             </a>
           ))}
+          <a
+            href="/recipes?tag=soft-serve"
+            class="px-5 py-2.5 bg-white rounded-full text-sm font-medium text-slate-600 hover:text-berry hover:bg-blush/15 border border-slate-200 hover:border-blush transition-all"
+          >
+            {ui('Soft Serve', locale)}
+          </a>
         </div>
       </ScrollReveal>
     </div>
