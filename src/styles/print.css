@@ -181,18 +181,16 @@
     margin-top: 0 !important;
   }
 
-  /* Ingredients card — strip decorative styling */
+  /* Ingredients card — keep frame, reduce top padding */
   .bg-white.rounded-2xl.p-6 {
-    padding: 0 !important;
-    border: none !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    background: none !important;
+    padding: 8pt !important;
+    padding-top: 6pt !important;
   }
 
   /* Ingredients heading — tighter */
   .bg-white.rounded-2xl h2 {
     margin-bottom: 4pt !important;
+    margin-top: 0 !important;
     font-size: 13pt !important;
   }
 
