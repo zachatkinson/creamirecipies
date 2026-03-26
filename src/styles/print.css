@@ -134,12 +134,12 @@
     widows: 3;
   }
 
-  /* Recipe listing grids — single column for print */
-  .grid.grid-cols-1.sm\:grid-cols-2,
-  .grid.grid-cols-1.md\:grid-cols-2,
-  .grid.grid-cols-1.lg\:grid-cols-3 {
+  /* All grids single column for print EXCEPT stats/nutrition */
+  .grid {
     display: block !important;
   }
+
+  /* Restore stats and nutrition as row grids */
 
   /* BUT keep stats and nutrition grids as rows */
   .grid.grid-cols-2.sm\:grid-cols-4,
