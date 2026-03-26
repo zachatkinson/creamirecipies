@@ -158,5 +158,11 @@ const alternateUrls = getAlternateUrls(siteUrl, currentPath);
         });
       }
     </script>
+    <!-- Print: open all details elements so FAQ answers are visible -->
+    <script>
+      window.addEventListener('beforeprint', () => {
+        document.querySelectorAll('details').forEach(d => d.setAttribute('open', ''));
+      });
+    </script>
   </body>
 </html>

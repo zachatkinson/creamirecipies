@@ -21,8 +21,39 @@
   #byb-model-select,
   #byb-scale-note,
   details summary svg,
-  .scroll-reveal > div[style*="opacity: 0"] {
+  .scroll-reveal > div[style*="opacity: 0"],
+  section[aria-labelledby="similar-recipes-heading"] {
     display: none !important;
+  }
+
+  /* Hide recipe hero image */
+  .aspect-\[4\/3\] {
+    display: none !important;
+  }
+
+  /* "Before You Begin" — hide everything except allergen warning */
+  .border-mint > h2,
+  .border-mint > div:not(.bg-red-50),
+  .border-mint label,
+  .border-mint select,
+  .border-mint .bg-lavender\/10 {
+    display: none !important;
+  }
+
+  /* Strip BYB box styling for print */
+  .border-mint {
+    border: none !important;
+    padding: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Allergen warning — visible and prominent */
+  .bg-red-50 {
+    display: flex !important;
+    border: 2px solid #000 !important;
+    padding: 8pt !important;
+    margin: 8pt 0 !important;
   }
 
   /* Reset backgrounds and colors for ink saving */
@@ -82,9 +113,18 @@
     widows: 3;
   }
 
-  /* Recipe layout — single column for print */
-  .grid {
+  /* Recipe listing grids — single column for print */
+  .grid.grid-cols-1.sm\:grid-cols-2,
+  .grid.grid-cols-1.md\:grid-cols-2,
+  .grid.grid-cols-1.lg\:grid-cols-3 {
     display: block !important;
+  }
+
+  /* BUT keep stats and nutrition grids as rows */
+  .grid.grid-cols-2.sm\:grid-cols-4,
+  .grid.grid-cols-4 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
   }
 
   /* Unstick sidebar elements */
@@ -200,10 +240,36 @@
     padding: 8pt !important;
   }
 
-  /* FAQ section — show all answers */
-  details[class*="group"] {
+  /* FAQ section — force all questions open and show all answers */
+  details {
+    display: block !important;
     border: none !important;
     margin-bottom: 8pt !important;
+  }
+
+  details > summary {
+    display: block !important;
+    font-weight: bold !important;
+    font-size: 11pt !important;
+    list-style: none !important;
+    cursor: default !important;
+    padding: 4pt 0 !important;
+  }
+
+  details > summary::marker,
+  details > summary::-webkit-details-marker {
+    display: none !important;
+  }
+
+  details > div,
+  details > .px-5 {
+    display: block !important;
+    font-size: 10pt !important;
+    padding: 0 0 8pt 0 !important;
+  }
+
+  details[open] > div {
+    display: block !important;
   }
 
   /* "You May Also Like" — hide on print */
