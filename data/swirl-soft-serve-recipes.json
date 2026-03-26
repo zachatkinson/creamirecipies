@@ -1,0 +1,253 @@
+[
+  {
+    "title": "Vanilla Soft Serve",
+    "description": "Creamy vanilla soft serve dispensed right from your Ninja CREAMi Scoop & Swirl. Uses instant pudding mix for an ultra-smooth, shop-quality texture that rivals any soft serve stand.",
+    "base_type": "Ice Cream",
+    "prep_time_minutes": 10,
+    "freeze_time_hours": 24,
+    "servings": 4,
+    "difficulty": "beginner",
+    "is_swirl_recipe": true,
+    "ingredients": [
+      { "name": "granulated sugar", "amount": "1/3", "unit": "cup", "group": "base" },
+      { "name": "instant vanilla pudding mix", "amount": "1", "unit": "tablespoon", "group": "base" },
+      { "name": "whole milk", "amount": "1", "unit": "cup", "group": "base" },
+      { "name": "heavy cream", "amount": "3/4", "unit": "cup", "group": "base" },
+      { "name": "vanilla extract", "amount": "1", "unit": "teaspoon", "group": "base" }
+    ],
+    "steps": [
+      { "instruction": "In a large bowl, whisk together sugar and pudding mix." },
+      { "instruction": "Slowly add milk, heavy cream, and vanilla. Whisk until combined and sugar is dissolved." },
+      { "instruction": "Make sure pint base is closed. Pour mixture into an empty Swirl Pint. Place storage lid on pint and freeze for 24 hours." },
+      { "instruction": "Remove pint from freezer and remove lid from pint." },
+      { "instruction": "Select SOFT SERVE, then ICE CREAM." },
+      { "instruction": "When processing is complete, dispense into a chilled bowl or cone and serve immediately." }
+    ]
+  },
+  {
+    "title": "Chocolate Soft Serve",
+    "description": "Rich, velvety chocolate soft serve made with cocoa powder and chocolate pudding mix. Dispensed directly from the Ninja CREAMi Scoop & Swirl for that authentic soft serve experience.",
+    "base_type": "Ice Cream",
+    "prep_time_minutes": 10,
+    "freeze_time_hours": 24,
+    "servings": 4,
+    "difficulty": "beginner",
+    "is_swirl_recipe": true,
+    "ingredients": [
+      { "name": "granulated sugar", "amount": "1/3", "unit": "cup", "group": "base" },
+      { "name": "chocolate instant pudding mix", "amount": "1", "unit": "tablespoon", "group": "base" },
+      { "name": "cocoa powder", "amount": "3", "unit": "tablespoon", "group": "base" },
+      { "name": "whole milk", "amount": "1", "unit": "cup", "group": "base" },
+      { "name": "heavy cream", "amount": "3/4", "unit": "cup", "group": "base" },
+      { "name": "vanilla extract", "amount": "1", "unit": "teaspoon", "group": "base" }
+    ],
+    "steps": [
+      { "instruction": "In a large bowl, whisk together sugar, pudding mix, and cocoa powder." },
+      { "instruction": "Slowly add milk, heavy cream, and vanilla extract. Whisk until fully combined and sugar is dissolved." },
+      { "instruction": "Make sure pint base is closed. Pour mixture into an empty Swirl Pint. Place storage lid on pint and freeze for 24 hours." },
+      { "instruction": "Remove pint from freezer and remove lid from pint." },
+      { "instruction": "Select SOFT SERVE, then ICE CREAM." },
+      { "instruction": "When processing is complete, dispense into a chilled bowl or cone and serve immediately." }
+    ]
+  },
+  {
+    "title": "Fresh Strawberry Soft Serve",
+    "description": "Sweet and fruity strawberry soft serve made with real fresh strawberries. Blend, freeze, and dispense for a refreshing soft serve treat bursting with natural strawberry flavor.",
+    "base_type": "Ice Cream",
+    "prep_time_minutes": 10,
+    "freeze_time_hours": 24,
+    "servings": 4,
+    "difficulty": "beginner",
+    "is_swirl_recipe": true,
+    "ingredients": [
+      { "name": "fresh strawberries, stems removed", "amount": "1", "unit": "cup", "group": "base" },
+      { "name": "granulated sugar", "amount": "1/2", "unit": "cup", "group": "base" },
+      { "name": "whole milk", "amount": "1/2", "unit": "cup", "group": "base" },
+      { "name": "heavy cream", "amount": "1/2", "unit": "cup", "group": "base" }
+    ],
+    "steps": [
+      { "instruction": "Add all ingredients to a blender and blend until completely smooth." },
+      { "instruction": "Make sure pint base is closed. Pour mixture into an empty Swirl Pint to the MAX FILL line. Place storage lid on pint and freeze for 24 hours." },
+      { "instruction": "Remove pint from freezer and remove lid from pint." },
+      { "instruction": "Select SOFT SERVE, then ICE CREAM." },
+      { "instruction": "When processing is complete, dispense into a chilled bowl or cone and serve immediately." }
+    ]
+  },
+  {
+    "title": "One-Ingredient Frozen Yogurt Soft Serve",
+    "description": "The simplest soft serve recipe possible — just yogurt. Freeze it, spin it, and dispense creamy frozen yogurt soft serve. Try different flavored yogurts for endless variety.",
+    "base_type": "Frozen Yogurt",
+    "prep_time_minutes": 5,
+    "freeze_time_hours": 24,
+    "servings": 4,
+    "difficulty": "beginner",
+    "is_swirl_recipe": true,
+    "ingredients": [
+      { "name": "yogurt (any flavor)", "amount": "2", "unit": "cup", "group": "base" }
+    ],
+    "steps": [
+      { "instruction": "Make sure pint base is closed. Pour yogurt into an empty Swirl Pint to the MAX FILL line. Stir to combine. Place storage lid on pint and freeze for 24 hours." },
+      { "instruction": "Remove pint from freezer and remove lid from pint." },
+      { "instruction": "Select SOFT SERVE, then FROZEN YOGURT." },
+      { "instruction": "Dispense into a chilled bowl or cone and serve immediately." }
+    ]
+  },
+  {
+    "title": "Cookies and Cream Soft Serve",
+    "description": "Classic cookies and cream in soft serve form. Creamy vanilla base with crushed Oreo cookies folded in, then dispensed as smooth soft serve from the Ninja CREAMi Scoop & Swirl.",
+    "base_type": "Ice Cream",
+    "prep_time_minutes": 10,
+    "freeze_time_hours": 24,
+    "servings": 4,
+    "difficulty": "intermediate",
+    "is_swirl_recipe": true,
+    "ingredients": [
+      { "name": "granulated sugar", "amount": "1/3", "unit": "cup", "group": "base" },
+      { "name": "instant vanilla pudding mix", "amount": "1", "unit": "tablespoon", "group": "base" },
+      { "name": "whole milk", "amount": "1", "unit": "cup", "group": "base" },
+      { "name": "heavy cream", "amount": "3/4", "unit": "cup", "group": "base" },
+      { "name": "vanilla extract", "amount": "1", "unit": "teaspoon", "group": "base" },
+      { "name": "Oreo cookies, finely crushed", "amount": "4", "unit": "", "group": "mix-ins" }
+    ],
+    "steps": [
+      { "instruction": "In a large bowl, whisk together sugar and pudding mix." },
+      { "instruction": "Slowly add milk, heavy cream, and vanilla. Whisk until combined and sugar is dissolved." },
+      { "instruction": "Fold in finely crushed Oreo cookies." },
+      { "instruction": "Make sure pint base is closed. Pour mixture into an empty Swirl Pint. Place storage lid on pint and freeze for 24 hours." },
+      { "instruction": "Remove pint from freezer and remove lid from pint." },
+      { "instruction": "Select SOFT SERVE, then ICE CREAM." },
+      { "instruction": "When processing is complete, dispense into a chilled bowl or cone and serve immediately." }
+    ]
+  },
+  {
+    "title": "Peanut Butter Soft Serve",
+    "description": "Creamy peanut butter soft serve with a smooth, nutty flavor. The pudding mix gives it that perfect soft serve consistency when dispensed from the Scoop & Swirl.",
+    "base_type": "Ice Cream",
+    "prep_time_minutes": 10,
+    "freeze_time_hours": 24,
+    "servings": 4,
+    "difficulty": "beginner",
+    "is_swirl_recipe": true,
+    "ingredients": [
+      { "name": "granulated sugar", "amount": "1/4", "unit": "cup", "group": "base" },
+      { "name": "instant vanilla pudding mix", "amount": "1", "unit": "tablespoon", "group": "base" },
+      { "name": "whole milk", "amount": "1", "unit": "cup", "group": "base" },
+      { "name": "heavy cream", "amount": "1/2", "unit": "cup", "group": "base" },
+      { "name": "creamy peanut butter", "amount": "3", "unit": "tablespoon", "group": "base" },
+      { "name": "vanilla extract", "amount": "1", "unit": "teaspoon", "group": "base" }
+    ],
+    "steps": [
+      { "instruction": "In a large bowl, whisk together sugar and pudding mix." },
+      { "instruction": "Warm the peanut butter in the microwave for 10 seconds until pourable." },
+      { "instruction": "Add milk, heavy cream, peanut butter, and vanilla. Whisk until fully combined and sugar is dissolved." },
+      { "instruction": "Make sure pint base is closed. Pour mixture into an empty Swirl Pint. Place storage lid on pint and freeze for 24 hours." },
+      { "instruction": "Remove pint from freezer and remove lid from pint." },
+      { "instruction": "Select SOFT SERVE, then ICE CREAM." },
+      { "instruction": "When processing is complete, dispense into a chilled bowl or cone and serve immediately." }
+    ]
+  },
+  {
+    "title": "Mango Sorbet Soft Serve",
+    "description": "Tropical mango sorbet dispensed as soft serve. Made with frozen mango chunks, sugar, and lime juice for a refreshing dairy-free treat that's perfect for hot days.",
+    "base_type": "Sorbet",
+    "prep_time_minutes": 10,
+    "freeze_time_hours": 24,
+    "servings": 4,
+    "difficulty": "beginner",
+    "is_swirl_recipe": true,
+    "ingredients": [
+      { "name": "frozen mango chunks", "amount": "2", "unit": "cup", "group": "base" },
+      { "name": "water", "amount": "1/2", "unit": "cup", "group": "base" },
+      { "name": "granulated sugar", "amount": "1/3", "unit": "cup", "group": "base" },
+      { "name": "lime juice", "amount": "1", "unit": "tablespoon", "group": "base" }
+    ],
+    "steps": [
+      { "instruction": "Add mango chunks, water, sugar, and lime juice to a blender. Blend until completely smooth." },
+      { "instruction": "Make sure pint base is closed. Pour mixture into an empty Swirl Pint to the MAX FILL line. Place storage lid on pint and freeze for 24 hours." },
+      { "instruction": "Remove pint from freezer and remove lid from pint." },
+      { "instruction": "Select SOFT SERVE, then SORBET." },
+      { "instruction": "When processing is complete, dispense into a chilled bowl and serve immediately." }
+    ]
+  },
+  {
+    "title": "Salted Caramel Soft Serve",
+    "description": "Indulgent salted caramel soft serve with the perfect sweet-salty balance. Caramel sauce and a pinch of sea salt create a luxurious soft serve that tastes like it came from a gourmet shop.",
+    "base_type": "Ice Cream",
+    "prep_time_minutes": 10,
+    "freeze_time_hours": 24,
+    "servings": 4,
+    "difficulty": "beginner",
+    "is_swirl_recipe": true,
+    "ingredients": [
+      { "name": "granulated sugar", "amount": "1/4", "unit": "cup", "group": "base" },
+      { "name": "instant vanilla pudding mix", "amount": "1", "unit": "tablespoon", "group": "base" },
+      { "name": "whole milk", "amount": "1", "unit": "cup", "group": "base" },
+      { "name": "heavy cream", "amount": "3/4", "unit": "cup", "group": "base" },
+      { "name": "caramel sauce", "amount": "3", "unit": "tablespoon", "group": "base" },
+      { "name": "vanilla extract", "amount": "1", "unit": "teaspoon", "group": "base" },
+      { "name": "flaky sea salt", "amount": "1/4", "unit": "teaspoon", "group": "base" }
+    ],
+    "steps": [
+      { "instruction": "In a large bowl, whisk together sugar and pudding mix." },
+      { "instruction": "Add milk, heavy cream, caramel sauce, vanilla, and sea salt. Whisk until fully combined and sugar is dissolved." },
+      { "instruction": "Make sure pint base is closed. Pour mixture into an empty Swirl Pint. Place storage lid on pint and freeze for 24 hours." },
+      { "instruction": "Remove pint from freezer and remove lid from pint." },
+      { "instruction": "Select SOFT SERVE, then ICE CREAM." },
+      { "instruction": "When processing is complete, dispense into a chilled bowl or cone and serve immediately." }
+    ]
+  },
+  {
+    "title": "Mint Chocolate Chip Soft Serve",
+    "description": "Cool mint soft serve with mini chocolate chips. The peppermint extract gives it that iconic green-mint flavor, and the chips add a satisfying crunch to every dispensed swirl.",
+    "base_type": "Ice Cream",
+    "prep_time_minutes": 10,
+    "freeze_time_hours": 24,
+    "servings": 4,
+    "difficulty": "intermediate",
+    "is_swirl_recipe": true,
+    "ingredients": [
+      { "name": "granulated sugar", "amount": "1/3", "unit": "cup", "group": "base" },
+      { "name": "instant vanilla pudding mix", "amount": "1", "unit": "tablespoon", "group": "base" },
+      { "name": "whole milk", "amount": "1", "unit": "cup", "group": "base" },
+      { "name": "heavy cream", "amount": "3/4", "unit": "cup", "group": "base" },
+      { "name": "peppermint extract", "amount": "1/2", "unit": "teaspoon", "group": "base" },
+      { "name": "green food coloring (optional)", "amount": "2", "unit": "drops", "group": "base" },
+      { "name": "mini chocolate chips", "amount": "2", "unit": "tablespoon", "group": "mix-ins" }
+    ],
+    "steps": [
+      { "instruction": "In a large bowl, whisk together sugar and pudding mix." },
+      { "instruction": "Add milk, heavy cream, peppermint extract, and food coloring. Whisk until combined and sugar is dissolved." },
+      { "instruction": "Fold in mini chocolate chips." },
+      { "instruction": "Make sure pint base is closed. Pour mixture into an empty Swirl Pint. Place storage lid on pint and freeze for 24 hours." },
+      { "instruction": "Remove pint from freezer and remove lid from pint." },
+      { "instruction": "Select SOFT SERVE, then ICE CREAM." },
+      { "instruction": "When processing is complete, dispense into a chilled bowl or cone and serve immediately." }
+    ]
+  },
+  {
+    "title": "Coffee Soft Serve",
+    "description": "Smooth espresso-flavored soft serve for coffee lovers. Instant espresso powder gives it a bold coffee kick, perfect dispensed into a cone or alongside a warm brownie.",
+    "base_type": "Ice Cream",
+    "prep_time_minutes": 10,
+    "freeze_time_hours": 24,
+    "servings": 4,
+    "difficulty": "beginner",
+    "is_swirl_recipe": true,
+    "ingredients": [
+      { "name": "granulated sugar", "amount": "1/3", "unit": "cup", "group": "base" },
+      { "name": "instant vanilla pudding mix", "amount": "1", "unit": "tablespoon", "group": "base" },
+      { "name": "instant espresso powder", "amount": "2", "unit": "teaspoon", "group": "base" },
+      { "name": "whole milk", "amount": "1", "unit": "cup", "group": "base" },
+      { "name": "heavy cream", "amount": "3/4", "unit": "cup", "group": "base" },
+      { "name": "vanilla extract", "amount": "1", "unit": "teaspoon", "group": "base" }
+    ],
+    "steps": [
+      { "instruction": "In a large bowl, whisk together sugar, pudding mix, and espresso powder." },
+      { "instruction": "Add milk, heavy cream, and vanilla. Whisk until fully combined and sugar is dissolved." },
+      { "instruction": "Make sure pint base is closed. Pour mixture into an empty Swirl Pint. Place storage lid on pint and freeze for 24 hours." },
+      { "instruction": "Remove pint from freezer and remove lid from pint." },
+      { "instruction": "Select SOFT SERVE, then ICE CREAM." },
+      { "instruction": "When processing is complete, dispense into a chilled bowl or cone and serve immediately." }
+    ]
+  }
+]

@@ -93,7 +93,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
     { label: l.vegan, filters: { dietary: ['vegan'] } },
     { label: l.ketoFriendly, filters: { dietary: ['keto'] } },
     { label: l.dairyFree, filters: { dietary: ['dairy-free'] } },
-    { label: l.softServe, filters: { baseType: ['lite-ice-cream'] } },
+    { label: l.softServe, filters: { category: ['soft-serve'] } },
   ];
 
   // Recipe data state
@@ -109,6 +109,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
   const [selectedFlavors, setSelectedFlavors] = useState<Set<string>>(new Set());
   const [selectedDietary, setSelectedDietary] = useState<Set<string>>(new Set());
   const [selectedModels, setSelectedModels] = useState<Set<string>>(new Set());
+  const [selectedCategories, setSelectedCategories] = useState<Set<string>>(new Set());
   const [selectedDifficulty, setSelectedDifficulty] = useState<Set<string>>(new Set());
   const [minRating, setMinRating] = useState(0);
   const [sortBy, setSortBy] = useState<SortOption>('newest');
@@ -130,10 +131,11 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
     selectedFlavors.forEach((v) => params.append('flavor', v));
     selectedDietary.forEach((v) => params.append('dietary', v));
     selectedModels.forEach((v) => params.append('model', v));
+    selectedCategories.forEach((v) => params.append('tag', v));
     if (minRating > 0) params.set('rating', String(minRating));
     if (sortBy !== 'newest') params.set('sort', sortBy);
     return params;
-  }, [query, selectedBaseTypes, selectedDifficulty, selectedFlavors, selectedDietary, selectedModels, minRating, sortBy]);
+  }, [query, selectedBaseTypes, selectedDifficulty, selectedFlavors, selectedDietary, selectedModels, selectedCategories, minRating, sortBy]);
 
   // Fetch recipes from API
   const fetchRecipes = useCallback(async (pageNum: number, append: boolean) => {
@@ -193,6 +195,12 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
       if (key === 'baseType' && Array.isArray(value)) {
         setSelectedBaseTypes((prev) => { const next = new Set(prev); const v = value[0]; if (next.has(v)) next.delete(v); else next.add(v); return next; });
       }
+      if (key === 'model' && Array.isArray(value)) {
+        setSelectedModels((prev) => { const next = new Set(prev); const v = value[0]; if (next.has(v)) next.delete(v); else next.add(v); return next; });
+      }
+      if (key === 'category' && Array.isArray(value)) {
+        setSelectedCategories((prev) => { const next = new Set(prev); const v = value[0]; if (next.has(v)) next.delete(v); else next.add(v); return next; });
+      }
       if (key === 'minRating' && typeof value === 'number') setMinRating((prev) => prev === value ? 0 : value);
     }
   }, []);
@@ -203,6 +211,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
     setSelectedFlavors(new Set());
     setSelectedDietary(new Set());
     setSelectedModels(new Set());
+    setSelectedCategories(new Set());
     setSelectedDifficulty(new Set());
     setMinRating(0);
     setSortBy('newest');
@@ -217,6 +226,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
     if (params.getAll('flavor').length) setSelectedFlavors(new Set(params.getAll('flavor')));
     if (params.getAll('dietary').length) setSelectedDietary(new Set(params.getAll('dietary')));
     if (params.getAll('model').length) setSelectedModels(new Set(params.getAll('model')));
+    if (params.getAll('tag').length) setSelectedCategories(new Set(params.getAll('tag')));
     if (params.get('rating')) setMinRating(Number(params.get('rating')));
     if (params.get('sort')) setSortBy(params.get('sort') as SortOption);
     initializedRef.current = true;
@@ -237,7 +247,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
     searchTimerRef.current = setTimeout(() => fetchRecipes(1, false), delay);
 
     return () => { if (searchTimerRef.current) clearTimeout(searchTimerRef.current); };
-  }, [query, selectedBaseTypes, selectedDifficulty, selectedFlavors, selectedDietary, selectedModels, minRating, sortBy, buildParams, fetchRecipes]);
+  }, [query, selectedBaseTypes, selectedDifficulty, selectedFlavors, selectedDietary, selectedModels, selectedCategories, minRating, sortBy, buildParams, fetchRecipes]);
 
   // Active filter chips
   const activeFilters: { label: string; onRemove: () => void }[] = [];
@@ -261,6 +271,12 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
   selectedModels.forEach((v) => {
     const m = filterConfig.models.find((md) => md.slug === v);
     if (m) activeFilters.push({ label: m.name, onRemove: () => toggle(selectedModels, v, setSelectedModels) });
+  });
+  selectedCategories.forEach((v) => {
+    // Look up display name from all filter config lists
+    const all = [...filterConfig.baseTypes, ...filterConfig.flavorProfiles, ...filterConfig.dietary];
+    const cat = all.find((c) => c.slug === v);
+    activeFilters.push({ label: cat?.name ?? v, onRemove: () => toggle(selectedCategories, v, setSelectedCategories) });
   });
   if (minRating > 0) activeFilters.push({ label: `${minRating}+ ${l.stars}`, onRemove: () => setMinRating(0) });
 

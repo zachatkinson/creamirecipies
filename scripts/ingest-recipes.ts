@@ -180,7 +180,7 @@ function normalizeBaseType(raw: string): string {
 function normalizeUnit(raw?: string): string | null {
   if (!raw) return null;
   const key = raw.toLowerCase().trim();
-  return UNIT_MAP[key] ?? key || null;
+  return UNIT_MAP[key] ?? (key || null);
 }
 
 function normalizeGroup(raw?: string): 'base' | 'mix-ins' | 'topping' | 'swirl' {
@@ -759,9 +759,9 @@ async function main(): Promise<void> {
     console.error('Missing SUPABASE env vars. Run: source .env');
     process.exit(1);
   }
-  if (!ANTHROPIC_API_KEY) {
-    console.error('Missing ANTHROPIC_API_KEY env var.');
-    process.exit(1);
+  const skipTranslations = process.argv.includes('--skip-translations') || !ANTHROPIC_API_KEY;
+  if (skipTranslations) {
+    console.log('NOTE: Skipping translations (--skip-translations or no ANTHROPIC_API_KEY)');
   }
 
   // Read input
@@ -772,7 +772,7 @@ async function main(): Promise<void> {
   const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY, {
     auth: { autoRefreshToken: false, persistSession: false },
   });
-  const anthropic = new Anthropic({ apiKey: ANTHROPIC_API_KEY });
+  const anthropic = skipTranslations ? null : new Anthropic({ apiKey: ANTHROPIC_API_KEY });
 
   // Pre-fetch lookup data
   console.log('Loading lookup data...');
@@ -849,8 +849,12 @@ async function main(): Promise<void> {
       console.log(`     Tags: ${recipe.categoryIds.length} categories`);
 
       // Step 3
-      console.log('  3. Translating (4 languages)...');
-      await translateRecipe(recipe, anthropic, existingStepTrans);
+      if (!skipTranslations && anthropic) {
+        console.log('  3. Translating (4 languages)...');
+        await translateRecipe(recipe, anthropic, existingStepTrans);
+      } else {
+        console.log('  3. Skipping translations');
+      }
 
       // Step 4
       console.log('  4. Linking models...');
@@ -867,7 +871,7 @@ async function main(): Promise<void> {
         console.warn(`  Quality issues (${errors.length}):`);
         for (const e of errors) console.warn(`    - ${e}`);
         // Only fail on critical errors, warn on translation issues
-        const critical = errors.filter(e => !e.includes('contains English'));
+        const critical = errors.filter(e => !e.includes('contains English') && !(skipTranslations && (e.includes('Missing') && e.includes('translation'))));
         if (critical.length > 0) throw new Error(`Quality check failed: ${critical.join('; ')}`);
       }
 

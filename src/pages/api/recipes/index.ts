@@ -21,6 +21,7 @@ export const GET: APIRoute = async ({ url, locals }) => {
     difficulty: params.getAll('difficulty').filter(Boolean),
     flavor: params.getAll('flavor').filter(Boolean),
     dietary: params.getAll('dietary').filter(Boolean),
+    tag: params.getAll('tag').filter(Boolean),
     model: params.getAll('model').filter(Boolean),
     rating: params.get('rating') ? Number(params.get('rating')) : undefined,
     sort: (params.get('sort') as RecipeQueryParams['sort']) || 'newest',

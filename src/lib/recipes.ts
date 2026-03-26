@@ -14,6 +14,7 @@ const BASE_TYPE_FROM_SLUG: Record<string, string> = {
   'smoothie-bowl': 'Smoothie Bowl',
   'lite-ice-cream': 'Lite Ice Cream',
   'italian-ice': 'Italian Ice',
+  'soft-serve': 'Soft Serve',
 };
 
 export interface RecipeQueryParams {
@@ -22,6 +23,7 @@ export interface RecipeQueryParams {
   difficulty?: string[];
   flavor?: string[];
   dietary?: string[];
+  tag?: string[];
   model?: string[];
   rating?: number;
   sort?: 'newest' | 'rating' | 'reviews' | 'prep-time';
@@ -51,7 +53,7 @@ export async function getFilteredRecipes(
   params: RecipeQueryParams,
 ): Promise<{ recipes: EnrichedRecipeCard[]; total: number; facets: Record<string, Record<string, number>> }> {
   const {
-    q, base, difficulty, flavor, dietary, model, rating,
+    q, base, difficulty, flavor, dietary, tag, model, rating,
     sort = 'newest', page = 1, pageSize = 24, locale = 'en',
   } = params;
 
@@ -102,7 +104,7 @@ export async function getFilteredRecipes(
 
   // Step 2: Use Postgres RPC for filtered, paginated recipe IDs
   // This handles junction table joins server-side, avoiding URL length limits
-  const categorySlugs = [...(flavor ?? []), ...(dietary ?? [])];
+  const categorySlugs = [...(flavor ?? []), ...(dietary ?? []), ...(tag ?? [])];
   const baseTypeNames = (base && base.length > 0)
     ? base.map((s) => BASE_TYPE_FROM_SLUG[s]).filter(Boolean)
     : null;
