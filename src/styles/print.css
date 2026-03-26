@@ -194,12 +194,15 @@
     font-size: 12pt !important;
   }
 
-  /* Ingredients float left, directions wrap around */
+  /* Ingredients + directions: side-by-side columns */
+  .grid.grid-cols-1.lg\:grid-cols-3 {
+    display: grid !important;
+    grid-template-columns: 1fr 2fr !important;
+    gap: 12pt !important;
+  }
+
   .lg\:col-span-1 {
-    float: left !important;
-    width: 33% !important;
-    margin-right: 4% !important;
-    margin-bottom: 8pt !important;
+    width: 100% !important;
   }
 
   .lg\:col-span-2 {
