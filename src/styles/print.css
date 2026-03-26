@@ -201,12 +201,12 @@
   /* Step number — inline before instruction, not absolute */
   .step-card > .absolute.left-0 {
     position: static !important;
-    display: inline-block !important;
-    width: 16pt !important;
-    height: 16pt !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 18pt !important;
+    height: 18pt !important;
     font-size: 9pt !important;
-    line-height: 16pt !important;
-    text-align: center !important;
     background: none !important;
     border: 1.5pt solid #000 !important;
     border-radius: 50% !important;
