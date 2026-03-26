@@ -2,12 +2,44 @@
 import BaseLayout from '../../components/layout/BaseLayout.astro';
 import ScrollReveal from '../../components/animations/ScrollReveal.astro';
 import { supabase } from '../../lib/supabase';
-import { getPublishedPosts, applyPostTranslations } from '../../lib/posts';
 import { t } from '../../i18n';
 
+export const prerender = false;
+
 const locale = Astro.locals.locale;
-const posts = await getPublishedPosts(supabase);
-await applyPostTranslations(supabase, posts, locale);
+const PAGE_SIZE = 12;
+
+// Fetch first page of published posts (only those with past publish dates)
+const { data: initialPosts, count } = await supabase
+  .from('posts')
+  .select('id, title, slug, excerpt, category, hero_image_url, published_at, created_at', { count: 'exact' })
+  .eq('status', 'published')
+  .lte('published_at', new Date().toISOString())
+  .order('published_at', { ascending: false })
+  .range(0, PAGE_SIZE - 1);
+
+const posts = (initialPosts ?? []) as Record<string, unknown>[];
+const total = count ?? 0;
+
+// Apply translations
+if (locale !== 'en' && posts.length > 0) {
+  const postIds = posts.map(p => p.id as string);
+  const { data: translations } = await supabase
+    .from('post_translations')
+    .select('post_id, title, excerpt')
+    .eq('locale', locale)
+    .in('post_id', postIds);
+  if (translations) {
+    const transMap = new Map((translations as Record<string, unknown>[]).map(tr => [tr.post_id, tr]));
+    for (const post of posts) {
+      const tr = transMap.get(post.id as string) as Record<string, unknown> | undefined;
+      if (tr) {
+        post.title = tr.title;
+        if (tr.excerpt) post.excerpt = tr.excerpt;
+      }
+    }
+  }
+}
 
 const categoryColors: Record<string, string> = {
   news: 'bg-lavender/20 text-lavender-dark',
@@ -15,6 +47,8 @@ const categoryColors: Record<string, string> = {
   reviews: 'bg-vanilla/20 text-chocolate-light',
   guides: 'bg-blush/20 text-berry',
 };
+
+const hasMore = posts.length < total;
 ---
 
 <BaseLayout title={t('blog.title', locale)} description={t('blog.description', locale)}>
@@ -25,15 +59,15 @@ const categoryColors: Record<string, string> = {
           <h1 class="font-display text-4xl md:text-5xl font-bold text-chocolate mb-4">
             {t('blog.title', locale)}
           </h1>
-          <p class="text-slate-500 max-w-lg mx-auto">
+          <p class="text-slate-600 max-w-lg mx-auto">
             {t('blog.description', locale)}
           </p>
         </div>
       </ScrollReveal>
 
       {posts.length > 0 ? (
-        <ScrollReveal animation="stagger" staggerAmount={0.08}>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <>
+          <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
               <a
                 href={`/blog/${post.slug}`}
@@ -42,15 +76,15 @@ const categoryColors: Record<string, string> = {
                 <div class="aspect-[16/9] bg-cream-dark overflow-hidden">
                   {post.hero_image_url ? (
                     <img
-                      src={post.hero_image_url}
-                      alt={post.title}
+                      src={post.hero_image_url as string}
+                      alt={post.title as string}
                       class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />
                   ) : (
                     <img
-                      src={`/images/blog/${post.category || 'news'}.svg`}
-                      alt={post.title}
+                      src={`/images/blog/${(post.category as string) || 'news'}.svg`}
+                      alt={post.title as string}
                       class="w-full h-full object-cover"
                       loading="lazy"
                     />
@@ -58,31 +92,114 @@ const categoryColors: Record<string, string> = {
                 </div>
                 <div class="p-5">
                   <div class="flex items-center gap-2 mb-2">
-                    <span class:list={['text-xs font-medium px-2.5 py-0.5 rounded-full', categoryColors[post.category] ?? 'bg-slate-100 text-slate-600']}>
+                    <span class:list={['text-xs font-medium px-2.5 py-0.5 rounded-full', categoryColors[post.category as string] ?? 'bg-slate-100 text-slate-600']}>
                       {t(`blog.${post.category}`, locale)}
                     </span>
-                    <span class="text-xs text-slate-500">
-                      {new Date(post.published_at ?? post.created_at).toLocaleDateString(locale, { month: 'short', day: 'numeric', year: 'numeric' })}
-                    </span>
+                    <time class="text-xs text-slate-600" datetime={post.published_at as string}>
+                      {new Date((post.published_at ?? post.created_at) as string).toLocaleDateString(locale, { month: 'short', day: 'numeric', year: 'numeric' })}
+                    </time>
                   </div>
                   <h2 class="font-display text-lg font-bold text-chocolate group-hover:text-berry transition-colors line-clamp-2 mb-2">
                     {post.title}
                   </h2>
                   {post.excerpt && (
-                    <p class="text-sm text-slate-500 line-clamp-3">{post.excerpt}</p>
+                    <p class="text-sm text-slate-600 line-clamp-3">{post.excerpt}</p>
                   )}
                 </div>
               </a>
             ))}
           </div>
-        </ScrollReveal>
+
+          {hasMore && (
+            <div class="text-center mt-10">
+              <button
+                id="load-more-posts"
+                data-page="2"
+                data-total={total}
+                data-loaded={posts.length}
+                data-label={t('home.viewAll', locale)}
+                class="px-8 py-3 bg-white text-berry font-medium rounded-full border-2 border-blush hover:bg-blush/10 transition-colors"
+              >
+                {t('home.viewAll', locale)}
+                <span class="ml-2 text-sm text-slate-600">
+                  ({posts.length} / {total})
+                </span>
+              </button>
+            </div>
+          )}
+        </>
       ) : (
         <div class="text-center py-20 bg-white/50 rounded-2xl">
           <span class="text-5xl mb-4 block">📝</span>
           <h2 class="font-display text-2xl font-bold text-chocolate mb-2">{t('blog.comingSoon', locale)}</h2>
-          <p class="text-slate-500">{t('blog.comingSoonDesc', locale)}</p>
+          <p class="text-slate-600">{t('blog.comingSoonDesc', locale)}</p>
         </div>
       )}
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const btn = document.getElementById('load-more-posts') as HTMLButtonElement | null;
+  if (btn) {
+    const grid = document.getElementById('blog-grid');
+    let page = parseInt(btn.dataset.page ?? '2');
+    const total = parseInt(btn.dataset.total ?? '0');
+    let loaded = parseInt(btn.dataset.loaded ?? '0');
+
+    const categoryColors: Record<string, string> = {
+      news: 'bg-lavender/20 text-lavender-dark',
+      tips: 'bg-mint/20 text-mint-dark',
+      reviews: 'bg-vanilla/20 text-chocolate-light',
+      guides: 'bg-blush/20 text-berry',
+    };
+
+    btn.addEventListener('click', async () => {
+      btn.disabled = true;
+      btn.textContent = '...';
+
+      try {
+        const res = await fetch(`/api/posts?page=${page}&pageSize=12`);
+        const data = await res.json();
+
+        for (const post of data.posts) {
+          const heroSrc = post.hero_image_url || `/images/blog/${post.category || 'news'}.svg`;
+          const date = new Date(post.published_at || post.created_at).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+          const colorClass = categoryColors[post.category] ?? 'bg-slate-100 text-slate-600';
+
+          const card = document.createElement('a');
+          card.href = `/blog/${post.slug}`;
+          card.className = 'group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1';
+          card.innerHTML = `
+            <div class="aspect-[16/9] bg-cream-dark overflow-hidden">
+              <img src="${heroSrc}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-xs font-medium px-2.5 py-0.5 rounded-full ${colorClass}">${post.category}</span>
+                <time class="text-xs text-slate-600">${date}</time>
+              </div>
+              <h2 class="font-display text-lg font-bold text-chocolate group-hover:text-berry transition-colors line-clamp-2 mb-2">${post.title}</h2>
+              ${post.excerpt ? `<p class="text-sm text-slate-600 line-clamp-3">${post.excerpt}</p>` : ''}
+            </div>
+          `;
+          grid?.appendChild(card);
+        }
+
+        loaded += data.posts.length;
+        page++;
+
+        if (loaded >= total) {
+          btn.remove();
+        } else {
+          btn.disabled = false;
+          const label = btn.dataset.label ?? 'Load More';
+          btn.innerHTML = `${label} <span class="ml-2 text-sm text-slate-600">(${loaded} / ${total})</span>`;
+        }
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Error — try again';
+      }
+    });
+  }
+</script>
