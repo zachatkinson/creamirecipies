@@ -231,20 +231,25 @@
     display: none !important;
   }
 
-  /* Pro tips — compact */
+  /* Pro tips — italic, smaller, visually distinct */
   .step-card details {
     margin-top: 2pt !important;
   }
 
   .step-card details summary {
-    font-size: 9pt !important;
-    padding: 2pt 0 !important;
+    font-size: 8pt !important;
+    font-style: italic !important;
+    font-weight: 600 !important;
+    padding: 1pt 0 !important;
   }
 
   .step-card details > div {
-    font-size: 9pt !important;
-    padding: 3pt 6pt !important;
-    margin-top: 1pt !important;
+    font-size: 8pt !important;
+    font-style: italic !important;
+    padding: 1pt 0 2pt 0 !important;
+    margin-top: 0 !important;
+    border: none !important;
+    background: none !important;
   }
 
   /* Pro tips — show expanded */
