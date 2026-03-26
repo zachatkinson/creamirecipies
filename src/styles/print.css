@@ -12,17 +12,33 @@
   [data-ad-slot],
   .ad-banner,
   .ad-container,
-  button,
   form,
   .skip-to-content,
-  [aria-hidden="true"],
   .share-buttons,
+  .share-print-bar,
   #load-more-posts,
   #byb-model-select,
   #byb-scale-note,
-  details summary svg,
-  .scroll-reveal > div[style*="opacity: 0"],
   section[aria-labelledby="similar-recipes-heading"] {
+    display: none !important;
+  }
+
+  /* Hide all buttons except inside step cards */
+  button:not(.step-card button) {
+    display: none !important;
+  }
+
+  /* Force all GSAP animated elements visible for print */
+  .scroll-reveal,
+  .scroll-reveal > *,
+  .scroll-reveal [style] {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+
+  /* SVGs inside step details (chevrons) — hide */
+  details summary svg {
     display: none !important;
   }
 
