@@ -1,0 +1,50 @@
+---
+import { ui } from '../../lib/translations';
+
+interface Props {
+  calories: number;
+  protein: number;
+  fat: number;
+  carbs: number;
+  servings: number;
+}
+
+const { calories, protein, fat, carbs, servings } = Astro.props;
+const locale = Astro.locals.locale;
+
+// Per serving
+const perServing = {
+  calories: Math.round(calories / servings),
+  protein: Math.round(protein / servings),
+  fat: Math.round(fat / servings),
+  carbs: Math.round(carbs / servings),
+};
+
+// Only show if we have meaningful data
+const hasData = perServing.calories > 0;
+---
+
+{hasData && (
+  <div class="mt-6 p-4 bg-white rounded-xl border border-slate-100">
+    <h3 class="text-sm font-bold text-chocolate mb-3">{ui('nutritionEstimate', locale)}</h3>
+    <div class="grid grid-cols-4 gap-3 text-center">
+      <div>
+        <div class="text-lg font-bold text-chocolate">{perServing.calories}</div>
+        <div class="text-xs text-slate-600">{ui('calories', locale)}</div>
+      </div>
+      <div>
+        <div class="text-lg font-bold text-chocolate">{perServing.protein}g</div>
+        <div class="text-xs text-slate-600">{ui('proteinLabel', locale)}</div>
+      </div>
+      <div>
+        <div class="text-lg font-bold text-chocolate">{perServing.fat}g</div>
+        <div class="text-xs text-slate-600">{ui('fatLabel', locale)}</div>
+      </div>
+      <div>
+        <div class="text-lg font-bold text-chocolate">{perServing.carbs}g</div>
+        <div class="text-xs text-slate-600">{ui('carbsLabel', locale)}</div>
+      </div>
+    </div>
+    <p class="text-xs text-slate-600 mt-2 italic">{ui('nutritionDisclaimer', locale)}</p>
+  </div>
+)}

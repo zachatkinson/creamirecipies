@@ -7,6 +7,7 @@ import RatingStars from '../../components/recipe/RatingStars.astro';
 import ScrollReveal from '../../components/animations/ScrollReveal.astro';
 import AdUnit from '../../components/ads/AdUnit.astro';
 import RecipeCard from '../../components/recipe/RecipeCard.astro';
+import NutritionInfo from '../../components/recipe/NutritionInfo.astro';
 export const prerender = false;
 
 import { supabase } from '../../lib/supabase';
@@ -165,6 +166,42 @@ const scalableIngredients = recipe.ingredients.map((i: any) => ({
   group_name: i.group_name ?? 'base',
 }));
 
+// Calculate nutrition from master_ingredients
+let totalCalories = 0, totalProtein = 0, totalFat = 0, totalCarbs = 0;
+const masterIngIds = recipe.ingredients
+  .filter((i: any) => i.master_ingredient_id)
+  .map((i: any) => i.master_ingredient_id);
+
+if (masterIngIds.length > 0) {
+  const { data: nutritionData } = await supabase
+    .from('master_ingredients')
+    .select('id, calories_per_100g, protein_per_100g, fat_per_100g, carbs_per_100g')
+    .in('id', masterIngIds)
+    .not('calories_per_100g', 'is', null) as { data: { id: string; calories_per_100g: number; protein_per_100g: number; fat_per_100g: number; carbs_per_100g: number }[] | null };
+
+  if (nutritionData) {
+    const nutritionMap = new Map(nutritionData.map(n => [n.id, n]));
+    for (const ing of recipe.ingredients as any[]) {
+      const nutrition = nutritionMap.get(ing.master_ingredient_id);
+      if (!nutrition) continue;
+      // Rough estimate: parse amount and convert to grams
+      const amount = parseFloat(ing.amount) || 0;
+      const unit = (ing.unit || '').toLowerCase();
+      const grams = unit === 'cup' ? amount * 240
+        : unit === 'tablespoon' ? amount * 15
+        : unit === 'teaspoon' ? amount * 5
+        : unit === 'oz' ? amount * 28
+        : unit === 'g' ? amount
+        : amount * 30;
+      const factor = grams / 100;
+      totalCalories += nutrition.calories_per_100g * factor;
+      totalProtein += nutrition.protein_per_100g * factor;
+      totalFat += nutrition.fat_per_100g * factor;
+      totalCarbs += nutrition.carbs_per_100g * factor;
+    }
+  }
+}
+
 const difficultyColors = {
   beginner: 'bg-mint/40 text-[#1a6b4f]',
   intermediate: 'bg-vanilla/40 text-[#5C3D2E]',
@@ -202,19 +239,39 @@ const totalTimeLabel = totalTime >= 60
         </nav>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-          <!-- Image -->
-          <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-cream-dark shadow-lg">
-            {recipe.hero_image_url ? (
-              <img
-                src={recipe.hero_image_url}
-                alt={recipe.title}
-                class="w-full h-full object-cover"
+          <!-- Image + Share -->
+          <div>
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-cream-dark shadow-lg">
+              {recipe.hero_image_url ? (
+                <img
+                  src={recipe.hero_image_url}
+                  alt={recipe.title}
+                  class="w-full h-full object-cover"
+                />
+              ) : (
+                <div class="w-full h-full flex items-center justify-center text-8xl bg-gradient-to-br from-blush/20 to-lavender/20">
+                  🍦
+                </div>
+              )}
+            </div>
+            <!-- Share + Print (under image) -->
+            <div class="mt-4 flex items-center justify-between">
+              <ShareButtons
+                title={recipe.title}
+                url={`${siteUrl}/recipes/${recipe.slug}`}
+                description={recipe.description}
               />
-            ) : (
-              <div class="w-full h-full flex items-center justify-center text-8xl bg-gradient-to-br from-blush/20 to-lavender/20">
-                🍦
-              </div>
-            )}
+              <button
+                onclick="window.print()"
+                class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-600 hover:text-berry rounded-full border border-slate-200 hover:border-blush transition-colors"
+                aria-label={ui('print', locale)}
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                </svg>
+                {ui('print', locale)}
+              </button>
+            </div>
           </div>
 
           <!-- Info -->
@@ -257,9 +314,22 @@ const totalTimeLabel = totalTime >= 60
               ))}
             </div>
 
-            <h1 class="font-display text-3xl md:text-4xl font-bold text-chocolate mb-4">
+            <h1 class="font-display text-3xl md:text-4xl font-bold text-chocolate mb-2">
               {recipe.title}
             </h1>
+
+            <!-- Author + Date -->
+            <div class="flex items-center gap-2 text-xs text-slate-600 mb-4">
+              <span class="font-medium text-chocolate">{recipe.author.display_name || recipe.author.username}</span>
+              <span>·</span>
+              <time datetime={recipe.published_at ?? recipe.created_at}>
+                {new Date(recipe.published_at ?? recipe.created_at).toLocaleDateString(locale, {
+                  month: 'long',
+                  day: 'numeric',
+                  year: 'numeric',
+                })}
+              </time>
+            </div>
 
             <p class="text-slate-600 leading-relaxed mb-6">{recipe.description}</p>
 
@@ -300,42 +370,15 @@ const totalTimeLabel = totalTime >= 60
               </div>
             )}
 
-            <!-- Author -->
-            <div class="mt-6 flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-lavender/20 flex items-center justify-center text-lavender-dark font-bold text-sm">
-                {(recipe.author.display_name || recipe.author.username).charAt(0).toUpperCase()}
-              </div>
-              <div>
-                <span class="text-sm font-medium text-chocolate">
-                  {recipe.author.display_name || recipe.author.username}
-                </span>
-                <div class="text-xs text-slate-600">
-                  {new Date(recipe.published_at ?? recipe.created_at).toLocaleDateString('en-US', {
-                    month: 'long',
-                    day: 'numeric',
-                    year: 'numeric',
-                  })}
-                </div>
-              </div>
-            <!-- Share + Print -->
-            <div class="mt-6 flex items-center justify-between">
-              <ShareButtons
-                title={recipe.title}
-                url={`${siteUrl}/recipes/${recipe.slug}`}
-                description={recipe.description}
-              />
-              <button
-                onclick="window.print()"
-                class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-600 hover:text-berry rounded-full border border-slate-200 hover:border-blush transition-colors"
-                aria-label={ui('print', locale)}
-              >
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
-                </svg>
-                {ui('print', locale)}
-              </button>
-            </div>
-            </div>
+            <!-- Nutrition Info -->
+            <NutritionInfo
+              calories={totalCalories}
+              protein={totalProtein}
+              fat={totalFat}
+              carbs={totalCarbs}
+              servings={recipe.servings ?? 4}
+            />
+
           </div>
         </div>
       </ScrollReveal>

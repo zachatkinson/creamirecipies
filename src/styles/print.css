@@ -4,7 +4,6 @@
   footer,
   nav,
   .ad-zone,
-  .scroll-reveal,
   #hero-canvas-container,
   #cook-mode-overlay,
   #cook-mode-btn,
@@ -13,10 +12,16 @@
   [data-ad-slot],
   .ad-banner,
   .ad-container,
-  button[type="submit"],
+  button,
   form,
   .skip-to-content,
-  [aria-hidden="true"] {
+  [aria-hidden="true"],
+  .share-buttons,
+  #load-more-posts,
+  #byb-model-select,
+  #byb-scale-note,
+  details summary svg,
+  .scroll-reveal > div[style*="opacity: 0"] {
     display: none !important;
   }
 
@@ -25,7 +30,9 @@
     background: white !important;
     color: #000 !important;
     font-size: 12pt !important;
-    line-height: 1.5 !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   * {
@@ -33,55 +40,10 @@
     color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
+    border-color: #ccc !important;
   }
 
-  /* Show full URLs for links */
-  a[href^="http"]::after {
-    content: " (" attr(href) ")";
-    font-size: 9pt;
-    color: #666 !important;
-  }
-
-  /* Don't show URL for internal nav links */
-  a[href^="/"]::after {
-    content: none;
-  }
-
-  /* Recipe layout — single column for print */
-  .grid {
-    display: block !important;
-  }
-
-  /* Ensure ingredients and steps are visible */
-  .sticky {
-    position: static !important;
-  }
-
-  /* Page breaks */
-  h1, h2, h3 {
-    page-break-after: avoid;
-    color: #000 !important;
-  }
-
-  .step-card,
-  .recipe-card {
-    page-break-inside: avoid;
-  }
-
-  /* Ingredient checkboxes — show as printable circles */
-  .ingredient-item span.rounded-full {
-    border: 2px solid #000 !important;
-    width: 14px !important;
-    height: 14px !important;
-  }
-
-  /* Images — reasonable size */
-  img {
-    max-width: 300px !important;
-    max-height: 200px !important;
-  }
-
-  /* Print header */
+  /* Print header with site name */
   main::before {
     content: "Creami Recipes — creami.recipes";
     display: block;
@@ -91,5 +53,177 @@
     margin-bottom: 16pt;
     border-bottom: 1px solid #ccc;
     padding-bottom: 8pt;
+  }
+
+  /* Typography for headings */
+  h1 {
+    font-size: 22pt !important;
+    margin-bottom: 8pt !important;
+    page-break-after: avoid;
+  }
+
+  h2 {
+    font-size: 16pt !important;
+    margin-top: 16pt !important;
+    margin-bottom: 6pt !important;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 13pt !important;
+    margin-top: 12pt !important;
+    page-break-after: avoid;
+  }
+
+  p {
+    font-size: 11pt !important;
+    margin-bottom: 6pt !important;
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Recipe layout — single column for print */
+  .grid {
+    display: block !important;
+  }
+
+  /* Unstick sidebar elements */
+  .sticky {
+    position: static !important;
+  }
+
+  /* Recipe ingredients — clean list with checkboxes */
+  .ingredient-item,
+  li {
+    font-size: 11pt !important;
+    margin-bottom: 4pt !important;
+    page-break-inside: avoid;
+  }
+
+  /* Ingredient checkboxes — printable circles */
+  span.rounded-full {
+    border: 2px solid #000 !important;
+    width: 12px !important;
+    height: 12px !important;
+    display: inline-block !important;
+    background: transparent !important;
+  }
+
+  /* Steps — numbered with clear spacing */
+  .step-card {
+    page-break-inside: avoid;
+    margin-bottom: 12pt !important;
+    padding-left: 0 !important;
+  }
+
+  /* Step number bubbles — just show the number */
+  .step-card .absolute.left-0 {
+    position: static !important;
+    display: inline-block !important;
+    width: auto !important;
+    height: auto !important;
+    background: none !important;
+    font-weight: bold !important;
+    margin-right: 8pt !important;
+  }
+
+  /* Step timeline connector — hide */
+  .step-card .absolute.left-\\[1\\.15rem\\] {
+    display: none !important;
+  }
+
+  /* Pro tips — show expanded */
+  details {
+    display: block !important;
+  }
+
+  details[open] > div,
+  details > div {
+    display: block !important;
+  }
+
+  details > summary {
+    font-weight: bold !important;
+    list-style: none !important;
+  }
+
+  /* Recipe card on listing — prevent break */
+  .recipe-card,
+  a[href*="/recipes/"] {
+    page-break-inside: avoid;
+  }
+
+  /* Quick stats bar */
+  .grid.grid-cols-2.sm\\:grid-cols-4 {
+    display: flex !important;
+    gap: 16pt !important;
+    border: 1px solid #ccc !important;
+    padding: 8pt !important;
+    margin-bottom: 12pt !important;
+  }
+
+  /* Images — reasonable print size */
+  img {
+    max-width: 250px !important;
+    max-height: 180px !important;
+  }
+
+  /* Hero image — larger for recipe pages */
+  .aspect-\\[4\\/3\\] img {
+    max-width: 350px !important;
+    max-height: 250px !important;
+  }
+
+  /* Links — show URL for external links only */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #666 !important;
+    word-break: break-all;
+  }
+
+  a[href^="/"]::after,
+  a[href^="#"]::after {
+    content: none;
+  }
+
+  /* Allergen warning — visible with border */
+  .bg-red-50 {
+    border: 2px solid #000 !important;
+    padding: 8pt !important;
+    margin: 8pt 0 !important;
+  }
+
+  /* Swirl notice — visible */
+  .bg-lavender\\/10 {
+    border: 1px solid #666 !important;
+    padding: 8pt !important;
+  }
+
+  /* FAQ section — show all answers */
+  details[class*="group"] {
+    border: none !important;
+    margin-bottom: 8pt !important;
+  }
+
+  /* "You May Also Like" — hide on print */
+  section[aria-labelledby="similar-recipes-heading"] {
+    display: none !important;
+  }
+
+  /* Blog post body — full width */
+  .prose {
+    max-width: 100% !important;
+    font-size: 11pt !important;
+  }
+
+  /* Page margins */
+  @page {
+    margin: 1.5cm;
+    size: letter;
+  }
+
+  @page :first {
+    margin-top: 2cm;
   }
 }
