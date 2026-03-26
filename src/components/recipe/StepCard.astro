@@ -52,7 +52,7 @@ const locale = Astro.locals.locale;
     {step.image_url && (
       <img
         src={step.image_url}
-        alt={`Step ${step.step_number}`}
+        alt={`${ui('stepImageAlt', locale)} ${step.step_number}`}
         class="mt-4 rounded-lg w-full max-h-64 object-cover"
         loading="lazy"
       />

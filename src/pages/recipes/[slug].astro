@@ -282,7 +282,7 @@ const totalTimeLabel = totalTime >= 60
             {recipe.is_sponsored && (
               <div class="flex items-center gap-2 mb-4 px-4 py-2.5 bg-vanilla/20 rounded-xl border border-vanilla/40">
                 {recipe.sponsor_logo_url && (
-                  <img src={recipe.sponsor_logo_url} alt={recipe.sponsor_name ?? 'Sponsor'} class="w-6 h-6 rounded-full object-contain" />
+                  <img src={recipe.sponsor_logo_url} alt={recipe.sponsor_name ?? ui('sponsor', locale)} class="w-6 h-6 rounded-full object-contain" />
                 )}
                 <span class="text-xs text-slate-600">
                   Sponsored by

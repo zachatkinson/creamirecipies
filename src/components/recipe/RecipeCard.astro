@@ -25,7 +25,7 @@ const difficultyColors = {
   {recipe.is_sponsored && (
     <div class="absolute top-3 left-3 z-10 flex items-center gap-1.5 px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-full shadow-sm">
       {recipe.sponsor_logo_url && (
-        <img src={recipe.sponsor_logo_url} alt={recipe.sponsor_name ?? 'Sponsor'} class="w-4 h-4 rounded-full object-contain" />
+        <img src={recipe.sponsor_logo_url} alt={recipe.sponsor_name ?? ui('sponsor', locale)} class="w-4 h-4 rounded-full object-contain" />
       )}
       <span class="text-[10px] font-medium text-slate-600 uppercase tracking-wider">Sponsored</span>
     </div>

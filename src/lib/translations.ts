@@ -93,6 +93,8 @@ export async function getStepTranslations(
 
 /** UI label translations for recipe pages */
 export const RECIPE_UI: Record<string, Record<Locale, string>> = {
+  'stepImageAlt': { en: 'Step', fr: 'Étape', es: 'Paso', de: 'Schritt', pt: 'Passo' },
+  'sponsor': { en: 'Sponsor', fr: 'Sponsor', es: 'Patrocinador', de: 'Sponsor', pt: 'Patrocinador' },
   'ingredients': { en: 'Ingredients', fr: 'Ingrédients', es: 'Ingredientes', de: 'Zutaten', pt: 'Ingredientes' },
   'directions': { en: 'Directions', fr: 'Instructions', es: 'Instrucciones', de: 'Zubereitung', pt: 'Modo de Preparo' },
   'cookMode': { en: 'Cook Mode', fr: 'Mode Cuisine', es: 'Modo Cocina', de: 'Kochmodus', pt: 'Modo Cozinha' },
