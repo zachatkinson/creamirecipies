@@ -188,11 +188,17 @@
     padding: 6pt 8pt !important;
   }
 
-  /* Ingredients heading — no extra top space */
+  /* Ingredients heading — space before group labels */
   .bg-white.rounded-2xl h2 {
-    margin: 0 0 4pt 0 !important;
+    margin: 0 0 6pt 0 !important;
     padding: 0 !important;
     font-size: 12pt !important;
+  }
+
+  /* Ingredient group labels (BASE INGREDIENTS, MIX-INS) */
+  .bg-white.rounded-2xl h4 {
+    margin-top: 6pt !important;
+    margin-bottom: 3pt !important;
   }
 
   /* Ingredients + directions: side-by-side (flexbox for Safari compat) */
