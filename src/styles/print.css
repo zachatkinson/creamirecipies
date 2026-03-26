@@ -78,6 +78,12 @@
     margin: 4pt 0 !important;
   }
 
+  /* Page break before ingredients + directions */
+  .print-page-break {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+
   /* Kill all section padding for print */
   section {
     padding-top: 4pt !important;
