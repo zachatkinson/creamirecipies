@@ -195,6 +195,11 @@
     font-size: 12pt !important;
   }
 
+  /* Directions header — tighten bottom spacing */
+  .lg\:col-span-2 > .mb-8 {
+    margin-bottom: 4pt !important;
+  }
+
   /* Ingredient group labels (BASE INGREDIENTS, MIX-INS) */
   .bg-white.rounded-2xl h4 {
     margin-top: 6pt !important;
