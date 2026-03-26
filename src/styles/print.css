@@ -61,10 +61,11 @@
     display: none !important;
   }
 
-  /* Strip BYB box styling for print */
+  /* Strip BYB box and section styling for print */
   .border-mint {
     border: none !important;
     padding: 0 !important;
+    margin: 0 !important;
     background: none !important;
     box-shadow: none !important;
   }
@@ -73,8 +74,25 @@
   .bg-red-50 {
     display: flex !important;
     border: 2px solid #000 !important;
-    padding: 8pt !important;
-    margin: 8pt 0 !important;
+    padding: 6pt !important;
+    margin: 4pt 0 !important;
+  }
+
+  /* Kill all section padding for print */
+  section {
+    padding-top: 4pt !important;
+    padding-bottom: 4pt !important;
+  }
+
+  /* Kill extra spacing on content containers */
+  .py-10,
+  .py-12,
+  .py-16,
+  .py-8,
+  .md\:py-16,
+  .md\:py-24 {
+    padding-top: 4pt !important;
+    padding-bottom: 4pt !important;
   }
 
   /* Reset backgrounds and colors for ink saving */
@@ -95,16 +113,16 @@
     border-color: #ccc !important;
   }
 
-  /* Print header with site name */
+  /* Print header with site name — compact */
   main::before {
     content: "Creami Recipes — creami.recipes";
     display: block;
     text-align: center;
-    font-size: 10pt;
-    color: #666 !important;
-    margin-bottom: 16pt;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 8pt;
+    font-size: 8pt;
+    color: #999 !important;
+    margin-bottom: 4pt;
+    padding-bottom: 2pt;
+    border-bottom: 0.5pt solid #ddd;
   }
 
   /* Typography for headings */
