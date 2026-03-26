@@ -1,65 +1,33 @@
 import type { APIRoute } from 'astro';
-import { supabase } from '../lib/supabase';
 
+export const prerender = false;
+
+const siteUrl = 'https://eatcreami.com';
+
+/** Sitemap index — points to separate sitemaps for pages, recipes, and blog posts */
 export const GET: APIRoute = async () => {
-  const siteUrl = 'https://eatcreami.com';
+  const now = new Date().toISOString().split('T')[0];
 
-  // Fetch all published recipe slugs
-  const { data: recipes } = await supabase
-    .from('recipes')
-    .select('slug, updated_at')
-    .eq('status', 'published')
-    .order('updated_at', { ascending: false });
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>${siteUrl}/sitemap-pages.xml</loc>
+    <lastmod>${now}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>${siteUrl}/sitemap-recipes.xml</loc>
+    <lastmod>${now}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>${siteUrl}/sitemap-blog.xml</loc>
+    <lastmod>${now}</lastmod>
+  </sitemap>
+</sitemapindex>`;
 
-  // Fetch all published blog post slugs
-  const { data: posts } = await supabase
-    .from('posts')
-    .select('slug, updated_at')
-    .eq('status', 'published')
-    .order('updated_at', { ascending: false });
-
-  // Static pages
-  const staticPages = [
-    { url: '/', priority: '1.0', changefreq: 'daily' },
-    { url: '/recipes', priority: '0.9', changefreq: 'daily' },
-    { url: '/blog', priority: '0.7', changefreq: 'weekly' },
-    { url: '/about', priority: '0.5', changefreq: 'monthly' },
-  ];
-
-  const urls = [
-    ...staticPages.map((page) => `
-    <url>
-      <loc>${siteUrl}${page.url}</loc>
-      <changefreq>${page.changefreq}</changefreq>
-      <priority>${page.priority}</priority>
-    </url>`),
-    ...(recipes ?? []).map((r) => `
-    <url>
-      <loc>${siteUrl}/recipes/${r.slug}</loc>
-      <lastmod>${new Date(r.updated_at).toISOString().split('T')[0]}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>`),
-    ...(posts ?? []).map((p) => `
-    <url>
-      <loc>${siteUrl}/blog/${p.slug}</loc>
-      <lastmod>${new Date(p.updated_at).toISOString().split('T')[0]}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.6</priority>
-    </url>`),
-  ];
-
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${urls.join('')}
-</urlset>`;
-
-  return new Response(sitemap, {
+  return new Response(xml, {
     headers: {
       'Content-Type': 'application/xml',
       'Cache-Control': 'public, max-age=3600',
     },
   });
 };
-
-export const prerender = false;

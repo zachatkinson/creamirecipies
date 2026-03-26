@@ -3,15 +3,15 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 import basicSsl from '@vitejs/plugin-basic-ssl';
-import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
+// Note: sitemap is handled by custom API routes (sitemap.xml, sitemap-recipes.xml, etc.)
 export default defineConfig({
   site: 'https://eatcreami.com',
   output: 'server',
   adapter: vercel(),
-  integrations: [react(), sitemap()],
+  integrations: [react()],
   image: {
     domains: ['*.supabase.co'],
   },
