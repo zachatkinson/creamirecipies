@@ -90,6 +90,19 @@ if (locale !== DEFAULT_LOCALE && recipes.length > 0) {
       <div class="absolute right-0 top-0 w-1/2 h-full opacity-30 pointer-events-none" id="hero-canvas-container">
         <HeroCanvas client:visible />
       </div>
+
+      <!-- Hero swirl image -->
+      <div class="hidden md:block absolute right-8 lg:right-16 top-1/2 -translate-y-1/2 w-64 lg:w-80 xl:w-96 pointer-events-none z-[1]">
+        <ScrollReveal animation="fade-in" delay={0.4}>
+          <img
+            src="/images/hero-swirl.avif"
+            alt=""
+            aria-hidden="true"
+            class="w-full h-auto drop-shadow-2xl"
+            loading="eager"
+          />
+        </ScrollReveal>
+      </div>
     </div>
   </section>
 
