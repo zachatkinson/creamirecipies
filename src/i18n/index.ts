@@ -17,7 +17,7 @@ export type Locale = keyof typeof LOCALES;
 export const DEFAULT_LOCALE: Locale = 'en';
 export const SUPPORTED_LOCALES = Object.keys(LOCALES) as Locale[];
 
-type TranslationKeys = typeof en;
+type _TranslationKeys = typeof en;
 
 /**
  * Get a translation value by dot-notation path.

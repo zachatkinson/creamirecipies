@@ -45,10 +45,3 @@ function getAllCookies(cookies: AstroCookies): { name: string; value: string }[]
   return entries.length > 0 ? entries : [];
 }
 
-function parseCookieHeader(header: string): { name: string; value: string }[] {
-  if (!header) return [];
-  return header.split(';').map((cookie) => {
-    const [name, ...rest] = cookie.trim().split('=');
-    return { name: name.trim(), value: rest.join('=').trim() };
-  });
-}

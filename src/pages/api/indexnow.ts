@@ -34,7 +34,7 @@ export const POST: APIRoute = async ({ request }) => {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
-  } catch (err) {
+  } catch {
     return new Response(JSON.stringify({ error: 'IndexNow submission failed' }), { status: 500 });
   }
 };

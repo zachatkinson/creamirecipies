@@ -22,6 +22,7 @@ function randomRange(min: number, max: number) {
 export default function HeroCanvas() {
   const containerRef = useRef<HTMLDivElement>(null);
   const appRef = useRef<Application | null>(null);
+  const cleanupRef = useRef<(() => void) | null>(null);
   const [isMobile] = useState(() =>
     typeof window !== 'undefined' ? window.innerWidth < 768 : false
   );
@@ -162,8 +163,7 @@ export default function HeroCanvas() {
         document.removeEventListener('mousemove', onMouseMove);
       };
 
-      // Store cleanup for later
-      (app as any).__cleanupListeners = cleanup;
+      cleanupRef.current = cleanup;
     }
 
     init();
@@ -172,8 +172,9 @@ export default function HeroCanvas() {
       destroyed = true;
       const app = appRef.current;
       if (app) {
-        if ((app as any).__cleanupListeners) {
-          (app as any).__cleanupListeners();
+        if (cleanupRef.current) {
+          cleanupRef.current();
+          cleanupRef.current = null;
         }
         app.destroy(true, { children: true });
         appRef.current = null;

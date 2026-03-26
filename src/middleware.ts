@@ -1,6 +1,5 @@
 import { defineMiddleware } from 'astro:middleware';
 import { createServerClient, parseCookieHeader } from '@supabase/ssr';
-import type { Database } from './lib/types';
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE, type Locale } from './i18n';
 
 export const onRequest = defineMiddleware(async (context, next) => {

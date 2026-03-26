@@ -130,7 +130,7 @@ function formatNumber(n: number): string {
   return n % 1 === 0 ? String(n) : n.toFixed(1);
 }
 
-export default function ScalableIngredients({ ingredients, models, recipePintSize, isSwirl, modelOnly = false, locale = 'en' }: Props) {
+export default function ScalableIngredients({ ingredients, locale = 'en' }: Props) {
   const [scale, setScale] = useState(1);
   const [measureSystem, setMeasureSystem] = useState<MeasurementSystem>(() => {
     if (typeof document !== 'undefined') {
@@ -138,10 +138,6 @@ export default function ScalableIngredients({ ingredients, models, recipePintSiz
     }
     return 'us';
   });
-
-  const handleScaleChange = useCallback((newScale: number) => {
-    setScale(newScale);
-  }, []);
 
   // Listen for model changes from the "Before You Begin" dropdown
   useEffect(() => {

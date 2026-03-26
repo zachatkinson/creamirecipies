@@ -12,7 +12,10 @@
     "astro": "astro",
     "a11y": "npx axe http://localhost:4321/ http://localhost:4321/recipes http://localhost:4321/about --exit",
     "a11y:pa11y": "npx pa11y --standard WCAG2AA http://localhost:4321/",
-    "seed": "tsx scripts/seed-recipes.ts"
+    "seed": "tsx scripts/seed-recipes.ts",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.1",
@@ -38,6 +41,8 @@
     "@eslint/js": "^10.0.1",
     "@vitejs/plugin-basic-ssl": "^2.3.0",
     "eslint": "^10.1.0",
+    "eslint-plugin-astro": "^1.6.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
     "lighthouse": "^13.0.3",
     "pa11y": "^9.1.1",
     "tsx": "^4.21.0",

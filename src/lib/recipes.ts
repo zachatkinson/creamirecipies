@@ -57,10 +57,6 @@ export async function getFilteredRecipes(
     sort = 'newest', page = 1, pageSize = 24, locale = 'en',
   } = params;
 
-  // Step 1: Collect recipe IDs that match category/model filters (junction table queries)
-  let categoryFilterIds: string[] | null = null;
-  let modelFilterIds: string[] | null = null;
-
   // Step 1: Resolve search IDs (for text search across translations)
   let searchIds: string[] | null = null;
   if (q) {
@@ -111,16 +107,16 @@ export async function getFilteredRecipes(
 
   const { data: rpcResult, error: rpcError } = await client.rpc('get_filtered_recipe_ids', {
     p_status: 'published',
-    p_base_types: baseTypeNames,
-    p_difficulties: (difficulty && difficulty.length > 0) ? difficulty : null,
-    p_category_slugs: categorySlugs.length > 0 ? categorySlugs : null,
-    p_model_slugs: (model && model.length > 0) ? model : null,
-    p_min_rating: (rating && rating > 0) ? rating : null,
-    p_search_ids: searchIds,
+    p_base_types: baseTypeNames ?? undefined,
+    p_difficulties: (difficulty && difficulty.length > 0) ? difficulty : undefined,
+    p_category_slugs: categorySlugs.length > 0 ? categorySlugs : undefined,
+    p_model_slugs: (model && model.length > 0) ? model : undefined,
+    p_min_rating: (rating && rating > 0) ? rating : undefined,
+    p_search_ids: searchIds ?? undefined,
     p_sort: sort,
     p_limit: pageSize,
     p_offset: (page - 1) * pageSize,
-  }) as { data: { recipe_id: string; total_count: number }[] | null; error: { message: string } | null };
+  });
 
   if (rpcError || !rpcResult) {
     console.warn('getFilteredRecipes RPC error:', rpcError?.message);

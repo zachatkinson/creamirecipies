@@ -873,6 +873,24 @@ export type Database = {
       }
     }
     Functions: {
+      get_filtered_recipe_ids: {
+        Args: {
+          p_base_types?: string[]
+          p_category_slugs?: string[]
+          p_difficulties?: string[]
+          p_limit?: number
+          p_min_rating?: number
+          p_model_slugs?: string[]
+          p_offset?: number
+          p_search_ids?: string[]
+          p_sort?: string
+          p_status?: string
+        }
+        Returns: {
+          recipe_id: string
+          total_count: number
+        }[]
+      }
       link_ingredients_to_master: { Args: never; Returns: undefined }
       show_limit: { Args: never; Returns: number }
       show_trgm: { Args: { "": string }; Returns: string[] }

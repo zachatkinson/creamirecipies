@@ -2,13 +2,12 @@
 export const prerender = false;
 
 import BaseLayout from '../../components/layout/BaseLayout.astro';
-import RecipeCard from '../../components/recipe/RecipeCard.astro';
 import RecipeFilters from '../../components/recipe/RecipeFilters';
 import AdUnit from '../../components/ads/AdUnit.astro';
 import { supabase } from '../../lib/supabase';
 import { getFilteredRecipes, getCategories, getCreamiModels } from '../../lib/recipes';
 import type { RecipeQueryParams } from '../../lib/recipes';
-import { DEFAULT_LOCALE, t } from '../../i18n';
+import { t } from '../../i18n';
 import { ui } from '../../lib/translations';
 
 const locale = Astro.locals.locale;

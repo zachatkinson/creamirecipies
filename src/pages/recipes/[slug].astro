@@ -11,7 +11,7 @@ export const prerender = false;
 
 import { supabase } from '../../lib/supabase';
 import { getRecipeBySlug, getCreamiModels } from '../../lib/recipes';
-import { buildRecipeJsonLd, buildBreadcrumbJsonLd, buildRecipeFaqJsonLd, generateRecipeFaqs } from '../../lib/seo';
+import { buildRecipeJsonLd, buildRecipeFaqJsonLd, generateRecipeFaqs } from '../../lib/seo';
 import { getRecipeTranslation, applyTranslation, getIngredientTranslations, getStepTranslations, ui } from '../../lib/translations';
 import { t, DEFAULT_LOCALE } from '../../i18n';
 
