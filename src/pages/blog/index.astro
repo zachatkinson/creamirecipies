@@ -47,9 +47,12 @@ const categoryColors: Record<string, string> = {
                       loading="lazy"
                     />
                   ) : (
-                    <div class="w-full h-full flex items-center justify-center text-4xl bg-gradient-to-br from-lavender/20 to-mint/20">
-                      📝
-                    </div>
+                    <img
+                      src={`/images/blog/${post.category || 'news'}.svg`}
+                      alt={post.title}
+                      class="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   )}
                 </div>
                 <div class="p-5">
