@@ -2,11 +2,12 @@
 import BaseLayout from '../../components/layout/BaseLayout.astro';
 import ScrollReveal from '../../components/animations/ScrollReveal.astro';
 import { supabase } from '../../lib/supabase';
-import { getPublishedPosts } from '../../lib/posts';
+import { getPublishedPosts, applyPostTranslations } from '../../lib/posts';
 import { t } from '../../i18n';
 
 const locale = Astro.locals.locale;
 const posts = await getPublishedPosts(supabase);
+await applyPostTranslations(supabase, posts, locale);
 
 const categoryColors: Record<string, string> = {
   news: 'bg-lavender/20 text-lavender-dark',
