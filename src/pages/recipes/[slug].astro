@@ -262,6 +262,7 @@ const totalTimeLabel = totalTime >= 60
                 description={recipe.description}
               />
               <button
+                type="button"
                 id="print-recipe-btn"
                 data-warning={ui('printModelWarning', locale)}
                 class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-600 hover:text-berry rounded-full border border-slate-200 hover:border-blush transition-colors"
@@ -347,12 +348,12 @@ const totalTimeLabel = totalTime >= 60
               {recipe.prep_time_minutes && (
                 <div class="text-center">
                   <div class="text-xs text-slate-600 mb-1">{ui("prep", locale)}</div>
-                  <div class="font-semibold text-chocolate">{recipe.prep_time_minutes}m</div>
+                  <div class="font-semibold text-chocolate" data-count-to={recipe.prep_time_minutes} data-count-suffix="m">0m</div>
                 </div>
               )}
               <div class="text-center">
                 <div class="text-xs text-slate-600 mb-1">{ui("freeze", locale)}</div>
-                <div class="font-semibold text-chocolate">{recipe.freeze_time_hours ?? 24}h</div>
+                <div class="font-semibold text-chocolate" data-count-to={recipe.freeze_time_hours ?? 24} data-count-suffix="h">0h</div>
               </div>
               <div class="text-center">
                 <div class="text-xs text-slate-600 mb-1">{ui("total", locale)}</div>
@@ -360,7 +361,7 @@ const totalTimeLabel = totalTime >= 60
               </div>
               <div class="text-center">
                 <div class="text-xs text-slate-600 mb-1">{ui("servings", locale)}</div>
-                <div class="font-semibold text-chocolate">{recipe.servings ?? 4}</div>
+                <div class="font-semibold text-chocolate" data-count-to={recipe.servings ?? 4}>0</div>
               </div>
             </div>
 
@@ -420,6 +421,7 @@ const totalTimeLabel = totalTime >= 60
   <!-- {ui("beforeYouBegin", locale)} -->
   <section class="py-6">
     <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
+      <ScrollReveal animation="scale" delay={0.1}>
       <div class="rounded-2xl p-6 md:p-8 border-2 border-mint bg-gradient-to-br from-mint/5 to-cream shadow-sm">
         <h2 class="font-display text-xl font-bold text-chocolate mb-5 flex items-center gap-2">
           <svg class="w-6 h-6 text-mint-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -480,6 +482,7 @@ const totalTimeLabel = totalTime >= 60
           </div>
         )}
       </div>
+      </ScrollReveal>
     </div>
   </section>
 
@@ -492,6 +495,7 @@ const totalTimeLabel = totalTime >= 60
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
         <!-- Sidebar: Scalable Ingredients + Ad -->
         <aside class="lg:col-span-1">
+          <ScrollReveal animation="slide-left" delay={0.1}>
           <div class="sticky top-24 space-y-6">
             <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
               <h2 class="font-display text-xl font-bold text-chocolate mb-5">{ui("ingredients", locale)}</h2>
@@ -507,6 +511,7 @@ const totalTimeLabel = totalTime >= 60
             <!-- Ad: sidebar medium rectangle (sticky with ingredients) -->
             <AdUnit size="medium-rectangle" slot="recipe-sidebar" />
           </div>
+          </ScrollReveal>
         </aside>
 
         <!-- Main: Steps -->
@@ -572,6 +577,7 @@ const totalTimeLabel = totalTime >= 60
 
           <!-- FAQ Section -->
           {recipeFaqs.length > 0 && (
+            <ScrollReveal animation="fade-up" delay={0.1}>
             <div class="print-hide mt-10 pt-8 border-t border-slate-100">
               <h2 class="font-display text-xl font-bold text-chocolate mb-4">{ui("commonQuestions", locale)}</h2>
               <div class="space-y-2">
@@ -590,6 +596,7 @@ const totalTimeLabel = totalTime >= 60
                 ))}
               </div>
             </div>
+            </ScrollReveal>
           )}
         </div>
       </div>
@@ -600,14 +607,18 @@ const totalTimeLabel = totalTime >= 60
   {similarRecipes.length > 0 && (
     <section class="py-10 md:py-16 bg-cream/30" aria-labelledby="similar-recipes-heading">
       <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 id="similar-recipes-heading" class="font-display text-2xl font-bold text-chocolate mb-8 text-center">
-          {ui("youMayAlsoLike", locale)}
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {similarRecipes.map((sr: any) => (
-            <RecipeCard recipe={sr} />
-          ))}
-        </div>
+        <ScrollReveal>
+          <h2 id="similar-recipes-heading" class="font-display text-2xl font-bold text-chocolate mb-8 text-center">
+            {ui("youMayAlsoLike", locale)}
+          </h2>
+        </ScrollReveal>
+        <ScrollReveal animation="stagger" staggerAmount={0.1}>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {similarRecipes.map((sr: any) => (
+              <RecipeCard recipe={sr} />
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   )}
@@ -741,19 +752,26 @@ const totalTimeLabel = totalTime >= 60
     window.dispatchEvent(new CustomEvent('creami-model-change', { detail: { slug, pintSize, scale } }));
   });
 
-  // Print button — warn if no model selected
-  const printBtn = document.getElementById('print-recipe-btn') as HTMLButtonElement | null;
-  printBtn?.addEventListener('click', () => {
-    const modelSelect = document.getElementById('byb-model-select') as HTMLSelectElement | null;
-    if (modelSelect && !modelSelect.value) {
-      const warning = printBtn.dataset.warning || 'Select your Creami model first to scale ingredients, or press OK to print anyway.';
-      const proceed = confirm(warning);
-      if (!proceed) {
-        modelSelect.scrollIntoView({ behavior: 'smooth' });
-        modelSelect.focus();
-        return;
-      }
+
+</script>
+
+<!-- Print button handler (separate script, inline to ensure it runs per page) -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var printBtn = document.getElementById('print-recipe-btn');
+    if (printBtn) {
+      printBtn.addEventListener('click', function() {
+        var modelSelect = document.getElementById('byb-model-select');
+        if (modelSelect && !modelSelect.value) {
+          var warning = printBtn.getAttribute('data-warning') || 'Select your Creami model first, or press OK to print anyway.';
+          if (!confirm(warning)) {
+            modelSelect.scrollIntoView({ behavior: 'smooth' });
+            modelSelect.focus();
+            return;
+          }
+        }
+        window.print();
+      });
     }
-    window.print();
   });
 </script>

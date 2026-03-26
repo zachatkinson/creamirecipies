@@ -86,6 +86,32 @@ textarea:focus-visible,
   outline-offset: 2px;
 }
 
+/* Subtle floating animation for hero decorative elements */
+@keyframes hero-gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.hero-gradient-animated {
+  background-size: 200% 200%;
+  animation: hero-gradient-shift 12s ease-in-out infinite;
+}
+
+/* Smooth ingredient check animation */
+@keyframes check-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.ingredient-check {
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.ingredient-check.checked {
+  animation: check-pop 0.3s ease;
+}
+
 /* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
   html {

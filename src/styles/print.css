@@ -133,7 +133,7 @@
 
   /* Print header with site name — compact */
   main::before {
-    content: "Creami Recipes — creami.recipes";
+    content: "Creami Recipes — creamirecipies.com";
     display: block;
     text-align: center;
     font-size: 8pt;
@@ -295,7 +295,7 @@
   }
 
   /* Step timeline connector — hide */
-  .step-card .absolute.left-\\[1\\.15rem\\] {
+  .step-card .absolute.left-\[1\.15rem\] {
     display: none !important;
   }
 
@@ -342,7 +342,7 @@
   }
 
   /* Quick stats bar */
-  .grid.grid-cols-2.sm\\:grid-cols-4 {
+  .grid.grid-cols-2.sm\:grid-cols-4 {
     display: flex !important;
     gap: 16pt !important;
     border: 1px solid #ccc !important;
@@ -357,7 +357,7 @@
   }
 
   /* Hero image — larger for recipe pages */
-  .aspect-\\[4\\/3\\] img {
+  .aspect-\[4\/3\] img {
     max-width: 350px !important;
     max-height: 250px !important;
   }
@@ -383,7 +383,7 @@
   }
 
   /* Swirl notice — visible */
-  .bg-lavender\\/10 {
+  .bg-lavender\/10 {
     border: 1px solid #666 !important;
     padding: 8pt !important;
   }

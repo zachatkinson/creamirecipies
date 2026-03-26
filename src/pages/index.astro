@@ -13,6 +13,13 @@ import { ui } from '../lib/translations';
 const locale = Astro.locals.locale;
 const recipes = await getFeaturedRecipes(supabase, 6);
 const categories = await getCategories(supabase);
+
+// Get total published recipe count for hero stat
+const { count: recipeCount } = await supabase
+  .from('recipes')
+  .select('id', { count: 'exact', head: true })
+  .eq('status', 'published')
+  .lte('published_at', new Date().toISOString());
 const baseTypes = categories.filter((c) => c.type === 'base_type');
 
 // Translate recipe cards if locale isn't English
@@ -39,11 +46,12 @@ if (locale !== DEFAULT_LOCALE && recipes.length > 0) {
 
 <BaseLayout title="Home">
   <!-- Hero Section -->
-  <section class="relative overflow-hidden bg-gradient-to-br from-cream via-blush/10 to-lavender/10">
+  <section class="relative overflow-hidden bg-gradient-to-br from-cream via-blush/10 to-lavender/10 hero-gradient-animated">
     <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
       <div class="max-w-2xl relative z-10">
         <ScrollReveal animation="scale" delay={0.05}>
-          <span class="inline-block px-4 py-1.5 bg-blush/20 text-berry text-sm font-medium rounded-full mb-6">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 bg-blush/20 text-berry text-sm font-medium rounded-full mb-6">
+            <span data-count-to={recipeCount ?? 0} data-count-suffix="+">0+</span>
             {t('home.badge', locale)}
           </span>
         </ScrollReveal>
@@ -79,7 +87,7 @@ if (locale !== DEFAULT_LOCALE && recipes.length > 0) {
       </div>
 
       <!-- Decorative elements -->
-      <div class="absolute right-0 top-0 w-1/2 h-full opacity-20 pointer-events-none" id="hero-canvas-container">
+      <div class="absolute right-0 top-0 w-1/2 h-full opacity-30 pointer-events-none" id="hero-canvas-container">
         <HeroCanvas client:visible />
       </div>
     </div>

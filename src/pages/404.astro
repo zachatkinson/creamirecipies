@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../components/layout/BaseLayout.astro';
 import RecipeCard from '../components/recipe/RecipeCard.astro';
+import ScrollReveal from '../components/animations/ScrollReveal.astro';
 import { supabase } from '../lib/supabase';
 import { getFeaturedRecipes } from '../lib/recipes';
 import { t, DEFAULT_LOCALE } from '../i18n';
@@ -32,31 +33,43 @@ if (locale !== DEFAULT_LOCALE && recommendations.length > 0) {
 <BaseLayout title={t('notFound.title', locale)}>
   <section class="py-24 text-center">
     <div class="max-w-md mx-auto px-4">
-      <span class="text-7xl mb-6 block">🍦</span>
-      <h1 class="font-display text-4xl font-bold text-chocolate mb-4">{t('notFound.title', locale)}</h1>
-      <p class="text-slate-600 mb-8">{t('notFound.description', locale)}</p>
-      <div class="flex justify-center gap-4">
-        <a href="/" class="px-6 py-3 bg-berry text-white font-medium rounded-full hover:bg-berry/90 transition-colors">
-          {t('notFound.goHome', locale)}
-        </a>
-        <a href="/recipes" class="px-6 py-3 border border-slate-200 text-slate-600 font-medium rounded-full hover:bg-slate-50 transition-colors">
-          {t('notFound.browseRecipes', locale)}
-        </a>
-      </div>
+      <ScrollReveal animation="scale" delay={0.05}>
+        <span class="text-7xl mb-6 block">🍦</span>
+      </ScrollReveal>
+      <ScrollReveal animation="fade-up" delay={0.15}>
+        <h1 class="font-display text-4xl font-bold text-chocolate mb-4">{t('notFound.title', locale)}</h1>
+      </ScrollReveal>
+      <ScrollReveal animation="fade-up" delay={0.2}>
+        <p class="text-slate-600 mb-8">{t('notFound.description', locale)}</p>
+      </ScrollReveal>
+      <ScrollReveal animation="fade-up" delay={0.3}>
+        <div class="flex justify-center gap-4">
+          <a href="/" class="px-6 py-3 bg-berry text-white font-medium rounded-full hover:bg-berry/90 transition-colors">
+            {t('notFound.goHome', locale)}
+          </a>
+          <a href="/recipes" class="px-6 py-3 border border-slate-200 text-slate-600 font-medium rounded-full hover:bg-slate-50 transition-colors">
+            {t('notFound.browseRecipes', locale)}
+          </a>
+        </div>
+      </ScrollReveal>
     </div>
   </section>
 
   {recommendations.length > 0 && (
     <section class="pb-16">
       <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="font-display text-2xl font-bold text-chocolate mb-6 text-center">
-          {t('notFound.tryThese', locale)}
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {recommendations.map((recipe) => (
-            <RecipeCard recipe={recipe} />
-          ))}
-        </div>
+        <ScrollReveal>
+          <h2 class="font-display text-2xl font-bold text-chocolate mb-6 text-center">
+            {t('notFound.tryThese', locale)}
+          </h2>
+        </ScrollReveal>
+        <ScrollReveal animation="stagger" staggerAmount={0.1}>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {recommendations.map((recipe) => (
+              <RecipeCard recipe={recipe} />
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   )}
