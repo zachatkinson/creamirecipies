@@ -218,16 +218,18 @@
     float: left !important;
   }
 
-  /* Step card content — reduce padding */
+  /* Step card content — reduce padding, inline with number */
   .step-card .bg-white.rounded-xl {
-    padding: 6pt 8pt !important;
+    padding: 0 !important;
     border: none !important;
     box-shadow: none !important;
+    display: inline !important;
   }
 
   .step-card p {
     font-size: 10pt !important;
     margin-bottom: 2pt !important;
+    display: inline !important;
   }
 
   /* Step timeline connector — hide */
