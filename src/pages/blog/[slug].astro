@@ -3,6 +3,7 @@ import BaseLayout from '../../components/layout/BaseLayout.astro';
 import ScrollReveal from '../../components/animations/ScrollReveal.astro';
 import AdUnit from '../../components/ads/AdUnit.astro';
 import { supabase } from '../../lib/supabase';
+import { marked } from 'marked';
 import { getAllPostSlugs, getPostBySlug, getPostTranslation } from '../../lib/posts';
 import { t } from '../../i18n';
 
@@ -88,7 +89,7 @@ const heroImage = post.hero_image_url || `/images/blog/${post.category || 'news'
 
       <!-- Body -->
       <ScrollReveal animation="fade-up" delay={0.15}>
-        <div class="prose prose-lg max-w-none text-slate-700 prose-headings:text-chocolate prose-headings:font-display prose-a:text-berry hover:prose-a:text-berry/80 prose-strong:text-chocolate" set:html={post.body} />
+        <div class="prose prose-lg max-w-none text-slate-700 prose-headings:text-chocolate prose-headings:font-display prose-a:text-berry hover:prose-a:text-berry/80 prose-strong:text-chocolate" set:html={marked.parse(post.body)} />
       </ScrollReveal>
 
       <!-- Ad: bottom of blog post -->
