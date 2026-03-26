@@ -5,13 +5,12 @@ import ScrollReveal from '../components/animations/ScrollReveal.astro';
 import AdUnit from '../components/ads/AdUnit.astro';
 import HeroCanvas from '../components/animations/HeroCanvas';
 import { supabase } from '../lib/supabase';
-import { getFeaturedRecipes, getCategories } from '../lib/recipes';
+import { getCategories } from '../lib/recipes';
 import { DEFAULT_LOCALE } from '../i18n';
 import { t } from '../i18n';
 import { ui } from '../lib/translations';
 
 const locale = Astro.locals.locale;
-const recipes = await getFeaturedRecipes(supabase, 6);
 const categories = await getCategories(supabase);
 
 // Get total published recipe count for hero stat
@@ -20,6 +19,35 @@ const { count: recipeCount } = await supabase
   .select('id', { count: 'exact', head: true })
   .eq('status', 'published')
   .lte('published_at', new Date().toISOString());
+
+// Get latest 6 published recipes (newest first)
+const { data: latestRecipesRaw } = await supabase
+  .from('recipes')
+  .select(`
+    id, title, slug, description, difficulty, base_type,
+    hero_image_url, avg_rating, rating_count,
+    prep_time_minutes, freeze_time_hours,
+    is_sponsored, sponsor_name, sponsor_logo_url,
+    author:profiles!author_id (username, display_name, avatar_url)
+  `)
+  .eq('status', 'published')
+  .lte('published_at', new Date().toISOString())
+  .order('published_at', { ascending: false })
+  .limit(6);
+
+const recipes = (latestRecipesRaw ?? []) as any[];
+
+// Get latest 3 published blog posts
+const { data: latestPostsRaw } = await supabase
+  .from('posts')
+  .select('id, title, slug, excerpt, category, hero_image_url, published_at, created_at')
+  .eq('status', 'published')
+  .lte('published_at', new Date().toISOString())
+  .order('published_at', { ascending: false })
+  .limit(3);
+
+const posts = (latestPostsRaw ?? []) as Record<string, unknown>[];
+
 const baseTypes = categories.filter((c) => c.type === 'base_type');
 
 // Translate recipe cards if locale isn't English
@@ -28,7 +56,7 @@ if (locale !== DEFAULT_LOCALE && recipes.length > 0) {
     .from('recipe_translations')
     .select('recipe_id, title, description')
     .eq('locale', locale)
-    .in('recipe_id', recipes.map((r) => r.id))
+    .in('recipe_id', recipes.map((r: any) => r.id))
     .limit(100);
 
   if (translations) {
@@ -36,12 +64,39 @@ if (locale !== DEFAULT_LOCALE && recipes.length > 0) {
     for (const recipe of recipes) {
       const tr = transMap.get(recipe.id);
       if (tr) {
-        (recipe as any).title = tr.title;
-        (recipe as any).description = tr.description;
+        recipe.title = tr.title;
+        recipe.description = tr.description;
       }
     }
   }
 }
+
+// Translate blog posts if locale isn't English
+if (locale !== DEFAULT_LOCALE && posts.length > 0) {
+  const postIds = posts.map(p => p.id as string);
+  const { data: postTranslations } = await supabase
+    .from('post_translations')
+    .select('post_id, title, excerpt')
+    .eq('locale', locale)
+    .in('post_id', postIds);
+  if (postTranslations) {
+    const transMap = new Map((postTranslations as Record<string, unknown>[]).map(tr => [tr.post_id, tr]));
+    for (const post of posts) {
+      const tr = transMap.get(post.id as string) as Record<string, unknown> | undefined;
+      if (tr) {
+        post.title = tr.title;
+        if (tr.excerpt) post.excerpt = tr.excerpt;
+      }
+    }
+  }
+}
+
+const categoryColors: Record<string, string> = {
+  news: 'bg-lavender/20 text-lavender-dark',
+  tips: 'bg-mint/20 text-mint-dark',
+  reviews: 'bg-vanilla/20 text-chocolate-light',
+  guides: 'bg-blush/20 text-berry',
+};
 ---
 
 <BaseLayout title="Home">
@@ -118,7 +173,7 @@ if (locale !== DEFAULT_LOCALE && recipes.length > 0) {
     </div>
   </section>
 
-  <!-- Featured Recipes -->
+  <!-- Latest Recipes -->
   <section class="py-16 md:py-24">
     <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
       <ScrollReveal>
@@ -167,11 +222,86 @@ if (locale !== DEFAULT_LOCALE && recipes.length > 0) {
     </div>
   </section>
 
-  <!-- Ad: between featured recipes and how it works -->
+  <!-- Ad: between recipes and blog -->
   <div class="max-w-[var(--container-max)] mx-auto px-4 py-6">
     <AdUnit size="leaderboard" slot="home-mid" />
     <AdUnit size="mobile-banner" slot="home-mid-mobile" />
   </div>
+
+  <!-- Latest from the Blog -->
+  {posts.length > 0 && (
+    <section class="py-16 md:py-24 bg-white/50">
+      <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal>
+          <div class="text-center mb-12">
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-chocolate mb-4">
+              {t('home.latestNewsTitle', locale)}
+            </h2>
+            <p class="text-slate-600 max-w-lg mx-auto">
+              {t('home.latestNewsDescription', locale)}
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal animation="stagger" staggerAmount={0.1}>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {posts.map((post) => (
+              <a
+                href={`/blog/${post.slug}`}
+                class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              >
+                <div class="aspect-[16/9] bg-cream-dark overflow-hidden">
+                  {post.hero_image_url ? (
+                    <img
+                      src={post.hero_image_url as string}
+                      alt={post.title as string}
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <img
+                      src={`/images/blog/${(post.category as string) || 'news'}.svg`}
+                      alt={post.title as string}
+                      class="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  )}
+                </div>
+                <div class="p-5">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class:list={['text-xs font-medium px-2.5 py-0.5 rounded-full', categoryColors[post.category as string] ?? 'bg-slate-100 text-slate-600']}>
+                      {t(`blog.${post.category}`, locale)}
+                    </span>
+                    <time class="text-xs text-slate-600" datetime={post.published_at as string}>
+                      {new Date((post.published_at ?? post.created_at) as string).toLocaleDateString(locale, { month: 'short', day: 'numeric', year: 'numeric' })}
+                    </time>
+                  </div>
+                  <h3 class="font-display text-lg font-bold text-chocolate group-hover:text-berry transition-colors line-clamp-2 mb-2">
+                    {post.title}
+                  </h3>
+                  {post.excerpt && (
+                    <p class="text-sm text-slate-600 line-clamp-2">{post.excerpt}</p>
+                  )}
+                </div>
+              </a>
+            ))}
+          </div>
+        </ScrollReveal>
+
+        <div class="text-center mt-10">
+          <a
+            href="/blog"
+            class="inline-flex items-center gap-2 px-6 py-3 text-berry font-medium hover:bg-blush/10 rounded-full transition-colors"
+          >
+            {t('home.viewAllPosts', locale)}
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- How It Works -->
   <section class="py-16 md:py-24 bg-gradient-to-b from-white/50 to-cream">
