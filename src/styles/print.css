@@ -1,4 +1,14 @@
+/* Print-only elements hidden on screen */
+.print-only {
+  display: none !important;
+}
+
 @media print {
+
+  /* Show print-only elements */
+  .print-only {
+    display: block !important;
+  }
   /* Hide non-essential elements */
   header,
   footer,

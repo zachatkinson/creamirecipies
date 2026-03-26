@@ -262,7 +262,8 @@ const totalTimeLabel = totalTime >= 60
                 description={recipe.description}
               />
               <button
-                onclick="window.print()"
+                id="print-recipe-btn"
+                data-warning={ui('printModelWarning', locale)}
                 class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-600 hover:text-berry rounded-full border border-slate-200 hover:border-blush transition-colors"
                 aria-label={ui('print', locale)}
               >
@@ -519,6 +520,9 @@ const totalTimeLabel = totalTime >= 60
               {ui("cookMode", locale)}
             </button>
           </div>
+          <p class="print-only text-xs text-slate-600 -mt-6 mb-4" id="print-recipe-info">
+            {ui('makes', locale)}: <span id="print-pint-size">{recipe.pint_size ?? '16oz'}</span> · {ui('servings', locale)}: {recipe.servings ?? 4}
+          </p>
 
           <!-- Step Timeline -->
           <div id="step-timeline" class="space-y-2">
@@ -729,7 +733,27 @@ const totalTimeLabel = totalTime >= 60
       }
     }
 
+    // Update print pint size label
+    const printSize = document.getElementById('print-pint-size');
+    if (printSize) printSize.textContent = pintSize + 'oz';
+
     // Dispatch event for React ScalableIngredients to pick up
     window.dispatchEvent(new CustomEvent('creami-model-change', { detail: { slug, pintSize, scale } }));
+  });
+
+  // Print button — warn if no model selected
+  const printBtn = document.getElementById('print-recipe-btn') as HTMLButtonElement | null;
+  printBtn?.addEventListener('click', () => {
+    const modelSelect = document.getElementById('byb-model-select') as HTMLSelectElement | null;
+    if (modelSelect && !modelSelect.value) {
+      const warning = printBtn.dataset.warning || 'Select your Creami model first to scale ingredients, or press OK to print anyway.';
+      const proceed = confirm(warning);
+      if (!proceed) {
+        modelSelect.scrollIntoView({ behavior: 'smooth' });
+        modelSelect.focus();
+        return;
+      }
+    }
+    window.print();
   });
 </script>
