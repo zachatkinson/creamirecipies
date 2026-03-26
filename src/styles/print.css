@@ -153,6 +153,18 @@
     position: static !important;
   }
 
+  /* Ingredients float left, directions wrap around */
+  .lg\:col-span-1 {
+    float: left !important;
+    width: 45% !important;
+    margin-right: 5% !important;
+    margin-bottom: 8pt !important;
+  }
+
+  .lg\:col-span-2 {
+    width: 100% !important;
+  }
+
   /* Recipe ingredients — clean list with checkboxes */
   .ingredient-item,
   li {
