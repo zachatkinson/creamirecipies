@@ -198,38 +198,32 @@
     page-break-inside: avoid !important;
   }
 
-  /* Step number — inline before instruction, not absolute */
+  /* Step number — block above instruction */
   .step-card > .absolute.left-0 {
     position: static !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 18pt !important;
-    height: 18pt !important;
-    font-size: 9pt !important;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    font-size: 10pt !important;
+    font-weight: bold !important;
     background: none !important;
-    border: 1.5pt solid #000 !important;
-    border-radius: 50% !important;
+    border: none !important;
+    border-radius: 0 !important;
     color: #000 !important;
     box-shadow: none !important;
-    vertical-align: top !important;
-    margin-right: 6pt !important;
-    margin-bottom: 4pt !important;
-    float: left !important;
+    margin-bottom: 1pt !important;
   }
 
-  /* Step card content — reduce padding, inline with number */
+  /* Step card content — clean block */
   .step-card .bg-white.rounded-xl {
     padding: 0 !important;
     border: none !important;
     box-shadow: none !important;
-    display: inline !important;
   }
 
   .step-card p {
     font-size: 10pt !important;
     margin-bottom: 2pt !important;
-    display: inline !important;
   }
 
   /* Step timeline connector — hide */
