@@ -8,8 +8,8 @@
  */
 import type { APIRoute } from 'astro';
 
-const INDEXNOW_API_KEY = import.meta.env.INDEXNOW_API_KEY ?? 'PLACEHOLDER_KEY';
-const SITE_HOST = 'creami.recipes';
+const INDEXNOW_API_KEY = import.meta.env.INDEXNOW_API_KEY ?? '3259e128db3d124710601aa575a1293a';
+const SITE_HOST = 'eatcreami.com';
 
 export const POST: APIRoute = async ({ request }) => {
   try {

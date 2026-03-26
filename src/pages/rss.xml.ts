@@ -53,7 +53,7 @@ export const GET: APIRoute = async ({ url, locals }) => {
     }
   }
 
-  const siteUrl = 'https://creami.recipes';
+  const siteUrl = 'https://eatcreami.com';
   const items = recipeList
     .map(
       (r) => `

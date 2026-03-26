@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import { supabase } from '../lib/supabase';
 
 export const GET: APIRoute = async () => {
-  const siteUrl = 'https://creami.recipes';
+  const siteUrl = 'https://eatcreami.com';
 
   // Fetch all published recipe slugs
   const { data: recipes } = await supabase

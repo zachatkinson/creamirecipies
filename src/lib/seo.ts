@@ -2,8 +2,17 @@ import type { RecipeWithDetails } from './types';
 import type { Locale } from '../i18n';
 import { faq } from './translations';
 
+/** Nutrition data for Recipe JSON-LD */
+interface NutritionData {
+  calories: number;
+  protein: number;
+  fat: number;
+  carbs: number;
+  servings: number;
+}
+
 /** Generate Schema.org Recipe JSON-LD structured data */
-export function buildRecipeJsonLd(recipe: RecipeWithDetails, siteUrl: string) {
+export function buildRecipeJsonLd(recipe: RecipeWithDetails, siteUrl: string, nutrition?: NutritionData) {
   const totalMinutes =
     (recipe.prep_time_minutes ?? 0) + (recipe.freeze_time_hours ?? 24) * 60;
 
@@ -70,6 +79,52 @@ export function buildRecipeJsonLd(recipe: RecipeWithDetails, siteUrl: string) {
           },
         }
       : {}),
+    ...(nutrition && nutrition.calories > 0
+      ? {
+          nutrition: {
+            '@type': 'NutritionInformation',
+            calories: `${Math.round(nutrition.calories / nutrition.servings)} calories`,
+            proteinContent: `${Math.round(nutrition.protein / nutrition.servings)}g`,
+            fatContent: `${Math.round(nutrition.fat / nutrition.servings)}g`,
+            carbohydrateContent: `${Math.round(nutrition.carbs / nutrition.servings)}g`,
+          },
+        }
+      : {}),
+  };
+}
+
+/** Generate BlogPosting JSON-LD for blog posts */
+export function buildBlogPostingJsonLd(
+  post: { title: string; slug: string; excerpt: string | null; category: string; hero_image_url: string | null; published_at: string | null; created_at: string; updated_at?: string },
+  siteUrl: string,
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt ?? '',
+    image: post.hero_image_url ? `${siteUrl}${post.hero_image_url}` : `${siteUrl}/images/blog/${post.category || 'news'}.svg`,
+    datePublished: post.published_at ?? post.created_at,
+    ...(post.updated_at ? { dateModified: post.updated_at } : {}),
+    author: {
+      '@type': 'Organization',
+      name: 'Creami Recipes',
+      url: siteUrl,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Creami Recipes',
+      url: siteUrl,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/logo.avif`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${siteUrl}/blog/${post.slug}`,
+    },
+    articleSection: post.category,
   };
 }
 

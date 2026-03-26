@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://creami.recipes/sitemap.xml
+Sitemap: https://eatcreami.com/sitemap.xml
 
 # Block admin pages from indexing
 Disallow: /admin/
