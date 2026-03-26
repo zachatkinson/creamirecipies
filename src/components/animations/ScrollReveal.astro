@@ -1,9 +1,10 @@
 ---
 interface Props {
   class?: string;
-  animation?: 'fade-up' | 'fade-in' | 'slide-left' | 'slide-right' | 'stagger';
+  animation?: 'fade-up' | 'fade-in' | 'slide-left' | 'slide-right' | 'stagger' | 'scale' | 'parallax';
   delay?: number;
   staggerAmount?: number;
+  duration?: number;
 }
 
 const {
@@ -11,6 +12,7 @@ const {
   animation = 'fade-up',
   delay = 0,
   staggerAmount = 0.1,
+  duration = 0.8,
 } = Astro.props;
 ---
 
@@ -19,6 +21,7 @@ const {
   data-animation={animation}
   data-delay={delay}
   data-stagger={staggerAmount}
+  data-duration={duration}
 >
   <slot />
 </div>
@@ -29,15 +32,31 @@ const {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Check for reduced motion preference
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   document.querySelectorAll('.scroll-reveal').forEach((el) => {
     const animation = el.getAttribute('data-animation') ?? 'fade-up';
     const delay = parseFloat(el.getAttribute('data-delay') ?? '0');
     const stagger = parseFloat(el.getAttribute('data-stagger') ?? '0.1');
+    const duration = parseFloat(el.getAttribute('data-duration') ?? '0.8');
 
-    // Determine animation properties
+    // Parallax is a special case — scrub-based, not trigger-based
+    if (animation === 'parallax') {
+      if (prefersReducedMotion) return;
+      gsap.to(el.children[0] || el, {
+        y: -40,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 0.5,
+        },
+      });
+      return;
+    }
+
+    // Build animation properties
     const fromProps: gsap.TweenVars = { opacity: 0 };
 
     if (!prefersReducedMotion) {
@@ -46,29 +65,72 @@ const {
           fromProps.y = 40;
           break;
         case 'slide-left':
-          fromProps.x = -40;
+          fromProps.x = -60;
           break;
         case 'slide-right':
-          fromProps.x = 40;
+          fromProps.x = 60;
+          break;
+        case 'scale':
+          fromProps.scale = 0.9;
+          fromProps.y = 20;
           break;
         case 'stagger':
           fromProps.y = 30;
+          break;
+        case 'fade-in':
+          // Just opacity, no movement
           break;
       }
     }
 
     const targets = animation === 'stagger' ? el.children : el;
 
+    // Use custom easing for smoother feel
+    const easeMap: Record<string, string> = {
+      'fade-up': 'power3.out',
+      'fade-in': 'power2.out',
+      'slide-left': 'power3.out',
+      'slide-right': 'power3.out',
+      'scale': 'back.out(1.2)',
+      'stagger': 'power3.out',
+    };
+
     gsap.from(targets, {
       ...fromProps,
-      duration: prefersReducedMotion ? 0.1 : 0.8,
+      duration: prefersReducedMotion ? 0.1 : duration,
       delay,
       stagger: animation === 'stagger' ? stagger : 0,
+      ease: easeMap[animation] ?? 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 88%',
+        toggleActions: 'play none none none',
+      },
+    });
+  });
+
+  // Counter animation for elements with data-count-to attribute
+  document.querySelectorAll('[data-count-to]').forEach((el) => {
+    const target = parseInt(el.getAttribute('data-count-to') ?? '0');
+    const suffix = el.getAttribute('data-count-suffix') ?? '';
+
+    if (prefersReducedMotion) {
+      el.textContent = target + suffix;
+      return;
+    }
+
+    const obj = { val: 0 };
+    gsap.to(obj, {
+      val: target,
+      duration: 1.5,
       ease: 'power2.out',
       scrollTrigger: {
         trigger: el,
-        start: 'top 85%',
+        start: 'top 90%',
         toggleActions: 'play none none none',
+      },
+      onUpdate: () => {
+        el.textContent = Math.round(obj.val) + suffix;
       },
     });
   });

@@ -61,9 +61,9 @@ export async function applyPostTranslations(
   for (const post of posts) {
     const tr = transMap.get(post.id);
     if (tr) {
-      (post as Record<string, unknown>).title = tr.title;
-      if (tr.excerpt) (post as Record<string, unknown>).excerpt = tr.excerpt;
-      if (tr.body) (post as Record<string, unknown>).body = tr.body;
+      (post as unknown as Record<string, unknown>).title = tr.title;
+      if (tr.excerpt) (post as unknown as Record<string, unknown>).excerpt = tr.excerpt;
+      if (tr.body) (post as unknown as Record<string, unknown>).body = tr.body;
     }
   }
 }

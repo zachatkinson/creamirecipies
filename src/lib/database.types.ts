@@ -282,6 +282,44 @@ export type Database = {
         }
         Relationships: []
       }
+      post_translations: {
+        Row: {
+          body: string
+          created_at: string | null
+          excerpt: string | null
+          id: string
+          locale: string
+          post_id: string
+          title: string
+        }
+        Insert: {
+          body: string
+          created_at?: string | null
+          excerpt?: string | null
+          id?: string
+          locale: string
+          post_id: string
+          title: string
+        }
+        Update: {
+          body?: string
+          created_at?: string | null
+          excerpt?: string | null
+          id?: string
+          locale?: string
+          post_id?: string
+          title?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "post_translations_post_id_fkey"
+            columns: ["post_id"]
+            isOneToOne: false
+            referencedRelation: "posts"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       posts: {
         Row: {
           author_id: string
