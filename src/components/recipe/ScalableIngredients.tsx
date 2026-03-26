@@ -170,7 +170,7 @@ export default function ScalableIngredients({ ingredients, locale = 'en' }: Prop
   return (
     <div>
       {/* US / Metric toggle */}
-      <div className="flex items-center gap-2 mb-4 pb-3 border-b border-slate-100">
+      <div className="print-hide flex items-center gap-2 mb-4 pb-3 border-b border-slate-100">
         <span className="text-xs text-slate-500">{UNIT_LABELS[locale]}</span>
         <button
           onClick={toggleMeasureSystem}

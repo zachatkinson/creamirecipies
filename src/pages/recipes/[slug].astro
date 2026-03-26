@@ -300,7 +300,7 @@ const totalTimeLabel = totalTime >= 60
               </div>
             )}
 
-            <div class="flex flex-wrap items-center gap-2 mb-4">
+            <div class="print-hide flex flex-wrap items-center gap-2 mb-4">
               <span class:list={['text-xs font-medium px-3 py-1 rounded-full', difficultyColors[recipe.difficulty]]}>
                 {ui(recipe.difficulty, locale)}
               </span>
@@ -334,7 +334,7 @@ const totalTimeLabel = totalTime >= 60
             <p class="text-slate-600 leading-relaxed mb-6">{recipe.description}</p>
 
             <!-- Rating -->
-            <div class="flex items-center gap-3 mb-6">
+            <div class="print-hide flex items-center gap-3 mb-6">
               <RatingStars rating={recipe.avg_rating} size="lg" showValue />
               <span class="text-sm text-slate-600">
                 ({recipe.rating_count} {recipe.rating_count !== 1 ? ui('reviews', locale) : ui('review', locale)})

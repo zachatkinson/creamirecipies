@@ -42,6 +42,11 @@
     display: none !important;
   }
 
+  /* Hide elements marked with print-hide class */
+  .print-hide {
+    display: none !important;
+  }
+
   /* Hide recipe hero image */
   .aspect-\[4\/3\] {
     display: none !important;
@@ -172,20 +177,58 @@
     padding-left: 0 !important;
   }
 
-  /* Step number bubbles — just show the number */
+  /* Step cards — compact layout for print */
+  .step-card {
+    padding-left: 24pt !important;
+    padding-bottom: 4pt !important;
+    margin-bottom: 4pt !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Step number bubble — inline number */
   .step-card .absolute.left-0 {
-    position: static !important;
-    display: inline-block !important;
-    width: auto !important;
-    height: auto !important;
+    position: absolute !important;
+    left: 0 !important;
+    width: 18pt !important;
+    height: 18pt !important;
+    font-size: 10pt !important;
     background: none !important;
-    font-weight: bold !important;
-    margin-right: 8pt !important;
+    border: 1.5pt solid #000 !important;
+    color: #000 !important;
+    box-shadow: none !important;
+  }
+
+  /* Step card content — reduce padding */
+  .step-card .bg-white.rounded-xl {
+    padding: 6pt 8pt !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .step-card p {
+    font-size: 10pt !important;
+    margin-bottom: 2pt !important;
   }
 
   /* Step timeline connector — hide */
   .step-card .absolute.left-\\[1\\.15rem\\] {
     display: none !important;
+  }
+
+  /* Pro tips — compact */
+  .step-card details {
+    margin-top: 2pt !important;
+  }
+
+  .step-card details summary {
+    font-size: 9pt !important;
+    padding: 2pt 0 !important;
+  }
+
+  .step-card details > div {
+    font-size: 9pt !important;
+    padding: 3pt 6pt !important;
+    margin-top: 1pt !important;
   }
 
   /* Pro tips — show expanded */
