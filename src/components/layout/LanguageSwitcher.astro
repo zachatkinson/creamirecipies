@@ -1,5 +1,6 @@
 ---
 import { LOCALES, type Locale } from '../../i18n';
+import { ui } from '../../lib/translations';
 
 const currentLocale = Astro.locals.locale;
 const localeEntries = Object.entries(LOCALES) as [Locale, typeof LOCALES[Locale]][];
@@ -9,7 +10,7 @@ const localeEntries = Object.entries(LOCALES) as [Locale, typeof LOCALES[Locale]
   <button
     id="lang-btn"
     class="flex items-center gap-1.5 px-3 py-1.5 text-sm text-slate-600 hover:text-chocolate rounded-full border border-slate-200 hover:border-blush transition-colors"
-    aria-label="Change language"
+    aria-label={`${LOCALES[currentLocale].label} - ${ui('changeLanguage', currentLocale)}`}
     aria-expanded="false"
   >
     <span>{LOCALES[currentLocale].flag}</span>

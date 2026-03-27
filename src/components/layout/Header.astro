@@ -47,21 +47,23 @@ const currentPath = Astro.url.pathname;
       </form>
 
       <!-- Desktop Nav -->
-      <div class="hidden md:flex items-center gap-1">
+      <ul class="hidden md:flex items-center gap-1" role="list">
         {navLinks.map((link) => (
-          <a
-            href={link.href}
-            class:list={[
-              'px-4 py-2 rounded-full text-sm font-medium transition-colors',
-              currentPath.startsWith(link.href)
-                ? 'bg-blush/40 text-berry'
-                : 'text-slate-600 hover:bg-blush/15 hover:text-chocolate',
-            ]}
-          >
-            {link.label}
-          </a>
+          <li>
+            <a
+              href={link.href}
+              class:list={[
+                'px-4 py-2 rounded-full text-sm font-medium transition-colors block',
+                currentPath.startsWith(link.href)
+                  ? 'bg-blush/40 text-berry'
+                  : 'text-slate-600 hover:bg-blush/15 hover:text-chocolate',
+              ]}
+            >
+              {link.label}
+            </a>
+          </li>
         ))}
-      </div>
+      </ul>
 
       <!-- Language Switcher -->
       <div class="hidden md:block">
@@ -83,21 +85,23 @@ const currentPath = Astro.url.pathname;
 
     <!-- Mobile Nav -->
     <div id="mobile-menu" class="hidden md:hidden pb-4">
-      <div class="flex flex-col gap-1 pt-2 border-t border-cream-dark">
+      <ul class="flex flex-col gap-1 pt-2 border-t border-cream-dark" role="list">
         {navLinks.map((link) => (
-          <a
-            href={link.href}
-            class:list={[
-              'px-4 py-3 rounded-lg text-sm font-medium transition-colors',
-              currentPath.startsWith(link.href)
-                ? 'bg-blush/40 text-berry'
-                : 'text-slate-600 hover:bg-cream-dark',
-            ]}
-          >
-            {link.label}
-          </a>
+          <li>
+            <a
+              href={link.href}
+              class:list={[
+                'px-4 py-3 rounded-lg text-sm font-medium transition-colors block',
+                currentPath.startsWith(link.href)
+                  ? 'bg-blush/40 text-berry'
+                  : 'text-slate-600 hover:bg-cream-dark',
+              ]}
+            >
+              {link.label}
+            </a>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   </nav>
 </header>

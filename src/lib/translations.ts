@@ -104,6 +104,7 @@ export const RECIPE_UI: Record<string, Record<Locale, string>> = {
     de: 'Dieser Beitrag enthält Affiliate-Links. Wenn Sie über diese Links einen Kauf tätigen, erhalten wir möglicherweise eine kleine Provision ohne zusätzliche Kosten für Sie.',
     pt: 'Este artigo contém links de afiliados. Se você fizer uma compra através desses links, podemos receber uma pequena comissão sem custo adicional para você.',
   },
+  'changeLanguage': { en: 'Change language', fr: 'Changer de langue', es: 'Cambiar idioma', de: 'Sprache aendern', pt: 'Mudar idioma' },
   'affiliateNotice': { en: 'Affiliate Notice', fr: 'Avis d\'affiliation', es: 'Aviso de afiliación', de: 'Affiliate-Hinweis', pt: 'Aviso de afiliação' },
   'sponsor': { en: 'Sponsor', fr: 'Sponsor', es: 'Patrocinador', de: 'Sponsor', pt: 'Patrocinador' },
   'ingredients': { en: 'Ingredients', fr: 'Ingrédients', es: 'Ingredientes', de: 'Zutaten', pt: 'Ingredientes' },
