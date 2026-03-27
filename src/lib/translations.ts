@@ -94,6 +94,9 @@ export async function getStepTranslations(
 /** UI label translations for recipe pages */
 export const RECIPE_UI: Record<string, Record<Locale, string>> = {
   'stepImageAlt': { en: 'Step', fr: 'Étape', es: 'Paso', de: 'Schritt', pt: 'Passo' },
+  'previousArticle': { en: 'Previous', fr: 'Précédent', es: 'Anterior', de: 'Vorheriger', pt: 'Anterior' },
+  'nextArticle': { en: 'Next', fr: 'Suivant', es: 'Siguiente', de: 'Nächster', pt: 'Próximo' },
+  'relatedArticles': { en: 'Related Articles', fr: 'Articles connexes', es: 'Artículos relacionados', de: 'Verwandte Artikel', pt: 'Artigos relacionados' },
   'affiliateDisclosure': {
     en: 'This post contains affiliate links. If you make a purchase through these links, we may earn a small commission at no extra cost to you.',
     fr: 'Cet article contient des liens affiliés. Si vous effectuez un achat via ces liens, nous pouvons recevoir une petite commission sans frais supplémentaires pour vous.',

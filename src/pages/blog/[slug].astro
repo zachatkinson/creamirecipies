@@ -30,6 +30,95 @@ if (postTranslation) {
 const heroImage = post.hero_image_url || `/images/blog/${post.category || 'news'}.svg`;
 const hasAffiliateLinks = post.body?.includes('rel="sponsored nofollow"') ?? false;
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
+
+// Prev/Next posts
+const { data: prevPost } = await supabase
+  .from('posts')
+  .select('title, slug')
+  .eq('status', 'published')
+  .lte('published_at', new Date().toISOString())
+  .lt('published_at', post.published_at ?? post.created_at)
+  .order('published_at', { ascending: false })
+  .limit(1)
+  .single();
+
+const { data: nextPost } = await supabase
+  .from('posts')
+  .select('title, slug')
+  .eq('status', 'published')
+  .lte('published_at', new Date().toISOString())
+  .gt('published_at', post.published_at ?? post.created_at)
+  .order('published_at', { ascending: true })
+  .limit(1)
+  .single();
+
+// Related posts (same category, excluding current)
+const { data: relatedPostsRaw } = await supabase
+  .from('posts')
+  .select('title, slug, excerpt, category, hero_image_url, published_at, created_at')
+  .eq('status', 'published')
+  .eq('category', post.category)
+  .neq('id', post.id)
+  .lte('published_at', new Date().toISOString())
+  .order('published_at', { ascending: false })
+  .limit(3);
+
+const relatedPosts = (relatedPostsRaw ?? []) as Record<string, unknown>[];
+
+// Translate prev/next/related if non-English
+if (locale !== 'en') {
+  const ids = [
+    ...(prevPost ? [prevPost] : []),
+    ...(nextPost ? [nextPost] : []),
+    ...relatedPosts,
+  ].map((p: any) => p.id).filter(Boolean);
+
+  // For prev/next we only have slug/title, get IDs
+  const allSlugs = [prevPost?.slug, nextPost?.slug, ...relatedPosts.map((p: any) => p.slug)].filter(Boolean);
+  if (allSlugs.length > 0) {
+    const { data: navTranslations } = await supabase
+      .from('posts')
+      .select('id, slug')
+      .in('slug', allSlugs as string[]);
+
+    if (navTranslations) {
+      const navIds = navTranslations.map(p => p.id);
+      const { data: translations } = await supabase
+        .from('post_translations')
+        .select('post_id, title, excerpt')
+        .eq('locale', locale)
+        .in('post_id', navIds);
+
+      if (translations) {
+        const slugToId = new Map(navTranslations.map(p => [p.slug, p.id]));
+        const idToTrans = new Map(translations.map(t => [t.post_id, t]));
+
+        if (prevPost) {
+          const tr = idToTrans.get(slugToId.get(prevPost.slug));
+          if (tr) (prevPost as any).title = tr.title;
+        }
+        if (nextPost) {
+          const tr = idToTrans.get(slugToId.get(nextPost.slug));
+          if (tr) (nextPost as any).title = tr.title;
+        }
+        for (const rp of relatedPosts) {
+          const tr = idToTrans.get(slugToId.get(rp.slug as string));
+          if (tr) {
+            rp.title = tr.title;
+            if (tr.excerpt) rp.excerpt = tr.excerpt;
+          }
+        }
+      }
+    }
+  }
+}
+
+const categoryColors: Record<string, string> = {
+  news: 'bg-lavender/20 text-lavender-dark',
+  tips: 'bg-mint/20 text-mint-dark',
+  reviews: 'bg-vanilla/20 text-chocolate-light',
+  guides: 'bg-blush/20 text-berry',
+};
 const blogPostJsonLd = buildBlogPostingJsonLd(post as any, siteUrl);
 const breadcrumbs = [
   { name: t('breadcrumb.home', locale), url: siteUrl },
@@ -116,6 +205,87 @@ const breadcrumbs = [
 
       <!-- Ad: bottom of blog post -->
       <AdUnit size="in-article" slot="post-bottom" class="mt-12" />
+
+      <!-- Prev/Next Navigation -->
+      {(prevPost || nextPost) && (
+        <nav class="mt-12 pt-8 border-t border-slate-100" aria-label="Article navigation">
+          <div class="flex justify-between gap-6">
+            {prevPost ? (
+              <a href={`/blog/${prevPost.slug}`} class="group flex-1 min-w-0">
+                <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">{ui('previousArticle', locale)}</span>
+                <p class="text-sm font-medium text-chocolate group-hover:text-berry transition-colors truncate mt-1">
+                  {prevPost.title}
+                </p>
+              </a>
+            ) : <div class="flex-1" />}
+            {nextPost ? (
+              <a href={`/blog/${nextPost.slug}`} class="group flex-1 min-w-0 text-right">
+                <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">{ui('nextArticle', locale)}</span>
+                <p class="text-sm font-medium text-chocolate group-hover:text-berry transition-colors truncate mt-1">
+                  {nextPost.title}
+                </p>
+              </a>
+            ) : <div class="flex-1" />}
+          </div>
+        </nav>
+      )}
     </div>
   </article>
+
+  <!-- Related Articles -->
+  {relatedPosts.length > 0 && (
+    <section class="py-12 bg-cream/30">
+      <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal>
+          <h2 class="font-display text-2xl font-bold text-chocolate mb-8 text-center">
+            {ui('relatedArticles', locale)}
+          </h2>
+        </ScrollReveal>
+        <ScrollReveal animation="stagger" staggerAmount={0.1}>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {relatedPosts.map((rp) => (
+              <a
+                href={`/blog/${rp.slug}`}
+                class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              >
+                <div class="aspect-[16/9] bg-cream-dark overflow-hidden">
+                  {rp.hero_image_url ? (
+                    <img
+                      src={rp.hero_image_url as string}
+                      alt={rp.title as string}
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <img
+                      src={`/images/blog/${(rp.category as string) || 'news'}.svg`}
+                      alt={rp.title as string}
+                      class="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  )}
+                </div>
+                <div class="p-5">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class:list={['text-xs font-medium px-2.5 py-0.5 rounded-full', categoryColors[rp.category as string] ?? 'bg-slate-100 text-slate-600']}>
+                      {t(`blog.${rp.category}`, locale)}
+                    </span>
+                    <time class="text-xs text-slate-600" datetime={rp.published_at as string}>
+                      {new Date((rp.published_at ?? rp.created_at) as string).toLocaleDateString(locale, { month: 'short', day: 'numeric', year: 'numeric' })}
+                    </time>
+                  </div>
+                  <h3 class="font-display text-lg font-bold text-chocolate group-hover:text-berry transition-colors line-clamp-2 mb-2">
+                    {rp.title}
+                  </h3>
+                  {rp.excerpt && (
+                    <p class="text-sm text-slate-600 line-clamp-2">{rp.excerpt}</p>
+                  )}
+                </div>
+              </a>
+            ))}
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  )}
 </BaseLayout>
