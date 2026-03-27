@@ -75,17 +75,27 @@ const hasMore = posts.length < total;
                 class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
                 <div class="aspect-[16/9] bg-cream-dark overflow-hidden">
-                  {post.hero_image_url ? (
-                    <img
-                      src={post.hero_image_url as string}
-                      alt={post.title as string}
-                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                    />
-                  ) : (
+                  {post.hero_image_url ? (() => {
+                    const src = post.hero_image_url as string;
+                    const base = src.replace('.avif', '');
+                    return (
+                      <img
+                        src={src}
+                        srcset={`${base}-384w.avif 384w, ${base}-768w.avif 768w, ${src} 1200w`}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 384px"
+                        alt={post.title as string}
+                        width={1200}
+                        height={675}
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    );
+                  })() : (
                     <img
                       src={`/images/blog/${(post.category as string) || 'news'}.svg`}
                       alt={post.title as string}
+                      width={1200}
+                      height={675}
                       class="w-full h-full object-cover"
                       loading="lazy"
                     />
@@ -166,6 +176,9 @@ const hasMore = posts.length < total;
 
         for (const post of data.posts) {
           const heroSrc = post.hero_image_url || `/images/blog/${post.category || 'news'}.svg`;
+          const heroBase = heroSrc.replace('.avif', '');
+          const isAvif = heroSrc.endsWith('.avif');
+          const srcsetAttr = isAvif ? `srcset="${heroBase}-384w.avif 384w, ${heroBase}-768w.avif 768w, ${heroSrc} 1200w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 384px"` : '';
           const date = new Date(post.published_at || post.created_at).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
           const colorClass = categoryColors[post.category] ?? 'bg-slate-100 text-slate-600';
 
@@ -174,7 +187,7 @@ const hasMore = posts.length < total;
           card.className = 'group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1';
           card.innerHTML = `
             <div class="aspect-[16/9] bg-cream-dark overflow-hidden">
-              <img src="${heroSrc}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <img src="${heroSrc}" ${srcsetAttr} alt="${post.title}" width="1200" height="675" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">

@@ -766,12 +766,12 @@ const totalTimeLabel = totalTime >= 60
 <!-- Print button handler (separate script, inline to ensure it runs per page) -->
 <script is:inline>
   document.addEventListener('DOMContentLoaded', function() {
-    var printBtn = document.getElementById('print-recipe-btn');
+    const printBtn = document.getElementById('print-recipe-btn');
     if (printBtn) {
       printBtn.addEventListener('click', function() {
-        var modelSelect = document.getElementById('byb-model-select');
+        const modelSelect = document.getElementById('byb-model-select');
         if (modelSelect && !modelSelect.value) {
-          var warning = printBtn.getAttribute('data-warning') || 'Select your Creami model first, or press OK to print anyway.';
+          const warning = printBtn.getAttribute('data-warning') || 'Select your Creami model first, or press OK to print anyway.';
           if (!confirm(warning)) {
             modelSelect.scrollIntoView({ behavior: 'smooth' });
             modelSelect.focus();

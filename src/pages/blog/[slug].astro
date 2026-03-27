@@ -5,7 +5,7 @@ import AdUnit from '../../components/ads/AdUnit.astro';
 import { supabase } from '../../lib/supabase';
 import { marked } from 'marked';
 import { getPostBySlug, getPostTranslation } from '../../lib/posts';
-import { buildBlogPostingJsonLd, buildBreadcrumbJsonLd } from '../../lib/seo';
+import { buildBlogPostingJsonLd } from '../../lib/seo';
 import { ui } from '../../lib/translations';
 import { t } from '../../i18n';
 
@@ -67,12 +67,6 @@ const relatedPosts = (relatedPostsRaw ?? []) as Record<string, unknown>[];
 
 // Translate prev/next/related if non-English
 if (locale !== 'en') {
-  const ids = [
-    ...(prevPost ? [prevPost] : []),
-    ...(nextPost ? [nextPost] : []),
-    ...relatedPosts,
-  ].map((p: any) => p.id).filter(Boolean);
-
   // For prev/next we only have slug/title, get IDs
   const allSlugs = [prevPost?.slug, nextPost?.slug, ...relatedPosts.map((p: any) => p.slug)].filter(Boolean);
   if (allSlugs.length > 0) {
@@ -181,7 +175,7 @@ const breadcrumbs = [
       <!-- Hero Image -->
       <ScrollReveal animation="fade-up" delay={0.1}>
         <div class="aspect-[16/9] rounded-2xl overflow-hidden mb-10">
-          <img src={heroImage} alt={post.title} class="w-full h-full object-cover" />
+          <img src={heroImage} alt={post.title} width={1200} height={675} class="w-full h-full object-cover" />
         </div>
       </ScrollReveal>
 
@@ -249,17 +243,27 @@ const breadcrumbs = [
                 class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
                 <div class="aspect-[16/9] bg-cream-dark overflow-hidden">
-                  {rp.hero_image_url ? (
-                    <img
-                      src={rp.hero_image_url as string}
-                      alt={rp.title as string}
-                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                    />
-                  ) : (
+                  {rp.hero_image_url ? (() => {
+                    const src = rp.hero_image_url as string;
+                    const base = src.replace('.avif', '');
+                    return (
+                      <img
+                        src={src}
+                        srcset={`${base}-384w.avif 384w, ${base}-768w.avif 768w, ${src} 1200w`}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 384px"
+                        alt={rp.title as string}
+                        width={1200}
+                        height={675}
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    );
+                  })() : (
                     <img
                       src={`/images/blog/${(rp.category as string) || 'news'}.svg`}
                       alt={rp.title as string}
+                      width={1200}
+                      height={675}
                       class="w-full h-full object-cover"
                       loading="lazy"
                     />

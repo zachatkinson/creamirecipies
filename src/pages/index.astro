@@ -144,9 +144,9 @@ const categoryColors: Record<string, string> = {
         </ScrollReveal>
       </div>
 
-      <!-- Decorative elements -->
-      <div class="absolute right-0 top-0 w-1/2 h-full opacity-30 pointer-events-none" id="hero-canvas-container">
-        <HeroCanvas client:visible />
+      <!-- Decorative elements (PixiJS only loads on desktop to save ~73kB on mobile) -->
+      <div class="hidden md:block absolute right-0 top-0 w-1/2 h-full opacity-30 pointer-events-none" id="hero-canvas-container">
+        <HeroCanvas client:media="(min-width: 768px)" />
       </div>
 
       <!-- Hero swirl image -->
@@ -156,6 +156,8 @@ const categoryColors: Record<string, string> = {
             src="/images/hero-swirl.avif"
             alt=""
             aria-hidden="true"
+            width={800}
+            height={1200}
             class="w-full h-auto drop-shadow-2xl"
             loading="eager"
           />
@@ -266,17 +268,27 @@ const categoryColors: Record<string, string> = {
                 class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
                 <div class="aspect-[16/9] bg-cream-dark overflow-hidden">
-                  {post.hero_image_url ? (
-                    <img
-                      src={post.hero_image_url as string}
-                      alt={post.title as string}
-                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                    />
-                  ) : (
+                  {post.hero_image_url ? (() => {
+                    const src = post.hero_image_url as string;
+                    const base = src.replace('.avif', '');
+                    return (
+                      <img
+                        src={src}
+                        srcset={`${base}-384w.avif 384w, ${base}-768w.avif 768w, ${src} 1200w`}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 384px"
+                        alt={post.title as string}
+                        width={1200}
+                        height={675}
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    );
+                  })() : (
                     <img
                       src={`/images/blog/${(post.category as string) || 'news'}.svg`}
                       alt={post.title as string}
+                      width={1200}
+                      height={675}
                       class="w-full h-full object-cover"
                       loading="lazy"
                     />
