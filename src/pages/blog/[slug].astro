@@ -6,6 +6,7 @@ import { supabase } from '../../lib/supabase';
 import { marked } from 'marked';
 import { getPostBySlug, getPostTranslation } from '../../lib/posts';
 import { buildBlogPostingJsonLd, buildBreadcrumbJsonLd } from '../../lib/seo';
+import { ui } from '../../lib/translations';
 import { t } from '../../i18n';
 
 export const prerender = false;
@@ -27,6 +28,7 @@ if (postTranslation) {
 }
 
 const heroImage = post.hero_image_url || `/images/blog/${post.category || 'news'}.svg`;
+const hasAffiliateLinks = post.body?.includes('rel="sponsored nofollow"') ?? false;
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
 const blogPostJsonLd = buildBlogPostingJsonLd(post as any, siteUrl);
 const breadcrumbs = [
@@ -93,6 +95,19 @@ const breadcrumbs = [
           <img src={heroImage} alt={post.title} class="w-full h-full object-cover" />
         </div>
       </ScrollReveal>
+
+      <!-- Affiliate Disclosure -->
+      {hasAffiliateLinks && (
+        <div class="flex items-start gap-3 p-4 mb-8 bg-vanilla/20 border border-vanilla/40 rounded-xl">
+          <svg class="w-5 h-5 text-chocolate-light mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <div>
+            <span class="text-sm font-bold text-chocolate">{ui('affiliateNotice', locale)}</span>
+            <p class="text-xs text-slate-600 mt-0.5">{ui('affiliateDisclosure', locale)}</p>
+          </div>
+        </div>
+      )}
 
       <!-- Body -->
       <ScrollReveal animation="fade-up" delay={0.15}>

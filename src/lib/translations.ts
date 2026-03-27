@@ -94,6 +94,14 @@ export async function getStepTranslations(
 /** UI label translations for recipe pages */
 export const RECIPE_UI: Record<string, Record<Locale, string>> = {
   'stepImageAlt': { en: 'Step', fr: 'Étape', es: 'Paso', de: 'Schritt', pt: 'Passo' },
+  'affiliateDisclosure': {
+    en: 'This post contains affiliate links. If you make a purchase through these links, we may earn a small commission at no extra cost to you.',
+    fr: 'Cet article contient des liens affiliés. Si vous effectuez un achat via ces liens, nous pouvons recevoir une petite commission sans frais supplémentaires pour vous.',
+    es: 'Este artículo contiene enlaces de afiliados. Si realiza una compra a través de estos enlaces, podemos recibir una pequeña comisión sin costo adicional para usted.',
+    de: 'Dieser Beitrag enthält Affiliate-Links. Wenn Sie über diese Links einen Kauf tätigen, erhalten wir möglicherweise eine kleine Provision ohne zusätzliche Kosten für Sie.',
+    pt: 'Este artigo contém links de afiliados. Se você fizer uma compra através desses links, podemos receber uma pequena comissão sem custo adicional para você.',
+  },
+  'affiliateNotice': { en: 'Affiliate Notice', fr: 'Avis d\'affiliation', es: 'Aviso de afiliación', de: 'Affiliate-Hinweis', pt: 'Aviso de afiliação' },
   'sponsor': { en: 'Sponsor', fr: 'Sponsor', es: 'Patrocinador', de: 'Sponsor', pt: 'Patrocinador' },
   'ingredients': { en: 'Ingredients', fr: 'Ingrédients', es: 'Ingredientes', de: 'Zutaten', pt: 'Ingredientes' },
   'directions': { en: 'Directions', fr: 'Instructions', es: 'Instrucciones', de: 'Zubereitung', pt: 'Modo de Preparo' },
