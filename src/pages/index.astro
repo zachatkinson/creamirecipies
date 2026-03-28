@@ -6,9 +6,8 @@ import AdUnit from '../components/ads/AdUnit.astro';
 import HeroCanvas from '../components/animations/HeroCanvas';
 import { supabase } from '../lib/supabase';
 import { getCategories } from '../lib/recipes';
-import { DEFAULT_LOCALE } from '../i18n';
 import { t } from '../i18n';
-import { ui } from '../lib/translations';
+import { ui, translateRecipeArray, translatePostArray } from '../lib/translations';
 
 const locale = Astro.locals.locale;
 const categories = await getCategories(supabase);
@@ -59,46 +58,9 @@ const posts = (latestPostsRaw ?? []) as Record<string, unknown>[];
 
 const baseTypes = categories.filter((c) => c.type === 'base_type' && activeBaseTypes.has(c.name));
 
-// Translate recipe cards if locale isn't English
-if (locale !== DEFAULT_LOCALE && recipes.length > 0) {
-  const { data: translations } = await supabase
-    .from('recipe_translations')
-    .select('recipe_id, title, description')
-    .eq('locale', locale)
-    .in('recipe_id', recipes.map((r: any) => r.id))
-    .limit(100);
-
-  if (translations) {
-    const transMap = new Map(translations.map((tr) => [tr.recipe_id, tr]));
-    for (const recipe of recipes) {
-      const tr = transMap.get(recipe.id);
-      if (tr) {
-        recipe.title = tr.title;
-        recipe.description = tr.description;
-      }
-    }
-  }
-}
-
-// Translate blog posts if locale isn't English
-if (locale !== DEFAULT_LOCALE && posts.length > 0) {
-  const postIds = posts.map(p => p.id as string);
-  const { data: postTranslations } = await supabase
-    .from('post_translations')
-    .select('post_id, title, excerpt')
-    .eq('locale', locale)
-    .in('post_id', postIds);
-  if (postTranslations) {
-    const transMap = new Map((postTranslations as Record<string, unknown>[]).map(tr => [tr.post_id, tr]));
-    for (const post of posts) {
-      const tr = transMap.get(post.id as string) as Record<string, unknown> | undefined;
-      if (tr) {
-        post.title = tr.title;
-        if (tr.excerpt) post.excerpt = tr.excerpt;
-      }
-    }
-  }
-}
+// Apply translations if non-English
+await translateRecipeArray(supabase, recipes, locale);
+await translatePostArray(supabase, posts, locale);
 
 import { CATEGORY_COLORS } from '../lib/blog';
 const categoryColors = CATEGORY_COLORS;

@@ -91,6 +91,116 @@ export async function getStepTranslations(
   return map;
 }
 
+/**
+ * Apply translations to an array of recipes (title + description).
+ * Fetches from recipe_translations in one query and applies in-place.
+ */
+export async function translateRecipeArray(
+  client: Client,
+  recipes: Record<string, unknown>[],
+  locale: Locale,
+): Promise<void> {
+  if (locale === DEFAULT_LOCALE || recipes.length === 0) return;
+  const ids = recipes.map((r) => r.id as string).filter(Boolean);
+  const { data: translations } = await client
+    .from('recipe_translations')
+    .select('recipe_id, title, description')
+    .eq('locale', locale)
+    .in('recipe_id', ids);
+  if (!translations) return;
+  const transMap = new Map(translations.map((tr) => [tr.recipe_id, tr]));
+  for (const recipe of recipes) {
+    const tr = transMap.get(recipe.id as string);
+    if (tr) {
+      recipe.title = tr.title;
+      if (tr.description) recipe.description = tr.description;
+    }
+  }
+}
+
+/**
+ * Apply translations to an array of posts (title + excerpt).
+ * Fetches from post_translations in one query and applies in-place.
+ */
+export async function translatePostArray(
+  client: Client,
+  posts: Record<string, unknown>[],
+  locale: Locale,
+): Promise<void> {
+  if (locale === DEFAULT_LOCALE || posts.length === 0) return;
+  const ids = posts.map((p) => p.id as string).filter(Boolean);
+  const { data: translations } = await client
+    .from('post_translations')
+    .select('post_id, title, excerpt')
+    .eq('locale', locale)
+    .in('post_id', ids);
+  if (!translations) return;
+  const transMap = new Map(translations.map((tr) => [tr.post_id, tr]));
+  for (const post of posts) {
+    const tr = transMap.get(post.id as string);
+    if (tr) {
+      post.title = tr.title;
+      if (tr.excerpt) post.excerpt = tr.excerpt;
+    }
+  }
+}
+
+/**
+ * Translate prev/next/related posts by slug.
+ * Resolves slugs to IDs, fetches translations, and applies in-place.
+ */
+export async function translatePostNavigation(
+  client: Client,
+  locale: Locale,
+  prevPost: Record<string, unknown> | null,
+  nextPost: Record<string, unknown> | null,
+  relatedPosts: Record<string, unknown>[],
+): Promise<void> {
+  if (locale === DEFAULT_LOCALE) return;
+  const allSlugs = [
+    prevPost?.slug as string,
+    nextPost?.slug as string,
+    ...relatedPosts.map((p) => p.slug as string),
+  ].filter(Boolean);
+  if (allSlugs.length === 0) return;
+
+  const { data: postLookup } = await client
+    .from('posts')
+    .select('id, slug')
+    .in('slug', allSlugs);
+  if (!postLookup) return;
+
+  const navIds = postLookup.map((p) => p.id);
+  const { data: translations } = await client
+    .from('post_translations')
+    .select('post_id, title, excerpt')
+    .eq('locale', locale)
+    .in('post_id', navIds);
+  if (!translations) return;
+
+  const slugToId = new Map(postLookup.map((p) => [p.slug, p.id]));
+  const idToTrans = new Map(translations.map((tr) => [tr.post_id, tr]));
+
+  if (prevPost) {
+    const id = slugToId.get(prevPost.slug as string);
+    const tr = id ? idToTrans.get(id) : undefined;
+    if (tr) prevPost.title = tr.title;
+  }
+  if (nextPost) {
+    const id = slugToId.get(nextPost.slug as string);
+    const tr = id ? idToTrans.get(id) : undefined;
+    if (tr) nextPost.title = tr.title;
+  }
+  for (const rp of relatedPosts) {
+    const id = slugToId.get(rp.slug as string);
+    const tr = id ? idToTrans.get(id) : undefined;
+    if (tr) {
+      rp.title = tr.title;
+      if (tr.excerpt) rp.excerpt = tr.excerpt;
+    }
+  }
+}
+
 /** UI label translations for recipe pages */
 export const RECIPE_UI: Record<string, Record<Locale, string>> = {
   'stepImageAlt': { en: 'Step', fr: 'Étape', es: 'Paso', de: 'Schritt', pt: 'Passo' },

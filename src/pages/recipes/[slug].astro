@@ -15,6 +15,7 @@ import { getRecipeBySlug, getCreamiModels } from '../../lib/recipes';
 import { buildRecipeJsonLd, buildRecipeFaqJsonLd, generateRecipeFaqs } from '../../lib/seo';
 import { getRecipeTranslation, applyTranslation, getIngredientTranslations, getStepTranslations, ui } from '../../lib/translations';
 import { t, DEFAULT_LOCALE } from '../../i18n';
+import { detectAllergens } from '../../lib/allergens';
 
 const { slug } = Astro.params;
 const locale = Astro.locals.locale;
@@ -47,42 +48,7 @@ const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
 const recipeFaqs = generateRecipeFaqs(recipe, locale);
 const recipeFaqJsonLd = buildRecipeFaqJsonLd(recipe);
 
-// Collect allergens from all ingredients via their master_ingredient links
-// For now, derive from ingredient names (master_ingredient data is in DB)
-const allergenKeywords: Record<string, string[]> = {
-  'Dairy': ['cream', 'milk', 'yogurt', 'cheese', 'butter', 'eggnog', 'mascarpone', 'condensed milk', 'evaporated milk'],
-  'Nuts': ['almond', 'pecan', 'walnut', 'cashew', 'hazelnut', 'pistachio', 'macadamia'],
-  'Peanuts': ['peanut'],
-  'Gluten': ['cookie', 'cracker', 'wafer', 'cereal', 'pretzel', 'ladyfinger', 'shortbread', 'biscoff', 'brownie', 'cake', 'graham'],
-  'Eggs': ['egg', 'eggnog'],
-  'Soy': ['soy'],
-  'Sesame': ['sesame', 'tahini'],
-};
-
-const detectedAllergens: string[] = [];
-const ingredientText = recipe.ingredients.map((i) => i.name.toLowerCase()).join(' ');
-for (const [allergen, keywords] of Object.entries(allergenKeywords)) {
-  if (keywords.some((kw) => ingredientText.includes(kw))) {
-    // Exclude false positives: "coconut cream" is not dairy, "almond milk" is not nuts (it's a milk alternative)
-    if (allergen === 'Dairy' && !keywords.some((kw) => ingredientText.includes(kw) && !ingredientText.match(new RegExp(`coconut\\s+${kw}|almond\\s+${kw}|oat\\s+${kw}|cashew\\s+${kw}`)))) {
-      // More precise: check each ingredient individually
-      const hasDairy = recipe.ingredients.some((i) => {
-        const n = i.name.toLowerCase();
-        return (n.includes('cream') || n.includes('milk') || n.includes('yogurt') || n.includes('cheese') || n.includes('butter') || n.includes('eggnog') || n.includes('mascarpone'))
-          && !n.includes('coconut') && !n.includes('almond') && !n.includes('oat') && !n.includes('cashew') && !n.includes('dairy-free') && !n.includes('vegan') && !n.includes('cookie butter') && !n.includes('peanut butter') && !n.includes('almond butter') && !n.includes('cashew butter');
-      });
-      if (hasDairy) detectedAllergens.push(allergen);
-    } else if (allergen === 'Nuts') {
-      const hasNuts = recipe.ingredients.some((i) => {
-        const n = i.name.toLowerCase();
-        return keywords.some((kw) => n.includes(kw)) && !n.includes('milk') && !n.includes('extract');
-      });
-      if (hasNuts) detectedAllergens.push(allergen);
-    } else {
-      detectedAllergens.push(allergen);
-    }
-  }
-}
+const detectedAllergens = detectAllergens(recipe.ingredients);
 const breadcrumbs = [
   { name: t('breadcrumb.home', locale), url: siteUrl },
   { name: t('breadcrumb.recipes', locale), url: `${siteUrl}/recipes` },

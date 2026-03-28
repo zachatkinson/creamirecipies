@@ -4,6 +4,7 @@ import ScrollReveal from '../../components/animations/ScrollReveal.astro';
 import { supabase } from '../../lib/supabase';
 import { t } from '../../i18n';
 import { CATEGORY_COLORS } from '../../lib/blog';
+import { translatePostArray } from '../../lib/translations';
 
 export const prerender = false;
 
@@ -23,24 +24,7 @@ const posts = (initialPosts ?? []) as Record<string, unknown>[];
 const total = count ?? 0;
 
 // Apply translations
-if (locale !== 'en' && posts.length > 0) {
-  const postIds = posts.map(p => p.id as string);
-  const { data: translations } = await supabase
-    .from('post_translations')
-    .select('post_id, title, excerpt')
-    .eq('locale', locale)
-    .in('post_id', postIds);
-  if (translations) {
-    const transMap = new Map((translations as Record<string, unknown>[]).map(tr => [tr.post_id, tr]));
-    for (const post of posts) {
-      const tr = transMap.get(post.id as string) as Record<string, unknown> | undefined;
-      if (tr) {
-        post.title = tr.title;
-        if (tr.excerpt) post.excerpt = tr.excerpt;
-      }
-    }
-  }
-}
+await translatePostArray(supabase, posts, locale);
 
 const categoryColors = CATEGORY_COLORS;
 
