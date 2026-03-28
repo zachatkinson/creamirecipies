@@ -5,6 +5,7 @@ import AdUnit from '../../components/ads/AdUnit.astro';
 import { supabase } from '../../lib/supabase';
 import { marked } from 'marked';
 import { getPostBySlug, getPostTranslation } from '../../lib/posts';
+import { expandShortcodes } from '../../lib/shortcodes';
 import { buildBlogPostingJsonLd } from '../../lib/seo';
 import { ui } from '../../lib/translations';
 import { t } from '../../i18n';
@@ -194,7 +195,7 @@ const breadcrumbs = [
 
       <!-- Body -->
       <ScrollReveal animation="fade-up" delay={0.15}>
-        <div class="prose prose-lg max-w-none text-slate-700 prose-headings:text-chocolate prose-headings:font-display prose-a:text-berry hover:prose-a:text-berry/80 prose-strong:text-chocolate" set:html={marked.parse(post.body)} />
+        <div class="prose prose-lg max-w-none text-slate-700 prose-headings:text-chocolate prose-headings:font-display prose-a:text-berry hover:prose-a:text-berry/80 prose-strong:text-chocolate" set:html={await expandShortcodes(marked.parse(post.body) as string, supabase, locale)} />
       </ScrollReveal>
 
       <!-- Ad: bottom of blog post -->
