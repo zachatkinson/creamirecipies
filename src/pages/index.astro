@@ -43,7 +43,7 @@ const { data: latestRecipesRaw } = await supabase
   .order('published_at', { ascending: false })
   .limit(6);
 
-const recipes = (latestRecipesRaw ?? []) as any[];
+const recipes = (latestRecipesRaw ?? []) as Record<string, unknown>[];
 
 // Get latest 3 published blog posts
 const { data: latestPostsRaw } = await supabase

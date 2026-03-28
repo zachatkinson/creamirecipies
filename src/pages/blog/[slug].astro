@@ -6,7 +6,7 @@ import { supabase } from '../../lib/supabase';
 import { marked } from 'marked';
 import { getPostBySlug, getPostTranslation } from '../../lib/posts';
 import { expandShortcodes } from '../../lib/shortcodes';
-import { buildBlogPostingJsonLd } from '../../lib/seo';
+import { buildBlogPostingJsonLd, type BlogPostForJsonLd } from '../../lib/seo';
 import { CATEGORY_COLORS } from '../../lib/blog';
 import { ui, translatePostNavigation } from '../../lib/translations';
 import { t } from '../../i18n';
@@ -71,7 +71,7 @@ const relatedPosts = (relatedPostsRaw ?? []) as Record<string, unknown>[];
 await translatePostNavigation(supabase, locale, prevPost, nextPost, relatedPosts);
 
 const categoryColors = CATEGORY_COLORS;
-const blogPostJsonLd = buildBlogPostingJsonLd(post as any, siteUrl);
+const blogPostJsonLd = buildBlogPostingJsonLd(post as BlogPostForJsonLd, siteUrl);
 const breadcrumbs = [
   { name: t('breadcrumb.home', locale), url: siteUrl },
   { name: t('blog.title', locale), url: `${siteUrl}/blog` },

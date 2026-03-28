@@ -94,9 +94,20 @@ export function buildRecipeJsonLd(recipe: RecipeWithDetails, siteUrl: string, nu
   };
 }
 
+export interface BlogPostForJsonLd {
+  title: string;
+  slug: string;
+  excerpt: string | null;
+  category: string;
+  hero_image_url: string | null;
+  published_at: string | null;
+  created_at: string;
+  updated_at?: string;
+}
+
 /** Generate BlogPosting JSON-LD for blog posts */
 export function buildBlogPostingJsonLd(
-  post: { title: string; slug: string; excerpt: string | null; category: string; hero_image_url: string | null; published_at: string | null; created_at: string; updated_at?: string },
+  post: BlogPostForJsonLd,
   siteUrl: string,
 ) {
   return {

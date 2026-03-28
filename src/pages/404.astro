@@ -4,30 +4,12 @@ import RecipeCard from '../components/recipe/RecipeCard.astro';
 import ScrollReveal from '../components/animations/ScrollReveal.astro';
 import { supabase } from '../lib/supabase';
 import { getFeaturedRecipes } from '../lib/recipes';
-import { t, DEFAULT_LOCALE } from '../i18n';
+import { t } from '../i18n';
+import { translateRecipeArray } from '../lib/translations';
 
 const locale = Astro.locals.locale;
 const recommendations = await getFeaturedRecipes(supabase, 3);
-
-// Translate recipe cards if locale isn't English
-if (locale !== DEFAULT_LOCALE && recommendations.length > 0) {
-  const { data: translations } = await supabase
-    .from('recipe_translations')
-    .select('recipe_id, title, description')
-    .eq('locale', locale)
-    .in('recipe_id', recommendations.map((r) => r.id))
-    .limit(100);
-  if (translations) {
-    const transMap = new Map(translations.map((tr) => [tr.recipe_id, tr]));
-    for (const recipe of recommendations) {
-      const tr = transMap.get(recipe.id);
-      if (tr) {
-        (recipe as any).title = tr.title;
-        (recipe as any).description = tr.description;
-      }
-    }
-  }
-}
+await translateRecipeArray(supabase, recommendations as Record<string, unknown>[], locale);
 ---
 
 <BaseLayout title={t('notFound.title', locale)}>

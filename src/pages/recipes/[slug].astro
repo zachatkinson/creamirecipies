@@ -13,8 +13,8 @@ export const prerender = false;
 import { supabase } from '../../lib/supabase';
 import { getRecipeBySlug, getCreamiModels } from '../../lib/recipes';
 import { buildRecipeJsonLd, buildRecipeFaqJsonLd, generateRecipeFaqs } from '../../lib/seo';
-import { getRecipeTranslation, applyTranslation, getIngredientTranslations, getStepTranslations, ui } from '../../lib/translations';
-import { t, DEFAULT_LOCALE } from '../../i18n';
+import { getRecipeTranslation, applyTranslation, getIngredientTranslations, getStepTranslations, ui, translateRecipeArray } from '../../lib/translations';
+import { t } from '../../i18n';
 import { detectAllergens } from '../../lib/allergens';
 import { DIFFICULTY_COLORS } from '../../lib/blog';
 
@@ -101,21 +101,7 @@ if (recipeCatSlugs.length > 0) {
 
         if (similar) {
           similarRecipes = similar as Record<string, unknown>[];
-          // Apply translations
-          if (locale !== DEFAULT_LOCALE && similarRecipes.length > 0) {
-            const { data: simTrans } = await supabase
-              .from('recipe_translations')
-              .select('recipe_id, title, description')
-              .eq('locale', locale)
-              .in('recipe_id', similarRecipes.map((r: any) => r.id)) as { data: { recipe_id: string; title: string; description: string }[] | null };
-            if (simTrans) {
-              const simTransMap = new Map(simTrans.map(tr => [tr.recipe_id, tr]));
-              for (const sr of similarRecipes) {
-                const tr = simTransMap.get(sr.id);
-                if (tr) { sr.title = tr.title; sr.description = tr.description; }
-              }
-            }
-          }
+          await translateRecipeArray(supabase, similarRecipes, locale);
         }
       }
     }
