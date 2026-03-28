@@ -7,6 +7,7 @@ import { marked } from 'marked';
 import { getPostBySlug, getPostTranslation } from '../../lib/posts';
 import { expandShortcodes } from '../../lib/shortcodes';
 import { buildBlogPostingJsonLd } from '../../lib/seo';
+import { CATEGORY_COLORS } from '../../lib/blog';
 import { ui } from '../../lib/translations';
 import { t } from '../../i18n';
 
@@ -108,12 +109,7 @@ if (locale !== 'en') {
   }
 }
 
-const categoryColors: Record<string, string> = {
-  news: 'bg-lavender/20 text-[#7B5A9E]',
-  tips: 'bg-mint/20 text-[#2D6B56]',
-  reviews: 'bg-vanilla/20 text-[#6B4F3E]',
-  guides: 'bg-blush/20 text-berry',
-};
+const categoryColors = CATEGORY_COLORS;
 const blogPostJsonLd = buildBlogPostingJsonLd(post as any, siteUrl);
 const breadcrumbs = [
   { name: t('breadcrumb.home', locale), url: siteUrl },

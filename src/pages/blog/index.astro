@@ -3,6 +3,7 @@ import BaseLayout from '../../components/layout/BaseLayout.astro';
 import ScrollReveal from '../../components/animations/ScrollReveal.astro';
 import { supabase } from '../../lib/supabase';
 import { t } from '../../i18n';
+import { CATEGORY_COLORS } from '../../lib/blog';
 
 export const prerender = false;
 
@@ -41,12 +42,7 @@ if (locale !== 'en' && posts.length > 0) {
   }
 }
 
-const categoryColors: Record<string, string> = {
-  news: 'bg-lavender/20 text-[#7B5A9E]',
-  tips: 'bg-mint/20 text-[#2D6B56]',
-  reviews: 'bg-vanilla/20 text-[#6B4F3E]',
-  guides: 'bg-blush/20 text-berry',
-};
+const categoryColors = CATEGORY_COLORS;
 
 const hasMore = posts.length < total;
 ---
@@ -130,6 +126,7 @@ const hasMore = posts.length < total;
                 data-total={total}
                 data-loaded={posts.length}
                 data-label={t('home.viewAllPosts', locale)}
+                data-colors={JSON.stringify(categoryColors)}
                 class="px-8 py-3 bg-white text-berry font-medium rounded-full border-2 border-blush hover:bg-blush/10 transition-colors"
               >
                 {t('home.viewAllPosts', locale)}
@@ -159,12 +156,7 @@ const hasMore = posts.length < total;
     const total = parseInt(btn.dataset.total ?? '0');
     let loaded = parseInt(btn.dataset.loaded ?? '0');
 
-    const categoryColors: Record<string, string> = {
-      news: 'bg-lavender/20 text-[#7B5A9E]',
-      tips: 'bg-mint/20 text-[#2D6B56]',
-      reviews: 'bg-vanilla/20 text-[#6B4F3E]',
-      guides: 'bg-blush/20 text-berry',
-    };
+    const categoryColors: Record<string, string> = JSON.parse(btn.dataset.colors ?? '{}');
 
     btn.addEventListener('click', async () => {
       btn.disabled = true;

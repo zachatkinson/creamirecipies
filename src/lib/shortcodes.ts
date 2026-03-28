@@ -1,14 +1,8 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 import type { Locale } from '../i18n';
+import { t } from '../i18n';
 
-const AMAZON_TAG = 'eatcreami03-20';
-const VIEW_ON: Record<string, string> = {
-  en: 'View on Amazon',
-  fr: 'Voir sur Amazon',
-  es: 'Ver en Amazon',
-  de: 'Auf Amazon ansehen',
-  pt: 'Ver na Amazon',
-};
+const AMAZON_TAG = import.meta.env.PUBLIC_AMAZON_TAG || 'eatcreami03-20';
 
 interface Product {
   asin: string;
@@ -51,7 +45,7 @@ function renderCard(product: Product, translation: ProductTranslation | undefine
   const name = translation?.name ?? product.name;
   const desc = translation?.description ?? product.description ?? '';
   const imageUrl = product.image_url ?? `/images/products/${product.asin}.avif`;
-  const cta = VIEW_ON[locale] ?? VIEW_ON.en;
+  const cta = t('shop.viewOnAmazon', locale);
 
   const descHtml = desc ? `<span style="color:#475569;font-size:0.8rem">${desc}</span><br/>` : '';
 

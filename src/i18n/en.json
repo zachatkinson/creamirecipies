@@ -71,7 +71,11 @@
     "clearAll": "Clear all",
     "beginner": "Beginner",
     "intermediate": "Intermediate",
-    "advanced": "Advanced"
+    "advanced": "Advanced",
+    "recipe": "recipe",
+    "recipePlural": "recipes",
+    "of": "of",
+    "stars": "Stars"
   },
   "recipe": {
     "ingredients": "Ingredients",
@@ -247,5 +251,8 @@
     "save": "Save",
     "delete": "Delete",
     "home": "Home"
+  },
+  "shop": {
+    "viewOnAmazon": "View on Amazon"
   }
 }

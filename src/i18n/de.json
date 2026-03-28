@@ -71,7 +71,11 @@
     "clearAll": "Alle löschen",
     "beginner": "Anfänger",
     "intermediate": "Fortgeschritten",
-    "advanced": "Profi"
+    "advanced": "Profi",
+    "recipe": "Rezept",
+    "recipePlural": "Rezepte",
+    "of": "von",
+    "stars": "Sterne"
   },
   "recipe": {
     "ingredients": "Zutaten",
@@ -247,5 +251,8 @@
     "save": "Speichern",
     "delete": "Löschen",
     "home": "Startseite"
+  },
+  "shop": {
+    "viewOnAmazon": "Auf Amazon ansehen"
   }
 }
