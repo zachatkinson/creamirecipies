@@ -100,19 +100,6 @@ export interface MasterIngredient {
   created_at: string;
 }
 
-export interface Accessory {
-  id: string;
-  name: string;
-  slug: string;
-  description: string | null;
-  category: 'container' | 'lid' | 'tool' | 'storage' | 'book' | 'other';
-  purchase_url: string | null;
-  purchase_label: string | null;
-  image_url: string | null;
-  price_cents: number | null;
-  created_at: string;
-}
-
 export interface Step {
   id: string;
   recipe_id: string;
@@ -137,23 +124,6 @@ export interface Tag {
   slug: string;
 }
 
-export interface Review {
-  id: string;
-  recipe_id: string;
-  user_id: string;
-  rating: number;
-  title: string | null;
-  body: string | null;
-  created_at: string;
-  updated_at: string;
-}
-
-export interface SavedRecipe {
-  user_id: string;
-  recipe_id: string;
-  created_at: string;
-}
-
 export interface Post {
   id: string;
   author_id: string;
@@ -167,21 +137,6 @@ export interface Post {
   created_at: string;
   updated_at: string;
   published_at: string | null;
-}
-
-export interface RecipeModel {
-  recipe_id: string;
-  model_id: string;
-}
-
-export interface RecipeCategory {
-  recipe_id: string;
-  category_id: string;
-}
-
-export interface RecipeTag {
-  recipe_id: string;
-  tag_id: string;
 }
 
 // ---- Composite types for API responses ----

@@ -1,3 +1,4 @@
+import { logQueryError } from './blog';
 import type { SupabaseClient } from '@supabase/supabase-js';
 import type { Database, Post } from './types';
 import type { Locale } from '../i18n';
@@ -19,7 +20,7 @@ export async function getPublishedPosts(client: Client): Promise<PostWithAuthor[
     .order('published_at', { ascending: false });
 
   if (error) {
-    console.warn('Failed to fetch posts:', error.message);
+    logQueryError('fetchPosts', error.message);
     return [];
   }
   return (data ?? []) as unknown as PostWithAuthor[];
@@ -65,7 +66,7 @@ export async function getAllPostSlugs(client: Client): Promise<string[]> {
     .eq('status', 'published');
 
   if (error) {
-    console.warn('Failed to fetch post slugs:', error.message);
+    logQueryError('fetchPostSlugs', error.message);
     return [];
   }
   return (data ?? []).map((p) => p.slug);

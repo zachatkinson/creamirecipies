@@ -1,4 +1,9 @@
-/** Shared blog and recipe UI constants */
+/** Shared blog, recipe UI constants, and utilities */
+
+/** Log a Supabase query warning consistently */
+export function logQueryError(context: string, message?: string): void {
+  console.warn(`[${context}]`, message ?? 'Unknown error');
+}
 
 /** Category badge color classes for blog post cards */
 export const CATEGORY_COLORS: Record<string, string> = {

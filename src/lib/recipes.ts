@@ -1,12 +1,18 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 import type { Database, RecipeWithDetails, RecipeCard, CreamiModel } from './types';
 import type { Locale } from '../i18n';
-import { BASE_TYPE_FROM_SLUG } from './blog';
+import { BASE_TYPE_FROM_SLUG, logQueryError } from './blog';
 
 type Client = SupabaseClient<Database>;
 
-/** Helper to cast Supabase join query results that TypeScript can't infer */
-type JoinResult = { data: Record<string, unknown>[] | null };
+/**
+ * Typed results for Supabase join queries that the SDK can't infer.
+ * These match the actual shape returned by our specific .select() calls.
+ */
+interface CategoryJoinRow { recipe_id: string; category: { slug: string } | null }
+interface ModelJoinRow { recipe_id: string; model: { slug: string } | null }
+interface FullJoinRow { recipe_id?: string; [key: string]: unknown }
+type JoinResult<T = FullJoinRow> = { data: T[] | null };
 
 export interface RecipeQueryParams {
   q?: string;
@@ -110,7 +116,7 @@ export async function getFilteredRecipes(
   });
 
   if (rpcError || !rpcResult) {
-    console.warn('getFilteredRecipes RPC error:', rpcError?.message);
+    logQueryError('getFilteredRecipes', rpcError?.message);
     return { recipes: [], total: 0, facets: {} };
   }
 
@@ -135,26 +141,24 @@ export async function getFilteredRecipes(
 
   // Step 3: Enrich with categories and models (only for this page of results)
   const [catRes, modelRes] = await Promise.all([
-    client.from('recipe_categories').select('recipe_id, category:categories (slug)').in('recipe_id', pageIds) as unknown as JoinResult,
-    client.from('recipe_models').select('recipe_id, model:creami_models (slug)').in('recipe_id', pageIds) as unknown as JoinResult,
+    client.from('recipe_categories').select('recipe_id, category:categories (slug)').in('recipe_id', pageIds) as unknown as JoinResult<CategoryJoinRow>,
+    client.from('recipe_models').select('recipe_id, model:creami_models (slug)').in('recipe_id', pageIds) as unknown as JoinResult<ModelJoinRow>,
   ]);
 
   const catMap = new Map<string, string[]>();
-  for (const rc of (catRes.data ?? []) as Record<string, unknown>[]) {
-    const slug = (rc.category as Record<string, unknown>)?.slug as string;
-    const rid = rc.recipe_id as string;
+  for (const rc of catRes.data ?? []) {
+    const slug = rc.category?.slug;
     if (!slug) continue;
-    if (!catMap.has(rid)) catMap.set(rid, []);
-    catMap.get(rid)!.push(slug);
+    if (!catMap.has(rc.recipe_id)) catMap.set(rc.recipe_id, []);
+    catMap.get(rc.recipe_id)!.push(slug);
   }
 
   const modelMap = new Map<string, string[]>();
-  for (const rm of (modelRes.data ?? []) as Record<string, unknown>[]) {
-    const slug = (rm.model as Record<string, unknown>)?.slug as string;
-    const rid = rm.recipe_id as string;
+  for (const rm of modelRes.data ?? []) {
+    const slug = rm.model?.slug;
     if (!slug) continue;
-    if (!modelMap.has(rid)) modelMap.set(rid, []);
-    modelMap.get(rid)!.push(slug);
+    if (!modelMap.has(rm.recipe_id)) modelMap.set(rm.recipe_id, []);
+    modelMap.get(rm.recipe_id)!.push(slug);
   }
 
   // Step 4: Apply translations if non-English
@@ -261,7 +265,7 @@ export async function getFeaturedRecipes(client: Client, limit = 6): Promise<Rec
     .limit(limit);
 
   if (error) {
-    console.warn('Supabase query error:', error.message);
+    logQueryError('query', error.message);
     return [];
   }
   return (data ?? []) as RecipeCard[];
@@ -275,7 +279,7 @@ export async function getAllRecipeSlugs(client: Client): Promise<string[]> {
     .eq('status', 'published');
 
   if (error) {
-    console.warn('Supabase query error:', error.message);
+    logQueryError('query', error.message);
     return [];
   }
   return (data ?? []).map((r) => r.slug);
@@ -289,7 +293,7 @@ export async function getCategories(client: Client) {
     .order('name');
 
   if (error) {
-    console.warn('Supabase query error:', error.message);
+    logQueryError('query', error.message);
     return [];
   }
   return data ?? [];
@@ -303,7 +307,7 @@ export async function getCreamiModels(client: Client): Promise<CreamiModel[]> {
     .order('name');
 
   if (error) {
-    console.warn('Supabase query error:', error.message);
+    logQueryError('query', error.message);
     return [];
   }
   return data ?? [];
