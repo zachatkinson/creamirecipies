@@ -2,18 +2,13 @@ import type { APIRoute } from 'astro';
 import { supabase } from '../../../lib/supabase';
 import { getFilteredRecipes } from '../../../lib/recipes';
 import type { RecipeQueryParams } from '../../../lib/recipes';
-import type { Locale } from '../../../i18n';
-import { SUPPORTED_LOCALES } from '../../../i18n';
+import { resolveLocale } from '../../../lib/locale';
 
 export const prerender = false;
 
 export const GET: APIRoute = async ({ url, locals }) => {
   const params = url.searchParams;
-  // Prefer explicit locale param, fall back to cookie-based locale from middleware
-  const paramLocale = params.get('locale');
-  const locale = (paramLocale && SUPPORTED_LOCALES.includes(paramLocale as Locale))
-    ? paramLocale as Locale
-    : ((locals as Record<string, unknown>).locale as Locale ?? 'en');
+  const locale = resolveLocale(params, locals as Record<string, unknown>);
 
   const queryParams: RecipeQueryParams = {
     q: params.get('q') || undefined,

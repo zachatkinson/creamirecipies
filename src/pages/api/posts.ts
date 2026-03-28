@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { supabase } from '../../lib/supabase';
-import type { Locale } from '../../i18n';
-import { SUPPORTED_LOCALES } from '../../i18n';
+import { resolveLocale } from '../../lib/locale';
+import { translatePostArray } from '../../lib/translations';
 
 export const prerender = false;
 
@@ -10,11 +10,7 @@ export const GET: APIRoute = async ({ url, locals }) => {
   const page = Math.max(1, Number(params.get('page')) || 1);
   const pageSize = Math.min(24, Math.max(1, Number(params.get('pageSize')) || 12));
   const category = params.get('category') || undefined;
-
-  const paramLocale = params.get('locale');
-  const locale = (paramLocale && SUPPORTED_LOCALES.includes(paramLocale as Locale))
-    ? paramLocale as Locale
-    : ((locals as Record<string, unknown>).locale as Locale ?? 'en');
+  const locale = resolveLocale(params, locals as Record<string, unknown>);
 
   let query = supabase
     .from('posts')
@@ -38,25 +34,7 @@ export const GET: APIRoute = async ({ url, locals }) => {
 
   // Apply translations if non-English
   const posts = (data ?? []) as Record<string, unknown>[];
-  if (locale !== 'en' && posts.length > 0) {
-    const postIds = posts.map(p => p.id as string);
-    const { data: translations } = await supabase
-      .from('post_translations')
-      .select('post_id, title, excerpt')
-      .eq('locale', locale)
-      .in('post_id', postIds);
-
-    if (translations) {
-      const transMap = new Map(translations.map((t: Record<string, unknown>) => [t.post_id, t]));
-      for (const post of posts) {
-        const tr = transMap.get(post.id as string) as Record<string, unknown> | undefined;
-        if (tr) {
-          post.title = tr.title;
-          if (tr.excerpt) post.excerpt = tr.excerpt;
-        }
-      }
-    }
-  }
+  await translatePostArray(supabase, posts, locale);
 
   return new Response(JSON.stringify({ posts, total: count ?? 0, page, pageSize }), {
     status: 200,

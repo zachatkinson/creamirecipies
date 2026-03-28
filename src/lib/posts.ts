@@ -40,34 +40,6 @@ export async function getPostBySlug(client: Client, slug: string): Promise<PostW
   return data as unknown as PostWithAuthor;
 }
 
-/** Apply translations to a list of posts */
-export async function applyPostTranslations(
-  client: Client,
-  posts: PostWithAuthor[],
-  locale: Locale,
-): Promise<void> {
-  if (locale === 'en' || posts.length === 0) return;
-
-  const postIds = posts.map((p) => p.id);
-  const { data: translations } = await client
-    .from('post_translations')
-    .select('post_id, title, excerpt, body')
-    .eq('locale', locale)
-    .in('post_id', postIds) as { data: { post_id: string; title: string; excerpt: string | null; body: string }[] | null };
-
-  if (!translations) return;
-
-  const transMap = new Map(translations.map((t) => [t.post_id, t]));
-  for (const post of posts) {
-    const tr = transMap.get(post.id);
-    if (tr) {
-      (post as unknown as Record<string, unknown>).title = tr.title;
-      if (tr.excerpt) (post as unknown as Record<string, unknown>).excerpt = tr.excerpt;
-      if (tr.body) (post as unknown as Record<string, unknown>).body = tr.body;
-    }
-  }
-}
-
 /** Get translation for a single post */
 export async function getPostTranslation(
   client: Client,
