@@ -613,10 +613,11 @@ const totalTimeLabel = totalTime >= 60
     <div id="cm-hint" class="hidden text-white/60 text-center max-w-xl mb-8 bg-white/5 p-4 rounded-xl"></div>
     <div class="flex items-center gap-4">
       <button id="cm-prev" class="px-6 py-3 border border-white/20 rounded-full hover:bg-white/10 transition-colors">
-        Previous
+        {ui('cookModePrev', locale)}
       </button>
-      <button id="cm-next" class="px-6 py-3 bg-blush text-chocolate font-medium rounded-full hover:bg-blush/90 transition-colors">
-        Next
+      <button id="cm-next" class="px-6 py-3 bg-blush text-chocolate font-medium rounded-full hover:bg-blush/90 transition-colors"
+        data-next={ui('cookModeNext', locale)} data-done={ui('cookModeDone', locale)}>
+        {ui('cookModeNext', locale)}
       </button>
     </div>
   </div>
@@ -647,7 +648,7 @@ const totalTimeLabel = totalTime >= 60
       hintEl.classList.add('hidden');
     }
     prevBtn.style.visibility = currentStep === 0 ? 'hidden' : 'visible';
-    nextBtn.textContent = currentStep === steps.length - 1 ? 'Done' : 'Next';
+    nextBtn.textContent = currentStep === steps.length - 1 ? (nextBtn.dataset.done || 'Done') : (nextBtn.dataset.next || 'Next');
   }
 
   openBtn?.addEventListener('click', () => {

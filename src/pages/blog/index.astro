@@ -111,6 +111,7 @@ const hasMore = posts.length < total;
                 data-loaded={posts.length}
                 data-label={t('home.viewAllPosts', locale)}
                 data-colors={JSON.stringify(categoryColors)}
+                data-error={t('blog.loadError', locale)}
                 class="px-8 py-3 bg-white text-berry font-medium rounded-full border-2 border-blush hover:bg-blush/10 transition-colors"
               >
                 {t('home.viewAllPosts', locale)}
@@ -189,7 +190,7 @@ const hasMore = posts.length < total;
         }
       } catch {
         btn.disabled = false;
-        btn.textContent = 'Error — try again';
+        btn.textContent = btn.dataset.error || 'Error';
       }
     });
   }

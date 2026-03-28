@@ -291,7 +291,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
             <button
               key={qf.label}
               onClick={() => applyQuickFilter(qf.filters)}
-              className="px-3 py-1.5 text-xs font-medium rounded-full bg-gradient-to-r from-[#F4B8C1]/20 to-[#C4B1D4]/20 text-[#8B3A62] hover:from-[#F4B8C1]/40 hover:to-[#C4B1D4]/40 transition-all"
+              className="px-3 py-1.5 text-xs font-medium rounded-full bg-gradient-to-r from-blush/20 to-lavender/20 text-berry hover:from-blush/40 hover:to-lavender/40 transition-all"
             >
               {qf.label}
             </button>
@@ -362,7 +362,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
             onChange={(e) => setQuery(e.target.value)}
             placeholder={l.searchPlaceholder}
             aria-label={l.searchPlaceholder}
-            className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-slate-200 text-sm placeholder:text-slate-600 focus:border-[#F4B8C1] focus:ring-1 focus:ring-[#F4B8C1] outline-none transition-colors"
+            className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-slate-200 text-sm placeholder:text-slate-600 focus:border-blush focus:ring-1 focus:ring-blush outline-none transition-colors"
           />
         </div>
         <div className="flex gap-2">
@@ -372,7 +372,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as SortOption)}
             aria-label="Sort recipes"
-            className="px-4 py-3 rounded-xl bg-white border border-slate-200 text-sm text-slate-600 focus:border-[#F4B8C1] outline-none"
+            className="px-4 py-3 rounded-xl bg-white border border-slate-200 text-sm text-slate-600 focus:border-blush outline-none"
           >
             <option value="newest">{l.sortNewest}</option>
             <option value="rating">{l.sortRating}</option>
@@ -381,7 +381,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
           </select>
           <button
             onClick={() => setMobileFilterOpen(true)}
-            className="lg:hidden px-4 py-3 rounded-xl bg-white border border-slate-200 text-sm text-slate-600 hover:border-[#F4B8C1] transition-colors flex items-center gap-2"
+            className="lg:hidden px-4 py-3 rounded-xl bg-white border border-slate-200 text-sm text-slate-600 hover:border-blush transition-colors flex items-center gap-2"
             aria-label="Open filters"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -389,7 +389,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
             </svg>
             {l.filters}
             {activeFilters.length > 0 && (
-              <span className="w-5 h-5 bg-[#8B3A62] text-white text-xs rounded-full flex items-center justify-center">
+              <span className="w-5 h-5 bg-berry text-white text-xs rounded-full flex items-center justify-center">
                 {activeFilters.length}
               </span>
             )}
@@ -404,7 +404,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
             <button
               key={i}
               onClick={filter.onRemove}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#F4B8C1]/20 text-[#8B3A62] text-xs font-medium rounded-full hover:bg-[#F4B8C1]/40 transition-colors group"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blush/20 text-berry text-xs font-medium rounded-full hover:bg-blush/40 transition-colors group"
             >
               {filter.label}
               <svg className="w-3 h-3 opacity-60 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -414,7 +414,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
           ))}
           <button
             onClick={clearAll}
-            className="text-xs text-slate-600 hover:text-[#8B3A62] transition-colors underline"
+            className="text-xs text-slate-600 hover:text-berry transition-colors underline"
           >
             {l.clearAll}
           </button>
@@ -423,7 +423,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
 
       {/* Result Count */}
       <div className="text-sm text-slate-600 mb-4">
-        {l.showing} <strong className="text-[#5C3D2E]">{total}</strong> {total !== 1 ? l.recipes : l.recipe}
+        {l.showing} <strong className="text-chocolate">{total}</strong> {total !== 1 ? l.recipes : l.recipe}
         {loading && <span className="ml-2 text-slate-400 animate-pulse">...</span>}
       </div>
 
@@ -445,25 +445,25 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
                   href={`/recipes/${recipe.slug}`}
                   className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div className="aspect-[4/3] bg-[#F5EDE3] overflow-hidden">
+                  <div className="aspect-[4/3] bg-cream-dark overflow-hidden">
                     {recipe.hero_image_url ? (
                       <img src={recipe.hero_image_url} alt={recipe.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-5xl bg-gradient-to-br from-[#F4B8C1]/20 to-[#C4B1D4]/20">🍦</div>
+                      <div className="w-full h-full flex items-center justify-center text-5xl bg-gradient-to-br from-blush/20 to-lavender/20">🍦</div>
                     )}
                   </div>
                   <div className="p-5">
                     <div className="flex items-center gap-2 mb-2">
                       <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${
-                        recipe.difficulty === 'beginner' ? 'bg-[#A8D8C8]/40 text-[#1a6b4f]' :
-                        recipe.difficulty === 'advanced' ? 'bg-[#F4B8C1]/40 text-[#6b1d42]' :
-                        'bg-[#FDE9B0]/40 text-[#5C3D2E]'
+                        recipe.difficulty === 'beginner' ? 'bg-mint/40 text-mint-dark' :
+                        recipe.difficulty === 'advanced' ? 'bg-blush/40 text-berry/80' :
+                        'bg-vanilla/40 text-chocolate'
                       }`}>
                         {recipe.difficulty === 'beginner' ? l.beginner : recipe.difficulty === 'intermediate' ? l.intermediate : l.advanced}
                       </span>
                       <span className="text-xs text-slate-600">{l.baseTypeMap?.[recipe.base_type] ?? recipe.base_type}</span>
                     </div>
-                    <h3 className="text-lg font-bold text-[#5C3D2E] group-hover:text-[#8B3A62] transition-colors line-clamp-2 mb-1.5" style={{ fontFamily: 'Playfair Display, serif' }}>
+                    <h3 className="text-lg font-bold text-chocolate group-hover:text-berry transition-colors line-clamp-2 mb-1.5" style={{ fontFamily: 'var(--font-display)' }}>
                       {recipe.title}
                     </h3>
                     <p className="text-sm text-slate-600 line-clamp-2 mb-3">{recipe.description}</p>
@@ -492,7 +492,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
                 <button
                   onClick={() => fetchRecipes(page + 1, true)}
                   disabled={loading}
-                  className="px-8 py-3 bg-white text-[#8B3A62] font-medium rounded-full border-2 border-[#F4B8C1] hover:bg-[#F4B8C1]/10 transition-colors disabled:opacity-50"
+                  className="px-8 py-3 bg-white text-berry font-medium rounded-full border-2 border-blush hover:bg-blush/10 transition-colors disabled:opacity-50"
                 >
                   {loading ? (l.loading ?? 'Loading...') : l.loadMore}
                   <span className="ml-2 text-sm text-slate-600">
@@ -518,9 +518,9 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
           ) : (
             <div className="text-center py-20 bg-white/50 rounded-2xl">
               <span className="text-5xl mb-4 block">🔍</span>
-              <h3 className="text-xl font-bold text-[#5C3D2E] mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>{l.noResults}</h3>
+              <h3 className="text-xl font-bold text-chocolate mb-2" style={{ fontFamily: 'var(--font-display)' }}>{l.noResults}</h3>
               <p className="text-slate-600 mb-6">{l.noResultsDesc}</p>
-              <button onClick={clearAll} className="px-6 py-3 bg-[#8B3A62] text-white font-medium rounded-full hover:bg-[#8B3A62]/90 transition-colors">
+              <button onClick={clearAll} className="px-6 py-3 bg-berry text-white font-medium rounded-full hover:bg-berry/90 transition-colors">
                 {l.clearFilters}
               </button>
             </div>
@@ -537,7 +537,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
               <div className="w-10 h-1 bg-slate-200 rounded-full" />
             </div>
             <div className="flex items-center justify-between px-5 pb-3 border-b border-slate-100">
-              <h3 className="font-bold text-[#5C3D2E]" style={{ fontFamily: 'Playfair Display, serif' }}>{l.filters}</h3>
+              <h3 className="font-bold text-chocolate" style={{ fontFamily: 'var(--font-display)' }}>{l.filters}</h3>
               <button onClick={() => setMobileFilterOpen(false)} className="p-2 text-slate-600 hover:text-slate-700" aria-label="Close filters">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -550,7 +550,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
             <div className="p-4 border-t border-slate-100 bg-white">
               <button
                 onClick={() => setMobileFilterOpen(false)}
-                className="w-full py-3 bg-[#8B3A62] text-white font-medium rounded-xl hover:bg-[#8B3A62]/90 transition-colors"
+                className="w-full py-3 bg-berry text-white font-medium rounded-xl hover:bg-berry/90 transition-colors"
               >
                 {l.showing} {total} {total !== 1 ? l.recipes : l.recipe}
               </button>
@@ -598,7 +598,7 @@ function FilterCheckbox({ label, checked, onChange, count }: {
         type="checkbox"
         checked={checked}
         onChange={onChange}
-        className="w-4 h-4 rounded border-slate-300 text-[#8B3A62] focus:ring-[#F4B8C1] cursor-pointer"
+        className="w-4 h-4 rounded border-slate-300 text-berry focus:ring-blush cursor-pointer"
       />
       <span className="text-sm text-slate-600 group-hover:text-slate-800 flex-1">{label}</span>
       {count !== undefined && <span className="text-xs text-slate-400">{count}</span>}

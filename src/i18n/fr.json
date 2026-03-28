@@ -173,7 +173,8 @@
     "news": "Actualités",
     "tips": "Astuces",
     "reviews": "Tests",
-    "guides": "Guides"
+    "guides": "Guides",
+    "loadError": "Erreur. Reessayer"
   },
   "about": {
     "title": "À Propos de Recettes Creami",
