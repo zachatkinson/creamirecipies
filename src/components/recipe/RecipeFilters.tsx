@@ -80,11 +80,12 @@ interface Props {
   initialFacets?: Facets;
   filterConfig: FilterConfig;
   labels?: Partial<Labels>;
+  locale?: string;
 }
 
 type SortOption = 'newest' | 'rating' | 'reviews' | 'prep-time';
 
-export default function RecipeFilters({ initialRecipes, totalRecipes, initialFacets, filterConfig, labels: labelsProp }: Props) {
+export default function RecipeFilters({ initialRecipes, totalRecipes, initialFacets, filterConfig, labels: labelsProp, locale }: Props) {
   const l = { ...DEFAULT_LABELS, ...labelsProp };
 
   const QUICK_FILTERS: { label: string; filters: Record<string, string[]> }[] = [
@@ -134,6 +135,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
     selectedCategories.forEach((v) => params.append('tag', v));
     if (minRating > 0) params.set('rating', String(minRating));
     if (sortBy !== 'newest') params.set('sort', sortBy);
+    if (locale) params.set('locale', locale);
     return params;
   }, [query, selectedBaseTypes, selectedDifficulty, selectedFlavors, selectedDietary, selectedModels, selectedCategories, minRating, sortBy]);
 
