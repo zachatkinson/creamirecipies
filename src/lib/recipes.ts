@@ -207,26 +207,6 @@ export async function getFilteredRecipes(
   return { recipes, total: totalCount, facets };
 }
 
-/** Get all published recipes as cards for listing pages */
-export async function getPublishedRecipes(client: Client): Promise<RecipeCard[]> {
-  const { data, error } = await client
-    .from('recipes')
-    .select(`
-      id, title, slug, description, difficulty, base_type,
-      hero_image_url, avg_rating, rating_count,
-      prep_time_minutes, freeze_time_hours,
-      author:profiles!author_id (username, display_name, avatar_url)
-    `)
-    .eq('status', 'published')
-    .order('published_at', { ascending: false });
-
-  if (error) {
-    console.warn('Failed to fetch recipes:', error.message);
-    return [];
-  }
-  return (data ?? []) as RecipeCard[];
-}
-
 /** Get a single recipe with all related data by slug */
 export async function getRecipeBySlug(client: Client, slug: string): Promise<RecipeWithDetails | null> {
   const { data: rawRecipe, error } = await client
@@ -263,42 +243,6 @@ export async function getRecipeBySlug(client: Client, slug: string): Promise<Rec
     tags: (tagsRes.data ?? []).map((r) => r.tag).filter(Boolean),
     models: (modelsRes.data ?? []).map((r) => r.model).filter(Boolean),
   } as RecipeWithDetails;
-}
-
-/** Get recipes by category slug */
-export async function getRecipesByCategory(client: Client, categorySlug: string): Promise<RecipeCard[]> {
-  const { data: category } = await client
-    .from('categories')
-    .select('id')
-    .eq('slug', categorySlug)
-    .single();
-
-  if (!category) return [];
-
-  const { data: recipeIds } = await client
-    .from('recipe_categories')
-    .select('recipe_id')
-    .eq('category_id', category.id);
-
-  if (!recipeIds?.length) return [];
-
-  const { data, error } = await client
-    .from('recipes')
-    .select(`
-      id, title, slug, description, difficulty, base_type,
-      hero_image_url, avg_rating, rating_count,
-      prep_time_minutes, freeze_time_hours,
-      author:profiles!author_id (username, display_name, avatar_url)
-    `)
-    .eq('status', 'published')
-    .in('id', recipeIds.map((r) => r.recipe_id))
-    .order('published_at', { ascending: false });
-
-  if (error) {
-    console.warn('Supabase query error:', error.message);
-    return [];
-  }
-  return (data ?? []) as RecipeCard[];
 }
 
 /** Get featured recipes for homepage (highest rated) */

@@ -63,8 +63,8 @@ const currentModels = allModels
   .map((m) => ({ slug: m.slug, name: m.name, pint_size_oz: m.pint_size_oz ?? 16 }));
 
 // Fetch "You May Also Like" — similar recipes by shared categories
-const recipeCatSlugs = recipe.categories.map((c: any) => c.slug);
-let similarRecipes: any[] = [];
+const recipeCatSlugs = recipe.categories.map((c: Record<string, unknown>) => c.slug as string);
+let similarRecipes: Record<string, unknown>[] = [];
 if (recipeCatSlugs.length > 0) {
   // Find recipe IDs that share categories with this recipe
   const { data: catIds } = await supabase
@@ -109,7 +109,7 @@ if (recipeCatSlugs.length > 0) {
 }
 
 // Prepare ingredient data for the scaler (with translated names)
-const scalableIngredients = recipe.ingredients.map((i: any) => ({
+const scalableIngredients = recipe.ingredients.map((i) => ({
   name: (locale !== 'en' && i.master_ingredient_id && ingredientNames.has(i.master_ingredient_id))
     ? ingredientNames.get(i.master_ingredient_id)!
     : i.name,
@@ -121,8 +121,8 @@ const scalableIngredients = recipe.ingredients.map((i: any) => ({
 // Calculate nutrition from master_ingredients
 let totalCalories = 0, totalProtein = 0, totalFat = 0, totalCarbs = 0;
 const masterIngIds = recipe.ingredients
-  .filter((i: any) => i.master_ingredient_id)
-  .map((i: any) => i.master_ingredient_id);
+  .filter((i) => i.master_ingredient_id)
+  .map((i) => i.master_ingredient_id as string);
 
 if (masterIngIds.length > 0) {
   const { data: nutritionData } = await supabase
@@ -584,7 +584,7 @@ const totalTimeLabel = totalTime >= 60
         </ScrollReveal>
         <ScrollReveal animation="stagger" staggerAmount={0.1}>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {similarRecipes.map((sr: any) => (
+            {similarRecipes.map((sr) => (
               <RecipeCard recipe={sr} />
             ))}
           </div>

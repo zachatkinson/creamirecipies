@@ -2,13 +2,13 @@
 
 /** Unit label translations */
 export const UNIT_LABELS: Record<string, string> = {
-  en: 'Units:', fr: 'Unites :', es: 'Unidades:', de: 'Einheiten:', pt: 'Unidades:',
+  en: 'Units:', fr: 'Unités :', es: 'Unidades:', de: 'Einheiten:', pt: 'Unidades:',
 };
 
 /** US/Metric toggle labels */
 export const MEASUREMENT_LABELS: Record<string, Record<string, string>> = {
   us: { en: 'US', fr: 'US', es: 'US', de: 'US', pt: 'US' },
-  metric: { en: 'Metric', fr: 'Metrique', es: 'Metrico', de: 'Metrisch', pt: 'Metrico' },
+  metric: { en: 'Metric', fr: 'Métrique', es: 'Métrico', de: 'Metrisch', pt: 'Métrico' },
 };
 
 /** Unit name translations */
