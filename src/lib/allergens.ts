@@ -1,8 +1,5 @@
 /** Allergen detection from ingredient lists */
-
-interface Ingredient {
-  name: string;
-}
+import type { Ingredient } from './types';
 
 const ALLERGEN_KEYWORDS: Record<string, string[]> = {
   Dairy: ['cream', 'milk', 'yogurt', 'cheese', 'butter', 'eggnog', 'mascarpone', 'condensed milk', 'evaporated milk'],

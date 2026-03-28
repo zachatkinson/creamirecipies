@@ -1,13 +1,8 @@
 import { useState, useEffect } from 'react';
-
-interface Model {
-  slug: string;
-  name: string;
-  pint_size_oz: number;
-}
+import type { ModelRef } from '../../lib/types';
 
 interface Props {
-  models: Model[];
+  models: ModelRef[];
   recipePintSize: '16oz' | '24oz';
   isSwirl: boolean;
   onScaleChange: (scale: number) => void;

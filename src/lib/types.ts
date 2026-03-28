@@ -22,6 +22,13 @@ export interface CreamiModel {
   description: string | null;
 }
 
+/** Lightweight model reference for recipe components */
+export interface ModelRef {
+  slug: string;
+  name: string;
+  pint_size_oz: number;
+}
+
 export interface Recipe {
   id: string;
   author_id: string;

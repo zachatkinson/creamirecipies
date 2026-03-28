@@ -1,29 +1,16 @@
 import { useState, useCallback, useEffect } from 'react';
-
-interface Ingredient {
-  name: string;
-  amount: string;
-  unit: string | null;
-  group_name: string;
-}
-
-interface Model {
-  slug: string;
-  name: string;
-  pint_size_oz: number;
-}
-
-type Locale = 'en' | 'fr' | 'es' | 'de' | 'pt';
+import type { Ingredient, ModelRef } from '../../lib/types';
 
 interface Props {
   ingredients: Ingredient[];
-  models: Model[];
+  models: ModelRef[];
   recipePintSize: '16oz' | '24oz';
   isSwirl: boolean;
   modelOnly?: boolean;
   locale?: Locale;
 }
 
+import type { Locale } from '../../i18n';
 import { INGREDIENT_GROUP_LABELS, INGREDIENT_GROUP_ORDER } from '../../lib/blog';
 const GROUP_LABELS = INGREDIENT_GROUP_LABELS;
 
