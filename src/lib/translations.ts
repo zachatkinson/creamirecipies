@@ -448,7 +448,10 @@ const FAQ_TEMPLATES: Record<string, Record<Locale, FaqTemplate>> = {
   },
 };
 
-export function faq(key: string, locale: Locale, vars: Record<string, string | number> = {}): { question: string; answer: string } {
+/** Valid FAQ template key names */
+export type FaqKey = keyof typeof FAQ_TEMPLATES;
+
+export function faq(key: FaqKey, locale: Locale, vars: Record<string, string | number> = {}): { question: string; answer: string } {
   const template = FAQ_TEMPLATES[key]?.[locale] ?? FAQ_TEMPLATES[key]?.['en'];
   if (!template) return { question: key, answer: '' };
   return template(vars);
