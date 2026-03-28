@@ -68,7 +68,7 @@ export async function expandShortcodes(
   const translations = await loadTranslations(client, locale);
 
   return html.replace(
-    /\[product\s+asin="([A-Z0-9]{10})"\s*\]/g,
+    /\[product\s+asin=(?:"|&quot;)([A-Z0-9]{10})(?:"|&quot;)\s*\]/g,
     (_match, asin: string) => {
       const product = products.get(asin);
       if (!product) return `<!-- product ${asin} not found -->`;

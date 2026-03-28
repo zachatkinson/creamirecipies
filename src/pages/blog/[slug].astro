@@ -30,7 +30,7 @@ if (postTranslation) {
 }
 
 const heroImage = post.hero_image_url || `/images/blog/${post.category || 'news'}.svg`;
-const hasAffiliateLinks = post.body?.includes('rel="sponsored nofollow"') ?? false;
+const hasAffiliateLinks = post.body?.includes('[product asin=') ?? false;
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
 
 // Prev/Next posts
