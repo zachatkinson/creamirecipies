@@ -10,7 +10,7 @@ export const GET: APIRoute = async ({ url, locals }) => {
   const page = Math.max(1, Number(params.get('page')) || 1);
   const pageSize = Math.min(24, Math.max(1, Number(params.get('pageSize')) || 12));
   const category = params.get('category') || undefined;
-  const locale = resolveLocale(params, locals as Record<string, unknown>);
+  const locale = resolveLocale(params, locals);
 
   let query = supabase
     .from('posts')

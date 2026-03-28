@@ -12,7 +12,7 @@ const LANGUAGE_MAP: Record<Locale, string> = {
 };
 
 export const GET: APIRoute = async ({ url, locals }) => {
-  const locale = resolveLocale(url.searchParams, locals as Record<string, unknown>);
+  const locale = resolveLocale(url.searchParams, locals);
   const siteDesc = t('footer.description', locale);
 
   const { data: recipes } = await supabase

@@ -19,7 +19,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
     if (detected) locale = detected;
   }
 
-  (context.locals as Record<string, unknown>).locale = locale;
+  context.locals.locale = locale;
 
   // --- Supabase Auth ---
   const supabase = createServerClient(supabaseUrl, supabaseAnonKey, {
@@ -38,7 +38,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
     },
   });
 
-  (context.locals as Record<string, unknown>).supabase = supabase;
+  context.locals.supabase = supabase;
 
   return next();
 });

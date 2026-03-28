@@ -7,10 +7,10 @@ import { SUPPORTED_LOCALES } from '../i18n';
  */
 export function resolveLocale(
   params: URLSearchParams,
-  locals: Record<string, unknown>,
+  locals: { locale?: Locale },
 ): Locale {
   const paramLocale = params.get('locale');
   return (paramLocale && SUPPORTED_LOCALES.includes(paramLocale as Locale))
     ? paramLocale as Locale
-    : (locals.locale as Locale ?? 'en');
+    : (locals.locale ?? 'en');
 }

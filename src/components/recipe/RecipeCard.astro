@@ -23,7 +23,7 @@ const difficultyColors = DIFFICULTY_COLORS;
       {recipe.sponsor_logo_url && (
         <img src={recipe.sponsor_logo_url} alt={recipe.sponsor_name ?? ui('sponsor', locale)} class="w-4 h-4 rounded-full object-contain" />
       )}
-      <span class="text-[10px] font-medium text-slate-600 uppercase tracking-wider">Sponsored</span>
+      <span class="text-[10px] font-medium text-slate-600 uppercase tracking-wider">{ui('sponsor', locale)}</span>
     </div>
   )}
 

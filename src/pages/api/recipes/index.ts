@@ -8,7 +8,7 @@ export const prerender = false;
 
 export const GET: APIRoute = async ({ url, locals }) => {
   const params = url.searchParams;
-  const locale = resolveLocale(params, locals as Record<string, unknown>);
+  const locale = resolveLocale(params, locals);
 
   const queryParams: RecipeQueryParams = {
     q: params.get('q') || undefined,

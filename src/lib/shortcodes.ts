@@ -77,12 +77,3 @@ export async function expandShortcodes(
     },
   );
 }
-
-/**
- * Clear the product cache (call between requests if needed).
- */
-export function clearProductCache(): void {
-  productCache = null;
-  translationCache = null;
-  cacheLocale = null;
-}
