@@ -1,8 +1,11 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
-import type { Database, RecipeWithDetails, RecipeCard } from './types';
+import type { Database, RecipeWithDetails, RecipeCard, CreamiModel } from './types';
 import type { Locale } from '../i18n';
 
 type Client = SupabaseClient<Database>;
+
+/** Helper to cast Supabase join query results that TypeScript can't infer */
+type JoinResult = { data: Record<string, unknown>[] | null };
 
 /** Map category slugs to DB base_type names */
 const BASE_TYPE_FROM_SLUG: Record<string, string> = {
@@ -144,8 +147,8 @@ export async function getFilteredRecipes(
 
   // Step 3: Enrich with categories and models (only for this page of results)
   const [catRes, modelRes] = await Promise.all([
-    client.from('recipe_categories').select('recipe_id, category:categories (slug)').in('recipe_id', pageIds) as unknown as { data: Record<string, unknown>[] | null },
-    client.from('recipe_models').select('recipe_id, model:creami_models (slug)').in('recipe_id', pageIds) as unknown as { data: Record<string, unknown>[] | null },
+    client.from('recipe_categories').select('recipe_id, category:categories (slug)').in('recipe_id', pageIds) as unknown as JoinResult,
+    client.from('recipe_models').select('recipe_id, model:creami_models (slug)').in('recipe_id', pageIds) as unknown as JoinResult,
   ]);
 
   const catMap = new Map<string, string[]>();
@@ -233,7 +236,7 @@ export async function getPublishedRecipes(client: Client): Promise<RecipeCard[]>
     console.warn('Failed to fetch recipes:', error.message);
     return [];
   }
-  return (data ?? []) as unknown as RecipeCard[];
+  return (data ?? []) as RecipeCard[];
 }
 
 /** Get a single recipe with all related data by slug */
@@ -256,9 +259,9 @@ export async function getRecipeBySlug(client: Client, slug: string): Promise<Rec
   // Fetch many-to-many relations
   const recipeId = recipe.id as string;
   const [categoriesRes, tagsRes, modelsRes] = await Promise.all([
-    client.from('recipe_categories').select('category:categories (*)').eq('recipe_id', recipeId) as unknown as { data: Record<string, unknown>[] | null },
-    client.from('recipe_tags').select('tag:tags (*)').eq('recipe_id', recipeId) as unknown as { data: Record<string, unknown>[] | null },
-    client.from('recipe_models').select('model:creami_models (*)').eq('recipe_id', recipeId) as unknown as { data: Record<string, unknown>[] | null },
+    client.from('recipe_categories').select('category:categories (*)').eq('recipe_id', recipeId) as unknown as JoinResult,
+    client.from('recipe_tags').select('tag:tags (*)').eq('recipe_id', recipeId) as unknown as JoinResult,
+    client.from('recipe_models').select('model:creami_models (*)').eq('recipe_id', recipeId) as unknown as JoinResult,
   ]);
 
   const ingredients = (recipe.ingredients as { sort_order: number }[] ?? []).sort((a, b) => a.sort_order - b.sort_order);
@@ -271,7 +274,7 @@ export async function getRecipeBySlug(client: Client, slug: string): Promise<Rec
     categories: (categoriesRes.data ?? []).map((r) => r.category).filter(Boolean),
     tags: (tagsRes.data ?? []).map((r) => r.tag).filter(Boolean),
     models: (modelsRes.data ?? []).map((r) => r.model).filter(Boolean),
-  } as unknown as RecipeWithDetails;
+  } as RecipeWithDetails;
 }
 
 /** Get recipes by category slug */
@@ -307,7 +310,7 @@ export async function getRecipesByCategory(client: Client, categorySlug: string)
     console.warn('Supabase query error:', error.message);
     return [];
   }
-  return (data ?? []) as unknown as RecipeCard[];
+  return (data ?? []) as RecipeCard[];
 }
 
 /** Get featured recipes for homepage (highest rated) */
@@ -329,7 +332,7 @@ export async function getFeaturedRecipes(client: Client, limit = 6): Promise<Rec
     console.warn('Supabase query error:', error.message);
     return [];
   }
-  return (data ?? []) as unknown as RecipeCard[];
+  return (data ?? []) as RecipeCard[];
 }
 
 /** Get all published recipe slugs (for static generation) */
@@ -361,7 +364,7 @@ export async function getCategories(client: Client) {
 }
 
 /** Get all Creami models */
-export async function getCreamiModels(client: Client) {
+export async function getCreamiModels(client: Client): Promise<CreamiModel[]> {
   const { data, error } = await client
     .from('creami_models')
     .select('*')

@@ -59,8 +59,8 @@ const breadcrumbs = [
 // Fetch all current (non-discontinued) models for the scaler
 const allModels = await getCreamiModels(supabase);
 const currentModels = allModels
-  .filter((m: any) => !m.is_discontinued)
-  .map((m: any) => ({ slug: m.slug, name: m.name, pint_size_oz: m.pint_size_oz ?? 16 }));
+  .filter((m) => !m.is_discontinued)
+  .map((m) => ({ slug: m.slug, name: m.name, pint_size_oz: m.pint_size_oz ?? 16 }));
 
 // Fetch "You May Also Like" — similar recipes by shared categories
 const recipeCatSlugs = recipe.categories.map((c: any) => c.slug);

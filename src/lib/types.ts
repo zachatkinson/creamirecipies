@@ -20,6 +20,7 @@ export interface CreamiModel {
   slug: string;
   pint_size_oz: number | null;
   description: string | null;
+  is_discontinued?: boolean | null;
 }
 
 /** Lightweight model reference for recipe components */

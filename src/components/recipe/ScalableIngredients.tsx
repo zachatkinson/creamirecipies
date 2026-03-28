@@ -1,5 +1,12 @@
 import { useState, useCallback, useEffect } from 'react';
 import type { Ingredient, ModelRef } from '../../lib/types';
+import type { Locale } from '../../i18n';
+import { INGREDIENT_GROUP_LABELS, INGREDIENT_GROUP_ORDER } from '../../lib/blog';
+import { UNIT_LABELS, MEASUREMENT_LABELS, UNIT_TRANSLATIONS, METRIC_CONVERSIONS } from '../../lib/measurements';
+import type { MeasurementSystem } from '../../lib/measurements';
+
+const GROUP_LABELS = INGREDIENT_GROUP_LABELS;
+const GROUP_ORDER = INGREDIENT_GROUP_ORDER;
 
 interface Props {
   ingredients: Ingredient[];
@@ -9,41 +16,6 @@ interface Props {
   modelOnly?: boolean;
   locale?: Locale;
 }
-
-import type { Locale } from '../../i18n';
-import { INGREDIENT_GROUP_LABELS, INGREDIENT_GROUP_ORDER } from '../../lib/blog';
-const GROUP_LABELS = INGREDIENT_GROUP_LABELS;
-
-const UNIT_LABELS: Record<Locale, string> = {
-  en: 'Units:', fr: 'Unites :', es: 'Unidades:', de: 'Einheiten:', pt: 'Unidades:',
-};
-
-const MEASUREMENT_LABELS: Record<string, Record<Locale, string>> = {
-  us: { en: 'US', fr: 'US', es: 'US', de: 'US', pt: 'US' },
-  metric: { en: 'Metric', fr: 'Metrique', es: 'Metrico', de: 'Metrisch', pt: 'Metrico' },
-};
-
-const UNIT_TRANSLATIONS: Record<string, Record<Locale, string>> = {
-  'cup': { en: 'cup', fr: 'tasse', es: 'taza', de: 'Tasse', pt: 'xícara' },
-  'tablespoon': { en: 'tablespoon', fr: 'c. à soupe', es: 'cucharada', de: 'EL', pt: 'colher de sopa' },
-  'teaspoon': { en: 'teaspoon', fr: 'c. à café', es: 'cucharadita', de: 'TL', pt: 'colher de chá' },
-  'oz': { en: 'oz', fr: 'oz', es: 'oz', de: 'oz', pt: 'oz' },
-  'lb': { en: 'lb', fr: 'lb', es: 'lb', de: 'lb', pt: 'lb' },
-  'fl oz': { en: 'fl oz', fr: 'fl oz', es: 'fl oz', de: 'fl oz', pt: 'fl oz' },
-};
-
-const GROUP_ORDER = INGREDIENT_GROUP_ORDER;
-
-type MeasurementSystem = 'us' | 'metric';
-
-const METRIC_CONVERSIONS: Record<string, { unit: string; multiplier: number }> = {
-  'cup': { unit: 'ml', multiplier: 240 },
-  'tablespoon': { unit: 'ml', multiplier: 15 },
-  'teaspoon': { unit: 'ml', multiplier: 5 },
-  'oz': { unit: 'g', multiplier: 28.35 },
-  'lb': { unit: 'g', multiplier: 453.6 },
-  'fl oz': { unit: 'ml', multiplier: 29.6 },
-};
 
 function convertToMetric(amount: string, unit: string | null): { amount: string; unit: string } {
   if (!unit) return { amount, unit: '' };
