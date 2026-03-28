@@ -112,6 +112,7 @@ const hasMore = posts.length < total;
                 data-label={t('home.viewAllPosts', locale)}
                 data-colors={JSON.stringify(categoryColors)}
                 data-error={t('blog.loadError', locale)}
+                data-locale={locale}
                 class="px-8 py-3 bg-white text-berry font-medium rounded-full border-2 border-blush hover:bg-blush/10 transition-colors"
               >
                 {t('home.viewAllPosts', locale)}
@@ -143,9 +144,11 @@ const hasMore = posts.length < total;
 
     const categoryColors: Record<string, string> = JSON.parse(btn.dataset.colors ?? '{}');
 
+    const dateLocale = btn.dataset.locale || 'en';
+
     btn.addEventListener('click', async () => {
       btn.disabled = true;
-      btn.textContent = '...';
+      btn.textContent = '\u2026';
 
       try {
         const res = await fetch(`/api/posts?page=${page}&pageSize=12`);
@@ -156,7 +159,7 @@ const hasMore = posts.length < total;
           const heroBase = heroSrc.replace('.avif', '');
           const isAvif = heroSrc.endsWith('.avif');
           const srcsetAttr = isAvif ? `srcset="${heroBase}-384w.avif 384w, ${heroBase}-768w.avif 768w, ${heroSrc} 1200w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 384px"` : '';
-          const date = new Date(post.published_at || post.created_at).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+          const date = new Date(post.published_at || post.created_at).toLocaleDateString(dateLocale, { month: 'short', day: 'numeric', year: 'numeric' });
           const colorClass = categoryColors[post.category] ?? 'bg-slate-100 text-slate-600';
 
           const card = document.createElement('a');

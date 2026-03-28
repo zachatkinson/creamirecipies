@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "Creami Recipes",
+    "name": "eatcreami",
     "tagline": "Perfect Creami Every Time",
     "description": "Discover and share delicious Ninja Creami recipes with step-by-step guidance and pro tips."
   },
@@ -177,8 +177,8 @@
     "loadError": "Error. Try again"
   },
   "about": {
-    "title": "About Creami Recipes",
-    "intro": "Creami Recipes is a platform dedicated to helping Ninja Creami owners make the most of their machines. Whether you're a beginner making your first pint or an experienced creator experimenting with new flavors, you'll find tested recipes with step-by-step guidance.",
+    "title": "About eatcreami",
+    "intro": "eatcreami is a platform dedicated to helping Ninja Creami owners make the most of their machines. Whether you're a beginner making your first pint or an experienced creator experimenting with new flavors, you'll find tested recipes with step-by-step guidance.",
     "whatMakesUs": "What Makes Us Different",
     "stepByStep": "Step-by-step guidance",
     "stepByStepDesc": "Every recipe walks you through the process with clear instructions and pro tips from experienced Creami users.",
@@ -208,7 +208,7 @@
   "privacy": {
     "title": "Privacy Policy",
     "lastUpdated": "Last updated: March 25, 2026",
-    "intro": "Creami Recipes is committed to protecting your privacy. This policy explains how we handle your information when you visit our website.",
+    "intro": "eatcreami is committed to protecting your privacy. This policy explains how we handle your information when you visit our website.",
     "collectTitle": "Information We Collect",
     "collectDesc": "We collect minimal information to provide and improve our service:",
     "collectCookies": "Cookies — We use a locale preference cookie to remember your language choice and a measurement system cookie for ingredient display. These are functional cookies only.",
@@ -226,17 +226,17 @@
   "terms": {
     "title": "Terms of Use",
     "lastUpdated": "Last updated: March 25, 2026",
-    "intro": "By using Creami Recipes, you agree to these terms. Please read them carefully.",
+    "intro": "By using eatcreami, you agree to these terms. Please read them carefully.",
     "useTitle": "Use of the Site",
-    "useDesc": "Creami Recipes provides recipe content for informational purposes. Recipes are for personal, non-commercial use. You may share links to recipes but may not republish recipe content in bulk without permission.",
+    "useDesc": "eatcreami provides recipe content for informational purposes. Recipes are for personal, non-commercial use. You may share links to recipes but may not republish recipe content in bulk without permission.",
     "disclaimerTitle": "Recipe Disclaimer",
     "disclaimerDesc": "All recipes are provided as-is. Results may vary depending on your specific Ninja Creami model, ingredients, and technique. Always check ingredient labels for allergens. We are not responsible for adverse reactions or unsatisfactory results.",
     "ipTitle": "Intellectual Property",
-    "ipDesc": "Recipe instructions, descriptions, photography, and site design are the property of Creami Recipes. Ingredient lists and basic cooking facts are not copyrightable and may be freely referenced.",
+    "ipDesc": "Recipe instructions, descriptions, photography, and site design are the property of eatcreami. Ingredient lists and basic cooking facts are not copyrightable and may be freely referenced.",
     "affiliateTitle": "Affiliate Links",
     "affiliateDesc": "Some links on this site may be affiliate links. This means we may earn a small commission if you make a purchase through these links, at no additional cost to you. This helps support the site.",
     "liabilityTitle": "Limitation of Liability",
-    "liabilityDesc": "Creami Recipes is not liable for any damages arising from the use of recipes or information on this site. Use the site at your own risk.",
+    "liabilityDesc": "eatcreami is not liable for any damages arising from the use of recipes or information on this site. Use the site at your own risk.",
     "changesTitle": "Changes to These Terms",
     "changesDesc": "We may update these terms from time to time. Continued use of the site after changes constitutes acceptance of the new terms."
   },

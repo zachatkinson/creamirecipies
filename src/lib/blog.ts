@@ -15,6 +15,32 @@ export const DIFFICULTY_COLORS: Record<string, string> = {
   advanced: 'bg-blush/40 text-[#6b1d42]',
 };
 
+/** Base type slug-to-DB-name mapping */
+export const BASE_TYPE_FROM_SLUG: Record<string, string> = {
+  'ice-cream': 'Ice Cream',
+  'sorbet': 'Sorbet',
+  'gelato': 'Gelato',
+  'frozen-yogurt': 'Frozen Yogurt',
+  'milkshake': 'Milkshake',
+  'smoothie-bowl': 'Smoothie Bowl',
+  'lite-ice-cream': 'Lite Ice Cream',
+  'italian-ice': 'Italian Ice',
+  'soft-serve': 'Soft Serve',
+};
+
+/** Base type translated display names (for FAQs, SEO) */
+export const BASE_TYPE_TRANSLATIONS: Record<string, Record<string, string>> = {
+  'ice cream': { en: 'ice cream', fr: 'creme glacee', es: 'helado', de: 'Eiscreme', pt: 'sorvete' },
+  'sorbet': { en: 'sorbet', fr: 'sorbet', es: 'sorbete', de: 'Sorbet', pt: 'sorbet' },
+  'gelato': { en: 'gelato', fr: 'gelato', es: 'gelato', de: 'Gelato', pt: 'gelato' },
+  'frozen yogurt': { en: 'frozen yogurt', fr: 'yaourt glace', es: 'yogur helado', de: 'Frozen Joghurt', pt: 'iogurte gelado' },
+  'milkshake': { en: 'milkshake', fr: 'milkshake', es: 'batido', de: 'Milkshake', pt: 'milkshake' },
+  'smoothie bowl': { en: 'smoothie bowl', fr: 'smoothie bowl', es: 'smoothie bowl', de: 'Smoothie Bowl', pt: 'smoothie bowl' },
+  'lite ice cream': { en: 'lite ice cream', fr: 'creme glacee legere', es: 'helado ligero', de: 'leichtes Eis', pt: 'sorvete light' },
+  'italian ice': { en: 'italian ice', fr: 'granite italien', es: 'hielo italiano', de: 'italienisches Eis', pt: 'granita italiana' },
+  'soft serve': { en: 'soft serve', fr: 'glace molle', es: 'helado suave', de: 'Softeis', pt: 'sorvete soft' },
+};
+
 /** Ingredient group display order */
 export const INGREDIENT_GROUP_ORDER = ['base', 'mix-ins', 'swirl', 'topping'] as const;
 

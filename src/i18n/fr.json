@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "Recettes Creami",
+    "name": "eatcreami",
     "tagline": "Un Creami Parfait à Chaque Fois",
     "description": "Découvrez et partagez de délicieuses recettes Ninja Creami avec des instructions étape par étape et des conseils de pro."
   },
@@ -177,8 +177,8 @@
     "loadError": "Erreur. Reessayer"
   },
   "about": {
-    "title": "À Propos de Recettes Creami",
-    "intro": "Recettes Creami est une plateforme dédiée à aider les propriétaires de Ninja Creami à tirer le meilleur parti de leur machine. Que vous soyez débutant préparant votre premier pot ou un créateur expérimenté explorant de nouvelles saveurs, vous trouverez des recettes testées avec des instructions pas à pas.",
+    "title": "À Propos de eatcreami",
+    "intro": "eatcreami est une plateforme dédiée à aider les propriétaires de Ninja Creami à tirer le meilleur parti de leur machine. Que vous soyez débutant préparant votre premier pot ou un créateur expérimenté explorant de nouvelles saveurs, vous trouverez des recettes testées avec des instructions pas à pas.",
     "whatMakesUs": "Ce Qui Nous Distingue",
     "stepByStep": "Instructions pas à pas",
     "stepByStepDesc": "Chaque recette vous guide à travers le processus avec des instructions claires et des astuces de pro d'utilisateurs expérimentés.",
@@ -208,7 +208,7 @@
   "privacy": {
     "title": "Politique de Confidentialité",
     "lastUpdated": "Dernière mise à jour : 25 mars 2026",
-    "intro": "Recettes Creami s'engage à protéger votre vie privée. Cette politique explique comment nous traitons vos informations lorsque vous visitez notre site.",
+    "intro": "eatcreami s'engage à protéger votre vie privée. Cette politique explique comment nous traitons vos informations lorsque vous visitez notre site.",
     "collectTitle": "Informations Collectées",
     "collectDesc": "Nous collectons un minimum d'informations pour fournir et améliorer notre service :",
     "collectCookies": "Cookies — Nous utilisons un cookie de préférence linguistique pour mémoriser votre choix de langue et un cookie de système de mesure pour l'affichage des ingrédients. Ce sont uniquement des cookies fonctionnels.",
@@ -226,17 +226,17 @@
   "terms": {
     "title": "Conditions d'Utilisation",
     "lastUpdated": "Dernière mise à jour : 25 mars 2026",
-    "intro": "En utilisant Recettes Creami, vous acceptez ces conditions. Veuillez les lire attentivement.",
+    "intro": "En utilisant eatcreami, vous acceptez ces conditions. Veuillez les lire attentivement.",
     "useTitle": "Utilisation du Site",
-    "useDesc": "Recettes Creami fournit du contenu de recettes à titre informatif. Les recettes sont destinées à un usage personnel et non commercial. Vous pouvez partager des liens vers les recettes mais ne pouvez pas republier le contenu des recettes en masse sans autorisation.",
+    "useDesc": "eatcreami fournit du contenu de recettes à titre informatif. Les recettes sont destinées à un usage personnel et non commercial. Vous pouvez partager des liens vers les recettes mais ne pouvez pas republier le contenu des recettes en masse sans autorisation.",
     "disclaimerTitle": "Avertissement sur les Recettes",
     "disclaimerDesc": "Toutes les recettes sont fournies en l'état. Les résultats peuvent varier en fonction de votre modèle Ninja Creami, de vos ingrédients et de votre technique. Vérifiez toujours les étiquettes des ingrédients pour les allergènes. Nous ne sommes pas responsables des réactions indésirables ou des résultats insatisfaisants.",
     "ipTitle": "Propriété Intellectuelle",
-    "ipDesc": "Les instructions de recettes, les descriptions, les photographies et la conception du site sont la propriété de Recettes Creami. Les listes d'ingrédients et les faits culinaires de base ne sont pas protégeables par le droit d'auteur et peuvent être librement référencés.",
+    "ipDesc": "Les instructions de recettes, les descriptions, les photographies et la conception du site sont la propriété de eatcreami. Les listes d'ingrédients et les faits culinaires de base ne sont pas protégeables par le droit d'auteur et peuvent être librement référencés.",
     "affiliateTitle": "Liens d'Affiliation",
     "affiliateDesc": "Certains liens sur ce site peuvent être des liens d'affiliation. Cela signifie que nous pouvons recevoir une petite commission si vous effectuez un achat via ces liens, sans frais supplémentaires pour vous. Cela aide à soutenir le site.",
     "liabilityTitle": "Limitation de Responsabilité",
-    "liabilityDesc": "Recettes Creami n'est pas responsable des dommages résultant de l'utilisation des recettes ou des informations de ce site. Utilisez le site à vos propres risques.",
+    "liabilityDesc": "eatcreami n'est pas responsable des dommages résultant de l'utilisation des recettes ou des informations de ce site. Utilisez le site à vos propres risques.",
     "changesTitle": "Modifications de Ces Conditions",
     "changesDesc": "Nous pouvons mettre à jour ces conditions de temps à autre. L'utilisation continue du site après les modifications constitue l'acceptation des nouvelles conditions."
   },

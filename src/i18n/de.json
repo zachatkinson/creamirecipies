@@ -1,8 +1,8 @@
 {
   "site": {
-    "name": "Creami Rezepte",
+    "name": "eatcreami",
     "tagline": "Perfektes Creami Jedes Mal",
-    "description": "Entdecke und teile köstliche Ninja Creami Rezepte mit Schritt-für-Schritt-Anleitungen und Profi-Tipps."
+    "description": "Entdecke und teile köstliche Ninja eatcreami mit Schritt-für-Schritt-Anleitungen und Profi-Tipps."
   },
   "nav": {
     "recipes": "Rezepte",
@@ -37,7 +37,7 @@
     "rateShare": "Genießen & Teilen",
     "rateShareDesc": "Bereiten Sie köstliche Eiskreationen zu und teilen Sie Ihre Lieblinge mit Familie und Freunden.",
     "ctaTitle": "Bereit loszulegen?",
-    "ctaDescription": "Durchstöbern Sie unsere kuratierte Sammlung getesteter Ninja Creami Rezepte und finden Sie Ihren nächsten Lieblingsgenuss.",
+    "ctaDescription": "Durchstöbern Sie unsere kuratierte Sammlung getesteter Ninja eatcreami und finden Sie Ihren nächsten Lieblingsgenuss.",
     "ctaButton": "Rezepte entdecken",
     "learnMore": "Mehr erfahren",
     "createAccount": "Konto erstellen",
@@ -141,7 +141,7 @@
     "privacyPolicy": "Datenschutzrichtlinie",
     "termsOfUse": "Nutzungsbedingungen",
     "disclaimer": "Nicht mit Ninja oder SharkNinja verbunden.",
-    "description": "Entdecken Sie köstliche Ninja Creami Rezepte mit Schritt-für-Schritt-Anleitungen und Profi-Tipps.",
+    "description": "Entdecken Sie köstliche Ninja eatcreami mit Schritt-für-Schritt-Anleitungen und Profi-Tipps.",
     "iceCream": "Eiscreme",
     "sorbet": "Sorbet",
     "gelato": "Gelato",
@@ -177,8 +177,8 @@
     "loadError": "Fehler. Erneut versuchen"
   },
   "about": {
-    "title": "Über Creami Rezepte",
-    "intro": "Creami Rezepte ist eine Plattform, die Ninja Creami Besitzern hilft, das Beste aus ihren Maschinen herauszuholen. Ob Sie ein Anfänger sind, der seinen ersten Becher zubereitet, oder ein erfahrener Kreateur, der neue Geschmacksrichtungen ausprobiert — Sie finden getestete Rezepte mit Schritt-für-Schritt-Anleitungen.",
+    "title": "Über eatcreami",
+    "intro": "eatcreami ist eine Plattform, die Ninja Creami Besitzern hilft, das Beste aus ihren Maschinen herauszuholen. Ob Sie ein Anfänger sind, der seinen ersten Becher zubereitet, oder ein erfahrener Kreateur, der neue Geschmacksrichtungen ausprobiert — Sie finden getestete Rezepte mit Schritt-für-Schritt-Anleitungen.",
     "whatMakesUs": "Was Uns Unterscheidet",
     "stepByStep": "Schritt-für-Schritt-Anleitungen",
     "stepByStepDesc": "Jedes Rezept führt Sie mit klaren Anweisungen und Profi-Tipps erfahrener Creami-Nutzer durch den Prozess.",
@@ -208,7 +208,7 @@
   "privacy": {
     "title": "Datenschutzrichtlinie",
     "lastUpdated": "Zuletzt aktualisiert: 25. März 2026",
-    "intro": "Creami Rezepte verpflichtet sich, Ihre Privatsphäre zu schützen. Diese Richtlinie erklärt, wie wir mit Ihren Informationen umgehen, wenn Sie unsere Website besuchen.",
+    "intro": "eatcreami verpflichtet sich, Ihre Privatsphäre zu schützen. Diese Richtlinie erklärt, wie wir mit Ihren Informationen umgehen, wenn Sie unsere Website besuchen.",
     "collectTitle": "Informationen, die wir erfassen",
     "collectDesc": "Wir erfassen minimale Informationen, um unseren Service bereitzustellen und zu verbessern:",
     "collectCookies": "Cookies — Wir verwenden ein Sprachpräferenz-Cookie, um Ihre Sprachwahl zu speichern, und ein Maßeinheiten-Cookie für die Zutatendarstellung. Dies sind ausschließlich funktionale Cookies.",
@@ -226,17 +226,17 @@
   "terms": {
     "title": "Nutzungsbedingungen",
     "lastUpdated": "Zuletzt aktualisiert: 25. März 2026",
-    "intro": "Durch die Nutzung von Creami Rezepte stimmen Sie diesen Bedingungen zu. Bitte lesen Sie sie sorgfältig.",
+    "intro": "Durch die Nutzung von eatcreami stimmen Sie diesen Bedingungen zu. Bitte lesen Sie sie sorgfältig.",
     "useTitle": "Nutzung der Seite",
-    "useDesc": "Creami Rezepte bietet Rezeptinhalte zu Informationszwecken. Rezepte sind für den persönlichen, nicht-kommerziellen Gebrauch. Sie können Links zu Rezepten teilen, dürfen jedoch Rezeptinhalte nicht in großem Umfang ohne Genehmigung erneut veröffentlichen.",
+    "useDesc": "eatcreami bietet Rezeptinhalte zu Informationszwecken. Rezepte sind für den persönlichen, nicht-kommerziellen Gebrauch. Sie können Links zu Rezepten teilen, dürfen jedoch Rezeptinhalte nicht in großem Umfang ohne Genehmigung erneut veröffentlichen.",
     "disclaimerTitle": "Rezept-Haftungsausschluss",
     "disclaimerDesc": "Alle Rezepte werden ohne Gewähr bereitgestellt. Ergebnisse können je nach Ihrem spezifischen Ninja Creami Modell, Zutaten und Technik variieren. Überprüfen Sie immer die Zutatenetiketten auf Allergene. Wir sind nicht verantwortlich für unerwünschte Reaktionen oder unbefriedigende Ergebnisse.",
     "ipTitle": "Geistiges Eigentum",
-    "ipDesc": "Rezeptanweisungen, Beschreibungen, Fotografien und Seitendesign sind Eigentum von Creami Rezepte. Zutatenlisten und grundlegende Kochfakten sind nicht urheberrechtlich geschützt und können frei referenziert werden.",
+    "ipDesc": "Rezeptanweisungen, Beschreibungen, Fotografien und Seitendesign sind Eigentum von eatcreami. Zutatenlisten und grundlegende Kochfakten sind nicht urheberrechtlich geschützt und können frei referenziert werden.",
     "affiliateTitle": "Affiliate-Links",
     "affiliateDesc": "Einige Links auf dieser Seite können Affiliate-Links sein. Das bedeutet, dass wir eine kleine Provision erhalten können, wenn Sie über diese Links einen Kauf tätigen, ohne zusätzliche Kosten für Sie. Dies hilft, die Seite zu unterstützen.",
     "liabilityTitle": "Haftungsbeschränkung",
-    "liabilityDesc": "Creami Rezepte haftet nicht für Schäden, die aus der Nutzung von Rezepten oder Informationen auf dieser Seite entstehen. Nutzen Sie die Seite auf eigenes Risiko.",
+    "liabilityDesc": "eatcreami haftet nicht für Schäden, die aus der Nutzung von Rezepten oder Informationen auf dieser Seite entstehen. Nutzen Sie die Seite auf eigenes Risiko.",
     "changesTitle": "Änderungen dieser Bedingungen",
     "changesDesc": "Wir können diese Bedingungen von Zeit zu Zeit aktualisieren. Die weitere Nutzung der Seite nach Änderungen gilt als Akzeptanz der neuen Bedingungen."
   },

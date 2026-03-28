@@ -1,5 +1,5 @@
 /**
- * Image optimization utilities for Creami Recipes.
+ * Image optimization utilities for eatcreami.
  *
  * Provides helper functions and constants for working with images stored in
  * Supabase Storage, including URL-based transforms.

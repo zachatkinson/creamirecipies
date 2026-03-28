@@ -1,24 +1,12 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 import type { Database, RecipeWithDetails, RecipeCard, CreamiModel } from './types';
 import type { Locale } from '../i18n';
+import { BASE_TYPE_FROM_SLUG } from './blog';
 
 type Client = SupabaseClient<Database>;
 
 /** Helper to cast Supabase join query results that TypeScript can't infer */
 type JoinResult = { data: Record<string, unknown>[] | null };
-
-/** Map category slugs to DB base_type names */
-const BASE_TYPE_FROM_SLUG: Record<string, string> = {
-  'ice-cream': 'Ice Cream',
-  'sorbet': 'Sorbet',
-  'gelato': 'Gelato',
-  'frozen-yogurt': 'Frozen Yogurt',
-  'milkshake': 'Milkshake',
-  'smoothie-bowl': 'Smoothie Bowl',
-  'lite-ice-cream': 'Lite Ice Cream',
-  'italian-ice': 'Italian Ice',
-  'soft-serve': 'Soft Serve',
-};
 
 export interface RecipeQueryParams {
   q?: string;

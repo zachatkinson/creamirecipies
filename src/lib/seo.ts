@@ -2,6 +2,7 @@ import type { RecipeWithDetails } from './types';
 import type { Locale } from '../i18n';
 import { LOCALES, DEFAULT_LOCALE } from '../i18n';
 import { faq } from './translations';
+import { BASE_TYPE_TRANSLATIONS } from './blog';
 
 /** Nutrition data for Recipe JSON-LD */
 interface NutritionData {
@@ -120,12 +121,12 @@ export function buildBlogPostingJsonLd(
     ...(post.updated_at ? { dateModified: post.updated_at } : {}),
     author: {
       '@type': 'Organization',
-      name: 'Creami Recipes',
+      name: 'eatcreami',
       url: siteUrl,
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Creami Recipes',
+      name: 'eatcreami',
       url: siteUrl,
       logo: {
         '@type': 'ImageObject',
@@ -161,7 +162,7 @@ export function buildWebSiteJsonLd(siteUrl: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Creami Recipes',
+    name: 'eatcreami',
     url: siteUrl,
     description: 'Discover and share delicious Ninja Creami recipes with step-by-step guidance and pro tips.',
     potentialAction: {
@@ -202,7 +203,7 @@ export function buildOrganizationJsonLd(siteUrl: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Creami Recipes',
+    name: 'eatcreami',
     url: siteUrl,
     logo: `${siteUrl}/logo.avif`,
     sameAs: [],
@@ -232,19 +233,8 @@ export function generateRecipeFaqs(recipe: RecipeWithDetails, locale: Locale = '
     faqs.push(faq('dietary', locale, { ...vars, diets: dietaryCategories.join(', ') }));
   }
 
-  // Base type translations for the crumbly FAQ
-  const baseTypeMap: Record<string, Record<Locale, string>> = {
-    'ice cream': { en: 'ice cream', fr: 'crème glacée', es: 'helado', de: 'Eiscreme', pt: 'sorvete' },
-    'sorbet': { en: 'sorbet', fr: 'sorbet', es: 'sorbete', de: 'Sorbet', pt: 'sorbet' },
-    'gelato': { en: 'gelato', fr: 'gelato', es: 'gelato', de: 'Gelato', pt: 'gelato' },
-    'frozen yogurt': { en: 'frozen yogurt', fr: 'yaourt glacé', es: 'yogur helado', de: 'Frozen Joghurt', pt: 'iogurte gelado' },
-    'milkshake': { en: 'milkshake', fr: 'milkshake', es: 'batido', de: 'Milkshake', pt: 'milkshake' },
-    'smoothie bowl': { en: 'smoothie bowl', fr: 'smoothie bowl', es: 'smoothie bowl', de: 'Smoothie Bowl', pt: 'smoothie bowl' },
-    'lite ice cream': { en: 'lite ice cream', fr: 'crème glacée légère', es: 'helado ligero', de: 'leichtes Eis', pt: 'sorvete light' },
-    'italian ice': { en: 'italian ice', fr: 'granité italien', es: 'hielo italiano', de: 'italienisches Eis', pt: 'granita italiana' },
-  };
   const baseTypeLower = recipe.base_type.toLowerCase();
-  const localBaseType = baseTypeMap[baseTypeLower]?.[locale] ?? baseTypeLower;
+  const localBaseType = BASE_TYPE_TRANSLATIONS[baseTypeLower]?.[locale] ?? baseTypeLower;
   faqs.push(faq('crumbly', locale, { ...vars, baseType: localBaseType }));
 
   // Intelligent ingredient-based FAQs
