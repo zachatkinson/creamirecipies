@@ -217,6 +217,7 @@ export const RECIPE_UI: Record<string, Record<Locale, string>> = {
   'changeLanguage': { en: 'Change language', fr: 'Changer de langue', es: 'Cambiar idioma', de: 'Sprache aendern', pt: 'Mudar idioma' },
   'affiliateNotice': { en: 'Affiliate Notice', fr: 'Avis d\'affiliation', es: 'Aviso de afiliación', de: 'Affiliate-Hinweis', pt: 'Aviso de afiliação' },
   'sponsor': { en: 'Sponsor', fr: 'Sponsor', es: 'Patrocinador', de: 'Sponsor', pt: 'Patrocinador' },
+  'sponsoredBy': { en: 'Sponsored by', fr: 'Sponsorise par', es: 'Patrocinado por', de: 'Gesponsert von', pt: 'Patrocinado por' },
   'ingredients': { en: 'Ingredients', fr: 'Ingrédients', es: 'Ingredientes', de: 'Zutaten', pt: 'Ingredientes' },
   'directions': { en: 'Directions', fr: 'Instructions', es: 'Instrucciones', de: 'Zubereitung', pt: 'Modo de Preparo' },
   'cookMode': { en: 'Cook Mode', fr: 'Mode Cuisine', es: 'Modo Cocina', de: 'Kochmodus', pt: 'Modo Cozinha' },

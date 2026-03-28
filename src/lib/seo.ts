@@ -1,5 +1,6 @@
 import type { RecipeWithDetails } from './types';
 import type { Locale } from '../i18n';
+import { LOCALES, DEFAULT_LOCALE } from '../i18n';
 import { faq } from './translations';
 
 /** Nutrition data for Recipe JSON-LD */
@@ -303,24 +304,13 @@ export function buildFaqJsonLd(faqs: { question: string; answer: string }[]) {
   };
 }
 
-/** Supported languages for i18n */
-export const SUPPORTED_LOCALES = [
-  { code: 'en', label: 'English', default: true },
-  // Future: uncomment to enable
-  // { code: 'es', label: 'Español' },
-  // { code: 'fr', label: 'Français' },
-  // { code: 'de', label: 'Deutsch' },
-  // { code: 'ja', label: '日本語' },
-  // { code: 'pt', label: 'Português' },
-] as const;
-
 /** Build hreflang link tags for a given path */
 export function buildHreflangTags(siteUrl: string, path: string): { rel: string; hreflang: string; href: string }[] {
-  const activeLocales = SUPPORTED_LOCALES.filter(() => true); // all for now
-  const tags: { rel: string; hreflang: string; href: string }[] = activeLocales.map((locale) => ({
+  const localeEntries = Object.keys(LOCALES) as Locale[];
+  const tags: { rel: string; hreflang: string; href: string }[] = localeEntries.map((code) => ({
     rel: 'alternate',
-    hreflang: locale.code,
-    href: locale.default ? `${siteUrl}${path}` : `${siteUrl}/${locale.code}${path}`,
+    hreflang: code,
+    href: code === DEFAULT_LOCALE ? `${siteUrl}${path}` : `${siteUrl}/${code}${path}`,
   }));
   // x-default points to the default language version
   tags.push({

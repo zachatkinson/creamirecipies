@@ -2,6 +2,7 @@
 import type { RecipeCard as RecipeCardType } from '../../lib/types';
 import RatingStars from './RatingStars.astro';
 import { ui } from '../../lib/translations';
+import { DIFFICULTY_COLORS } from '../../lib/blog';
 
 interface Props {
   recipe: RecipeCardType;
@@ -9,12 +10,7 @@ interface Props {
 
 const { recipe } = Astro.props;
 const locale = Astro.locals.locale;
-
-const difficultyColors = {
-  beginner: 'bg-mint/40 text-[#1a6b4f]',
-  intermediate: 'bg-vanilla/40 text-[#5C3D2E]',
-  advanced: 'bg-blush/40 text-[#6b1d42]',
-};
+const difficultyColors = DIFFICULTY_COLORS;
 ---
 
 <a

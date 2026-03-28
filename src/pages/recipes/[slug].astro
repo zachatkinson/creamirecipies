@@ -16,6 +16,7 @@ import { buildRecipeJsonLd, buildRecipeFaqJsonLd, generateRecipeFaqs } from '../
 import { getRecipeTranslation, applyTranslation, getIngredientTranslations, getStepTranslations, ui } from '../../lib/translations';
 import { t, DEFAULT_LOCALE } from '../../i18n';
 import { detectAllergens } from '../../lib/allergens';
+import { DIFFICULTY_COLORS } from '../../lib/blog';
 
 const { slug } = Astro.params;
 const locale = Astro.locals.locale;
@@ -176,11 +177,7 @@ const recipeJsonLd = buildRecipeJsonLd(recipe, siteUrl, totalCalories > 0 ? {
   servings: recipe.servings ?? 4,
 } : undefined);
 
-const difficultyColors = {
-  beginner: 'bg-mint/40 text-[#1a6b4f]',
-  intermediate: 'bg-vanilla/40 text-[#5C3D2E]',
-  advanced: 'bg-blush/40 text-[#6b1d42]',
-};
+const difficultyColors = DIFFICULTY_COLORS;
 
 const totalTime = (recipe.prep_time_minutes ?? 0) + (recipe.freeze_time_hours ?? 24) * 60;
 const totalTimeLabel = totalTime >= 60
@@ -259,7 +256,7 @@ const totalTimeLabel = totalTime >= 60
                   <img src={recipe.sponsor_logo_url} alt={recipe.sponsor_name ?? ui('sponsor', locale)} class="w-6 h-6 rounded-full object-contain" />
                 )}
                 <span class="text-xs text-slate-600">
-                  Sponsored by
+                  {ui('sponsoredBy', locale)}
                   {recipe.sponsor_url ? (
                     <a
                       href={recipe.sponsor_url}

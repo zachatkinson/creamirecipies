@@ -47,9 +47,9 @@ function renderCard(product: Product, translation: ProductTranslation | undefine
   const imageUrl = product.image_url ?? `/images/products/${product.asin}.avif`;
   const cta = t('shop.viewOnAmazon', locale);
 
-  const descHtml = desc ? `<span style="color:#475569;font-size:0.8rem">${desc}</span><br/>` : '';
+  const descHtml = desc ? `<span class="text-slate-600 text-xs">${desc}</span><br/>` : '';
 
-  return `<a href="https://www.amazon.com/dp/${product.asin}?tag=${AMAZON_TAG}" rel="sponsored nofollow" target="_blank" style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;margin:0.75rem 0;background:#fff;border:1px solid #e2e8f0;border-radius:0.75rem;text-decoration:none;transition:box-shadow 0.2s"><img src="${imageUrl}" alt="${name}" style="width:80px;height:80px;object-fit:contain;border-radius:0.5rem;flex-shrink:0" loading="lazy" /><span style="flex:1"><strong style="color:#5C3D2E;display:block">${name}</strong>${descHtml}<span style="color:#8B3A62;font-size:0.875rem">${cta} &rarr;</span></span></a>`;
+  return `<a href="https://www.amazon.com/dp/${product.asin}?tag=${AMAZON_TAG}" rel="sponsored nofollow" target="_blank" class="not-prose flex items-center gap-4 p-3 my-3 bg-white border border-slate-200 rounded-xl no-underline transition-shadow hover:shadow-md"><img src="${imageUrl}" alt="${name}" class="w-20 h-20 object-contain rounded-lg shrink-0" loading="lazy" /><span class="flex-1"><strong class="text-chocolate block">${name}</strong>${descHtml}<span class="text-berry text-sm">${cta} &rarr;</span></span></a>`;
 }
 
 /**
