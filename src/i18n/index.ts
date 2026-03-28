@@ -17,14 +17,24 @@ export type Locale = keyof typeof LOCALES;
 export const DEFAULT_LOCALE: Locale = 'en';
 export const SUPPORTED_LOCALES = Object.keys(LOCALES) as Locale[];
 
-type _TranslationKeys = typeof en;
+/** Recursively build dot-notation key paths from the translation JSON structure */
+type DotPaths<T, Prefix extends string = ''> = T extends object
+  ? { [K in keyof T & string]: T[K] extends object
+      ? DotPaths<T[K], Prefix extends '' ? K : `${Prefix}.${K}`>
+      : Prefix extends '' ? K : `${Prefix}.${K}` }[keyof T & string]
+  : never;
+
+/** All valid translation key paths, derived from the English JSON */
+export type TranslationKey = DotPaths<typeof en>;
 
 /**
  * Get a translation value by dot-notation path.
+ * Keys are type-checked against the English JSON structure at compile time.
+ *
  * Usage: t('home.heroTitle', 'en') => "Perfect Creami"
  *        t('home.heroTitle', 'fr') => "Un Creami Parfait"
  */
-export function t(path: string, locale: Locale = DEFAULT_LOCALE): string {
+export function t(path: TranslationKey, locale: Locale = DEFAULT_LOCALE): string {
   const translations = LOCALES[locale]?.translations ?? en;
   const keys = path.split('.');
   let value: unknown = translations;

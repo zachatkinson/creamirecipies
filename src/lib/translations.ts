@@ -302,7 +302,10 @@ export const RECIPE_UI: Record<string, Record<Locale, string>> = {
   'Tea & Matcha': { en: 'Tea & Matcha', fr: 'Thé & Matcha', es: 'Té y Matcha', de: 'Tee & Matcha', pt: 'Chá e Matcha' },
 };
 
-export function ui(key: string, locale: Locale): string {
+/** Valid RECIPE_UI key names, derived from the RECIPE_UI object */
+export type RecipeUIKey = keyof typeof RECIPE_UI;
+
+export function ui(key: RecipeUIKey, locale: Locale): string {
   return RECIPE_UI[key]?.[locale] ?? RECIPE_UI[key]?.['en'] ?? key;
 }
 
