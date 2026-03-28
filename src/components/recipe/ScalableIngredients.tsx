@@ -24,15 +24,16 @@ interface Props {
   locale?: Locale;
 }
 
-const GROUP_LABELS: Record<string, Record<Locale, string>> = {
-  base: { en: 'Base Ingredients', fr: 'Ingrédients de Base', es: 'Ingredientes Base', de: 'Grundzutaten', pt: 'Ingredientes Base' },
-  'mix-ins': { en: 'Mix-Ins', fr: 'Garnitures', es: 'Complementos', de: 'Mix-Ins', pt: 'Complementos' },
-  topping: { en: 'Toppings', fr: 'Garniture', es: 'Cobertura', de: 'Topping', pt: 'Cobertura' },
-  swirl: { en: 'Swirl', fr: 'Spirale', es: 'Espiral', de: 'Wirbel', pt: 'Espiral' },
-};
+import { INGREDIENT_GROUP_LABELS, INGREDIENT_GROUP_ORDER } from '../../lib/blog';
+const GROUP_LABELS = INGREDIENT_GROUP_LABELS;
 
 const UNIT_LABELS: Record<Locale, string> = {
-  en: 'Units:', fr: 'Unités :', es: 'Unidades:', de: 'Einheiten:', pt: 'Unidades:',
+  en: 'Units:', fr: 'Unites :', es: 'Unidades:', de: 'Einheiten:', pt: 'Unidades:',
+};
+
+const MEASUREMENT_LABELS: Record<string, Record<Locale, string>> = {
+  us: { en: 'US', fr: 'US', es: 'US', de: 'US', pt: 'US' },
+  metric: { en: 'Metric', fr: 'Metrique', es: 'Metrico', de: 'Metrisch', pt: 'Metrico' },
 };
 
 const UNIT_TRANSLATIONS: Record<string, Record<Locale, string>> = {
@@ -44,7 +45,7 @@ const UNIT_TRANSLATIONS: Record<string, Record<Locale, string>> = {
   'fl oz': { en: 'fl oz', fr: 'fl oz', es: 'fl oz', de: 'fl oz', pt: 'fl oz' },
 };
 
-const GROUP_ORDER = ['base', 'mix-ins', 'swirl', 'topping'];
+const GROUP_ORDER = INGREDIENT_GROUP_ORDER;
 
 type MeasurementSystem = 'us' | 'metric';
 
@@ -178,7 +179,7 @@ export default function ScalableIngredients({ ingredients, locale = 'en' }: Prop
             measureSystem === 'us' ? 'bg-[#8B3A62] text-white' : 'bg-slate-100 text-slate-600'
           }`}
         >
-          US
+          {MEASUREMENT_LABELS.us[locale]}
         </button>
         <button
           onClick={toggleMeasureSystem}
@@ -186,7 +187,7 @@ export default function ScalableIngredients({ ingredients, locale = 'en' }: Prop
             measureSystem === 'metric' ? 'bg-[#8B3A62] text-white' : 'bg-slate-100 text-slate-600'
           }`}
         >
-          Metric
+          {MEASUREMENT_LABELS.metric[locale]}
         </button>
       </div>
 

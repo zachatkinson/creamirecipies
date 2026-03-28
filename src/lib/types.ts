@@ -64,6 +64,8 @@ export interface Ingredient {
   group_name: 'base' | 'mix-ins' | 'topping' | 'swirl';
   sort_order: number;
   master_ingredient_id: string | null;
+  /** Set at runtime when locale translations are applied */
+  translated_name?: string;
 }
 
 export interface MasterIngredient {

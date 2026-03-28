@@ -39,8 +39,8 @@ const stepTranslations = await getStepTranslations(supabase, locale);
 // Translate ingredient names using master_ingredient links
 if (locale !== 'en') {
   for (const ing of recipe.ingredients) {
-    if ((ing as any).master_ingredient_id && ingredientNames.has((ing as any).master_ingredient_id)) {
-      (ing as any).translated_name = ingredientNames.get((ing as any).master_ingredient_id);
+    if (ing.master_ingredient_id && ingredientNames.has(ing.master_ingredient_id)) {
+      ing.translated_name = ingredientNames.get(ing.master_ingredient_id);
     }
   }
 }
@@ -100,7 +100,7 @@ if (recipeCatSlugs.length > 0) {
           .limit(3);
 
         if (similar) {
-          similarRecipes = similar as any[];
+          similarRecipes = similar as Record<string, unknown>[];
           // Apply translations
           if (locale !== DEFAULT_LOCALE && similarRecipes.length > 0) {
             const { data: simTrans } = await supabase
@@ -147,7 +147,7 @@ if (masterIngIds.length > 0) {
 
   if (nutritionData) {
     const nutritionMap = new Map(nutritionData.map(n => [n.id, n]));
-    for (const ing of recipe.ingredients as any[]) {
+    for (const ing of recipe.ingredients) {
       const nutrition = nutritionMap.get(ing.master_ingredient_id);
       if (!nutrition) continue;
       // Rough estimate: parse amount and convert to grams
