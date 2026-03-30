@@ -26,7 +26,7 @@ const hasData = perServing.calories > 0;
 
 {hasData && (
   <div class="mt-6 p-4 bg-white rounded-xl border border-slate-100">
-    <h3 class="text-sm font-bold text-chocolate mb-3">{ui('nutritionEstimate', locale)}</h3>
+    <p class="text-sm font-bold text-chocolate mb-3">{ui('nutritionEstimate', locale)}</p>
     <div class="grid grid-cols-4 gap-3 text-center">
       <div>
         <div class="text-lg font-bold text-chocolate">{perServing.calories}</div>
