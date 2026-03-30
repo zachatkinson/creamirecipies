@@ -10,14 +10,7 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
   site: 'https://eatcreami.com',
   output: 'server',
-  adapter: vercel({
-    isr: {
-      exclude: [
-        /^\/api\/.+/,       // All API routes stay serverless
-        '/api/set-locale',
-      ],
-    },
-  }),
+  adapter: vercel(),
   integrations: [react()],
   image: {
     domains: ['*.supabase.co'],
