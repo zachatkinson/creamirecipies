@@ -12,6 +12,11 @@ export default defineConfig({
   output: 'server',
   adapter: vercel(),
   integrations: [react()],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fr', 'es', 'de', 'pt'],
+    routing: 'manual',
+  },
   image: {
     domains: ['*.supabase.co'],
   },

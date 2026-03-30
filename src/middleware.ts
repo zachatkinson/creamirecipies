@@ -2,21 +2,35 @@ import { defineMiddleware } from 'astro:middleware';
 import { createServerClient, parseCookieHeader } from '@supabase/ssr';
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE, type Locale } from './i18n';
 
+/** Non-default locale prefixes that trigger URL-based rewriting */
+const LOCALE_PREFIXES = SUPPORTED_LOCALES.filter((l) => l !== DEFAULT_LOCALE);
+const LOCALE_PREFIX_RE = new RegExp(`^/(${LOCALE_PREFIXES.join('|')})(/|$)`);
+
 export const onRequest = defineMiddleware(async (context, next) => {
   const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
   const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+  const pathname = context.url.pathname;
 
-  // --- i18n: detect locale ---
-  // Priority: 1) cookie preference  2) Accept-Language header  3) default
+  // --- i18n: detect locale from URL, then cookie, then Accept-Language ---
+  // Priority: 1) URL prefix (/fr/, /es/, etc.)  2) cookie  3) Accept-Language  4) default
   let locale: Locale = DEFAULT_LOCALE;
+  let strippedPath = pathname;
 
-  const cookieLocale = context.cookies.get('locale')?.value;
-  if (cookieLocale && SUPPORTED_LOCALES.includes(cookieLocale as Locale)) {
-    locale = cookieLocale as Locale;
+  const prefixMatch = pathname.match(LOCALE_PREFIX_RE);
+  if (prefixMatch) {
+    locale = prefixMatch[1] as Locale;
+    // Strip the locale prefix: /fr/recipes/slug → /recipes/slug
+    strippedPath = pathname.slice(prefixMatch[1].length + 1) || '/';
   } else {
-    const acceptLang = context.request.headers.get('accept-language') ?? '';
-    const detected = detectPreferredLocale(acceptLang);
-    if (detected) locale = detected;
+    // No URL prefix — fall back to cookie → Accept-Language → default
+    const cookieLocale = context.cookies.get('locale')?.value;
+    if (cookieLocale && SUPPORTED_LOCALES.includes(cookieLocale as Locale)) {
+      locale = cookieLocale as Locale;
+    } else {
+      const acceptLang = context.request.headers.get('accept-language') ?? '';
+      const detected = detectPreferredLocale(acceptLang);
+      if (detected) locale = detected;
+    }
   }
 
   context.locals.locale = locale;
@@ -40,8 +54,15 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
   context.locals.supabase = supabase;
 
-  const response = await next();
-  const path = context.url.pathname;
+  // --- Rewrite locale-prefixed URLs to base path ---
+  // /fr/recipes/banana-bread → renders /recipes/banana-bread with locale='fr'
+  // Uses next(path) which rewrites without re-executing middleware
+  const response = prefixMatch
+    ? await next(strippedPath)
+    : await next();
+
+  // Use the ORIGINAL pathname (with locale prefix) for cache-control matching
+  const path = strippedPath;
 
   // Ensure Content-Type includes charset for faster browser parsing
   const contentType = response.headers.get('Content-Type');
@@ -50,28 +71,20 @@ export const onRequest = defineMiddleware(async (context, next) => {
   }
 
   // --- CDN Cache-Control headers ---
-  // Vercel CDN respects s-maxage; stale-while-revalidate serves cached
-  // content instantly while refreshing in the background.
-  // Errors are never cached to prevent serving broken pages.
+  // With URL-based localization, each locale has a unique URL = unique cache key.
+  // No Vary: Cookie needed since the URL determines the locale.
   if (!path.startsWith('/api/') && response.status < 400) {
     if (path.match(/^\/(recipes|blog)\/[^/]+/)) {
-      // Recipe & blog detail pages: cache 1 hour, stale up to 24h
       response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
     } else if (path === '/' || path === '') {
-      // Homepage: cache 30 min, stale up to 12h
       response.headers.set('Cache-Control', 'public, s-maxage=1800, stale-while-revalidate=43200');
     } else if (path === '/recipes' || path === '/blog') {
-      // Listing pages: cache 5 min, stale up to 1h
       response.headers.set('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=3600');
     } else if (path.endsWith('.xml')) {
-      // Sitemaps, RSS: cache 1 hour, stale up to 24h
       response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
     } else {
-      // Static pages (/about, /privacy, /terms): cache 1 day, stale up to 7 days
       response.headers.set('Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=604800');
     }
-    // Vary by cookie so locale preference creates separate cache entries
-    response.headers.set('Vary', 'Cookie');
   }
 
   return response;
