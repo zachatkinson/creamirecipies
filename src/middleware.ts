@@ -43,6 +43,12 @@ export const onRequest = defineMiddleware(async (context, next) => {
   const response = await next();
   const path = context.url.pathname;
 
+  // Ensure Content-Type includes charset for faster browser parsing
+  const contentType = response.headers.get('Content-Type');
+  if (contentType && contentType.includes('text/html') && !contentType.includes('charset')) {
+    response.headers.set('Content-Type', 'text/html;charset=utf-8');
+  }
+
   // --- CDN Cache-Control headers ---
   // Vercel CDN respects s-maxage; stale-while-revalidate serves cached
   // content instantly while refreshing in the background.
