@@ -200,6 +200,12 @@ export async function expandShortcodes(
     }
   }
 
+  // Strip <p> wrappers around block-level shortcode output.
+  // marked wraps [shortcode] in <p>...</p>, but our cards contain <div>s
+  // which are invalid inside <p> and cause browsers to break the HTML.
+  html = html.replace(/<p>(<a\s[^>]*class="not-prose[^"]*"[^>]*>)/g, '$1');
+  html = html.replace(/(<\/a>)<\/p>/g, '$1');
+
   return html;
 }
 
