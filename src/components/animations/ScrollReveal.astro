@@ -34,6 +34,17 @@ const {
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // Safety net: if GSAP sets opacity:0 but scroll trigger never fires,
+  // force all scroll-reveal elements visible after 3 seconds
+  const safetyTimeout = setTimeout(() => {
+    document.querySelectorAll('.scroll-reveal').forEach((el) => {
+      if (getComputedStyle(el).opacity === '0') {
+        (el as HTMLElement).style.opacity = '1';
+        (el as HTMLElement).style.transform = 'none';
+      }
+    });
+  }, 3000);
+
   document.querySelectorAll('.scroll-reveal').forEach((el) => {
     const animation = el.getAttribute('data-animation') ?? 'fade-up';
     const delay = parseFloat(el.getAttribute('data-delay') ?? '0');
