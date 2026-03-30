@@ -1,26 +1,6 @@
-import { useState, useCallback, useEffect, useRef } from 'react';
-
-interface RecipeData {
-  id: string;
-  title: string;
-  slug: string;
-  description: string;
-  difficulty: string;
-  base_type: string;
-  avg_rating: number;
-  rating_count: number;
-  prep_time_minutes: number | null;
-  hero_image_url: string | null;
-  categories: string[];
-  models: string[];
-}
-
-interface FilterConfig {
-  baseTypes: { slug: string; name: string }[];
-  flavorProfiles: { slug: string; name: string }[];
-  dietary: { slug: string; name: string }[];
-  models: { slug: string; name: string }[];
-}
+import { DIFFICULTY_COLORS } from '../../lib/blog';
+import { buildRecipeImageSrcset } from '../../lib/images';
+import { useRecipeFilters, type RecipeData, type FilterConfig, type Facets } from '../../hooks/useRecipeFilters';
 
 interface Labels {
   baseTypeMap?: Record<string, string>;
@@ -70,10 +50,6 @@ const DEFAULT_LABELS: Labels = {
   loading: 'Loading...',
 };
 
-interface Facets {
-  difficulty?: Record<string, number>;
-}
-
 interface Props {
   initialRecipes: RecipeData[];
   totalRecipes: number;
@@ -83,10 +59,9 @@ interface Props {
   locale?: string;
 }
 
-type SortOption = 'newest' | 'rating' | 'reviews' | 'prep-time';
-
 export default function RecipeFilters({ initialRecipes, totalRecipes, initialFacets, filterConfig, labels: labelsProp, locale }: Props) {
   const l = { ...DEFAULT_LABELS, ...labelsProp };
+  const f = useRecipeFilters(initialRecipes, totalRecipes, initialFacets ?? {}, locale);
 
   const QUICK_FILTERS: { label: string; filters: Record<string, string[]> }[] = [
     { label: l.easyBeginner, filters: { difficulty: ['beginner'] } },
@@ -97,197 +72,35 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
     { label: l.softServe, filters: { category: ['soft-serve'] } },
   ];
 
-  // Recipe data state
-  const [recipes, setRecipes] = useState<RecipeData[]>(initialRecipes);
-  const [total, setTotal] = useState(totalRecipes);
-  const [page, setPage] = useState(1);
-  const [loading, setLoading] = useState(false);
-  const [facets, setFacets] = useState<Facets>(initialFacets ?? {});
-  const [liveMessage, setLiveMessage] = useState('');
-
-  // Filter state
-  const [query, setQuery] = useState('');
-  const [selectedBaseTypes, setSelectedBaseTypes] = useState<Set<string>>(new Set());
-  const [selectedFlavors, setSelectedFlavors] = useState<Set<string>>(new Set());
-  const [selectedDietary, setSelectedDietary] = useState<Set<string>>(new Set());
-  const [selectedModels, setSelectedModels] = useState<Set<string>>(new Set());
-  const [selectedCategories, setSelectedCategories] = useState<Set<string>>(new Set());
-  const [selectedDifficulty, setSelectedDifficulty] = useState<Set<string>>(new Set());
-  const [minRating, setMinRating] = useState(0);
-  const [sortBy, setSortBy] = useState<SortOption>('newest');
-
-  // UI state
-  const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
-  const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set());
-  const gridRef = useRef<HTMLDivElement>(null);
-  const initializedRef = useRef(false);
-  const abortRef = useRef<AbortController | null>(null);
-  const searchTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  // Build query params from current filter state
-  const buildParams = useCallback(() => {
-    const params = new URLSearchParams();
-    if (query) params.set('q', query);
-    selectedBaseTypes.forEach((v) => params.append('base', v));
-    selectedDifficulty.forEach((v) => params.append('difficulty', v));
-    selectedFlavors.forEach((v) => params.append('flavor', v));
-    selectedDietary.forEach((v) => params.append('dietary', v));
-    selectedModels.forEach((v) => params.append('model', v));
-    selectedCategories.forEach((v) => params.append('tag', v));
-    if (minRating > 0) params.set('rating', String(minRating));
-    if (sortBy !== 'newest') params.set('sort', sortBy);
-    if (locale) params.set('locale', locale);
-    return params;
-  }, [query, selectedBaseTypes, selectedDifficulty, selectedFlavors, selectedDietary, selectedModels, selectedCategories, minRating, sortBy]);
-
-  // Fetch recipes from API
-  const fetchRecipes = useCallback(async (pageNum: number, append: boolean) => {
-    // Cancel any in-flight request
-    if (abortRef.current) abortRef.current.abort();
-    const controller = new AbortController();
-    abortRef.current = controller;
-
-    setLoading(true);
-    const params = buildParams();
-    params.set('page', String(pageNum));
-
-    try {
-      const res = await fetch(`/api/recipes?${params.toString()}`, { signal: controller.signal });
-      if (!res.ok) throw new Error('API error');
-      const data = await res.json();
-      const prevCount = append ? recipes.length : 0;
-      setRecipes((prev) => append ? [...prev, ...data.recipes] : data.recipes);
-      setTotal(data.total);
-      setPage(pageNum);
-      if (data.facets) setFacets(data.facets);
-      // Announce to screen readers
-      const newCount = data.recipes.length;
-      setLiveMessage(append
-        ? `${newCount} more recipes loaded. Showing ${prevCount + newCount} of ${data.total}.`
-        : `${data.total} recipes found.`);
-    } catch (err) {
-      if ((err as Error).name !== 'AbortError') {
-        console.warn('Failed to fetch recipes:', err);
-      }
-    } finally {
-      if (!controller.signal.aborted) setLoading(false);
-    }
-  }, [buildParams]);
-
-  // Toggle helpers
-  const toggle = useCallback((set: Set<string>, value: string, setter: React.Dispatch<React.SetStateAction<Set<string>>>) => {
-    setter((prev) => {
-      const next = new Set(prev);
-      if (next.has(value)) next.delete(value);
-      else next.add(value);
-      return next;
-    });
-  }, []);
-
-  const toggleGroup = useCallback((group: string) => {
-    setExpandedGroups((prev) => {
-      const next = new Set(prev);
-      if (next.has(group)) next.delete(group);
-      else next.add(group);
-      return next;
-    });
-  }, []);
-
-  const applyQuickFilter = useCallback((filters: Record<string, string[] | number>) => {
-    for (const [key, value] of Object.entries(filters)) {
-      if (key === 'difficulty' && Array.isArray(value)) {
-        setSelectedDifficulty((prev) => { const next = new Set(prev); const v = value[0]; if (next.has(v)) next.delete(v); else next.add(v); return next; });
-      }
-      if (key === 'dietary' && Array.isArray(value)) {
-        setSelectedDietary((prev) => { const next = new Set(prev); const v = value[0]; if (next.has(v)) next.delete(v); else next.add(v); return next; });
-      }
-      if (key === 'baseType' && Array.isArray(value)) {
-        setSelectedBaseTypes((prev) => { const next = new Set(prev); const v = value[0]; if (next.has(v)) next.delete(v); else next.add(v); return next; });
-      }
-      if (key === 'model' && Array.isArray(value)) {
-        setSelectedModels((prev) => { const next = new Set(prev); const v = value[0]; if (next.has(v)) next.delete(v); else next.add(v); return next; });
-      }
-      if (key === 'category' && Array.isArray(value)) {
-        setSelectedCategories((prev) => { const next = new Set(prev); const v = value[0]; if (next.has(v)) next.delete(v); else next.add(v); return next; });
-      }
-      if (key === 'minRating' && typeof value === 'number') setMinRating((prev) => prev === value ? 0 : value);
-    }
-  }, []);
-
-  const clearAll = useCallback(() => {
-    setQuery('');
-    setSelectedBaseTypes(new Set());
-    setSelectedFlavors(new Set());
-    setSelectedDietary(new Set());
-    setSelectedModels(new Set());
-    setSelectedCategories(new Set());
-    setSelectedDifficulty(new Set());
-    setMinRating(0);
-    setSortBy('newest');
-  }, []);
-
-  // Read URL params on mount
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('q')) setQuery(params.get('q')!);
-    if (params.getAll('base').length) setSelectedBaseTypes(new Set(params.getAll('base')));
-    if (params.getAll('difficulty').length) setSelectedDifficulty(new Set(params.getAll('difficulty')));
-    if (params.getAll('flavor').length) setSelectedFlavors(new Set(params.getAll('flavor')));
-    if (params.getAll('dietary').length) setSelectedDietary(new Set(params.getAll('dietary')));
-    if (params.getAll('model').length) setSelectedModels(new Set(params.getAll('model')));
-    if (params.getAll('tag').length) setSelectedCategories(new Set(params.getAll('tag')));
-    if (params.get('rating')) setMinRating(Number(params.get('rating')));
-    if (params.get('sort')) setSortBy(params.get('sort') as SortOption);
-    initializedRef.current = true;
-  }, []);
-
-  // When any filter/sort changes (after initialization), fetch from API and sync URL
-  useEffect(() => {
-    if (!initializedRef.current) return;
-
-    // Update URL
-    const params = buildParams();
-    const newUrl = params.toString() ? `?${params.toString()}` : window.location.pathname;
-    window.history.replaceState({}, '', newUrl);
-
-    // Fetch page 1 with new filters (debounce search input)
-    if (searchTimerRef.current) clearTimeout(searchTimerRef.current);
-    const delay = query ? 300 : 0;
-    searchTimerRef.current = setTimeout(() => fetchRecipes(1, false), delay);
-
-    return () => { if (searchTimerRef.current) clearTimeout(searchTimerRef.current); };
-  }, [query, selectedBaseTypes, selectedDifficulty, selectedFlavors, selectedDietary, selectedModels, selectedCategories, minRating, sortBy, buildParams, fetchRecipes]);
-
   // Active filter chips
   const activeFilters: { label: string; onRemove: () => void }[] = [];
-  if (query) activeFilters.push({ label: `"${query}"`, onRemove: () => setQuery('') });
-  selectedBaseTypes.forEach((v) => {
+  if (f.query) activeFilters.push({ label: `"${f.query}"`, onRemove: () => f.setQuery('') });
+  f.selectedBaseTypes.forEach((v) => {
     const bt = filterConfig.baseTypes.find((b) => b.slug === v);
-    if (bt) activeFilters.push({ label: bt.name, onRemove: () => toggle(selectedBaseTypes, v, setSelectedBaseTypes) });
+    if (bt) activeFilters.push({ label: bt.name, onRemove: () => f.toggle(f.selectedBaseTypes, v, f.setSelectedBaseTypes) });
   });
-  selectedDifficulty.forEach((v) => {
+  f.selectedDifficulty.forEach((v) => {
     const diffLabel = v === 'beginner' ? l.beginner : v === 'intermediate' ? l.intermediate : l.advanced;
-    activeFilters.push({ label: diffLabel, onRemove: () => toggle(selectedDifficulty, v, setSelectedDifficulty) });
+    activeFilters.push({ label: diffLabel, onRemove: () => f.toggle(f.selectedDifficulty, v, f.setSelectedDifficulty) });
   });
-  selectedFlavors.forEach((v) => {
-    const f = filterConfig.flavorProfiles.find((fp) => fp.slug === v);
-    if (f) activeFilters.push({ label: f.name, onRemove: () => toggle(selectedFlavors, v, setSelectedFlavors) });
+  f.selectedFlavors.forEach((v) => {
+    const fl = filterConfig.flavorProfiles.find((fp) => fp.slug === v);
+    if (fl) activeFilters.push({ label: fl.name, onRemove: () => f.toggle(f.selectedFlavors, v, f.setSelectedFlavors) });
   });
-  selectedDietary.forEach((v) => {
+  f.selectedDietary.forEach((v) => {
     const d = filterConfig.dietary.find((dt) => dt.slug === v);
-    if (d) activeFilters.push({ label: d.name, onRemove: () => toggle(selectedDietary, v, setSelectedDietary) });
+    if (d) activeFilters.push({ label: d.name, onRemove: () => f.toggle(f.selectedDietary, v, f.setSelectedDietary) });
   });
-  selectedModels.forEach((v) => {
+  f.selectedModels.forEach((v) => {
     const m = filterConfig.models.find((md) => md.slug === v);
-    if (m) activeFilters.push({ label: m.name, onRemove: () => toggle(selectedModels, v, setSelectedModels) });
+    if (m) activeFilters.push({ label: m.name, onRemove: () => f.toggle(f.selectedModels, v, f.setSelectedModels) });
   });
-  selectedCategories.forEach((v) => {
-    // Look up display name from all filter config lists
+  f.selectedCategories.forEach((v) => {
     const all = [...filterConfig.baseTypes, ...filterConfig.flavorProfiles, ...filterConfig.dietary];
     const cat = all.find((c) => c.slug === v);
-    activeFilters.push({ label: cat?.name ?? v, onRemove: () => toggle(selectedCategories, v, setSelectedCategories) });
+    activeFilters.push({ label: cat?.name ?? v, onRemove: () => f.toggle(f.selectedCategories, v, f.setSelectedCategories) });
   });
-  if (minRating > 0) activeFilters.push({ label: `${minRating}+ ${l.stars}`, onRemove: () => setMinRating(0) });
+  if (f.minRating > 0) activeFilters.push({ label: `${f.minRating}+ ${l.stars}`, onRemove: () => f.setMinRating(0) });
 
   const FilterSidebar = () => (
     <div className="space-y-5">
@@ -297,7 +110,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
           {QUICK_FILTERS.map((qf) => (
             <button
               key={qf.label}
-              onClick={() => applyQuickFilter(qf.filters)}
+              onClick={() => f.applyQuickFilter(qf.filters)}
               className="px-3 py-1.5 text-xs font-medium rounded-full bg-gradient-to-r from-blush/20 to-lavender/20 text-berry hover:from-blush/40 hover:to-lavender/40 transition-all"
             >
               {qf.label}
@@ -306,59 +119,57 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
         </div>
       </div>
 
-      <FilterGroup title={l.difficulty} id="difficulty" expanded={expandedGroups.has('difficulty')} onToggle={() => toggleGroup('difficulty')}>
+      <FilterGroup title={l.difficulty} id="difficulty" expanded={f.expandedGroups.has('difficulty')} onToggle={() => f.toggleGroup('difficulty')}>
         {['beginner', 'intermediate', 'advanced'].map((d) => (
           <FilterCheckbox
             key={d}
             label={d === 'beginner' ? l.beginner : d === 'intermediate' ? l.intermediate : l.advanced}
-            checked={selectedDifficulty.has(d)}
-            onChange={() => toggle(selectedDifficulty, d, setSelectedDifficulty)}
-            count={facets.difficulty?.[d]}
+            checked={f.selectedDifficulty.has(d)}
+            onChange={() => f.toggle(f.selectedDifficulty, d, f.setSelectedDifficulty)}
+            count={f.facets.difficulty?.[d]}
           />
         ))}
       </FilterGroup>
 
-      <FilterGroup title={l.baseType} id="base-type" expanded={expandedGroups.has('base-type')} onToggle={() => toggleGroup('base-type')}>
+      <FilterGroup title={l.baseType} id="base-type" expanded={f.expandedGroups.has('base-type')} onToggle={() => f.toggleGroup('base-type')}>
         {filterConfig.baseTypes.map((bt) => (
           <FilterCheckbox
             key={bt.slug}
             label={bt.name}
-            checked={selectedBaseTypes.has(bt.slug)}
-            onChange={() => toggle(selectedBaseTypes, bt.slug, setSelectedBaseTypes)}
+            checked={f.selectedBaseTypes.has(bt.slug)}
+            onChange={() => f.toggle(f.selectedBaseTypes, bt.slug, f.setSelectedBaseTypes)}
           />
         ))}
       </FilterGroup>
 
-      <FilterGroup title={l.dietary} id="dietary" expanded={expandedGroups.has('dietary')} onToggle={() => toggleGroup('dietary')}>
+      <FilterGroup title={l.dietary} id="dietary" expanded={f.expandedGroups.has('dietary')} onToggle={() => f.toggleGroup('dietary')}>
         {filterConfig.dietary.map((d) => (
           <FilterCheckbox
             key={d.slug}
             label={d.name}
-            checked={selectedDietary.has(d.slug)}
-            onChange={() => toggle(selectedDietary, d.slug, setSelectedDietary)}
+            checked={f.selectedDietary.has(d.slug)}
+            onChange={() => f.toggle(f.selectedDietary, d.slug, f.setSelectedDietary)}
           />
         ))}
       </FilterGroup>
 
-      <FilterGroup title={l.minRating} id="rating" expanded={expandedGroups.has('rating')} onToggle={() => toggleGroup('rating')}>
+      <FilterGroup title={l.minRating} id="rating" expanded={f.expandedGroups.has('rating')} onToggle={() => f.toggleGroup('rating')}>
         {[4, 3].map((r) => (
           <FilterCheckbox
             key={r}
             label={`${r}+ ${l.stars}`}
-            checked={minRating === r}
-            onChange={() => setMinRating(minRating === r ? 0 : r)}
+            checked={f.minRating === r}
+            onChange={() => f.setMinRating(f.minRating === r ? 0 : r)}
           />
         ))}
       </FilterGroup>
     </div>
   );
 
-  const hasMore = recipes.length < total;
-
   return (
     <div>
       {/* Screen reader announcements for dynamic content */}
-      <div aria-live="polite" aria-atomic="true" className="sr-only">{liveMessage}</div>
+      <div aria-live="polite" aria-atomic="true" className="sr-only">{f.liveMessage}</div>
       {/* Search + Sort Bar */}
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
         <div className="relative flex-1">
@@ -367,8 +178,8 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
           </svg>
           <input
             type="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            value={f.query}
+            onChange={(e) => f.setQuery(e.target.value)}
             placeholder={l.searchPlaceholder}
             aria-label={l.searchPlaceholder}
             className="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-slate-200 text-sm placeholder:text-slate-600 focus:border-blush focus:ring-1 focus:ring-blush outline-none transition-colors"
@@ -378,8 +189,8 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
           <label htmlFor="sort-select" className="sr-only">Sort recipes</label>
           <select
             id="sort-select"
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as SortOption)}
+            value={f.sortBy}
+            onChange={(e) => f.setSortBy(e.target.value as 'newest' | 'rating' | 'reviews' | 'prep-time')}
             aria-label="Sort recipes"
             className="px-4 py-3 rounded-xl bg-white border border-slate-200 text-sm text-slate-600 focus:border-blush outline-none"
           >
@@ -389,7 +200,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
             <option value="prep-time">{l.sortPrep}</option>
           </select>
           <button
-            onClick={() => setMobileFilterOpen(true)}
+            onClick={() => f.setMobileFilterOpen(true)}
             className="lg:hidden px-4 py-3 rounded-xl bg-white border border-slate-200 text-sm text-slate-600 hover:border-blush transition-colors flex items-center gap-2"
             aria-label="Open filters"
           >
@@ -422,7 +233,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
             </button>
           ))}
           <button
-            onClick={clearAll}
+            onClick={f.clearAll}
             className="text-xs text-slate-600 hover:text-berry transition-colors underline"
           >
             {l.clearAll}
@@ -432,8 +243,8 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
 
       {/* Result Count */}
       <div className="text-sm text-slate-600 mb-4">
-        {l.showing} <strong className="text-chocolate">{total}</strong> {total !== 1 ? l.recipes : l.recipe}
-        {loading && <span className="ml-2 text-slate-400 animate-pulse">...</span>}
+        {l.showing} <strong className="text-chocolate">{f.total}</strong> {f.total !== 1 ? l.recipes : l.recipe}
+        {f.loading && <span className="ml-2 text-slate-400 animate-pulse">...</span>}
       </div>
 
       {/* Layout: Sidebar + Grid */}
@@ -444,30 +255,27 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
           </div>
         </aside>
 
-        <div className="flex-1" ref={gridRef}>
-          {recipes.length > 0 ? (
+        <div className="flex-1" ref={f.gridRef}>
+          {f.recipes.length > 0 ? (
             <>
-            <div className={`grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 transition-opacity duration-200 ${loading ? 'opacity-60' : ''}`}>
-              {recipes.map((recipe) => (
+            <div className={`grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 transition-opacity duration-200 ${f.loading ? 'opacity-60' : ''}`}>
+              {f.recipes.map((recipe) => (
                 <a
                   key={recipe.id}
                   href={`/recipes/${recipe.slug}`}
                   className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="aspect-[4/3] bg-cream-dark overflow-hidden">
-                    {recipe.hero_image_url ? (
-                      <img src={recipe.hero_image_url} alt={recipe.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-                    ) : (
+                    {recipe.hero_image_url ? (() => {
+                      const img = buildRecipeImageSrcset(recipe.hero_image_url!);
+                      return <img src={img.src} srcSet={img.srcset} sizes={img.sizes} alt={recipe.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />;
+                    })() : (
                       <div className="w-full h-full flex items-center justify-center text-5xl bg-gradient-to-br from-blush/20 to-lavender/20">🍦</div>
                     )}
                   </div>
                   <div className="p-5">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${
-                        recipe.difficulty === 'beginner' ? 'bg-mint/40 text-mint-dark' :
-                        recipe.difficulty === 'advanced' ? 'bg-blush/40 text-berry' :
-                        'bg-vanilla/40 text-chocolate'
-                      }`}>
+                      <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${DIFFICULTY_COLORS[recipe.difficulty] ?? 'bg-vanilla/40 text-chocolate'}`}>
                         {recipe.difficulty === 'beginner' ? l.beginner : recipe.difficulty === 'intermediate' ? l.intermediate : l.advanced}
                       </span>
                       <span className="text-xs text-slate-600">{l.baseTypeMap?.[recipe.base_type] ?? recipe.base_type}</span>
@@ -496,22 +304,22 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
               ))}
             </div>
 
-            {hasMore && (
+            {f.hasMore && (
               <div className="text-center mt-10">
                 <button
-                  onClick={() => fetchRecipes(page + 1, true)}
-                  disabled={loading}
+                  onClick={() => f.fetchRecipes(f.page + 1, true)}
+                  disabled={f.loading}
                   className="px-8 py-3 bg-white text-berry font-medium rounded-full border-2 border-blush hover:bg-blush/10 transition-colors disabled:opacity-50"
                 >
-                  {loading ? (l.loading ?? 'Loading...') : l.loadMore}
+                  {f.loading ? (l.loading ?? 'Loading...') : l.loadMore}
                   <span className="ml-2 text-sm text-slate-600">
-                    ({recipes.length} {l.of} {total})
+                    ({f.recipes.length} {l.of} {f.total})
                   </span>
                 </button>
               </div>
             )}
             </>
-          ) : loading ? (
+          ) : f.loading ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
               {Array.from({ length: 6 }).map((_, i) => (
                 <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm animate-pulse">
@@ -529,7 +337,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
               <span className="text-5xl mb-4 block">🔍</span>
               <h3 className="text-xl font-bold text-chocolate mb-2" style={{ fontFamily: 'var(--font-display)' }}>{l.noResults}</h3>
               <p className="text-slate-600 mb-6">{l.noResultsDesc}</p>
-              <button onClick={clearAll} className="px-6 py-3 bg-berry text-white font-medium rounded-full hover:bg-berry/90 transition-colors">
+              <button onClick={f.clearAll} className="px-6 py-3 bg-berry text-white font-medium rounded-full hover:bg-berry/90 transition-colors">
                 {l.clearFilters}
               </button>
             </div>
@@ -538,16 +346,16 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
       </div>
 
       {/* Mobile Filter Bottom Sheet */}
-      {mobileFilterOpen && (
+      {f.mobileFilterOpen && (
         <div className="fixed inset-0 z-50 lg:hidden">
-          <div className="absolute inset-0 bg-black/40" onClick={() => setMobileFilterOpen(false)} />
+          <div className="absolute inset-0 bg-black/40" onClick={() => f.setMobileFilterOpen(false)} />
           <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl max-h-[70vh] flex flex-col">
             <div className="flex justify-center pt-3 pb-2">
               <div className="w-10 h-1 bg-slate-200 rounded-full" />
             </div>
             <div className="flex items-center justify-between px-5 pb-3 border-b border-slate-100">
               <h3 className="font-bold text-chocolate" style={{ fontFamily: 'var(--font-display)' }}>{l.filters}</h3>
-              <button onClick={() => setMobileFilterOpen(false)} className="p-2 text-slate-600 hover:text-slate-700" aria-label="Close filters">
+              <button onClick={() => f.setMobileFilterOpen(false)} className="p-2 text-slate-600 hover:text-slate-700" aria-label="Close filters">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -558,10 +366,10 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
             </div>
             <div className="p-4 border-t border-slate-100 bg-white">
               <button
-                onClick={() => setMobileFilterOpen(false)}
+                onClick={() => f.setMobileFilterOpen(false)}
                 className="w-full py-3 bg-berry text-white font-medium rounded-xl hover:bg-berry/90 transition-colors"
               >
-                {l.showing} {total} {total !== 1 ? l.recipes : l.recipe}
+                {l.showing} {f.total} {f.total !== 1 ? l.recipes : l.recipe}
               </button>
             </div>
           </div>

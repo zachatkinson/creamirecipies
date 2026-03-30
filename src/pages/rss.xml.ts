@@ -4,6 +4,7 @@ import type { Locale } from '../i18n';
 import { t } from '../i18n';
 import { resolveLocale } from '../lib/locale';
 import { translateRecipeArray } from '../lib/translations';
+import { SITE_URL } from '../lib/sitemap';
 
 export const prerender = false;
 
@@ -26,7 +27,7 @@ export const GET: APIRoute = async ({ url, locals }) => {
   const recipeList = (recipes ?? []) as Record<string, unknown>[];
   await translateRecipeArray(supabase, recipeList, locale);
 
-  const siteUrl = 'https://eatcreami.com';
+  const siteUrl = SITE_URL;
   const items = recipeList
     .map(
       (r) => `

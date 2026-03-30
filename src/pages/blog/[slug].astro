@@ -4,7 +4,7 @@ import ScrollReveal from '../../components/animations/ScrollReveal.astro';
 import AdUnit from '../../components/ads/AdUnit.astro';
 import { supabase } from '../../lib/supabase';
 import { marked } from 'marked';
-import { getPostBySlug, getPostTranslation } from '../../lib/posts';
+import { getPostBySlug, getPostTranslation, getPostNavigation, getRelatedPosts } from '../../lib/posts';
 import { expandShortcodes } from '../../lib/shortcodes';
 import { buildBlogPostingJsonLd, type BlogPostForJsonLd } from '../../lib/seo';
 import { CATEGORY_COLORS } from '../../lib/blog';
@@ -34,39 +34,9 @@ const heroImage = post.hero_image_url || `/images/blog/${post.category || 'news'
 const hasAffiliateLinks = post.body?.includes('[product asin=') ?? false;
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
 
-// Prev/Next posts
-const { data: prevPost } = await supabase
-  .from('posts')
-  .select('title, slug')
-  .eq('status', 'published')
-  .lte('published_at', new Date().toISOString())
-  .lt('published_at', post.published_at ?? post.created_at)
-  .order('published_at', { ascending: false })
-  .limit(1)
-  .single();
-
-const { data: nextPost } = await supabase
-  .from('posts')
-  .select('title, slug')
-  .eq('status', 'published')
-  .lte('published_at', new Date().toISOString())
-  .gt('published_at', post.published_at ?? post.created_at)
-  .order('published_at', { ascending: true })
-  .limit(1)
-  .single();
-
-// Related posts (same category, excluding current)
-const { data: relatedPostsRaw } = await supabase
-  .from('posts')
-  .select('title, slug, excerpt, category, hero_image_url, published_at, created_at')
-  .eq('status', 'published')
-  .eq('category', post.category)
-  .neq('id', post.id)
-  .lte('published_at', new Date().toISOString())
-  .order('published_at', { ascending: false })
-  .limit(3);
-
-const relatedPosts = (relatedPostsRaw ?? []) as Record<string, unknown>[];
+// Prev/Next posts + related posts
+const { prevPost, nextPost } = await getPostNavigation(supabase, post.published_at ?? post.created_at);
+const relatedPosts = await getRelatedPosts(supabase, post.category, post.id);
 
 // Translate prev/next/related if non-English
 await translatePostNavigation(supabase, locale, prevPost, nextPost, relatedPosts);

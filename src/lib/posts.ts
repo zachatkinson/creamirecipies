@@ -59,6 +59,60 @@ export async function getPostTranslation(
   return data;
 }
 
+/** Get prev/next posts for article navigation */
+export async function getPostNavigation(
+  client: Client,
+  publishedAt: string,
+): Promise<{ prevPost: { title: string; slug: string } | null; nextPost: { title: string; slug: string } | null }> {
+  const now = new Date().toISOString();
+
+  const [prev, next] = await Promise.all([
+    client
+      .from('posts')
+      .select('title, slug')
+      .eq('status', 'published')
+      .lte('published_at', now)
+      .lt('published_at', publishedAt)
+      .order('published_at', { ascending: false })
+      .limit(1)
+      .single(),
+    client
+      .from('posts')
+      .select('title, slug')
+      .eq('status', 'published')
+      .lte('published_at', now)
+      .gt('published_at', publishedAt)
+      .order('published_at', { ascending: true })
+      .limit(1)
+      .single(),
+  ]);
+
+  return {
+    prevPost: prev.data as { title: string; slug: string } | null,
+    nextPost: next.data as { title: string; slug: string } | null,
+  };
+}
+
+/** Get related posts by category */
+export async function getRelatedPosts(
+  client: Client,
+  category: string,
+  excludeId: string,
+  limit: number = 3,
+): Promise<Record<string, unknown>[]> {
+  const { data } = await client
+    .from('posts')
+    .select('title, slug, excerpt, category, hero_image_url, published_at, created_at')
+    .eq('status', 'published')
+    .eq('category', category)
+    .neq('id', excludeId)
+    .lte('published_at', new Date().toISOString())
+    .order('published_at', { ascending: false })
+    .limit(limit);
+
+  return (data ?? []) as Record<string, unknown>[];
+}
+
 export async function getAllPostSlugs(client: Client): Promise<string[]> {
   const { data, error } = await client
     .from('posts')
