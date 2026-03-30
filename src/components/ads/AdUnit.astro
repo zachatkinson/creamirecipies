@@ -62,7 +62,7 @@ const config = sizeConfig[size];
   aria-hidden="true"
   role="complementary"
   aria-label="Advertisement"
-  style={`max-width: ${config.width}; min-height: ${config.minHeight}; margin: 0 auto;`}
+  style={`max-width: ${config.width}; ${isDev ? `min-height: ${config.minHeight};` : ''} margin: 0 auto;`}
 >
   {isDev ? (
     <!-- Dev placeholder: shows ad size for layout planning -->
@@ -73,10 +73,10 @@ const config = sizeConfig[size];
       AD: {config.label}
     </div>
   ) : (
-    <!-- Production: ad network script will fill this -->
+    <!-- Production: ad network script will fill this, min-height set by ad script -->
     <div
       class="ad-container"
-      style={`width: 100%; min-height: ${config.minHeight}; max-width: ${config.width};`}
+      style={`width: 100%; max-width: ${config.width};`}
     >
       <!-- Ad code injected by ad network script in BaseLayout -->
     </div>
