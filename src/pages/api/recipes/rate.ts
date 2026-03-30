@@ -11,7 +11,7 @@ function hashIp(ip: string): string {
 }
 
 /** Rate limit: max ratings per IP per hour */
-const RATE_LIMIT = 100;
+const RATE_LIMIT = 10;
 
 export const POST: APIRoute = async ({ request }) => {
   try {
