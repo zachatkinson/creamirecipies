@@ -4,6 +4,8 @@ import Header from './Header.astro';
 import Footer from './Footer.astro';
 
 import { buildWebSiteJsonLd, buildOrganizationJsonLd, buildBreadcrumbJsonLd } from '../../lib/seo';
+import { SUPPORTED_LOCALES, DEFAULT_LOCALE, localePath, type Locale } from '../../i18n';
+
 interface Props {
   title: string;
   description?: string;
@@ -25,15 +27,21 @@ const {
 } = Astro.props;
 
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
+const locale = Astro.locals.locale;
 const isHome = title === 'Home';
 const currentPath = Astro.url.pathname;
 
-const canonicalUrl = new URL(currentPath, Astro.site);
+// For locale pages, the canonical includes the locale prefix
+const localePrefixRe = /^\/(fr|es|de|pt)(\/|$)/;
+const pathMatch = currentPath.match(localePrefixRe);
+const basePath = pathMatch ? currentPath.slice(pathMatch[1].length + 1) || '/' : currentPath;
+const canonicalPath = localePath(basePath, locale);
+const canonicalUrl = new URL(canonicalPath, Astro.site);
 const fullTitle = title === 'Home' ? 'eatcreami — Ninja Creami Recipes & Frozen Treats' : `${title} | eatcreami`;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,9 +53,11 @@ const fullTitle = title === 'Home' ? 'eatcreami — Ninja Creami Recipes & Froze
     )}
     <link rel="canonical" href={canonicalUrl.href} />
 
-    <!-- Hreflang: single URL serves all locales via cookie-based i18n -->
-    <link rel="alternate" hreflang="x-default" href={canonicalUrl.href} />
-    <link rel="alternate" hreflang="en" href={canonicalUrl.href} />
+    <!-- Hreflang: cross-reference all locale versions -->
+    {SUPPORTED_LOCALES.map((loc) => (
+      <link rel="alternate" hreflang={loc} href={`${siteUrl}${localePath(basePath, loc)}`} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}${basePath}`} />
 
     <!-- Webmaster verification done via DNS (no meta tags needed) -->
 

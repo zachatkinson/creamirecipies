@@ -1,9 +1,15 @@
 ---
-import { LOCALES, type Locale } from '../../i18n';
+import { LOCALES, DEFAULT_LOCALE, localePath, type Locale } from '../../i18n';
 import { ui } from '../../lib/translations';
 
 const currentLocale = Astro.locals.locale;
 const localeEntries = Object.entries(LOCALES) as [Locale, typeof LOCALES[Locale]][];
+
+// Get the current path without locale prefix (base path)
+const pathname = Astro.url.pathname;
+const LOCALE_PREFIX_RE = /^\/(fr|es|de|pt)(\/|$)/;
+const match = pathname.match(LOCALE_PREFIX_RE);
+const basePath = match ? pathname.slice(match[1].length + 1) || '/' : pathname;
 ---
 
 <div class="relative" id="lang-switcher">
@@ -25,12 +31,12 @@ const localeEntries = Object.entries(LOCALES) as [Locale, typeof LOCALES[Locale]
     class="hidden absolute right-0 top-full mt-1 bg-white rounded-xl shadow-lg border border-slate-100 py-1 z-50 min-w-[160px]"
   >
     {localeEntries.map(([code, { label, flag }]) => (
-      <button
+      <a
+        href={localePath(basePath, code)}
         class:list={[
-          'w-full flex items-center gap-2 px-4 py-2 text-sm text-left hover:bg-cream transition-colors',
+          'w-full flex items-center gap-2 px-4 py-2 text-sm hover:bg-cream transition-colors',
           code === currentLocale ? 'text-berry font-medium bg-blush/10' : 'text-slate-600',
         ]}
-        data-locale={code}
       >
         <span>{flag}</span>
         <span>{label}</span>
@@ -39,7 +45,7 @@ const localeEntries = Object.entries(LOCALES) as [Locale, typeof LOCALES[Locale]
             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
           </svg>
         )}
-      </button>
+      </a>
     ))}
   </div>
 </div>
@@ -59,14 +65,5 @@ const localeEntries = Object.entries(LOCALES) as [Locale, typeof LOCALES[Locale]
       dropdown?.classList.add('hidden');
       btn?.setAttribute('aria-expanded', 'false');
     }
-  });
-
-  // Handle locale selection
-  dropdown?.querySelectorAll('[data-locale]').forEach((el) => {
-    el.addEventListener('click', async () => {
-      const locale = (el as HTMLElement).dataset.locale;
-      document.cookie = `locale=${locale}; path=/; max-age=${60 * 60 * 24 * 365}`;
-      window.location.reload();
-    });
   });
 </script>
