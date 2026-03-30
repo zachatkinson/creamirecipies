@@ -50,6 +50,7 @@ export function buildRecipeJsonLd(recipe: RecipeWithDetails, siteUrl: string, nu
       position: step.step_number,
       name: `Step ${step.step_number}`,
       text: step.instruction,
+      url: `${siteUrl}/recipes/${recipe.slug}#step-${step.step_number}`,
       ...(step.hint ? { tip: { '@type': 'HowToTip', text: step.hint } } : {}),
       ...(step.image_url ? { image: step.image_url } : {}),
     })),
