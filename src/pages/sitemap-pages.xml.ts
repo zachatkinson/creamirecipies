@@ -1,8 +1,7 @@
 import type { APIRoute } from 'astro';
+import { SITE_URL } from '../lib/sitemap';
 
 export const prerender = false;
-
-const siteUrl = 'https://eatcreami.com';
 
 /** Static pages sitemap */
 export const GET: APIRoute = async () => {
@@ -17,7 +16,7 @@ export const GET: APIRoute = async () => {
 
   const urls = pages.map((p) => `
   <url>
-    <loc>${siteUrl}${p.url}</loc>
+    <loc>${SITE_URL}${p.url}</loc>
     <changefreq>${p.changefreq}</changefreq>
     <priority>${p.priority}</priority>
   </url>`).join('');

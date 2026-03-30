@@ -1,8 +1,7 @@
 import type { APIRoute } from 'astro';
+import { SITE_URL } from '../lib/sitemap';
 
 export const prerender = false;
-
-const siteUrl = 'https://eatcreami.com';
 
 /** Sitemap index — points to separate sitemaps for pages, recipes, and blog posts */
 export const GET: APIRoute = async () => {
@@ -11,15 +10,15 @@ export const GET: APIRoute = async () => {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>${siteUrl}/sitemap-pages.xml</loc>
+    <loc>${SITE_URL}/sitemap-pages.xml</loc>
     <lastmod>${now}</lastmod>
   </sitemap>
   <sitemap>
-    <loc>${siteUrl}/sitemap-recipes.xml</loc>
+    <loc>${SITE_URL}/sitemap-recipes.xml</loc>
     <lastmod>${now}</lastmod>
   </sitemap>
   <sitemap>
-    <loc>${siteUrl}/sitemap-blog.xml</loc>
+    <loc>${SITE_URL}/sitemap-blog.xml</loc>
     <lastmod>${now}</lastmod>
   </sitemap>
 </sitemapindex>`;

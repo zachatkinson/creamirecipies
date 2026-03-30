@@ -2,6 +2,7 @@
  * These mirror the Astro component markup to prevent drift. */
 
 import { CATEGORY_COLORS } from './blog';
+import { formatPublishDate } from './formatting';
 
 /** Render a blog post card as an HTML string (for client-side load-more) */
 export function renderBlogPostCardHtml(
@@ -14,11 +15,7 @@ export function renderBlogPostCardHtml(
   const srcsetAttr = isAvif
     ? ` srcset="${heroBase}-384w.avif 384w, ${heroBase}-768w.avif 768w, ${heroSrc} 1200w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 384px"`
     : '';
-  const date = new Date(post.published_at || post.created_at || '').toLocaleDateString(locale, {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
-  });
+  const date = formatPublishDate(post.published_at || post.created_at || '', locale);
   const colorClass = CATEGORY_COLORS[post.category] ?? 'bg-slate-100 text-slate-600';
 
   return `<div class="aspect-[16/9] bg-cream-dark overflow-hidden">
