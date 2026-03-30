@@ -456,7 +456,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
                     <div className="flex items-center gap-2 mb-2">
                       <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${
                         recipe.difficulty === 'beginner' ? 'bg-mint/40 text-mint-dark' :
-                        recipe.difficulty === 'advanced' ? 'bg-blush/40 text-berry/80' :
+                        recipe.difficulty === 'advanced' ? 'bg-blush/40 text-berry' :
                         'bg-vanilla/40 text-chocolate'
                       }`}>
                         {recipe.difficulty === 'beginner' ? l.beginner : recipe.difficulty === 'intermediate' ? l.intermediate : l.advanced}
