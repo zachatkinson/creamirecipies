@@ -4,7 +4,7 @@
  * Configures gradual recipe publishing for SEO content velocity:
  * - 50 diverse recipes stay published (launch batch)
  * - 434 recipes set to draft with staggered scheduled_publish_at dates
- * - 5 recipes per day starting from 2026-03-26
+ * - 2 recipes per day starting from 2026-03-31
  * - Daily batches are diversified by base_type and difficulty
  *
  * Run with:
@@ -17,7 +17,7 @@ import { createClient } from '@supabase/supabase-js';
 const SUPABASE_URL = process.env.PUBLIC_SUPABASE_URL!;
 const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY!;
 const LAUNCH_BATCH_SIZE = 50;
-const RECIPES_PER_DAY = 5;
+const RECIPES_PER_DAY = 2;
 const START_DATE = '2026-03-26';
 
 if (!SUPABASE_URL || !SUPABASE_SERVICE_KEY) {
