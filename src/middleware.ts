@@ -40,7 +40,35 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
   context.locals.supabase = supabase;
 
-  return next();
+  const response = await next();
+  const path = context.url.pathname;
+
+  // --- CDN Cache-Control headers ---
+  // Vercel CDN respects s-maxage; stale-while-revalidate serves cached
+  // content instantly while refreshing in the background.
+  // Errors are never cached to prevent serving broken pages.
+  if (!path.startsWith('/api/') && response.status < 400) {
+    if (path.match(/^\/(recipes|blog)\/[^/]+/)) {
+      // Recipe & blog detail pages: cache 1 hour, stale up to 24h
+      response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
+    } else if (path === '/' || path === '') {
+      // Homepage: cache 30 min, stale up to 12h
+      response.headers.set('Cache-Control', 'public, s-maxage=1800, stale-while-revalidate=43200');
+    } else if (path === '/recipes' || path === '/blog') {
+      // Listing pages: cache 5 min, stale up to 1h
+      response.headers.set('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=3600');
+    } else if (path.endsWith('.xml')) {
+      // Sitemaps, RSS: cache 1 hour, stale up to 24h
+      response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
+    } else {
+      // Static pages (/about, /privacy, /terms): cache 1 day, stale up to 7 days
+      response.headers.set('Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=604800');
+    }
+    // Vary by cookie so locale preference creates separate cache entries
+    response.headers.set('Vary', 'Cookie');
+  }
+
+  return response;
 });
 
 function detectPreferredLocale(acceptLang: string): Locale | null {
