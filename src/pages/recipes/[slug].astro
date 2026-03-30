@@ -67,9 +67,12 @@ const currentModels = allModels
   .filter((m) => !m.is_discontinued)
   .map((m) => ({ slug: m.slug, name: m.name, pint_size_oz: m.pint_size_oz ?? 16 }));
 
-// Fetch "You May Also Like" — similar recipes by shared categories
+// Fetch "You May Also Like" — similar recipes by shared categories + ingredients
 const recipeCatSlugs = recipe.categories.map((c: Record<string, unknown>) => c.slug as string);
-const similarRecipes = await getSimilarRecipes(supabase, recipe.id, recipeCatSlugs, locale, 6);
+const recipeMasterIngIds = recipe.ingredients
+  .filter((i: Record<string, unknown>) => i.master_ingredient_id)
+  .map((i: Record<string, unknown>) => i.master_ingredient_id as string);
+const similarRecipes = await getSimilarRecipes(supabase, recipe.id, recipeCatSlugs, locale, 6, recipe.base_type, recipeMasterIngIds);
 
 // Prepare ingredient data for the scaler (with translated names)
 const scalableIngredients = recipe.ingredients.map((i) => ({
