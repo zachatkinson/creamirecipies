@@ -22,6 +22,12 @@ export const onRequest = defineMiddleware(async (context, next) => {
     if (pathname === `/${locale}/`) {
       return context.redirect(`/${locale}`, 301);
     }
+    // For homepage rewrites (/fr → /), use context.rewrite which triggers full re-route.
+    // Set cookie first so locale persists through the re-execution.
+    if (strippedPath === '/') {
+      context.cookies.set('locale', locale, { path: '/', maxAge: 60 * 60 * 24 * 365 });
+      return context.rewrite('/');
+    }
     return next(strippedPath);
   }
 
