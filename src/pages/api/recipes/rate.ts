@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { supabase } from '../../../lib/supabase';
+import { supabase, createSupabaseAdmin } from '../../../lib/supabase';
 import crypto from 'node:crypto';
 
 export const prerender = false;
@@ -79,17 +79,27 @@ export const POST: APIRoute = async ({ request }) => {
       return new Response(JSON.stringify({ error: 'Failed to save rating' }), { status: 500 });
     }
 
-    // Fetch updated rating
-    const { data: updated } = await supabase
+    // Recalculate avg from anonymous_ratings using admin client
+    const admin = createSupabaseAdmin();
+    const { data: allRatings } = await admin
+      .from('anonymous_ratings')
+      .select('rating')
+      .eq('recipe_id', recipe_id);
+
+    const ratings = allRatings ?? [];
+    const avgRating = ratings.length > 0
+      ? Math.round((ratings.reduce((sum, r) => sum + r.rating, 0) / ratings.length) * 100) / 100
+      : 0;
+
+    await admin
       .from('recipes')
-      .select('avg_rating, rating_count')
-      .eq('id', recipe_id)
-      .single();
+      .update({ avg_rating: avgRating, rating_count: ratings.length })
+      .eq('id', recipe_id);
 
     return new Response(JSON.stringify({
       ok: true,
-      avg_rating: updated?.avg_rating ?? 0,
-      rating_count: updated?.rating_count ?? 0,
+      avg_rating: avgRating,
+      rating_count: ratings.length,
     }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
