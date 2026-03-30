@@ -164,7 +164,7 @@ const breadcrumbs = [
           <div class="flex justify-between gap-6">
             {prevPost ? (
               <a href={`/blog/${prevPost.slug}`} class="group flex-1 min-w-0">
-                <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">{ui('previousArticle', locale)}</span>
+                <span class="text-xs font-medium text-slate-500 uppercase tracking-wider">{ui('previousArticle', locale)}</span>
                 <p class="text-sm font-medium text-chocolate group-hover:text-berry transition-colors truncate mt-1">
                   {prevPost.title}
                 </p>
@@ -172,7 +172,7 @@ const breadcrumbs = [
             ) : <div class="flex-1" />}
             {nextPost ? (
               <a href={`/blog/${nextPost.slug}`} class="group flex-1 min-w-0 text-right">
-                <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">{ui('nextArticle', locale)}</span>
+                <span class="text-xs font-medium text-slate-500 uppercase tracking-wider">{ui('nextArticle', locale)}</span>
                 <p class="text-sm font-medium text-chocolate group-hover:text-berry transition-colors truncate mt-1">
                   {nextPost.title}
                 </p>
