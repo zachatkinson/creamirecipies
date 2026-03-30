@@ -31,7 +31,7 @@ const isHome = title === 'Home';
 const currentPath = Astro.url.pathname;
 
 const canonicalUrl = new URL(currentPath, Astro.site);
-const fullTitle = title === 'Home' ? 'eatcreami' : `${title} | eatcreami`;
+const fullTitle = title === 'Home' ? 'eatcreami — Ninja Creami Recipes & Frozen Treats' : `${title} | eatcreami`;
 const alternateUrls = getAlternateUrls(siteUrl, currentPath);
 ---
 

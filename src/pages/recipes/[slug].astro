@@ -87,7 +87,7 @@ if (recipeCatSlugs.length > 0) {
       }
       const topIds = [...counts.entries()]
         .sort((a, b) => b[1] - a[1])
-        .slice(0, 6) // fetch extra to filter published
+        .slice(0, 9) // fetch extra to filter published
         .map(([id]) => id);
 
       if (topIds.length > 0) {
@@ -97,7 +97,7 @@ if (recipeCatSlugs.length > 0) {
           .in('id', topIds)
           .eq('status', 'published')
           .neq('id', recipe.id)
-          .limit(3);
+          .limit(6);
 
         if (similar) {
           similarRecipes = similar as Record<string, unknown>[];

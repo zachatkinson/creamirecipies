@@ -92,7 +92,30 @@ export function buildRecipeJsonLd(recipe: RecipeWithDetails, siteUrl: string, nu
           },
         }
       : {}),
+    ...(getDietarySuitability(recipe).length > 0
+      ? { suitableForDiet: getDietarySuitability(recipe).map(d => `https://schema.org/${d}`) }
+      : {}),
+    ...(recipe.difficulty
+      ? { recipeDifficulty: recipe.difficulty.charAt(0).toUpperCase() + recipe.difficulty.slice(1) }
+      : {}),
   };
+}
+
+/** Map dietary categories to Schema.org RestrictedDiet values */
+function getDietarySuitability(recipe: RecipeWithDetails): string[] {
+  const diets: string[] = [];
+  const dietaryNames = new Set(
+    recipe.categories?.filter((c) => c.type === 'dietary').map((c) => c.name.toLowerCase()) ?? []
+  );
+
+  if (dietaryNames.has('vegan')) diets.push('VeganDiet');
+  if (dietaryNames.has('vegetarian')) diets.push('VegetarianDiet');
+  if (dietaryNames.has('gluten-free') || dietaryNames.has('gluten free')) diets.push('GlutenFreeDiet');
+  if (dietaryNames.has('dairy-free') || dietaryNames.has('dairy free')) diets.push('DairyFree');
+  if (dietaryNames.has('keto') || dietaryNames.has('low-carb')) diets.push('LowCalorieDiet');
+  if (dietaryNames.has('diabetic-friendly')) diets.push('DiabeticDiet');
+
+  return diets;
 }
 
 export interface BlogPostForJsonLd {
