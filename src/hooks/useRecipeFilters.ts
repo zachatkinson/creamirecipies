@@ -93,15 +93,18 @@ export function useRecipeFilters(
       const res = await fetch(`/api/recipes?${params.toString()}`, { signal: controller.signal });
       if (!res.ok) throw new Error('API error');
       const data = await res.json();
-      const prevCount = append ? recipes.length : 0;
-      setRecipes((prev) => append ? [...prev, ...data.recipes] : data.recipes);
+      setRecipes((prev) => {
+        const prevCount = append ? prev.length : 0;
+        const newList = append ? [...prev, ...data.recipes] : data.recipes;
+        const newCount = data.recipes.length;
+        setLiveMessage(append
+          ? `${newCount} more recipes loaded. Showing ${prevCount + newCount} of ${data.total}.`
+          : `${data.total} recipes found.`);
+        return newList;
+      });
       setTotal(data.total);
       setPage(pageNum);
       if (data.facets) setFacets(data.facets);
-      const newCount = data.recipes.length;
-      setLiveMessage(append
-        ? `${newCount} more recipes loaded. Showing ${prevCount + newCount} of ${data.total}.`
-        : `${data.total} recipes found.`);
     } catch (err) {
       if ((err as Error).name !== 'AbortError') {
         console.warn('Failed to fetch recipes:', err);
@@ -109,7 +112,7 @@ export function useRecipeFilters(
     } finally {
       if (!controller.signal.aborted) setLoading(false);
     }
-  }, [buildParams, recipes.length]);
+  }, [buildParams]);
 
   // Toggle helpers
   const toggle = useCallback((set: Set<string>, value: string, setter: React.Dispatch<React.SetStateAction<Set<string>>>) => {
@@ -179,6 +182,11 @@ export function useRecipeFilters(
     initializedRef.current = true;
   }, []);
 
+  // Keep a stable ref to fetchRecipes so the filter effect doesn't re-fire
+  // when recipes.length changes (e.g., after load-more appends).
+  const fetchRef = useRef(fetchRecipes);
+  fetchRef.current = fetchRecipes;
+
   // When any filter/sort changes, fetch from API and sync URL
   useEffect(() => {
     if (!initializedRef.current) return;
@@ -189,10 +197,11 @@ export function useRecipeFilters(
 
     if (searchTimerRef.current) clearTimeout(searchTimerRef.current);
     const delay = query ? 300 : 0;
-    searchTimerRef.current = setTimeout(() => fetchRecipes(1, false), delay);
+    searchTimerRef.current = setTimeout(() => fetchRef.current(1, false), delay);
 
     return () => { if (searchTimerRef.current) clearTimeout(searchTimerRef.current); };
-  }, [query, selectedBaseTypes, selectedDifficulty, selectedFlavors, selectedDietary, selectedModels, selectedCategories, minRating, sortBy, buildParams, fetchRecipes]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- fetchRef is stable, only filter values should trigger
+  }, [query, selectedBaseTypes, selectedDifficulty, selectedFlavors, selectedDietary, selectedModels, selectedCategories, minRating, sortBy, buildParams]);
 
   const hasMore = recipes.length < total;
 
