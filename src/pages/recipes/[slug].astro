@@ -13,10 +13,13 @@ export const prerender = false;
 import { supabase } from '../../lib/supabase';
 import { getRecipeBySlug, getCreamiModels } from '../../lib/recipes';
 import { buildRecipeJsonLd, buildRecipeFaqJsonLd, generateRecipeFaqs } from '../../lib/seo';
-import { getRecipeTranslation, applyTranslation, getIngredientTranslations, getStepTranslations, ui, translateRecipeArray } from '../../lib/translations';
+import { getRecipeTranslation, applyTranslation, getIngredientTranslations, getStepTranslations, ui } from '../../lib/translations';
 import { t } from '../../i18n';
 import { detectAllergens } from '../../lib/allergens';
 import { DIFFICULTY_COLORS } from '../../lib/blog';
+import { calculateNutrition } from '../../lib/nutrition';
+import { getSimilarRecipes } from '../../lib/recommendations';
+import { buildRecipeImageSrcset } from '../../lib/images';
 
 const { slug } = Astro.params;
 const locale = Astro.locals.locale;
@@ -64,49 +67,7 @@ const currentModels = allModels
 
 // Fetch "You May Also Like" — similar recipes by shared categories
 const recipeCatSlugs = recipe.categories.map((c: Record<string, unknown>) => c.slug as string);
-let similarRecipes: Record<string, unknown>[] = [];
-if (recipeCatSlugs.length > 0) {
-  // Find recipe IDs that share categories with this recipe
-  const { data: catIds } = await supabase
-    .from('categories')
-    .select('id')
-    .in('slug', recipeCatSlugs) as { data: { id: string }[] | null };
-
-  if (catIds && catIds.length > 0) {
-    const { data: sharedLinks } = await supabase
-      .from('recipe_categories')
-      .select('recipe_id')
-      .in('category_id', catIds.map(c => c.id))
-      .neq('recipe_id', recipe.id) as { data: { recipe_id: string }[] | null };
-
-    if (sharedLinks && sharedLinks.length > 0) {
-      // Count shared categories per recipe, pick top 3
-      const counts = new Map<string, number>();
-      for (const link of sharedLinks) {
-        counts.set(link.recipe_id, (counts.get(link.recipe_id) ?? 0) + 1);
-      }
-      const topIds = [...counts.entries()]
-        .sort((a, b) => b[1] - a[1])
-        .slice(0, 9) // fetch extra to filter published
-        .map(([id]) => id);
-
-      if (topIds.length > 0) {
-        const { data: similar } = await supabase
-          .from('recipes')
-          .select('id, title, slug, description, difficulty, base_type, hero_image_url, avg_rating, rating_count, prep_time_minutes, is_sponsored, sponsor_name, sponsor_logo_url, sponsor_url')
-          .in('id', topIds)
-          .eq('status', 'published')
-          .neq('id', recipe.id)
-          .limit(6);
-
-        if (similar) {
-          similarRecipes = similar as Record<string, unknown>[];
-          await translateRecipeArray(supabase, similarRecipes, locale);
-        }
-      }
-    }
-  }
-}
+const similarRecipes = await getSimilarRecipes(supabase, recipe.id, recipeCatSlugs, locale, 6);
 
 // Prepare ingredient data for the scaler (with translated names)
 const scalableIngredients = recipe.ingredients.map((i) => ({
@@ -119,40 +80,7 @@ const scalableIngredients = recipe.ingredients.map((i) => ({
 }));
 
 // Calculate nutrition from master_ingredients
-let totalCalories = 0, totalProtein = 0, totalFat = 0, totalCarbs = 0;
-const masterIngIds = recipe.ingredients
-  .filter((i) => i.master_ingredient_id)
-  .map((i) => i.master_ingredient_id as string);
-
-if (masterIngIds.length > 0) {
-  const { data: nutritionData } = await supabase
-    .from('master_ingredients')
-    .select('id, calories_per_100g, protein_per_100g, fat_per_100g, carbs_per_100g')
-    .in('id', masterIngIds)
-    .not('calories_per_100g', 'is', null) as { data: { id: string; calories_per_100g: number; protein_per_100g: number; fat_per_100g: number; carbs_per_100g: number }[] | null };
-
-  if (nutritionData) {
-    const nutritionMap = new Map(nutritionData.map(n => [n.id, n]));
-    for (const ing of recipe.ingredients) {
-      const nutrition = nutritionMap.get(ing.master_ingredient_id);
-      if (!nutrition) continue;
-      // Rough estimate: parse amount and convert to grams
-      const amount = parseFloat(ing.amount) || 0;
-      const unit = (ing.unit || '').toLowerCase();
-      const grams = unit === 'cup' ? amount * 240
-        : unit === 'tablespoon' ? amount * 15
-        : unit === 'teaspoon' ? amount * 5
-        : unit === 'oz' ? amount * 28
-        : unit === 'g' ? amount
-        : amount * 30;
-      const factor = grams / 100;
-      totalCalories += nutrition.calories_per_100g * factor;
-      totalProtein += nutrition.protein_per_100g * factor;
-      totalFat += nutrition.fat_per_100g * factor;
-      totalCarbs += nutrition.carbs_per_100g * factor;
-    }
-  }
-}
+const { calories: totalCalories, protein: totalProtein, fat: totalFat, carbs: totalCarbs } = await calculateNutrition(supabase, recipe.ingredients);
 
 // Build Recipe JSON-LD (after nutrition is calculated)
 const recipeJsonLd = buildRecipeJsonLd(recipe, siteUrl, totalCalories > 0 ? {
@@ -200,12 +128,11 @@ const totalTimeLabel = totalTime >= 60
           <div>
             <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-cream-dark shadow-lg">
               {recipe.hero_image_url ? (() => {
-                const heroSrc = recipe.hero_image_url as string;
-                const heroBase = heroSrc.replace('.avif', '');
+                const img = buildRecipeImageSrcset(recipe.hero_image_url as string);
                 return (
                   <img
-                    src={heroSrc}
-                    srcset={`${heroBase}-384w.avif 384w, ${heroBase}-768w.avif 768w, ${heroSrc} 800w`}
+                    src={img.src}
+                    srcset={img.srcset}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                     alt={recipe.title}
                     class="w-full h-full object-cover"

@@ -62,8 +62,7 @@ const baseTypes = categories.filter((c) => c.type === 'base_type' && activeBaseT
 await translateRecipeArray(supabase, recipes, locale);
 await translatePostArray(supabase, posts, locale);
 
-import { CATEGORY_COLORS } from '../lib/blog';
-const categoryColors = CATEGORY_COLORS;
+import BlogPostCard from '../components/blog/BlogPostCard.astro';
 ---
 
 <BaseLayout title="Home">
@@ -224,54 +223,7 @@ const categoryColors = CATEGORY_COLORS;
         <ScrollReveal animation="stagger" staggerAmount={0.1}>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             {posts.map((post) => (
-              <a
-                href={`/blog/${post.slug}`}
-                class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-              >
-                <div class="aspect-[16/9] bg-cream-dark overflow-hidden">
-                  {post.hero_image_url ? (() => {
-                    const src = post.hero_image_url as string;
-                    const base = src.replace('.avif', '');
-                    return (
-                      <img
-                        src={src}
-                        srcset={`${base}-384w.avif 384w, ${base}-768w.avif 768w, ${src} 1200w`}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 384px"
-                        alt={post.title as string}
-                        width={1200}
-                        height={675}
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                      />
-                    );
-                  })() : (
-                    <img
-                      src={`/images/blog/${(post.category as string) || 'news'}.svg`}
-                      alt={post.title as string}
-                      width={1200}
-                      height={675}
-                      class="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  )}
-                </div>
-                <div class="p-5">
-                  <div class="flex items-center gap-2 mb-2">
-                    <span class:list={['text-xs font-medium px-2.5 py-0.5 rounded-full', categoryColors[post.category as string] ?? 'bg-slate-100 text-slate-600']}>
-                      {t(`blog.${post.category}`, locale)}
-                    </span>
-                    <time class="text-xs text-slate-600" datetime={post.published_at as string}>
-                      {new Date((post.published_at ?? post.created_at) as string).toLocaleDateString(locale, { month: 'short', day: 'numeric', year: 'numeric' })}
-                    </time>
-                  </div>
-                  <h3 class="font-display text-lg font-bold text-chocolate group-hover:text-berry transition-colors line-clamp-2 mb-2">
-                    {post.title}
-                  </h3>
-                  {post.excerpt && (
-                    <p class="text-sm text-slate-600 line-clamp-2">{post.excerpt}</p>
-                  )}
-                </div>
-              </a>
+              <BlogPostCard post={post} />
             ))}
           </div>
         </ScrollReveal>

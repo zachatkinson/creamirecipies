@@ -1,0 +1,65 @@
+---
+import { CATEGORY_COLORS } from '../../lib/blog';
+import { buildBlogImageSrcset } from '../../lib/images';
+import { formatPublishDate } from '../../lib/formatting';
+import { t } from '../../i18n';
+
+interface Props {
+  post: Record<string, unknown>;
+  headingLevel?: 'h2' | 'h3';
+}
+
+const { post, headingLevel = 'h3' } = Astro.props;
+const locale = Astro.locals.locale;
+const categoryColors = CATEGORY_COLORS;
+const Heading = headingLevel;
+
+const imageData = post.hero_image_url
+  ? buildBlogImageSrcset(post.hero_image_url as string)
+  : null;
+---
+
+<a
+  href={`/blog/${post.slug}`}
+  class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+>
+  <div class="aspect-[16/9] bg-cream-dark overflow-hidden">
+    {imageData ? (
+      <img
+        src={imageData.src}
+        srcset={imageData.srcset}
+        sizes={imageData.sizes}
+        alt={post.title as string}
+        width={1200}
+        height={675}
+        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        loading="lazy"
+      />
+    ) : (
+      <img
+        src={`/images/blog/${(post.category as string) || 'news'}.svg`}
+        alt={post.title as string}
+        width={1200}
+        height={675}
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    )}
+  </div>
+  <div class="p-5">
+    <div class="flex items-center gap-2 mb-2">
+      <span class:list={['text-xs font-medium px-2.5 py-0.5 rounded-full', categoryColors[post.category as string] ?? 'bg-slate-100 text-slate-600']}>
+        {t(`blog.${post.category}`, locale)}
+      </span>
+      <time class="text-xs text-slate-600" datetime={post.published_at as string}>
+        {formatPublishDate((post.published_at ?? post.created_at) as string, locale)}
+      </time>
+    </div>
+    <Heading class="font-display text-lg font-bold text-chocolate group-hover:text-berry transition-colors line-clamp-2 mb-2">
+      {post.title}
+    </Heading>
+    {post.excerpt && (
+      <p class="text-sm text-slate-600 line-clamp-2">{post.excerpt}</p>
+    )}
+  </div>
+</a>

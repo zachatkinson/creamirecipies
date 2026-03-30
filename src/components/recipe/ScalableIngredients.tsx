@@ -101,6 +101,7 @@ export default function ScalableIngredients({ ingredients, locale = 'en' }: Prop
 
   // Listen for model changes from the "Before You Begin" dropdown
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     const handler = (e: Event) => {
       const detail = (e as CustomEvent).detail;
       if (detail?.scale) setScale(detail.scale);
