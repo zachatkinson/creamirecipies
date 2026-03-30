@@ -29,16 +29,22 @@ const difficultyColors = DIFFICULTY_COLORS;
 
   <!-- Image -->
   <div class="aspect-[4/3] bg-cream-dark overflow-hidden">
-    {recipe.hero_image_url ? (
-      <img
-        src={recipe.hero_image_url}
-        alt={recipe.title}
-        width={600}
-        height={450}
-        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        loading="lazy"
-      />
-    ) : (
+    {recipe.hero_image_url ? (() => {
+      const src = recipe.hero_image_url as string;
+      const base = src.replace('.avif', '');
+      return (
+        <img
+          src={src}
+          srcset={`${base}-384w.avif 384w, ${base}-768w.avif 768w, ${src} 800w`}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 384px"
+          alt={recipe.title}
+          width={600}
+          height={450}
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+        />
+      );
+    })() : (
       <div class="w-full h-full flex items-center justify-center text-5xl bg-gradient-to-br from-blush/20 to-lavender/20">
         🍦
       </div>

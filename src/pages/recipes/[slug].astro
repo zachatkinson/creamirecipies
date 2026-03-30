@@ -199,13 +199,19 @@ const totalTimeLabel = totalTime >= 60
           <!-- Image + Share -->
           <div>
             <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-cream-dark shadow-lg">
-              {recipe.hero_image_url ? (
-                <img
-                  src={recipe.hero_image_url}
-                  alt={recipe.title}
-                  class="w-full h-full object-cover"
-                />
-              ) : (
+              {recipe.hero_image_url ? (() => {
+                const heroSrc = recipe.hero_image_url as string;
+                const heroBase = heroSrc.replace('.avif', '');
+                return (
+                  <img
+                    src={heroSrc}
+                    srcset={`${heroBase}-384w.avif 384w, ${heroBase}-768w.avif 768w, ${heroSrc} 800w`}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+                    alt={recipe.title}
+                    class="w-full h-full object-cover"
+                  />
+                );
+              })() : (
                 <div class="w-full h-full flex items-center justify-center text-8xl bg-gradient-to-br from-blush/20 to-lavender/20">
                   🍦
                 </div>
