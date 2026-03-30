@@ -2,40 +2,27 @@ import { defineMiddleware } from 'astro:middleware';
 import { createServerClient, parseCookieHeader } from '@supabase/ssr';
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE, type Locale } from './i18n';
 
-/** Non-default locale prefixes that trigger URL-based rewriting */
-const LOCALE_PREFIXES = SUPPORTED_LOCALES.filter((l) => l !== DEFAULT_LOCALE);
-const LOCALE_PREFIX_RE = new RegExp(`^/(${LOCALE_PREFIXES.join('|')})(/|$)`);
-
 export const onRequest = defineMiddleware(async (context, next) => {
   const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
   const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
-  const pathname = context.url.pathname;
 
-  // --- i18n: detect locale from URL, then cookie, then Accept-Language ---
+  // --- i18n: detect locale ---
+  // Priority: 1) URL locale param (from Vercel rewrite)  2) cookie  3) Accept-Language  4) default
+  // Vercel rewrites /fr/recipes/slug → /recipes/slug?_locale=fr
   let locale: Locale = DEFAULT_LOCALE;
 
-  // Check URL for locale prefix (/fr/, /es/, etc.)
-  const prefixMatch = pathname.match(LOCALE_PREFIX_RE);
-  if (prefixMatch) {
-    locale = prefixMatch[1] as Locale;
-    const strippedPath = pathname.slice(prefixMatch[1].length + 1) || '/';
-    // Set locale BEFORE rewrite so it persists through context.locals
-    context.locals.locale = locale;
-    // Rewrite to the base path — context.rewrite() re-executes middleware,
-    // but the rewritten path won't have a prefix so it falls through to cookie/header detection.
-    // We set a cookie to preserve the locale through the rewrite.
-    context.cookies.set('locale', locale, { path: '/', maxAge: 60 * 60 * 24 * 365 });
-    return context.rewrite(strippedPath);
-  }
-
-  // No URL prefix — fall back to cookie → Accept-Language → default
-  const cookieLocale = context.cookies.get('locale')?.value;
-  if (cookieLocale && SUPPORTED_LOCALES.includes(cookieLocale as Locale)) {
-    locale = cookieLocale as Locale;
+  const urlLocale = context.url.searchParams.get('_locale');
+  if (urlLocale && SUPPORTED_LOCALES.includes(urlLocale as Locale)) {
+    locale = urlLocale as Locale;
   } else {
-    const acceptLang = context.request.headers.get('accept-language') ?? '';
-    const detected = detectPreferredLocale(acceptLang);
-    if (detected) locale = detected;
+    const cookieLocale = context.cookies.get('locale')?.value;
+    if (cookieLocale && SUPPORTED_LOCALES.includes(cookieLocale as Locale)) {
+      locale = cookieLocale as Locale;
+    } else {
+      const acceptLang = context.request.headers.get('accept-language') ?? '';
+      const detected = detectPreferredLocale(acceptLang);
+      if (detected) locale = detected;
+    }
   }
 
   context.locals.locale = locale;
@@ -61,8 +48,8 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
   const response = await next();
 
-  // Use the ORIGINAL pathname (with locale prefix) for cache-control matching
-  const path = strippedPath;
+  // Strip _locale from the path for cache-control matching
+  const path = context.url.pathname;
 
   // Ensure Content-Type includes charset for faster browser parsing
   const contentType = response.headers.get('Content-Type');
@@ -71,8 +58,8 @@ export const onRequest = defineMiddleware(async (context, next) => {
   }
 
   // --- CDN Cache-Control headers ---
-  // With URL-based localization, each locale has a unique URL = unique cache key.
-  // No Vary: Cookie needed since the URL determines the locale.
+  // With URL-based localization, /fr/recipes/slug and /recipes/slug are different
+  // Vercel CDN cache keys. No Vary header needed.
   if (!path.startsWith('/api/') && response.status < 400) {
     if (path.match(/^\/(recipes|blog)\/[^/]+/)) {
       response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
