@@ -136,7 +136,7 @@ export default function ScalableIngredients({ ingredients, locale = 'en' }: Prop
         <button
           onClick={toggleMeasureSystem}
           className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${
-            measureSystem === 'us' ? 'bg-[#8B3A62] text-white' : 'bg-slate-100 text-slate-600'
+            measureSystem === 'us' ? 'bg-berry text-white' : 'bg-slate-100 text-slate-600'
           }`}
         >
           {MEASUREMENT_LABELS.us[locale]}
@@ -144,7 +144,7 @@ export default function ScalableIngredients({ ingredients, locale = 'en' }: Prop
         <button
           onClick={toggleMeasureSystem}
           className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${
-            measureSystem === 'metric' ? 'bg-[#8B3A62] text-white' : 'bg-slate-100 text-slate-600'
+            measureSystem === 'metric' ? 'bg-berry text-white' : 'bg-slate-100 text-slate-600'
           }`}
         >
           {MEASUREMENT_LABELS.metric[locale]}
@@ -193,7 +193,7 @@ export default function ScalableIngredients({ ingredients, locale = 'en' }: Prop
                     <span className="flex-shrink-0 w-5 h-5 mt-0.5 rounded-full border-2 border-[#F4B8C1]/40" />
                     <div className="flex-1">
                       <span className="font-medium text-slate-700">{ingredient.name}</span>
-                      <span className={`ml-2 text-sm ${isChanged ? 'text-[#8B3A62] font-medium' : 'text-slate-500'}`}>
+                      <span className={`ml-2 text-sm ${isChanged ? 'text-berry font-medium' : 'text-slate-500'}`}>
                         {displayAmount}{displayUnit ? ` ${displayUnit}` : ''}
                       </span>
                       {isScaled && measureSystem === 'us' && (

@@ -87,15 +87,15 @@ const filterLabels = {
   <section class="py-12 md:py-16">
     <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
-        <h1 class="font-display text-4xl md:text-5xl font-bold mb-4" style="color: #5C3D2E;">
+        <h1 class="font-display text-4xl md:text-5xl font-bold mb-4 text-chocolate">
           {t('recipes.allRecipes', locale)}
         </h1>
-        <p class="max-w-lg mx-auto" style="color: #64748B;">
+        <p class="max-w-lg mx-auto text-slate-600">
           {t(total !== 1 ? 'recipes.countLabelPlural' : 'recipes.countLabelSingular', locale).replace('{count}', String(total))}
         </p>
       </div>
 
-      <h2 class="font-display text-2xl font-bold mb-6" style="color: #5C3D2E;">{t('recipes.browseAll', locale)}</h2>
+      <h2 class="font-display text-2xl font-bold mb-6 text-chocolate">{t('recipes.browseAll', locale)}</h2>
 
       <RecipeFilters
         client:load
