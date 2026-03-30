@@ -11,17 +11,26 @@ export const onRequest = defineMiddleware(async (context, next) => {
   const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
   const pathname = context.url.pathname;
 
-  // --- i18n: detect locale from URL, then cookie, then Accept-Language ---
-  // Priority: 1) URL prefix (/fr/, /es/, etc.)  2) cookie  3) Accept-Language  4) default
+  // --- i18n: detect locale from URL, then rewrite header, then cookie, then Accept-Language ---
   let locale: Locale = DEFAULT_LOCALE;
-  let strippedPath = pathname;
 
-  const prefixMatch = pathname.match(LOCALE_PREFIX_RE);
-  if (prefixMatch) {
-    locale = prefixMatch[1] as Locale;
-    // Strip the locale prefix: /fr/recipes/slug → /recipes/slug
-    strippedPath = pathname.slice(prefixMatch[1].length + 1) || '/';
+  // Check if this is a rewritten request (locale passed via header from previous middleware run)
+  const rewrittenLocale = context.request.headers.get('x-locale');
+  if (rewrittenLocale && SUPPORTED_LOCALES.includes(rewrittenLocale as Locale)) {
+    locale = rewrittenLocale as Locale;
   } else {
+    // Check URL for locale prefix
+    const prefixMatch = pathname.match(LOCALE_PREFIX_RE);
+    if (prefixMatch) {
+      locale = prefixMatch[1] as Locale;
+      const strippedPath = pathname.slice(prefixMatch[1].length + 1) || '/';
+      context.locals.locale = locale;
+      // Rewrite to the base path, passing locale via header
+      return context.rewrite(new Request(new URL(strippedPath, context.url), {
+        headers: { ...Object.fromEntries(context.request.headers.entries()), 'x-locale': locale },
+      }));
+    }
+
     // No URL prefix — fall back to cookie → Accept-Language → default
     const cookieLocale = context.cookies.get('locale')?.value;
     if (cookieLocale && SUPPORTED_LOCALES.includes(cookieLocale as Locale)) {
@@ -54,12 +63,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
   context.locals.supabase = supabase;
 
-  // --- Rewrite locale-prefixed URLs to base path ---
-  // /fr/recipes/banana-bread → renders /recipes/banana-bread with locale='fr'
-  // Uses next(path) which rewrites without re-executing middleware
-  const response = prefixMatch
-    ? await next(strippedPath)
-    : await next();
+  const response = await next();
 
   // Use the ORIGINAL pathname (with locale prefix) for cache-control matching
   const path = strippedPath;
