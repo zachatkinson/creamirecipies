@@ -7,17 +7,21 @@ export const onRequest = defineMiddleware(async (context, next) => {
   const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 
   // --- i18n: detect locale from URL prefix, then cookie, then Accept-Language ---
-  const LOCALE_PREFIX_RE = /^\/(fr|es|de|pt)(\/|$)/;
+  const LOCALE_PREFIX_RE = /^\/(fr|es|de|pt)(\/.*|$)/;
   const pathname = context.url.pathname;
   let locale: Locale = DEFAULT_LOCALE;
 
   const prefixMatch = pathname.match(LOCALE_PREFIX_RE);
   if (prefixMatch) {
-    // URL has locale prefix: /fr/recipes/slug
     locale = prefixMatch[1] as Locale;
     context.locals.locale = locale;
-    // Strip prefix and rewrite — next(path) does NOT re-execute middleware
-    const strippedPath = pathname.slice(prefixMatch[1].length + 1) || '/';
+    // Strip locale prefix: /fr/recipes/slug → /recipes/slug, /fr → /, /fr/ → /
+    let strippedPath = pathname.slice(prefixMatch[1].length + 1);
+    if (!strippedPath || strippedPath === '/') strippedPath = '/';
+    // Redirect trailing-slash bare locale (/fr/) to clean form (/fr)
+    if (pathname === `/${locale}/`) {
+      return context.redirect(`/${locale}`, 301);
+    }
     return next(strippedPath);
   }
 
