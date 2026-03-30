@@ -49,6 +49,7 @@ const hasMore = posts.length < total;
       {posts.length > 0 ? (
         <>
           <ScrollReveal animation="stagger" staggerAmount={0.08}>
+          <div id="blog-live" aria-live="polite" aria-atomic="true" class="sr-only"></div>
           <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
               <BlogPostCard post={post} headingLevel="h2" />
@@ -92,6 +93,7 @@ const hasMore = posts.length < total;
   const btn = document.getElementById('load-more-posts') as HTMLButtonElement | null;
   if (btn) {
     const grid = document.getElementById('blog-grid');
+    const liveRegion = document.getElementById('blog-live');
     let page = parseInt(btn.dataset.page ?? '2');
     const total = parseInt(btn.dataset.total ?? '0');
     let loaded = parseInt(btn.dataset.loaded ?? '0');
@@ -137,6 +139,11 @@ const hasMore = posts.length < total;
 
         loaded += data.posts.length;
         page++;
+
+        // Announce to screen readers
+        if (liveRegion) {
+          liveRegion.textContent = `${data.posts.length} more posts loaded. Showing ${loaded} of ${total}.`;
+        }
 
         if (loaded >= total) {
           btn.remove();

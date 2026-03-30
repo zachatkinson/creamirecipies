@@ -103,6 +103,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [facets, setFacets] = useState<Facets>(initialFacets ?? {});
+  const [liveMessage, setLiveMessage] = useState('');
 
   // Filter state
   const [query, setQuery] = useState('');
@@ -154,10 +155,16 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
       const res = await fetch(`/api/recipes?${params.toString()}`, { signal: controller.signal });
       if (!res.ok) throw new Error('API error');
       const data = await res.json();
+      const prevCount = append ? recipes.length : 0;
       setRecipes((prev) => append ? [...prev, ...data.recipes] : data.recipes);
       setTotal(data.total);
       setPage(pageNum);
       if (data.facets) setFacets(data.facets);
+      // Announce to screen readers
+      const newCount = data.recipes.length;
+      setLiveMessage(append
+        ? `${newCount} more recipes loaded. Showing ${prevCount + newCount} of ${data.total}.`
+        : `${data.total} recipes found.`);
     } catch (err) {
       if ((err as Error).name !== 'AbortError') {
         console.warn('Failed to fetch recipes:', err);
@@ -350,6 +357,8 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
 
   return (
     <div>
+      {/* Screen reader announcements for dynamic content */}
+      <div aria-live="polite" aria-atomic="true" className="sr-only">{liveMessage}</div>
       {/* Search + Sort Bar */}
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
         <div className="relative flex-1">
