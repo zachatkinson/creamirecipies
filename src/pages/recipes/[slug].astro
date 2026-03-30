@@ -4,7 +4,6 @@ import ScalableIngredients from '../../components/recipe/ScalableIngredients';
 import StepCard from '../../components/recipe/StepCard.astro';
 import ShareButtons from '../../components/recipe/ShareButtons.astro';
 import RatingStars from '../../components/recipe/RatingStars.astro';
-import ScrollReveal from '../../components/animations/ScrollReveal.astro';
 import AdUnit from '../../components/ads/AdUnit.astro';
 import RecipeCard from '../../components/recipe/RecipeCard.astro';
 import NutritionInfo from '../../components/recipe/NutritionInfo.astro';
@@ -185,7 +184,6 @@ const totalTimeLabel = totalTime >= 60
   <!-- Hero -->
   <section class="relative bg-gradient-to-b from-cream to-white">
     <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
-      <ScrollReveal animation="fade-up">
         <!-- Breadcrumb -->
         <nav class="flex items-center gap-2 text-sm text-slate-600 mb-6">
           <a href="/" class="hover:text-berry transition-colors">{t('breadcrumb.home', locale)}</a>
@@ -340,7 +338,6 @@ const totalTimeLabel = totalTime >= 60
 
           </div>
         </div>
-      </ScrollReveal>
     </div>
   </section>
 
@@ -378,7 +375,6 @@ const totalTimeLabel = totalTime >= 60
   <!-- {ui("beforeYouBegin", locale)} -->
   <section class="py-6">
     <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
-      <ScrollReveal animation="scale" delay={0.1}>
       <div class="rounded-2xl p-6 md:p-8 border-2 border-mint bg-gradient-to-br from-mint/5 to-cream shadow-sm">
         <h2 class="font-display text-xl font-bold text-chocolate mb-5 flex items-center gap-2">
           <svg class="w-6 h-6 text-mint-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -452,7 +448,6 @@ const totalTimeLabel = totalTime >= 60
           </div>
         )}
       </div>
-      </ScrollReveal>
     </div>
   </section>
 
@@ -465,7 +460,6 @@ const totalTimeLabel = totalTime >= 60
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
         <!-- Sidebar: Scalable Ingredients + Ad -->
         <aside class="lg:col-span-1">
-          <ScrollReveal animation="slide-left" delay={0.1}>
           <div class="sticky top-24 space-y-6">
             <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
               <h2 class="font-display text-xl font-bold text-chocolate mb-5">{ui("ingredients", locale)}</h2>
@@ -481,7 +475,6 @@ const totalTimeLabel = totalTime >= 60
             <!-- Ad: sidebar medium rectangle (sticky with ingredients) -->
             <AdUnit size="medium-rectangle" slot="recipe-sidebar" />
           </div>
-          </ScrollReveal>
         </aside>
 
         <!-- Main: Steps -->
@@ -509,9 +502,7 @@ const totalTimeLabel = totalTime >= 60
                 hint: stepTrans.hint ?? step.hint,
               } : step;
               return (
-                <ScrollReveal animation="fade-up" delay={step.step_number * 0.05}>
                   <StepCard step={translatedStep} totalSteps={recipe.steps.length} />
-                </ScrollReveal>
               );
             })}
           </div>
@@ -547,7 +538,6 @@ const totalTimeLabel = totalTime >= 60
 
           <!-- FAQ Section -->
           {recipeFaqs.length > 0 && (
-            <ScrollReveal animation="fade-up" delay={0.1}>
             <div class="print-hide mt-10 pt-8 border-t border-slate-100">
               <h2 class="font-display text-xl font-bold text-chocolate mb-4">{ui("commonQuestions", locale)}</h2>
               <div class="space-y-2">
@@ -566,7 +556,6 @@ const totalTimeLabel = totalTime >= 60
                 ))}
               </div>
             </div>
-            </ScrollReveal>
           )}
         </div>
       </div>
@@ -577,18 +566,14 @@ const totalTimeLabel = totalTime >= 60
   {similarRecipes.length > 0 && (
     <section class="py-10 md:py-16 bg-cream/30" aria-labelledby="similar-recipes-heading">
       <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollReveal>
           <h2 id="similar-recipes-heading" class="font-display text-2xl font-bold text-chocolate mb-8 text-center">
             {ui("youMayAlsoLike", locale)}
           </h2>
-        </ScrollReveal>
-        <ScrollReveal animation="stagger" staggerAmount={0.1}>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {similarRecipes.map((sr) => (
               <RecipeCard recipe={sr} />
             ))}
           </div>
-        </ScrollReveal>
       </div>
     </section>
   )}
