@@ -11,7 +11,7 @@ const { step, totalSteps } = Astro.props;
 const locale = Astro.locals.locale;
 ---
 
-<div class="step-card group relative pl-12 pb-8" data-step={step.step_number}>
+<div id={`step-${step.step_number}`} class="step-card group relative pl-12 pb-8" data-step={step.step_number}>
   <!-- Timeline connector -->
   {step.step_number < totalSteps && (
     <div class="absolute left-[1.15rem] top-10 bottom-0 w-0.5 bg-gradient-to-b from-blush to-lavender/30" />
