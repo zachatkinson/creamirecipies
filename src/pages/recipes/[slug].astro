@@ -15,12 +15,13 @@ import { supabase } from '../../lib/supabase';
 import { getRecipeBySlug, getCreamiModels } from '../../lib/recipes';
 import { buildRecipeJsonLd, buildRecipeFaqJsonLd, generateRecipeFaqs } from '../../lib/seo';
 import { getRecipeTranslation, applyTranslation, getIngredientTranslations, getStepTranslations, ui } from '../../lib/translations';
-import { t } from '../../i18n';
+import { t, localePath } from '../../i18n';
 import { detectAllergens } from '../../lib/allergens';
 import { DIFFICULTY_COLORS } from '../../lib/blog';
 import { calculateNutrition } from '../../lib/nutrition';
 import { getSimilarRecipes } from '../../lib/recommendations';
 import { buildRecipeImageSrcset } from '../../lib/images';
+const lp = (path: string) => localePath(path, locale);
 
 const { slug } = Astro.params;
 const locale = Astro.locals.locale;
@@ -117,9 +118,9 @@ const totalTimeLabel = totalTime >= 60
       <ScrollReveal animation="fade-up">
         <!-- Breadcrumb -->
         <nav class="flex items-center gap-2 text-sm text-slate-600 mb-6" aria-label="Breadcrumb">
-          <a href="/" class="hover:text-berry transition-colors">{t('breadcrumb.home', locale)}</a>
+          <a href={lp('/')} class="hover:text-berry transition-colors">{t('breadcrumb.home', locale)}</a>
           <span>/</span>
-          <a href="/recipes" class="hover:text-berry transition-colors">{t('breadcrumb.recipes', locale)}</a>
+          <a href={lp('/recipes')} class="hover:text-berry transition-colors">{t('breadcrumb.recipes', locale)}</a>
           <span>/</span>
           <span class="text-slate-600">{recipe.title}</span>
         </nav>
@@ -461,7 +462,7 @@ const totalTimeLabel = totalTime >= 60
                   const paramKey = cat.type === 'base_type' ? 'base' : cat.type === 'flavor_profile' ? 'flavor' : 'dietary';
                   return (
                     <a
-                      href={`/recipes?${paramKey}=${cat.slug}`}
+                      href={lp(`/recipes?${paramKey}=${cat.slug}`)}
                       class="px-3 py-1 bg-blush/15 text-berry text-xs font-medium rounded-full hover:bg-blush/25 transition-colors"
                     >
                       {ui(cat.name, locale)}

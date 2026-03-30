@@ -4,10 +4,11 @@ import RecipeCard from '../components/recipe/RecipeCard.astro';
 import ScrollReveal from '../components/animations/ScrollReveal.astro';
 import { supabase } from '../lib/supabase';
 import { getFeaturedRecipes } from '../lib/recipes';
-import { t } from '../i18n';
+import { t, localePath } from '../i18n';
 import { translateRecipeArray } from '../lib/translations';
 
 const locale = Astro.locals.locale;
+const lp = (path: string) => localePath(path, locale);
 const recommendations = await getFeaturedRecipes(supabase, 3);
 await translateRecipeArray(supabase, recommendations as Record<string, unknown>[], locale);
 ---
@@ -26,10 +27,10 @@ await translateRecipeArray(supabase, recommendations as Record<string, unknown>[
       </ScrollReveal>
       <ScrollReveal animation="fade-up" delay={0.3}>
         <div class="flex justify-center gap-4">
-          <a href="/" class="px-6 py-3 bg-berry text-white font-medium rounded-full hover:bg-berry/90 transition-colors">
+          <a href={lp('/')} class="px-6 py-3 bg-berry text-white font-medium rounded-full hover:bg-berry/90 transition-colors">
             {t('notFound.goHome', locale)}
           </a>
-          <a href="/recipes" class="px-6 py-3 border border-slate-200 text-slate-600 font-medium rounded-full hover:bg-slate-50 transition-colors">
+          <a href={lp('/recipes')} class="px-6 py-3 border border-slate-200 text-slate-600 font-medium rounded-full hover:bg-slate-50 transition-colors">
             {t('notFound.browseRecipes', locale)}
           </a>
         </div>

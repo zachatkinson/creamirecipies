@@ -1,5 +1,6 @@
 import { DIFFICULTY_COLORS } from '../../lib/blog';
 import { buildRecipeImageSrcset } from '../../lib/images';
+import { localePath, type Locale } from '../../i18n';
 import { useRecipeFilters, type RecipeData, type FilterConfig, type Facets } from '../../hooks/useRecipeFilters';
 
 interface Labels {
@@ -262,7 +263,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
               {f.recipes.map((recipe) => (
                 <a
                   key={recipe.id}
-                  href={`/recipes/${recipe.slug}`}
+                  href={localePath(`/recipes/${recipe.slug}`, (locale ?? 'en') as Locale)}
                   className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="aspect-[4/3] bg-cream-dark overflow-hidden">

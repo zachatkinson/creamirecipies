@@ -90,6 +90,7 @@ const hasMore = posts.length < total;
 
 <script>
   import { renderBlogPostCardHtml, CARD_LINK_CLASS } from '../../lib/card-html';
+  import { localePath, type Locale } from '../../i18n';
 
   const btn = document.getElementById('load-more-posts') as HTMLButtonElement | null;
   if (btn) {
@@ -110,7 +111,7 @@ const hasMore = posts.length < total;
 
         for (const post of data.posts) {
           const card = document.createElement('a');
-          card.href = `/blog/${post.slug}`;
+          card.href = localePath(`/blog/${post.slug}`, dateLocale as Locale);
           card.className = CARD_LINK_CLASS;
           card.innerHTML = renderBlogPostCardHtml(post, dateLocale);
           grid?.appendChild(card);

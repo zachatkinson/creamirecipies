@@ -1,6 +1,6 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 import type { Locale } from '../i18n';
-import { t } from '../i18n';
+import { t, localePath } from '../i18n';
 import { ui } from './translations';
 
 const AMAZON_TAG = import.meta.env.PUBLIC_AMAZON_TAG || 'eatcreami03-20';
@@ -130,7 +130,7 @@ function renderRecipeCard(recipe: RecipeShortcodeData, translation: RecipeShortc
   const stars = renderStars(recipe.avg_rating);
   const prepHtml = recipe.prep_time_minutes ? `<span>⏱ ${recipe.prep_time_minutes}m ${prepLabel}</span>` : '';
 
-  return `<a href="/recipes/${recipe.slug}" class="not-prose recipe-card group block relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline my-4"><div class="aspect-[4/3] bg-cream-dark overflow-hidden">${imageHtml}</div><div class="p-5"><div class="flex items-center gap-2 mb-2"><span style="${diffStyle}" class="text-xs font-medium px-2.5 py-0.5 rounded-full">${diffLabel}</span><span class="text-xs text-slate-600">${baseLabel}</span></div><h3 class="font-display text-lg font-bold text-chocolate group-hover:text-berry transition-colors line-clamp-2 mb-1.5">${title}</h3><p class="text-sm text-slate-600 line-clamp-2 mb-3">${desc}</p><div class="flex items-center justify-between pt-3 border-t border-slate-100"><div class="flex items-center gap-2">${stars}<span class="text-xs text-slate-600">(${recipe.rating_count})</span></div><div class="flex items-center gap-3 text-xs text-slate-600">${prepHtml}</div></div></div></a>`;
+  return `<a href="${localePath(`/recipes/${recipe.slug}`, locale)}" class="not-prose recipe-card group block relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline my-4"><div class="aspect-[4/3] bg-cream-dark overflow-hidden">${imageHtml}</div><div class="p-5"><div class="flex items-center gap-2 mb-2"><span style="${diffStyle}" class="text-xs font-medium px-2.5 py-0.5 rounded-full">${diffLabel}</span><span class="text-xs text-slate-600">${baseLabel}</span></div><h3 class="font-display text-lg font-bold text-chocolate group-hover:text-berry transition-colors line-clamp-2 mb-1.5">${title}</h3><p class="text-sm text-slate-600 line-clamp-2 mb-3">${desc}</p><div class="flex items-center justify-between pt-3 border-t border-slate-100"><div class="flex items-center gap-2">${stars}<span class="text-xs text-slate-600">(${recipe.rating_count})</span></div><div class="flex items-center gap-3 text-xs text-slate-600">${prepHtml}</div></div></div></a>`;
 }
 
 function renderStars(rating: number): string {

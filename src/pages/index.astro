@@ -6,7 +6,7 @@ import AdUnit from '../components/ads/AdUnit.astro';
 import HeroCanvas from '../components/animations/HeroCanvas';
 import { supabase } from '../lib/supabase';
 import { getCategories } from '../lib/recipes';
-import { t } from '../i18n';
+import { t, localePath } from '../i18n';
 import { ui, translateRecipeArray, translatePostArray } from '../lib/translations';
 
 const locale = Astro.locals.locale;
@@ -63,6 +63,7 @@ await translateRecipeArray(supabase, recipes, locale);
 await translatePostArray(supabase, posts, locale);
 
 import BlogPostCard from '../components/blog/BlogPostCard.astro';
+const lp = (path: string) => localePath(path, locale);
 ---
 
 <BaseLayout title="Home">
@@ -92,7 +93,7 @@ import BlogPostCard from '../components/blog/BlogPostCard.astro';
         <ScrollReveal animation="fade-up" delay={0.3}>
           <div class="flex flex-wrap gap-4">
             <a
-              href="/recipes"
+              href={lp('/recipes')}
               class="px-8 py-3.5 bg-berry text-white font-semibold rounded-full hover:bg-berry/90 transition-colors shadow-lg shadow-berry/25"
             >
               {t('home.browseRecipes', locale)}
@@ -133,14 +134,14 @@ import BlogPostCard from '../components/blog/BlogPostCard.astro';
         <div class="flex flex-wrap justify-center gap-3">
           {baseTypes.map((cat) => (
             <a
-              href={`/recipes?base=${cat.slug}`}
+              href={lp(`/recipes?base=${cat.slug}`)}
               class="px-5 py-2.5 bg-white rounded-full text-sm font-medium text-slate-600 hover:text-berry hover:bg-blush/15 border border-slate-200 hover:border-blush transition-all"
             >
               {ui(cat.name, locale)}
             </a>
           ))}
           <a
-            href="/recipes?tag=soft-serve"
+            href={lp('/recipes?tag=soft-serve')}
             class="px-5 py-2.5 bg-white rounded-full text-sm font-medium text-slate-600 hover:text-berry hover:bg-blush/15 border border-slate-200 hover:border-blush transition-all"
           >
             {ui('Soft Serve', locale)}
@@ -177,7 +178,7 @@ import BlogPostCard from '../components/blog/BlogPostCard.astro';
           <span class="text-5xl mb-4 block">🍨</span>
           <h3 class="font-display text-xl font-bold text-chocolate mb-2">{t('home.comingSoon', locale)}</h3>
           <p class="text-slate-600 mb-6">{t('home.comingSoonDesc', locale)}</p>
-          <a href="/recipes" class="inline-block px-6 py-3 bg-berry text-white font-medium rounded-full hover:bg-berry/90 transition-colors">
+          <a href={lp('/recipes')} class="inline-block px-6 py-3 bg-berry text-white font-medium rounded-full hover:bg-berry/90 transition-colors">
             {t('home.browseAll', locale)}
           </a>
         </div>
@@ -186,7 +187,7 @@ import BlogPostCard from '../components/blog/BlogPostCard.astro';
       {recipes.length > 0 && (
         <div class="text-center mt-10">
           <a
-            href="/recipes"
+            href={lp('/recipes')}
             class="inline-flex items-center gap-2 px-6 py-3 text-berry font-medium hover:bg-blush/10 rounded-full transition-colors"
           >
             {t('home.viewAll', locale)}
@@ -230,7 +231,7 @@ import BlogPostCard from '../components/blog/BlogPostCard.astro';
 
         <div class="text-center mt-10">
           <a
-            href="/blog"
+            href={lp('/blog')}
             class="inline-flex items-center gap-2 px-6 py-3 text-berry font-medium hover:bg-blush/10 rounded-full transition-colors"
           >
             {t('home.viewAllPosts', locale)}
@@ -303,7 +304,7 @@ import BlogPostCard from '../components/blog/BlogPostCard.astro';
             {t('home.ctaDescription', locale)}
           </p>
           <a
-            href="/recipes"
+            href={lp('/recipes')}
             class="inline-block px-8 py-3.5 bg-white text-berry font-semibold rounded-full hover:bg-cream transition-colors shadow-lg"
           >
             {t('home.ctaButton', locale)}

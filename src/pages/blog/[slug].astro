@@ -9,7 +9,7 @@ import { expandShortcodes } from '../../lib/shortcodes';
 import { buildBlogPostingJsonLd, type BlogPostForJsonLd } from '../../lib/seo';
 import { CATEGORY_COLORS } from '../../lib/blog';
 import { ui, translatePostNavigation } from '../../lib/translations';
-import { t } from '../../i18n';
+import { t, localePath } from '../../i18n';
 import { formatPublishDate } from '../../lib/formatting';
 import BlogPostCard from '../../components/blog/BlogPostCard.astro';
 
@@ -17,6 +17,7 @@ export const prerender = false;
 
 const { slug } = Astro.params;
 const locale = Astro.locals.locale;
+const lp = (path: string) => localePath(path, locale);
 const post = await getPostBySlug(supabase, slug!);
 
 if (!post) {
@@ -63,9 +64,9 @@ const breadcrumbs = [
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Breadcrumb -->
       <nav class="flex items-center gap-2 text-sm text-slate-600 mb-8" aria-label="Breadcrumb">
-        <a href="/" class="hover:text-berry transition-colors">{t('breadcrumb.home', locale)}</a>
+        <a href={lp('/')} class="hover:text-berry transition-colors">{t('breadcrumb.home', locale)}</a>
         <span aria-hidden="true">/</span>
-        <a href="/blog" class="hover:text-berry transition-colors">{t('blog.title', locale)}</a>
+        <a href={lp('/blog')} class="hover:text-berry transition-colors">{t('blog.title', locale)}</a>
         <span aria-hidden="true">/</span>
         <span class="text-slate-700 truncate" aria-current="page">{post.title}</span>
       </nav>
@@ -131,7 +132,7 @@ const breadcrumbs = [
         <nav class="mt-12 pt-8 border-t border-slate-100" aria-label="Article navigation">
           <div class="flex justify-between gap-6">
             {prevPost ? (
-              <a href={`/blog/${prevPost.slug}`} class="group flex-1 min-w-0">
+              <a href={lp(`/blog/${prevPost.slug}`)} class="group flex-1 min-w-0">
                 <span class="text-xs font-medium text-slate-500 uppercase tracking-wider">{ui('previousArticle', locale)}</span>
                 <p class="text-sm font-medium text-chocolate group-hover:text-berry transition-colors truncate mt-1">
                   {prevPost.title}
@@ -139,7 +140,7 @@ const breadcrumbs = [
               </a>
             ) : <div class="flex-1" />}
             {nextPost ? (
-              <a href={`/blog/${nextPost.slug}`} class="group flex-1 min-w-0 text-right">
+              <a href={lp(`/blog/${nextPost.slug}`)} class="group flex-1 min-w-0 text-right">
                 <span class="text-xs font-medium text-slate-500 uppercase tracking-wider">{ui('nextArticle', locale)}</span>
                 <p class="text-sm font-medium text-chocolate group-hover:text-berry transition-colors truncate mt-1">
                   {nextPost.title}

@@ -2,7 +2,7 @@
 import { CATEGORY_COLORS } from '../../lib/blog';
 import { buildBlogImageSrcset } from '../../lib/images';
 import { formatPublishDate } from '../../lib/formatting';
-import { t } from '../../i18n';
+import { t, localePath } from '../../i18n';
 
 interface Props {
   post: Record<string, unknown>;
@@ -20,7 +20,7 @@ const imageData = post.hero_image_url
 ---
 
 <a
-  href={`/blog/${post.slug}`}
+  href={localePath(`/blog/${post.slug}`, locale)}
   class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
 >
   <div class="aspect-[16/9] bg-cream-dark overflow-hidden">
