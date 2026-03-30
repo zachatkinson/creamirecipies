@@ -20,7 +20,7 @@ const imageData = recipe.hero_image_url
 
 <a
   href={localePath(`/recipes/${recipe.slug}`, locale)}
-  class="recipe-card group block relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+  class="recipe-card group flex flex-col relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
 >
   <!-- Sponsored Badge -->
   {recipe.is_sponsored && (
@@ -53,7 +53,7 @@ const imageData = recipe.hero_image_url
   </div>
 
   <!-- Content -->
-  <div class="p-5">
+  <div class="p-5 flex flex-col flex-1">
     <!-- Meta -->
     <div class="flex items-center gap-2 mb-2">
       <span class:list={['text-xs font-medium px-2.5 py-0.5 rounded-full', difficultyColors[recipe.difficulty]]}>
@@ -68,12 +68,12 @@ const imageData = recipe.hero_image_url
     </h3>
 
     <!-- Description -->
-    <p class="text-sm text-slate-600 line-clamp-2 mb-3">
+    <p class="text-sm text-slate-600 line-clamp-2 mb-3 flex-1">
       {recipe.description}
     </p>
 
-    <!-- Footer -->
-    <div class="flex items-center justify-between pt-3 border-t border-slate-100">
+    <!-- Footer (always at bottom) -->
+    <div class="flex items-center justify-between pt-3 border-t border-slate-100 mt-auto">
       <div class="flex items-center gap-2">
         <RatingStars rating={recipe.avg_rating} size="sm" />
         <span class="text-xs text-slate-600">({recipe.rating_count})</span>

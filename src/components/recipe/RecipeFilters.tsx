@@ -264,7 +264,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
                 <a
                   key={recipe.id}
                   href={localePath(`/recipes/${recipe.slug}`, (locale ?? 'en') as Locale)}
-                  className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="aspect-[4/3] bg-cream-dark overflow-hidden">
                     {recipe.hero_image_url ? (() => {
@@ -274,7 +274,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
                       <div className="w-full h-full flex items-center justify-center text-5xl bg-gradient-to-br from-blush/20 to-lavender/20">🍦</div>
                     )}
                   </div>
-                  <div className="p-5">
+                  <div className="p-5 flex flex-col flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${DIFFICULTY_COLORS[recipe.difficulty] ?? 'bg-vanilla/40 text-chocolate'}`}>
                         {recipe.difficulty === 'beginner' ? l.beginner : recipe.difficulty === 'intermediate' ? l.intermediate : l.advanced}
@@ -284,8 +284,8 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
                     <h3 className="text-lg font-bold text-chocolate group-hover:text-berry transition-colors line-clamp-2 mb-1.5" style={{ fontFamily: 'var(--font-display)' }}>
                       {recipe.title}
                     </h3>
-                    <p className="text-sm text-slate-600 line-clamp-2 mb-3">{recipe.description}</p>
-                    <div className="flex items-center justify-between pt-3 border-t border-slate-100">
+                    <p className="text-sm text-slate-600 line-clamp-2 mb-3 flex-1">{recipe.description}</p>
+                    <div className="flex items-center justify-between pt-3 border-t border-slate-100 mt-auto">
                       <div className="flex items-center gap-1.5">
                         <div className="flex">
                           {[1, 2, 3, 4, 5].map((s) => (
