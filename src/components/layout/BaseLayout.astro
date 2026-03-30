@@ -4,8 +4,6 @@ import Header from './Header.astro';
 import Footer from './Footer.astro';
 
 import { buildWebSiteJsonLd, buildOrganizationJsonLd, buildBreadcrumbJsonLd } from '../../lib/seo';
-import { getAlternateUrls } from '../../i18n';
-
 interface Props {
   title: string;
   description?: string;
@@ -32,7 +30,6 @@ const currentPath = Astro.url.pathname;
 
 const canonicalUrl = new URL(currentPath, Astro.site);
 const fullTitle = title === 'Home' ? 'eatcreami — Ninja Creami Recipes & Frozen Treats' : `${title} | eatcreami`;
-const alternateUrls = getAlternateUrls(siteUrl, currentPath);
 ---
 
 <!doctype html>
@@ -48,11 +45,9 @@ const alternateUrls = getAlternateUrls(siteUrl, currentPath);
     )}
     <link rel="canonical" href={canonicalUrl.href} />
 
-    <!-- Hreflang (i18n: en, fr, es) -->
-    {alternateUrls.map(({ locale, url }) => (
-      <link rel="alternate" hreflang={locale} href={url} />
-    ))}
+    <!-- Hreflang: single URL serves all locales via cookie-based i18n -->
     <link rel="alternate" hreflang="x-default" href={canonicalUrl.href} />
+    <link rel="alternate" hreflang="en" href={canonicalUrl.href} />
 
     <!-- Webmaster verification done via DNS (no meta tags needed) -->
 
