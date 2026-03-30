@@ -8,6 +8,7 @@ import AdUnit from '../../components/ads/AdUnit.astro';
 import ScrollReveal from '../../components/animations/ScrollReveal.astro';
 import RecipeCard from '../../components/recipe/RecipeCard.astro';
 import NutritionInfo from '../../components/recipe/NutritionInfo.astro';
+import RateRecipe from '../../components/recipe/RateRecipe';
 export const prerender = false;
 
 import { supabase } from '../../lib/supabase';
@@ -503,6 +504,20 @@ const totalTimeLabel = totalTime >= 60
           )}
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Rate This Recipe -->
+  <section class="py-8 md:py-12">
+    <div class="max-w-lg mx-auto px-4 sm:px-6 lg:px-8">
+      <ScrollReveal>
+        <RateRecipe
+          client:visible
+          recipeId={recipe.id}
+          initialRating={recipe.avg_rating}
+          initialCount={recipe.rating_count}
+        />
+      </ScrollReveal>
     </div>
   </section>
 
