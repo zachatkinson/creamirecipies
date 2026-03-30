@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev --host",
-    "build": "astro build",
+    "build": "astro build && node scripts/postbuild-locale-routes.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "a11y": "npx axe http://localhost:4321/ http://localhost:4321/recipes http://localhost:4321/about --exit",

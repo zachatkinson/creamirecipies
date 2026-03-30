@@ -22,16 +22,8 @@ export const onRequest = defineMiddleware(async (context, next) => {
     if (pathname === `/${locale}/`) {
       return context.redirect(`/${locale}`, 301);
     }
-    // Rewrite to stripped path. The Vercel catch-all route may inject a 404 status,
-    // so we override it to 200 since the rewrite successfully serves content.
-    const rewrittenResponse = await next(strippedPath);
-    if (rewrittenResponse.status === 404 && rewrittenResponse.headers.get('content-type')?.includes('text/html')) {
-      return new Response(rewrittenResponse.body, {
-        status: 200,
-        headers: rewrittenResponse.headers,
-      });
-    }
-    return rewrittenResponse;
+    // Rewrite to stripped path — next(path) does NOT re-execute middleware
+    return next(strippedPath);
   }
 
   // No URL prefix — check cookie → Accept-Language → default
