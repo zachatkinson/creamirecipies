@@ -6,23 +6,29 @@ export const onRequest = defineMiddleware(async (context, next) => {
   const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
   const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 
-  // --- i18n: detect locale ---
-  // Priority: 1) URL locale param (from Vercel rewrite)  2) cookie  3) Accept-Language  4) default
-  // Vercel rewrites /fr/recipes/slug → /recipes/slug?_locale=fr
+  // --- i18n: detect locale from URL prefix, then cookie, then Accept-Language ---
+  const LOCALE_PREFIX_RE = /^\/(fr|es|de|pt)(\/|$)/;
+  const pathname = context.url.pathname;
   let locale: Locale = DEFAULT_LOCALE;
 
-  const urlLocale = context.url.searchParams.get('_locale');
-  if (urlLocale && SUPPORTED_LOCALES.includes(urlLocale as Locale)) {
-    locale = urlLocale as Locale;
+  const prefixMatch = pathname.match(LOCALE_PREFIX_RE);
+  if (prefixMatch) {
+    // URL has locale prefix: /fr/recipes/slug
+    locale = prefixMatch[1] as Locale;
+    context.locals.locale = locale;
+    // Strip prefix and rewrite — next(path) does NOT re-execute middleware
+    const strippedPath = pathname.slice(prefixMatch[1].length + 1) || '/';
+    return next(strippedPath);
+  }
+
+  // No URL prefix — check cookie → Accept-Language → default
+  const cookieLocale = context.cookies.get('locale')?.value;
+  if (cookieLocale && SUPPORTED_LOCALES.includes(cookieLocale as Locale)) {
+    locale = cookieLocale as Locale;
   } else {
-    const cookieLocale = context.cookies.get('locale')?.value;
-    if (cookieLocale && SUPPORTED_LOCALES.includes(cookieLocale as Locale)) {
-      locale = cookieLocale as Locale;
-    } else {
-      const acceptLang = context.request.headers.get('accept-language') ?? '';
-      const detected = detectPreferredLocale(acceptLang);
-      if (detected) locale = detected;
-    }
+    const acceptLang = context.request.headers.get('accept-language') ?? '';
+    const detected = detectPreferredLocale(acceptLang);
+    if (detected) locale = detected;
   }
 
   context.locals.locale = locale;
