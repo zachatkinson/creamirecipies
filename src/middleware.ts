@@ -11,35 +11,31 @@ export const onRequest = defineMiddleware(async (context, next) => {
   const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
   const pathname = context.url.pathname;
 
-  // --- i18n: detect locale from URL, then rewrite header, then cookie, then Accept-Language ---
+  // --- i18n: detect locale from URL, then cookie, then Accept-Language ---
   let locale: Locale = DEFAULT_LOCALE;
 
-  // Check if this is a rewritten request (locale passed via header from previous middleware run)
-  const rewrittenLocale = context.request.headers.get('x-locale');
-  if (rewrittenLocale && SUPPORTED_LOCALES.includes(rewrittenLocale as Locale)) {
-    locale = rewrittenLocale as Locale;
-  } else {
-    // Check URL for locale prefix
-    const prefixMatch = pathname.match(LOCALE_PREFIX_RE);
-    if (prefixMatch) {
-      locale = prefixMatch[1] as Locale;
-      const strippedPath = pathname.slice(prefixMatch[1].length + 1) || '/';
-      context.locals.locale = locale;
-      // Rewrite to the base path, passing locale via header
-      return context.rewrite(new Request(new URL(strippedPath, context.url), {
-        headers: { ...Object.fromEntries(context.request.headers.entries()), 'x-locale': locale },
-      }));
-    }
+  // Check URL for locale prefix (/fr/, /es/, etc.)
+  const prefixMatch = pathname.match(LOCALE_PREFIX_RE);
+  if (prefixMatch) {
+    locale = prefixMatch[1] as Locale;
+    const strippedPath = pathname.slice(prefixMatch[1].length + 1) || '/';
+    // Set locale BEFORE rewrite so it persists through context.locals
+    context.locals.locale = locale;
+    // Rewrite to the base path — context.rewrite() re-executes middleware,
+    // but the rewritten path won't have a prefix so it falls through to cookie/header detection.
+    // We set a cookie to preserve the locale through the rewrite.
+    context.cookies.set('locale', locale, { path: '/', maxAge: 60 * 60 * 24 * 365 });
+    return context.rewrite(strippedPath);
+  }
 
-    // No URL prefix — fall back to cookie → Accept-Language → default
-    const cookieLocale = context.cookies.get('locale')?.value;
-    if (cookieLocale && SUPPORTED_LOCALES.includes(cookieLocale as Locale)) {
-      locale = cookieLocale as Locale;
-    } else {
-      const acceptLang = context.request.headers.get('accept-language') ?? '';
-      const detected = detectPreferredLocale(acceptLang);
-      if (detected) locale = detected;
-    }
+  // No URL prefix — fall back to cookie → Accept-Language → default
+  const cookieLocale = context.cookies.get('locale')?.value;
+  if (cookieLocale && SUPPORTED_LOCALES.includes(cookieLocale as Locale)) {
+    locale = cookieLocale as Locale;
+  } else {
+    const acceptLang = context.request.headers.get('accept-language') ?? '';
+    const detected = detectPreferredLocale(acceptLang);
+    if (detected) locale = detected;
   }
 
   context.locals.locale = locale;
