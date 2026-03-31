@@ -65,43 +65,28 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
   const l = { ...DEFAULT_LABELS, ...labelsProp };
   const f = useRecipeFilters(initialRecipes, totalRecipes, initialFacets ?? {}, locale);
 
-  // GSAP Flip: capture grid state before recipes change, animate after
-  const flipStateRef = useReactRef<unknown>(null);
+  // Clean fade transition when recipes change
   const gridContainerRef = useReactRef<HTMLDivElement>(null);
-  const gsapRef = useReactRef<{ gsap: typeof import('gsap').default; Flip: unknown } | null>(null);
+  const prevRecipesRef = useReactRef<string>('');
   const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Lazy-load GSAP + Flip on client only
-  useReactEffect(() => {
-    if (prefersReducedMotion) return;
-    Promise.all([import('gsap'), import('gsap/Flip')]).then(([gsapMod, flipMod]) => {
-      const g = gsapMod.default;
-      const F = flipMod.Flip;
-      g.registerPlugin(F);
-      gsapRef.current = { gsap: g, Flip: F };
-    });
-  }, []);
-
-  // Capture Flip state whenever loading starts (before DOM changes)
-  useReactEffect(() => {
-    if (f.loading && gridContainerRef.current && gsapRef.current && !prefersReducedMotion) {
-      const F = gsapRef.current.Flip as typeof import('gsap/Flip').Flip;
-      flipStateRef.current = F.getState(gridContainerRef.current.querySelectorAll('[data-flip-id]'));
-    }
-  }, [f.loading]);
-
-  // Animate after recipes change (DOM has updated)
   useLayoutEffect(() => {
-    if (!flipStateRef.current || !gridContainerRef.current || f.loading || !gsapRef.current || prefersReducedMotion) return;
-    const state = flipStateRef.current;
-    flipStateRef.current = null;
-    const { gsap: g, Flip: F } = gsapRef.current;
-    const FlipPlugin = F as typeof import('gsap/Flip').Flip;
+    if (!gridContainerRef.current || prefersReducedMotion) return;
+    const currentIds = f.recipes.map(r => r.id).join(',');
+    // Skip animation on initial render
+    if (!prevRecipesRef.current) { prevRecipesRef.current = currentIds; return; }
+    // Skip if same results (e.g. load-more append)
+    if (currentIds === prevRecipesRef.current) return;
+    prevRecipesRef.current = currentIds;
 
-    FlipPlugin.from(state as ReturnType<typeof FlipPlugin.getState>, {
-      duration: 0.4,
-      ease: 'power2.out',
-      stagger: 0.02,
+    // Fade in the new grid
+    import('gsap').then(({ default: gsap }) => {
+      const cards = gridContainerRef.current?.querySelectorAll('[data-flip-id]');
+      if (!cards?.length) return;
+      gsap.fromTo(cards,
+        { opacity: 0, y: 15 },
+        { opacity: 1, y: 0, duration: 0.35, stagger: 0.03, ease: 'power2.out' },
+      );
     });
   }, [f.recipes]);
 
