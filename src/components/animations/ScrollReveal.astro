@@ -145,8 +145,10 @@ const {
         ease: easeMap[animation] ?? 'power3.out',
       });
     } else {
-      gsap.from(targets, {
-        ...fromProps,
+      // Below-fold: use fromTo() so opacity animates to 1 regardless of CSS class
+      gsap.fromTo(targets, fromProps, {
+        opacity: 1,
+        y: 0, x: 0, scale: 1,
         duration: prefersReducedMotion ? 0.1 : duration,
         delay,
         stagger: animation === 'stagger' ? stagger : 0,
@@ -155,8 +157,8 @@ const {
           trigger: el,
           start: 'top 88%',
           toggleActions: 'play none none none',
-          onEnter: () => el.classList.remove('scroll-reveal-hidden'),
         },
+        onStart: () => el.classList.remove('scroll-reveal-hidden'),
       });
     }
   });
