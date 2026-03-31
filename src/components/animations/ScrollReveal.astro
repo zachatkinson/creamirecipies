@@ -51,13 +51,6 @@ const {
     const stagger = parseFloat(el.getAttribute('data-stagger') ?? '0.1');
     const duration = parseFloat(el.getAttribute('data-duration') ?? '0.8');
 
-    // Skip animation for above-fold elements — render immediately for faster Speed Index
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0 && animation !== 'parallax') {
-      // Element is already visible in viewport — no need to animate in
-      return;
-    }
-
     // Parallax is a special case — scrub-based, not trigger-based
     if (animation === 'parallax') {
       if (prefersReducedMotion) return;
