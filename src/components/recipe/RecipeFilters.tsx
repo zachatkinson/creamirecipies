@@ -3,8 +3,6 @@ import { DIFFICULTY_COLORS } from '../../lib/blog';
 import { buildRecipeImageSrcset } from '../../lib/images';
 import { localePath, type Locale } from '../../i18n';
 import { useRecipeFilters, type RecipeData, type FilterConfig, type Facets } from '../../hooks/useRecipeFilters';
-import gsap from 'gsap';
-import { Flip } from 'gsap/Flip';
 
 interface Labels {
   baseTypeMap?: Record<string, string>;
@@ -68,35 +66,45 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
   const f = useRecipeFilters(initialRecipes, totalRecipes, initialFacets ?? {}, locale);
 
   // GSAP Flip: capture grid state before recipes change, animate after
-  const flipStateRef = useReactRef<Flip.FlipState | null>(null);
+  const flipStateRef = useReactRef<unknown>(null);
   const gridContainerRef = useReactRef<HTMLDivElement>(null);
+  const gsapRef = useReactRef<{ gsap: typeof import('gsap').default; Flip: unknown } | null>(null);
   const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Register Flip plugin
+  // Lazy-load GSAP + Flip on client only
   useReactEffect(() => {
-    gsap.registerPlugin(Flip);
+    if (prefersReducedMotion) return;
+    Promise.all([import('gsap'), import('gsap/Flip')]).then(([gsapMod, flipMod]) => {
+      const g = gsapMod.default;
+      const F = flipMod.Flip;
+      g.registerPlugin(F);
+      gsapRef.current = { gsap: g, Flip: F };
+    });
   }, []);
 
   // Capture Flip state whenever loading starts (before DOM changes)
   useReactEffect(() => {
-    if (f.loading && gridContainerRef.current && !prefersReducedMotion) {
-      flipStateRef.current = Flip.getState(gridContainerRef.current.querySelectorAll('[data-flip-id]'));
+    if (f.loading && gridContainerRef.current && gsapRef.current && !prefersReducedMotion) {
+      const F = gsapRef.current.Flip as typeof import('gsap/Flip').Flip;
+      flipStateRef.current = F.getState(gridContainerRef.current.querySelectorAll('[data-flip-id]'));
     }
   }, [f.loading]);
 
   // Animate after recipes change (DOM has updated)
   useLayoutEffect(() => {
-    if (!flipStateRef.current || !gridContainerRef.current || f.loading || prefersReducedMotion) return;
+    if (!flipStateRef.current || !gridContainerRef.current || f.loading || !gsapRef.current || prefersReducedMotion) return;
     const state = flipStateRef.current;
     flipStateRef.current = null;
+    const { gsap: g, Flip: F } = gsapRef.current;
+    const FlipPlugin = F as typeof import('gsap/Flip').Flip;
 
-    Flip.from(state, {
+    FlipPlugin.from(state as ReturnType<typeof FlipPlugin.getState>, {
       duration: 0.5,
       ease: 'power2.out',
       stagger: 0.03,
       absolute: true,
-      onEnter: (elements) => gsap.fromTo(elements, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4 }),
-      onLeave: (elements) => gsap.to(elements, { opacity: 0, scale: 0.9, duration: 0.3 }),
+      onEnter: (elements: Element[]) => g.fromTo(elements, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4 }),
+      onLeave: (elements: Element[]) => g.to(elements, { opacity: 0, scale: 0.9, duration: 0.3 }),
     });
   }, [f.recipes]);
 
