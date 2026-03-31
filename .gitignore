@@ -40,6 +40,11 @@ supabase/.branches/
 *.psd
 *.ai
 
+# === Secrets / credentials ===
+secrets.json
+client_secrets.json
+token.json
+
 # === Misc ===
 *.pdf
 .vercel
