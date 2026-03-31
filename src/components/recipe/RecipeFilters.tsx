@@ -67,26 +67,44 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
 
   // Clean fade transition when recipes change
   const gridContainerRef = useReactRef<HTMLDivElement>(null);
-  const prevRecipesRef = useReactRef<string>('');
+  const prevRecipesRef = useReactRef<Set<string>>(new Set());
   const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   useLayoutEffect(() => {
     if (!gridContainerRef.current || prefersReducedMotion) return;
-    const currentIds = f.recipes.map(r => r.id).join(',');
+    const currentIds = new Set(f.recipes.map(r => r.id));
+    const prevIds = prevRecipesRef.current;
     // Skip animation on initial render
-    if (!prevRecipesRef.current) { prevRecipesRef.current = currentIds; return; }
-    // Skip if same results (e.g. load-more append)
-    if (currentIds === prevRecipesRef.current) return;
+    if (!prevIds.size) { prevRecipesRef.current = currentIds; return; }
+    // Skip if identical
+    if (currentIds.size === prevIds.size && [...currentIds].every(id => prevIds.has(id))) return;
+
+    // Find only the NEW cards (for load-more append)
+    const newIds = [...currentIds].filter(id => !prevIds.has(id));
+    const isAppend = newIds.length > 0 && newIds.length < currentIds.size && [...prevIds].every(id => currentIds.has(id));
     prevRecipesRef.current = currentIds;
 
-    // Fade in the new grid
     import('gsap').then(({ default: gsap }) => {
-      const cards = gridContainerRef.current?.querySelectorAll('[data-flip-id]');
-      if (!cards?.length) return;
-      gsap.fromTo(cards,
-        { opacity: 0, y: 15 },
-        { opacity: 1, y: 0, duration: 0.35, stagger: 0.03, ease: 'power2.out' },
-      );
+      if (isAppend) {
+        // Load-more: only animate the newly appended cards
+        const newCards = Array.from(gridContainerRef.current?.querySelectorAll('[data-flip-id]') ?? [])
+          .filter(el => newIds.includes(el.getAttribute('data-flip-id') ?? ''));
+        if (newCards.length) {
+          gsap.fromTo(newCards,
+            { opacity: 0, y: 15 },
+            { opacity: 1, y: 0, duration: 0.35, stagger: 0.03, ease: 'power2.out' },
+          );
+        }
+      } else {
+        // Filter change: animate all cards
+        const cards = gridContainerRef.current?.querySelectorAll('[data-flip-id]');
+        if (cards?.length) {
+          gsap.fromTo(cards,
+            { opacity: 0, y: 15 },
+            { opacity: 1, y: 0, duration: 0.35, stagger: 0.03, ease: 'power2.out' },
+          );
+        }
+      }
     });
   }, [f.recipes]);
 
