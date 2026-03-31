@@ -29,19 +29,19 @@ const hasData = perServing.calories > 0;
     <p class="text-sm font-bold text-chocolate mb-3">{ui('nutritionEstimate', locale)}</p>
     <div class="grid grid-cols-4 gap-3 text-center">
       <div>
-        <div class="text-lg font-bold text-chocolate">{perServing.calories}</div>
+        <div class="text-lg font-bold text-chocolate" data-count-to={perServing.calories}>0</div>
         <div class="text-xs text-slate-600">{ui('calories', locale)}</div>
       </div>
       <div>
-        <div class="text-lg font-bold text-chocolate">{perServing.protein}g</div>
+        <div class="text-lg font-bold text-chocolate" data-count-to={perServing.protein} data-count-suffix="g">0g</div>
         <div class="text-xs text-slate-600">{ui('proteinLabel', locale)}</div>
       </div>
       <div>
-        <div class="text-lg font-bold text-chocolate">{perServing.fat}g</div>
+        <div class="text-lg font-bold text-chocolate" data-count-to={perServing.fat} data-count-suffix="g">0g</div>
         <div class="text-xs text-slate-600">{ui('fatLabel', locale)}</div>
       </div>
       <div>
-        <div class="text-lg font-bold text-chocolate">{perServing.carbs}g</div>
+        <div class="text-lg font-bold text-chocolate" data-count-to={perServing.carbs} data-count-suffix="g">0g</div>
         <div class="text-xs text-slate-600">{ui('carbsLabel', locale)}</div>
       </div>
     </div>

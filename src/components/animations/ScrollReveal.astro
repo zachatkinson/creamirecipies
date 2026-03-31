@@ -1,7 +1,7 @@
 ---
 interface Props {
   class?: string;
-  animation?: 'fade-up' | 'fade-in' | 'slide-left' | 'slide-right' | 'stagger' | 'scale' | 'parallax';
+  animation?: 'fade-up' | 'fade-in' | 'slide-left' | 'slide-right' | 'stagger' | 'scale' | 'parallax' | 'reveal';
   delay?: number;
   staggerAmount?: number;
   duration?: number;
@@ -62,6 +62,23 @@ const {
           start: 'top bottom',
           end: 'bottom top',
           scrub: 0.5,
+        },
+      });
+      return;
+    }
+
+    // Clip-path reveal animation (image wipe)
+    if (animation === 'reveal') {
+      if (prefersReducedMotion) return;
+      gsap.from(el, {
+        clipPath: 'inset(0 0 100% 0)',
+        duration,
+        delay,
+        ease: 'power3.inOut',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 88%',
+          toggleActions: 'play none none none',
         },
       });
       return;

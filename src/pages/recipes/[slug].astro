@@ -154,19 +154,23 @@ const totalTimeLabel = totalTime >= 60
           <!-- Image + Share -->
           <div>
             <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-cream-dark shadow-lg">
-              {recipe.hero_image_url ? (() => {
-                const img = buildRecipeImageSrcset(recipe.hero_image_url as string);
-                return (
-                  <img
-                    src={img.src}
-                    srcset={img.srcset}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
-                    alt={recipe.title}
-                    class="w-full h-full object-cover"
-                    fetchpriority="high"
-                  />
-                );
-              })() : (
+              {recipe.hero_image_url ? (
+                <ScrollReveal animation="parallax">
+                  {(() => {
+                    const img = buildRecipeImageSrcset(recipe.hero_image_url as string);
+                    return (
+                      <img
+                        src={img.src}
+                        srcset={img.srcset}
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+                        alt={recipe.title}
+                        class="w-full h-full object-cover scale-110"
+                        fetchpriority="high"
+                      />
+                    );
+                  })()}
+                </ScrollReveal>
+              ) : (
                 <div class="w-full h-full flex items-center justify-center text-8xl bg-gradient-to-br from-blush/20 to-lavender/20">
                   🍦
                 </div>
@@ -646,12 +650,33 @@ const totalTimeLabel = totalTime >= 60
     document.body.style.overflow = '';
   });
 
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function transitionStep(direction) {
+    if (prefersReducedMotion || !instructionEl) { updateCookMode(); return; }
+    const slideOut = direction === 'next' ? '-30px' : '30px';
+    const slideIn = direction === 'next' ? '30px' : '-30px';
+    instructionEl.style.transition = 'transform 0.2s ease-in, opacity 0.2s ease-in';
+    instructionEl.style.transform = `translateX(${slideOut})`;
+    instructionEl.style.opacity = '0';
+    setTimeout(() => {
+      updateCookMode();
+      instructionEl.style.transition = 'none';
+      instructionEl.style.transform = `translateX(${slideIn})`;
+      requestAnimationFrame(() => {
+        instructionEl.style.transition = 'transform 0.25s ease-out, opacity 0.25s ease-out';
+        instructionEl.style.transform = 'translateX(0)';
+        instructionEl.style.opacity = '1';
+      });
+    }, 200);
+  }
+
   prevBtn?.addEventListener('click', () => {
-    if (currentStep > 0) { currentStep--; updateCookMode(); }
+    if (currentStep > 0) { currentStep--; transitionStep('prev'); }
   });
 
   nextBtn?.addEventListener('click', () => {
-    if (currentStep < steps.length - 1) { currentStep++; updateCookMode(); }
+    if (currentStep < steps.length - 1) { currentStep++; transitionStep('next'); }
     else { closeBtn?.click(); }
   });
 

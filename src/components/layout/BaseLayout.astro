@@ -159,5 +159,60 @@ const fullTitle = title === 'Home' ? 'eatcreami — Ninja Creami Recipes & Froze
         document.querySelectorAll('details').forEach(d => d.setAttribute('open', ''));
       });
     </script>
+
+    <!-- Smooth FAQ accordion transitions -->
+    <script>
+      import { gsap } from 'gsap';
+
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      document.querySelectorAll('details').forEach((details) => {
+        const summary = details.querySelector('summary');
+        const content = details.querySelector('summary + div, summary + p');
+        if (!summary || !content) return;
+
+        summary.addEventListener('click', (e) => {
+          if (prefersReducedMotion) return; // let native behavior handle it
+
+          e.preventDefault();
+          if (details.open) {
+            // Close
+            gsap.to(content, {
+              height: 0, opacity: 0, duration: 0.25, ease: 'power2.inOut',
+              onComplete: () => { details.open = false; gsap.set(content, { clearProps: 'all' }); },
+            });
+          } else {
+            // Open
+            details.open = true;
+            const naturalHeight = content.scrollHeight;
+            gsap.fromTo(content,
+              { height: 0, opacity: 0 },
+              { height: naturalHeight, opacity: 1, duration: 0.3, ease: 'power2.out',
+                onComplete: () => gsap.set(content, { clearProps: 'all' }) },
+            );
+          }
+        });
+      });
+    </script>
+
+    <!-- Magnetic CTA hover (desktop only) -->
+    <script>
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && window.innerWidth >= 768) {
+        document.querySelectorAll('a.magnetic-hover, [data-magnetic]').forEach((el) => {
+          const btn = el as HTMLElement;
+          btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
+          });
+          btn.addEventListener('mouseleave', () => {
+            btn.style.transform = '';
+            btn.style.transition = 'transform 0.3s ease-out';
+            setTimeout(() => { btn.style.transition = ''; }, 300);
+          });
+        });
+      }
+    </script>
   </body>
 </html>
