@@ -155,6 +155,7 @@ const {
           trigger: el,
           start: 'top 88%',
           toggleActions: 'play none none none',
+          onEnter: () => el.classList.remove('scroll-reveal-hidden'),
         },
       });
     }
