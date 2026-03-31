@@ -57,13 +57,14 @@ h1, h2, h3, h4 {
   line-height: 1.2;
 }
 
-/* Prevent flash before GSAP animates — starts hidden, GSAP reveals on scroll.
-   No-JS fallback: if JS doesn't run, the noscript style below makes content visible. */
-.scroll-reveal {
+/* Below-fold scroll-reveal elements start hidden to prevent flicker.
+   Above-fold elements are left visible so GSAP can smoothly animate them.
+   JS applies this class only to elements below the viewport. */
+.scroll-reveal-hidden {
   opacity: 0;
 }
 @media (prefers-reduced-motion: reduce) {
-  .scroll-reveal {
+  .scroll-reveal-hidden {
     opacity: 1;
   }
 }

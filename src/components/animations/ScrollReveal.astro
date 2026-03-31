@@ -45,6 +45,14 @@ const {
     });
   }, 3000);
 
+  // Pre-hide below-fold elements to prevent flicker (above-fold stays visible for smooth fade)
+  document.querySelectorAll('.scroll-reveal').forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top >= window.innerHeight) {
+      el.classList.add('scroll-reveal-hidden');
+    }
+  });
+
   document.querySelectorAll('.scroll-reveal').forEach((el) => {
     const animation = el.getAttribute('data-animation') ?? 'fade-up';
     const delay = parseFloat(el.getAttribute('data-delay') ?? '0');
