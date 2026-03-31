@@ -204,14 +204,11 @@ export default function ScalableIngredients({ ingredients, locale = 'en' }: Prop
                           href={amazonProductUrl(ingredient.amazon_asin!)}
                           target="_blank"
                           rel="noopener noreferrer sponsored"
-                          className="inline-flex items-center ml-1.5 text-slate-400 hover:text-berry transition-colors"
+                          className="inline-flex items-center ml-1.5 px-1.5 py-0.5 text-[10px] font-medium text-slate-400 hover:text-berry bg-slate-50 hover:bg-blush/10 rounded transition-colors"
                           aria-label={`Buy ${ingredient.name} on Amazon`}
-                          title="Buy on Amazon"
                           onClick={(e) => e.stopPropagation()}
                         >
-                          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.12 18.416c-5.9 3.26-12.66.86-16.3-2.95-.37-.39.04-.92.49-.63 4.67 2.74 10.42 4.4 15.46 1.34.75-.38 1.1.5.35.8v.44zm1.02-1.17c-.5-.64-3.3-.3-4.57-.15-.38.04-.44-.29-.1-.53 2.24-1.57 5.9-.86 6.33-.45.43.4-.11 3.24-2.21 4.6-.32.2-.63.1-.49-.18.47-1.2 1.54-3.65 1.04-4.29z"/>
-                          </svg>
+                          buy
                         </a>
                       )}
                       <span className={`ml-2 text-sm ${isChanged ? 'text-berry font-medium' : 'text-slate-500'}`}>
