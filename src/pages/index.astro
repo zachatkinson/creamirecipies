@@ -78,9 +78,9 @@ const lp = (path: string) => localePath(path, locale);
           </span>
         </ScrollReveal>
         <div>
-          <h1 id="hero-title" class="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold text-chocolate leading-tight mb-6">
-            {t('home.heroTitle', locale)}
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blush-dark to-berry">
+          <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold text-chocolate leading-tight mb-6">
+            <span id="hero-title-main">{t('home.heroTitle', locale)}</span>
+            <span id="hero-title-accent" class="text-transparent bg-clip-text bg-gradient-to-r from-blush-dark to-berry" style="opacity:0">
               {t('home.heroTitleAccent', locale)}
             </span>
           </h1>
@@ -324,10 +324,11 @@ const lp = (path: string) => localePath(path, locale);
   gsap.registerPlugin(SplitText);
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const heroTitle = document.getElementById('hero-title');
+  const mainTitle = document.getElementById('hero-title-main');
+  const accentTitle = document.getElementById('hero-title-accent');
 
-  if (heroTitle && !prefersReducedMotion) {
-    const split = SplitText.create(heroTitle, { type: 'words' });
+  if (mainTitle && accentTitle && !prefersReducedMotion) {
+    const split = SplitText.create(mainTitle, { type: 'words' });
     gsap.from(split.words, {
       y: 30,
       opacity: 0,
@@ -336,7 +337,12 @@ const lp = (path: string) => localePath(path, locale);
       ease: 'power3.out',
       delay: 0.15,
     });
-  } else if (heroTitle) {
-    heroTitle.style.opacity = '1';
+    // Animate the gradient accent text separately (no split, just fade up)
+    gsap.fromTo(accentTitle,
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 0.15 + split.words.length * 0.06 },
+    );
+  } else {
+    if (accentTitle) accentTitle.style.opacity = '1';
   }
 </script>

@@ -1,7 +1,10 @@
+import { useRef as useReactRef, useEffect as useReactEffect, useLayoutEffect } from 'react';
 import { DIFFICULTY_COLORS } from '../../lib/blog';
 import { buildRecipeImageSrcset } from '../../lib/images';
 import { localePath, type Locale } from '../../i18n';
 import { useRecipeFilters, type RecipeData, type FilterConfig, type Facets } from '../../hooks/useRecipeFilters';
+import gsap from 'gsap';
+import { Flip } from 'gsap/Flip';
 
 interface Labels {
   baseTypeMap?: Record<string, string>;
@@ -63,6 +66,39 @@ interface Props {
 export default function RecipeFilters({ initialRecipes, totalRecipes, initialFacets, filterConfig, labels: labelsProp, locale }: Props) {
   const l = { ...DEFAULT_LABELS, ...labelsProp };
   const f = useRecipeFilters(initialRecipes, totalRecipes, initialFacets ?? {}, locale);
+
+  // GSAP Flip: capture grid state before recipes change, animate after
+  const flipStateRef = useReactRef<Flip.FlipState | null>(null);
+  const gridContainerRef = useReactRef<HTMLDivElement>(null);
+  const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Register Flip plugin
+  useReactEffect(() => {
+    gsap.registerPlugin(Flip);
+  }, []);
+
+  // Capture Flip state whenever loading starts (before DOM changes)
+  useReactEffect(() => {
+    if (f.loading && gridContainerRef.current && !prefersReducedMotion) {
+      flipStateRef.current = Flip.getState(gridContainerRef.current.querySelectorAll('[data-flip-id]'));
+    }
+  }, [f.loading]);
+
+  // Animate after recipes change (DOM has updated)
+  useLayoutEffect(() => {
+    if (!flipStateRef.current || !gridContainerRef.current || f.loading || prefersReducedMotion) return;
+    const state = flipStateRef.current;
+    flipStateRef.current = null;
+
+    Flip.from(state, {
+      duration: 0.5,
+      ease: 'power2.out',
+      stagger: 0.03,
+      absolute: true,
+      onEnter: (elements) => gsap.fromTo(elements, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4 }),
+      onLeave: (elements) => gsap.to(elements, { opacity: 0, scale: 0.9, duration: 0.3 }),
+    });
+  }, [f.recipes]);
 
   const QUICK_FILTERS: { label: string; filters: Record<string, string[]> }[] = [
     { label: l.easyBeginner, filters: { difficulty: ['beginner'] } },
@@ -259,10 +295,11 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
         <div className="flex-1" ref={f.gridRef}>
           {f.recipes.length > 0 ? (
             <>
-            <div className={`grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 transition-opacity duration-200 ${f.loading ? 'opacity-60' : ''}`}>
+            <div ref={gridContainerRef} className={`grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 transition-opacity duration-200 ${f.loading ? 'opacity-60' : ''}`}>
               {f.recipes.map((recipe) => (
                 <a
                   key={recipe.id}
+                  data-flip-id={recipe.id}
                   href={localePath(`/recipes/${recipe.slug}`, (locale ?? 'en') as Locale)}
                   className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 >
