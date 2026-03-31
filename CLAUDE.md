@@ -28,11 +28,25 @@
 - **Composition over inheritance**: Use Astro slots and React composition patterns.
 
 ### Testing
-- **AAA pattern**: Arrange, Act, Assert — every test follows this structure
-- Test files live alongside source: `Component.test.tsx` next to `Component.tsx`
-- Unit test all `src/lib/` functions
-- Integration test API routes with mock Supabase client
-- No snapshot tests — they provide false confidence
+- **Framework**: Vitest with `@testing-library/react` for React components
+- **AAA pattern**: Every test follows Arrange → Act → Assert. No exceptions.
+  ```ts
+  test('calculates per-serving nutrition', () => {
+    // Arrange
+    const ingredients = [{ master_ingredient_id: '1', amount: '1', unit: 'cup' }];
+    // Act
+    const result = await calculateNutrition(mockClient, ingredients);
+    // Assert
+    expect(result.calories).toBeGreaterThan(0);
+  });
+  ```
+- **Test files live alongside source**: `Component.test.tsx` next to `Component.tsx`
+- **Unit test all `src/lib/` functions** — pure logic, no DOM needed
+- **Integration test API routes** with mock Supabase client
+- **React component tests** with `@testing-library/react` for interactive islands
+- **No snapshot tests** — they provide false confidence
+- **No mocking implementation details** — mock boundaries (Supabase client), not internals
+- **Run**: `npm test` (Vitest) or `npm run test:watch` for development
 
 ### Component Patterns
 - **Astro components** (`.astro`) for static content — zero JS shipped
