@@ -199,7 +199,8 @@ export default function ScalableIngredients({ ingredients, locale = 'en' }: Prop
                     <span className="flex-shrink-0 w-5 h-5 mt-0.5 rounded-full border-2 border-[#F4B8C1]/40" />
                     <div className="flex-1">
                       <span className="font-medium text-slate-700">{ingredient.name}</span>
-                      {ingredient.amazon_asin && (
+                      {/* Affiliate links disabled until traffic grows — enable by removing false && */}
+                      {false && ingredient.amazon_asin && (
                         <a
                           href={amazonProductUrl(ingredient.amazon_asin!)}
                           target="_blank"
