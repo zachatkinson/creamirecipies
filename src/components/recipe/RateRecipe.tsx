@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useId } from 'react';
 
 interface Props {
   recipeId: string;
@@ -7,6 +7,12 @@ interface Props {
 }
 
 const STAR_PATH = 'M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z';
+
+function getStarFill(starIndex: number, rating: number): 'full' | 'half' | 'empty' {
+  if (rating >= starIndex) return 'full';
+  if (rating >= starIndex - 0.5) return 'half';
+  return 'empty';
+}
 
 /** Lightweight Canvas2D sprinkle burst — ice cream themed celebration */
 function burstSprinkles(container: HTMLElement) {
@@ -60,11 +66,12 @@ function burstSprinkles(container: HTMLElement) {
 
 export default function RateRecipe({ recipeId, initialRating, initialCount }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [hoveredStar, setHoveredStar] = useState(0);
+  const [hoveredRating, setHoveredRating] = useState(0);
   const [submittedRating, setSubmittedRating] = useState(0);
   const [avgRating, setAvgRating] = useState(initialRating);
   const [ratingCount, setRatingCount] = useState(initialCount);
   const [status, setStatus] = useState<'idle' | 'submitting' | 'done' | 'error'>('idle');
+  const uniqueId = useId();
 
   // Check if user already rated (cookie)
   const [alreadyRated] = useState(() => {
@@ -107,6 +114,22 @@ export default function RateRecipe({ recipeId, initialRating, initialCount }: Pr
   }, [recipeId]);
 
   const isDone = status === 'done' || alreadyRated;
+  const displayRating = isDone
+    ? (submittedRating || avgRating)
+    : (hoveredRating || submittedRating);
+
+  const handleStarClick = useCallback((star: number, e: React.MouseEvent<HTMLButtonElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const isLeftHalf = (e.clientX - rect.left) < rect.width / 2;
+    submitRating(isLeftHalf ? star - 0.5 : star);
+  }, [submitRating]);
+
+  const handleStarHover = useCallback((star: number, e: React.MouseEvent<HTMLButtonElement>) => {
+    if (isDone) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const isLeftHalf = (e.clientX - rect.left) < rect.width / 2;
+    setHoveredRating(isLeftHalf ? star - 0.5 : star);
+  }, [isDone]);
 
   return (
     <div ref={containerRef} className="flex flex-col items-center gap-3 py-6 px-4 bg-cream/50 rounded-2xl border border-slate-100">
@@ -120,34 +143,49 @@ export default function RateRecipe({ recipeId, initialRating, initialCount }: Pr
       {/* Interactive stars */}
       <div className="flex items-center gap-1" role="radiogroup" aria-label="Rate this recipe">
         {[1, 2, 3, 4, 5].map((star) => {
-          const isActive = isDone
-            ? star <= submittedRating || (alreadyRated && star <= avgRating)
-            : star <= (hoveredStar || submittedRating);
+          const fill = getStarFill(star, displayRating);
+          const halfGradientId = `half-star-rate-${uniqueId}-${star}`;
 
           return (
             <button
               key={star}
               type="button"
               disabled={isDone || status === 'submitting'}
-              onClick={() => submitRating(star)}
-              onMouseEnter={() => !isDone && setHoveredStar(star)}
-              onMouseLeave={() => !isDone && setHoveredStar(0)}
+              onClick={(e) => handleStarClick(star, e)}
+              onMouseMove={(e) => handleStarHover(star, e)}
+              onMouseLeave={() => !isDone && setHoveredRating(0)}
               className={`p-1 transition-transform ${isDone ? 'cursor-default' : 'cursor-pointer hover:scale-110'} ${status === 'submitting' ? 'animate-pulse' : ''}`}
               role="radio"
-              aria-checked={star === submittedRating}
+              aria-checked={star === Math.ceil(submittedRating) || undefined}
               aria-label={`${star} star${star !== 1 ? 's' : ''}`}
             >
-              <svg
-                className="w-8 h-8 transition-colors"
-                fill={isActive ? '#F5D47A' : '#E2E8F0'}
-                viewBox="0 0 20 20"
-              >
-                <path d={STAR_PATH} />
+              <svg className="w-8 h-8 transition-colors" viewBox="0 0 20 20">
+                {fill === 'half' && (
+                  <defs>
+                    <linearGradient id={halfGradientId}>
+                      <stop offset="50%" stopColor="#F5D47A" />
+                      <stop offset="50%" stopColor="#E2E8F0" />
+                    </linearGradient>
+                  </defs>
+                )}
+                <path
+                  d={STAR_PATH}
+                  fill={
+                    fill === 'full' ? '#F5D47A' :
+                    fill === 'half' ? `url(#${halfGradientId})` :
+                    '#E2E8F0'
+                  }
+                />
               </svg>
             </button>
           );
         })}
       </div>
+
+      {/* Rating preview */}
+      {hoveredRating > 0 && !isDone && (
+        <p className="text-xs text-slate-400">{hoveredRating} star{hoveredRating !== 1 ? 's' : ''}</p>
+      )}
 
       {/* Rating info */}
       <p className="text-xs text-slate-500">

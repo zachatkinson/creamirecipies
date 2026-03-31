@@ -32,8 +32,8 @@ export const POST: APIRoute = async ({ request }) => {
       return new Response(JSON.stringify({ error: 'recipe_id required' }), { status: 400 });
     }
     const ratingNum = Number(rating);
-    if (!Number.isInteger(ratingNum) || ratingNum < 1 || ratingNum > 5) {
-      return new Response(JSON.stringify({ error: 'rating must be 1-5' }), { status: 400 });
+    if (isNaN(ratingNum) || ratingNum < 0.5 || ratingNum > 5 || (ratingNum * 2) % 1 !== 0) {
+      return new Response(JSON.stringify({ error: 'rating must be 0.5-5 in half-star increments' }), { status: 400 });
     }
 
     // Get IP and hash it
