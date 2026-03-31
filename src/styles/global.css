@@ -57,6 +57,17 @@ h1, h2, h3, h4 {
   line-height: 1.2;
 }
 
+/* Prevent flash before GSAP animates — starts hidden, GSAP reveals on scroll.
+   No-JS fallback: if JS doesn't run, the noscript style below makes content visible. */
+.scroll-reveal {
+  opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+  }
+}
+
 /* Default heading color - using @layer base so Tailwind utilities override */
 @layer base {
   h1, h2, h3, h4 {
