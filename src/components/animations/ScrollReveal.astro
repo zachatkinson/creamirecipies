@@ -162,4 +162,7 @@ const {
       },
     });
   });
+
+  // Force ScrollTrigger to recalculate — ensures above-fold elements trigger immediately
+  requestAnimationFrame(() => ScrollTrigger.refresh());
 </script>
