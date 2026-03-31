@@ -123,18 +123,33 @@ const {
       'stagger': 'power3.out',
     };
 
-    gsap.from(targets, {
-      ...fromProps,
-      duration: prefersReducedMotion ? 0.1 : duration,
-      delay,
-      stagger: animation === 'stagger' ? stagger : 0,
-      ease: easeMap[animation] ?? 'power3.out',
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 88%',
-        toggleActions: 'play none none none',
-      },
-    });
+    // Elements already in viewport: animate immediately (no ScrollTrigger)
+    // Elements below fold: use ScrollTrigger to animate on scroll
+    const rect = el.getBoundingClientRect();
+    const isInViewport = rect.top < window.innerHeight;
+
+    if (isInViewport) {
+      gsap.from(targets, {
+        ...fromProps,
+        duration: prefersReducedMotion ? 0.1 : duration,
+        delay: delay + 0.1, // small base delay for page-load feel
+        stagger: animation === 'stagger' ? stagger : 0,
+        ease: easeMap[animation] ?? 'power3.out',
+      });
+    } else {
+      gsap.from(targets, {
+        ...fromProps,
+        duration: prefersReducedMotion ? 0.1 : duration,
+        delay,
+        stagger: animation === 'stagger' ? stagger : 0,
+        ease: easeMap[animation] ?? 'power3.out',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 88%',
+          toggleActions: 'play none none none',
+        },
+      });
+    }
   });
 
   // Counter animation for elements with data-count-to attribute
