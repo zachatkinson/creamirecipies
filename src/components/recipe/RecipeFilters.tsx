@@ -99,12 +99,9 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
     const FlipPlugin = F as typeof import('gsap/Flip').Flip;
 
     FlipPlugin.from(state as ReturnType<typeof FlipPlugin.getState>, {
-      duration: 0.5,
+      duration: 0.4,
       ease: 'power2.out',
-      stagger: 0.03,
-      absolute: true,
-      onEnter: (elements: Element[]) => g.fromTo(elements, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4 }),
-      onLeave: (elements: Element[]) => g.to(elements, { opacity: 0, scale: 0.9, duration: 0.3 }),
+      stagger: 0.02,
     });
   }, [f.recipes]);
 
