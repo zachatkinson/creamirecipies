@@ -132,6 +132,10 @@ const totalTimeLabel = totalTime >= 60
 >
   <!-- Recipe FAQ JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify(recipeFaqJsonLd)} slot="head" />
+  {/* Preload hero image for faster LCP */}
+  {recipe.hero_image_url && (
+    <link rel="preload" as="image" href={recipe.hero_image_url} type="image/avif" slot="head" />
+  )}
 
   <!-- Hero -->
   <section class="relative bg-gradient-to-b from-cream to-white">
@@ -159,6 +163,7 @@ const totalTimeLabel = totalTime >= 60
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                     alt={recipe.title}
                     class="w-full h-full object-cover"
+                    fetchpriority="high"
                   />
                 );
               })() : (
@@ -426,7 +431,7 @@ const totalTimeLabel = totalTime >= 60
             <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
               <h2 class="font-display text-xl font-bold text-chocolate mb-5">{ui("ingredients", locale)}</h2>
               <ScalableIngredients
-                client:load
+                client:visible
                 ingredients={scalableIngredients}
                 models={currentModels}
                 recipePintSize={recipe.pint_size ?? '16oz'}
