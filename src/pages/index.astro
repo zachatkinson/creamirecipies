@@ -329,6 +329,8 @@ const lp = (path: string) => localePath(path, locale);
 
   if (mainTitle && accentTitle && !prefersReducedMotion) {
     const split = SplitText.create(mainTitle, { type: 'words' });
+    // Remove aria-label that SplitText adds — prohibited on <span> elements
+    mainTitle.removeAttribute('aria-label');
     gsap.from(split.words, {
       y: 30,
       opacity: 0,
