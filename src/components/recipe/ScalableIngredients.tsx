@@ -8,8 +8,14 @@ import type { MeasurementSystem } from '../../lib/measurements';
 const GROUP_LABELS = INGREDIENT_GROUP_LABELS;
 const GROUP_ORDER = INGREDIENT_GROUP_ORDER;
 
+import { amazonProductUrl } from '../../lib/affiliate';
+
+interface IngredientWithAsin extends Ingredient {
+  amazon_asin?: string | null;
+}
+
 interface Props {
-  ingredients: Ingredient[];
+  ingredients: IngredientWithAsin[];
   models: ModelRef[];
   recipePintSize: '16oz' | '24oz';
   isSwirl: boolean;
@@ -193,6 +199,21 @@ export default function ScalableIngredients({ ingredients, locale = 'en' }: Prop
                     <span className="flex-shrink-0 w-5 h-5 mt-0.5 rounded-full border-2 border-[#F4B8C1]/40" />
                     <div className="flex-1">
                       <span className="font-medium text-slate-700">{ingredient.name}</span>
+                      {ingredient.amazon_asin && (
+                        <a
+                          href={amazonProductUrl(ingredient.amazon_asin!)}
+                          target="_blank"
+                          rel="noopener noreferrer sponsored"
+                          className="inline-flex items-center ml-1.5 text-slate-400 hover:text-berry transition-colors"
+                          aria-label={`Buy ${ingredient.name} on Amazon`}
+                          title="Buy on Amazon"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.12 18.416c-5.9 3.26-12.66.86-16.3-2.95-.37-.39.04-.92.49-.63 4.67 2.74 10.42 4.4 15.46 1.34.75-.38 1.1.5.35.8v.44zm1.02-1.17c-.5-.64-3.3-.3-4.57-.15-.38.04-.44-.29-.1-.53 2.24-1.57 5.9-.86 6.33-.45.43.4-.11 3.24-2.21 4.6-.32.2-.63.1-.49-.18.47-1.2 1.54-3.65 1.04-4.29z"/>
+                          </svg>
+                        </a>
+                      )}
                       <span className={`ml-2 text-sm ${isChanged ? 'text-berry font-medium' : 'text-slate-500'}`}>
                         {displayAmount}{displayUnit ? ` ${displayUnit}` : ''}
                       </span>

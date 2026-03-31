@@ -2,8 +2,7 @@ import type { SupabaseClient } from '@supabase/supabase-js';
 import type { Locale } from '../i18n';
 import { t, localePath } from '../i18n';
 import { ui } from './translations';
-
-const AMAZON_TAG = import.meta.env.PUBLIC_AMAZON_TAG || 'eatcreami03-20';
+import { AMAZON_TAG } from './affiliate';
 
 interface Product {
   asin: string;
