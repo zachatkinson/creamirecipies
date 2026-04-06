@@ -26,7 +26,7 @@ interface Facets {
   difficulty?: Record<string, number>;
 }
 
-type SortOption = 'newest' | 'rating' | 'reviews' | 'prep-time';
+type SortOption = 'newest' | 'rating' | 'reviews' | 'prep-time' | 'alphabetical';
 
 export type { RecipeData, FilterConfig, Facets, SortOption };
 

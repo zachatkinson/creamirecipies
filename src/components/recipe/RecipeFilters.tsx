@@ -11,6 +11,7 @@ interface Labels {
   sortRating: string;
   sortReviews: string;
   sortPrep: string;
+  sortAlphabetical: string;
   filters: string;
   quickFilters: string;
   difficulty: string;
@@ -42,7 +43,7 @@ interface Labels {
 
 const DEFAULT_LABELS: Labels = {
   searchPlaceholder: 'Search recipes by name or ingredient...',
-  sortNewest: 'Newest First', sortRating: 'Highest Rated', sortReviews: 'Most Reviewed', sortPrep: 'Quickest Prep',
+  sortNewest: 'Newest First', sortRating: 'Highest Rated', sortReviews: 'Most Reviewed', sortPrep: 'Quickest Prep', sortAlphabetical: 'A to Z',
   filters: 'Filters', quickFilters: 'Quick Filters', difficulty: 'Difficulty', baseType: 'Base Type',
   dietary: 'Dietary', minRating: 'Minimum Rating', showing: 'Showing', recipe: 'recipe', recipes: 'recipes',
   clearAll: 'Clear all', noResults: 'No Recipes Found', noResultsDesc: 'Try adjusting your filters or search terms.',
@@ -235,7 +236,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
           <select
             id="sort-select"
             value={f.sortBy}
-            onChange={(e) => f.setSortBy(e.target.value as 'newest' | 'rating' | 'reviews' | 'prep-time')}
+            onChange={(e) => f.setSortBy(e.target.value as 'newest' | 'rating' | 'reviews' | 'prep-time' | 'alphabetical')}
             aria-label="Sort recipes"
             className="px-4 py-3 rounded-xl bg-white border border-slate-200 text-sm text-slate-600 focus:border-blush outline-none"
           >
@@ -243,6 +244,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
             <option value="rating">{l.sortRating}</option>
             <option value="reviews">{l.sortReviews}</option>
             <option value="prep-time">{l.sortPrep}</option>
+            <option value="alphabetical">{l.sortAlphabetical}</option>
           </select>
           <button
             onClick={() => f.setMobileFilterOpen(true)}

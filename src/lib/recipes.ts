@@ -23,7 +23,7 @@ export interface RecipeQueryParams {
   tag?: string[];
   model?: string[];
   rating?: number;
-  sort?: 'newest' | 'rating' | 'reviews' | 'prep-time';
+  sort?: 'newest' | 'rating' | 'reviews' | 'prep-time' | 'alphabetical';
   page?: number;
   pageSize?: number;
   locale?: Locale;
