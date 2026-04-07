@@ -124,18 +124,16 @@ const totalTimeLabel = totalTime >= 60
 
 // Find matching collections for this recipe (for internal cross-links)
 const recipeCategorySlugs = new Set(recipe.categories.map((c: { slug: string }) => c.slug));
+const recipeTagSlugs = new Set(recipe.tags.map((t: { slug: string }) => t.slug));
 const recipeBaseSlug = recipe.base_type.toLowerCase().replace(/\s+/g, '-');
 const matchingCollections = COLLECTIONS
   .filter((col) => {
-    const matchesBase = col.query.base ? col.query.base.some((b) => b === recipeBaseSlug) : true;
-    const matchesDietary = col.query.dietary ? col.query.dietary.some((d) => recipeCategorySlugs.has(d)) : true;
-    // A collection matches if ALL its defined filters match (AND logic)
-    const hasBaseFilter = !!col.query.base;
-    const hasDietaryFilter = !!col.query.dietary;
-    if (hasBaseFilter && hasDietaryFilter) return matchesBase && matchesDietary;
-    if (hasBaseFilter) return matchesBase;
-    if (hasDietaryFilter) return matchesDietary;
-    return false;
+    const checks: boolean[] = [];
+    if (col.query.base) checks.push(col.query.base.some((b) => b === recipeBaseSlug));
+    if (col.query.dietary) checks.push(col.query.dietary.some((d) => recipeCategorySlugs.has(d)));
+    if (col.query.tag) checks.push(col.query.tag.some((t) => recipeTagSlugs.has(t)));
+    // Must have at least one filter defined, and all defined filters must match
+    return checks.length > 0 && checks.every(Boolean);
   })
   .map((col) => ({ slug: col.slug, meta: getCollectionMeta(col.slug, locale)! }))
   .filter((c) => c.meta);

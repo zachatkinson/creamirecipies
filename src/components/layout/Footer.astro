@@ -27,16 +27,16 @@ const currentYear = new Date().getFullYear();
         <h2 class="font-display text-sm font-bold text-white mb-4 uppercase tracking-wider">{t('footer.recipes', locale)}</h2>
         <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
           <a href={lp('/recipes')} class="hover:text-cream transition-colors">{t('footer.allRecipes', locale)}</a>
-          <a href={lp('/recipes?base=ice-cream')} class="hover:text-cream transition-colors">{t('footer.iceCream', locale)}</a>
-          <a href={lp('/recipes?base=sorbet')} class="hover:text-cream transition-colors">{t('footer.sorbet', locale)}</a>
-          <a href={lp('/recipes?base=gelato')} class="hover:text-cream transition-colors">{t('footer.gelato', locale)}</a>
+          <a href={lp('/recipes/collection/ice-cream')} class="hover:text-cream transition-colors">{t('footer.iceCream', locale)}</a>
+          <a href={lp('/recipes/collection/sorbet')} class="hover:text-cream transition-colors">{t('footer.sorbet', locale)}</a>
+          <a href={lp('/recipes/collection/gelato')} class="hover:text-cream transition-colors">{t('footer.gelato', locale)}</a>
           <a href={lp('/recipes/collection/frozen-yogurt')} class="hover:text-cream transition-colors">{t('footer.frozenYogurt', locale)}</a>
-          <a href={lp('/recipes?base=milkshake')} class="hover:text-cream transition-colors">{ui('Milkshake', locale)}</a>
-          <a href={lp('/recipes?base=smoothie-bowl')} class="hover:text-cream transition-colors">{ui('Smoothie Bowl', locale)}</a>
-          <a href={lp('/recipes?base=lite-ice-cream')} class="hover:text-cream transition-colors">{ui('Lite Ice Cream', locale)}</a>
-          <a href={lp('/recipes?base=italian-ice')} class="hover:text-cream transition-colors">{ui('Italian Ice', locale)}</a>
+          <a href={lp('/recipes/collection/milkshake')} class="hover:text-cream transition-colors">{ui('Milkshake', locale)}</a>
+          <a href={lp('/recipes/collection/smoothie-bowl')} class="hover:text-cream transition-colors">{ui('Smoothie Bowl', locale)}</a>
+          <a href={lp('/recipes/collection/lite-ice-cream')} class="hover:text-cream transition-colors">{ui('Lite Ice Cream', locale)}</a>
+          <a href={lp('/recipes/collection/italian-ice')} class="hover:text-cream transition-colors">{ui('Italian Ice', locale)}</a>
           <a href={lp('/recipes/collection/protein-ice-cream')} class="hover:text-cream transition-colors">{ui('High Protein', locale)}</a>
-          <a href={lp('/recipes?tag=soft-serve')} class="hover:text-cream transition-colors">{ui('Soft Serve', locale)}</a>
+          <a href={lp('/recipes/collection/soft-serve')} class="hover:text-cream transition-colors">{ui('Soft Serve', locale)}</a>
         </div>
       </div>
 
