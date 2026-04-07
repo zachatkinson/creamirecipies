@@ -1,6 +1,7 @@
 ---
 import { t, localePath } from '../../i18n';
 import { ui } from '../../lib/translations';
+import { COLLECTIONS, getCollectionMeta } from '../../lib/collections';
 
 const locale = Astro.locals.locale;
 const lp = (path: string) => localePath(path, locale);
@@ -29,11 +30,12 @@ const currentYear = new Date().getFullYear();
           <a href={lp('/recipes?base=ice-cream')} class="hover:text-cream transition-colors">{t('footer.iceCream', locale)}</a>
           <a href={lp('/recipes?base=sorbet')} class="hover:text-cream transition-colors">{t('footer.sorbet', locale)}</a>
           <a href={lp('/recipes?base=gelato')} class="hover:text-cream transition-colors">{t('footer.gelato', locale)}</a>
-          <a href={lp('/recipes?base=frozen-yogurt')} class="hover:text-cream transition-colors">{t('footer.frozenYogurt', locale)}</a>
+          <a href={lp('/recipes/collection/frozen-yogurt')} class="hover:text-cream transition-colors">{t('footer.frozenYogurt', locale)}</a>
           <a href={lp('/recipes?base=milkshake')} class="hover:text-cream transition-colors">{ui('Milkshake', locale)}</a>
           <a href={lp('/recipes?base=smoothie-bowl')} class="hover:text-cream transition-colors">{ui('Smoothie Bowl', locale)}</a>
           <a href={lp('/recipes?base=lite-ice-cream')} class="hover:text-cream transition-colors">{ui('Lite Ice Cream', locale)}</a>
           <a href={lp('/recipes?base=italian-ice')} class="hover:text-cream transition-colors">{ui('Italian Ice', locale)}</a>
+          <a href={lp('/recipes/collection/protein-ice-cream')} class="hover:text-cream transition-colors">{ui('High Protein', locale)}</a>
           <a href={lp('/recipes?tag=soft-serve')} class="hover:text-cream transition-colors">{ui('Soft Serve', locale)}</a>
         </div>
       </div>
