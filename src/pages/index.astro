@@ -8,6 +8,7 @@ import { supabase } from '../lib/supabase';
 import { getCategories } from '../lib/recipes';
 import { t, localePath } from '../i18n';
 import { ui, translateRecipeArray, translatePostArray } from '../lib/translations';
+import { COLLECTIONS, getCollectionMeta } from '../lib/collections';
 
 const locale = Astro.locals.locale;
 const categories = await getCategories(supabase);
@@ -135,17 +136,23 @@ const lp = (path: string) => localePath(path, locale);
         <div class="flex flex-wrap justify-center gap-3">
           {baseTypes.map((cat) => (
             <a
-              href={lp(`/recipes?base=${cat.slug}`)}
+              href={lp(`/recipes/collection/${cat.slug}`)}
               class="px-5 py-2.5 bg-white rounded-full text-sm font-medium text-slate-600 hover:text-berry hover:bg-blush/15 border border-slate-200 hover:border-blush transition-all"
             >
               {ui(cat.name, locale)}
             </a>
           ))}
           <a
-            href={lp('/recipes?tag=soft-serve')}
+            href={lp('/recipes/collection/soft-serve')}
             class="px-5 py-2.5 bg-white rounded-full text-sm font-medium text-slate-600 hover:text-berry hover:bg-blush/15 border border-slate-200 hover:border-blush transition-all"
           >
             {ui('Soft Serve', locale)}
+          </a>
+          <a
+            href={lp('/recipes/collection/protein-ice-cream')}
+            class="px-5 py-2.5 bg-white rounded-full text-sm font-medium text-slate-600 hover:text-berry hover:bg-blush/15 border border-slate-200 hover:border-blush transition-all"
+          >
+            {ui('High Protein', locale)}
           </a>
         </div>
       </ScrollReveal>
