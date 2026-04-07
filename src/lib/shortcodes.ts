@@ -3,6 +3,7 @@ import type { Locale } from '../i18n';
 import { t, localePath } from '../i18n';
 import { ui } from './translations';
 import { AMAZON_TAG } from './affiliate';
+import { getCollectionMeta } from './collections';
 
 interface Product {
   asin: string;
@@ -145,6 +146,11 @@ function renderStars(rating: number): string {
   return `<div class="flex items-center gap-0.5">${html}</div>`;
 }
 
+function renderCollectionCard(slug: string, meta: { title: string; description: string }, locale: Locale): string {
+  const href = localePath(`/recipes/collection/${slug}`, locale);
+  return `<a href="${href}" class="not-prose flex items-center gap-4 p-4 my-4 bg-gradient-to-r from-cream to-blush/10 border border-blush/30 rounded-xl no-underline transition-shadow hover:shadow-md group"><span class="text-3xl shrink-0">📚</span><span class="flex-1"><strong class="text-chocolate block group-hover:text-berry transition-colors">${meta.title}</strong><span class="text-slate-600 text-sm line-clamp-2">${meta.description}</span></span><svg class="w-5 h-5 text-berry shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>`;
+}
+
 /**
  * Expand [product asin="..."] and [recipe slug="..."] shortcodes in HTML content.
  * Fetches data from Supabase and renders localized cards.
@@ -156,9 +162,10 @@ export async function expandShortcodes(
 ): Promise<string> {
   const hasProducts = html.includes('[product ');
   const hasRecipes = html.includes('[recipe ');
+  const hasCollections = html.includes('[collection ');
 
   // Quick check: if no shortcodes, return immediately
-  if (!hasProducts && !hasRecipes) return html;
+  if (!hasProducts && !hasRecipes && !hasCollections) return html;
 
   // Expand product shortcodes
   if (hasProducts) {
@@ -197,6 +204,18 @@ export async function expandShortcodes(
         },
       );
     }
+  }
+
+  // Expand collection shortcodes
+  if (hasCollections) {
+    html = html.replace(
+      /\[collection\s+slug=(?:"|&quot;)([a-z0-9-]+)(?:"|&quot;)\s*\]/g,
+      (_match, slug: string) => {
+        const meta = getCollectionMeta(slug, locale);
+        if (!meta) return `<!-- collection ${slug} not found -->`;
+        return renderCollectionCard(slug, meta, locale);
+      },
+    );
   }
 
   // Strip <p> wrappers around block-level shortcode output.
