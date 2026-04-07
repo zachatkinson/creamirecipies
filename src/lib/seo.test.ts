@@ -116,6 +116,22 @@ describe('buildRecipeJsonLd', () => {
     expect(jsonLd.keywords).toContain('Ice Cream');
     expect(jsonLd.keywords).toContain('Vanilla');
   });
+
+  test('includes inLanguage defaulting to en-US', () => {
+    // Act
+    const jsonLd = buildRecipeJsonLd(recipe, siteUrl);
+
+    // Assert
+    expect(jsonLd.inLanguage).toBe('en-US');
+  });
+
+  test('includes locale-specific inLanguage when provided', () => {
+    // Act
+    const jsonLd = buildRecipeJsonLd(recipe, siteUrl, undefined, 'fr');
+
+    // Assert
+    expect(jsonLd.inLanguage).toBe('fr-FR');
+  });
 });
 
 describe('buildBlogPostingJsonLd', () => {
@@ -127,6 +143,23 @@ describe('buildBlogPostingJsonLd', () => {
     expect(jsonLd['@type']).toBe('BlogPosting');
     expect(jsonLd.headline).toBe('Test Blog Post');
     expect(jsonLd.mainEntityOfPage['@id']).toContain('/blog/test-blog-post');
+  });
+
+  test('includes inLanguage defaulting to en-US', () => {
+    // Act
+    const jsonLd = buildBlogPostingJsonLd(SAMPLE_POST, 'https://eatcreami.com');
+
+    // Assert
+    expect(jsonLd.inLanguage).toBe('en-US');
+  });
+
+  test('includes locale prefix in @id for non-English', () => {
+    // Act
+    const jsonLd = buildBlogPostingJsonLd(SAMPLE_POST, 'https://eatcreami.com', 'de');
+
+    // Assert
+    expect(jsonLd.inLanguage).toBe('de-DE');
+    expect(jsonLd.mainEntityOfPage['@id']).toBe('https://eatcreami.com/de/blog/test-blog-post');
   });
 });
 

@@ -1,6 +1,7 @@
 ---
 import type { RecipeWithDetails } from '../../lib/types';
 import { buildRecipeJsonLd } from '../../lib/seo';
+import type { Locale } from '../../i18n';
 
 interface Props {
   recipe: RecipeWithDetails;
@@ -8,7 +9,8 @@ interface Props {
 
 const { recipe } = Astro.props;
 const siteUrl = Astro.site?.toString() ?? '';
-const jsonLd = buildRecipeJsonLd(recipe, siteUrl);
+const locale = (Astro.locals.locale ?? 'en') as Locale;
+const jsonLd = buildRecipeJsonLd(recipe, siteUrl, undefined, locale);
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

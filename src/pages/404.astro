@@ -13,7 +13,7 @@ const recommendations = await getFeaturedRecipes(supabase, 3);
 await translateRecipeArray(supabase, recommendations as Record<string, unknown>[], locale);
 ---
 
-<BaseLayout title={t('notFound.title', locale)}>
+<BaseLayout title={t('notFound.title', locale)} description={t('notFound.description', locale)}>
   <section class="py-24 text-center">
     <div class="max-w-md mx-auto px-4">
       <ScrollReveal animation="scale" delay={0.05}>

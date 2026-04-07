@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { SITE_URL } from '../lib/sitemap';
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE, localePath } from '../i18n';
+import { COLLECTIONS } from '../lib/collections';
 
 export const prerender = false;
 
@@ -9,6 +10,7 @@ export const GET: APIRoute = async () => {
   const pages = [
     { url: '/', changefreq: 'daily', priority: 1.0 },
     { url: '/recipes', changefreq: 'daily', priority: 0.9 },
+    ...COLLECTIONS.map((c) => ({ url: `/recipes/collection/${c.slug}`, changefreq: 'weekly' as const, priority: 0.8 })),
     { url: '/blog', changefreq: 'weekly', priority: 0.7 },
     { url: '/about', changefreq: 'monthly', priority: 0.5 },
     { url: '/privacy', changefreq: 'yearly', priority: 0.3 },

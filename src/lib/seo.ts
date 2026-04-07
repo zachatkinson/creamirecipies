@@ -4,6 +4,15 @@ import { LOCALES, DEFAULT_LOCALE } from '../i18n';
 import { faq } from './translations';
 import { BASE_TYPE_TRANSLATIONS } from './blog';
 
+/** Map locale codes to BCP 47 language tags for schema.org inLanguage */
+const LOCALE_TO_LANGUAGE: Record<string, string> = {
+  en: 'en-US',
+  fr: 'fr-FR',
+  es: 'es-ES',
+  de: 'de-DE',
+  pt: 'pt-BR',
+};
+
 /** Nutrition data for Recipe JSON-LD */
 interface NutritionData {
   calories: number;
@@ -14,7 +23,7 @@ interface NutritionData {
 }
 
 /** Generate Schema.org Recipe JSON-LD structured data */
-export function buildRecipeJsonLd(recipe: RecipeWithDetails, siteUrl: string, nutrition?: NutritionData) {
+export function buildRecipeJsonLd(recipe: RecipeWithDetails, siteUrl: string, nutrition?: NutritionData, locale: Locale = 'en') {
   const totalMinutes =
     (recipe.prep_time_minutes ?? 0) + (recipe.freeze_time_hours ?? 24) * 60;
 
@@ -23,7 +32,7 @@ export function buildRecipeJsonLd(recipe: RecipeWithDetails, siteUrl: string, nu
     '@type': 'Recipe',
     name: recipe.title,
     description: recipe.description,
-    image: recipe.hero_image_url ? [recipe.hero_image_url] : [],
+    image: recipe.hero_image_url ? [`${siteUrl}${recipe.hero_image_url}`] : [],
     author: {
       '@type': 'Person',
       name: recipe.author.display_name || recipe.author.username,
@@ -35,6 +44,7 @@ export function buildRecipeJsonLd(recipe: RecipeWithDetails, siteUrl: string, nu
     recipeYield: recipe.servings ? `${recipe.servings} servings` : undefined,
     recipeCategory: recipe.base_type,
     recipeCuisine: 'American',
+    inLanguage: LOCALE_TO_LANGUAGE[locale] ?? 'en-US',
     cookingMethod: 'Ninja Creami',
     keywords: [
       'ninja creami',
@@ -52,7 +62,7 @@ export function buildRecipeJsonLd(recipe: RecipeWithDetails, siteUrl: string, nu
       text: step.instruction,
       url: `${siteUrl}/recipes/${recipe.slug}#step-${step.step_number}`,
       ...(step.hint ? { tip: { '@type': 'HowToTip', text: step.hint } } : {}),
-      ...(step.image_url ? { image: step.image_url } : {}),
+      ...(step.image_url ? { image: `${siteUrl}${step.image_url}` } : {}),
     })),
     ...(recipe.rating_count > 0
       ? {
@@ -76,7 +86,7 @@ export function buildRecipeJsonLd(recipe: RecipeWithDetails, siteUrl: string, nu
             '@type': 'VideoObject',
             name: `How to Make ${recipe.title}`,
             description: recipe.description,
-            thumbnailUrl: recipe.video_thumbnail_url || recipe.hero_image_url || '',
+            thumbnailUrl: `${siteUrl}${recipe.video_thumbnail_url || recipe.hero_image_url || ''}`,
             contentUrl: recipe.video_url,
             uploadDate: recipe.published_at,
           },
@@ -134,12 +144,15 @@ export interface BlogPostForJsonLd {
 export function buildBlogPostingJsonLd(
   post: BlogPostForJsonLd,
   siteUrl: string,
+  locale: Locale = 'en',
 ) {
+  const blogPath = locale === DEFAULT_LOCALE ? `/blog/${post.slug}` : `/${locale}/blog/${post.slug}`;
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt ?? '',
+    inLanguage: LOCALE_TO_LANGUAGE[locale] ?? 'en-US',
     image: post.hero_image_url ? `${siteUrl}${post.hero_image_url}` : `${siteUrl}/images/blog/${post.category || 'news'}.svg`,
     datePublished: post.published_at ?? post.created_at,
     ...(post.updated_at ? { dateModified: post.updated_at } : {}),
@@ -159,7 +172,7 @@ export function buildBlogPostingJsonLd(
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${siteUrl}/blog/${post.slug}`,
+      '@id': `${siteUrl}${blogPath}`,
     },
     articleSection: post.category,
   };
@@ -217,7 +230,7 @@ export function buildRecipeListJsonLd(
       url: `${siteUrl}/recipes/${recipe.slug}`,
       name: recipe.title,
       description: recipe.description,
-      ...(recipe.hero_image_url ? { image: recipe.hero_image_url } : {}),
+      ...(recipe.hero_image_url ? { image: `${siteUrl}${recipe.hero_image_url}` } : {}),
     })),
   };
 }

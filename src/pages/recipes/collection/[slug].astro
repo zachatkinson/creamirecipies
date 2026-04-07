@@ -1,0 +1,162 @@
+---
+export const prerender = false;
+
+import BaseLayout from '../../../components/layout/BaseLayout.astro';
+import RecipeCard from '../../../components/recipe/RecipeCard.astro';
+import ScrollReveal from '../../../components/animations/ScrollReveal.astro';
+import AdUnit from '../../../components/ads/AdUnit.astro';
+import { supabase } from '../../../lib/supabase';
+import { getFilteredRecipes } from '../../../lib/recipes';
+import { buildRecipeListJsonLd, buildBreadcrumbJsonLd } from '../../../lib/seo';
+import { t, localePath } from '../../../i18n';
+import { translateRecipeArray } from '../../../lib/translations';
+import { COLLECTIONS, getCollection, getCollectionMeta } from '../../../lib/collections';
+
+const { slug } = Astro.params;
+const locale = Astro.locals.locale;
+const lp = (path: string) => localePath(path, locale);
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
+
+// Find collection config
+const collection = getCollection(slug!);
+if (!collection) {
+  return Astro.redirect('/404');
+}
+
+const meta = getCollectionMeta(slug!, locale);
+if (!meta) {
+  return Astro.redirect('/404');
+}
+
+// Fetch recipes matching this collection's filters
+const { recipes, total } = await getFilteredRecipes(supabase, {
+  ...collection.query,
+  sort: collection.sort,
+  pageSize: 100,
+  locale,
+});
+
+// Translate recipe cards for non-English locales
+if (locale !== 'en') {
+  await translateRecipeArray(supabase, recipes as unknown as Record<string, unknown>[], locale);
+}
+
+// JSON-LD: ItemList for the collection
+const recipeListJsonLd = buildRecipeListJsonLd(
+  recipes.map((r) => ({
+    title: r.title,
+    slug: r.slug,
+    description: r.description,
+    avg_rating: r.avg_rating,
+    hero_image_url: r.hero_image_url,
+  })),
+  siteUrl,
+  meta.title,
+);
+
+const breadcrumbs = [
+  { name: t('breadcrumb.home', locale), url: siteUrl },
+  { name: t('breadcrumb.recipes', locale), url: `${siteUrl}${lp('/recipes')}` },
+  { name: meta.title, url: `${siteUrl}${lp(`/recipes/collection/${slug}`)}` },
+];
+
+// Other collections for cross-linking (exclude current)
+const otherCollections = COLLECTIONS
+  .filter((c) => c.slug !== slug)
+  .map((c) => ({ slug: c.slug, meta: getCollectionMeta(c.slug, locale)! }))
+  .filter((c) => c.meta);
+---
+
+<BaseLayout
+  title={meta.title}
+  description={meta.metaDescription}
+  type="website"
+  jsonLd={recipeListJsonLd}
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-cream to-white py-12 md:py-20">
+    <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
+      <ScrollReveal animation="fade-up">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-sm text-slate-600 mb-6" aria-label="Breadcrumb">
+          <a href={lp('/')} class="hover:text-berry transition-colors">{t('breadcrumb.home', locale)}</a>
+          <span>/</span>
+          <a href={lp('/recipes')} class="hover:text-berry transition-colors">{t('breadcrumb.recipes', locale)}</a>
+          <span>/</span>
+          <span class="text-slate-700">{meta.title}</span>
+        </nav>
+
+        <div class="max-w-3xl">
+          <h1 class="font-display text-3xl md:text-5xl font-bold text-chocolate mb-4">
+            {meta.title}
+          </h1>
+          <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            {meta.description}
+          </p>
+          <p class="text-sm text-slate-500">
+            {total} {total === 1 ? t('recipes.recipe', locale) : t('recipes.recipePlural', locale)}
+          </p>
+        </div>
+      </ScrollReveal>
+    </div>
+  </section>
+
+  <AdUnit slot="leaderboard" />
+
+  <!-- Recipe Grid -->
+  <section class="py-12">
+    <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
+      {recipes.length > 0 ? (
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {recipes.map((recipe, i) => (
+            <ScrollReveal animation="fade-up" delay={Math.min(i * 0.05, 0.3)}>
+              <RecipeCard recipe={recipe} />
+            </ScrollReveal>
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-16">
+          <p class="text-xl text-slate-500">{t('recipes.noResults', locale)}</p>
+          <a
+            href={lp('/recipes')}
+            class="inline-block mt-4 px-6 py-3 bg-berry text-white rounded-full hover:bg-berry-dark transition-colors"
+          >
+            {t('recipes.browseAll', locale)}
+          </a>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <AdUnit slot="mid-content" />
+
+  <!-- Cross-link other collections -->
+  {otherCollections.length > 0 && (
+    <section class="py-12 bg-cream/30">
+      <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal animation="fade-up">
+          <h2 class="font-display text-2xl font-bold text-chocolate mb-6">
+            {t('home.browseRecipes', locale)}
+          </h2>
+          <div class="flex flex-wrap gap-3">
+            {otherCollections.map((c) => (
+              <a
+                href={lp(`/recipes/collection/${c.slug}`)}
+                class="px-5 py-2.5 bg-white rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-sm font-medium text-chocolate hover:text-berry"
+              >
+                {c.meta.title}
+              </a>
+            ))}
+            <a
+              href={lp('/recipes')}
+              class="px-5 py-2.5 bg-white rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-sm font-medium text-chocolate hover:text-berry"
+            >
+              {t('recipes.allRecipes', locale)}
+            </a>
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  )}
+</BaseLayout>

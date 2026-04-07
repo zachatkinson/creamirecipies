@@ -5,7 +5,7 @@ import { t } from '../i18n';
 const locale = Astro.locals.locale;
 ---
 
-<BaseLayout title={t('terms.title', locale)}>
+<BaseLayout title={t('terms.title', locale)} description={t('terms.intro', locale)}>
   <section class="py-16 md:py-24">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="font-display text-4xl md:text-5xl font-bold mb-4 text-center text-chocolate">

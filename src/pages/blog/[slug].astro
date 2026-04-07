@@ -44,7 +44,7 @@ const relatedPosts = await getRelatedPosts(supabase, post.category, post.id);
 await translatePostNavigation(supabase, locale, prevPost, nextPost, relatedPosts);
 
 const categoryColors = CATEGORY_COLORS;
-const blogPostJsonLd = buildBlogPostingJsonLd(post as BlogPostForJsonLd, siteUrl);
+const blogPostJsonLd = buildBlogPostingJsonLd(post as BlogPostForJsonLd, siteUrl, locale);
 const breadcrumbs = [
   { name: t('breadcrumb.home', locale), url: siteUrl },
   { name: t('blog.title', locale), url: `${siteUrl}/blog` },

@@ -156,7 +156,7 @@ export default function RateRecipe({ recipeId, initialRating, initialCount }: Pr
               onMouseLeave={() => !isDone && setHoveredRating(0)}
               className={`p-1 transition-transform ${isDone ? 'cursor-default' : 'cursor-pointer hover:scale-110'} ${status === 'submitting' ? 'animate-pulse' : ''}`}
               role="radio"
-              aria-checked={star === Math.ceil(submittedRating) || undefined}
+              aria-checked={star === Math.ceil(submittedRating)}
               aria-label={`${star} star${star !== 1 ? 's' : ''}`}
             >
               <svg className="w-8 h-8 transition-colors" viewBox="0 0 20 20">

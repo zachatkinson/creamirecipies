@@ -21,6 +21,7 @@ import { DIFFICULTY_COLORS } from '../../lib/blog';
 import { calculateNutrition } from '../../lib/nutrition';
 import { getSimilarRecipes } from '../../lib/recommendations';
 import { buildRecipeImageSrcset } from '../../lib/images';
+import { COLLECTIONS, getCollectionMeta } from '../../lib/collections';
 const lp = (path: string) => localePath(path, locale);
 
 const { slug } = Astro.params;
@@ -112,7 +113,7 @@ const recipeJsonLd = buildRecipeJsonLd(recipe, siteUrl, totalCalories > 0 ? {
   fat: totalFat,
   carbs: totalCarbs,
   servings: recipe.servings ?? 4,
-} : undefined);
+} : undefined, locale);
 
 const difficultyColors = DIFFICULTY_COLORS;
 
@@ -120,11 +121,29 @@ const totalTime = (recipe.prep_time_minutes ?? 0) + (recipe.freeze_time_hours ??
 const totalTimeLabel = totalTime >= 60
   ? `${Math.floor(totalTime / 60)}h ${totalTime % 60 > 0 ? `${totalTime % 60}m` : ''}`
   : `${totalTime}m`;
+
+// Find matching collections for this recipe (for internal cross-links)
+const recipeCategorySlugs = new Set(recipe.categories.map((c: { slug: string }) => c.slug));
+const recipeBaseSlug = recipe.base_type.toLowerCase().replace(/\s+/g, '-');
+const matchingCollections = COLLECTIONS
+  .filter((col) => {
+    const matchesBase = col.query.base ? col.query.base.some((b) => b === recipeBaseSlug) : true;
+    const matchesDietary = col.query.dietary ? col.query.dietary.some((d) => recipeCategorySlugs.has(d)) : true;
+    // A collection matches if ALL its defined filters match (AND logic)
+    const hasBaseFilter = !!col.query.base;
+    const hasDietaryFilter = !!col.query.dietary;
+    if (hasBaseFilter && hasDietaryFilter) return matchesBase && matchesDietary;
+    if (hasBaseFilter) return matchesBase;
+    if (hasDietaryFilter) return matchesDietary;
+    return false;
+  })
+  .map((col) => ({ slug: col.slug, meta: getCollectionMeta(col.slug, locale)! }))
+  .filter((c) => c.meta);
 ---
 
 <BaseLayout
-  title={recipe.meta_title || recipe.title}
-  description={recipe.meta_description || recipe.description}
+  title={locale === 'en' ? (recipe.meta_title || recipe.title) : recipe.title}
+  description={locale === 'en' ? (recipe.meta_description || recipe.description) : recipe.description}
   image={recipe.hero_image_url ?? undefined}
   type="article"
   jsonLd={recipeJsonLd}
@@ -163,7 +182,7 @@ const totalTimeLabel = totalTime >= 60
                         src={img.src}
                         srcset={img.srcset}
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
-                        alt={recipe.title}
+                        alt={`${recipe.title} - Ninja Creami Recipe`}
                         class="w-full h-full object-cover scale-110"
                         fetchpriority="high"
                       />
@@ -557,6 +576,25 @@ const totalTimeLabel = totalTime >= 60
       </ScrollReveal>
     </div>
   </section>
+
+  <!-- Collection Links -->
+  {matchingCollections.length > 0 && (
+    <section class="py-6">
+      <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap items-center gap-3 justify-center">
+          <span class="text-sm text-slate-500">{t('home.browseRecipes', locale)}:</span>
+          {matchingCollections.map((c) => (
+            <a
+              href={lp(`/recipes/collection/${c.slug}`)}
+              class="px-4 py-2 bg-cream rounded-full text-sm font-medium text-chocolate hover:bg-berry hover:text-white transition-colors"
+            >
+              {c.meta.title}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- You May Also Like -->
   {similarRecipes.length > 0 && (
