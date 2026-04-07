@@ -101,6 +101,16 @@ export default function RateRecipe({ recipeId, initialRating, initialCount }: Pr
       setRatingCount(data.rating_count);
       setStatus('done');
 
+      // GTM dataLayer: rating submit
+      if (typeof window !== 'undefined') {
+        (window as { dataLayer?: Record<string, unknown>[] }).dataLayer = (window as { dataLayer?: Record<string, unknown>[] }).dataLayer || [];
+        (window as { dataLayer?: Record<string, unknown>[] }).dataLayer!.push({
+          event: 'rating_submit',
+          recipe_name: document.title.split(' | ')[0],
+          rating_value: rating,
+        });
+      }
+
       // Celebrate high ratings with a sprinkle burst
       if (rating >= 4 && containerRef.current) {
         burstSprinkles(containerRef.current);

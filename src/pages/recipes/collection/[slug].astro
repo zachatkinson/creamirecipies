@@ -160,4 +160,13 @@ const otherCollections = COLLECTIONS
       </div>
     </section>
   )}
+
+  <!-- GTM dataLayer: collection view -->
+  <script define:vars={{ collectionName: meta.title }}>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'collection_view',
+      collection_name: collectionName,
+    });
+  </script>
 </BaseLayout>

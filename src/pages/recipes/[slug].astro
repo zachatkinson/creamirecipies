@@ -644,6 +644,17 @@ const matchingCollections = COLLECTIONS
   </div>
 </div>
 
+<script define:vars={{ recipeTitle: recipe.title, recipeDifficulty: recipe.difficulty, recipeBaseType: recipe.base_type }}>
+  // GTM dataLayer: recipe view
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'recipe_view',
+    recipe_name: recipeTitle,
+    recipe_difficulty: recipeDifficulty,
+    recipe_base_type: recipeBaseType,
+  });
+</script>
+
 <script define:vars={{ steps: recipe.steps }}>
   // Cook Mode
   const overlay = document.getElementById('cook-mode-overlay');
@@ -678,6 +689,9 @@ const matchingCollections = COLLECTIONS
     overlay?.classList.remove('hidden');
     overlay?.classList.add('flex');
     document.body.style.overflow = 'hidden';
+    // GTM dataLayer: cook mode start
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'cook_mode_start', recipe_name: document.title.split(' | ')[0] });
   });
 
   closeBtn?.addEventListener('click', () => {
