@@ -1,15 +1,15 @@
 /**
- * IndexNow API endpoint — call this when new recipes are published
- * to notify Bing/Yandex for near-instant indexing.
+ * IndexNow API endpoint — notify Bing/Yandex for near-instant indexing.
  *
  * POST /api/indexnow { urls: ["/recipes/new-recipe-slug"] }
  *
- * PLACEHOLDER: Replace INDEXNOW_API_KEY with a real key from https://www.indexnow.org/
+ * Automatically expands each path to all locale variants (en, fr, es, de, pt).
  */
 import type { APIRoute } from 'astro';
 
 const INDEXNOW_API_KEY = import.meta.env.INDEXNOW_API_KEY ?? '3259e128db3d124710601aa575a1293a';
 const SITE_HOST = 'eatcreami.com';
+const LOCALE_PREFIXES = ['', '/fr', '/es', '/de', '/pt'];
 
 export const POST: APIRoute = async ({ request }) => {
   try {
@@ -18,7 +18,9 @@ export const POST: APIRoute = async ({ request }) => {
       return new Response(JSON.stringify({ error: 'urls array required' }), { status: 400 });
     }
 
-    const fullUrls = urls.map((u: string) => `https://${SITE_HOST}${u}`);
+    const fullUrls = urls.flatMap((u: string) =>
+      LOCALE_PREFIXES.map((prefix) => `https://${SITE_HOST}${prefix}${u}`)
+    );
 
     const response = await fetch('https://api.indexnow.org/indexnow', {
       method: 'POST',

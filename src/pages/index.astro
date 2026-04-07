@@ -71,60 +71,63 @@ const lp = (path: string) => localePath(path, locale);
   <!-- Hero Section -->
   <section class="relative overflow-hidden bg-gradient-to-br from-cream via-blush/10 to-lavender/10 hero-gradient-animated">
     <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-      <div class="max-w-2xl relative z-10">
-        <ScrollReveal animation="scale" delay={0.05}>
-          <span class="inline-flex items-center gap-2 px-4 py-1.5 bg-blush/20 text-berry text-sm font-medium rounded-full mb-6">
-            <span data-count-to={recipeCount ?? 0} data-count-suffix="+">0+</span>
-            {t('home.badge', locale)}
-          </span>
-        </ScrollReveal>
-        <div>
-          <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold text-chocolate leading-tight mb-6">
-            <span id="hero-title-main">{t('home.heroTitle', locale)}</span>
-            <span id="hero-title-accent" class="text-transparent bg-clip-text bg-gradient-to-r from-blush-dark to-berry" style="opacity:0">
-              {t('home.heroTitleAccent', locale)}
+      <div class="md:flex md:items-center md:gap-8 lg:gap-12">
+        <!-- Text column -->
+        <div class="md:flex-1 relative z-10">
+          <ScrollReveal animation="scale" delay={0.05}>
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 bg-blush/20 text-berry text-sm font-medium rounded-full mb-6">
+              <span data-count-to={recipeCount ?? 0} data-count-suffix="+">0+</span>
+              {t('home.badge', locale)}
             </span>
-          </h1>
-        </div>
-        <ScrollReveal animation="fade-up" delay={0.2}>
-          <p class="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
-            {t('home.heroDescription', locale)}
-          </p>
-        </ScrollReveal>
-        <ScrollReveal animation="fade-up" delay={0.3}>
-          <div class="flex flex-wrap gap-4">
-            <a
-              href={lp('/recipes')}
-              data-magnetic
-              class="px-8 py-3.5 bg-berry text-white font-semibold rounded-full hover:bg-berry/90 transition-colors shadow-lg shadow-berry/25"
-            >
-              {t('home.browseRecipes', locale)}
-            </a>
+          </ScrollReveal>
+          <div>
+            <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold text-chocolate leading-tight mb-6">
+              <span id="hero-title-main">{t('home.heroTitle', locale)}</span>
+              <span id="hero-title-accent" class="text-transparent bg-clip-text bg-gradient-to-r from-blush-dark to-berry" style="opacity:0">
+                {t('home.heroTitleAccent', locale)}
+              </span>
+            </h1>
           </div>
-        </ScrollReveal>
+          <ScrollReveal animation="fade-up" delay={0.2}>
+            <p class="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
+              {t('home.heroDescription', locale)}
+            </p>
+          </ScrollReveal>
+          <ScrollReveal animation="fade-up" delay={0.3}>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href={lp('/recipes')}
+                data-magnetic
+                class="px-8 py-3.5 bg-berry text-white font-semibold rounded-full hover:bg-berry/90 transition-colors shadow-lg shadow-berry/25"
+              >
+                {t('home.browseRecipes', locale)}
+              </a>
+            </div>
+          </ScrollReveal>
+        </div>
+
+        <!-- Hero swirl image -->
+        <div class="hidden md:block md:w-64 lg:w-80 xl:w-96 flex-shrink-0">
+          <ScrollReveal animation="fade-in" delay={0.4}>
+            <img
+              src="/images/hero-swirl.avif"
+              srcset="/images/hero-swirl-384w.avif 384w, /images/hero-swirl-768w.avif 768w, /images/hero-swirl.avif 800w"
+              sizes="(max-width: 1024px) 256px, (max-width: 1280px) 320px, 384px"
+              alt=""
+              aria-hidden="true"
+              width={800}
+              height={1200}
+              class="w-full h-auto drop-shadow-2xl"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </ScrollReveal>
+        </div>
       </div>
 
       <!-- Decorative elements (PixiJS only loads on desktop to save ~73kB on mobile) -->
       <div class="hidden md:block absolute right-0 top-0 w-1/2 h-full opacity-30 pointer-events-none" id="hero-canvas-container">
         <HeroCanvas client:media="(min-width: 768px)" />
-      </div>
-
-      <!-- Hero swirl image -->
-      <div class="hidden md:block absolute right-8 lg:right-16 top-1/2 -translate-y-1/2 w-64 lg:w-80 xl:w-96 pointer-events-none z-[1]">
-        <ScrollReveal animation="fade-in" delay={0.4}>
-          <img
-            src="/images/hero-swirl.avif"
-            srcset="/images/hero-swirl-384w.avif 384w, /images/hero-swirl-768w.avif 768w, /images/hero-swirl.avif 800w"
-            sizes="(max-width: 1024px) 256px, (max-width: 1280px) 320px, 384px"
-            alt=""
-            aria-hidden="true"
-            width={800}
-            height={1200}
-            class="w-full h-auto drop-shadow-2xl"
-            loading="eager"
-            fetchpriority="high"
-          />
-        </ScrollReveal>
       </div>
     </div>
   </section>
