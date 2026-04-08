@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest';
-import { t, localePath, getLocaleFromPath, SUPPORTED_LOCALES, DEFAULT_LOCALE, type Locale } from './index';
+import { t, localePath, getLocaleFromPath, SUPPORTED_LOCALES, DEFAULT_LOCALE } from './index';
 
 describe('SUPPORTED_LOCALES', () => {
   test('includes all 5 locales', () => {

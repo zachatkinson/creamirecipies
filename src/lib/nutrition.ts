@@ -56,6 +56,7 @@ export async function calculateNutrition(
   let calories = 0, protein = 0, fat = 0, carbs = 0;
 
   for (const ing of ingredients) {
+    if (!ing.master_ingredient_id) continue;
     const nutrition = nutritionMap.get(ing.master_ingredient_id);
     if (!nutrition) continue;
     const amount = parseFloat(ing.amount) || 0;

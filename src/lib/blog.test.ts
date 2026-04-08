@@ -1,4 +1,4 @@
-import { describe, test, expect } from 'vitest';
+import { describe, test, expect, vi } from 'vitest';
 import { logQueryError, CATEGORY_COLORS, DIFFICULTY_COLORS, BASE_TYPE_FROM_SLUG, INGREDIENT_GROUP_ORDER } from './blog';
 
 describe('CATEGORY_COLORS', () => {

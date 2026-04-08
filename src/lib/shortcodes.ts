@@ -151,6 +151,47 @@ function renderCollectionCard(slug: string, meta: { title: string; description: 
   return `<a href="${href}" class="not-prose flex items-center gap-4 p-4 my-4 bg-gradient-to-r from-cream to-blush/10 border border-blush/30 rounded-xl no-underline transition-shadow hover:shadow-md group"><span class="text-3xl shrink-0">📚</span><span class="flex-1"><strong class="text-chocolate block group-hover:text-berry transition-colors">${meta.title}</strong><span class="text-slate-600 text-sm line-clamp-2">${meta.description}</span></span><svg class="w-5 h-5 text-berry shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>`;
 }
 
+const SHORTCODE_RE = /\[(product|recipe|collection)\s+[^\]]+\]/g;
+
+/**
+ * Re-insert shortcodes from the English body into a translated body when
+ * they were accidentally stripped during translation. Shortcodes are
+ * position-matched by section (split on markdown headings).
+ */
+export function preserveShortcodes(englishBody: string, translatedBody: string): string {
+  const englishShortcodes = englishBody.match(SHORTCODE_RE);
+  if (!englishShortcodes || englishShortcodes.length === 0) return translatedBody;
+
+  // If all shortcodes already present, nothing to do
+  const missing = englishShortcodes.filter((sc) => !translatedBody.includes(sc));
+  if (missing.length === 0) return translatedBody;
+
+  // Split both bodies into sections by markdown headings
+  const sectionRe = /^(#{1,6}\s)/m;
+  const englishSections = englishBody.split(sectionRe);
+  const translatedSections = translatedBody.split(sectionRe);
+
+  // Walk English sections, collect shortcodes per section index
+  const shortcodesBySection: Map<number, string[]> = new Map();
+  for (let i = 0; i < englishSections.length; i++) {
+    const found = englishSections[i].match(SHORTCODE_RE);
+    if (found) {
+      const missingInSection = found.filter((sc) => !translatedBody.includes(sc));
+      if (missingInSection.length > 0) {
+        shortcodesBySection.set(i, missingInSection);
+      }
+    }
+  }
+
+  // Insert missing shortcodes at the end of the corresponding translated section
+  for (const [sectionIdx, shortcodes] of shortcodesBySection) {
+    const targetIdx = Math.min(sectionIdx, translatedSections.length - 1);
+    translatedSections[targetIdx] = translatedSections[targetIdx].trimEnd() + '\n\n' + shortcodes.join('\n\n') + '\n';
+  }
+
+  return translatedSections.join('');
+}
+
 /**
  * Expand [product asin="..."] and [recipe slug="..."] shortcodes in HTML content.
  * Fetches data from Supabase and renders localized cards.

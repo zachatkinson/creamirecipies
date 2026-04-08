@@ -4,7 +4,7 @@ import ScrollReveal from '../../components/animations/ScrollReveal.astro';
 import BlogPostCard from '../../components/blog/BlogPostCard.astro';
 import { supabase } from '../../lib/supabase';
 import { t } from '../../i18n';
-import { CATEGORY_COLORS } from '../../lib/blog';
+
 import { translatePostArray } from '../../lib/translations';
 
 export const prerender = false;
@@ -26,8 +26,6 @@ const total = count ?? 0;
 
 // Apply translations
 await translatePostArray(supabase, posts, locale);
-
-const categoryColors = CATEGORY_COLORS;
 
 const hasMore = posts.length < total;
 ---

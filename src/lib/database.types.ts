@@ -53,6 +53,38 @@ export type Database = {
         }
         Relationships: []
       }
+      anonymous_ratings: {
+        Row: {
+          id: string
+          recipe_id: string
+          rating: number
+          ip_hash: string
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          recipe_id: string
+          rating: number
+          ip_hash: string
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          recipe_id?: string
+          rating?: number
+          ip_hash?: string
+          created_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "anonymous_ratings_recipe_id_fkey"
+            columns: ["recipe_id"]
+            isOneToOne: false
+            referencedRelation: "recipes"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
       categories: {
         Row: {
           description: string | null

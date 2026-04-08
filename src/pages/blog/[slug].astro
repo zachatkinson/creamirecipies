@@ -5,9 +5,9 @@ import AdUnit from '../../components/ads/AdUnit.astro';
 import { supabase } from '../../lib/supabase';
 import { marked } from 'marked';
 import { getPostBySlug, getPostTranslation, getPostNavigation, getRelatedPosts } from '../../lib/posts';
-import { expandShortcodes } from '../../lib/shortcodes';
+import { expandShortcodes, preserveShortcodes } from '../../lib/shortcodes';
 import { buildBlogPostingJsonLd, type BlogPostForJsonLd } from '../../lib/seo';
-import { CATEGORY_COLORS } from '../../lib/blog';
+
 import { ui, translatePostNavigation } from '../../lib/translations';
 import { t, localePath } from '../../i18n';
 import { formatPublishDate } from '../../lib/formatting';
@@ -24,12 +24,15 @@ if (!post) {
   return Astro.redirect('/404');
 }
 
-// Apply translation if non-English
+// Apply translation if non-English, preserving shortcodes the translator may have dropped
+const originalBody = post.body;
 const postTranslation = await getPostTranslation(supabase, post.id, locale);
 if (postTranslation) {
   (post as Record<string, unknown>).title = postTranslation.title;
   if (postTranslation.excerpt) (post as Record<string, unknown>).excerpt = postTranslation.excerpt;
-  if (postTranslation.body) (post as Record<string, unknown>).body = postTranslation.body;
+  if (postTranslation.body) {
+    (post as Record<string, unknown>).body = preserveShortcodes(originalBody ?? '', postTranslation.body);
+  }
 }
 
 const heroImage = post.hero_image_url || `/images/blog/${post.category || 'news'}.svg`;
@@ -43,7 +46,6 @@ const relatedPosts = await getRelatedPosts(supabase, post.category, post.id);
 // Translate prev/next/related if non-English
 await translatePostNavigation(supabase, locale, prevPost, nextPost, relatedPosts);
 
-const categoryColors = CATEGORY_COLORS;
 const blogPostJsonLd = buildBlogPostingJsonLd(post as BlogPostForJsonLd, siteUrl, locale);
 const breadcrumbs = [
   { name: t('breadcrumb.home', locale), url: siteUrl },

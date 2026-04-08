@@ -8,14 +8,8 @@ import type { MeasurementSystem } from '../../lib/measurements';
 const GROUP_LABELS = INGREDIENT_GROUP_LABELS;
 const GROUP_ORDER = INGREDIENT_GROUP_ORDER;
 
-import { amazonProductUrl } from '../../lib/affiliate';
-
-interface IngredientWithAsin extends Ingredient {
-  amazon_asin?: string | null;
-}
-
 interface Props {
-  ingredients: IngredientWithAsin[];
+  ingredients: Ingredient[];
   models: ModelRef[];
   recipePintSize: '16oz' | '24oz';
   isSwirl: boolean;
@@ -199,19 +193,6 @@ export default function ScalableIngredients({ ingredients, locale = 'en' }: Prop
                     <span className="flex-shrink-0 w-5 h-5 mt-0.5 rounded-full border-2 border-[#F4B8C1]/40" />
                     <div className="flex-1">
                       <span className="font-medium text-slate-700">{ingredient.name}</span>
-                      {/* Affiliate links disabled until traffic grows — enable by removing false && */}
-                      {false && ingredient.amazon_asin && (
-                        <a
-                          href={amazonProductUrl(ingredient.amazon_asin!)}
-                          target="_blank"
-                          rel="noopener noreferrer sponsored"
-                          className="inline-flex items-center ml-1.5 px-1.5 py-0.5 text-[10px] font-medium text-slate-400 hover:text-berry bg-slate-50 hover:bg-blush/10 rounded transition-colors"
-                          aria-label={`Buy ${ingredient.name} on Amazon`}
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          buy
-                        </a>
-                      )}
                       <span className={`ml-2 text-sm ${isChanged ? 'text-berry font-medium' : 'text-slate-500'}`}>
                         {displayAmount}{displayUnit ? ` ${displayUnit}` : ''}
                       </span>

@@ -200,7 +200,7 @@ export function useRecipeFilters(
     searchTimerRef.current = setTimeout(() => fetchRef.current(1, false), delay);
 
     return () => { if (searchTimerRef.current) clearTimeout(searchTimerRef.current); };
-  // eslint-disable-next-line react-hooks/exhaustive-deps -- fetchRef is stable, only filter values should trigger
+  // fetchRef is stable, only filter values should trigger
   }, [query, selectedBaseTypes, selectedDifficulty, selectedFlavors, selectedDietary, selectedModels, selectedCategories, minRating, sortBy, buildParams]);
 
   const hasMore = recipes.length < total;

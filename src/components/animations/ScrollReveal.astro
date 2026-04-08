@@ -36,7 +36,7 @@ const {
 
   // Safety net: if GSAP sets opacity:0 but scroll trigger never fires,
   // force all scroll-reveal elements visible after 3 seconds
-  const safetyTimeout = setTimeout(() => {
+  const _safetyTimeout = setTimeout(() => {
     document.querySelectorAll('.scroll-reveal').forEach((el) => {
       if (getComputedStyle(el).opacity === '0') {
         (el as HTMLElement).style.opacity = '1';

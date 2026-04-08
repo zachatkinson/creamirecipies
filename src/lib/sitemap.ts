@@ -1,6 +1,6 @@
 /** Shared sitemap utilities */
 
-import { SUPPORTED_LOCALES, DEFAULT_LOCALE, localePath, type Locale } from '../i18n';
+import { SUPPORTED_LOCALES, DEFAULT_LOCALE, localePath } from '../i18n';
 
 /** Escape special XML characters */
 export function escapeXml(str: string): string {

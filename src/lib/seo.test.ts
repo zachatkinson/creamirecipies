@@ -43,7 +43,7 @@ describe('buildRecipeJsonLd', () => {
 
     // Assert
     expect(jsonLd.recipeInstructions[0].tip).toBeDefined();
-    expect(jsonLd.recipeInstructions[0].tip['@type']).toBe('HowToTip');
+    expect(jsonLd.recipeInstructions[0].tip!['@type']).toBe('HowToTip');
     expect(jsonLd.recipeInstructions[1].tip).toBeUndefined();
   });
 
@@ -53,8 +53,8 @@ describe('buildRecipeJsonLd', () => {
 
     // Assert
     expect(jsonLd.aggregateRating).toBeDefined();
-    expect(jsonLd.aggregateRating.ratingValue).toBe('4.5');
-    expect(jsonLd.aggregateRating.ratingCount).toBe('10');
+    expect(jsonLd.aggregateRating!.ratingValue).toBe('4.5');
+    expect(jsonLd.aggregateRating!.ratingCount).toBe('10');
   });
 
   test('omits aggregateRating when rating_count is 0', () => {
@@ -77,8 +77,8 @@ describe('buildRecipeJsonLd', () => {
 
     // Assert
     expect(jsonLd.nutrition).toBeDefined();
-    expect(jsonLd.nutrition.calories).toBe('200 calories');
-    expect(jsonLd.nutrition.proteinContent).toBe('5g');
+    expect(jsonLd.nutrition!.calories).toBe('200 calories');
+    expect(jsonLd.nutrition!.proteinContent).toBe('5g');
   });
 
   test('includes suitableForDiet for dietary categories', () => {

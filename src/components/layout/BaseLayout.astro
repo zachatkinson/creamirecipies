@@ -4,7 +4,7 @@ import Header from './Header.astro';
 import Footer from './Footer.astro';
 
 import { buildWebSiteJsonLd, buildOrganizationJsonLd, buildBreadcrumbJsonLd } from '../../lib/seo';
-import { SUPPORTED_LOCALES, DEFAULT_LOCALE, localePath, t, type Locale } from '../../i18n';
+import { SUPPORTED_LOCALES, localePath, t } from '../../i18n';
 
 interface Props {
   title: string;
@@ -107,7 +107,7 @@ const fullTitle = title === 'Home' ? 'eatcreami — Ninja Creami Recipes & Froze
     <meta name="msapplication-TileColor" content="#FFF8F0" />
 
     <!-- Google Tag Manager -->
-    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script is:inline>/* eslint-disable no-var */(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);

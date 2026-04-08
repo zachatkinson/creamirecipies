@@ -8,7 +8,6 @@ import { supabase } from '../lib/supabase';
 import { getCategories } from '../lib/recipes';
 import { t, localePath } from '../i18n';
 import { ui, translateRecipeArray, translatePostArray } from '../lib/translations';
-import { COLLECTIONS, getCollectionMeta } from '../lib/collections';
 
 const locale = Astro.locals.locale;
 const categories = await getCategories(supabase);

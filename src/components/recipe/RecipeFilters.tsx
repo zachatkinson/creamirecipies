@@ -1,4 +1,4 @@
-import { useRef as useReactRef, useEffect as useReactEffect, useLayoutEffect } from 'react';
+import { useRef as useReactRef, useLayoutEffect } from 'react';
 import { DIFFICULTY_COLORS } from '../../lib/blog';
 import { buildRecipeImageSrcset } from '../../lib/images';
 import { localePath, type Locale } from '../../i18n';
