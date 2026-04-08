@@ -111,7 +111,7 @@ const otherCollections = COLLECTIONS
       {recipes.length > 0 ? (
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {recipes.map((recipe, i) => (
-            <ScrollReveal animation="fade-up" delay={Math.min(i * 0.05, 0.3)}>
+            <ScrollReveal class="h-full" animation="fade-up" delay={Math.min(i * 0.05, 0.3)}>
               <RecipeCard recipe={recipe} />
             </ScrollReveal>
           ))}

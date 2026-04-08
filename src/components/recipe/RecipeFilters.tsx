@@ -311,7 +311,7 @@ export default function RecipeFilters({ initialRecipes, totalRecipes, initialFac
                   key={recipe.id}
                   data-flip-id={recipe.id}
                   href={localePath(`/recipes/${recipe.slug}`, (locale ?? 'en') as Locale)}
-                  className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="aspect-[4/3] bg-cream-dark overflow-hidden">
                     {recipe.hero_image_url ? (() => {
