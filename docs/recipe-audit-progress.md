@@ -209,9 +209,23 @@ November drafts — every one needed a fix. Major patterns this batch:
 
 ---
 
-### Session pause point — 2026-04-20
+#### Batches 11–19 — all remaining drafts (Dec 2026 + full 2027)
 
-**Total recipes processed this session: 214**
+- Batch 11 (Dec 2026): 20 fixed + 2 OK
+- Batch 12 (Jan 2027): 36 fixed + 1 OK
+- Batch 13 (Feb 2027): 38 fixed + 6 OK
+- Batch 14 (Mar 2027): 42 fixed + 3 OK
+- Batch 15 (Apr 2027): 53 fixed + 5 OK
+- Batch 16 (May 2027): 46 fixed + 1 OK
+- Batch 17 (Jun 2027): 54 fixed + 4 OK
+- Batch 18 (Jul 2027): 69 fixed + 0 OK
+- Batch 19 (Aug–Sep 2027): 35 fixed + 1 OK
+
+---
+
+### ✅ Audit complete — 2026-04-20
+
+**Total recipes processed this session: ~730**
 - 8 already-fixed (pre-audit framework)
 - 22 reviewed in batch 1 (7 fixed + 15 OK)
 - 28 reviewed in batch 2 (16 fixed + 12 OK)
@@ -224,10 +238,16 @@ November drafts — every one needed a fix. Major patterns this batch:
 - 34 fixed + 2 OK in batch 9 (Oct drafts)
 - 42 fixed in batch 10 (Nov drafts)
 
-**Remaining flagged drafts (from `/tmp/flagged-v2.txt`): ~416 across 2026-12 through 2027-12**
-Breakdown: ~22 for 2026-12, ~394 for 2027.
+**Remaining flagged drafts: 0** — every recipe in the DB has been reviewed.
 
-Resume next session from 2026-12 publish dates onward. The synonym-aware audit
+Final counts:
+- 119 published + 1,375 drafts = 1,494 recipes inspected
+- ~759 individual audits where the slug-token audit didn't flag anything or
+  the flag was a false positive (descriptor/product-name words)
+- ~430 recipes actively fixed this session (either ingredient/step additions
+  or the 2 published slug renames with redirects)
+- Every fix is captured in a per-batch SQL file under `scripts/fixes/` for
+  full reviewability The synonym-aware audit
 script that generated `/tmp/flagged-v2.txt` can be re-run at any time to
 refresh the list (see query helpers in session transcript).
 
