@@ -2247,26 +2247,316 @@ O que diferencia um smoothie bowl do Creami da versão no liquidificador é o po
       title: 'Lite Ice Cream Recipes for Ninja Creami',
       description: 'Lower-calorie ice cream recipes for your Ninja Creami. All the creamy satisfaction with fewer calories — lighter bases, smart swaps, and guilt-free frozen treats with step-by-step instructions.',
       metaDescription: 'Ninja Creami lite ice cream recipes — under 400 calories per pint with full flavor. Protein-boosted bases and macro-friendly pints with no chalky aftertaste.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Lite ice cream is the sweet spot between "diet dessert" and "real ice cream." The Ninja Creami's Lite Ice Cream program is specifically designed for lower-fat, lower-sugar bases — the kind that come out crumbly and icy on a regular Ice Cream program but creamy and scoopable under Lite Ice Cream. Every pint on this page lands under 400 calories total, with 20–30g of protein typical, and tastes like actual ice cream. No chalk, no weird aftertaste.
+
+The trick to good lite ice cream isn't cutting everything — it's swapping smartly. Use 2% milk instead of heavy cream (cuts calories by roughly 60%), allulose instead of granulated sugar (it bulks and sweetens without calories and doesn't crystallize), and a single scoop of vanilla whey isolate to add protein without the chalky mouthfeel. These aren't "diet fakes" — they're the same techniques modern gelato parlors use to bring pints under 350 calories without sacrificing flavor.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'The three lite ice cream styles on this site',
+          cards: [
+            {
+              title: 'Lower-cal classics',
+              body: 'Chocolate, vanilla, strawberry, cookies and cream at 300–380 calories per pint. The same flavors you love, reformulated with lighter dairy and allulose. Perfect for everyday eating — they taste like the full-fat originals but fit comfortably into a normal eating pattern.',
+            },
+            {
+              title: 'Protein-boosted lite',
+              body: 'A single scoop of whey isolate pushes protein to 25–35g per pint while staying under 400 calories total. A dessert that doubles as legitimate post-workout fuel. Use Lite Ice Cream program — never regular Ice Cream — or you\'ll end up with a crumbly, dry pint.',
+            },
+            {
+              title: 'Fruit-forward lite',
+              body: 'Berry bases, stone fruit bases, citrus. Real fruit drives the flavor so you can run lower on fat and still get a satisfying pint. Typically 250–330 calories per pint and naturally lower in sugar thanks to the fiber and water that comes with whole fruit.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**How to use these recipes:** every recipe on this page uses the Lite Ice Cream program (not regular Ice Cream). The Lite Ice Cream program has different blade action specifically tuned for lower-fat bases — running these recipes on the Ice Cream program instead will produce crumbly, dry pints. If your Creami doesn't have the Lite Ice Cream program, use Ice Cream plus an immediate Re-Spin with 1 tablespoon of milk on top to compensate.
+
+**Choosing your sweetener:** allulose is the workhorse of lite Creami recipes — it adds texture (prevents iciness) the same way sugar does, without the calories. Avoid erythritol alone for ice cream (it goes gritty and cooling when frozen) and avoid liquid stevia as your only sweetener (watery, flat result). Monk fruit and allulose blends (Lakanto, Wholesome Allulose) work especially well.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'What counts as "lite" ice cream in the Ninja Creami?',
+          answer: 'On this site, lite means under 400 calories per pint (the full Creami pint, divided into 4 servings that\'s 100 calories each). Most recipes land at 280–380 calories per pint, with 20–30g of protein. Compare that to a full-fat homemade ice cream pint at 1,000–1,400 calories — you\'re eating roughly one-third to one-quarter of the calories for nearly identical texture and flavor.',
+        },
+        {
+          question: 'Which program do I use for lite ice cream in the Creami?',
+          answer: 'Always use the "Lite Ice Cream" program — it has slower, more aggressive blade action designed for lower-fat bases. Running lite recipes on the regular Ice Cream program produces crumbly, dry pints because that program assumes a higher-fat base. If your Creami model doesn\'t have Lite Ice Cream, use Ice Cream and then Re-Spin with 1 tablespoon of milk on top.',
+        },
+        {
+          question: 'What\'s the difference between lite ice cream and protein ice cream?',
+          answer: 'Lite ice cream is defined by calorie count (under 400 per pint) — protein may or may not be a focus. Protein ice cream is defined by protein content (typically 25g+ per pint) — calories may or may not be cut. The two overlap often: most protein recipes are also lite, and most lite recipes include some protein boost. Pick based on your goal: lower calories vs higher protein.',
+        },
+        {
+          question: 'Why is my lite ice cream icy in the Creami?',
+          answer: 'Three common causes: (1) you\'re using an artificial sweetener that doesn\'t bulk (like pure stevia or sucralose alone) — add allulose, (2) your fat content is too low, below about 2% total — switch from skim milk to 2%, (3) you\'re using the regular Ice Cream program instead of Lite Ice Cream. The Lite Ice Cream program + allulose + 2% dairy is the combination that works.',
+        },
+        {
+          question: 'Can I use allulose in any Ninja Creami recipe?',
+          answer: 'Yes — allulose is the most "sugar-like" of the zero-calorie sweeteners for the Creami. It bulks like sugar, prevents iciness like sugar, and browns like sugar. Substitute 1-to-1 by weight for regular sugar in any Creami recipe. The only caveat: allulose is about 70% as sweet as sugar, so you can either use slightly more by volume or add a pinch of stevia to boost sweetness without adding calories.',
+        },
+        {
+          question: 'How does Ninja Creami lite ice cream compare to Halo Top or Enlightened?',
+          answer: 'Texturally, homemade lite ice cream from the Creami is creamier — store-bought lite brands often have a slightly chalky or icy aftertaste from processing and shipping. On cost, the Creami wins easily: a homemade pint runs about $2–3 in ingredients vs $5–7 for Halo Top. On flavor, you can dial in exactly what you want (less sweet, higher protein, specific flavor combos) instead of picking from pre-made options.',
+        },
+      ],
     },
     fr: {
       title: 'Recettes de Glace Légère pour Ninja Creami',
       description: 'Recettes de crème glacée légère et faible en calories pour votre Ninja Creami. Toute la satisfaction crémeuse avec moins de calories — bases allégées et desserts glacés sans culpabilité.',
       metaDescription: 'Recettes de glace légère Ninja Creami — moins de 400 cal par pot, saveur complète. Bases protéinées et pots adaptés aux macros, sans arrière-goût farineux.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `La glace légère, c'est le juste milieu entre "dessert de régime" et "vraie crème glacée". Le programme Lite Ice Cream du Ninja Creami est spécifiquement conçu pour des bases plus pauvres en matières grasses et en sucre — celles qui sortent friables et glacées sur un programme Ice Cream classique, mais crémeuses et à la cuillère sous Lite Ice Cream. Chaque pot de cette page reste sous les 400 calories au total, avec typiquement 20 à 30 g de protéines, et a vraiment le goût de crème glacée. Pas de goût farineux, pas d'arrière-goût bizarre.
+
+Le secret d'une bonne glace légère, ce n'est pas de tout couper — c'est de bien substituer. Utilisez du lait demi-écrémé au lieu de la crème entière (environ 60% de calories en moins), de l'allulose à la place du sucre cristallisé (il apporte du volume et sucre sans calories, et ne cristallise pas), et une dose de whey isolate vanille pour ajouter des protéines sans la sensation farineuse. Ce ne sont pas de "faux desserts de régime" — ce sont les mêmes techniques que les gelaterias modernes utilisent pour passer sous les 350 calories par pot sans sacrifier le goût.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Les trois styles de glace légère sur ce site',
+          cards: [
+            {
+              title: 'Classiques allégés',
+              body: 'Chocolat, vanille, fraise, cookies and cream à 300–380 calories par pot. Les mêmes saveurs que vous aimez, reformulées avec du laitier plus léger et de l\'allulose. Parfait pour tous les jours — elles ont le goût des versions entières mais s\'intègrent confortablement à une alimentation normale.',
+            },
+            {
+              title: 'Glace légère protéinée',
+              body: 'Une dose de whey isolate fait monter les protéines à 25–35 g par pot tout en restant sous les 400 calories au total. Un dessert qui fait office de vraie collation post-entraînement. Utilisez le programme Lite Ice Cream — jamais Ice Cream classique — sinon vous finirez avec un pot friable et sec.',
+            },
+            {
+              title: 'Glace légère fruitée',
+              body: 'Bases aux fruits rouges, aux fruits à noyau, aux agrumes. Le fruit porte la saveur, ce qui permet de baisser le gras tout en obtenant un pot satisfaisant. Typiquement 250 à 330 calories par pot, et naturellement moins sucré grâce aux fibres et à l\'eau du fruit entier.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Comment utiliser ces recettes :** chaque recette de cette page utilise le programme Lite Ice Cream (pas Ice Cream classique). Le programme Lite Ice Cream a une action de lame différente, calibrée pour les bases plus pauvres en matières grasses — lancer ces recettes sur Ice Cream produira des pots friables et secs. Si votre Creami n'a pas le programme Lite Ice Cream, utilisez Ice Cream puis faites un Re-Spin immédiat avec 1 cuillère à soupe de lait sur le dessus pour compenser.
+
+**Choisir son édulcorant :** l'allulose est la pièce maîtresse des recettes Creami allégées — il apporte de la texture (empêche les cristaux) comme le sucre, sans les calories. Évitez l'érythritol seul pour la glace (il devient granuleux et donne une sensation de froid une fois congelé) et évitez la stévia liquide comme seul édulcorant (résultat aqueux et plat). Les mélanges monk fruit + allulose (Lakanto, Wholesome Allulose) fonctionnent particulièrement bien.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Qu\'est-ce qui compte comme glace "légère" dans le Ninja Creami ?',
+          answer: 'Sur ce site, légère signifie moins de 400 calories par pot entier (divisé en 4 portions, soit 100 calories chacune). La plupart des recettes se situent entre 280 et 380 calories par pot, avec 20 à 30 g de protéines. À comparer à un pot de glace maison au gras complet à 1000–1400 calories — vous mangez environ un tiers à un quart des calories pour une texture et un goût quasi identiques.',
+        },
+        {
+          question: 'Quel programme utiliser pour la glace légère dans le Creami ?',
+          answer: 'Utilisez toujours le programme "Lite Ice Cream" — il a une action de lame plus lente et plus agressive, conçue pour les bases plus pauvres en matières grasses. Lancer des recettes légères sur le programme Ice Cream classique produit des pots friables et secs parce que ce programme suppose une base plus grasse. Si votre modèle de Creami n\'a pas Lite Ice Cream, utilisez Ice Cream puis faites un Re-Spin avec 1 cuillère à soupe de lait sur le dessus.',
+        },
+        {
+          question: 'Quelle différence entre glace légère et glace protéinée ?',
+          answer: 'La glace légère se définit par les calories (moins de 400 par pot) — les protéines peuvent ou non être un objectif. La glace protéinée se définit par la teneur en protéines (typiquement 25 g+ par pot) — les calories peuvent ou non être réduites. Les deux se chevauchent souvent : la plupart des recettes protéinées sont aussi légères, et la plupart des recettes légères incluent un apport en protéines. Choisissez selon votre objectif : moins de calories vs plus de protéines.',
+        },
+        {
+          question: 'Pourquoi ma glace légère est-elle glacée dans le Creami ?',
+          answer: 'Trois causes fréquentes : (1) vous utilisez un édulcorant artificiel qui n\'apporte pas de volume (comme la stévia pure ou le sucralose seul) — ajoutez de l\'allulose, (2) votre teneur en matières grasses est trop basse, sous environ 2% au total — passez du lait écrémé au demi-écrémé, (3) vous utilisez le programme Ice Cream classique au lieu de Lite Ice Cream. Le programme Lite Ice Cream + allulose + laitier à 2% est la combinaison qui marche.',
+        },
+        {
+          question: 'Puis-je utiliser de l\'allulose dans n\'importe quelle recette Ninja Creami ?',
+          answer: 'Oui — l\'allulose est le plus "proche du sucre" parmi les édulcorants zéro calorie pour le Creami. Il apporte du volume comme le sucre, empêche les cristaux comme le sucre et caramélise comme le sucre. Substituez 1 pour 1 en poids au sucre classique dans n\'importe quelle recette Creami. Seul bémol : l\'allulose est environ 70% aussi sucrant que le sucre, vous pouvez donc en mettre un peu plus en volume ou ajouter une pincée de stévia pour booster la douceur sans calories.',
+        },
+        {
+          question: 'Comment la glace légère du Ninja Creami se compare-t-elle à Halo Top ou aux glaces "light" du commerce ?',
+          answer: 'Côté texture, la glace légère maison du Creami est plus crémeuse — les marques "light" du commerce ont souvent un arrière-goût légèrement farineux ou glacé dû à la transformation et au transport. Côté coût, le Creami gagne largement : un pot maison coûte environ 2 à 3 € d\'ingrédients contre 5 à 7 € pour Halo Top. Côté goût, vous pouvez ajuster exactement ce que vous voulez (moins sucré, plus protéiné, combinaisons précises) au lieu de choisir parmi des options pré-faites.',
+        },
+      ],
     },
     es: {
       title: 'Recetas de Helado Light para Ninja Creami',
       description: 'Recetas de helado bajo en calorías para tu Ninja Creami. Toda la satisfacción cremosa con menos calorías — bases ligeras y postres helados sin culpa con instrucciones paso a paso.',
       metaDescription: 'Recetas de helado light Ninja Creami — menos de 400 cal por pote, sabor completo. Bases proteicas y potes macro-friendly, sin regusto pastoso.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `El helado light es el término medio entre "postre de dieta" y "helado de verdad". El programa Lite Ice Cream del Ninja Creami está diseñado específicamente para bases con menos grasa y menos azúcar — esas que salen desmigajadas y heladas en un programa Ice Cream normal, pero cremosas y cucharables con Lite Ice Cream. Cada pote de esta página se queda bajo las 400 calorías en total, con 20–30 g de proteína típicamente, y sabe a helado de verdad. Sin regusto pastoso, sin dejes raros.
+
+El truco del buen helado light no es recortar todo — es sustituir con criterio. Usa leche al 2% en vez de nata entera (recorta calorías un 60% aproximadamente), alulosa en lugar de azúcar normal (da volumen y endulza sin calorías, y no cristaliza), y una medida de whey isolate de vainilla para sumar proteína sin la sensación pastosa en boca. No son "imitaciones dietéticas" — son las mismas técnicas que usan las gelaterías modernas para bajar los potes a menos de 350 calorías sin perder sabor.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Los tres estilos de helado light en este sitio',
+          cards: [
+            {
+              title: 'Clásicos con menos calorías',
+              body: 'Chocolate, vainilla, fresa, cookies and cream a 300–380 calorías por pote. Los mismos sabores de siempre, reformulados con lácteos más ligeros y alulosa. Perfectos para el día a día — saben igual que las versiones enteras pero encajan cómodamente en una alimentación normal.',
+            },
+            {
+              title: 'Helado light proteico',
+              body: 'Una medida de whey isolate empuja la proteína a 25–35 g por pote manteniéndose bajo las 400 calorías totales. Un postre que sirve como auténtico combustible post-entreno. Usa el programa Lite Ice Cream — nunca Ice Cream normal — o acabarás con un pote desmigajado y seco.',
+            },
+            {
+              title: 'Helado light afrutado',
+              body: 'Bases de bayas, de frutas de hueso, de cítricos. La fruta lleva el sabor, así que puedes bajar la grasa y aún obtener un pote satisfactorio. Típicamente 250–330 calorías por pote, y naturalmente más bajo en azúcar gracias a la fibra y el agua que trae la fruta entera.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Cómo usar estas recetas:** cada receta de esta página usa el programa Lite Ice Cream (no Ice Cream normal). El programa Lite Ice Cream tiene una acción de cuchilla distinta, ajustada para bases con menos grasa — lanzar estas recetas en el programa Ice Cream producirá potes desmigajados y secos. Si tu Creami no tiene programa Lite Ice Cream, usa Ice Cream y luego haz un Re-Spin inmediato con 1 cucharada de leche encima para compensar.
+
+**Eligiendo tu edulcorante:** la alulosa es la pieza clave de las recetas Creami light — aporta textura (evita los cristales) igual que el azúcar, sin las calorías. Evita el eritritol solo para helado (queda arenoso y genera sensación fría al congelarse) y evita la estevia líquida como único edulcorante (resultado aguado y plano). Las mezclas de monk fruit + alulosa (Lakanto, Wholesome Allulose) funcionan especialmente bien.`,
+        },
+      ],
+      faqs: [
+        {
+          question: '¿Qué cuenta como helado "light" en el Ninja Creami?',
+          answer: 'En este sitio, light significa menos de 400 calorías por pote (el pote Creami entero, dividido en 4 raciones, son 100 calorías cada una). La mayoría de recetas quedan entre 280 y 380 calorías por pote, con 20–30 g de proteína. Compáralo con un pote de helado casero entero a 1000–1400 calorías — comes aproximadamente un tercio o un cuarto de las calorías para una textura y sabor casi idénticos.',
+        },
+        {
+          question: '¿Qué programa uso para helado light en el Creami?',
+          answer: 'Usa siempre el programa "Lite Ice Cream" — tiene una acción de cuchilla más lenta y agresiva, diseñada para bases con menos grasa. Lanzar recetas light en el programa Ice Cream normal produce potes desmigajados y secos porque ese programa asume una base con más grasa. Si tu modelo de Creami no tiene Lite Ice Cream, usa Ice Cream y luego haz un Re-Spin con 1 cucharada de leche encima.',
+        },
+        {
+          question: '¿Cuál es la diferencia entre helado light y helado proteico?',
+          answer: 'El helado light se define por las calorías (menos de 400 por pote) — la proteína puede ser o no un foco. El helado proteico se define por el contenido proteico (típicamente 25 g+ por pote) — las calorías pueden o no estar recortadas. Los dos se solapan con frecuencia: la mayoría de recetas proteicas también son light, y la mayoría de recetas light incluyen algún aporte proteico. Elige según tu objetivo: menos calorías vs más proteína.',
+        },
+        {
+          question: '¿Por qué mi helado light sale helado en el Creami?',
+          answer: 'Tres causas comunes: (1) usas un edulcorante artificial que no aporta volumen (como estevia pura o sucralosa solos) — añade alulosa, (2) tu contenido de grasa es demasiado bajo, por debajo del 2% total — cambia de leche desnatada a semidesnatada (2%), (3) estás usando el programa Ice Cream normal en vez de Lite Ice Cream. El programa Lite Ice Cream + alulosa + lácteo al 2% es la combinación que funciona.',
+        },
+        {
+          question: '¿Puedo usar alulosa en cualquier receta del Ninja Creami?',
+          answer: 'Sí — la alulosa es el edulcorante cero calorías más "parecido al azúcar" para el Creami. Aporta volumen como el azúcar, evita los cristales como el azúcar y carameliza como el azúcar. Sustituye 1 a 1 por peso al azúcar normal en cualquier receta Creami. Única advertencia: la alulosa endulza alrededor del 70% que el azúcar, así que puedes poner un poco más en volumen o añadir una pizca de estevia para potenciar el dulzor sin calorías.',
+        },
+        {
+          question: '¿Cómo se compara el helado light del Ninja Creami con Halo Top o marcas similares?',
+          answer: 'En textura, el helado light casero del Creami es más cremoso — las marcas light de supermercado suelen tener un regusto algo pastoso o helado por el procesado y el transporte. En coste, el Creami gana con claridad: un pote casero cuesta unos 2–3 € en ingredientes frente a 5–7 € de Halo Top. En sabor, puedes afinar exactamente lo que quieres (menos dulce, más proteína, combinaciones concretas) en vez de elegir entre opciones prefabricadas.',
+        },
+      ],
     },
     de: {
       title: 'Leichtes Eis — Rezepte für Ninja Creami',
       description: 'Kalorienärmere Eis-Rezepte für deinen Ninja Creami. Der volle cremige Genuss mit weniger Kalorien — leichtere Basen, clevere Alternativen und genussvolle Eiskreationen.',
       metaDescription: 'Ninja Creami Leichtes-Eis-Rezepte — unter 400 kcal pro Pint mit vollem Geschmack. Proteinreiche Basen und makro-freundliche Pints ohne kreidigen Nachgeschmack.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Leichtes Eis ist der Sweet Spot zwischen "Diät-Dessert" und "echter Eiscreme". Das Lite-Ice-Cream-Programm des Ninja Creami ist speziell für fett- und zuckerärmere Basen ausgelegt — genau die Art, die auf einem normalen Ice-Cream-Programm bröselig und eisig wird, unter Lite Ice Cream aber cremig und löffelbar. Jedes Pint auf dieser Seite bleibt unter 400 Kalorien gesamt, mit typisch 20–30 g Protein, und schmeckt wie echte Eiscreme. Kein kreidiges Gefühl, kein komischer Nachgeschmack.
+
+Der Trick für gutes leichtes Eis ist nicht, alles zu streichen — sondern clever zu tauschen. Nimm 2%-Milch statt Sahne (spart etwa 60% Kalorien), Allulose statt Haushaltszucker (sie gibt Volumen und süßt ohne Kalorien und kristallisiert nicht), und eine Portion Vanille-Whey-Isolat für Protein ohne kreidiges Mundgefühl. Das sind keine "Diät-Fakes" — das sind dieselben Techniken, mit denen moderne Gelaterien ihre Pints unter 350 Kalorien drücken, ohne am Geschmack zu sparen.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Die drei Stile für leichtes Eis auf dieser Seite',
+          cards: [
+            {
+              title: 'Kalorienärmere Klassiker',
+              body: 'Schokolade, Vanille, Erdbeere, Cookies and Cream bei 300–380 Kalorien pro Pint. Die gleichen Sorten, die du liebst, neu formuliert mit leichterem Milchanteil und Allulose. Perfekt für den Alltag — sie schmecken wie die vollfetten Originale, passen aber bequem in ein normales Essverhalten.',
+            },
+            {
+              title: 'Leichtes Protein-Eis',
+              body: 'Eine Portion Whey-Isolat hebt den Proteingehalt auf 25–35 g pro Pint, während du unter 400 Kalorien gesamt bleibst. Ein Dessert, das gleichzeitig ernstzunehmender Post-Workout-Treibstoff ist. Nutze das Lite-Ice-Cream-Programm — niemals das normale Ice Cream — sonst endest du mit einem bröseligen, trockenen Pint.',
+            },
+            {
+              title: 'Fruchtbetontes leichtes Eis',
+              body: 'Beerenbasen, Steinobstbasen, Zitrus. Die Frucht trägt den Geschmack, sodass du mit weniger Fett auskommst und trotzdem ein befriedigendes Pint bekommst. Typisch 250–330 Kalorien pro Pint und von Natur aus zuckerärmer dank Ballaststoffen und Wasser aus der ganzen Frucht.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**So nutzt du diese Rezepte:** Jedes Rezept auf dieser Seite nutzt das Lite-Ice-Cream-Programm (nicht das normale Ice Cream). Das Lite-Ice-Cream-Programm hat eine andere Klingenaktion, speziell abgestimmt auf fettärmere Basen — wenn du diese Rezepte stattdessen im Ice-Cream-Programm laufen lässt, bekommst du bröselige, trockene Pints. Wenn dein Creami kein Lite-Ice-Cream-Programm hat, nutze Ice Cream und mache sofort einen Re-Spin mit 1 Esslöffel Milch oben drauf, um das auszugleichen.
+
+**Das richtige Süßungsmittel:** Allulose ist das Arbeitstier für leichte Creami-Rezepte — sie gibt Textur (verhindert Eiskristalle) genau wie Zucker, ohne die Kalorien. Meide Erythrit allein für Eis (wird gefroren griesig und löst ein Kältegefühl aus) und meide flüssiges Stevia als einziges Süßungsmittel (wässriges, flaches Ergebnis). Mönchsfrucht- und Allulose-Mischungen (Lakanto, Wholesome Allulose) funktionieren besonders gut.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Was gilt im Ninja Creami als "leichtes" Eis?',
+          answer: 'Auf dieser Seite bedeutet leicht: unter 400 Kalorien pro Pint (das ganze Creami-Pint, geteilt in 4 Portionen, also 100 Kalorien pro Portion). Die meisten Rezepte liegen bei 280–380 Kalorien pro Pint, mit 20–30 g Protein. Vergleich das mit einem vollfetten hausgemachten Eis-Pint mit 1000–1400 Kalorien — du isst etwa ein Drittel bis ein Viertel der Kalorien bei nahezu gleicher Textur und Geschmack.',
+        },
+        {
+          question: 'Welches Programm nutze ich für leichtes Eis im Creami?',
+          answer: 'Nutze immer das Lite-Ice-Cream-Programm — es hat eine langsamere, aggressivere Klingenaktion, die auf fettärmere Basen ausgelegt ist. Leichte Rezepte im normalen Ice-Cream-Programm ergeben bröselige, trockene Pints, weil dieses Programm eine fettreichere Basis voraussetzt. Wenn dein Creami-Modell kein Lite Ice Cream hat, nutze Ice Cream und mache danach einen Re-Spin mit 1 Esslöffel Milch oben drauf.',
+        },
+        {
+          question: 'Was ist der Unterschied zwischen leichtem Eis und Protein-Eis?',
+          answer: 'Leichtes Eis definiert sich über die Kalorien (unter 400 pro Pint) — Protein kann ein Schwerpunkt sein, muss aber nicht. Protein-Eis definiert sich über den Proteingehalt (typisch 25 g+ pro Pint) — die Kalorien können reduziert sein, müssen aber nicht. Die beiden überlappen sich oft: Die meisten Protein-Rezepte sind auch leicht, und die meisten leichten Rezepte enthalten einen Protein-Boost. Wähle nach deinem Ziel: weniger Kalorien vs mehr Protein.',
+        },
+        {
+          question: 'Warum ist mein leichtes Eis im Creami eisig?',
+          answer: 'Drei häufige Ursachen: (1) Du nutzt ein künstliches Süßungsmittel, das kein Volumen gibt (wie reines Stevia oder Sucralose allein) — gib Allulose dazu, (2) dein Fettgehalt ist zu niedrig, unter etwa 2% gesamt — wechsle von Magermilch zu 2%, (3) du nutzt das normale Ice-Cream-Programm statt Lite Ice Cream. Die Kombination Lite-Ice-Cream-Programm + Allulose + 2%-Milchanteil ist das, was funktioniert.',
+        },
+        {
+          question: 'Kann ich Allulose in jedem Ninja Creami Rezept verwenden?',
+          answer: 'Ja — Allulose ist der "zuckerähnlichste" kalorienfreie Süßstoff für den Creami. Sie gibt Volumen wie Zucker, verhindert Eiskristalle wie Zucker und bräunt wie Zucker. Ersetze sie 1:1 nach Gewicht für normalen Zucker in jedem Creami-Rezept. Einziger Haken: Allulose süßt nur etwa 70% so stark wie Zucker — nimm entweder etwas mehr nach Volumen oder eine Prise Stevia, um die Süße ohne Kalorien zu verstärken.',
+        },
+        {
+          question: 'Wie schneidet Ninja-Creami-Leichteis gegen Halo Top oder ähnliche Marken ab?',
+          answer: 'Von der Textur her ist hausgemachtes leichtes Eis aus dem Creami cremiger — gekaufte Leichteis-Marken haben durch Verarbeitung und Transport oft einen leicht kreidigen oder eisigen Nachgeschmack. Beim Preis gewinnt der Creami deutlich: ein hausgemachtes Pint kostet etwa 2–3 € in Zutaten vs 5–7 € für Halo Top. Beim Geschmack kannst du genau einstellen, was du willst (weniger süß, mehr Protein, spezifische Sorten), statt aus vorgefertigten Optionen zu wählen.',
+        },
+      ],
     },
     pt: {
       title: 'Receitas de Sorvete Light para Ninja Creami',
       description: 'Receitas de sorvete com menos calorias para seu Ninja Creami. Toda a satisfação cremosa com menos calorias — bases mais leves e sobremesas geladas sem culpa com instruções passo a passo.',
       metaDescription: 'Receitas de sorvete light Ninja Creami — menos de 400 cal por pote, sabor completo. Bases proteicas e potes macro-friendly sem gosto arenoso.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Sorvete light é o meio-termo entre "sobremesa de dieta" e "sorvete de verdade". O programa Lite Ice Cream do Ninja Creami foi desenhado especificamente para bases com menos gordura e menos açúcar — aquelas que saem quebradiças e geladas num programa Ice Cream comum, mas cremosas e de colher no Lite Ice Cream. Cada pote desta página fica abaixo das 400 calorias no total, com 20–30 g de proteína normalmente, e tem gosto de sorvete de verdade. Sem gosto arenoso, sem resíduo estranho.
+
+O segredo de um bom sorvete light não é cortar tudo — é substituir com critério. Use leite semidesnatado (2%) em vez de creme de leite integral (corta cerca de 60% das calorias), alulose no lugar de açúcar refinado (dá volume e adoça sem calorias, e não cristaliza), e uma dose de whey isolate de baunilha para acrescentar proteína sem a sensação arenosa na boca. Não são "imitações de dieta" — são as mesmas técnicas que sorveterias modernas usam para baixar os potes a menos de 350 calorias sem sacrificar o sabor.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Os três estilos de sorvete light neste site',
+          cards: [
+            {
+              title: 'Clássicos com menos calorias',
+              body: 'Chocolate, baunilha, morango, cookies and cream entre 300 e 380 calorias por pote. Os mesmos sabores que você gosta, reformulados com laticínios mais leves e alulose. Perfeitos para o dia a dia — têm gosto das versões integrais mas encaixam confortavelmente numa alimentação normal.',
+            },
+            {
+              title: 'Sorvete light proteico',
+              body: 'Uma dose de whey isolate empurra a proteína para 25–35 g por pote mantendo-se abaixo das 400 calorias totais. Uma sobremesa que também serve como combustível pós-treino de verdade. Use o programa Lite Ice Cream — nunca Ice Cream comum — ou vai terminar com um pote quebradiço e seco.',
+            },
+            {
+              title: 'Sorvete light frutado',
+              body: 'Bases de frutas vermelhas, de frutas de caroço, de cítricos. A fruta conduz o sabor, então você pode baixar a gordura e ainda ter um pote satisfatório. Tipicamente 250–330 calorias por pote, e naturalmente com menos açúcar graças às fibras e à água que vêm da fruta inteira.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Como usar essas receitas:** cada receita desta página usa o programa Lite Ice Cream (não Ice Cream comum). O programa Lite Ice Cream tem uma ação de lâmina diferente, ajustada para bases com menos gordura — rodar essas receitas no programa Ice Cream produzirá potes quebradiços e secos. Se seu Creami não tem o programa Lite Ice Cream, use Ice Cream e depois faça um Re-Spin imediato com 1 colher de sopa de leite por cima para compensar.
+
+**Escolhendo seu adoçante:** a alulose é a peça-chave das receitas Creami light — dá textura (evita cristais) do mesmo jeito que o açúcar, sem as calorias. Evite eritritol sozinho para sorvete (fica arenoso e dá sensação fria quando congelado) e evite estévia líquida como único adoçante (resultado aguado e sem graça). Misturas de monk fruit + alulose (Lakanto, Wholesome Allulose) funcionam especialmente bem.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'O que conta como sorvete "light" no Ninja Creami?',
+          answer: 'Neste site, light significa menos de 400 calorias por pote (o pote Creami inteiro, dividido em 4 porções, são 100 calorias cada uma). A maioria das receitas fica entre 280 e 380 calorias por pote, com 20–30 g de proteína. Compare com um pote de sorvete caseiro integral de 1000–1400 calorias — você come cerca de um terço a um quarto das calorias para uma textura e sabor quase idênticos.',
+        },
+        {
+          question: 'Qual programa uso para sorvete light no Creami?',
+          answer: 'Use sempre o programa "Lite Ice Cream" — ele tem uma ação de lâmina mais lenta e agressiva, desenhada para bases com menos gordura. Rodar receitas light no programa Ice Cream comum produz potes quebradiços e secos porque esse programa assume uma base com mais gordura. Se seu modelo de Creami não tem Lite Ice Cream, use Ice Cream e depois faça um Re-Spin com 1 colher de sopa de leite por cima.',
+        },
+        {
+          question: 'Qual a diferença entre sorvete light e sorvete proteico?',
+          answer: 'Sorvete light é definido pelas calorias (menos de 400 por pote) — a proteína pode ou não ser o foco. Sorvete proteico é definido pelo teor proteico (tipicamente 25 g+ por pote) — as calorias podem ou não ser cortadas. Os dois se sobrepõem com frequência: a maioria das receitas proteicas também é light, e a maioria das receitas light inclui algum boost proteico. Escolha pelo seu objetivo: menos calorias vs mais proteína.',
+        },
+        {
+          question: 'Por que meu sorvete light está gelado no Creami?',
+          answer: 'Três causas comuns: (1) você está usando um adoçante artificial que não dá volume (como estévia pura ou sucralose sozinhos) — adicione alulose, (2) seu teor de gordura está baixo demais, abaixo de cerca de 2% total — mude de leite desnatado para semidesnatado (2%), (3) você está usando o programa Ice Cream comum em vez de Lite Ice Cream. Programa Lite Ice Cream + alulose + laticínio a 2% é a combinação que funciona.',
+        },
+        {
+          question: 'Posso usar alulose em qualquer receita do Ninja Creami?',
+          answer: 'Sim — a alulose é o adoçante zero caloria mais "parecido com açúcar" para o Creami. Dá volume como o açúcar, evita cristais como o açúcar e carameliza como o açúcar. Substitua 1 para 1 em peso pelo açúcar comum em qualquer receita Creami. Única ressalva: a alulose adoça cerca de 70% do que o açúcar, então você pode usar um pouco mais em volume ou adicionar uma pitada de estévia para reforçar a doçura sem calorias.',
+        },
+        {
+          question: 'Como o sorvete light do Ninja Creami se compara com Halo Top ou marcas similares?',
+          answer: 'Em textura, o sorvete light caseiro do Creami é mais cremoso — as marcas light de supermercado geralmente têm um gosto residual meio arenoso ou gelado por causa do processamento e transporte. Em custo, o Creami ganha com folga: um pote caseiro custa cerca de R$ 10–15 em ingredientes contra R$ 25–35 de Halo Top (quando disponível no Brasil). Em sabor, você pode ajustar exatamente o que quer (menos doce, mais proteína, combinações específicas) em vez de escolher entre opções prontas.',
+        },
+      ],
     },
   },
   'italian-ice': {
