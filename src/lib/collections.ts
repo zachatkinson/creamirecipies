@@ -2564,26 +2564,316 @@ O segredo de um bom sorvete light não é cortar tudo — é substituir com crit
       title: 'Italian Ice Recipes for Ninja Creami',
       description: 'Refreshing Italian ice recipes for your Ninja Creami. Icy, fruity, and intensely flavored — the perfect summer treat made easy with step-by-step instructions.',
       metaDescription: 'Ninja Creami Italian ice recipes — icy, intensely fruity, zero dairy. Lemon, cherry, watermelon and more. Vegan, naturally sweet, 3 ingredients or less.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Italian ice is the most refreshing thing the Ninja Creami makes. No dairy, no eggs, no gelatin — just fruit, water, sugar, and lemon juice, frozen and spun into that iconic shaved-ice texture you remember from summer boardwalks. The Creami's Italian Ice program (or Sorbet on older models) is specifically tuned to preserve the crystalline, almost granular mouthfeel instead of whipping it into smoothness. Every recipe on this page uses 3 or 4 ingredients and spins in under 2 minutes.
+
+The key to great Italian ice is the water-to-sugar-to-fruit ratio. Too much water and it comes out bland and overly icy; too much sugar and it never freezes solid enough to spin. The sweet spot is roughly 1 cup fruit + 1 cup water + 1/3 cup sugar + 1 tablespoon lemon juice — then adjust per fruit. Naturally sweet fruits like strawberry and mango need less sugar; tart fruits like cherry and raspberry need more. Every recipe on this page lists the exact ratio tested for that specific fruit.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'The three Italian ice styles on this site',
+          cards: [
+            {
+              title: 'Classic boardwalk flavors',
+              body: 'Lemon, cherry, blue raspberry, watermelon. The vibrant colors and intense flavors you remember from summer fairs and boardwalk carts. Made with real fruit (not syrup) for a cleaner, truer flavor and a natural color that doesn\'t need food dye to look like summer in a cup.',
+            },
+            {
+              title: 'Sophisticated grown-up Italian ice',
+              body: 'Blood orange, passion fruit, hibiscus-lime, prosecco-strawberry. More adult flavor profiles using real juice, herbs, and sometimes a splash of alcohol. Perfect as a palate cleanser between courses or a lighter dessert after a heavy meal — think of them as savoury-adjacent sorbets.',
+            },
+            {
+              title: 'Herb and spice-infused ices',
+              body: 'Basil-lime, rosemary-grapefruit, ginger-pear. The most experimental category — herbs and spices that don\'t normally show up in a frozen treat. Keep servings small because the flavor is intense, and pair with a simple cookie or fresh fruit for contrast.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**How to use these recipes:** every recipe on this page uses the Italian Ice program on the Creami Deluxe. On the Original Creami (no Italian Ice program), use Sorbet — the texture will be slightly smoother but still correctly icy. Freeze the filled pint for 24 hours minimum. If your pint comes out chunky or frozen completely solid, add 1 tablespoon of water on top and Re-Spin — the added liquid breaks the ice and lets the blade do its work.
+
+**Choosing your fruit:** fresh or frozen both work, but fruit frozen from peak-season fresh gives the most vibrant color and flavor. Avoid canned fruit (too much syrup changes the ratios) and avoid dried fruit (won't freeze correctly). Strain puree through a fine-mesh strainer before freezing to remove seeds and fibers — that single step is what separates a homemade Italian ice from a gritty, seedy one.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'What\'s the difference between Italian ice and sorbet in the Ninja Creami?',
+          answer: 'Italian ice is icier and more granular than sorbet — you can feel individual ice crystals on your tongue. Sorbet is smoother and silkier because it has more sugar (which lowers the freezing point and produces a finer texture). Italian ice uses less sugar and no stabilizers; sorbet uses more sugar and sometimes gum or starch. The Creami\'s Italian Ice program preserves the crystalline texture; Sorbet smooths it out.',
+        },
+        {
+          question: 'Which program do I use for Italian ice in the Ninja Creami?',
+          answer: 'Use the "Italian Ice" program on the Creami Deluxe — it\'s specifically tuned to preserve the icy, granular texture. On the Original Creami (no Italian Ice program), use Sorbet — the texture will be slightly smoother but still closer to authentic Italian ice than regular ice cream would be. Both work; Italian Ice program wins on texture authenticity.',
+        },
+        {
+          question: 'Can I make Italian ice without sugar?',
+          answer: 'Partially — you need some form of bulk sweetener to prevent it from freezing into a solid rock of flavored ice. Allulose is the best sugar substitute for Italian ice (it bulks and prevents complete freezing the same way sugar does). Avoid pure stevia or sucralose as your only sweetener — they\'ll make the pint unspinnable. A monk fruit + allulose blend at 1/3 cup per pint works well.',
+        },
+        {
+          question: 'Why is my Italian ice too solid or too icy?',
+          answer: 'Three causes: (1) not enough sugar or allulose — fruit alone freezes rock-solid, you need some sweetener to keep it spinnable, (2) you skipped the lemon juice — acid lowers the freezing point slightly and helps texture, (3) your pint was over-frozen (more than 48 hours) — let it sit at room temp for 5 minutes before spinning, or Re-Spin with 1 tablespoon of water on top.',
+        },
+        {
+          question: 'Is Italian ice vegan?',
+          answer: 'Yes — traditional Italian ice is naturally vegan. It contains only fruit, water, sugar, and lemon juice. No dairy, no eggs, no animal products of any kind. Every Italian ice recipe on this page is vegan by default. If a recipe includes cream or milk it\'s a sorbet-Italian ice hybrid, not true Italian ice, and will be labeled as such.',
+        },
+        {
+          question: 'How do I get that classic bright Italian ice color without food dye?',
+          answer: 'Use fruit with naturally vibrant color: strawberries and raspberries give deep red, blueberries give purple, mango and peach give orange, and blood orange gives an incredible natural red-orange. For a truly blue color (blue raspberry), butterfly pea flower tea works — it\'s naturally blue and flavor-neutral. Avoid artificial food dyes; they have no flavor benefit and the natural colors taste better.',
+        },
+      ],
     },
     fr: {
       title: 'Recettes de Granité Italien pour Ninja Creami',
       description: 'Recettes de granité italien rafraîchissantes pour votre Ninja Creami. Glacé, fruité et intensément parfumé — le dessert d\'été parfait avec des instructions étape par étape.',
       metaDescription: 'Recettes de granité italien Ninja Creami — glacé, intensément fruité, zéro lactose. Citron, cerise, pastèque. Végan, 3 ingrédients ou moins.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Le granité italien est ce que le Ninja Creami fait de plus rafraîchissant. Pas de produits laitiers, pas d'œufs, pas de gélatine — juste des fruits, de l'eau, du sucre et du jus de citron, congelés et turbinés dans cette texture de glace pilée emblématique qu'on se rappelle des promenades sur front de mer en été. Le programme Italian Ice du Creami (ou Sorbet sur les modèles plus anciens) est spécifiquement calibré pour préserver cette sensation en bouche cristalline, presque granuleuse, au lieu de la fouetter jusqu'à lissage. Chaque recette de cette page utilise 3 ou 4 ingrédients et se turbine en moins de 2 minutes.
+
+La clé d'un bon granité italien, c'est le ratio eau-sucre-fruit. Trop d'eau et il sort fade et trop glacé ; trop de sucre et il ne congèle jamais assez pour être turbiné. Le juste équilibre tourne autour de 1 tasse de fruit + 1 tasse d'eau + 1/3 tasse de sucre + 1 cuillère à soupe de jus de citron — puis à ajuster selon le fruit. Les fruits naturellement sucrés comme la fraise et la mangue demandent moins de sucre ; les fruits acidulés comme la cerise et la framboise en demandent plus. Chaque recette de cette page indique le ratio exact testé pour ce fruit précis.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Les trois styles de granité italien sur ce site',
+          cards: [
+            {
+              title: 'Saveurs classiques de front de mer',
+              body: 'Citron, cerise, framboise bleue, pastèque. Les couleurs vibrantes et les saveurs intenses qu\'on se rappelle des fêtes foraines d\'été et des chariots de bord de plage. Faits avec de vrais fruits (pas du sirop) pour une saveur plus pure et une couleur naturelle qui n\'a pas besoin de colorant pour ressembler à l\'été dans un gobelet.',
+            },
+            {
+              title: 'Granité italien version adulte',
+              body: 'Orange sanguine, fruit de la passion, hibiscus-citron vert, prosecco-fraise. Des profils plus adultes utilisant du vrai jus, des herbes et parfois un trait d\'alcool. Parfaits comme rafraîchissant de palais entre les plats ou comme dessert plus léger après un repas riche — voyez-les comme des sorbets proches du salé.',
+            },
+            {
+              title: 'Granités aux herbes et épices',
+              body: 'Basilic-citron vert, romarin-pamplemousse, gingembre-poire. La catégorie la plus expérimentale — des herbes et épices qui ne figurent pas habituellement dans un dessert glacé. Gardez les portions petites car la saveur est intense, et accompagnez d\'un biscuit simple ou d\'un fruit frais pour le contraste.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Comment utiliser ces recettes :** chaque recette de cette page utilise le programme Italian Ice sur le Creami Deluxe. Sur le Creami Original (sans programme Italian Ice), utilisez Sorbet — la texture sera légèrement plus lisse mais restera correctement glacée. Congelez le pot rempli pendant au moins 24 heures. Si votre pot sort en morceaux ou complètement congelé, ajoutez 1 cuillère à soupe d'eau sur le dessus et faites un Re-Spin — le liquide ajouté casse la glace et permet à la lame de faire son travail.
+
+**Choisir ses fruits :** frais ou surgelés, les deux fonctionnent, mais des fruits congelés à partir de produits de saison à pleine maturité donnent la couleur et la saveur les plus vibrantes. Évitez les fruits en conserve (trop de sirop, ça fausse les ratios) et évitez les fruits séchés (ne congèlent pas correctement). Passez la purée à travers un tamis fin avant de congeler pour enlever les pépins et les fibres — cette seule étape sépare un granité italien maison d'une version granuleuse et pleine de pépins.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Quelle est la différence entre granité italien et sorbet dans le Ninja Creami ?',
+          answer: 'Le granité italien est plus glacé et plus granuleux que le sorbet — on sent les cristaux de glace sur la langue. Le sorbet est plus lisse et plus soyeux parce qu\'il contient plus de sucre (ce qui abaisse le point de congélation et donne une texture plus fine). Le granité italien utilise moins de sucre et pas de stabilisant ; le sorbet en utilise plus, parfois avec de la gomme ou de l\'amidon. Le programme Italian Ice du Creami préserve la texture cristalline ; le programme Sorbet la lisse.',
+        },
+        {
+          question: 'Quel programme utiliser pour le granité italien dans le Ninja Creami ?',
+          answer: 'Utilisez le programme "Italian Ice" sur le Creami Deluxe — il est calibré pour préserver la texture glacée et granuleuse. Sur le Creami Original (sans programme Italian Ice), utilisez Sorbet — la texture sera légèrement plus lisse mais restera plus proche d\'un vrai granité italien que la crème glacée ne le serait. Les deux fonctionnent ; le programme Italian Ice l\'emporte sur l\'authenticité de la texture.',
+        },
+        {
+          question: 'Puis-je faire du granité italien sans sucre ?',
+          answer: 'En partie — il faut une forme d\'édulcorant de volume pour éviter qu\'il ne gèle en un bloc solide de glace aromatisée. L\'allulose est le meilleur substitut du sucre pour le granité italien (il apporte du volume et empêche la congélation complète comme le sucre). Évitez la stévia pure ou le sucralose seuls — ils rendent le pot impossible à turbiner. Un mélange monk fruit + allulose à 1/3 tasse par pot fonctionne bien.',
+        },
+        {
+          question: 'Pourquoi mon granité italien est-il trop dur ou trop glacé ?',
+          answer: 'Trois causes : (1) pas assez de sucre ou d\'allulose — le fruit seul gèle comme un bloc, il faut un édulcorant pour qu\'il reste turbinable, (2) vous avez sauté le jus de citron — l\'acide abaisse légèrement le point de congélation et améliore la texture, (3) votre pot a été trop longtemps au congélateur (plus de 48 heures) — laissez-le reposer à température ambiante 5 minutes avant le turbinage, ou faites un Re-Spin avec 1 cuillère à soupe d\'eau sur le dessus.',
+        },
+        {
+          question: 'Le granité italien est-il végan ?',
+          answer: 'Oui — le granité italien traditionnel est naturellement végan. Il ne contient que du fruit, de l\'eau, du sucre et du jus de citron. Pas de produits laitiers, pas d\'œufs, aucun produit d\'origine animale. Chaque recette de granité italien sur cette page est végane par défaut. Si une recette contient de la crème ou du lait, c\'est un hybride sorbet-granité, pas un vrai granité italien, et ce sera indiqué comme tel.',
+        },
+        {
+          question: 'Comment obtenir la couleur vive classique sans colorant alimentaire ?',
+          answer: 'Utilisez des fruits à la couleur naturellement vibrante : fraises et framboises donnent du rouge profond, myrtilles du violet, mangue et pêche de l\'orange, orange sanguine un rouge-orangé naturel incroyable. Pour une couleur vraiment bleue (framboise bleue), le thé de fleur de pois papillon fonctionne — il est naturellement bleu et neutre au goût. Évitez les colorants artificiels ; ils n\'apportent aucun bénéfice gustatif et les couleurs naturelles goûtent meilleur.',
+        },
+      ],
     },
     es: {
       title: 'Recetas de Raspado Italiano para Ninja Creami',
       description: 'Recetas refrescantes de raspado italiano para tu Ninja Creami. Helado, afrutado e intensamente sabroso — el postre de verano perfecto con instrucciones paso a paso.',
       metaDescription: 'Recetas de raspado italiano Ninja Creami — helado, intensamente afrutado, sin lácteos. Limón, cereza, sandía. Vegano, 3 ingredientes o menos.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `El raspado italiano es lo más refrescante que hace el Ninja Creami. Sin lácteos, sin huevos, sin gelatina — solo fruta, agua, azúcar y jugo de limón, congelados y batidos hasta esa textura de hielo rallado icónica que recuerdas de los paseos marítimos en verano. El programa Italian Ice del Creami (o Sorbet en modelos más antiguos) está ajustado específicamente para preservar esa sensación en boca cristalina, casi granulosa, en vez de batirla hasta dejarla lisa. Cada receta de esta página usa 3 o 4 ingredientes y se bate en menos de 2 minutos.
+
+La clave de un buen raspado italiano es la proporción agua-azúcar-fruta. Demasiada agua y sale soso y muy helado; demasiado azúcar y no congela nunca lo suficiente para batirse. El punto justo ronda 1 taza de fruta + 1 taza de agua + 1/3 taza de azúcar + 1 cucharada de jugo de limón — luego a ajustar según la fruta. Las frutas naturalmente dulces como fresa y mango piden menos azúcar; las ácidas como cereza y frambuesa piden más. Cada receta de esta página indica la proporción exacta probada para esa fruta en concreto.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Los tres estilos de raspado italiano en este sitio',
+          cards: [
+            {
+              title: 'Sabores clásicos de paseo marítimo',
+              body: 'Limón, cereza, frambuesa azul, sandía. Los colores vibrantes y sabores intensos que recuerdas de las ferias de verano y los carritos de la playa. Hechos con fruta de verdad (no sirope) para un sabor más limpio y auténtico y un color natural que no necesita colorante para parecer verano en un vasito.',
+            },
+            {
+              title: 'Raspado italiano adulto y sofisticado',
+              body: 'Naranja sanguina, fruta de la pasión, hibisco-lima, prosecco-fresa. Perfiles de sabor más adultos con jugo real, hierbas y a veces un chorrito de alcohol. Perfectos como limpiador de paladar entre platos o como postre más ligero tras una comida pesada — piénsalos como sorbetes casi salados.',
+            },
+            {
+              title: 'Raspados con hierbas y especias',
+              body: 'Albahaca-lima, romero-pomelo, jengibre-pera. La categoría más experimental — hierbas y especias que no suelen aparecer en un postre helado. Mantén raciones pequeñas porque el sabor es intenso, y acompaña con una galleta simple o fruta fresca para el contraste.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Cómo usar estas recetas:** cada receta de esta página usa el programa Italian Ice en el Creami Deluxe. En el Creami Original (sin programa Italian Ice), usa Sorbet — la textura será algo más lisa pero seguirá siendo correctamente helada. Congela el pote lleno al menos 24 horas. Si tu pote sale en trozos o completamente duro, añade 1 cucharada de agua encima y haz un Re-Spin — el líquido añadido rompe el hielo y deja que la cuchilla haga su trabajo.
+
+**Eligiendo tu fruta:** fresca o congelada, ambas funcionan, pero fruta congelada en temporada en su punto da el color y sabor más vibrantes. Evita la fruta en conserva (demasiado sirope, altera las proporciones) y evita la fruta seca (no congela correctamente). Cuela la pulpa por un colador fino antes de congelar para quitar semillas y fibras — ese paso solo separa un raspado italiano casero de uno granuloso y lleno de pepitas.`,
+        },
+      ],
+      faqs: [
+        {
+          question: '¿Cuál es la diferencia entre raspado italiano y sorbete en el Ninja Creami?',
+          answer: 'El raspado italiano es más helado y granuloso que el sorbete — notas los cristales de hielo en la lengua. El sorbete es más liso y sedoso porque tiene más azúcar (lo que baja el punto de congelación y produce una textura más fina). El raspado italiano lleva menos azúcar y sin estabilizantes; el sorbete lleva más, a veces con goma o almidón. El programa Italian Ice del Creami preserva la textura cristalina; Sorbet la suaviza.',
+        },
+        {
+          question: '¿Qué programa uso para el raspado italiano en el Ninja Creami?',
+          answer: 'Usa el programa "Italian Ice" en el Creami Deluxe — está ajustado específicamente para preservar la textura helada y granulosa. En el Creami Original (sin programa Italian Ice), usa Sorbet — la textura quedará algo más lisa pero seguirá más cerca de un raspado italiano auténtico que el helado normal. Ambos funcionan; el programa Italian Ice gana en autenticidad de textura.',
+        },
+        {
+          question: '¿Puedo hacer raspado italiano sin azúcar?',
+          answer: 'En parte — necesitas alguna forma de edulcorante con volumen para que no se congele en un bloque sólido de hielo saborizado. La alulosa es el mejor sustituto del azúcar para raspado italiano (aporta volumen y evita la congelación completa igual que el azúcar). Evita la estevia pura o la sucralosa solos — dejarán el pote imposible de batir. Una mezcla monk fruit + alulosa a 1/3 de taza por pote funciona bien.',
+        },
+        {
+          question: '¿Por qué mi raspado italiano queda demasiado duro o demasiado helado?',
+          answer: 'Tres causas: (1) poca azúcar o alulosa — la fruta sola se congela como piedra, hace falta algún edulcorante para que se pueda batir, (2) te saltaste el jugo de limón — el ácido baja ligeramente el punto de congelación y mejora la textura, (3) tu pote estuvo demasiado tiempo en el congelador (más de 48 horas) — déjalo reposar a temperatura ambiente 5 minutos antes de batir, o haz un Re-Spin con 1 cucharada de agua encima.',
+        },
+        {
+          question: '¿El raspado italiano es vegano?',
+          answer: 'Sí — el raspado italiano tradicional es naturalmente vegano. Contiene solo fruta, agua, azúcar y jugo de limón. Sin lácteos, sin huevos, sin productos animales de ningún tipo. Cada receta de raspado italiano en esta página es vegana por defecto. Si alguna lleva nata o leche es un híbrido sorbete-raspado, no un raspado italiano puro, y estará etiquetada como tal.',
+        },
+        {
+          question: '¿Cómo consigo ese color brillante clásico sin colorantes?',
+          answer: 'Usa fruta con color naturalmente vibrante: fresa y frambuesa dan rojo intenso, arándanos dan morado, mango y melocotón dan naranja, y naranja sanguina da un rojo-anaranjado natural increíble. Para un azul de verdad (frambuesa azul), el té de flor de guisante mariposa funciona — es naturalmente azul y neutro en sabor. Evita colorantes artificiales; no aportan beneficio al sabor y los colores naturales saben mejor.',
+        },
+      ],
     },
     de: {
       title: 'Italienisches Eis (Granita) — Rezepte für Ninja Creami',
       description: 'Erfrischende Italienische-Eis-Rezepte für deinen Ninja Creami. Eisig, fruchtig und intensiv im Geschmack — der perfekte Sommergenuss mit Schritt-für-Schritt-Anleitung.',
       metaDescription: 'Ninja Creami Granita-Rezepte — eisig, intensiv fruchtig, milchfrei. Zitrone, Kirsche, Wassermelone. Vegan, natürlich süß, 3 Zutaten oder weniger.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Italienisches Eis ist das Erfrischendste, was der Ninja Creami macht. Keine Milchprodukte, keine Eier, keine Gelatine — nur Frucht, Wasser, Zucker und Zitronensaft, eingefroren und zu dieser ikonischen, gehobelten Eistextur gespinnt, die du von Sommerpromenaden kennst. Das Italian-Ice-Programm des Creami (oder Sorbet bei älteren Modellen) ist speziell darauf abgestimmt, dieses kristalline, fast körnige Mundgefühl zu bewahren, statt alles glatt aufzuschlagen. Jedes Rezept auf dieser Seite kommt mit 3 oder 4 Zutaten aus und ist in unter 2 Minuten gespinnt.
+
+Der Schlüssel zu gutem italienischem Eis ist das Verhältnis Wasser-Zucker-Frucht. Zu viel Wasser und es wird fad und zu eisig; zu viel Zucker und es friert nie fest genug ein, um gespinnt zu werden. Der Sweet Spot liegt bei etwa 1 Tasse Frucht + 1 Tasse Wasser + 1/3 Tasse Zucker + 1 Esslöffel Zitronensaft — dann je nach Frucht anpassen. Natürlich süße Früchte wie Erdbeere und Mango brauchen weniger Zucker; saure Früchte wie Kirsche und Himbeere brauchen mehr. Jedes Rezept auf dieser Seite nennt das exakt getestete Verhältnis für diese Frucht.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Die drei Stile für italienisches Eis auf dieser Seite',
+          cards: [
+            {
+              title: 'Klassische Strandpromenaden-Sorten',
+              body: 'Zitrone, Kirsche, Blue Raspberry, Wassermelone. Die leuchtenden Farben und intensiven Aromen, die du von Sommerfesten und Promenadenwagen kennst. Hergestellt mit echter Frucht (kein Sirup) für einen reineren, wahreren Geschmack und eine natürliche Farbe, die keine Lebensmittelfarbe braucht, um nach Sommer im Becher auszusehen.',
+            },
+            {
+              title: 'Erwachsenes italienisches Eis',
+              body: 'Blutorange, Passionsfrucht, Hibiskus-Limette, Prosecco-Erdbeere. Erwachsenere Aromen mit echtem Saft, Kräutern und manchmal einem Schuss Alkohol. Perfekt als Gaumenreiniger zwischen Gängen oder als leichteres Dessert nach einem schweren Essen — stell sie dir als herzhaft-angrenzende Sorbets vor.',
+            },
+            {
+              title: 'Kräuter- und Gewürz-Granita',
+              body: 'Basilikum-Limette, Rosmarin-Grapefruit, Ingwer-Birne. Die experimentellste Kategorie — Kräuter und Gewürze, die in gefrorenen Desserts sonst nicht vorkommen. Halte die Portionen klein, weil der Geschmack intensiv ist, und kombiniere mit einem einfachen Keks oder frischer Frucht als Kontrast.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**So nutzt du diese Rezepte:** Jedes Rezept auf dieser Seite nutzt das Italian-Ice-Programm am Creami Deluxe. Am Creami Original (ohne Italian-Ice-Programm) nutze Sorbet — die Textur wird etwas glatter, bleibt aber korrekt eisig. Friere das gefüllte Pint mindestens 24 Stunden ein. Wenn dein Pint klumpig oder komplett hart eingefroren herauskommt, gib 1 Esslöffel Wasser oben drauf und mache einen Re-Spin — die zusätzliche Flüssigkeit bricht das Eis und lässt die Klinge ihre Arbeit tun.
+
+**Die richtige Frucht wählen:** Frisch oder gefroren, beides funktioniert, aber aus frischer Saisonware eingefrorene Frucht liefert die lebendigste Farbe und den kräftigsten Geschmack. Meide Dosenobst (zu viel Sirup verfälscht die Verhältnisse) und meide Trockenobst (friert nicht richtig ein). Streiche das Püree vor dem Einfrieren durch ein feines Sieb, um Kerne und Fasern zu entfernen — dieser eine Schritt trennt ein selbstgemachtes italienisches Eis von einem griesigen, kernreichen.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Was ist der Unterschied zwischen italienischem Eis (Granita) und Sorbet im Ninja Creami?',
+          answer: 'Italienisches Eis ist eisiger und körniger als Sorbet — du spürst einzelne Eiskristalle auf der Zunge. Sorbet ist glatter und seidiger, weil es mehr Zucker enthält (das senkt den Gefrierpunkt und erzeugt eine feinere Textur). Italienisches Eis nutzt weniger Zucker und keine Stabilisatoren; Sorbet mehr Zucker und manchmal Gummi oder Stärke. Das Italian-Ice-Programm des Creami bewahrt die kristalline Textur; das Sorbet-Programm glättet sie.',
+        },
+        {
+          question: 'Welches Programm nutze ich für italienisches Eis im Ninja Creami?',
+          answer: 'Nutze das "Italian Ice"-Programm am Creami Deluxe — es ist speziell darauf abgestimmt, die eisige, körnige Textur zu bewahren. Am Creami Original (ohne Italian-Ice-Programm) nutze Sorbet — die Textur wird etwas glatter, bleibt aber näher an einem echten italienischen Eis als normales Eis. Beides funktioniert; das Italian-Ice-Programm gewinnt bei der Textur-Authentizität.',
+        },
+        {
+          question: 'Kann ich italienisches Eis ohne Zucker machen?',
+          answer: 'Teilweise — du brauchst eine Art volumengebenden Süßstoff, damit es nicht zu einem harten Block aromatisierten Eises gefriert. Allulose ist der beste Zuckerersatz für italienisches Eis (sie gibt Volumen und verhindert das komplette Durchfrieren genau wie Zucker). Meide reines Stevia oder Sucralose als einziges Süßungsmittel — damit wird das Pint nicht spinnbar. Eine Mönchsfrucht-Allulose-Mischung mit 1/3 Tasse pro Pint funktioniert gut.',
+        },
+        {
+          question: 'Warum ist mein italienisches Eis zu fest oder zu eisig?',
+          answer: 'Drei Ursachen: (1) nicht genug Zucker oder Allulose — Frucht allein friert zu einem Block, du brauchst Süßungsmittel für die Spinnbarkeit, (2) du hast den Zitronensaft weggelassen — Säure senkt den Gefrierpunkt leicht und verbessert die Textur, (3) dein Pint war zu lange gefroren (über 48 Stunden) — lass es 5 Minuten bei Raumtemperatur stehen oder mache einen Re-Spin mit 1 Esslöffel Wasser oben drauf.',
+        },
+        {
+          question: 'Ist italienisches Eis vegan?',
+          answer: 'Ja — traditionelles italienisches Eis ist von Natur aus vegan. Es enthält nur Frucht, Wasser, Zucker und Zitronensaft. Keine Milchprodukte, keine Eier, keine tierischen Zutaten. Jedes Italian-Ice-Rezept auf dieser Seite ist standardmäßig vegan. Wenn ein Rezept Sahne oder Milch enthält, ist es ein Sorbet-Granita-Hybrid, kein echtes italienisches Eis, und wird entsprechend gekennzeichnet.',
+        },
+        {
+          question: 'Wie bekomme ich diese klassisch leuchtende Farbe ohne Lebensmittelfarbe?',
+          answer: 'Nutze Früchte mit natürlich kräftiger Farbe: Erdbeeren und Himbeeren geben sattes Rot, Blaubeeren Violett, Mango und Pfirsich Orange, Blutorange ein unglaubliches natürliches Rot-Orange. Für echtes Blau (Blue Raspberry) funktioniert Schmetterlingserbsen-Blütentee — er ist von Natur aus blau und geschmacksneutral. Meide künstliche Lebensmittelfarben; sie bringen keinen Geschmacksvorteil und die natürlichen Farben schmecken besser.',
+        },
+      ],
     },
     pt: {
       title: 'Receitas de Raspadinha Italiana para Ninja Creami',
       description: 'Receitas refrescantes de raspadinha italiana para seu Ninja Creami. Gelada, frutada e intensamente saborosa — a sobremesa de verão perfeita com instruções passo a passo.',
       metaDescription: 'Receitas de raspadinha italiana Ninja Creami — gelada, intensamente frutada, sem lactose. Limão, cereja, melancia. Vegana, 3 ingredientes ou menos.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `A raspadinha italiana é o que o Ninja Creami faz de mais refrescante. Sem laticínios, sem ovos, sem gelatina — só fruta, água, açúcar e suco de limão, congelados e batidos naquela textura icônica de gelo raspado que você lembra dos calçadões de verão. O programa Italian Ice do Creami (ou Sorbet em modelos mais antigos) é ajustado especificamente para preservar essa sensação cristalina, quase granulada, em vez de bater tudo até ficar liso. Cada receita desta página usa 3 ou 4 ingredientes e fica pronta em menos de 2 minutos.
+
+O segredo de uma boa raspadinha italiana é a proporção água-açúcar-fruta. Água demais e ela sai sem graça e gelada demais; açúcar demais e nunca congela firme o bastante para bater. O ponto certo gira em torno de 1 xícara de fruta + 1 xícara de água + 1/3 xícara de açúcar + 1 colher de sopa de suco de limão — depois ajuste por fruta. Frutas naturalmente doces como morango e manga pedem menos açúcar; frutas ácidas como cereja e framboesa pedem mais. Cada receita desta página lista a proporção exata testada para aquela fruta específica.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Os três estilos de raspadinha italiana neste site',
+          cards: [
+            {
+              title: 'Sabores clássicos de calçadão',
+              body: 'Limão, cereja, framboesa azul, melancia. As cores vibrantes e sabores intensos que você lembra de festas de verão e carrinhos de calçadão. Feitos com fruta de verdade (não xarope) para um sabor mais limpo e autêntico e uma cor natural que não precisa de corante para parecer verão num copinho.',
+            },
+            {
+              title: 'Raspadinha italiana para adultos',
+              body: 'Laranja-sanguínea, maracujá, hibisco-lima, prosecco-morango. Perfis de sabor mais adultos usando suco de verdade, ervas e às vezes um toque de álcool. Perfeitos como limpa-paladar entre pratos ou como sobremesa mais leve depois de uma refeição pesada — pense neles como sorbets quase salgados.',
+            },
+            {
+              title: 'Raspadinhas com ervas e especiarias',
+              body: 'Manjericão-lima, alecrim-toranja, gengibre-pera. A categoria mais experimental — ervas e especiarias que normalmente não aparecem numa sobremesa gelada. Mantenha as porções pequenas porque o sabor é intenso, e acompanhe com um biscoito simples ou fruta fresca para contraste.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Como usar essas receitas:** cada receita desta página usa o programa Italian Ice no Creami Deluxe. No Creami Original (sem programa Italian Ice), use Sorbet — a textura ficará um pouco mais lisa mas ainda corretamente gelada. Congele o pote cheio por no mínimo 24 horas. Se seu pote sair em pedaços ou completamente congelado duro, adicione 1 colher de sopa de água por cima e faça um Re-Spin — o líquido adicionado quebra o gelo e deixa a lâmina fazer o trabalho.
+
+**Escolhendo a fruta:** fresca ou congelada, ambas funcionam, mas fruta congelada na estação, no ponto, dá a cor e o sabor mais vibrantes. Evite fruta em calda (xarope demais, altera as proporções) e evite fruta seca (não congela corretamente). Coe o purê numa peneira fina antes de congelar para tirar sementes e fibras — esse único passo separa uma raspadinha italiana caseira de uma granulada e cheia de sementes.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Qual a diferença entre raspadinha italiana e sorbet no Ninja Creami?',
+          answer: 'A raspadinha italiana é mais gelada e granulada que o sorbet — você sente os cristais de gelo na língua. O sorbet é mais liso e sedoso porque tem mais açúcar (o que baixa o ponto de congelamento e produz uma textura mais fina). A raspadinha italiana leva menos açúcar e sem estabilizantes; o sorbet leva mais, às vezes com goma ou amido. O programa Italian Ice do Creami preserva a textura cristalina; o Sorbet suaviza.',
+        },
+        {
+          question: 'Qual programa uso para raspadinha italiana no Ninja Creami?',
+          answer: 'Use o programa "Italian Ice" no Creami Deluxe — ele é ajustado especificamente para preservar a textura gelada e granulada. No Creami Original (sem programa Italian Ice), use Sorbet — a textura ficará um pouco mais lisa mas ainda mais próxima de uma raspadinha italiana autêntica do que o sorvete normal. Ambos funcionam; o programa Italian Ice ganha em autenticidade de textura.',
+        },
+        {
+          question: 'Posso fazer raspadinha italiana sem açúcar?',
+          answer: 'Parcialmente — você precisa de alguma forma de adoçante com volume para evitar que congele em um bloco sólido de gelo com sabor. A alulose é o melhor substituto de açúcar para raspadinha italiana (dá volume e evita o congelamento total do mesmo jeito que o açúcar). Evite estévia pura ou sucralose sozinhos — deixam o pote impossível de bater. Uma mistura de monk fruit + alulose a 1/3 de xícara por pote funciona bem.',
+        },
+        {
+          question: 'Por que minha raspadinha italiana ficou dura demais ou gelada demais?',
+          answer: 'Três causas: (1) pouco açúcar ou alulose — fruta sozinha congela como pedra, precisa de algum adoçante para continuar bate-avel, (2) você pulou o suco de limão — o ácido baixa levemente o ponto de congelamento e melhora a textura, (3) seu pote ficou tempo demais no freezer (mais de 48 horas) — deixe descansar em temperatura ambiente por 5 minutos antes de bater, ou faça um Re-Spin com 1 colher de sopa de água por cima.',
+        },
+        {
+          question: 'Raspadinha italiana é vegana?',
+          answer: 'Sim — a raspadinha italiana tradicional é naturalmente vegana. Contém só fruta, água, açúcar e suco de limão. Sem laticínios, sem ovos, sem produtos de origem animal. Cada receita de raspadinha italiana desta página é vegana por padrão. Se alguma incluir creme de leite ou leite, é um híbrido sorbet-raspadinha, não uma raspadinha italiana pura, e será rotulada como tal.',
+        },
+        {
+          question: 'Como consigo aquela cor vibrante clássica sem corante?',
+          answer: 'Use fruta com cor naturalmente vibrante: morango e framboesa dão vermelho intenso, mirtilo dá roxo, manga e pêssego dão laranja, e laranja-sanguínea dá um vermelho-alaranjado natural incrível. Para um azul de verdade (framboesa azul), o chá de flor de ervilha-borboleta funciona — é naturalmente azul e de sabor neutro. Evite corantes artificiais; não trazem benefício de sabor e as cores naturais têm gosto melhor.',
+        },
+      ],
     },
   },
   'soft-serve': {
