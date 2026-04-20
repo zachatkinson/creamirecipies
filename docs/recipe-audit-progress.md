@@ -97,4 +97,44 @@ Reviewed and left as-is (117 recipes — all correctly aligned with their titles
 
 ---
 
+#### Batch 4 — drafts publishing 2026-05-20 → 2026-05-30 (14 recipes fixed)
+
+`scripts/fixes/2026-04-20-batch4-audit-fixes.sql`:
+
+- `FIXED` dark-chocolate-cherry-cordial-ice-cream — kirsch + maraschino cherries for "cordial" character
+- `FIXED` honey-bee-pollen-ice-cream — bee pollen granules
+- `FIXED` honeycomb-crunch-ice-cream — honeycomb candy pieces
+- `FIXED` lavender-honey-vanilla-ice-cream — dried lavender + infusion step
+- `FIXED` mascarpone-honey-gelato — wildflower honey
+- `FIXED` matcha-almond-butter-ice-cream — almond butter as swirl
+- `FIXED` peanut-butter-honey-ice-cream — honey
+- `FIXED` roasted-cherry-vanilla-ice-cream — swap puree for fresh cherries + roasting step
+- `FIXED` rosewater-pistachio-crunch-ice-cream — rose water + crushed pistachios mix-in
+- `FIXED` strawberry-almond-butter-ice-cream — almond butter as swirl
+- `FIXED` strawberry-pecan-ice-cream — toasted pecans
+- `FIXED` strawberry-rhubarb-ice-cream — rhubarb compote swirl + streusel mix-in
+- `FIXED` strawberry-walnut-ice-cream — toasted walnuts
+- `FIXED` toasted-almond-honey-ice-cream — toasted almonds + toasting step
+
+#### Batch 5 — drafts publishing 2026-06-01 → 2026-06-26 (14 recipes fixed)
+
+`scripts/fixes/2026-04-20-batch5-audit-fixes.sql`:
+
+- `FIXED` banana-walnut-greek-frozen-yogurt — chopped walnuts
+- `FIXED` blackberry-sage-honey-ice-cream — sage leaves + honey + sage infusion step
+- `FIXED` chocolate-peanut-butter-greek-frozen-yogurt — peanut butter swirl
+- `FIXED` chocolate-raspberry-truffle-ice-cream — moved raspberry puree to swirl + chopped truffles mix-in
+- `FIXED` coconut-lime-crunch-ice-cream — fixed lemon→lime typo, added coconut cream + lime zest + toasted coconut flakes
+- `FIXED` lavender-blueberry-cream-ice-cream — dried lavender + infusion step
+- `FIXED` lemon-blueberry-crumble-ice-cream — blueberry compote swirl + oat streusel mix-in
+- `FIXED` mango-coconut-cream-ice-cream — coconut cream
+- `FIXED` mango-lime-coconut-ice-cream — fixed lemon→lime typo, added mango puree + coconut cream
+- `FIXED` mango-lime-greek-frozen-yogurt — lime juice + zest
+- `FIXED` peach-cobbler-protein-ice-cream — oat-almond streusel crumbles
+- `FIXED` peach-vanilla-cream-gelato — vanilla extract (was missing entirely)
+- `FIXED` tropical-sunrise-sorbet — replaced vague "tropical fruit blend" with mango + pineapple + orange
+- `FIXED` vegan-mango-lime-ice-cream — lime juice + zest
+
+---
+
 <!-- New audits appended below by publish date ascending -->
