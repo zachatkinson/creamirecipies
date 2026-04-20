@@ -92,10 +92,12 @@ const COLLECTION_I18N: Record<string, Record<Locale, CollectionMeta>> = {
       metaDescription: 'High-protein Ninja Creami ice cream recipes with macros. Cottage cheese, protein powder, and low-calorie bases — tested step-by-step for perfect results every time.',
       longIntroSections: [
         {
-          layout: 'two-col',
-          markdown: `Protein ice cream is the reason a lot of people buy a Ninja Creami in the first place. The machine is uniquely good at turning high-protein, low-fat bases — which would be icy and grainy in a traditional ice cream maker — into something that legitimately tastes like dessert. Every recipe on this page lands between 20 and 40 grams of protein per pint, with macros listed up front so you know exactly what you're eating.
-
-We've split the recipes into three approaches, so you can pick based on what's in your cupboard.`,
+          layout: 'prose',
+          markdown: `Protein ice cream is the reason a lot of people buy a Ninja Creami in the first place. The machine is uniquely good at turning high-protein, low-fat bases — which would be icy and grainy in a traditional ice cream maker — into something that legitimately tastes like dessert. Every recipe on this page lands between 20 and 40 grams of protein per pint, with macros listed up front so you know exactly what you're eating.`,
+        },
+        {
+          layout: 'prose',
+          markdown: `We've split the recipes into three approaches, so you can pick based on what's in your cupboard.`,
         },
         {
           layout: 'cards',
@@ -158,11 +160,129 @@ We've split the recipes into three approaches, so you can pick based on what's i
       title: 'Recetas de Helado Proteico para Ninja Creami',
       description: 'Recetas de Ninja Creami altas en proteína que saben a helado de verdad. Bases de requesón, proteína en polvo y postres helados saludables — todos probados con instrucciones paso a paso.',
       metaDescription: 'Recetas de helado proteico Ninja Creami con macros. Requesón, proteína en polvo y bases bajas en calorías — probadas paso a paso.',
+      longIntroSections: [
+        {
+          layout: 'prose',
+          markdown: `El helado proteico es la razón por la que mucha gente compra un Ninja Creami. La máquina es especialmente buena convirtiendo bases altas en proteína y bajas en grasa — que en una heladera tradicional quedarían heladas y granulosas — en algo que realmente sabe a postre. Cada receta de esta página aporta entre 20 y 40 gramos de proteína por pote, con las macros bien visibles para que sepas exactamente lo que comes.`,
+        },
+        {
+          layout: 'prose',
+          markdown: `Hemos dividido las recetas en tres enfoques para que elijas según lo que tengas en la despensa.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Los tres enfoques altos en proteína',
+          cards: [
+            {
+              title: 'Bases con proteína en polvo',
+              body: 'Whey, caseína o proteína vegetal mezclada con leche, yogurt griego y un edulcorante. La textura más parecida al helado clásico. El aislado de whey queda más cremoso al congelarse; la caseína da una textura más densa tipo gelato; la proteína vegetal funciona, pero conviene dejarla hidratar en la nevera una hora antes de congelar.',
+            },
+            {
+              title: 'Bases de requesón (cottage cheese)',
+              body: 'La gran sorpresa del mundo Creami — un envase entero de requesón al 2% licuado hasta quedar liso, con edulcorante y saborizante, produce más de 40 gramos de proteína y un pote asombrosamente cremoso. Sin proteína en polvo, sin pastosidad. Preferimos Good Culture o Daisy bajo en sodio.',
+            },
+            {
+              title: 'Bases de yogurt griego',
+              body: 'El término medio. Menos proteína que el requesón pero más que el polvo solo, y la acidez combina genial con frutas y miel. Estas recetas congelan rápido y giran a una textura densa, cercana al yogurt helado.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Cómo usar estas recetas:** cada página muestra la lista completa de ingredientes escalada al tamaño de tu Creami (pote de 16oz Original o 24oz Deluxe XL), el programa exacto (la mayoría de recetas proteicas usan Lite Ice Cream, no Ice Cream — esto importa), el tiempo de congelado, las instrucciones paso a paso y las macros completas por porción. Si tu primer pote sale pastoso, revisa la sección "Pro tips" — normalmente se arregla con una cucharada de leche encima y un Re-Spin.
+
+**Elegir tu proteína en polvo:** si aún no tienes una, nuestra guía [Las mejores proteínas en polvo para Ninja Creami](/es/blog/best-protein-powders-creami) clasifica las 8 que hemos probado y señala las que no dejan sabor pastoso una vez congeladas.`,
+        },
+      ],
+      faqs: [
+        {
+          question: '¿Cuál es la mejor proteína en polvo para el helado del Ninja Creami?',
+          answer: 'El aislado de whey da la textura más suave y cremosa al congelarse — recomendamos Ghost o Ascent para sabores neutros de vainilla. La caseína queda más densa (tipo gelato) y va bien con recetas de chocolate y cookies-and-cream. La proteína vegetal funciona pero debe hidratarse en la nevera 1 hora antes de congelar. Consulta nuestra comparativa completa para ver las opciones probadas.',
+        },
+        {
+          question: '¿Cuánta proteína tiene realmente un pote del Ninja Creami?',
+          answer: 'Depende de la base. Una receta con una medida de whey aporta normalmente 25–30 g por pote. Las bases de requesón superan los 40 g por pote. Las de yogurt griego quedan en torno a 20–25 g. Cada receta de esta página indica las macros exactas por porción.',
+        },
+        {
+          question: '¿Por qué mi helado proteico tiene sabor pastoso?',
+          answer: 'Tres causas habituales: (1) la proteína en polvo no se hidrata — deja la base en la nevera 30–60 minutos antes de congelar para que el polvo se disuelva del todo, (2) la proteína es de baja calidad — el concentrado de whey queda más pastoso que el aislado al congelarse, (3) estás usando el programa Ice Cream en vez de Lite Ice Cream. Cambia a Lite Ice Cream para cualquier base baja en grasa o alta en proteína.',
+        },
+        {
+          question: '¿Puedo hacer helado proteico Ninja Creami sin proteína en polvo?',
+          answer: 'Sí — usa requesón (2% entero, licuado hasta quedar completamente liso) o yogurt griego como base. El requesón aporta más de 40 g de proteína por pote de forma natural; el yogurt griego, 20–25 g. Ambos giran a potes cremosos sin necesidad de añadir polvo.',
+        },
+        {
+          question: '¿Qué programa uso para el helado proteico?',
+          answer: 'Usa el programa "Lite Ice Cream" para bases proteicas — está diseñado para mezclas bajas en grasa y las procesa sin que queden heladas. El programa "Ice Cream" normal es para bases ricas en crema y puede dejar los potes proteicos granulados.',
+        },
+        {
+          question: '¿Cuántas calorías tiene el helado proteico del Ninja Creami?',
+          answer: 'La mayoría de recetas de esta página quedan entre 250 y 450 calorías por pote (4 porciones), con 20–40 g de proteína. Es un tercio o la mitad de las calorías de marcas comerciales como Halo Top, a una fracción del coste por pote.',
+        },
+      ],
     },
     de: {
       title: 'Protein-Eis Rezepte für Ninja Creami',
       description: 'Proteinreiche Ninja Creami Rezepte, die wie echtes Eis schmecken. Quark-Basen, Proteinpulver und makrofreundliche Eiskreationen — alle mit Schritt-für-Schritt-Anleitung getestet.',
       metaDescription: 'Proteinreiche Ninja Creami Eis-Rezepte mit Makros. Quark, Proteinpulver und kalorienarme Basen — Schritt für Schritt getestet.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Protein-Eis ist der Grund, warum viele überhaupt einen Ninja Creami kaufen. Die Maschine ist besonders gut darin, proteinreiche, fettarme Basen — die in einer klassischen Eismaschine vereist und körnig würden — in etwas zu verwandeln, das wirklich nach Dessert schmeckt. Jedes Rezept auf dieser Seite liefert zwischen 20 und 40 Gramm Protein pro Pint, mit offen ausgewiesenen Makros, damit du genau weißt, was du isst.
+
+Wir haben die Rezepte in drei Ansätze unterteilt, damit du nach dem wählst, was gerade im Schrank steht.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Die drei proteinreichen Ansätze',
+          cards: [
+            {
+              title: 'Basen mit Proteinpulver',
+              body: 'Whey, Casein oder pflanzliches Protein gemischt mit Milch, griechischem Joghurt und Süßungsmittel. Am nächsten an klassischer Eiscreme-Textur. Whey-Isolat bleibt nach dem Einfrieren am cremigsten; Casein gibt eine dichtere, gelato-artige Konsistenz; pflanzliches Protein funktioniert, sollte aber eine Stunde im Kühlschrank hydratisieren, bevor die Basis eingefroren wird.',
+            },
+            {
+              title: 'Quark- bzw. Hüttenkäse-Basen',
+              body: 'Die große Überraschung der Creami-Welt — ein ganzer 2%-Hüttenkäse (oder Magerquark in Europa) cremig gemixt mit Süße und Aroma ergibt über 40 Gramm Protein und ein erstaunlich cremiges Pint. Kein Proteinpulver nötig, kein kreidiges Gefühl. In den USA empfehlen wir Good Culture oder Daisy Low-Sodium.',
+            },
+            {
+              title: 'Basen aus griechischem Joghurt',
+              body: 'Der Mittelweg. Weniger Protein als Hüttenkäse, aber mehr als reines Pulver, und die Säure harmoniert wunderbar mit Frucht- und Honignoten. Diese Rezepte frieren schnell ein und ergeben eine dichte, frozen-yogurt-artige Textur.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**So nutzt du diese Rezepte:** jede Rezeptseite zeigt die komplette Zutatenliste, skaliert auf deine Creami-Größe (16oz Original oder 24oz Deluxe XL), das genaue Programm (die meisten Protein-Rezepte nutzen Lite Ice Cream, nicht Ice Cream — das ist wichtig), Gefrierzeit, Schritt-für-Schritt-Anleitung und vollständige Makros pro Portion. Wenn dein erstes Pint kreidig ist, schau in den "Pro Tipps"-Abschnitt — meistens hilft ein Esslöffel Milch und ein Re-Spin.
+
+**Das richtige Proteinpulver:** Wenn du noch keines hast, unser Guide [Die besten Proteinpulver für den Ninja Creami](/de/blog/best-protein-powders-creami) bewertet die 8 getesteten Sorten und zeigt, welche gefroren nicht kreidig schmecken.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Welches Proteinpulver eignet sich am besten für Ninja Creami Eis?',
+          answer: 'Whey-Isolat ergibt die glatteste, cremigste Textur nach dem Einfrieren — wir empfehlen Ghost oder Ascent für neutrale Vanillegeschmäcker. Casein friert dichter ein (gelato-artig) und passt gut zu Schokoladen- und Cookies-and-Cream-Rezepten. Pflanzliches Protein funktioniert, muss aber 1 Stunde im Kühlschrank hydratisieren, bevor es eingefroren wird. Schau in unseren Vergleich getesteter Proteinpulver.',
+        },
+        {
+          question: 'Wie viel Protein steckt wirklich in einem Ninja Creami Pint?',
+          answer: 'Das hängt von der Basis ab. Ein Rezept mit einem Messlöffel Whey liefert typischerweise 25–30 g pro Pint. Quark-/Hüttenkäse-Basen kommen auf über 40 g pro Pint. Joghurt-Rezepte landen bei 20–25 g. Jedes Rezept auf dieser Seite nennt die exakten Makros pro Portion.',
+        },
+        {
+          question: 'Warum schmeckt mein Protein-Eis kreidig?',
+          answer: 'Drei häufige Ursachen: (1) das Proteinpulver hydratisiert nicht — lass die Basis 30–60 Minuten im Kühlschrank ruhen, damit sich das Pulver vollständig löst, (2) minderwertiges Protein — Whey-Konzentrat schmeckt gefroren kreidiger als Isolat, (3) du verwendest das Ice-Cream-Programm statt Lite Ice Cream. Wechsle für fettarme oder proteinreiche Basen immer zu Lite Ice Cream.',
+        },
+        {
+          question: 'Kann ich Ninja Creami Protein-Eis ohne Proteinpulver machen?',
+          answer: 'Ja — verwende Hüttenkäse bzw. Quark (2% vollfett, komplett cremig gemixt) oder griechischen Joghurt als Basis. Hüttenkäse liefert natürlich über 40 g Protein pro Pint; griechischer Joghurt 20–25 g. Beide ergeben cremige Pints ganz ohne zusätzliches Pulver.',
+        },
+        {
+          question: 'Welches Programm nutze ich für Protein-Eis?',
+          answer: 'Nutze das Programm "Lite Ice Cream" für Protein-Basen — es ist für fettärmere Mischungen ausgelegt und verarbeitet sie, ohne dass sie vereisen. Das normale "Ice Cream"-Programm ist für vollfette Sahnebasen gedacht und kann Protein-Pints bröselig machen.',
+        },
+        {
+          question: 'Wie viele Kalorien hat Ninja Creami Protein-Eis?',
+          answer: 'Die meisten Rezepte auf dieser Seite liegen zwischen 250 und 450 Kalorien pro Pint (4 Portionen), mit 20–40 g Protein. Das ist ein Drittel bis die Hälfte der Kalorien von gekauften proteinreichen Marken wie Halo Top — zu einem Bruchteil des Preises pro Pint.',
+        },
+      ],
     },
     pt: {
       title: 'Receitas de Sorvete Proteico para Ninja Creami',
