@@ -781,21 +781,197 @@ If you're brand new to the machine, start with a classic: vanilla, chocolate, or
       title: 'Recettes de Crème Glacée pour Ninja Creami',
       description: 'Recettes de crème glacée classiques et créatives pour votre Ninja Creami. Bases riches et crémeuses avec des combinaisons de saveurs infinies — toutes testées avec des instructions étape par étape.',
       metaDescription: 'Recettes de crème glacée Ninja Creami avec instructions étape par étape. De la vanille classique aux saveurs créatives — testées pour un résultat parfait.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Le Ninja Creami donne le meilleur de lui-même quand vous lui donnez une vraie base de crème glacée. Une base à base de crème — crème liquide entière, lait entier et sucre — congèle en un bloc dense que la lame du Creami rase pour obtenir cette texture veloutée, à la cuillère, que vous ne pouvez pas obtenir d'un blender ou d'une sorbetière classique. Chaque recette de cette page part de cette fondation et ajoute un profil de saveur que nous avons testé de bout en bout, pour que vous sachiez exactement quel goût et quelle texture attendre du pot final.
+
+Si vous débutez avec la machine, commencez par un classique : vanille, chocolat ou fraise. Ce sont les recettes qui vous apprennent comment le programme "Ice Cream" se comporte, combien de temps congeler votre pot et quand utiliser le Re-Spin. Une fois que votre premier pot sort brillant plutôt que friable, vous saurez que votre congélateur et votre Creami sont calibrés, et les recettes plus avancées — swirls, mix-ins, saveurs superposées — deviennent beaucoup plus faciles à maîtriser.`,
+        },
+        {
+          layout: 'prose',
+          markdown: `Nous incluons aussi des recettes qui utilisent des bases peu conventionnelles. Le cream cheese apporte de la richesse et aide à éviter l'effet glacé. Le lait concentré sucré remplace le sucre et donne une densité proche du gelato. Les jaunes d'œuf (optionnels, pour une crème glacée style custard classique) offrent une vraie vanille française à l'ancienne sans turbinage. Chaque recette précise quelle base elle utilise et pourquoi, pour que vous puissiez choisir selon ce que vous avez dans le frigo et la texture recherchée.`,
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Comment utiliser ces recettes :** cliquez sur une recette et vous verrez la liste complète d'ingrédients ajustée soit au pot 16oz Original Creami soit au 24oz Deluxe XL, le programme exact à lancer (Ice Cream, Sorbet, Lite Ice Cream ou une combinaison), le temps de congélation et les instructions étape par étape avec des notes de dépannage. Si votre premier pot sort friable, la recette vous dira de faire un Re-Spin — n'abandonnez jamais après une seule passe.
+
+**Vous cherchez quelque chose de précis ?** Utilisez les filtres pour affiner par difficulté, temps de préparation, tags diététiques (keto, sans lactose, sans gluten, riche en protéines) ou profil de saveur. Chaque recette inclut une note étoilée de lecteurs qui l'ont réellement faite.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Quelle est la meilleure base de crème glacée Ninja Creami ?',
+          answer: 'La base standard est 1 tasse de crème liquide entière + 1/2 tasse de lait entier + 1/4 tasse de sucre + 1 c. à café d\'extrait de vanille. Ce ratio produit un pot dense et à la cuillère après un seul programme Ice Cream. Ajoutez du cream cheese (1–2 c. à soupe) pour plus de richesse, ou remplacez le sucre par du lait concentré sucré pour une texture façon gelato.',
+        },
+        {
+          question: 'Combien de temps congeler la crème glacée dans le Ninja Creami ?',
+          answer: 'Congelez votre pot rempli pendant 24 heures à -18°C ou plus froid. Moins de 24 heures et le bloc ne sera pas assez solide pour que la lame le rase correctement — vous obtiendrez une texture inégale. Vous pouvez congeler plus longtemps (jusqu\'à une semaine) sans perte de qualité.',
+        },
+        {
+          question: 'Pourquoi ma crème glacée Ninja Creami est-elle friable ?',
+          answer: 'La texture friable signifie presque toujours que votre pot a besoin d\'un Re-Spin. La première passe casse le bloc congelé, mais laisse souvent de petits morceaux non traités. Ajoutez 1 cuillère à soupe de lait sur le dessus, lancez le programme Re-Spin et elle sortira lisse. Si elle est encore friable après deux Re-Spins, votre base est peut-être trop faible en matières grasses.',
+        },
+        {
+          question: 'Puis-je faire de la crème glacée dans le Ninja Creami sans sucre ?',
+          answer: 'Oui — utilisez un édulcorant qui ne cristallise pas au congelé. L\'allulose, le fruit du moine et les mélanges d\'érythritol fonctionnent tous bien. Évitez la stévia seule (goût désagréable congelé) et l\'érythritol pur (devient granuleux). Voyez nos recettes de crème glacée keto pour des bases faibles en sucre testées.',
+        },
+        {
+          question: 'Quelle différence entre Ice Cream et Lite Ice Cream sur le Creami ?',
+          answer: 'Le programme Ice Cream est pour les bases traditionnelles riches en matières grasses (recettes à base de crème liquide). Lite Ice Cream est pour les bases faibles en calories ou en matières grasses comme celles au lait seul, au yaourt grec ou à la poudre de protéine — il utilise une action de lame légèrement différente pour traiter les bases maigres sans les glacer.',
+        },
+        {
+          question: 'Combien de boules dans un pot Ninja Creami ?',
+          answer: 'Un pot Original Creami de 16oz donne 3–4 boules moyennes (environ 4 portions). Le pot Deluxe XL de 24oz donne 5–6 boules (environ 6 portions). Toutes les recettes indiquent le nombre exact de portions selon la taille du pot.',
+        },
+      ],
     },
     es: {
       title: 'Recetas de Helado para Ninja Creami',
       description: 'Recetas de helado clásicas y creativas hechas con tu Ninja Creami. Bases ricas y cremosas con infinitas combinaciones de sabores — todas probadas con instrucciones paso a paso.',
       metaDescription: 'Recetas de helado Ninja Creami con instrucciones paso a paso. Desde vainilla clásica hasta sabores creativos — probadas para un helado casero perfecto.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `El Ninja Creami da su mejor versión cuando le das una base de helado de verdad. Una base con crema — nata para montar, leche entera y azúcar — se congela en un bloque denso que la cuchilla del Creami raspa hasta esa textura aterciopelada y para cuchara que no vas a conseguir con una licuadora ni con una heladera común. Cada receta de esta página parte de esa base y añade un perfil de sabor que hemos probado de principio a fin, para que sepas exactamente cómo sabrá y se servirá el pote final.
+
+Si empiezas con la máquina, comienza por un clásico: vainilla, chocolate o fresa. Son las recetas que te enseñan cómo se comporta el programa "Ice Cream", cuánto congelar tu pote y cuándo recurrir al Re-Spin. Cuando tu primer pote salga brillante en vez de granulado, sabrás que tu congelador y tu Creami están calibrados, y las recetas más avanzadas — swirls, mix-ins, sabores en capas — resultan mucho más fáciles de clavar.`,
+        },
+        {
+          layout: 'prose',
+          markdown: `También incluimos recetas que usan bases poco convencionales. El queso crema aporta riqueza y ayuda a evitar que quede granulado. La leche condensada sustituye al azúcar y da una densidad tipo gelato. Las yemas de huevo (opcionales, para helado tipo custard clásico) consiguen una vainilla francesa a la antigua sin tener que batirla. Cada receta especifica qué base usa y por qué, para que elijas según lo que tengas en la nevera y la textura que busques.`,
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Cómo usar estas recetas:** entra en cualquier receta y verás la lista completa de ingredientes escalada al pote de 16oz Original Creami o al 24oz Deluxe XL, el programa exacto a ejecutar (Ice Cream, Sorbet, Lite Ice Cream o una combinación), tiempo de congelado e instrucciones paso a paso con notas de solución de problemas. Si tu primer pote sale granulado, la receta te dirá que hagas un Re-Spin — nunca te rindas tras una sola pasada.
+
+**¿Buscas algo concreto?** Usa los filtros para acotar por dificultad, tiempo de preparación, etiquetas dietéticas (keto, sin lácteos, sin gluten, alto en proteína) o perfil de sabor. Cada receta incluye una puntuación de estrellas de lectores que realmente la han preparado.`,
+        },
+      ],
+      faqs: [
+        {
+          question: '¿Cuál es la mejor base de helado para el Ninja Creami?',
+          answer: 'La base estándar es 1 taza de nata para montar + 1/2 taza de leche entera + 1/4 taza de azúcar + 1 cdta de extracto de vainilla. Esta proporción produce un pote denso para cuchara después de un solo ciclo Ice Cream. Añade queso crema (1–2 cdas) para más riqueza, o cambia el azúcar por leche condensada para una textura tipo gelato.',
+        },
+        {
+          question: '¿Cuánto tiempo congelo el helado en el Ninja Creami?',
+          answer: 'Congela el pote lleno durante 24 horas a -18°C o más frío. Menos de 24 horas y el bloque no estará lo bastante sólido para que la cuchilla raspe bien — la textura será irregular. Puedes congelar más tiempo (hasta una semana) sin pérdida de calidad.',
+        },
+        {
+          question: '¿Por qué mi helado Ninja Creami queda granulado?',
+          answer: 'La textura granulada casi siempre significa que tu pote necesita un Re-Spin. La primera pasada rompe el bloque congelado pero suele dejar pequeños trozos sin procesar. Añade 1 cucharada de leche encima, lanza el programa Re-Spin y saldrá liso. Si sigue granulado tras dos Re-Spins, tu base puede tener poca grasa.',
+        },
+        {
+          question: '¿Puedo hacer helado en el Ninja Creami sin azúcar?',
+          answer: 'Sí — usa un edulcorante que no cristalice al congelar. La alulosa, el monk fruit y las mezclas de eritritol funcionan bien. Evita la estevia sola (sabor raro al congelar) y el eritritol puro (queda granuloso). Mira nuestras recetas de helado keto para bases bajas en azúcar probadas.',
+        },
+        {
+          question: '¿Qué diferencia hay entre Ice Cream y Lite Ice Cream en el Creami?',
+          answer: 'El programa Ice Cream es para bases tradicionales altas en grasa (recetas con nata para montar). Lite Ice Cream es para bases bajas en calorías o en grasa como las de solo leche, yogurt griego o proteína en polvo — usa una acción de cuchilla algo distinta para manejar bases magras sin dejarlas heladas.',
+        },
+        {
+          question: '¿Cuántas bolas da un pote del Ninja Creami?',
+          answer: 'Un pote Original Creami de 16oz da 3–4 bolas medianas (unas 4 porciones). El pote Deluxe XL de 24oz da 5–6 bolas (unas 6 porciones). Todas las recetas indican el número exacto de porciones según el tamaño del pote.',
+        },
+      ],
     },
     de: {
       title: 'Eis-Rezepte für Ninja Creami',
       description: 'Klassische und kreative Eis-Rezepte für deinen Ninja Creami. Reichhaltige, cremige Basen mit endlosen Geschmackskombinationen — alle mit Schritt-für-Schritt-Anleitung getestet.',
       metaDescription: 'Ninja Creami Eis-Rezepte mit Schritt-für-Schritt-Anleitung. Von klassischer Vanille bis zu kreativen Geschmacksrichtungen — für perfektes selbstgemachtes Eis.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Der Ninja Creami ist in seinem Element, wenn du ihm eine echte Eisbasis gibst. Eine richtige Sahnebasis — Schlagsahne, Vollmilch und Zucker — gefriert zu einem dichten Block, den die Creami-Klinge in diese samtige, löffelbare Textur shavt, die du weder mit einem Mixer noch mit einer klassischen Eismaschine hinbekommst. Jedes Rezept auf dieser Seite startet mit dieser Grundlage und ergänzt ein Geschmacksprofil, das wir von Anfang bis Ende getestet haben — damit du genau weißt, wie das fertige Pint schmeckt und sich löffeln lässt.
+
+Wenn du ganz neu mit der Maschine bist, starte mit einem Klassiker: Vanille, Schokolade oder Erdbeere. Diese Rezepte zeigen dir, wie sich das Programm "Ice Cream" verhält, wie lange du dein Pint einfrieren musst und wann der Re-Spin-Knopf ins Spiel kommt. Sobald dein erstes Pint glänzend statt bröselig herauskommt, weißt du, dass Gefrierschrank und Creami eingespielt sind — und die fortgeschrittenen Rezepte mit Swirls, Mix-ins und geschichteten Aromen werden deutlich einfacher.`,
+        },
+        {
+          layout: 'prose',
+          markdown: `Wir haben auch Rezepte mit unkonventionellen Basen. Frischkäse bringt Reichhaltigkeit und verhindert Vereisung. Gezuckerte Kondensmilch ersetzt den Zucker und sorgt für eine gelatoartige Dichte. Eigelbe (optional, für klassisches Custard-Eis) liefern altmodische französische Vanille ohne Rühren. Jedes Rezept sagt dir, welche Basis es nutzt und warum — damit du nach Kühlschrankinhalt und gewünschter Textur wählen kannst.`,
+        },
+        {
+          layout: 'two-col',
+          markdown: `**So nutzt du diese Rezepte:** klick in ein Rezept und du siehst die komplette Zutatenliste, skaliert entweder auf das 16oz Original Creami Pint oder das 24oz Deluxe XL, das genaue Programm (Ice Cream, Sorbet, Lite Ice Cream oder eine Kombination), Gefrierzeit und Schritt-für-Schritt-Anleitung mit Troubleshooting-Hinweisen. Wenn dein erstes Pint bröselig herauskommt, verweist das Rezept auf den Re-Spin — gib nie nach einer einzigen Runde auf.
+
+**Suchst du etwas Bestimmtes?** Nutze die Filter nach Schwierigkeitsgrad, Vorbereitungszeit, Ernährungs-Tags (Keto, milchfrei, glutenfrei, proteinreich) oder Geschmacksprofil. Jedes Rezept enthält eine Sternebewertung von Lesern, die es tatsächlich gemacht haben.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Was ist die beste Ninja Creami Eisbasis?',
+          answer: 'Die Standardbasis ist 1 Tasse Schlagsahne + 1/2 Tasse Vollmilch + 1/4 Tasse Zucker + 1 TL Vanilleextrakt. Dieses Verhältnis ergibt nach einem Ice-Cream-Durchgang ein dichtes, löffelbares Pint. Für mehr Reichhaltigkeit 1–2 EL Frischkäse dazugeben oder den Zucker durch gezuckerte Kondensmilch ersetzen für gelato-artige Textur.',
+        },
+        {
+          question: 'Wie lange friere ich Eis im Ninja Creami ein?',
+          answer: 'Friere das gefüllte Pint 24 Stunden bei -18°C oder kälter ein. Weniger als 24 Stunden und der Block ist nicht fest genug, damit die Klinge richtig shavt — du bekommst ungleichmäßige Textur. Länger einfrieren (bis zu einer Woche) ist problemlos möglich.',
+        },
+        {
+          question: 'Warum ist mein Ninja Creami Eis bröselig?',
+          answer: 'Bröselige Textur bedeutet fast immer, dass dein Pint einen Re-Spin braucht. Der erste Durchgang bricht den gefrorenen Block auf, lässt aber oft kleine, unbearbeitete Stücke zurück. Einen Esslöffel Milch obendrauf, Re-Spin laufen lassen, und es wird glatt. Wenn es nach zwei Re-Spins noch bröselig ist, ist deine Basis eventuell zu fettarm.',
+        },
+        {
+          question: 'Kann ich im Ninja Creami Eis ohne Zucker machen?',
+          answer: 'Ja — nimm ein Süßungsmittel, das beim Gefrieren nicht kristallisiert. Allulose, Mönchsfrucht und Erythrit-Blends funktionieren gut. Meide Stevia allein (schmeckt gefroren unangenehm) und reines Erythrit (wird körnig). Schau in unsere Keto-Eis-Rezepte für getestete zuckerarme Basen.',
+        },
+        {
+          question: 'Was ist der Unterschied zwischen Ice Cream und Lite Ice Cream beim Creami?',
+          answer: 'Das Ice-Cream-Programm ist für klassische fettreiche Basen (Sahne-Rezepte). Lite Ice Cream ist für kalorienärmere oder fettärmere Basen wie reine Milch, griechischen Joghurt oder Proteinpulver-Rezepte — es nutzt eine leicht andere Klingenaktion, damit fettärmere Basen nicht vereisen.',
+        },
+        {
+          question: 'Wie viele Kugeln ergibt ein Ninja Creami Pint?',
+          answer: 'Ein 16oz Original Creami Pint ergibt 3–4 mittlere Kugeln (etwa 4 Portionen). Das 24oz Deluxe XL Pint ergibt 5–6 Kugeln (etwa 6 Portionen). Alle Rezepte geben die exakten Portionen je nach Pint-Größe an.',
+        },
+      ],
     },
     pt: {
       title: 'Receitas de Sorvete para Ninja Creami',
       description: 'Receitas de sorvete clássicas e criativas feitas com seu Ninja Creami. Bases ricas e cremosas com combinações infinitas de sabores — todas testadas com instruções passo a passo.',
       metaDescription: 'Receitas de sorvete Ninja Creami com instruções passo a passo. Da baunilha clássica a sabores criativos — testadas para um sorvete caseiro perfeito.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `O Ninja Creami dá o seu melhor quando você coloca uma base de sorvete de verdade. Uma base com creme — creme de leite fresco, leite integral e açúcar — congela em um bloco denso que a lâmina do Creami raspa até aquela textura aveludada, de colher, que você não consegue com um liquidificador nem com uma sorveteira comum. Cada receita desta página parte dessa fundação e adiciona um perfil de sabor que testamos do começo ao fim, para você saber exatamente como o pote final vai ter gosto e servir.
+
+Se você é novo na máquina, comece por um clássico: baunilha, chocolate ou morango. São as receitas que te ensinam como o programa "Ice Cream" se comporta, quanto tempo congelar seu pote e quando usar o Re-Spin. Quando seu primeiro pote sair brilhante em vez de quebradiço, você vai saber que seu freezer e seu Creami estão calibrados, e as receitas mais avançadas — swirls, mix-ins, sabores em camadas — ficam bem mais fáceis de acertar.`,
+        },
+        {
+          layout: 'prose',
+          markdown: `Também incluímos receitas que usam bases não convencionais. O cream cheese traz riqueza e ajuda a evitar que fique gelado. O leite condensado substitui o açúcar e dá uma densidade tipo gelato. Gemas de ovo (opcionais, para sorvete estilo custard clássico) entregam baunilha francesa à moda antiga sem precisar bater. Cada receita especifica qual base usa e por quê, para você escolher de acordo com o que tem na geladeira e a textura que deseja.`,
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Como usar essas receitas:** clique em qualquer receita e verá a lista completa de ingredientes ajustada ao pote de 16oz Original Creami ou ao 24oz Deluxe XL, o programa exato a rodar (Ice Cream, Sorbet, Lite Ice Cream ou uma combinação), tempo de congelamento e instruções passo a passo com notas de solução de problemas. Se seu primeiro pote sair quebradiço, a receita vai pedir um Re-Spin — nunca desista depois de uma única passada.
+
+**Procurando algo específico?** Use os filtros para refinar por dificuldade, tempo de preparo, tags dietéticas (keto, sem lactose, sem glúten, rico em proteína) ou perfil de sabor. Cada receita inclui uma avaliação por estrelas de leitores que realmente fizeram a receita.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Qual é a melhor base de sorvete para o Ninja Creami?',
+          answer: 'A base padrão é 1 xícara de creme de leite fresco + 1/2 xícara de leite integral + 1/4 xícara de açúcar + 1 colher de chá de extrato de baunilha. Essa proporção produz um pote denso para colher depois de um único ciclo Ice Cream. Adicione cream cheese (1–2 colheres de sopa) para mais riqueza, ou troque o açúcar por leite condensado para uma textura tipo gelato.',
+        },
+        {
+          question: 'Quanto tempo congelo o sorvete no Ninja Creami?',
+          answer: 'Congele o pote cheio por 24 horas a -18°C ou mais frio. Menos de 24 horas e o bloco não estará sólido o bastante para a lâmina raspar direito — a textura fica irregular. Você pode congelar por mais tempo (até uma semana) sem perda de qualidade.',
+        },
+        {
+          question: 'Por que meu sorvete do Ninja Creami está quebradiço?',
+          answer: 'Textura quebradiça quase sempre significa que seu pote precisa de um Re-Spin. A primeira passada quebra o bloco congelado, mas costuma deixar pequenos pedaços sem processar. Adicione 1 colher de sopa de leite por cima, rode o programa Re-Spin e ele sairá liso. Se ainda ficar quebradiço depois de dois Re-Spins, sua base pode estar com pouca gordura.',
+        },
+        {
+          question: 'Posso fazer sorvete no Ninja Creami sem açúcar?',
+          answer: 'Sim — use um adoçante que não cristalize quando congelado. Alulose, monk fruit e blends de eritritol funcionam bem. Evite estévia sozinha (fica com gosto estranho congelada) e eritritol puro (fica granuloso). Veja nossas receitas de sorvete keto para bases com pouco açúcar testadas.',
+        },
+        {
+          question: 'Qual a diferença entre Ice Cream e Lite Ice Cream no Creami?',
+          answer: 'O programa Ice Cream é para bases tradicionais com gordura alta (receitas à base de creme de leite). Lite Ice Cream é para bases com menos calorias ou gordura, como só leite, iogurte grego ou proteína em pó — usa uma ação de lâmina um pouco diferente para processar bases magras sem deixá-las geladas.',
+        },
+        {
+          question: 'Quantas bolas rende um pote Ninja Creami?',
+          answer: 'Um pote Original Creami de 16oz rende 3–4 bolas médias (cerca de 4 porções). O pote Deluxe XL de 24oz rende 5–6 bolas (cerca de 6 porções). Todas as receitas listam o número exato de porções de acordo com o tamanho do pote.',
+        },
+      ],
     },
   },
   'sorbet': {
