@@ -478,21 +478,253 @@ Frozen yogurt in a Creami works because the machine handles dense, tangy bases b
       title: 'Recettes de Frozen Yogurt pour Ninja Creami',
       description: 'Recettes de yaourt glacé crémeux préparées avec votre Ninja Creami. Bases au yaourt grec, fruits frais et alternatives légères — toutes avec des instructions étape par étape.',
       metaDescription: 'Recettes de yaourt glacé Ninja Creami avec yaourt grec et fruits. Instructions étape par étape pour un frozen yogurt maison parfait.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Le yaourt glacé maison signifiait autrefois sortir une sorbetière de comptoir, turbiner pendant 25 minutes, et finir avec quelque chose de glacé qui fondait en dix. Le Ninja Creami change complètement la donne — vous pouvez faire un frozen yogurt meilleur que celui des centres commerciaux dans votre congélateur du jour au lendemain, le turbiner en 90 secondes, et le garnir de ce que vous voulez. Chaque recette de cette page a été testée avec un vrai Creami, avec les temps de congélation exacts et les réglages de programme qui fonctionnent.
+
+Le frozen yogurt dans un Creami fonctionne parce que la machine gère à merveille les bases denses et acidulées. Nous utilisons du yaourt grec nature entier comme fondation (la matière grasse garde la texture crémeuse — évitez le 0% pour un meilleur résultat), ajoutons une touche d'édulcorant, et laissons les fruits frais, le miel ou les mix-ins porter la saveur. Le résultat est dense, à la cuillère, et apporte environ 12 à 20 g de protéines par pot selon la marque de yaourt.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Les trois styles de frozen yogurt sur ce site',
+          cards: [
+            {
+              title: 'Frozen yogurt grec classique',
+              body: 'Yaourt grec nature + miel + vanille + fruits. La base la plus simple possible, et celle par laquelle commencer si vous débutez avec le Creami. Tourne lisse en un seul passage et s\'accompagne de n\'importe quel fruit.',
+            },
+            {
+              title: 'Frozen yogurt riche en protéines',
+              body: 'Skyr, yaourt style islandais, ou yaourt grec 5% associé à une dose de poudre de protéine vanille. Dépassez les 25 g de protéines par pot sans perdre la texture crémeuse. Utilisez le programme Lite Ice Cream, pas Frozen Yogurt, pour ces recettes — l\'action de lame légèrement plus agressive gère mieux les bases riches en protéines.',
+            },
+            {
+              title: 'Frozen yogurt fruité',
+              body: 'Plus axé sur les fruits (purée de baies, mangue, fruit de la passion) avec le yaourt comme support. Ces recettes se rapprochent du frozen-yogurt-rencontre-sorbet et font partie de nos recettes d\'été les plus populaires.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Comment utiliser ces recettes :** chaque page de recette affiche la liste complète d'ingrédients ajustée à la taille de votre pot Creami, le programme exact (généralement "Frozen Yogurt" ou "Lite Ice Cream"), le temps de congélation (24 heures est la norme) et les instructions étape par étape. Si votre premier pot est glacé, ajoutez une cuillère à soupe de lait sur le dessus et faites un Re-Spin — le liquide supplémentaire corrige 90% des problèmes de texture.
+
+**Choisir son yaourt :** la marque compte. Fage 5%, yaourt grec Carrefour ou Siggi\'s fonctionnent tous bien. Évitez le yaourt grec 0% — il produit des pots glacés et granuleux. Si vous cherchez une base plus épaisse, le skyr islandais donne la texture de frozen yogurt la plus dense que nous ayons testée.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Quel réglage utiliser pour le frozen yogurt avec le Ninja Creami ?',
+          answer: 'Utilisez le programme "Frozen Yogurt" pour les recettes classiques à base de yaourt grec. Pour les bases riches en protéines (avec poudre ajoutée), utilisez "Lite Ice Cream" — l\'action de lame gère mieux les mélanges plus protéinés sans les glacer.',
+        },
+        {
+          question: 'Quel yaourt est le meilleur pour le frozen yogurt Ninja Creami ?',
+          answer: 'Le yaourt grec nature entier (5%) donne les résultats les plus crémeux — nous recommandons Fage 5%, yaourt grec style méditerranéen, ou skyr islandais (Siggi\'s). Évitez le yaourt grec 0% — l\'absence de matière grasse rend les pots glacés et granuleux. Si vous voulez moins de calories, le yaourt grec 2% est un compromis correct.',
+        },
+        {
+          question: 'Combien de temps congeler le frozen yogurt dans le Creami ?',
+          answer: 'Congelez votre pot rempli pendant 24 heures à -18°C ou plus froid. Moins de 24 heures signifie que le bloc n\'est pas totalement solide et la lame rasera de manière inégale. Vous pouvez congeler plus longtemps en toute sécurité (jusqu\'à une semaine) — si c\'est plus de 5 jours, laissez le pot à température ambiante 5 minutes avant de turbiner.',
+        },
+        {
+          question: 'Pourquoi mon frozen yogurt Ninja Creami est-il glacé ?',
+          answer: 'Généralement l\'une de ces trois causes : (1) vous avez utilisé un yaourt 0% ou sans matières grasses — passez au 2% ou entier, (2) votre édulcorant ne se dissout pas — utilisez du miel ou du sirop d\'érable au lieu de sucre granulé et fouettez bien avant congélation, (3) le pot a besoin d\'un Re-Spin avec 1 cuillère à soupe de lait ajoutée sur le dessus.',
+        },
+        {
+          question: 'Puis-je utiliser du yaourt ordinaire (pas grec) dans le Ninja Creami ?',
+          answer: 'Oui, mais la texture sera plus souple et plus proche du soft serve que d\'un frozen yogurt à la cuillère. Pour un pot plus ferme, filtrez le yaourt ordinaire à travers une étamine pendant 2 heures avant utilisation (yaourt grec maison), ou ajoutez 1 cuillère à soupe de cream cheese pour épaissir.',
+        },
+        {
+          question: 'Combien de protéines dans le frozen yogurt Ninja Creami ?',
+          answer: 'Une base de yaourt grec nature entier apporte environ 18 à 24 g de protéines par pot. Le skyr islandais monte à 24–28 g. Ajouter une dose de poudre de protéine vous fait passer à 30–40 g par pot — consultez nos recettes de frozen yogurt riches en protéines pour les ratios testés.',
+        },
+      ],
     },
     es: {
       title: 'Recetas de Yogurt Helado para Ninja Creami',
       description: 'Recetas cremosas de yogurt helado con tu Ninja Creami. Bases de yogurt griego, frutas frescas y alternativas más ligeras al helado tradicional — todas con instrucciones paso a paso.',
       metaDescription: 'Recetas de yogurt helado Ninja Creami con yogurt griego y frutas. Instrucciones paso a paso para un froyo casero perfecto.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `El yogurt helado casero solía significar sacar una heladera de encimera, batir durante 25 minutos y acabar con algo helado que se derretía en diez. El Ninja Creami cambia las reglas por completo — puedes hacer un frozen yogurt mejor que el del centro comercial en tu congelador durante la noche, girarlo en 90 segundos y cubrirlo con lo que quieras. Cada receta de esta página ha sido probada con un Creami real, con los tiempos de congelado exactos y los programas que funcionan.
+
+El yogurt helado en un Creami funciona porque la máquina maneja muy bien las bases densas y ácidas. Usamos yogurt griego natural entero como base (la grasa mantiene la textura cremosa — evita el 0% para mejor resultado), añadimos un toque de edulcorante y dejamos que las frutas frescas, la miel o los mix-ins aporten el sabor. El resultado es denso, para cuchara, y aporta unos 12–20 g de proteína por pote según la marca de yogurt.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Los tres estilos de yogurt helado en este sitio',
+          cards: [
+            {
+              title: 'Yogurt helado griego clásico',
+              body: 'Yogurt griego natural + miel + vainilla + fruta. La base más sencilla posible, y la que recomendamos si recién empiezas con el Creami. Gira liso en una sola pasada y combina con cualquier fruta que tengas.',
+            },
+            {
+              title: 'Yogurt helado alto en proteína',
+              body: 'Skyr, yogurt estilo islandés o yogurt griego 5% con una medida de proteína vanilla en polvo. Supera los 25 g de proteína por pote sin perder cremosidad. Usa el programa Lite Ice Cream, no Frozen Yogurt, para estos — la acción de cuchilla algo más agresiva maneja mejor las bases altas en proteína.',
+            },
+            {
+              title: 'Yogurt helado frutal',
+              body: 'Con más peso en la fruta (puré de bayas, mango, maracuyá) y el yogurt como vehículo. Están más cerca del frozen-yogurt-que-sorbete y son nuestras recetas de verano más populares.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Cómo usar estas recetas:** cada página muestra la lista completa de ingredientes escalada al tamaño de tu pote Creami, el programa exacto (normalmente "Frozen Yogurt" o "Lite Ice Cream"), el tiempo de congelado (24 horas es el estándar) y las instrucciones paso a paso. Si tu primer pote queda helado, añade una cucharada de leche encima y haz un Re-Spin — el líquido extra arregla el 90% de los problemas de textura.
+
+**Elegir el yogurt:** la marca importa. Fage 5%, Danone Oikos y Siggi\'s funcionan bien. Evita el yogurt griego 0% — produce potes helados y granulados. Si buscas una base más espesa, el skyr islandés da la textura de yogurt helado más densa que hemos probado.`,
+        },
+      ],
+      faqs: [
+        {
+          question: '¿Qué programa uso para el yogurt helado en el Ninja Creami?',
+          answer: 'Usa el programa "Frozen Yogurt" para recetas tradicionales con base de yogurt griego. Para bases altas en proteína (con proteína en polvo añadida), usa "Lite Ice Cream" — su acción de cuchilla maneja mejor las mezclas con más proteína sin dejarlas heladas.',
+        },
+        {
+          question: '¿Qué yogurt es mejor para el yogurt helado Ninja Creami?',
+          answer: 'El yogurt griego natural entero (5%) da los resultados más cremosos — recomendamos Fage 5%, Oikos entero o skyr islandés (Siggi\'s). Evita el yogurt griego 0% — la falta de grasa deja los potes helados y granulados. Si quieres menos calorías, el yogurt griego 2% es un término medio razonable.',
+        },
+        {
+          question: '¿Cuánto tiempo congelo el yogurt helado en el Creami?',
+          answer: 'Congela el pote lleno durante 24 horas a -18°C o más frío. Menos de 24 horas significa que el bloque no está del todo sólido y la cuchilla no rasurará bien. Puedes congelar más tiempo sin problema (hasta una semana) — si han pasado más de 5 días, deja el pote a temperatura ambiente 5 minutos antes de girar.',
+        },
+        {
+          question: '¿Por qué mi yogurt helado Ninja Creami queda helado?',
+          answer: 'Normalmente una de estas tres causas: (1) usaste yogurt 0% o desnatado — cambia a 2% o entero, (2) tu edulcorante no se disuelve — usa miel o sirope de arce en vez de azúcar granulado y mezcla bien antes de congelar, (3) el pote necesita un Re-Spin con 1 cucharada de leche añadida encima.',
+        },
+        {
+          question: '¿Puedo usar yogurt normal (no griego) en el Ninja Creami?',
+          answer: 'Sí, pero la textura será más blanda y cercana al soft serve que a un yogurt helado para cuchara. Para un pote más firme, cuela el yogurt normal con una gasa durante 2 horas antes de usarlo (yogurt griego casero), o añade 1 cucharada de queso crema para espesar.',
+        },
+        {
+          question: '¿Cuánta proteína tiene el yogurt helado Ninja Creami?',
+          answer: 'Una base de yogurt griego natural entero aporta aproximadamente 18–24 g de proteína por pote. El skyr islandés sube a 24–28 g. Añadir una medida de proteína en polvo te lleva al rango de 30–40 g por pote — revisa nuestras recetas de yogurt helado alto en proteína para proporciones probadas.',
+        },
+      ],
     },
     de: {
       title: 'Frozen Yogurt Rezepte für Ninja Creami',
       description: 'Cremige Frozen-Yogurt-Rezepte für deinen Ninja Creami. Griechischer Joghurt, frische Früchte und leichtere Alternativen zu herkömmlichem Eis — alle mit Schritt-für-Schritt-Anleitung.',
       metaDescription: 'Ninja Creami Frozen-Yogurt-Rezepte mit griechischem Joghurt und Früchten. Schritt für Schritt zum perfekten selbstgemachten Froyo.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Hausgemachter Frozen Yogurt bedeutete früher, eine Tisch-Eismaschine rauszuholen, 25 Minuten zu rühren und am Ende etwas Eisiges zu haben, das in zehn Minuten schmolz. Der Ninja Creami ändert die Rechnung komplett — du kannst einen Frozen Yogurt besser als im Einkaufszentrum über Nacht in deinem Gefrierschrank machen, ihn in 90 Sekunden verarbeiten und mit allem toppen, was du willst. Jedes Rezept auf dieser Seite wurde mit einem echten Creami getestet, mit genauen Gefrierzeiten und den Programmen, die funktionieren.
+
+Frozen Yogurt im Creami funktioniert, weil die Maschine dichte, säuerliche Basen hervorragend verarbeitet. Wir verwenden puren griechischen Vollfett-Joghurt als Grundlage (der Fettanteil sorgt für Cremigkeit — meide 0% für bessere Textur), fügen etwas Süße hinzu und lassen frische Früchte, Honig oder Mix-ins die Geschmacksarbeit übernehmen. Das Ergebnis ist dicht, löffelbar und liefert etwa 12–20 g Protein pro Pint, je nach Joghurtmarke.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Die drei Frozen-Yogurt-Stile auf dieser Seite',
+          cards: [
+            {
+              title: 'Klassischer griechischer Frozen Yogurt',
+              body: 'Reiner griechischer Joghurt + Honig + Vanille + Früchte. Die einfachste Basis überhaupt und die, mit der du starten solltest, wenn du neu am Creami bist. Dreht sich in einem Durchgang cremig und passt zu jeder Frucht.',
+            },
+            {
+              title: 'Proteinreicher Frozen Yogurt',
+              body: 'Skyr, isländischer Joghurt oder griechischer 5%-Joghurt kombiniert mit einem Löffel Vanille-Proteinpulver. Schiebt den Proteinanteil pro Pint über 25 g, ohne die cremige Textur zu verlieren. Nutze für diese Rezepte das Lite-Ice-Cream-Programm, nicht das Frozen-Yogurt-Programm — die etwas aggressivere Klinge verarbeitet proteinreichere Basen besser.',
+            },
+            {
+              title: 'Fruchtiger Frozen Yogurt',
+              body: 'Mehr Frucht (Beerenpüree, Mango, Passionsfrucht) mit Joghurt als Träger. Diese sind näher an Frozen-Yogurt-trifft-Sorbet und gehören zu unseren beliebtesten Sommerrezepten.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**So nutzt du diese Rezepte:** jede Rezeptseite zeigt die komplette Zutatenliste, skaliert auf deine Creami-Pint-Größe, das genaue Programm (meistens "Frozen Yogurt" oder "Lite Ice Cream"), die Gefrierzeit (24 Stunden sind Standard) und Schritt-für-Schritt-Anleitung. Wenn dein erstes Pint vereist ist, gib einen Esslöffel Milch obendrauf und mach einen Re-Spin — die zusätzliche Flüssigkeit behebt 90% aller Texturprobleme.
+
+**Den richtigen Joghurt wählen:** Die Marke zählt. Fage 5%, Elinas griechischer Joghurt und Siggi\'s funktionieren alle gut. Meide fettfreien griechischen Joghurt — er erzeugt eisige, körnige Pints. Für eine dichtere Basis liefert isländischer Skyr die dichteste Frozen-Yogurt-Textur, die wir getestet haben.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Welches Programm nutze ich für Frozen Yogurt im Ninja Creami?',
+          answer: 'Nutze das Programm "Frozen Yogurt" für klassische Rezepte mit griechischem Joghurt. Für proteinreiche Joghurt-Basen (mit zusätzlichem Proteinpulver) nutze "Lite Ice Cream" — seine Klingenaktion verarbeitet proteinreichere Mischungen, ohne sie vereisen zu lassen.',
+        },
+        {
+          question: 'Welcher Joghurt eignet sich am besten für Ninja Creami Frozen Yogurt?',
+          answer: 'Vollfett-Griechischer-Joghurt (5%) liefert die cremigsten Ergebnisse — wir empfehlen Fage 5%, Elinas Vollfett oder isländischen Skyr (Siggi\'s). Meide 0%-Joghurt — der fehlende Fettanteil macht Pints eisig und körnig. Für weniger Kalorien ist 2%-Joghurt ein fairer Mittelweg.',
+        },
+        {
+          question: 'Wie lange friere ich Frozen Yogurt im Creami ein?',
+          answer: 'Friere das gefüllte Pint 24 Stunden bei -18°C oder kälter ein. Weniger als 24 Stunden bedeutet, dass der Block nicht vollständig fest ist und die Klinge ungleichmäßig shavt. Du kannst sicher länger einfrieren (bis zu einer Woche) — nach mehr als 5 Tagen lass das Pint 5 Minuten bei Raumtemperatur stehen, bevor du es verarbeitest.',
+        },
+        {
+          question: 'Warum ist mein Ninja Creami Frozen Yogurt vereist?',
+          answer: 'Meistens einer dieser drei Gründe: (1) du hast fettfreien oder 0%-Joghurt verwendet — wechsle zu 2% oder Vollfett, (2) deine Süße löst sich nicht auf — nutze Honig oder Ahornsirup statt Haushaltszucker und verrühre gründlich vor dem Einfrieren, (3) das Pint braucht einen Re-Spin mit 1 Esslöffel Milch obendrauf.',
+        },
+        {
+          question: 'Kann ich normalen (nicht griechischen) Joghurt im Ninja Creami verwenden?',
+          answer: 'Ja, aber die Textur wird weicher und näher an Softeis als an löffelbarem Frozen Yogurt. Für ein festeres Pint sieb normalen Joghurt 2 Stunden durch ein Mulltuch (DIY-Griechisch-Joghurt) oder gib 1 Esslöffel Frischkäse zum Verdicken dazu.',
+        },
+        {
+          question: 'Wie viel Protein ist in Ninja Creami Frozen Yogurt?',
+          answer: 'Eine Basis aus Vollfett-Griechisch-Joghurt liefert etwa 18–24 g Protein pro Pint. Isländischer Skyr bringt es auf 24–28 g. Ein Löffel Proteinpulver zusätzlich bringt dich in den Bereich von 30–40 g pro Pint — schau in unsere proteinreichen Frozen-Yogurt-Rezepte für getestete Verhältnisse.',
+        },
+      ],
     },
     pt: {
       title: 'Receitas de Frozen Yogurt para Ninja Creami',
       description: 'Receitas cremosas de frozen yogurt feitas com seu Ninja Creami. Bases de iogurte grego, frutas frescas e alternativas mais leves ao sorvete tradicional — todas com instruções passo a passo.',
       metaDescription: 'Receitas de frozen yogurt Ninja Creami com iogurte grego e frutas. Instruções passo a passo para um froyo caseiro perfeito.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Fazer frozen yogurt em casa costumava significar tirar uma sorveteira de bancada, bater por 25 minutos e acabar com algo gelado que derretia em dez. O Ninja Creami muda a matemática por completo — você consegue fazer um frozen yogurt melhor que o do shopping no seu freezer da noite para o dia, girar em 90 segundos e cobrir com o que quiser. Cada receita desta página foi testada com um Creami de verdade, com tempos de congelamento exatos e os programas que funcionam.
+
+Frozen yogurt no Creami funciona porque a máquina lida muito bem com bases densas e ácidas. Usamos iogurte grego natural integral como base (a gordura mantém a textura cremosa — evite 0% para melhor resultado), adicionamos um toque de adoçante e deixamos as frutas frescas, o mel ou os mix-ins fazerem o trabalho de sabor. O resultado é denso, para colher, e rende cerca de 12–20 g de proteína por pote dependendo da marca do iogurte.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Os três estilos de frozen yogurt neste site',
+          cards: [
+            {
+              title: 'Frozen yogurt grego clássico',
+              body: 'Iogurte grego natural + mel + baunilha + frutas. A base mais simples possível, e a recomendada para quem está começando com o Creami. Gira liso em uma única passada e combina com qualquer fruta que você tenha.',
+            },
+            {
+              title: 'Frozen yogurt rico em proteína',
+              body: 'Skyr, iogurte estilo islandês ou iogurte grego 5% combinado com uma dose de whey protein sabor baunilha. Ultrapasse 25 g de proteína por pote sem perder a cremosidade. Use o programa Lite Ice Cream, não o Frozen Yogurt, para essas receitas — a ação de lâmina um pouco mais agressiva lida melhor com bases mais proteicas.',
+            },
+            {
+              title: 'Frozen yogurt frutado',
+              body: 'Com mais peso nas frutas (purê de frutas vermelhas, manga, maracujá) e o iogurte como veículo. Essas ficam mais próximas do frozen-yogurt-com-sorbete e são nossas receitas de verão mais populares.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Como usar essas receitas:** cada página mostra a lista completa de ingredientes ajustada ao tamanho do seu pote Creami, o programa exato (geralmente "Frozen Yogurt" ou "Lite Ice Cream"), tempo de congelamento (24 horas é o padrão) e instruções passo a passo. Se seu primeiro pote sair gelado, adicione uma colher de sopa de leite por cima e faça um Re-Spin — o líquido extra resolve 90% dos problemas de textura.
+
+**Escolhendo o iogurte:** a marca importa. Fage 5%, Chobani integral e Siggi\'s funcionam bem. Evite iogurte grego 0% — produz potes gelados e granulados. Se quiser uma base mais grossa, o skyr islandês dá a textura de frozen yogurt mais densa que já testamos.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Qual programa uso para frozen yogurt no Ninja Creami?',
+          answer: 'Use o programa "Frozen Yogurt" para receitas tradicionais com base de iogurte grego. Para bases ricas em proteína (com whey protein adicionado), use "Lite Ice Cream" — sua ação de lâmina lida melhor com misturas mais proteicas sem deixá-las geladas.',
+        },
+        {
+          question: 'Qual iogurte é melhor para o frozen yogurt do Ninja Creami?',
+          answer: 'O iogurte grego natural integral (5%) dá os resultados mais cremosos — recomendamos Fage 5%, Chobani integral ou skyr islandês (Siggi\'s). Evite iogurte grego 0% — a falta de gordura deixa os potes gelados e granulados. Se quiser menos calorias, o iogurte grego 2% é um meio-termo razoável.',
+        },
+        {
+          question: 'Quanto tempo congelo o frozen yogurt no Creami?',
+          answer: 'Congele o pote cheio por 24 horas a -18°C ou mais frio. Menos de 24 horas significa que o bloco não está totalmente sólido e a lâmina vai raspar de forma desigual. Você pode congelar por mais tempo sem problema (até uma semana) — se passou de 5 dias, deixe o pote em temperatura ambiente por 5 minutos antes de girar.',
+        },
+        {
+          question: 'Por que meu frozen yogurt do Ninja Creami está gelado?',
+          answer: 'Geralmente uma destas três causas: (1) você usou iogurte 0% ou desnatado — mude para 2% ou integral, (2) seu adoçante não está dissolvendo — use mel ou xarope de bordo em vez de açúcar granulado e misture bem antes de congelar, (3) o pote precisa de um Re-Spin com 1 colher de sopa de leite adicionada por cima.',
+        },
+        {
+          question: 'Posso usar iogurte comum (não grego) no Ninja Creami?',
+          answer: 'Sim, mas a textura ficará mais macia e próxima do soft serve do que de um frozen yogurt para colher. Para um pote mais firme, coe o iogurte comum em um pano por 2 horas antes de usar (iogurte grego caseiro), ou adicione 1 colher de sopa de cream cheese para engrossar.',
+        },
+        {
+          question: 'Quanta proteína tem o frozen yogurt do Ninja Creami?',
+          answer: 'Uma base de iogurte grego natural integral entrega cerca de 18–24 g de proteína por pote. O skyr islandês vai a 24–28 g. Adicionar uma dose de whey protein te leva para a faixa de 30–40 g por pote — veja nossas receitas de frozen yogurt rico em proteína para proporções testadas.',
+        },
+      ],
     },
   },
   'ice-cream': {
