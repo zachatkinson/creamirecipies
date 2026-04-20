@@ -155,6 +155,66 @@ const COLLECTION_I18N: Record<string, Record<Locale, CollectionMeta>> = {
       title: 'Recettes de Glace Protéinée pour Ninja Creami',
       description: 'Recettes Ninja Creami riches en protéines qui ont le goût de vraie glace. Bases au fromage blanc, poudre de protéine et desserts glacés équilibrés — tous testés avec des instructions étape par étape.',
       metaDescription: 'Recettes de glace protéinée Ninja Creami avec macros. Fromage blanc, protéines en poudre et bases faibles en calories — testées étape par étape.',
+      longIntroSections: [
+        {
+          layout: 'prose',
+          markdown: `La glace protéinée est la raison pour laquelle beaucoup de gens achètent un Ninja Creami. La machine est particulièrement douée pour transformer des bases riches en protéines et pauvres en matières grasses — qui seraient glacées et granuleuses dans une sorbetière classique — en quelque chose qui a vraiment le goût d'un dessert. Chaque recette sur cette page apporte entre 20 et 40 grammes de protéines par pot, avec les macros affichées clairement pour que vous sachiez exactement ce que vous mangez.`,
+        },
+        {
+          layout: 'prose',
+          markdown: `Nous avons réparti les recettes en trois approches, à vous de choisir selon ce qui se trouve dans vos placards.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Les trois approches riches en protéines',
+          cards: [
+            {
+              title: 'Bases à la poudre de protéine',
+              body: 'Whey, caséine ou protéine végétale mélangée avec du lait, du yaourt grec et un édulcorant. La texture la plus proche de la glace classique. L\'isolat de whey reste le plus crémeux après congélation ; la caséine donne une texture plus dense, façon gelato ; la protéine végétale fonctionne mais doit reposer une heure au réfrigérateur avant congélation pour bien s\'hydrater.',
+            },
+            {
+              title: 'Bases au fromage blanc (cottage cheese)',
+              body: 'La grande surprise du monde Creami — un pot entier de cottage cheese à 2% mixé lisse avec un édulcorant et un arôme donne plus de 40 grammes de protéines et un pot étonnamment crémeux. Pas de poudre de protéine nécessaire, aucun effet farineux. En France, le fromage blanc 3% bien égoutté ou le skyr font parfaitement l\'affaire.',
+            },
+            {
+              title: 'Bases au yaourt grec',
+              body: 'Le juste milieu. Moins de protéines que le cottage cheese mais plus que la poudre seule, et l\'acidité se marie parfaitement avec les fruits et le miel. Ces recettes congèlent vite et tournent en une texture dense, proche du frozen yogurt.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Comment utiliser ces recettes :** chaque page de recette affiche la liste complète d'ingrédients ajustée à la taille de votre Creami (pot de 16oz Original ou 24oz Deluxe XL), le programme exact (la plupart des recettes protéinées utilisent Lite Ice Cream, pas Ice Cream — c'est important), le temps de congélation, les instructions étape par étape et les macros complètes par portion. Si votre premier pot sort farineux, consultez la section "Pro tips" de la recette — c'est généralement réglé avec une cuillère à soupe de lait sur le dessus et un Re-Spin.
+
+**Choisir votre poudre de protéine :** si vous n'en avez pas encore, notre guide [Les meilleures protéines en poudre pour Ninja Creami](/fr/blog/best-protein-powders-creami) classe les 8 que nous avons testées et indique celles qui n'ont pas d'arrière-goût farineux une fois congelées.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Quelle est la meilleure poudre de protéine pour la glace Ninja Creami ?',
+          answer: 'L\'isolat de whey donne la texture la plus lisse et crémeuse après congélation — nous recommandons Ghost ou Ascent pour des saveurs vanille neutres. La caséine congèle plus dense (façon gelato) et fonctionne bien avec les recettes au chocolat et cookies-and-cream. La protéine végétale peut convenir mais doit s\'hydrater 1 heure au frigo avant congélation. Consultez notre comparatif complet des protéines testées.',
+        },
+        {
+          question: 'Combien de protéines contient réellement un pot Ninja Creami ?',
+          answer: 'Cela dépend de la base. Une recette avec une dose de whey apporte généralement 25 à 30 g par pot. Les bases au cottage cheese dépassent 40 g par pot. Les recettes au yaourt grec se situent autour de 20 à 25 g. Chaque recette de cette page indique les macros exactes par portion.',
+        },
+        {
+          question: 'Pourquoi ma glace protéinée a-t-elle un goût farineux ?',
+          answer: 'Trois causes fréquentes : (1) la poudre de protéine ne s\'hydrate pas — laissez la base 30 à 60 minutes au frigo avant de congeler pour que la poudre se dissolve complètement, (2) la protéine est de qualité médiocre — le concentré de whey a un goût plus farineux que l\'isolat une fois congelé, (3) vous utilisez le programme Ice Cream au lieu de Lite Ice Cream. Passez à Lite Ice Cream pour toute base faible en matières grasses ou riche en protéines.',
+        },
+        {
+          question: 'Puis-je faire de la glace protéinée Ninja Creami sans poudre de protéine ?',
+          answer: 'Oui — utilisez du cottage cheese (2% entier, mixé jusqu\'à être parfaitement lisse) ou du yaourt grec comme base. Le cottage cheese apporte naturellement plus de 40 g de protéines par pot ; le yaourt grec, 20 à 25 g. Les deux tournent en pots crémeux sans ajout de poudre.',
+        },
+        {
+          question: 'Quel programme utiliser pour la glace protéinée ?',
+          answer: 'Utilisez le programme "Lite Ice Cream" pour les bases protéinées — il est conçu pour les mélanges faibles en matières grasses et les traite sans les rendre glacées. Le programme "Ice Cream" classique est prévu pour les bases riches en crème et peut rendre les pots protéinés friables.',
+        },
+        {
+          question: 'Combien de calories dans la glace protéinée Ninja Creami ?',
+          answer: 'La plupart des recettes de cette page se situent entre 250 et 450 calories par pot (4 portions), avec 20 à 40 g de protéines. C\'est un tiers à la moitié des calories des marques commerciales riches en protéines comme Halo Top, pour une fraction du prix par pot.',
+        },
+      ],
     },
     es: {
       title: 'Recetas de Helado Proteico para Ninja Creami',
@@ -288,6 +348,66 @@ Wir haben die Rezepte in drei Ansätze unterteilt, damit du nach dem wählst, wa
       title: 'Receitas de Sorvete Proteico para Ninja Creami',
       description: 'Receitas Ninja Creami ricas em proteína que têm gosto de sorvete de verdade. Bases de cottage cheese, whey protein e sobremesas geladas saudáveis — todas testadas com instruções passo a passo.',
       metaDescription: 'Receitas de sorvete proteico Ninja Creami com macros. Cottage cheese, whey protein e bases de baixa caloria — testadas passo a passo.',
+      longIntroSections: [
+        {
+          layout: 'prose',
+          markdown: `O sorvete proteico é a razão pela qual muita gente compra o Ninja Creami. A máquina é especialmente boa em transformar bases ricas em proteína e com pouca gordura — que ficariam geladas e arenosas numa sorveteira tradicional — em algo que realmente tem gosto de sobremesa. Cada receita desta página entrega entre 20 e 40 gramas de proteína por pote, com as macros bem visíveis para você saber exatamente o que está comendo.`,
+        },
+        {
+          layout: 'prose',
+          markdown: `Dividimos as receitas em três abordagens para você escolher de acordo com o que tem no armário.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'As três abordagens ricas em proteína',
+          cards: [
+            {
+              title: 'Bases com whey protein (ou caseína)',
+              body: 'Whey, caseína ou proteína vegetal batidas com leite, iogurte grego e adoçante. A textura mais próxima do sorvete clássico. O isolado de whey fica o mais cremoso depois de congelar; a caseína dá uma textura mais densa, tipo gelato; a proteína vegetal funciona, mas precisa hidratar por uma hora na geladeira antes de congelar.',
+            },
+            {
+              title: 'Bases de cottage cheese',
+              body: 'A grande surpresa do mundo Creami — um pote inteiro de cottage cheese 2% batido liso com adoçante e aromatizante produz mais de 40 gramas de proteína e um pote surpreendentemente cremoso. Sem whey protein, sem gosto arenoso. No Brasil, o queijo cottage ou a ricota fresca bem batida funcionam muito bem.',
+            },
+            {
+              title: 'Bases de iogurte grego',
+              body: 'O meio-termo. Menos proteína que o cottage cheese mas mais que só whey, e o sabor ácido combina muito bem com frutas e mel. Essas receitas congelam rápido e giram em uma textura densa, próxima do frozen yogurt.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Como usar essas receitas:** cada página mostra a lista completa de ingredientes ajustada ao tamanho do seu Creami (pote de 16oz Original ou 24oz Deluxe XL), o programa exato (a maioria das receitas proteicas usa Lite Ice Cream, não Ice Cream — isso importa), tempo de congelamento, instruções passo a passo e macros completas por porção. Se seu primeiro pote sair arenoso, veja a seção "Pro tips" da receita — geralmente se resolve com uma colher de sopa de leite por cima e um Re-Spin.
+
+**Escolhendo sua whey protein:** se ainda não tem uma, nosso guia [As melhores proteínas em pó para Ninja Creami](/pt/blog/best-protein-powders-creami) classifica as 8 que testamos e aponta quais não têm gosto arenoso quando congeladas.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Qual a melhor whey protein para sorvete no Ninja Creami?',
+          answer: 'O isolado de whey dá a textura mais lisa e cremosa após o congelamento — recomendamos Ghost ou Ascent para sabores neutros de baunilha. A caseína congela mais densa (tipo gelato) e funciona bem com receitas de chocolate e cookies-and-cream. A proteína vegetal pode funcionar mas precisa hidratar por 1 hora na geladeira antes de congelar. Veja nossa comparação completa de proteínas em pó testadas.',
+        },
+        {
+          question: 'Quanta proteína tem de verdade um pote do Ninja Creami?',
+          answer: 'Depende da base. Uma receita com um scoop de whey entrega tipicamente 25–30 g por pote. Bases de cottage cheese ultrapassam 40 g por pote. Receitas de iogurte grego ficam em torno de 20–25 g. Cada receita desta página lista as macros exatas por porção.',
+        },
+        {
+          question: 'Por que meu sorvete proteico tem gosto arenoso?',
+          answer: 'Três causas comuns: (1) o whey não está hidratando — deixe a base na geladeira de 30 a 60 minutos antes de congelar para o pó dissolver completamente, (2) a proteína é de baixa qualidade — o concentrado de whey tem gosto mais arenoso que o isolado quando congelado, (3) você está usando o programa Ice Cream em vez de Lite Ice Cream. Mude para Lite Ice Cream em qualquer base com pouca gordura ou muita proteína.',
+        },
+        {
+          question: 'Posso fazer sorvete proteico no Ninja Creami sem whey protein?',
+          answer: 'Sim — use cottage cheese (2% integral, batido até ficar completamente liso) ou iogurte grego como base. O cottage cheese entrega naturalmente mais de 40 g de proteína por pote; o iogurte grego, 20–25 g. Ambos giram em potes cremosos sem adicionar pó.',
+        },
+        {
+          question: 'Qual programa uso para sorvete proteico?',
+          answer: 'Use o programa "Lite Ice Cream" para bases proteicas — ele foi feito para misturas com menos gordura e as processa sem deixá-las geladas. O programa "Ice Cream" comum é para bases ricas em creme e pode deixar potes proteicos quebradiços.',
+        },
+        {
+          question: 'Quantas calorias tem o sorvete proteico do Ninja Creami?',
+          answer: 'A maioria das receitas desta página fica entre 250 e 450 calorias por pote (4 porções), com 20–40 g de proteína. Isso é um terço a metade das calorias de marcas prontas como a Halo Top, por uma fração do custo por pote.',
+        },
+      ],
     },
   },
   'frozen-yogurt': {
