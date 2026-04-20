@@ -61,4 +61,40 @@ Reviewed and left as-is (title matches ingredients):
 
 ---
 
+#### Batch 2 — drafts publishing 2026-05-05 → 2026-05-18 (28 recipes reviewed)
+
+Fixes applied in `scripts/fixes/2026-04-20-batch2-audit-fixes.sql`:
+
+- `FIXED` cherry-almond-chip-ice-cream — added almond extract + mini chocolate chips (both missing)
+- `FIXED` cherry-pomegranate-sorbet — rebalanced pomegranate from 1 tbsp to 1/2 cup
+- `FIXED` chocolate-cherry-ice-cream — removed duplicate cocoa row + added cherry preserves as swirl
+- `FIXED` lemon-almond-gelato — added almond extract + toasted sliced almonds mix-in
+- `FIXED` saffron-rose-ice-cream — added saffron threads + crushed pistachios + saffron-bloom step (title promised saffron + pistachios, neither present)
+- `FIXED` salted-honey-almond-ice-cream — added flaky sea salt + toasted sliced almonds
+- `FIXED` strawberry-basil-cream-ice-cream — added fresh basil leaves (minced)
+- `FIXED` strawberry-basil-gelato — added fresh basil + warm-dairy infusion step
+- `FIXED` strawberry-champagne-ice-cream — added champagne
+- `FIXED` strawberry-cookie-butter-ice-cream — added Biscoff cookie butter as swirl
+- `FIXED` strawberry-shortcake-crunch-ice-cream — added freeze-dried strawberries + shortbread crumbles as mix-ins
+- `FIXED` strawberry-vanilla-cookie-ice-cream — added vanilla sandwich cookies
+- `FIXED` toasted-oat-honey-ice-cream — added toasted rolled oats + toasting step
+- `FIXED` vanilla-passion-fruit-swirl-ice-cream — added passion fruit puree as swirl
+- `FIXED` vegan-lemon-poppy-seed-ice-cream — added lemon zest + poppy seeds
+- `FIXED` vegan-strawberry-banana-ice-cream — added ripe banana
+
+Reviewed and left as-is:
+
+- `OK` chocolate-covered-cherry-ice-cream, chocolate-covered-strawberry-milkshake, hibiscus-sorbet, keto-strawberry-ice-cream, lemon-bar-ice-cream, lemon-curd-ice-cream, lemon-poppy-seed-ice-cream, pistachio-rose-ice-cream, salted-honey-ice-cream, strawberry-acai-smoothie-bowl, strawberry-pretzel-ice-cream, vegan-lavender-ice-cream
+
+#### Batch 3 — all 119 published recipes reviewed one-by-one
+
+Fixes applied in `scripts/fixes/2026-04-20-batch3-published-fixes.sql`:
+
+- `FIXED` banana-split-frozen-yogurt — added strawberry jam + chocolate sauce + crushed pineapple (title promised the banana split treatment, had plain banana-yogurt base)
+- `FIXED` frozen-yogurt-with-mixed-berries — added actual frozen mixed berries as mix-in (had only mixed-berry jam)
+
+Reviewed and left as-is (117 recipes — all correctly aligned with their titles). Full list skipped for brevity; verified by the same grep that found the 2 above.
+
+---
+
 <!-- New audits appended below by publish date ascending -->
