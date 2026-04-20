@@ -7,10 +7,11 @@ import ScrollReveal from '../../../components/animations/ScrollReveal.astro';
 import AdUnit from '../../../components/ads/AdUnit.astro';
 import { supabase } from '../../../lib/supabase';
 import { getFilteredRecipes } from '../../../lib/recipes';
-import { buildRecipeListJsonLd } from '../../../lib/seo';
+import { buildRecipeListJsonLd, buildFaqJsonLd } from '../../../lib/seo';
 import { t, localePath } from '../../../i18n';
 import { translateRecipeArray } from '../../../lib/translations';
 import { COLLECTIONS, getCollection, getCollectionMeta } from '../../../lib/collections';
+import { marked } from 'marked';
 
 const { slug } = Astro.params;
 const locale = Astro.locals.locale;
@@ -54,6 +55,13 @@ const recipeListJsonLd = buildRecipeListJsonLd(
   meta.title,
 );
 
+// Render long-form intro markdown (optional per collection)
+const longIntroHtml = meta.longIntro ? await marked.parse(meta.longIntro) : null;
+
+// FAQ JSON-LD (optional per collection)
+const faqJsonLd = meta.faqs && meta.faqs.length > 0 ? buildFaqJsonLd(meta.faqs) : null;
+const combinedJsonLd = faqJsonLd ? [recipeListJsonLd, faqJsonLd] : recipeListJsonLd;
+
 const breadcrumbs = [
   { name: t('breadcrumb.home', locale), url: siteUrl },
   { name: t('breadcrumb.recipes', locale), url: `${siteUrl}${lp('/recipes')}` },
@@ -72,7 +80,7 @@ const otherCollections = COLLECTIONS
   description={meta.metaDescription}
   image={recipes[0]?.hero_image_url ?? undefined}
   type="website"
-  jsonLd={recipeListJsonLd}
+  jsonLd={combinedJsonLd}
   breadcrumbs={breadcrumbs}
 >
   <!-- Hero -->
@@ -105,6 +113,17 @@ const otherCollections = COLLECTIONS
 
   <AdUnit slot="leaderboard" />
 
+  <!-- Long-form SEO intro (when configured for this collection) -->
+  {longIntroHtml && (
+    <section class="py-12 md:py-16">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal animation="fade-up">
+          <div class="prose prose-slate max-w-none prose-headings:font-display prose-headings:text-chocolate prose-a:text-berry prose-strong:text-chocolate" set:html={longIntroHtml} />
+        </ScrollReveal>
+      </div>
+    </section>
+  )}
+
   <!-- Recipe Grid -->
   <section class="py-12">
     <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
@@ -129,6 +148,32 @@ const otherCollections = COLLECTIONS
       )}
     </div>
   </section>
+
+  <!-- FAQ Section (when configured for this collection) -->
+  {meta.faqs && meta.faqs.length > 0 && (
+    <section class="py-12 md:py-16 bg-white/50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal animation="fade-up">
+          <h2 class="font-display text-3xl md:text-4xl font-bold text-chocolate mb-8 text-center">
+            {t('recipe.faqTitle', locale)}
+          </h2>
+          <div class="space-y-4">
+            {meta.faqs.map((faq) => (
+              <details class="bg-white rounded-xl border border-slate-200 shadow-sm group">
+                <summary class="cursor-pointer px-6 py-4 font-display text-lg font-semibold text-chocolate flex items-center justify-between list-none marker:hidden">
+                  <span>{faq.question}</span>
+                  <svg class="w-5 h-5 text-berry transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div class="px-6 pb-5 text-slate-700 leading-relaxed">{faq.answer}</div>
+              </details>
+            ))}
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  )}
 
   <AdUnit slot="mid-content" />
 

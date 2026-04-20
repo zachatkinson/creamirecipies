@@ -758,6 +758,16 @@ const matchingCollections = COLLECTIONS
 
 </script>
 
+<!-- Record page view (fire-and-forget) — client-side so bots don't inflate counts -->
+<script is:inline define:vars={{ recipeSlug: recipe.slug }}>
+  fetch('/api/recipes/view', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ slug: recipeSlug }),
+    keepalive: true,
+  }).catch(() => {});
+</script>
+
 <!-- Print button handler (separate script, inline to ensure it runs per page) -->
 <script is:inline>
   document.addEventListener('DOMContentLoaded', function() {

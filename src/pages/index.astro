@@ -5,21 +5,10 @@ import ScrollReveal from '../components/animations/ScrollReveal.astro';
 import AdUnit from '../components/ads/AdUnit.astro';
 import HeroCanvas from '../components/animations/HeroCanvas';
 import { supabase } from '../lib/supabase';
-import { getCategories } from '../lib/recipes';
 import { t, localePath } from '../i18n';
-import { ui, translateRecipeArray, translatePostArray } from '../lib/translations';
+import { translateRecipeArray, translatePostArray } from '../lib/translations';
 
 const locale = Astro.locals.locale;
-const categories = await getCategories(supabase);
-
-// Get base types that actually have published recipes
-const { data: baseTypeCounts } = await supabase
-  .from('recipes')
-  .select('base_type')
-  .eq('status', 'published')
-  .lte('published_at', new Date().toISOString());
-
-const activeBaseTypes = new Set(baseTypeCounts?.map((r) => r.base_type) ?? []);
 
 // Get total published recipe count for hero stat
 const { count: recipeCount } = await supabase
@@ -28,20 +17,58 @@ const { count: recipeCount } = await supabase
   .eq('status', 'published')
   .lte('published_at', new Date().toISOString());
 
-// Get latest 6 published recipes (newest first)
-const { data: latestRecipesRaw } = await supabase
+const RECIPE_CARD_FIELDS = `
+  id, title, slug, description, difficulty, base_type,
+  hero_image_url, avg_rating, rating_count, view_count,
+  prep_time_minutes, freeze_time_hours,
+  is_sponsored, sponsor_name, sponsor_logo_url,
+  author:profiles!author_id (username, display_name, avatar_url)
+`;
+
+// Fan favorites: top 3 by view_count, falling back to rating_count × avg_rating
+// until view tracking builds up history. Mature data wins automatically.
+const { data: topViewedRaw } = await supabase
   .from('recipes')
-  .select(`
-    id, title, slug, description, difficulty, base_type,
-    hero_image_url, avg_rating, rating_count,
-    prep_time_minutes, freeze_time_hours,
-    is_sponsored, sponsor_name, sponsor_logo_url,
-    author:profiles!author_id (username, display_name, avatar_url)
-  `)
+  .select(RECIPE_CARD_FIELDS)
+  .eq('status', 'published')
+  .lte('published_at', new Date().toISOString())
+  .gt('view_count', 0)
+  .order('view_count', { ascending: false })
+  .limit(3);
+
+let fanFavoritesRaw = topViewedRaw ?? [];
+if (fanFavoritesRaw.length < 3) {
+  const { data: byRating } = await supabase
+    .from('recipes')
+    .select(RECIPE_CARD_FIELDS)
+    .eq('status', 'published')
+    .lte('published_at', new Date().toISOString())
+    .gt('rating_count', 0)
+    .order('rating_count', { ascending: false })
+    .order('avg_rating', { ascending: false })
+    .limit(3 - fanFavoritesRaw.length);
+  const existingIds = new Set(fanFavoritesRaw.map((r) => r.id));
+  fanFavoritesRaw = [
+    ...fanFavoritesRaw,
+    ...(byRating ?? []).filter((r) => !existingIds.has(r.id)),
+  ].slice(0, 3);
+}
+const fanFavorites = fanFavoritesRaw as Record<string, unknown>[];
+
+// Get latest 6 published recipes (newest first) — excluding any already
+// featured above so cards don't appear twice on the page.
+const fanFavoriteIds = fanFavorites.map((r) => r.id as string);
+let latestQuery = supabase
+  .from('recipes')
+  .select(RECIPE_CARD_FIELDS)
   .eq('status', 'published')
   .lte('published_at', new Date().toISOString())
   .order('published_at', { ascending: false })
   .limit(6);
+if (fanFavoriteIds.length > 0) {
+  latestQuery = latestQuery.not('id', 'in', `(${fanFavoriteIds.join(',')})`);
+}
+const { data: latestRecipesRaw } = await latestQuery;
 
 const recipes = (latestRecipesRaw ?? []) as Record<string, unknown>[];
 
@@ -56,10 +83,9 @@ const { data: latestPostsRaw } = await supabase
 
 const posts = (latestPostsRaw ?? []) as Record<string, unknown>[];
 
-const baseTypes = categories.filter((c) => c.type === 'base_type' && activeBaseTypes.has(c.name));
-
 // Apply translations if non-English
 await translateRecipeArray(supabase, recipes, locale);
+await translateRecipeArray(supabase, fanFavorites, locale);
 await translatePostArray(supabase, posts, locale);
 
 import BlogPostCard from '../components/blog/BlogPostCard.astro';
@@ -131,35 +157,34 @@ const lp = (path: string) => localePath(path, locale);
     </div>
   </section>
 
-  <!-- Category Quick Links -->
-  <section class="py-12 bg-white/50">
-    <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
-      <ScrollReveal animation="stagger">
-        <div class="flex flex-wrap justify-center gap-3">
-          {baseTypes.map((cat) => (
-            <a
-              href={lp(`/recipes/collection/${cat.slug}`)}
-              class="px-5 py-2.5 bg-white rounded-full text-sm font-medium text-slate-600 hover:text-berry hover:bg-blush/15 border border-slate-200 hover:border-blush transition-all"
-            >
-              {ui(cat.name, locale)}
-            </a>
-          ))}
-          <a
-            href={lp('/recipes/collection/soft-serve')}
-            class="px-5 py-2.5 bg-white rounded-full text-sm font-medium text-slate-600 hover:text-berry hover:bg-blush/15 border border-slate-200 hover:border-blush transition-all"
-          >
-            {ui('Soft Serve', locale)}
-          </a>
-          <a
-            href={lp('/recipes/collection/protein-ice-cream')}
-            class="px-5 py-2.5 bg-white rounded-full text-sm font-medium text-slate-600 hover:text-berry hover:bg-blush/15 border border-slate-200 hover:border-blush transition-all"
-          >
-            {ui('High Protein', locale)}
-          </a>
-        </div>
-      </ScrollReveal>
-    </div>
-  </section>
+  <!-- Fan Favorites -->
+  {fanFavorites.length > 0 && (
+    <section class="py-16 md:py-20 bg-gradient-to-b from-white/70 to-white/40">
+      <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal>
+          <div class="text-center mb-10">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-berry/10 text-berry text-xs font-semibold uppercase tracking-wide rounded-full mb-3">
+              ★ {t('home.fanFavoritesTitle', locale)}
+            </span>
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-chocolate mb-3">
+              {t('home.fanFavoritesTitle', locale)}
+            </h2>
+            <p class="text-slate-600 max-w-lg mx-auto">
+              {t('home.fanFavoritesDescription', locale)}
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal animation="stagger" staggerAmount={0.08}>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {fanFavorites.map((recipe) => (
+              <RecipeCard recipe={recipe} />
+            ))}
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  )}
 
   <!-- Latest Recipes -->
   <section class="py-16 md:py-24">
