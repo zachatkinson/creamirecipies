@@ -1930,26 +1930,316 @@ A técnica é diferente do milkshake tradicional. Em vez de bater sorvete com le
       title: 'Smoothie Bowl Recipes for Ninja Creami',
       description: 'Thick, scoopable smoothie bowl recipes for your Ninja Creami. Frozen fruit bases, nutritious toppings, and beautiful breakfast bowls — all with step-by-step instructions.',
       metaDescription: 'Ninja Creami smoothie bowl recipes — thick enough to scoop, topped like a café. Açaí, berry-protein, tropical mango. Packed with fruit, no ice shards.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `A smoothie bowl is a smoothie thick enough to eat with a spoon — the texture that makes it a breakfast, not a drink. The Ninja Creami is uniquely suited to this: the Smoothie Bowl program dials in on the exact "thicker than a smoothie, not quite ice cream" consistency that's frustrating to nail in a blender. Every recipe on this page is tested in a real Creami, with exact freeze times and topping pairings that work.
+
+What makes a Creami smoothie bowl different from a blender version is the starting point. Instead of pulverizing ice cubes (which water down the bowl), you freeze your blended fruit base into a pint overnight, then the Creami shaves and re-blends it into a dense, cold, scoopable bowl. Result: no ice shards, no half-melted slush in three minutes, and real fruit flavor that isn't diluted.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'The three smoothie bowl styles on this site',
+          cards: [
+            {
+              title: 'Classic fruit bowls',
+              body: 'Mixed berry, tropical mango, strawberry-banana. Real frozen fruit as the base, a splash of milk or coconut water to help it blend, topped with granola, fresh fruit, and seeds. The foundation of smoothie bowl culture — vibrant colors, real fruit flavor, no shortcuts.',
+            },
+            {
+              title: 'Açaí and superfood bowls',
+              body: 'Açaí puree as the base, often layered with banana and mixed berries. The Instagram-famous version — deep purple, richly flavored, and loaded with antioxidants. Topped liberally with coconut flakes, bee pollen, cacao nibs, and tropical fruit.',
+            },
+            {
+              title: 'Protein smoothie bowls',
+              body: 'Greek yogurt, skyr, or a scoop of protein powder blended into a fruit base for 20–30g of protein per bowl. This is the version that turns a smoothie bowl into a legitimate post-workout meal or a breakfast that actually keeps you full until lunch — not just a sweet snack.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**How to use these recipes:** each recipe page lists the exact frozen fruit, liquid ratio, and program cycle (most use "Smoothie Bowl"; a few use "Lite Ice Cream" with extra milk for the protein-dense versions). Freeze the filled pint for 24 hours — anything less and the block won't be fully solid, and the blade will shave unevenly instead of creating that dense spoon-scoop texture.
+
+**Choosing your toppings:** store only the base in the Creami pint and add toppings fresh to each serving. Granola loses its crunch on a frozen bowl within ten minutes, so always top at the last second. Freeze-dried fruit, nuts, and seeds stay crisp much longer than fresh toppings and are the smart pick if you're meal-prepping.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'What\'s the difference between a smoothie and a smoothie bowl in the Ninja Creami?',
+          answer: 'A smoothie is drinkable (thin enough to sip through a straw), while a smoothie bowl is spoon-thick (dense enough to stand up to toppings without sinking). The Creami\'s Smoothie Bowl program is specifically tuned for the bowl texture — slower blade speed, less aeration. For a drinkable smoothie, use the Smoothie Bowl program plus 2 tablespoons of extra liquid and Re-Spin, or run the base through a blender after spinning.',
+        },
+        {
+          question: 'Which program do I use for smoothie bowls in the Ninja Creami?',
+          answer: 'Use the "Smoothie Bowl" program on the Creami Deluxe — it\'s tuned specifically for a thicker, spoon-scoopable texture. On the Original Creami (no dedicated Smoothie Bowl program), use Lite Ice Cream — it produces a similar result for fruit-forward bases. Both give the dense, spoon-standing-up consistency that defines a real smoothie bowl.',
+        },
+        {
+          question: 'Can I use fresh fruit instead of frozen fruit in a Creami smoothie bowl?',
+          answer: 'No — the Creami needs a fully frozen base to work. The blade shaves and re-blends a frozen pint, so if the fruit is fresh and unfrozen you\'ll end up with a soupy mess, not a smoothie bowl. Freeze your fruit first (cut into small pieces for easy blending) or buy pre-frozen bags from the freezer aisle.',
+        },
+        {
+          question: 'How do I prevent my smoothie bowl from melting too quickly?',
+          answer: 'Three fixes: (1) serve in a chilled bowl — put your serving bowl in the freezer for 10 minutes before spinning the pint, (2) serve immediately after the Creami finishes — don\'t let the spun base sit on the counter, (3) avoid warm toppings like honey drizzle or peanut butter swirl until just before eating. A bowl served cold stays dense and spoonable for 10–15 minutes.',
+        },
+        {
+          question: 'Can I make a smoothie bowl without dairy?',
+          answer: 'Absolutely — most smoothie bowls on this page are naturally dairy-free. Use coconut milk, almond milk, oat milk, or just fruit juice as the liquid. Açaí bowls are traditionally dairy-free anyway. For protein content without dairy, add a scoop of plant-based protein powder (pea or rice) instead of Greek yogurt.',
+        },
+        {
+          question: 'How much protein is in a Ninja Creami smoothie bowl?',
+          answer: 'Classic fruit bowls (without protein additions) land at 4–8g of protein, mostly from toppings like nuts and seeds. Adding Greek yogurt or skyr to the base pushes this to 15–20g. A scoop of protein powder on top of a yogurt base takes you to 25–35g per bowl — a genuine meal-replacement option.',
+        },
+      ],
     },
     fr: {
       title: 'Recettes de Smoothie Bowl pour Ninja Creami',
       description: 'Recettes de smoothie bowls épais et crémeux pour votre Ninja Creami. Bases de fruits surgelés, garnitures nutritives et bols petit-déjeuner colorés — avec instructions étape par étape.',
       metaDescription: 'Recettes de smoothie bowl Ninja Creami — assez épais pour être à la cuillère, garnis comme au café. Açaï, baies-protéines, mangue tropicale, sans glaçons.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Un smoothie bowl est un smoothie assez épais pour se manger à la cuillère — la texture qui en fait un petit-déjeuner, pas une boisson. Le Ninja Creami est particulièrement adapté à cela : le programme Smoothie Bowl verrouille cette consistance précise "plus épais qu'un smoothie, pas tout à fait une glace" qui est frustrante à obtenir dans un blender. Chaque recette de cette page est testée dans un vrai Creami, avec les temps de congélation exacts et des associations de garnitures qui fonctionnent.
+
+Ce qui rend un smoothie bowl du Creami différent d'une version au blender, c'est le point de départ. Au lieu de pulvériser des glaçons (qui diluent le bol), vous congelez votre base de fruits mixés comme pot pendant la nuit, puis le Creami la rabote et la remixe en un bol dense, froid et à la cuillère. Résultat : pas d'éclats de glace, pas de bouillie à moitié fondue en trois minutes, et un vrai goût de fruit qui n'est pas dilué.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Les trois styles de smoothie bowl sur ce site',
+          cards: [
+            {
+              title: 'Bols aux fruits classiques',
+              body: 'Fruits rouges mélangés, mangue tropicale, fraise-banane. De vrais fruits surgelés comme base, un filet de lait ou d\'eau de coco pour faciliter le mélange, garnis de granola, fruits frais et graines. Le socle de la culture smoothie bowl — couleurs vives, saveurs de fruits véritables, aucun raccourci.',
+            },
+            {
+              title: 'Bols açaï et superaliments',
+              body: 'Purée d\'açaï en base, souvent superposée avec banane et fruits rouges mélangés. La version célèbre sur Instagram — violet profond, goût riche, chargée en antioxydants. Garnie généreusement de flocons de noix de coco, pollen d\'abeille, éclats de cacao et fruits tropicaux.',
+            },
+            {
+              title: 'Smoothie bowls protéinés',
+              body: 'Yaourt grec, skyr ou une dose de poudre de protéine incorporée à une base de fruits pour 20 à 30 g de protéines par bol. C\'est la version qui transforme un smoothie bowl en vrai repas post-entraînement ou en petit-déjeuner qui tient vraiment jusqu\'au déjeuner — pas juste une collation sucrée.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Comment utiliser ces recettes :** chaque page de recette indique les fruits surgelés exacts, le ratio de liquide et le cycle de programme (la plupart utilisent "Smoothie Bowl" ; quelques-unes utilisent "Lite Ice Cream" avec un peu plus de lait pour les versions les plus protéinées). Congelez le pot rempli pendant 24 heures — en-dessous, le bloc n'est pas entièrement solide et la lame rabote de manière inégale au lieu de créer cette texture dense à la cuillère.
+
+**Choisir ses garnitures :** ne conservez que la base dans le pot Creami et ajoutez les garnitures fraîches à chaque portion. Le granola perd son croquant sur un bol glacé en dix minutes, donc garnissez toujours à la dernière seconde. Les fruits lyophilisés, les noix et les graines restent bien plus croquants que les garnitures fraîches et sont le choix malin si vous préparez vos repas à l'avance.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Quelle est la différence entre un smoothie et un smoothie bowl dans le Ninja Creami ?',
+          answer: 'Un smoothie est buvable (assez fluide pour passer dans une paille), alors qu\'un smoothie bowl est épais à la cuillère (assez dense pour porter les garnitures sans qu\'elles coulent). Le programme Smoothie Bowl du Creami est calibré pour cette texture de bol — vitesse de lame plus lente, moins d\'aération. Pour un smoothie buvable, utilisez le programme Smoothie Bowl + 2 cuillères à soupe de liquide en plus et faites un Re-Spin, ou passez la base au blender après le turbinage.',
+        },
+        {
+          question: 'Quel programme utiliser pour les smoothie bowls dans le Ninja Creami ?',
+          answer: 'Utilisez le programme "Smoothie Bowl" sur le Creami Deluxe — il est calibré spécifiquement pour une texture plus épaisse, à la cuillère. Sur le Creami Original (sans programme Smoothie Bowl dédié), utilisez Lite Ice Cream — il donne un résultat similaire pour les bases axées sur les fruits. Les deux produisent cette consistance dense "la cuillère tient droite" qui définit un vrai smoothie bowl.',
+        },
+        {
+          question: 'Puis-je utiliser des fruits frais au lieu de fruits surgelés dans un smoothie bowl Creami ?',
+          answer: 'Non — le Creami a besoin d\'une base entièrement congelée pour fonctionner. La lame rabote et remixe un pot congelé, donc si les fruits sont frais et non congelés, vous obtiendrez une soupe, pas un smoothie bowl. Congelez vos fruits d\'abord (coupés en petits morceaux pour un meilleur mixage) ou achetez des sachets de fruits déjà surgelés.',
+        },
+        {
+          question: 'Comment empêcher mon smoothie bowl de fondre trop vite ?',
+          answer: 'Trois solutions : (1) servir dans un bol refroidi — mettez votre bol de service au congélateur 10 minutes avant de turbiner le pot, (2) servir immédiatement après la fin du Creami — ne laissez pas la base turbinée traîner sur le plan de travail, (3) évitez les garnitures tièdes comme le filet de miel ou le beurre de cacahuète juste avant de manger. Un bol servi froid reste dense et à la cuillère pendant 10 à 15 minutes.',
+        },
+        {
+          question: 'Puis-je faire un smoothie bowl sans produits laitiers ?',
+          answer: 'Absolument — la plupart des smoothie bowls de cette page sont naturellement sans produits laitiers. Utilisez du lait de coco, d\'amande, d\'avoine ou simplement du jus de fruit comme liquide. Les bols açaï sont traditionnellement sans produits laitiers de toute façon. Pour la protéine sans lait, ajoutez une dose de poudre de protéine végétale (pois ou riz) au lieu du yaourt grec.',
+        },
+        {
+          question: 'Combien de protéines contient un smoothie bowl Ninja Creami ?',
+          answer: 'Les bols aux fruits classiques (sans ajout protéiné) apportent 4 à 8 g de protéines, principalement des garnitures comme les noix et les graines. Ajouter du yaourt grec ou du skyr à la base monte à 15–20 g. Une dose de poudre de protéine sur une base au yaourt vous amène à 25–35 g par bol — une vraie option de substitut de repas.',
+        },
+      ],
     },
     es: {
       title: 'Recetas de Smoothie Bowl para Ninja Creami',
       description: 'Recetas de smoothie bowls espesos y cremosos para tu Ninja Creami. Bases de frutas congeladas, toppings nutritivos y hermosos bowls de desayuno — con instrucciones paso a paso.',
       metaDescription: 'Recetas de smoothie bowl Ninja Creami — tan espesos que se comen a cuchara, servidos como en un café. Açaí, bayas-proteína, mango tropical, sin trozos de hielo.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Un smoothie bowl es un smoothie lo bastante espeso para comerlo con cuchara — la textura que lo convierte en desayuno, no en bebida. El Ninja Creami está especialmente preparado para esto: el programa Smoothie Bowl clava exactamente esa consistencia "más espesa que un smoothie, menos que un helado" que es frustrante conseguir en una licuadora. Cada receta de esta página está probada en un Creami real, con tiempos de congelado exactos y combinaciones de toppings que funcionan.
+
+Lo que diferencia un smoothie bowl del Creami de la versión de licuadora es el punto de partida. En vez de pulverizar cubos de hielo (que aguan el bowl), congelas tu base de fruta licuada como pote durante la noche, y luego el Creami la rasura y la vuelve a mezclar en un bowl denso, frío y para cuchara. Resultado: sin trozos de hielo, sin granizado a medio derretir en tres minutos, y sabor real de fruta que no se diluye.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Los tres estilos de smoothie bowl en este sitio',
+          cards: [
+            {
+              title: 'Bowls clásicos de fruta',
+              body: 'Bayas mixtas, mango tropical, fresa-plátano. Fruta congelada de verdad como base, un chorrito de leche o agua de coco para ayudar a mezclar, rematados con granola, fruta fresca y semillas. La base de la cultura smoothie bowl — colores vivos, sabores de fruta auténticos, sin atajos.',
+            },
+            {
+              title: 'Bowls de açaí y superalimentos',
+              body: 'Puré de açaí como base, a menudo con capas de plátano y bayas mixtas. La versión famosa en Instagram — morado intenso, sabor rico y cargado de antioxidantes. Rematado con generosidad con copos de coco, polen de abeja, nibs de cacao y fruta tropical.',
+            },
+            {
+              title: 'Smoothie bowls proteicos',
+              body: 'Yogurt griego, skyr o una medida de proteína en polvo mezclados en una base de fruta para 20–30 g de proteína por bowl. Es la versión que convierte un smoothie bowl en una comida post-entreno legítima o un desayuno que de verdad te mantiene saciado hasta el almuerzo — no solo un capricho dulce.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Cómo usar estas recetas:** cada página muestra la fruta congelada exacta, la proporción de líquido y el ciclo de programa (la mayoría usa "Smoothie Bowl"; algunas usan "Lite Ice Cream" con un poco más de leche para las versiones más proteicas). Congela el pote lleno 24 horas — con menos, el bloque no está totalmente sólido y la cuchilla rasura de forma irregular en vez de crear esa textura densa para cuchara.
+
+**Eligiendo tus toppings:** guarda solo la base en el pote Creami y añade los toppings frescos a cada ración. La granola pierde el crujiente sobre un bowl congelado en diez minutos, así que siempre añádela al último segundo. La fruta liofilizada, los frutos secos y las semillas aguantan crujientes mucho más que los toppings frescos y son la elección inteligente si preparas comidas con antelación.`,
+        },
+      ],
+      faqs: [
+        {
+          question: '¿Cuál es la diferencia entre un smoothie y un smoothie bowl en el Ninja Creami?',
+          answer: 'Un smoothie es bebible (lo suficientemente líquido para pasar por una pajita), mientras que un smoothie bowl es espeso para cuchara (denso como para sostener toppings sin que se hundan). El programa Smoothie Bowl del Creami está ajustado para esta textura de bowl — velocidad de cuchilla más lenta, menos aireación. Para un smoothie bebible, usa el programa Smoothie Bowl + 2 cucharadas de líquido extra y haz un Re-Spin, o pasa la base por la licuadora después del batido.',
+        },
+        {
+          question: '¿Qué programa uso para smoothie bowls en el Ninja Creami?',
+          answer: 'Usa el programa "Smoothie Bowl" en el Creami Deluxe — está ajustado específicamente para una textura más espesa y de cuchara. En el Creami Original (sin programa Smoothie Bowl dedicado), usa Lite Ice Cream — da un resultado similar para bases centradas en fruta. Ambos producen esa consistencia densa "la cuchara se queda de pie" que define un smoothie bowl auténtico.',
+        },
+        {
+          question: '¿Puedo usar fruta fresca en lugar de fruta congelada en un smoothie bowl Creami?',
+          answer: 'No — el Creami necesita una base completamente congelada para funcionar. La cuchilla rasura y vuelve a mezclar un pote congelado, así que si la fruta es fresca y no está congelada, vas a terminar con un caldo, no con un smoothie bowl. Congela tu fruta primero (cortada en trozos pequeños para mezclar mejor) o compra bolsas de fruta ya congelada en el pasillo del congelador.',
+        },
+        {
+          question: '¿Cómo evito que mi smoothie bowl se derrita demasiado rápido?',
+          answer: 'Tres soluciones: (1) sirve en un bowl frío — mete tu bowl de servir al congelador 10 minutos antes de batir el pote, (2) sirve inmediatamente después de que termine el Creami — no dejes la base batida reposando en la encimera, (3) evita toppings tibios como chorros de miel o mantequilla de cacahuete hasta justo antes de comer. Un bowl servido frío se mantiene denso y para cuchara durante 10–15 minutos.',
+        },
+        {
+          question: '¿Puedo hacer un smoothie bowl sin lácteos?',
+          answer: 'Por supuesto — la mayoría de smoothie bowls de esta página son naturalmente sin lácteos. Usa leche de coco, almendra, avena o simplemente jugo de fruta como líquido. Los bowls de açaí son tradicionalmente sin lácteos de todos modos. Para proteína sin lácteos, añade una medida de proteína vegetal en polvo (guisante o arroz) en lugar de yogurt griego.',
+        },
+        {
+          question: '¿Cuánta proteína tiene un smoothie bowl del Ninja Creami?',
+          answer: 'Los bowls clásicos de fruta (sin añadidos proteicos) quedan en 4–8 g de proteína, sobre todo de toppings como frutos secos y semillas. Añadir yogurt griego o skyr a la base sube a 15–20 g. Una medida de proteína en polvo sobre una base de yogurt te lleva a 25–35 g por bowl — una opción real como sustituto de comida.',
+        },
+      ],
     },
     de: {
       title: 'Smoothie-Bowl-Rezepte für Ninja Creami',
       description: 'Dicke, löffelbare Smoothie-Bowl-Rezepte für deinen Ninja Creami. Gefrorene Fruchtbasen, nahrhafte Toppings und wunderschöne Frühstücksschalen — mit Schritt-für-Schritt-Anleitung.',
       metaDescription: 'Ninja Creami Smoothie-Bowl-Rezepte — dick genug zum Löffeln, wie im Café getoppt. Açaí, Beeren-Protein, tropische Mango. Viel Obst, keine Eissplitter.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Eine Smoothie Bowl ist ein Smoothie, der dick genug ist, um ihn zu löffeln — genau die Textur, die ihn zum Frühstück macht, nicht zum Getränk. Der Ninja Creami ist dafür prädestiniert: Das Smoothie-Bowl-Programm trifft diese Konsistenz "dicker als ein Smoothie, nicht ganz Eis" exakt, die in einem Mixer frustrierend schwer hinzubekommen ist. Jedes Rezept auf dieser Seite wurde in einem echten Creami getestet, mit genauen Gefrierzeiten und Topping-Kombinationen, die funktionieren.
+
+Was eine Creami-Smoothie-Bowl von der Mixer-Version unterscheidet, ist der Startpunkt. Statt Eiswürfel zu pulverisieren (die die Bowl wässern), frierst du deine gemixte Fruchtbasis über Nacht als Pint ein, dann hobelt und remixt der Creami sie zu einer dichten, kalten, löffelbaren Bowl. Ergebnis: keine Eissplitter, kein halbgeschmolzener Matsch nach drei Minuten und echter Fruchtgeschmack, der nicht verdünnt wird.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Die drei Smoothie-Bowl-Stile auf dieser Seite',
+          cards: [
+            {
+              title: 'Klassische Fruchtbowls',
+              body: 'Gemischte Beeren, tropische Mango, Erdbeere-Banane. Echte gefrorene Früchte als Basis, ein Schuss Milch oder Kokoswasser, damit sie sich binden, getoppt mit Granola, frischen Früchten und Samen. Das Fundament der Smoothie-Bowl-Kultur — leuchtende Farben, echter Fruchtgeschmack, keine Abkürzungen.',
+            },
+            {
+              title: 'Açaí- und Superfood-Bowls',
+              body: 'Açaí-Püree als Basis, oft mit Banane und gemischten Beeren geschichtet. Die Instagram-berühmte Version — tief violett, reich im Geschmack und voller Antioxidantien. Großzügig getoppt mit Kokosraspeln, Bienenpollen, Kakao-Nibs und Tropenfrüchten.',
+            },
+            {
+              title: 'Protein-Smoothie-Bowls',
+              body: 'Griechischer Joghurt, Skyr oder eine Portion Proteinpulver in eine Fruchtbasis gemixt für 20–30 g Protein pro Bowl. Das ist die Version, die eine Smoothie Bowl in eine echte Post-Workout-Mahlzeit verwandelt oder in ein Frühstück, das dich wirklich bis zum Mittag satt hält — kein bloßer süßer Snack.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**So nutzt du diese Rezepte:** Jede Rezeptseite nennt die genaue gefrorene Frucht, das Flüssigkeitsverhältnis und den Programmzyklus (die meisten nutzen "Smoothie Bowl"; einige nutzen "Lite Ice Cream" mit etwas mehr Milch für die proteinreichen Versionen). Friere das gefüllte Pint 24 Stunden ein — bei weniger ist der Block nicht vollständig fest, und die Klinge hobelt ungleichmäßig, statt diese dichte Löffel-Textur zu schaffen.
+
+**Die Toppings wählen:** Lagere nur die Basis im Creami-Pint und gib Toppings frisch pro Portion dazu. Granola verliert seinen Crunch auf einer gefrorenen Bowl innerhalb von zehn Minuten — toppe also immer in der letzten Sekunde. Gefriergetrocknete Früchte, Nüsse und Samen bleiben viel länger knusprig als frische Toppings und sind die clevere Wahl beim Meal-Prep.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Was ist der Unterschied zwischen einem Smoothie und einer Smoothie Bowl im Ninja Creami?',
+          answer: 'Ein Smoothie ist trinkbar (dünn genug für einen Strohhalm), eine Smoothie Bowl dagegen löffeldick (dicht genug, um Toppings zu tragen, ohne dass sie einsinken). Das Smoothie-Bowl-Programm des Creami ist auf diese Bowl-Textur abgestimmt — langsamere Klingenaktion, weniger Belüftung. Für einen trinkbaren Smoothie nutze das Smoothie-Bowl-Programm plus 2 Esslöffel zusätzliche Flüssigkeit und mache einen Re-Spin, oder mixe die Basis nach dem Spinnen nochmal im Standmixer.',
+        },
+        {
+          question: 'Welches Programm nutze ich für Smoothie Bowls im Ninja Creami?',
+          answer: 'Nutze das "Smoothie Bowl"-Programm am Creami Deluxe — es ist speziell auf eine dickere, löffelbare Textur abgestimmt. Am Creami Original (ohne eigenes Smoothie-Bowl-Programm) nutze Lite Ice Cream — es liefert ein ähnliches Ergebnis für fruchtbetonte Basen. Beide erzeugen diese dichte, "Löffel-steht-aufrecht"-Konsistenz, die eine echte Smoothie Bowl ausmacht.',
+        },
+        {
+          question: 'Kann ich frische statt gefrorene Früchte für eine Creami Smoothie Bowl verwenden?',
+          answer: 'Nein — der Creami braucht eine vollständig gefrorene Basis, um zu funktionieren. Die Klinge hobelt und remixt ein gefrorenes Pint — sind die Früchte frisch und nicht gefroren, bekommst du Suppe, keine Smoothie Bowl. Friere deine Früchte vorher ein (in kleine Stücke geschnitten für bessere Mixbarkeit) oder kauf vorgefrorene Beutel aus dem Tiefkühlregal.',
+        },
+        {
+          question: 'Wie verhindere ich, dass meine Smoothie Bowl zu schnell schmilzt?',
+          answer: 'Drei Tricks: (1) in einer gekühlten Schale servieren — stelle deine Servierschale 10 Minuten vor dem Spinnen in den Gefrierschrank, (2) sofort nach Programmende servieren — lass die gespinnte Basis nicht auf der Arbeitsplatte stehen, (3) meide warme Toppings wie Honigfaden oder Erdnussbutter bis kurz vor dem Essen. Eine kalt servierte Bowl bleibt 10–15 Minuten dicht und löffelbar.',
+        },
+        {
+          question: 'Kann ich eine Smoothie Bowl ohne Milchprodukte machen?',
+          answer: 'Absolut — die meisten Smoothie Bowls auf dieser Seite sind von Natur aus milchfrei. Nutze Kokos-, Mandel- oder Hafermilch oder einfach Fruchtsaft als Flüssigkeit. Açaí-Bowls sind traditionell sowieso milchfrei. Für Protein ohne Milch füge eine Portion pflanzliches Proteinpulver (Erbse oder Reis) statt griechischem Joghurt hinzu.',
+        },
+        {
+          question: 'Wie viel Protein steckt in einer Ninja Creami Smoothie Bowl?',
+          answer: 'Klassische Fruchtbowls (ohne Protein-Zusätze) liegen bei 4–8 g Protein, vor allem aus Toppings wie Nüssen und Samen. Mit griechischem Joghurt oder Skyr in der Basis kommst du auf 15–20 g. Eine Portion Proteinpulver auf einer Joghurt-Basis bringt dich auf 25–35 g pro Bowl — eine echte Mahlzeit-Ersatz-Option.',
+        },
+      ],
     },
     pt: {
       title: 'Receitas de Smoothie Bowl para Ninja Creami',
       description: 'Receitas de smoothie bowls espessos e cremosos para seu Ninja Creami. Bases de frutas congeladas, coberturas nutritivas e lindos bowls de café da manhã — com instruções passo a passo.',
       metaDescription: 'Receitas de smoothie bowl Ninja Creami — espessos o bastante para colher, servidos como em café. Açaí, frutas-proteína, manga tropical, sem pedaços de gelo.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Um smoothie bowl é um smoothie espesso o suficiente para comer de colher — a textura que o transforma em café da manhã, não em bebida. O Ninja Creami é especialmente adequado para isso: o programa Smoothie Bowl acerta exatamente aquela consistência "mais espessa que smoothie, não tão firme quanto sorvete" que é frustrante de conseguir no liquidificador. Cada receita desta página foi testada num Creami de verdade, com tempos de congelamento exatos e combinações de coberturas que funcionam.
+
+O que diferencia um smoothie bowl do Creami da versão no liquidificador é o ponto de partida. Em vez de pulverizar cubos de gelo (que aguam o bowl), você congela sua base de fruta batida como pote durante a noite, e aí o Creami raspa e remistura tudo num bowl denso, gelado e de colher. Resultado: sem pedaços de gelo, sem raspadinha meio derretida em três minutos e sabor de fruta de verdade que não dilui.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Os três estilos de smoothie bowl neste site',
+          cards: [
+            {
+              title: 'Bowls clássicos de fruta',
+              body: 'Frutas vermelhas mistas, manga tropical, morango-banana. Fruta congelada de verdade como base, um fio de leite ou água de coco para ajudar a misturar, coberto com granola, fruta fresca e sementes. A base da cultura smoothie bowl — cores vibrantes, sabores de fruta autênticos, sem atalhos.',
+            },
+            {
+              title: 'Bowls de açaí e superalimentos',
+              body: 'Polpa de açaí como base, frequentemente em camadas com banana e frutas vermelhas mistas. A versão famosa no Instagram — roxo intenso, sabor rico e carregado de antioxidantes. Coberto generosamente com flocos de coco, pólen de abelha, nibs de cacau e frutas tropicais.',
+            },
+            {
+              title: 'Smoothie bowls proteicos',
+              body: 'Iogurte grego, skyr ou uma dose de whey protein batida numa base de fruta para 20–30 g de proteína por bowl. É a versão que transforma um smoothie bowl numa refeição pós-treino de verdade ou num café da manhã que realmente te segura até o almoço — não apenas um lanche doce.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Como usar essas receitas:** cada página lista a fruta congelada exata, a proporção de líquido e o ciclo de programa (a maioria usa "Smoothie Bowl"; algumas usam "Lite Ice Cream" com um pouco mais de leite para as versões mais proteicas). Congele o pote cheio por 24 horas — menos do que isso, o bloco não fica totalmente sólido e a lâmina raspa de forma irregular em vez de criar aquela textura densa de colher.
+
+**Escolhendo as coberturas:** guarde só a base no pote Creami e adicione as coberturas fresquinhas em cada porção. A granola perde a crocância sobre um bowl congelado em dez minutos, então cubra sempre no último segundo. Fruta liofilizada, castanhas e sementes ficam crocantes por muito mais tempo que coberturas frescas e são a escolha inteligente se você prepara as refeições com antecedência.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Qual a diferença entre um smoothie e um smoothie bowl no Ninja Creami?',
+          answer: 'Um smoothie é bebível (fino o suficiente para passar no canudo), enquanto um smoothie bowl é espesso para colher (denso o bastante para segurar as coberturas sem afundar). O programa Smoothie Bowl do Creami é ajustado para essa textura de bowl — velocidade de lâmina mais lenta, menos aeração. Para um smoothie bebível, use o programa Smoothie Bowl + 2 colheres de sopa de líquido extra e faça um Re-Spin, ou passe a base no liquidificador depois de bater.',
+        },
+        {
+          question: 'Qual programa uso para smoothie bowls no Ninja Creami?',
+          answer: 'Use o programa "Smoothie Bowl" no Creami Deluxe — ele é ajustado especificamente para uma textura mais espessa, de colher. No Creami Original (sem programa Smoothie Bowl dedicado), use Lite Ice Cream — ele dá um resultado similar para bases focadas em fruta. Ambos produzem aquela consistência densa "a colher fica de pé" que define um smoothie bowl de verdade.',
+        },
+        {
+          question: 'Posso usar fruta fresca em vez de congelada no smoothie bowl do Creami?',
+          answer: 'Não — o Creami precisa de uma base totalmente congelada para funcionar. A lâmina raspa e remistura um pote congelado, então se a fruta está fresca e não congelada, você vai acabar com uma sopa, não um smoothie bowl. Congele sua fruta antes (cortada em pedaços pequenos para misturar melhor) ou compre pacotes de fruta já congelada no congelador do supermercado.',
+        },
+        {
+          question: 'Como evito que meu smoothie bowl derreta rápido demais?',
+          answer: 'Três soluções: (1) sirva num bowl gelado — coloque seu bowl de servir no freezer por 10 minutos antes de bater o pote, (2) sirva imediatamente depois que o Creami terminar — não deixe a base batida esperando no balcão, (3) evite coberturas mornas como fio de mel ou pasta de amendoim até bem na hora de comer. Um bowl servido gelado fica denso e de colher por 10 a 15 minutos.',
+        },
+        {
+          question: 'Posso fazer um smoothie bowl sem laticínios?',
+          answer: 'Com certeza — a maioria dos smoothie bowls desta página é naturalmente sem laticínios. Use leite de coco, de amêndoa, de aveia ou só suco de fruta como líquido. Bowls de açaí são tradicionalmente sem laticínios de qualquer forma. Para proteína sem laticínios, adicione uma dose de proteína vegetal em pó (ervilha ou arroz) em vez de iogurte grego.',
+        },
+        {
+          question: 'Quanta proteína tem um smoothie bowl do Ninja Creami?',
+          answer: 'Bowls clássicos de fruta (sem adições proteicas) ficam em 4–8 g de proteína, principalmente das coberturas como castanhas e sementes. Adicionar iogurte grego ou skyr à base sobe para 15–20 g. Uma dose de whey protein sobre uma base de iogurte te leva a 25–35 g por bowl — uma opção real de substituição de refeição.',
+        },
+      ],
     },
   },
   'lite-ice-cream': {
