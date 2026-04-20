@@ -979,26 +979,316 @@ Se você é novo na máquina, comece por um clássico: baunilha, chocolate ou mo
       title: 'Sorbet Recipes for Ninja Creami',
       description: 'Refreshing dairy-free sorbet recipes for your Ninja Creami. Fresh fruit bases, vibrant flavors, and naturally lighter frozen treats — all with step-by-step instructions.',
       metaDescription: 'Dairy-free Ninja Creami sorbet recipes — fresh fruit bases, vibrant color, no added cream. Classics like strawberry plus gourmet twists like cherry-balsamic.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Sorbet is where the Ninja Creami shines brightest for anyone dairy-free, vegan, or just looking for something lighter than ice cream. The machine is uniquely good at turning a fruit puree into a smooth, intensely-flavored frozen pint — no cream, no milk, just fruit, water, and a bit of sugar — that tastes like a gelato cafe on the Italian coast. Every recipe on this page uses fresh or frozen fruit and has been tested on the Sorbet program.
+
+The secret to a creamy sorbet (instead of an icy one) is the sugar-to-fruit ratio. Too little sugar and you get a rock-hard block that the blade can\'t shave properly; too much and it stays soft and syrupy. Our recipes are dialed in to the sweet spot: around 1/3 cup of sugar per 2 cups of fruit puree, adjusted for the natural sweetness of each fruit. This ratio gives you a pint that scoops out soft, holds its shape, and actually tastes like the fruit instead of just sugar.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'The three sorbet styles on this site',
+          cards: [
+            {
+              title: 'Classic fruit sorbets',
+              body: 'Strawberry, raspberry, mango, lemon. Pure fruit + sugar + water, balanced for creaminess. The simplest sorbets and the easiest to nail on your first try — start here if you\'re new to the Sorbet program.',
+            },
+            {
+              title: 'Gourmet twist sorbets',
+              body: 'Cherry-balsamic, strawberry-lemon-basil, blackberry-lime-ginger. Classic fruit bases with one unexpected ingredient that elevates the flavor into something cafe-worthy. Same technique, more interesting flavor.',
+            },
+            {
+              title: 'Tropical and exotic sorbets',
+              body: 'Lychee, passion fruit, pineapple-mint, açaí. Made with frozen tropical purees or packets, these skip the freeze-a-fresh-fruit step and deliver intense, restaurant-style flavor in one spin.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**How to use these recipes:** every recipe page lists the exact fruit ratio, sugar amount, and whether to use frozen or fresh fruit. Use the "Sorbet" program for any pure-fruit base; if your pint comes out icy after one spin, add a tablespoon of water and Re-Spin — sorbet responds to extra liquid even better than ice cream does.
+
+**Choosing your fruit:** ripe, in-season fruit gives the best sorbet, but frozen fruit works almost as well and is available year-round. We note which works best for each recipe. Avoid canned fruit in syrup — the preserving syrup throws off the sugar balance and makes the pint overly sweet and soft.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'What is the best sugar-to-fruit ratio for Ninja Creami sorbet?',
+          answer: 'About 1/3 cup of sugar per 2 cups of fruit puree — adjusted up or down depending on the natural sweetness of the fruit. Very tart fruit like raspberry needs more sugar; very sweet fruit like ripe mango needs less. Too little sugar and the block is rock-hard and icy; too much and the pint stays soft.',
+        },
+        {
+          question: 'Why is my Ninja Creami sorbet icy?',
+          answer: 'Usually the sugar-to-fruit ratio is off (not enough sugar) or the pint needs a Re-Spin with a tablespoon of water added on top. Sugar disrupts ice crystal formation, which is why low-sugar sorbets freeze harder and come out icier. If you want lower sugar, replace with allulose — it has the same cryoprotective effect without the calories.',
+        },
+        {
+          question: 'Can I use frozen fruit in Ninja Creami sorbet recipes?',
+          answer: 'Yes — frozen fruit works perfectly. Most of our recipes call for frozen fruit because it\'s cheaper, available year-round, and already blanched/stabilized. Just thaw enough to puree smoothly, then freeze the final pint for 24 hours as normal.',
+        },
+        {
+          question: 'Is Ninja Creami sorbet vegan and dairy-free?',
+          answer: 'Yes — classic sorbet contains only fruit, water, and sugar, all plant-based. Every recipe marked "Sorbet" on this page is vegan and dairy-free. Some variations add honey for sweetener; if you\'re strictly vegan, sub maple syrup or agave for the same effect.',
+        },
+        {
+          question: 'Which program do I use for sorbet on the Creami?',
+          answer: 'Use the "Sorbet" program on any Creami model. It\'s designed for harder, denser frozen blocks and uses more torque than the Ice Cream program to shave the fruit-water base into smooth texture. Using the Ice Cream program on sorbet will often leave it icy or crumbly.',
+        },
+        {
+          question: 'How do I make a sorbet less sweet?',
+          answer: 'Don\'t just cut sugar — sugar is a structural ingredient that prevents ice crystals. Instead, swap half the sugar for allulose (or monk fruit + erythritol blend), which provides similar cryoprotection with fewer calories and less sweetness. You can also add a squeeze of lemon juice to balance sweetness without touching the sugar ratio.',
+        },
+      ],
     },
     fr: {
       title: 'Recettes de Sorbet pour Ninja Creami',
       description: 'Recettes de sorbet rafraîchissantes et sans produits laitiers pour votre Ninja Creami. Bases de fruits frais, saveurs vibrantes et desserts glacés naturellement légers — avec instructions étape par étape.',
       metaDescription: 'Recettes de sorbet Ninja Creami sans lactose — bases aux fruits frais, couleurs vibrantes, zéro crème ajoutée. Fraise classique ou cerise-balsamique gourmet.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Le sorbet, c\'est là que le Ninja Creami brille le plus pour ceux qui sont sans lactose, végans, ou simplement en quête de quelque chose de plus léger qu\'une glace. La machine est particulièrement douée pour transformer une purée de fruits en un pot lisse et intensément parfumé — pas de crème, pas de lait, juste des fruits, de l\'eau et un peu de sucre — qui a le goût d\'un café de gelato sur la côte italienne. Chaque recette de cette page utilise des fruits frais ou surgelés et a été testée sur le programme Sorbet.
+
+Le secret d\'un sorbet crémeux (au lieu de glacé) est le ratio sucre-fruits. Trop peu de sucre et vous obtenez un bloc dur comme du roc que la lame ne peut pas raser correctement ; trop et il reste mou et sirupeux. Nos recettes sont calées sur le point idéal : environ 1/3 de tasse de sucre pour 2 tasses de purée de fruits, ajusté selon la douceur naturelle de chaque fruit. Ce ratio vous donne un pot qui se récupère tendre, garde sa forme et a vraiment le goût du fruit plutôt que du sucre.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Les trois styles de sorbet sur ce site',
+          cards: [
+            {
+              title: 'Sorbets de fruits classiques',
+              body: 'Fraise, framboise, mangue, citron. Pur fruit + sucre + eau, équilibré pour la crémeux. Les sorbets les plus simples et les plus faciles à réussir dès le premier essai — commencez ici si vous débutez avec le programme Sorbet.',
+            },
+            {
+              title: 'Sorbets gourmet revisités',
+              body: 'Cerise-balsamique, fraise-citron-basilic, mûre-citron vert-gingembre. Des bases de fruits classiques avec un ingrédient inattendu qui élève la saveur à quelque chose digne d\'un café. Même technique, saveur plus intéressante.',
+            },
+            {
+              title: 'Sorbets tropicaux et exotiques',
+              body: 'Litchi, fruit de la passion, ananas-menthe, açaï. Faits avec des purées ou sachets tropicaux surgelés, ces sorbets sautent l\'étape "congeler un fruit frais" et livrent une saveur intense style restaurant en un seul turbinage.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Comment utiliser ces recettes :** chaque page de recette indique le ratio de fruits exact, la quantité de sucre et s\'il faut utiliser des fruits surgelés ou frais. Utilisez le programme "Sorbet" pour toute base pure-fruit ; si votre pot sort glacé après un tour, ajoutez une cuillère à soupe d\'eau et faites un Re-Spin — le sorbet répond encore mieux au liquide supplémentaire que la crème glacée.
+
+**Choisir ses fruits :** un fruit mûr de saison donne le meilleur sorbet, mais le fruit surgelé fonctionne presque aussi bien et est disponible toute l\'année. Nous indiquons lequel convient le mieux à chaque recette. Évitez les fruits en conserve dans du sirop — le sirop de conservation déséquilibre le dosage sucre et rend le pot trop sucré et mou.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Quel est le meilleur ratio sucre-fruits pour le sorbet Ninja Creami ?',
+          answer: 'Environ 1/3 de tasse de sucre pour 2 tasses de purée de fruits — à ajuster selon la douceur naturelle du fruit. Un fruit très acide comme la framboise a besoin de plus de sucre ; un fruit très sucré comme la mangue mûre en a besoin de moins. Trop peu de sucre et le bloc est dur comme du roc et glacé ; trop et le pot reste mou.',
+        },
+        {
+          question: 'Pourquoi mon sorbet Ninja Creami est-il glacé ?',
+          answer: 'Généralement le ratio sucre-fruits est déséquilibré (pas assez de sucre) ou le pot a besoin d\'un Re-Spin avec une cuillère à soupe d\'eau ajoutée sur le dessus. Le sucre empêche la formation de cristaux de glace, c\'est pourquoi les sorbets peu sucrés congèlent plus dur et sortent plus glacés. Si vous voulez moins de sucre, remplacez par de l\'allulose — elle a le même effet cryoprotecteur sans les calories.',
+        },
+        {
+          question: 'Puis-je utiliser des fruits surgelés dans les recettes de sorbet Ninja Creami ?',
+          answer: 'Oui — les fruits surgelés fonctionnent parfaitement. La plupart de nos recettes demandent des fruits surgelés parce que c\'est moins cher, disponible toute l\'année et déjà blanchi/stabilisé. Il suffit de les décongeler juste assez pour pouvoir les mixer en purée lisse, puis de congeler le pot final 24 heures comme d\'habitude.',
+        },
+        {
+          question: 'Le sorbet Ninja Creami est-il végan et sans lactose ?',
+          answer: 'Oui — le sorbet classique ne contient que des fruits, de l\'eau et du sucre, tous d\'origine végétale. Chaque recette marquée "Sorbet" sur cette page est végane et sans lactose. Certaines variantes ajoutent du miel comme édulcorant ; si vous êtes strictement végan, remplacez par du sirop d\'érable ou de l\'agave pour le même effet.',
+        },
+        {
+          question: 'Quel programme utiliser pour le sorbet sur le Creami ?',
+          answer: 'Utilisez le programme "Sorbet" sur n\'importe quel modèle Creami. Il est conçu pour les blocs congelés plus durs et denses, et utilise plus de couple que le programme Ice Cream pour raser la base fruit-eau en une texture lisse. Utiliser le programme Ice Cream sur un sorbet le laissera souvent glacé ou friable.',
+        },
+        {
+          question: 'Comment faire un sorbet moins sucré ?',
+          answer: 'Ne réduisez pas juste le sucre — le sucre est un ingrédient structurel qui empêche la formation de cristaux de glace. Remplacez plutôt la moitié du sucre par de l\'allulose (ou un mélange monk fruit + érythritol), qui offre une cryoprotection similaire avec moins de calories et moins de goût sucré. Vous pouvez aussi ajouter un trait de jus de citron pour équilibrer la douceur sans toucher au ratio de sucre.',
+        },
+      ],
     },
     es: {
       title: 'Recetas de Sorbete para Ninja Creami',
       description: 'Recetas de sorbete refrescantes y sin lácteos para tu Ninja Creami. Bases de frutas frescas, sabores vibrantes y postres helados naturalmente ligeros — con instrucciones paso a paso.',
       metaDescription: 'Recetas de sorbete Ninja Creami sin lácteos — bases de fruta fresca, color vibrante, sin crema añadida. Fresa clásica y versiones gourmet como cereza-balsámico.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `El sorbete es donde el Ninja Creami brilla más para quien no consume lácteos, es vegano, o simplemente busca algo más ligero que un helado. La máquina es especialmente buena convirtiendo un puré de fruta en un pote liso e intensamente sabroso — sin crema, sin leche, solo fruta, agua y un poco de azúcar — que sabe como un café de gelato en la costa italiana. Cada receta de esta página usa fruta fresca o congelada y se ha probado con el programa Sorbet.
+
+El secreto de un sorbete cremoso (en lugar de granulado) está en la proporción azúcar-fruta. Muy poco azúcar y obtienes un bloque duro como piedra que la cuchilla no puede raspar bien; demasiado y se queda blando y pegajoso. Nuestras recetas están calibradas al punto exacto: unos 1/3 de taza de azúcar por cada 2 tazas de puré de fruta, ajustado según la dulzura natural de cada fruta. Esta proporción te da un pote que se saca suave, mantiene forma y sabe realmente a fruta en vez de solo a azúcar.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Los tres estilos de sorbete en este sitio',
+          cards: [
+            {
+              title: 'Sorbetes de fruta clásicos',
+              body: 'Fresa, frambuesa, mango, limón. Fruta pura + azúcar + agua, equilibrados para la cremosidad. Los sorbetes más simples y los más fáciles de clavar al primer intento — empieza aquí si eres nuevo con el programa Sorbet.',
+            },
+            {
+              title: 'Sorbetes gourmet con giro',
+              body: 'Cereza-balsámico, fresa-limón-albahaca, mora-lima-jengibre. Bases de fruta clásicas con un ingrediente inesperado que eleva el sabor a algo digno de café. Misma técnica, sabor más interesante.',
+            },
+            {
+              title: 'Sorbetes tropicales y exóticos',
+              body: 'Lichi, maracuyá, piña-menta, açaí. Hechos con purés o sobres tropicales congelados, estos sorbetes se saltan el paso de congelar-una-fruta-fresca y entregan un sabor intenso estilo restaurante en un solo giro.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Cómo usar estas recetas:** cada página indica la proporción exacta de fruta, la cantidad de azúcar y si usar fruta fresca o congelada. Usa el programa "Sorbet" para cualquier base pura de fruta; si tu pote sale helado tras una pasada, añade una cucharada de agua y haz un Re-Spin — el sorbete responde aún mejor al líquido extra que el helado.
+
+**Eligiendo la fruta:** la fruta madura de temporada da el mejor sorbete, pero la fruta congelada funciona casi igual de bien y está disponible todo el año. Indicamos cuál va mejor para cada receta. Evita la fruta en conserva con almíbar — el almíbar rompe el equilibrio de azúcar y deja el pote demasiado dulce y blando.`,
+        },
+      ],
+      faqs: [
+        {
+          question: '¿Cuál es la mejor proporción azúcar-fruta para el sorbete Ninja Creami?',
+          answer: 'Unos 1/3 de taza de azúcar por cada 2 tazas de puré de fruta — ajustado según la dulzura natural del fruto. Fruta muy ácida como la frambuesa necesita más azúcar; fruta muy dulce como el mango maduro necesita menos. Muy poco azúcar y el bloque queda duro como piedra y granulado; demasiado y el pote se queda blando.',
+        },
+        {
+          question: '¿Por qué mi sorbete Ninja Creami sale granulado?',
+          answer: 'Normalmente la proporción azúcar-fruta está mal (poco azúcar) o el pote necesita un Re-Spin con una cucharada de agua añadida encima. El azúcar impide la formación de cristales de hielo, por eso los sorbetes bajos en azúcar se congelan más duros y salen más granulados. Si quieres menos azúcar, sustitúyelo por alulosa — tiene el mismo efecto crioprotector sin las calorías.',
+        },
+        {
+          question: '¿Puedo usar fruta congelada en las recetas de sorbete Ninja Creami?',
+          answer: 'Sí — la fruta congelada funciona perfectamente. La mayoría de nuestras recetas piden fruta congelada porque es más barata, está disponible todo el año y ya viene escaldada/estabilizada. Basta con descongelarla lo justo para triturarla en puré liso y después congelar el pote final 24 horas como siempre.',
+        },
+        {
+          question: '¿El sorbete Ninja Creami es vegano y sin lácteos?',
+          answer: 'Sí — el sorbete clásico contiene solo fruta, agua y azúcar, todos de origen vegetal. Cada receta marcada como "Sorbet" en esta página es vegana y sin lácteos. Algunas variantes añaden miel como endulzante; si eres estrictamente vegano, sustituye por sirope de arce o agave para el mismo efecto.',
+        },
+        {
+          question: '¿Qué programa uso para el sorbete en el Creami?',
+          answer: 'Usa el programa "Sorbet" en cualquier modelo de Creami. Está diseñado para bloques congelados más duros y densos, y usa más torque que el programa Ice Cream para raspar la base fruta-agua hasta una textura lisa. Usar el programa Ice Cream en un sorbete lo deja a menudo granulado o quebradizo.',
+        },
+        {
+          question: '¿Cómo hago un sorbete menos dulce?',
+          answer: 'No reduzcas el azúcar sin más — el azúcar es un ingrediente estructural que impide los cristales de hielo. Cambia mejor la mitad del azúcar por alulosa (o una mezcla de monk fruit + eritritol), que da una crioprotección similar con menos calorías y menos dulzor. También puedes añadir un chorrito de limón para equilibrar la dulzura sin tocar la proporción de azúcar.',
+        },
+      ],
     },
     de: {
       title: 'Sorbet-Rezepte für Ninja Creami',
       description: 'Erfrischende milchfreie Sorbet-Rezepte für deinen Ninja Creami. Frische Fruchtbasen, lebhafte Aromen und natürlich leichtere Eiskreationen — mit Schritt-für-Schritt-Anleitung.',
       metaDescription: 'Milchfreie Ninja Creami Sorbet-Rezepte — frische Fruchtbasen, leuchtende Farben, keine Sahne. Klassische Erdbeere bis Gourmet wie Kirsch-Balsamico.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Sorbet ist das, worin der Ninja Creami für alle, die milchfrei, vegan oder einfach auf etwas Leichteres als Eis aus sind, am stärksten strahlt. Die Maschine ist besonders gut darin, ein Fruchtpüree in ein glattes, intensiv aromatisches Pint zu verwandeln — keine Sahne, keine Milch, nur Frucht, Wasser und etwas Zucker — das schmeckt wie ein Gelato-Café an der italienischen Küste. Jedes Rezept auf dieser Seite nutzt frische oder gefrorene Früchte und wurde mit dem Sorbet-Programm getestet.
+
+Der Schlüssel zu cremigem Sorbet (statt eisigem) ist das Zucker-Frucht-Verhältnis. Zu wenig Zucker und du bekommst einen steinharten Block, den die Klinge nicht richtig shavt; zu viel und es bleibt weich und sirupartig. Unsere Rezepte treffen den Sweet Spot: etwa 1/3 Tasse Zucker auf 2 Tassen Fruchtpüree, angepasst an die natürliche Süße jeder Frucht. Dieses Verhältnis liefert ein Pint, das weich auslöffelbar ist, seine Form hält und tatsächlich nach Frucht schmeckt — nicht nach Zucker.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Die drei Sorbet-Stile auf dieser Seite',
+          cards: [
+            {
+              title: 'Klassische Fruchtsorbets',
+              body: 'Erdbeere, Himbeere, Mango, Zitrone. Reine Frucht + Zucker + Wasser, auf Cremigkeit abgestimmt. Die einfachsten Sorbets und die, die beim ersten Versuch am leichtesten gelingen — starte hier, wenn du das Sorbet-Programm neu ausprobierst.',
+            },
+            {
+              title: 'Gourmet-Sorbets mit Twist',
+              body: 'Kirsch-Balsamico, Erdbeer-Zitrone-Basilikum, Brombeer-Limette-Ingwer. Klassische Fruchtbasen mit einer unerwarteten Zutat, die den Geschmack in etwas Café-würdiges hebt. Gleiche Technik, interessanterer Geschmack.',
+            },
+            {
+              title: 'Tropische und exotische Sorbets',
+              body: 'Lychee, Passionsfrucht, Ananas-Minze, Açaí. Mit gefrorenen tropischen Pürees oder Päckchen gemacht, überspringen diese den "Frisches-Obst-einfrieren"-Schritt und liefern in einem Durchgang intensiven Restaurant-Geschmack.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**So nutzt du diese Rezepte:** Jede Rezeptseite nennt das genaue Fruchtverhältnis, die Zuckermenge und ob frische oder gefrorene Frucht verwendet wird. Nutze das Programm "Sorbet" für jede reine Fruchtbasis; wenn dein Pint nach einem Durchgang eisig herauskommt, einen Esslöffel Wasser obendrauf und Re-Spin — Sorbet reagiert auf zusätzliche Flüssigkeit sogar besser als Eis.
+
+**Die richtige Frucht wählen:** Reifes, saisonales Obst ergibt das beste Sorbet, aber gefrorenes Obst funktioniert fast genauso gut und ist ganzjährig verfügbar. Wir geben für jedes Rezept an, was am besten passt. Meide eingelegte Früchte in Sirup — der Sirup verschiebt das Zucker-Gleichgewicht und macht das Pint zu süß und weich.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Was ist das beste Zucker-Frucht-Verhältnis für Ninja Creami Sorbet?',
+          answer: 'Etwa 1/3 Tasse Zucker auf 2 Tassen Fruchtpüree — je nach natürlicher Süße der Frucht nach oben oder unten angepasst. Sehr saure Früchte wie Himbeere brauchen mehr Zucker; sehr süße wie reife Mango weniger. Zu wenig Zucker und der Block ist steinhart und eisig; zu viel und das Pint bleibt weich.',
+        },
+        {
+          question: 'Warum ist mein Ninja Creami Sorbet eisig?',
+          answer: 'Meistens stimmt das Zucker-Frucht-Verhältnis nicht (zu wenig Zucker) oder das Pint braucht einen Re-Spin mit einem Esslöffel Wasser obendrauf. Zucker verhindert Eiskristallbildung, deshalb gefrieren zuckerarme Sorbets härter und kommen eisiger heraus. Willst du weniger Zucker, ersetze ihn durch Allulose — sie wirkt kryoprotektiv ähnlich, aber ohne die Kalorien.',
+        },
+        {
+          question: 'Kann ich gefrorene Früchte in Ninja Creami Sorbet-Rezepten verwenden?',
+          answer: 'Ja — gefrorene Früchte funktionieren perfekt. Die meisten unserer Rezepte nutzen gefrorene Früchte, weil sie günstiger sind, ganzjährig verfügbar und bereits blanchiert/stabilisiert. Einfach so weit antauen, dass sie zu glattem Püree werden, dann das fertige Pint wie gewohnt 24 Stunden einfrieren.',
+        },
+        {
+          question: 'Ist Ninja Creami Sorbet vegan und milchfrei?',
+          answer: 'Ja — klassisches Sorbet enthält nur Frucht, Wasser und Zucker, alle pflanzlich. Jedes mit "Sorbet" markierte Rezept auf dieser Seite ist vegan und milchfrei. Manche Varianten nutzen Honig als Süße; bist du streng vegan, ersetze ihn durch Ahornsirup oder Agavendicksaft für denselben Effekt.',
+        },
+        {
+          question: 'Welches Programm nutze ich für Sorbet am Creami?',
+          answer: 'Nutze das Programm "Sorbet" bei jedem Creami-Modell. Es ist für härtere, dichtere gefrorene Blöcke ausgelegt und nutzt mehr Drehmoment als das Ice-Cream-Programm, um die Frucht-Wasser-Basis glatt zu shaven. Das Ice-Cream-Programm auf Sorbet anzuwenden führt oft zu eisiger oder bröseliger Textur.',
+        },
+        {
+          question: 'Wie mache ich ein weniger süßes Sorbet?',
+          answer: 'Reduziere nicht einfach den Zucker — Zucker ist eine strukturelle Zutat, die Eiskristalle verhindert. Ersetze stattdessen die Hälfte des Zuckers durch Allulose (oder einen Mönchsfrucht+Erythrit-Blend), die eine ähnliche Kryoprotektion bei weniger Kalorien und weniger Süße bietet. Du kannst auch einen Spritzer Zitronensaft hinzugeben, um die Süße auszubalancieren, ohne am Zuckeranteil zu drehen.',
+        },
+      ],
     },
     pt: {
       title: 'Receitas de Sorbet para Ninja Creami',
       description: 'Receitas refrescantes de sorbet sem lactose para seu Ninja Creami. Bases de frutas frescas, sabores vibrantes e sobremesas geladas naturalmente leves — com instruções passo a passo.',
       metaDescription: 'Receitas de sorbet Ninja Creami sem lactose — bases de fruta fresca, cor vibrante, zero creme adicionado. Do morango clássico ao cereja-balsâmico gourmet.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `O sorbet é onde o Ninja Creami brilha mais para quem é intolerante à lactose, vegano ou simplesmente quer algo mais leve que sorvete. A máquina é especialmente boa em transformar um purê de fruta num pote liso e intensamente saboroso — sem creme, sem leite, só fruta, água e um pouco de açúcar — com gosto de café de gelato na costa italiana. Cada receita desta página usa fruta fresca ou congelada e foi testada no programa Sorbet.
+
+O segredo de um sorbet cremoso (em vez de gelado) é a proporção açúcar-fruta. Pouco açúcar e você obtém um bloco duro como pedra que a lâmina não consegue raspar direito; muito e fica mole e melado. Nossas receitas estão calibradas no ponto certo: cerca de 1/3 de xícara de açúcar para 2 xícaras de purê de fruta, ajustado conforme a doçura natural de cada fruta. Essa proporção dá um pote que sai macio, mantém a forma e tem gosto de fruta de verdade em vez de só açúcar.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Os três estilos de sorbet neste site',
+          cards: [
+            {
+              title: 'Sorbets clássicos de fruta',
+              body: 'Morango, framboesa, manga, limão. Fruta pura + açúcar + água, equilibrados para a cremosidade. Os sorbets mais simples e fáceis de acertar na primeira tentativa — comece aqui se é iniciante no programa Sorbet.',
+            },
+            {
+              title: 'Sorbets gourmet com uma virada',
+              body: 'Cereja-balsâmico, morango-limão-manjericão, amora-limão-gengibre. Bases clássicas de fruta com um ingrediente inesperado que eleva o sabor a algo digno de café. Mesma técnica, sabor mais interessante.',
+            },
+            {
+              title: 'Sorbets tropicais e exóticos',
+              body: 'Lichia, maracujá, abacaxi-hortelã, açaí. Feitos com purês ou saquinhos tropicais congelados, esses sorbets pulam a etapa de congelar fruta fresca e entregam sabor intenso estilo restaurante em um único giro.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Como usar essas receitas:** cada página lista a proporção exata de fruta, quantidade de açúcar e se usa fruta congelada ou fresca. Use o programa "Sorbet" para qualquer base pura de fruta; se seu pote sair gelado depois de uma passada, adicione uma colher de sopa de água e faça um Re-Spin — o sorbet responde ao líquido extra até melhor que o sorvete.
+
+**Escolhendo a fruta:** fruta madura da estação dá o melhor sorbet, mas a fruta congelada funciona quase tão bem e está disponível o ano todo. Indicamos qual vai melhor em cada receita. Evite fruta em conserva em calda — a calda desequilibra o açúcar e deixa o pote doce demais e mole.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Qual a melhor proporção açúcar-fruta para sorbet no Ninja Creami?',
+          answer: 'Cerca de 1/3 de xícara de açúcar para 2 xícaras de purê de fruta — ajustado conforme a doçura natural da fruta. Fruta muito ácida como framboesa precisa de mais açúcar; fruta muito doce como manga madura precisa de menos. Pouco açúcar e o bloco fica duro como pedra e gelado; muito e o pote fica mole.',
+        },
+        {
+          question: 'Por que meu sorbet do Ninja Creami está gelado?',
+          answer: 'Geralmente a proporção açúcar-fruta está errada (pouco açúcar) ou o pote precisa de um Re-Spin com uma colher de sopa de água adicionada por cima. O açúcar interrompe a formação de cristais de gelo, por isso sorbets com pouco açúcar congelam mais duro e saem mais gelados. Se quiser menos açúcar, substitua por alulose — tem o mesmo efeito crioprotetor sem as calorias.',
+        },
+        {
+          question: 'Posso usar fruta congelada nas receitas de sorbet Ninja Creami?',
+          answer: 'Sim — a fruta congelada funciona perfeitamente. A maioria das nossas receitas pede fruta congelada porque é mais barata, disponível o ano todo e já branqueada/estabilizada. Basta descongelar o suficiente para bater em purê liso, depois congelar o pote final por 24 horas como de costume.',
+        },
+        {
+          question: 'O sorbet do Ninja Creami é vegano e sem lactose?',
+          answer: 'Sim — sorbet clássico contém apenas fruta, água e açúcar, todos de origem vegetal. Toda receita marcada como "Sorbet" nesta página é vegana e sem lactose. Algumas variações adicionam mel como adoçante; se você é estritamente vegano, substitua por xarope de bordo ou agave para o mesmo efeito.',
+        },
+        {
+          question: 'Qual programa uso para sorbet no Creami?',
+          answer: 'Use o programa "Sorbet" em qualquer modelo de Creami. Ele foi feito para blocos congelados mais duros e densos e usa mais torque que o programa Ice Cream para raspar a base fruta-água até uma textura lisa. Usar o programa Ice Cream num sorbet deixa ele gelado ou quebradiço com frequência.',
+        },
+        {
+          question: 'Como faço um sorbet menos doce?',
+          answer: 'Não corte só o açúcar — o açúcar é um ingrediente estrutural que impede cristais de gelo. Em vez disso, troque metade do açúcar por alulose (ou um blend de monk fruit + eritritol), que dá crioproteção parecida com menos calorias e menos doçura. Você também pode adicionar um toque de suco de limão para equilibrar a doçura sem mexer na proporção de açúcar.',
+        },
+      ],
     },
   },
   'gelato': {
