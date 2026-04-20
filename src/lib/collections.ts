@@ -1296,26 +1296,316 @@ O segredo de um sorbet cremoso (em vez de gelado) é a proporção açúcar-frut
       title: 'Gelato Recipes for Ninja Creami',
       description: 'Authentic Italian-style gelato recipes for your Ninja Creami. Denser, silkier, and more intensely flavored than regular ice cream — all tested with step-by-step instructions.',
       metaDescription: 'Authentic Italian Ninja Creami gelato recipes — denser than ice cream, silkier texture, bold flavor. Pistachio, stracciatella, lemon ricotta and more.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Gelato is ice cream\'s denser, silkier Italian cousin. The Ninja Creami\'s Gelato program is specifically tuned for this texture — lower air content, more intense flavor concentration, and that characteristic elastic, almost chewy pull that separates a real gelato from a pint of ice cream. Every recipe on this page has been tested to match the texture you\'d find at a proper Italian gelateria.
+
+The technical difference is about fat ratio and air. Classic American ice cream is roughly 14–16% fat, while gelato is 4–9% fat. That lower fat makes gelato feel denser (less air is whipped in) and allows the flavor to come forward unmasked by heavy cream. Our recipes use whole milk as the primary base with a smaller amount of heavy cream — the inverse ratio of traditional ice cream. Result: intensely flavored pints that taste almost more of the ingredient than the cream itself.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'The three gelato styles on this site',
+          cards: [
+            {
+              title: 'Classic Italian flavors',
+              body: 'Pistachio, stracciatella, nocciola (hazelnut), fior di latte (sweet cream). The time-honored Italian gelato flavors, made with real ingredients like pistachio paste, chopped dark chocolate, and toasted hazelnuts. Start here if you want a proper Italian cafe experience.',
+            },
+            {
+              title: 'Citrus and fruit gelato',
+              body: 'Lemon ricotta, blood orange, amarena cherry. Italian cafes have always excelled at fruit gelato; these recipes use real fruit juice, zest, or whole preserved cherries for the authentic cafe flavor. Lighter than cream gelato but still denser than sorbet.',
+            },
+            {
+              title: 'Dessert-inspired gelato',
+              body: 'Tiramisu, bacio, amaretto. Italian dessert classics translated into gelato form — with real mascarpone, espresso, and almond extract. These are the richer, indulgent end of the gelato spectrum, closer to a liquid dessert than a light palate cleanser.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**How to use these recipes:** every recipe page specifies the exact milk-to-cream ratio, sugar amount, and the Gelato program cycle. The Gelato program is slower and denser than Ice Cream — it preserves the lower-air texture you need. If your first pint comes out too dense to scoop comfortably, add a tablespoon of warm milk and Re-Spin on the Ice Cream program instead.
+
+**Getting that real Italian flavor:** the secret is quality inclusions. Use real pistachio paste (not syrup or extract alone), actual shaved dark chocolate (70%+) for stracciatella, toasted hazelnuts for nocciola. These are the details that separate "ice cream with a nut flavoring" from "real Italian gelato" in a pint.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'What\'s the difference between gelato and ice cream in the Ninja Creami?',
+          answer: 'Gelato is lower in fat (4–9% vs 14–16% for ice cream) and incorporates less air during processing, giving it a denser, silkier texture and more intense flavor. The Ninja Creami\'s Gelato program is tuned for this — slower blade action, less aeration. Gelato recipes also use a different ratio: more milk, less cream.',
+        },
+        {
+          question: 'Can I make gelato on the Ninja Creami Original (not Deluxe)?',
+          answer: 'Yes — both Original and Deluxe have the Gelato program. The Deluxe XL handles larger 24oz pints but the texture is identical. If your Creami model doesn\'t have a Gelato program, use Ice Cream with a 24-hour freeze — the texture won\'t be quite as silky but it will still be dense and flavorful.',
+        },
+        {
+          question: 'Why is my Ninja Creami gelato too icy?',
+          answer: 'Gelato with not enough fat or sugar will come out icy. Make sure your milk-to-cream ratio is correct (typically 1 cup milk + 1/2 cup cream) and you\'re using real sugar (not mostly sugar substitutes — sugar prevents ice crystals). If the recipe is correct and it\'s still icy, add 1 tablespoon warm milk and Re-Spin.',
+        },
+        {
+          question: 'What\'s the best pistachio paste for Ninja Creami gelato?',
+          answer: 'Look for "100% pistachio paste" or "pure pistachio cream" — no added sugar, oil, or milk powder. Fiasconaro and Babbi are the gold-standard Italian brands. Avoid "pistachio butter" or "pistachio spread" which usually contain sugar and other ingredients that throw off the gelato balance.',
+        },
+        {
+          question: 'Which program do I use for gelato?',
+          answer: 'The "Gelato" program. It uses slower blade speed than Ice Cream for less aeration, producing the denser, silkier texture gelato is known for. If your Creami model doesn\'t have Gelato, use Ice Cream — the texture will be slightly airier but still good.',
+        },
+        {
+          question: 'How long does homemade gelato keep in the freezer?',
+          answer: 'Up to 1 week in the original Creami pint, sealed with the lid. After that it\'s safe to eat but the texture starts crystallizing. For longer storage (up to a month), cover the surface of the gelato with plastic wrap before putting the lid on — this blocks air contact and prevents freezer burn.',
+        },
+      ],
     },
     fr: {
       title: 'Recettes de Gelato pour Ninja Creami',
       description: 'Recettes de gelato authentiques à l\'italienne pour votre Ninja Creami. Plus dense, plus soyeux et plus intensément parfumé que la crème glacée — avec des instructions étape par étape.',
       metaDescription: 'Recettes authentiques de gelato Ninja Creami — plus dense que la glace, texture soyeuse, saveur intense. Pistache, stracciatella, ricotta-citron et plus.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Le gelato est le cousin italien plus dense et plus soyeux de la crème glacée. Le programme Gelato du Ninja Creami est spécifiquement calibré pour cette texture — moins d\'air, plus de concentration aromatique et cette élasticité caractéristique, presque mâchable, qui distingue un vrai gelato d\'un pot de crème glacée. Chaque recette de cette page a été testée pour obtenir la texture d\'une vraie gelateria italienne.
+
+La différence technique tient au ratio de matières grasses et d\'air. La crème glacée américaine classique contient environ 14 à 16% de matières grasses, alors que le gelato est à 4–9%. Cette teneur plus faible rend le gelato plus dense (moins d\'air incorporé) et laisse les saveurs s\'exprimer sans être masquées par la crème. Nos recettes utilisent du lait entier comme base principale avec une quantité plus modeste de crème — l\'inverse du ratio de la crème glacée traditionnelle. Résultat : des pots intensément parfumés qui goûtent presque plus l\'ingrédient que la crème elle-même.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Les trois styles de gelato sur ce site',
+          cards: [
+            {
+              title: 'Saveurs italiennes classiques',
+              body: 'Pistache, stracciatella, nocciola (noisette), fior di latte (crème douce). Les saveurs italiennes consacrées, faites avec de vrais ingrédients comme la pâte de pistache, le chocolat noir haché et les noisettes grillées. Commencez ici si vous voulez une vraie expérience de café italien.',
+            },
+            {
+              title: 'Gelato aux agrumes et fruits',
+              body: 'Citron-ricotta, orange sanguine, cerise amarena. Les cafés italiens ont toujours excellé dans le gelato aux fruits ; ces recettes utilisent du jus, du zeste ou des cerises confites entières pour la saveur authentique. Plus léger que le gelato crémeux mais toujours plus dense qu\'un sorbet.',
+            },
+            {
+              title: 'Gelato inspirés des desserts',
+              body: 'Tiramisu, bacio, amaretto. Des classiques de la pâtisserie italienne transposés en gelato — avec du vrai mascarpone, de l\'espresso et de l\'extrait d\'amande. L\'extrémité plus riche et indulgente du spectre gelato, plus proche d\'un dessert liquide que d\'un rafraîchissement de palais.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Comment utiliser ces recettes :** chaque page de recette indique le ratio exact lait-crème, la quantité de sucre et le cycle du programme Gelato. Le programme Gelato est plus lent et plus dense que Ice Cream — il préserve la texture moins aérée dont vous avez besoin. Si votre premier pot sort trop dense pour être servi confortablement, ajoutez une cuillère à soupe de lait tiède et faites un Re-Spin sur le programme Ice Cream à la place.
+
+**Obtenir cette vraie saveur italienne :** le secret, c\'est la qualité des ajouts. Utilisez de la vraie pâte de pistache (pas du sirop ni de l\'extrait seul), du chocolat noir véritable haché (70%+) pour la stracciatella, des noisettes grillées pour la nocciola. Ce sont les détails qui séparent "glace avec arôme noisette" d\'un "vrai gelato italien" dans un pot.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Quelle est la différence entre gelato et crème glacée dans le Ninja Creami ?',
+          answer: 'Le gelato est plus pauvre en matières grasses (4–9% contre 14–16% pour la crème glacée) et incorpore moins d\'air pendant le traitement, ce qui lui donne une texture plus dense et soyeuse et une saveur plus intense. Le programme Gelato du Ninja Creami est calibré pour cela — action de lame plus lente, moins d\'aération. Les recettes de gelato utilisent aussi un ratio différent : plus de lait, moins de crème.',
+        },
+        {
+          question: 'Puis-je faire du gelato sur le Ninja Creami Original (pas Deluxe) ?',
+          answer: 'Oui — Original et Deluxe ont tous deux le programme Gelato. Le Deluxe XL gère des pots plus grands de 24oz mais la texture est identique. Si votre modèle n\'a pas de programme Gelato, utilisez Ice Cream avec une congélation de 24 heures — la texture ne sera pas aussi soyeuse mais restera dense et parfumée.',
+        },
+        {
+          question: 'Pourquoi mon gelato Ninja Creami est-il trop glacé ?',
+          answer: 'Un gelato avec pas assez de matières grasses ou de sucre sortira glacé. Vérifiez que votre ratio lait-crème est correct (typiquement 1 tasse de lait + 1/2 tasse de crème) et que vous utilisez du vrai sucre (pas principalement des substituts — le sucre empêche les cristaux de glace). Si la recette est correcte et que c\'est encore glacé, ajoutez 1 cuillère à soupe de lait tiède et faites un Re-Spin.',
+        },
+        {
+          question: 'Quelle est la meilleure pâte de pistache pour le gelato Ninja Creami ?',
+          answer: 'Cherchez "pâte de pistache 100%" ou "crème de pistache pure" — sans sucre, huile ou lait en poudre ajouté. Fiasconaro et Babbi sont les marques italiennes de référence. Évitez le "beurre de pistache" ou la "pâte à tartiner pistache" qui contiennent généralement du sucre et d\'autres ingrédients qui déséquilibrent le gelato.',
+        },
+        {
+          question: 'Quel programme utiliser pour le gelato ?',
+          answer: 'Le programme "Gelato". Il utilise une vitesse de lame plus lente qu\'Ice Cream pour moins d\'aération, produisant la texture plus dense et soyeuse qui caractérise le gelato. Si votre modèle Creami n\'a pas Gelato, utilisez Ice Cream — la texture sera légèrement plus aérée mais toujours bonne.',
+        },
+        {
+          question: 'Combien de temps se conserve un gelato maison au congélateur ?',
+          answer: 'Jusqu\'à 1 semaine dans le pot Creami d\'origine, fermé avec le couvercle. Au-delà, c\'est sûr à manger mais la texture commence à cristalliser. Pour une conservation plus longue (jusqu\'à un mois), couvrez la surface du gelato avec du film alimentaire avant de mettre le couvercle — cela bloque le contact avec l\'air et évite les brûlures de congélation.',
+        },
+      ],
     },
     es: {
       title: 'Recetas de Gelato para Ninja Creami',
       description: 'Recetas auténticas de gelato estilo italiano para tu Ninja Creami. Más denso, más sedoso y con sabores más intensos que el helado común — con instrucciones paso a paso.',
       metaDescription: 'Recetas auténticas de gelato Ninja Creami — más denso que el helado, textura sedosa, sabor intenso. Pistacho, stracciatella, limón-ricotta y más.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `El gelato es el primo italiano más denso y sedoso del helado. El programa Gelato del Ninja Creami está ajustado específicamente para esa textura — menos aire, mayor concentración de sabor y ese tirón elástico, casi masticable, que distingue un gelato de verdad de un pote de helado común. Cada receta de esta página se ha probado para conseguir la textura que encontrarías en una gelatería italiana auténtica.
+
+La diferencia técnica está en la grasa y el aire. El helado americano clásico tiene entre 14 y 16% de grasa; el gelato se queda en 4–9%. Esa grasa menor hace que el gelato se sienta más denso (se incorpora menos aire) y permite que el sabor salga al frente sin quedar enmascarado por la nata. Nuestras recetas usan leche entera como base principal con una cantidad menor de nata — la proporción inversa al helado tradicional. Resultado: potes intensamente sabrosos que saben casi más al ingrediente que a la crema misma.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Los tres estilos de gelato en este sitio',
+          cards: [
+            {
+              title: 'Sabores italianos clásicos',
+              body: 'Pistacho, stracciatella, nocciola (avellana), fior di latte (nata dulce). Los sabores italianos consagrados, hechos con ingredientes reales como pasta de pistacho, chocolate negro troceado y avellanas tostadas. Empieza aquí si quieres la experiencia de una cafetería italiana de verdad.',
+            },
+            {
+              title: 'Gelato cítrico y frutal',
+              body: 'Limón-ricotta, naranja sanguina, cereza amarena. Los cafés italianos siempre han destacado con el gelato de fruta; estas recetas usan jugo real, ralladura o cerezas enteras en conserva para ese sabor auténtico. Más ligero que el gelato de nata pero aún más denso que un sorbete.',
+            },
+            {
+              title: 'Gelato inspirado en postres',
+              body: 'Tiramisú, bacio, amaretto. Clásicos de la pastelería italiana trasladados a formato gelato — con mascarpone real, espresso y extracto de almendra. El extremo más rico e indulgente del espectro gelato, más cerca de un postre líquido que de un refrescante entre platos.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Cómo usar estas recetas:** cada página indica la proporción exacta leche-nata, la cantidad de azúcar y el ciclo del programa Gelato. El programa Gelato es más lento y más denso que Ice Cream — preserva la textura menos aireada que necesitas. Si tu primer pote sale demasiado denso como para servir cómodamente, añade una cucharada de leche tibia y haz un Re-Spin en el programa Ice Cream.
+
+**Conseguir ese sabor italiano auténtico:** el secreto son los añadidos de calidad. Usa pasta de pistacho real (no sirope ni extracto solo), chocolate negro de verdad troceado (70%+) para la stracciatella, avellanas tostadas para la nocciola. Esos detalles son los que separan "helado con sabor a fruto seco" de "gelato italiano auténtico" en un pote.`,
+        },
+      ],
+      faqs: [
+        {
+          question: '¿Cuál es la diferencia entre gelato y helado en el Ninja Creami?',
+          answer: 'El gelato tiene menos grasa (4–9% vs 14–16% del helado) e incorpora menos aire durante el procesado, lo que le da una textura más densa y sedosa y un sabor más intenso. El programa Gelato del Ninja Creami está ajustado a eso — acción de cuchilla más lenta, menos aireación. Las recetas de gelato también usan otra proporción: más leche, menos nata.',
+        },
+        {
+          question: '¿Puedo hacer gelato en el Ninja Creami Original (no Deluxe)?',
+          answer: 'Sí — tanto el Original como el Deluxe tienen programa Gelato. El Deluxe XL maneja potes más grandes de 24oz pero la textura es idéntica. Si tu modelo de Creami no tiene programa Gelato, usa Ice Cream con 24 horas de congelado — la textura no será tan sedosa pero seguirá siendo densa y sabrosa.',
+        },
+        {
+          question: '¿Por qué mi gelato Ninja Creami queda muy helado?',
+          answer: 'Un gelato con poca grasa o azúcar saldrá helado. Asegúrate de que tu proporción leche-nata es correcta (típicamente 1 taza de leche + 1/2 taza de nata) y que usas azúcar de verdad (no mayoritariamente sustitutos — el azúcar impide los cristales de hielo). Si la receta es correcta y aún sale helado, añade 1 cucharada de leche tibia y haz un Re-Spin.',
+        },
+        {
+          question: '¿Cuál es la mejor pasta de pistacho para el gelato Ninja Creami?',
+          answer: 'Busca "pasta de pistacho 100%" o "crema de pistacho pura" — sin azúcar, aceite ni leche en polvo añadidos. Fiasconaro y Babbi son las marcas italianas de referencia. Evita "mantequilla de pistacho" o "crema para untar de pistacho" que suelen contener azúcar y otros ingredientes que desequilibran el gelato.',
+        },
+        {
+          question: '¿Qué programa uso para el gelato?',
+          answer: 'El programa "Gelato". Usa una velocidad de cuchilla más lenta que Ice Cream para menos aireación, produciendo la textura más densa y sedosa característica del gelato. Si tu modelo de Creami no tiene Gelato, usa Ice Cream — la textura será algo más aireada pero buena.',
+        },
+        {
+          question: '¿Cuánto dura el gelato casero en el congelador?',
+          answer: 'Hasta 1 semana en el pote Creami original, cerrado con la tapa. Pasado ese tiempo sigue siendo seguro pero la textura empieza a cristalizar. Para una conservación más larga (hasta un mes), cubre la superficie del gelato con film transparente antes de poner la tapa — eso bloquea el contacto con el aire y evita las quemaduras por congelación.',
+        },
+      ],
     },
     de: {
       title: 'Gelato-Rezepte für Ninja Creami',
       description: 'Authentische italienische Gelato-Rezepte für deinen Ninja Creami. Dichter, seidiger und geschmacksintensiver als normales Eis — mit Schritt-für-Schritt-Anleitung getestet.',
       metaDescription: 'Authentische italienische Ninja Creami Gelato-Rezepte — dichter als Eis, seidige Textur, intensiver Geschmack. Pistazie, Stracciatella, Zitrone-Ricotta u.v.m.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Gelato ist der dichtere, seidigere italienische Cousin von Eiscreme. Das Gelato-Programm des Ninja Creami ist genau auf diese Textur abgestimmt — weniger Luftanteil, konzentrierterer Geschmack und dieser charakteristische elastische, fast kaubare Zug, der echtes Gelato von einem normalen Pint unterscheidet. Jedes Rezept auf dieser Seite wurde getestet, um der Textur einer echten italienischen Gelateria zu entsprechen.
+
+Der technische Unterschied liegt im Fettanteil und der Luft. Klassische amerikanische Eiscreme hat etwa 14–16% Fett, Gelato dagegen 4–9%. Dieser geringere Fettanteil macht Gelato dichter (weniger Luft wird eingerührt) und lässt den Geschmack unverdeckt nach vorne kommen. Unsere Rezepte nutzen Vollmilch als Hauptbasis mit einer kleineren Menge Sahne — das umgekehrte Verhältnis zu traditioneller Eiscreme. Das Ergebnis: intensiv aromatische Pints, die fast mehr nach der Zutat selbst schmecken als nach Sahne.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Die drei Gelato-Stile auf dieser Seite',
+          cards: [
+            {
+              title: 'Klassische italienische Sorten',
+              body: 'Pistazie, Stracciatella, Nocciola (Haselnuss), Fior di Latte (süße Sahne). Die traditionsreichen italienischen Gelato-Sorten, gemacht mit echten Zutaten wie Pistazienpaste, gehackter dunkler Schokolade und gerösteten Haselnüssen. Starte hier, wenn du ein echtes italienisches Café-Erlebnis willst.',
+            },
+            {
+              title: 'Zitrus- und Frucht-Gelato',
+              body: 'Zitrone-Ricotta, Blutorange, Amarena-Kirsche. Italienische Cafés waren schon immer stark bei Frucht-Gelato; diese Rezepte nutzen echten Saft, Abrieb oder eingelegte Amarena-Kirschen für den authentischen Café-Geschmack. Leichter als Sahne-Gelato, aber dichter als Sorbet.',
+            },
+            {
+              title: 'Dessert-inspiriertes Gelato',
+              body: 'Tiramisu, Bacio, Amaretto. Italienische Dessertklassiker ins Gelato-Format übersetzt — mit echtem Mascarpone, Espresso und Mandelextrakt. Das reichhaltigere, opulentere Ende des Gelato-Spektrums, näher an flüssigem Dessert als an leichter Erfrischung.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**So nutzt du diese Rezepte:** Jede Rezeptseite nennt das genaue Milch-Sahne-Verhältnis, die Zuckermenge und den Gelato-Programmzyklus. Das Gelato-Programm ist langsamer und dichter als Ice Cream — es bewahrt die weniger luftige Textur, die du brauchst. Kommt dein erstes Pint zu dicht heraus zum komfortablen Löffeln, gib einen Esslöffel warme Milch dazu und mach einen Re-Spin im Ice-Cream-Programm.
+
+**Echten italienischen Geschmack erreichen:** Das Geheimnis sind hochwertige Zutaten. Verwende echte Pistazienpaste (nicht nur Sirup oder Extrakt), echte gehackte dunkle Schokolade (70%+) für Stracciatella, geröstete Haselnüsse für Nocciola. Das sind die Details, die "Eiscreme mit Nussaroma" von "echtem italienischen Gelato" im Pint unterscheiden.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Was ist der Unterschied zwischen Gelato und Eiscreme im Ninja Creami?',
+          answer: 'Gelato hat weniger Fett (4–9% vs 14–16% bei Eiscreme) und nimmt beim Verarbeiten weniger Luft auf, was zu dichterer, seidigerer Textur und intensiverem Geschmack führt. Das Gelato-Programm des Ninja Creami ist darauf ausgelegt — langsamere Klingenaktion, weniger Belüftung. Gelato-Rezepte nutzen zudem ein anderes Verhältnis: mehr Milch, weniger Sahne.',
+        },
+        {
+          question: 'Kann ich Gelato auf dem Ninja Creami Original (nicht Deluxe) machen?',
+          answer: 'Ja — sowohl Original als auch Deluxe haben das Gelato-Programm. Der Deluxe XL verarbeitet größere 24oz-Pints, aber die Textur ist identisch. Wenn dein Creami-Modell kein Gelato-Programm hat, nutze Ice Cream mit 24 Stunden Gefrierzeit — die Textur wird nicht ganz so seidig, aber trotzdem dicht und aromatisch.',
+        },
+        {
+          question: 'Warum ist mein Ninja Creami Gelato zu eisig?',
+          answer: 'Gelato mit zu wenig Fett oder Zucker wird eisig. Stelle sicher, dass dein Milch-Sahne-Verhältnis stimmt (typisch 1 Tasse Milch + 1/2 Tasse Sahne) und dass du echten Zucker verwendest (nicht überwiegend Ersatzstoffe — Zucker verhindert Eiskristalle). Wenn das Rezept stimmt und es trotzdem eisig ist, gib 1 Esslöffel warme Milch dazu und mach einen Re-Spin.',
+        },
+        {
+          question: 'Welche Pistazienpaste ist die beste für Ninja Creami Gelato?',
+          answer: 'Suche nach "100% Pistazienpaste" oder "pure Pistaziencreme" — ohne zugesetzten Zucker, Öl oder Milchpulver. Fiasconaro und Babbi sind die italienischen Gold-Standard-Marken. Meide "Pistaziencreme" oder "Pistazien-Brotaufstrich", die meist Zucker und andere Zutaten enthalten, die das Gelato-Gleichgewicht stören.',
+        },
+        {
+          question: 'Welches Programm nutze ich für Gelato?',
+          answer: 'Das Programm "Gelato". Es nutzt eine langsamere Klingenaktion als Ice Cream für weniger Belüftung und erzeugt die dichtere, seidigere Textur, die Gelato auszeichnet. Wenn dein Creami-Modell kein Gelato-Programm hat, nutze Ice Cream — die Textur wird leicht luftiger, aber trotzdem gut.',
+        },
+        {
+          question: 'Wie lange hält selbstgemachtes Gelato im Gefrierschrank?',
+          answer: 'Bis zu 1 Woche im originalen Creami-Pint, mit Deckel verschlossen. Danach ist es noch sicher zu essen, aber die Textur kristallisiert. Für längere Lagerung (bis zu einem Monat) decke die Oberfläche des Gelato mit Frischhaltefolie ab, bevor du den Deckel aufsetzt — das blockiert den Luftkontakt und verhindert Gefrierbrand.',
+        },
+      ],
     },
     pt: {
       title: 'Receitas de Gelato para Ninja Creami',
       description: 'Receitas autênticas de gelato estilo italiano para seu Ninja Creami. Mais denso, mais sedoso e com sabores mais intensos que sorvete comum — com instruções passo a passo.',
       metaDescription: 'Receitas autênticas de gelato Ninja Creami — mais denso que sorvete, textura sedosa, sabor intenso. Pistache, stracciatella, limão-ricota e mais.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `O gelato é o primo italiano mais denso e sedoso do sorvete. O programa Gelato do Ninja Creami é especificamente ajustado para essa textura — menos ar, maior concentração de sabor e aquele puxão elástico, quase mastigável, que distingue um gelato de verdade de um pote de sorvete comum. Cada receita desta página foi testada para corresponder à textura que você encontraria numa gelateria italiana de verdade.
+
+A diferença técnica está na gordura e no ar. Sorvete americano clássico tem cerca de 14–16% de gordura; gelato fica em 4–9%. Essa gordura menor faz o gelato parecer mais denso (menos ar é incorporado) e permite que o sabor apareça sem ser mascarado pelo creme. Nossas receitas usam leite integral como base principal com uma quantidade menor de creme de leite — a proporção inversa do sorvete tradicional. Resultado: potes intensamente saborosos que têm gosto quase mais do ingrediente do que do próprio creme.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Os três estilos de gelato neste site',
+          cards: [
+            {
+              title: 'Sabores italianos clássicos',
+              body: 'Pistache, stracciatella, nocciola (avelã), fior di latte (creme doce). Os sabores italianos consagrados, feitos com ingredientes de verdade como pasta de pistache, chocolate meio amargo picado e avelãs torradas. Comece aqui se quer a experiência de um café italiano de verdade.',
+            },
+            {
+              title: 'Gelato cítrico e de frutas',
+              body: 'Limão-ricota, laranja-sanguínea, cereja amarena. Os cafés italianos sempre foram excelentes em gelato de fruta; essas receitas usam suco de verdade, raspas ou cerejas inteiras em calda para aquele sabor autêntico. Mais leve que gelato de creme, mas ainda mais denso que um sorbet.',
+            },
+            {
+              title: 'Gelato inspirado em sobremesas',
+              body: 'Tiramisù, bacio, amaretto. Clássicos da confeitaria italiana traduzidos em formato gelato — com mascarpone de verdade, espresso e extrato de amêndoa. A ponta mais rica e indulgente do espectro gelato, mais próxima de uma sobremesa líquida do que de um refrescante.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Como usar essas receitas:** cada página especifica a proporção exata leite-creme, a quantidade de açúcar e o ciclo do programa Gelato. O programa Gelato é mais lento e mais denso que Ice Cream — preserva a textura menos aerada que você precisa. Se seu primeiro pote sair denso demais para servir confortavelmente, adicione uma colher de sopa de leite morno e faça um Re-Spin no programa Ice Cream.
+
+**Conseguir aquele sabor italiano de verdade:** o segredo é a qualidade das adições. Use pasta de pistache de verdade (não xarope nem extrato sozinhos), chocolate meio amargo real picado (70%+) para stracciatella, avelãs torradas para nocciola. Esses detalhes separam "sorvete com sabor de castanha" de "gelato italiano de verdade" num pote.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Qual a diferença entre gelato e sorvete no Ninja Creami?',
+          answer: 'O gelato tem menos gordura (4–9% vs 14–16% do sorvete) e incorpora menos ar durante o processamento, o que dá uma textura mais densa e sedosa e sabor mais intenso. O programa Gelato do Ninja Creami é ajustado para isso — ação de lâmina mais lenta, menos aeração. Receitas de gelato também usam outra proporção: mais leite, menos creme.',
+        },
+        {
+          question: 'Posso fazer gelato no Ninja Creami Original (não Deluxe)?',
+          answer: 'Sim — tanto o Original quanto o Deluxe têm programa Gelato. O Deluxe XL trabalha com potes maiores de 24oz mas a textura é idêntica. Se seu modelo de Creami não tem programa Gelato, use Ice Cream com 24 horas de congelamento — a textura não ficará tão sedosa mas ainda será densa e saborosa.',
+        },
+        {
+          question: 'Por que meu gelato do Ninja Creami está muito gelado?',
+          answer: 'Gelato com pouca gordura ou açúcar fica gelado. Garanta que sua proporção leite-creme está correta (tipicamente 1 xícara de leite + 1/2 xícara de creme de leite) e que está usando açúcar de verdade (não majoritariamente substitutos — o açúcar impede cristais de gelo). Se a receita está correta e ainda está gelado, adicione 1 colher de sopa de leite morno e faça um Re-Spin.',
+        },
+        {
+          question: 'Qual a melhor pasta de pistache para gelato no Ninja Creami?',
+          answer: 'Procure por "pasta de pistache 100%" ou "creme de pistache puro" — sem açúcar, óleo ou leite em pó adicionados. Fiasconaro e Babbi são as marcas italianas de referência. Evite "manteiga de pistache" ou "pasta de pistache para passar" que geralmente contêm açúcar e outros ingredientes que desequilibram o gelato.',
+        },
+        {
+          question: 'Qual programa uso para gelato?',
+          answer: 'O programa "Gelato". Ele usa velocidade de lâmina mais lenta que Ice Cream para menos aeração, produzindo a textura mais densa e sedosa pela qual o gelato é conhecido. Se seu modelo de Creami não tem Gelato, use Ice Cream — a textura ficará um pouco mais aerada mas ainda boa.',
+        },
+        {
+          question: 'Quanto tempo dura o gelato caseiro no freezer?',
+          answer: 'Até 1 semana no pote Creami original, fechado com a tampa. Depois disso ainda é seguro comer mas a textura começa a cristalizar. Para armazenamento mais longo (até um mês), cubra a superfície do gelato com filme plástico antes de colocar a tampa — isso bloqueia o contato com o ar e evita queimadura por congelamento.',
+        },
+      ],
     },
   },
   'milkshake': {
@@ -1323,26 +1613,316 @@ O segredo de um sorbet cremoso (em vez de gelado) é a proporção açúcar-frut
       title: 'Milkshake Recipes for Ninja Creami',
       description: 'Thick and creamy milkshake recipes made with your Ninja Creami. Classic flavors, indulgent mix-ins, and perfectly blended frozen drinks — all with step-by-step instructions.',
       metaDescription: 'Ninja Creami milkshake recipes — thicker, creamier, and quicker than a blender. Classic chocolate, strawberry, banana caramel plus creative mix-ins.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `The Ninja Creami makes milkshakes that put a blender to shame. Because the Creami starts with a properly frozen pint — not ice cubes that water down your shake — you get thick, spoon-standing-up consistency with none of the watery dilution a blender introduces. Every recipe on this page has been calibrated to the Milkshake program, so you get diner-style pours without the trial and error.
+
+The technique is different from a traditional milkshake. Instead of blending ice cream with milk (which thins it), you freeze a milkshake-specific base as a pint — cream, milk, sugar, flavoring — and let the Milkshake program bring it to that perfect drinkable-but-thick consistency. Think Steak \'n Shake level of thickness, not McDonald\'s thin. For extra-thick, use the Ice Cream program first and stop at the drinkable stage.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'The three milkshake styles on this site',
+          cards: [
+            {
+              title: 'Classic diner shakes',
+              body: 'Chocolate, strawberry, vanilla, cookies and cream. The nostalgic shake flavors that made the format famous. Thick, frothy, and tall — exactly what you\'d order at a 1950s-style diner. Start here if you\'re new to the Milkshake program.',
+            },
+            {
+              title: 'Dessert-shakes',
+              body: 'Banana caramel, Birthday Cake, Nutella. Shakes that are basically dessert in liquid form, topped with whipped cream and fun garnishes. Richer than classic shakes and better suited as an after-dinner treat than a drink.',
+            },
+            {
+              title: 'Fruit and tropical shakes',
+              body: 'Strawberry, peach, mango, pineapple. Lighter, fruit-forward shakes that use real fruit puree alongside the cream base. Less dessert-heavy, more summery and refreshing.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**How to use these recipes:** each recipe specifies the base ratio, the exact Milkshake program cycle, and any mix-ins to add during the Mix-In stage. The Milkshake program is the only one designed for drinkable (not scoopable) texture — use it instead of Ice Cream followed by extra milk, which produces a more liquid result.
+
+**Choosing your cup:** milkshakes in a Creami pour best into tall, chilled glasses. Put your serving glass in the freezer for 10 minutes before pouring — a cold glass keeps the shake thick longer and delivers that classic "stays thick to the bottom" diner experience.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'What\'s the difference between a Ninja Creami milkshake and ice cream?',
+          answer: 'A milkshake in the Creami is specifically drinkable — the Milkshake program processes the frozen pint to a thick-but-pourable consistency (like a thick diner shake). Ice cream is processed to scoopable texture. You use the same type of base but a different program cycle.',
+        },
+        {
+          question: 'Which program do I use for milkshakes?',
+          answer: 'Use the "Milkshake" program on the Creami Deluxe — it\'s tuned to leave the pint pourable rather than scoopable. On the Original Creami (no Milkshake program), use Ice Cream and add 2–3 tablespoons of milk at the end, then Re-Spin — the result is nearly identical.',
+        },
+        {
+          question: 'Can I make a milkshake from an already-spun pint of ice cream?',
+          answer: 'Yes — add 2–3 tablespoons of milk on top of a spun pint, then run the Milkshake program (or Re-Spin if you don\'t have Milkshake). This is the easiest way to turn leftover ice cream into a shake without making a new pint.',
+        },
+        {
+          question: 'Why is my Ninja Creami milkshake too thick to drink through a straw?',
+          answer: 'The pint is over-frozen or the base is too low in liquid. Add 1–2 tablespoons of milk and run the Milkshake or Re-Spin program again. Every additional tablespoon thins the shake — add gradually until it flows through a thick straw but still coats the sides of the glass.',
+        },
+        {
+          question: 'Can I make a protein milkshake in the Creami?',
+          answer: 'Yes — use a protein ice cream base (protein powder + milk + sweetener) and run the Milkshake program at the end. You\'ll get 25–30g of protein per serving in a shake that actually tastes like dessert, not a chalky protein drink.',
+        },
+        {
+          question: 'How do I make a thick milkshake without added sugar?',
+          answer: 'Use allulose instead of sugar — it has the same texture-building effect (sugar is what makes shakes thick, not just sweet). Avoid zero-sugar sweeteners like pure stevia or erythritol alone for shakes; they don\'t provide the same thickness. Banana or avocado can also thicken a low-sugar shake.',
+        },
+      ],
     },
     fr: {
       title: 'Recettes de Milkshake pour Ninja Creami',
       description: 'Recettes de milkshakes épais et crémeux pour votre Ninja Creami. Saveurs classiques, garnitures gourmandes et boissons glacées parfaitement mixées — avec instructions étape par étape.',
       metaDescription: 'Recettes de milkshake Ninja Creami — plus épais, plus crémeux et plus rapides qu\'un blender. Chocolat, fraise, banane-caramel et mélanges créatifs.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Le Ninja Creami fait des milkshakes à faire rougir un blender. Parce que le Creami part d\'un pot correctement congelé — pas de glaçons qui diluent votre shake — vous obtenez une consistance épaisse, cuillère-tient-droite, sans aucune dilution aqueuse d\'un blender. Chaque recette de cette page a été calibrée pour le programme Milkshake, pour des versés style diner sans essais ratés.
+
+La technique est différente du milkshake traditionnel. Au lieu de mixer de la glace avec du lait (ce qui la dilue), vous congelez une base spécifique au milkshake comme pot — crème, lait, sucre, arôme — et laissez le programme Milkshake l\'amener à la consistance idéale : buvable mais épaisse. Niveau Steak \'n Shake d\'épaisseur, pas McDonald\'s liquide. Pour extra-épais, utilisez d\'abord le programme Ice Cream et arrêtez à l\'étape buvable.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Les trois styles de milkshake sur ce site',
+          cards: [
+            {
+              title: 'Shakes de diner classiques',
+              body: 'Chocolat, fraise, vanille, cookies and cream. Les saveurs de shake nostalgiques qui ont rendu le format célèbre. Épais, mousseux, généreux — exactement ce qu\'on commanderait dans un diner années 50. Commencez ici si vous débutez avec le programme Milkshake.',
+            },
+            {
+              title: 'Shakes-desserts',
+              body: 'Banane-caramel, Birthday Cake, Nutella. Des shakes qui sont essentiellement des desserts sous forme liquide, garnis de chantilly et de garnitures ludiques. Plus riches que les shakes classiques, mieux placés comme douceur d\'après-dîner que comme boisson.',
+            },
+            {
+              title: 'Shakes fruités et tropicaux',
+              body: 'Fraise, pêche, mangue, ananas. Des shakes plus légers, orientés fruits qui utilisent une vraie purée de fruits à côté de la base crémeuse. Moins dessert, plus estivaux et rafraîchissants.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Comment utiliser ces recettes :** chaque recette indique le ratio de la base, le cycle exact du programme Milkshake et les éventuels mix-ins à ajouter pendant l\'étape Mix-In. Le programme Milkshake est le seul conçu pour une texture buvable (pas à la cuillère) — utilisez-le plutôt que Ice Cream suivi de lait en plus, qui produit un résultat plus liquide.
+
+**Choisir son verre :** les milkshakes d\'un Creami se versent le mieux dans des verres hauts et froids. Mettez votre verre au congélateur 10 minutes avant de servir — un verre froid garde le shake épais plus longtemps et livre cette expérience classique "reste épais jusqu\'au fond" du diner.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Quelle est la différence entre un milkshake et une glace Ninja Creami ?',
+          answer: 'Un milkshake dans le Creami est spécifiquement buvable — le programme Milkshake traite le pot congelé jusqu\'à une consistance épaisse mais versable (comme un shake de diner épais). La crème glacée est traitée jusqu\'à une texture à la cuillère. Vous utilisez le même type de base mais un cycle de programme différent.',
+        },
+        {
+          question: 'Quel programme utiliser pour les milkshakes ?',
+          answer: 'Utilisez le programme "Milkshake" sur le Creami Deluxe — il est réglé pour laisser le pot versable plutôt qu\'à la cuillère. Sur le Creami Original (sans programme Milkshake), utilisez Ice Cream et ajoutez 2 à 3 cuillères à soupe de lait à la fin, puis Re-Spin — le résultat est presque identique.',
+        },
+        {
+          question: 'Puis-je faire un milkshake à partir d\'un pot de glace déjà turbiné ?',
+          answer: 'Oui — ajoutez 2 à 3 cuillères à soupe de lait sur un pot déjà turbiné, puis lancez le programme Milkshake (ou Re-Spin si vous n\'avez pas Milkshake). C\'est la façon la plus simple de transformer une glace restante en shake sans faire un nouveau pot.',
+        },
+        {
+          question: 'Pourquoi mon milkshake Ninja Creami est-il trop épais pour passer dans une paille ?',
+          answer: 'Le pot est trop congelé ou la base a trop peu de liquide. Ajoutez 1 à 2 cuillères à soupe de lait et relancez le programme Milkshake ou Re-Spin. Chaque cuillère supplémentaire fluidifie le shake — ajoutez progressivement jusqu\'à ce qu\'il passe dans une grosse paille tout en tapissant les côtés du verre.',
+        },
+        {
+          question: 'Puis-je faire un milkshake protéiné dans le Creami ?',
+          answer: 'Oui — utilisez une base de glace protéinée (poudre de protéine + lait + édulcorant) et lancez le programme Milkshake à la fin. Vous obtenez 25 à 30 g de protéines par portion dans un shake qui a vraiment le goût d\'un dessert, pas d\'une boisson protéinée farineuse.',
+        },
+        {
+          question: 'Comment faire un milkshake épais sans sucre ajouté ?',
+          answer: 'Utilisez de l\'allulose au lieu du sucre — elle a le même effet épaississant (c\'est le sucre qui rend les shakes épais, pas juste sucrés). Évitez les édulcorants zéro sucre comme la stévia pure ou l\'érythritol seul pour les shakes ; ils n\'apportent pas la même épaisseur. La banane ou l\'avocat peuvent aussi épaissir un shake peu sucré.',
+        },
+      ],
     },
     es: {
       title: 'Recetas de Milkshake para Ninja Creami',
       description: 'Recetas de milkshakes espesos y cremosos con tu Ninja Creami. Sabores clásicos, mezclas indulgentes y bebidas heladas perfectamente mezcladas — con instrucciones paso a paso.',
       metaDescription: 'Recetas de milkshake Ninja Creami — más espesos, cremosos y rápidos que una licuadora. Chocolate, fresa, banana-caramelo y mezclas creativas.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `El Ninja Creami hace milkshakes que dejan en ridículo a cualquier licuadora. Como el Creami parte de un pote correctamente congelado — no cubitos de hielo que aguan el batido — consigues una consistencia espesa, cuchara-se-queda-de-pie, sin la dilución acuosa que mete una licuadora. Cada receta de esta página se ha calibrado al programa Milkshake para que consigas batidos de estilo diner sin errores.
+
+La técnica es distinta a la del milkshake tradicional. En lugar de licuar helado con leche (que lo afina), congelas una base específica para milkshake como pote — nata, leche, azúcar, saborizante — y dejas que el programa Milkshake lo lleve a esa consistencia perfecta: bebible pero espesa. Nivel de espesor tipo Steak \'n Shake, no tipo McDonald\'s fino. Para extra-espeso, usa primero el programa Ice Cream y párate en la etapa bebible.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Los tres estilos de milkshake en este sitio',
+          cards: [
+            {
+              title: 'Batidos de diner clásicos',
+              body: 'Chocolate, fresa, vainilla, cookies and cream. Los sabores nostálgicos que hicieron famoso el formato. Espesos, espumosos, altos — justo lo que pedirías en un diner de los años 50. Empieza aquí si eres nuevo con el programa Milkshake.',
+            },
+            {
+              title: 'Batidos-postre',
+              body: 'Banana-caramelo, Birthday Cake, Nutella. Batidos que son básicamente postre en forma líquida, rematados con nata montada y toppings divertidos. Más ricos que los clásicos y mejor colocados como capricho después de cenar que como bebida.',
+            },
+            {
+              title: 'Batidos frutales y tropicales',
+              body: 'Fresa, melocotón, mango, piña. Batidos más ligeros y centrados en la fruta que usan puré de fruta real junto a la base de nata. Menos de postre, más veraniegos y refrescantes.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Cómo usar estas recetas:** cada receta indica la proporción de la base, el ciclo exacto del programa Milkshake y los mix-ins para añadir en la etapa Mix-In. El programa Milkshake es el único diseñado para textura bebible (no para cuchara) — úsalo en vez de Ice Cream seguido de leche extra, que da un resultado más líquido.
+
+**Eligiendo tu vaso:** los milkshakes de un Creami se sirven mejor en vasos altos y fríos. Mete tu vaso al congelador 10 minutos antes de servir — un vaso frío mantiene el batido espeso más tiempo y entrega esa experiencia clásica de diner "sigue espeso hasta el fondo".`,
+        },
+      ],
+      faqs: [
+        {
+          question: '¿Cuál es la diferencia entre un milkshake y un helado Ninja Creami?',
+          answer: 'Un milkshake en el Creami es específicamente bebible — el programa Milkshake procesa el pote congelado hasta una consistencia espesa pero vertible (como un batido grueso de diner). El helado se procesa hasta textura para cuchara. Usas el mismo tipo de base pero un ciclo de programa distinto.',
+        },
+        {
+          question: '¿Qué programa uso para los milkshakes?',
+          answer: 'Usa el programa "Milkshake" en el Creami Deluxe — está ajustado para dejar el pote vertible en lugar de para cuchara. En el Creami Original (sin programa Milkshake), usa Ice Cream y añade 2–3 cucharadas de leche al final, luego Re-Spin — el resultado es casi idéntico.',
+        },
+        {
+          question: '¿Puedo hacer un milkshake a partir de un pote de helado ya batido?',
+          answer: 'Sí — añade 2–3 cucharadas de leche encima de un pote ya batido y ejecuta el programa Milkshake (o Re-Spin si no tienes Milkshake). Es la forma más sencilla de convertir helado sobrante en batido sin hacer un pote nuevo.',
+        },
+        {
+          question: '¿Por qué mi milkshake Ninja Creami queda demasiado espeso para una pajita?',
+          answer: 'El pote está demasiado congelado o la base tiene poco líquido. Añade 1–2 cucharadas de leche y vuelve a ejecutar Milkshake o Re-Spin. Cada cucharada extra afina el batido — añade poco a poco hasta que pase por una pajita gruesa pero siga cubriendo los lados del vaso.',
+        },
+        {
+          question: '¿Puedo hacer un milkshake proteico en el Creami?',
+          answer: 'Sí — usa una base de helado proteico (proteína en polvo + leche + edulcorante) y ejecuta el programa Milkshake al final. Consigues 25–30 g de proteína por ración en un batido que realmente sabe a postre, no a bebida proteica pastosa.',
+        },
+        {
+          question: '¿Cómo hago un milkshake espeso sin azúcar añadido?',
+          answer: 'Usa alulosa en vez de azúcar — tiene el mismo efecto espesante (el azúcar es lo que hace espesos los batidos, no solo dulces). Evita edulcorantes cero azúcar como la estevia pura o eritritol solo para batidos; no aportan la misma espesor. El plátano o el aguacate también pueden espesar un batido con poca azúcar.',
+        },
+      ],
     },
     de: {
       title: 'Milkshake-Rezepte für Ninja Creami',
       description: 'Dicke und cremige Milkshake-Rezepte für deinen Ninja Creami. Klassische Geschmacksrichtungen, verwöhnende Mix-ins und perfekt gemixte Eisgetränke — mit Schritt-für-Schritt-Anleitung.',
       metaDescription: 'Ninja Creami Milkshake-Rezepte — dicker, cremiger und schneller als jeder Mixer. Schokolade, Erdbeere, Banane-Karamell und kreative Mix-ins.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Der Ninja Creami macht Milkshakes, die jeden Mixer blass aussehen lassen. Weil der Creami mit einem richtig eingefrorenen Pint startet — nicht mit Eiswürfeln, die deinen Shake wässern — bekommst du dicke, "Löffel-bleibt-stehen"-Konsistenz ohne die wässrige Verdünnung eines Mixers. Jedes Rezept auf dieser Seite ist auf das Milkshake-Programm abgestimmt, damit du diner-style Shakes ohne Experimente hinbekommst.
+
+Die Technik unterscheidet sich vom klassischen Milkshake. Statt Eis mit Milch zu mixen (was es verdünnt), frierst du eine milkshake-spezifische Basis als Pint ein — Sahne, Milch, Zucker, Aroma — und lässt das Milkshake-Programm sie auf diese perfekte trinkbar-aber-dicke Konsistenz bringen. Steak-\'n-Shake-Dichte, nicht McDonald\'s-dünn. Für extra-dick nimm zuerst das Ice-Cream-Programm und stoppe beim trinkbaren Stadium.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Die drei Milkshake-Stile auf dieser Seite',
+          cards: [
+            {
+              title: 'Klassische Diner-Shakes',
+              body: 'Schokolade, Erdbeere, Vanille, Cookies and Cream. Die nostalgischen Shake-Sorten, die das Format berühmt gemacht haben. Dick, schaumig, hoch — genau das, was du in einem 50er-Jahre-Diner bestellen würdest. Starte hier, wenn du neu im Milkshake-Programm bist.',
+            },
+            {
+              title: 'Dessert-Shakes',
+              body: 'Banane-Karamell, Birthday Cake, Nutella. Shakes, die im Grunde Desserts in flüssiger Form sind, belegt mit Schlagsahne und verspielten Garnituren. Reichhaltiger als klassische Shakes und besser als Nach-dem-Essen-Leckerei denn als Getränk.',
+            },
+            {
+              title: 'Frucht- und Tropical-Shakes',
+              body: 'Erdbeere, Pfirsich, Mango, Ananas. Leichtere, fruchtbetonte Shakes, die echtes Fruchtpüree neben der Sahnebasis nutzen. Weniger Dessert-schwer, sommerlicher und erfrischender.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**So nutzt du diese Rezepte:** Jedes Rezept gibt das Basis-Verhältnis, den genauen Milkshake-Programmzyklus und eventuelle Mix-ins während der Mix-In-Phase an. Das Milkshake-Programm ist als einziges auf trinkbare (nicht löffelbare) Textur ausgelegt — nutze es statt Ice Cream plus Extra-Milch, was ein flüssigeres Ergebnis liefert.
+
+**Das richtige Glas wählen:** Milkshakes aus einem Creami gießen sich am besten in hohe, gekühlte Gläser. Stell dein Serviereisglas 10 Minuten vor dem Eingießen in den Gefrierschrank — ein kaltes Glas hält den Shake länger dick und liefert dieses klassische "bleibt bis zum Boden dick"-Diner-Erlebnis.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Was ist der Unterschied zwischen einem Ninja Creami Milkshake und Eiscreme?',
+          answer: 'Ein Milkshake im Creami ist spezifisch trinkbar — das Milkshake-Programm verarbeitet das gefrorene Pint zu dicker, aber gießbarer Konsistenz (wie ein dicker Diner-Shake). Eiscreme wird bis zur löffelbaren Textur verarbeitet. Du nutzt die gleiche Art Basis, aber einen anderen Programmzyklus.',
+        },
+        {
+          question: 'Welches Programm nutze ich für Milkshakes?',
+          answer: 'Nutze das "Milkshake"-Programm am Creami Deluxe — es ist darauf abgestimmt, das Pint gießbar statt löffelbar zu belassen. Am Creami Original (ohne Milkshake-Programm) nutze Ice Cream und gib am Ende 2–3 Esslöffel Milch dazu, dann Re-Spin — das Ergebnis ist nahezu identisch.',
+        },
+        {
+          question: 'Kann ich aus einem bereits gespinnten Eis-Pint einen Milkshake machen?',
+          answer: 'Ja — gib 2–3 Esslöffel Milch auf ein gespinntes Pint und starte das Milkshake-Programm (oder Re-Spin, wenn du kein Milkshake hast). Das ist der einfachste Weg, Eisreste in einen Shake zu verwandeln, ohne ein neues Pint zu machen.',
+        },
+        {
+          question: 'Warum ist mein Ninja Creami Milkshake zu dick für einen Strohhalm?',
+          answer: 'Das Pint ist überfroren oder die Basis hat zu wenig Flüssigkeit. Gib 1–2 Esslöffel Milch dazu und starte Milkshake oder Re-Spin erneut. Jeder zusätzliche Esslöffel verdünnt den Shake — graduell hinzufügen, bis er durch einen dicken Strohhalm fließt, aber noch die Glaswand bedeckt.',
+        },
+        {
+          question: 'Kann ich einen Protein-Milkshake im Creami machen?',
+          answer: 'Ja — nutze eine Protein-Eisbasis (Proteinpulver + Milch + Süßungsmittel) und starte am Ende das Milkshake-Programm. Du bekommst 25–30 g Protein pro Portion in einem Shake, der tatsächlich nach Dessert schmeckt — nicht nach kreidigem Proteingetränk.',
+        },
+        {
+          question: 'Wie mache ich einen dicken Milkshake ohne zugesetzten Zucker?',
+          answer: 'Nutze Allulose statt Zucker — sie hat den gleichen dickmachenden Effekt (Zucker macht Shakes dick, nicht nur süß). Meide Null-Zucker-Süßungsmittel wie reines Stevia oder Erythrit allein für Shakes; sie liefern nicht die gleiche Dicke. Banane oder Avocado können einen zuckerarmen Shake ebenfalls andicken.',
+        },
+      ],
     },
     pt: {
       title: 'Receitas de Milkshake para Ninja Creami',
       description: 'Receitas de milkshakes espessos e cremosos com seu Ninja Creami. Sabores clássicos, combinações indulgentes e bebidas geladas perfeitamente batidas — com instruções passo a passo.',
       metaDescription: 'Receitas de milkshake Ninja Creami — mais espessos, cremosos e rápidos que um liquidificador. Chocolate, morango, banana-caramelo e combinações criativas.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `O Ninja Creami faz milkshakes que envergonham qualquer liquidificador. Como o Creami parte de um pote corretamente congelado — não cubos de gelo que aguam o shake — você consegue consistência espessa, colher-fica-em-pé, sem a diluição aguada que um liquidificador introduz. Cada receita desta página foi calibrada para o programa Milkshake, para você conseguir derramados estilo diner sem tentativa e erro.
+
+A técnica é diferente do milkshake tradicional. Em vez de bater sorvete com leite (o que afina), você congela uma base específica para milkshake como pote — creme, leite, açúcar, saborizante — e deixa o programa Milkshake levar à consistência perfeita: bebível, mas espessa. Nível Steak \'n Shake de espessura, não McDonald\'s aguado. Para extra-espesso, use primeiro o programa Ice Cream e pare no estágio bebível.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Os três estilos de milkshake neste site',
+          cards: [
+            {
+              title: 'Shakes clássicos de diner',
+              body: 'Chocolate, morango, baunilha, cookies and cream. Os sabores nostálgicos que tornaram o formato famoso. Espessos, espumosos, altos — exatamente o que você pediria num diner dos anos 50. Comece aqui se for novo no programa Milkshake.',
+            },
+            {
+              title: 'Shakes-sobremesa',
+              body: 'Banana-caramelo, Birthday Cake, Nutella. Shakes que são basicamente sobremesas em forma líquida, finalizados com chantilly e enfeites divertidos. Mais ricos que os clássicos e melhor posicionados como doce depois do jantar do que como bebida.',
+            },
+            {
+              title: 'Shakes frutados e tropicais',
+              body: 'Morango, pêssego, manga, abacaxi. Shakes mais leves e focados em fruta que usam purê de fruta de verdade junto com a base de creme. Menos sobremesa, mais veranil e refrescante.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Como usar essas receitas:** cada receita especifica a proporção da base, o ciclo exato do programa Milkshake e quaisquer mix-ins para adicionar na etapa Mix-In. O programa Milkshake é o único projetado para textura bebível (não para colher) — use-o em vez de Ice Cream seguido de mais leite, que dá um resultado mais líquido.
+
+**Escolhendo o copo:** milkshakes do Creami vão melhor servidos em copos altos e gelados. Coloque seu copo no freezer por 10 minutos antes de servir — um copo gelado mantém o shake espesso por mais tempo e entrega aquela experiência clássica de diner "fica espesso até o fundo".`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Qual a diferença entre um milkshake e um sorvete Ninja Creami?',
+          answer: 'Um milkshake no Creami é especificamente bebível — o programa Milkshake processa o pote congelado até uma consistência espessa mas derramável (como um shake de diner grosso). O sorvete é processado até a textura para colher. Você usa o mesmo tipo de base mas um ciclo de programa diferente.',
+        },
+        {
+          question: 'Qual programa uso para milkshakes?',
+          answer: 'Use o programa "Milkshake" no Creami Deluxe — ele foi ajustado para deixar o pote derramável em vez de para colher. No Creami Original (sem programa Milkshake), use Ice Cream e adicione 2–3 colheres de sopa de leite no fim, depois Re-Spin — o resultado fica quase idêntico.',
+        },
+        {
+          question: 'Posso fazer um milkshake a partir de um pote de sorvete já rodado?',
+          answer: 'Sim — adicione 2–3 colheres de sopa de leite em cima de um pote já rodado, depois rode o programa Milkshake (ou Re-Spin se não tiver Milkshake). Essa é a forma mais simples de transformar sorvete que sobrou num shake sem fazer um pote novo.',
+        },
+        {
+          question: 'Por que meu milkshake do Ninja Creami está espesso demais para o canudo?',
+          answer: 'O pote está congelado demais ou a base tem pouco líquido. Adicione 1–2 colheres de sopa de leite e rode Milkshake ou Re-Spin de novo. Cada colher extra afina o shake — adicione aos poucos até ele passar por um canudo grosso mas ainda cobrir as laterais do copo.',
+        },
+        {
+          question: 'Posso fazer um milkshake proteico no Creami?',
+          answer: 'Sim — use uma base de sorvete proteico (whey protein + leite + adoçante) e rode o programa Milkshake no fim. Você consegue 25–30 g de proteína por porção num shake que realmente tem gosto de sobremesa, não de bebida proteica arenosa.',
+        },
+        {
+          question: 'Como faço um milkshake espesso sem açúcar adicionado?',
+          answer: 'Use alulose em vez de açúcar — tem o mesmo efeito de textura (é o açúcar que deixa shakes espessos, não só doces). Evite adoçantes zero açúcar como estévia pura ou eritritol sozinhos para shakes; não dão a mesma espessura. Banana ou abacate também podem engrossar um shake com pouco açúcar.',
+        },
+      ],
     },
   },
   'smoothie-bowl': {
