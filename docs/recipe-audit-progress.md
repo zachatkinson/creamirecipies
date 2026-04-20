@@ -165,9 +165,29 @@ Reviewed and left as-is (117 recipes — all correctly aligned with their titles
 
 ---
 
+#### Batch 7 — drafts publishing 2026-08 (23 recipes fixed, 1 OK)
+
+`scripts/fixes/2026-04-20-batch7-audit-fixes.sql` covers 23 recipes including
+blackberry-lemon, blueberry-almond-crumble, caramel-apple-fy, cherry-chocolate-fy,
+chocolate-chip-mint-cookie, chocolate-coconut-fy, coffee-coconut-cream,
+mango-lime-italian-ice, mango-vanilla-bean, mint-cookie-dough, peach-cobbler(×2),
+peach-ginger-crumble, peach-prosecco, raspberry-chocolate-chip-fy,
+raspberry-pistachio, raspberry-rose-cream, raspberry-vanilla-bean,
+strawberry-balsamic-fy, strawberry-kiwi-fy, toasted-coconut-cream,
+tropical-pineapple-coconut, vanilla-honey-almond-fy. `OK` berry-protein-power-smoothie-bowl.
+
+#### Batch 8 — drafts publishing 2026-09 (32 recipes fixed, 3 OK)
+
+`scripts/fixes/2026-04-20-batch8-audit-fixes.sql` covers 32 recipes across
+caramels, toffees, pecans, figs, maples, pumpkins, chai spices, brown butter,
+bourbon, and prosecco additions. `OK` caramel-flan, caramelized-banana,
+fairlife-vanilla-caramel-lite.
+
+---
+
 ### Session pause point — 2026-04-20
 
-**Total recipes processed this session: 82**
+**Total recipes processed this session: 138**
 - 8 already-fixed (pre-audit framework)
 - 22 reviewed in batch 1 (7 fixed + 15 OK)
 - 28 reviewed in batch 2 (16 fixed + 12 OK)
@@ -175,10 +195,13 @@ Reviewed and left as-is (117 recipes — all correctly aligned with their titles
 - 14 fixed in batch 4 (May 20–30 drafts)
 - 14 fixed in batch 5 (Jun 1–26 drafts)
 - 21 fixed in batch 6 (July drafts)
+- 23 fixed + 1 OK in batch 7 (Aug drafts)
+- 32 fixed + 3 OK in batch 8 (Sep drafts)
 
-**Remaining flagged drafts (from `/tmp/flagged-v2.txt`): ~540 across 2026-08 through 2027-12**
+**Remaining flagged drafts (from `/tmp/flagged-v2.txt`): ~484 across 2026-10 through 2027-12**
+Breakdown: ~100 for 2026-10 through 2026-12, ~394 for 2027.
 
-Resume next session from 2026-08 publish dates onward. The synonym-aware audit
+Resume next session from 2026-10 publish dates onward. The synonym-aware audit
 script that generated `/tmp/flagged-v2.txt` can be re-run at any time to
 refresh the list (see query helpers in session transcript).
 
