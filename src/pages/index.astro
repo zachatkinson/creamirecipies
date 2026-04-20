@@ -92,7 +92,7 @@ import BlogPostCard from '../components/blog/BlogPostCard.astro';
 const lp = (path: string) => localePath(path, locale);
 ---
 
-<BaseLayout title="Home">
+<BaseLayout title="Home" description={t('home.metaDescription', locale)}>
   <!-- Hero Section -->
   <section class="relative overflow-hidden bg-gradient-to-br from-cream via-blush/10 to-lavender/10 hero-gradient-animated">
     <div class="max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
