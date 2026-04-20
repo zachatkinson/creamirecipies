@@ -1141,26 +1141,316 @@ Se você é novo na máquina, comece por um clássico: baunilha, chocolate ou mo
       title: 'Soft Serve Recipes for Ninja Creami',
       description: 'Smooth, swirly soft serve recipes for your Ninja Creami. Classic vanilla to creative flavors, dispensed perfectly from your Creami\'s soft serve function — all with step-by-step instructions.',
       metaDescription: 'Ninja Creami soft serve recipes — instant, swirly, no scoop needed. Vanilla, chocolate, mango, matcha and more. Uses the Deluxe Soft Serve function.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Soft serve is what the Deluxe Creami was built for. The Soft-Serve program on the Deluxe doesn\'t just spin the frozen pint — it aerates it into that signature cloud-light, pillowy texture you remember from the ice cream truck and the mall machine. Every recipe on this page has been tuned for that program: the exact base ratios, the freeze time, and the dispensing tricks that get you a perfect swirl on the first try.
+
+The trick with soft serve is the base. Soft-serve bases are slightly different from regular ice cream bases — they need a stabilizer that keeps the structure airy rather than dense. Most of our recipes use a tablespoon or two of instant pudding mix for this, which is the single biggest texture unlock. Skip it and you get something closer to melted ice cream; add it and the pint holds its shape even after the spin.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'The three soft serve styles on this site',
+          cards: [
+            {
+              title: 'Classic mall-machine flavors',
+              body: 'Vanilla, chocolate, strawberry, coffee. The recipes that nail the nostalgic swirl — sweet, airy, and cloud-light. Start here if you just bought the Deluxe and want to test the Soft-Serve program.',
+            },
+            {
+              title: 'Protein soft serve',
+              body: 'Protein powder + milk + instant pudding mix. A lower-calorie, high-protein take on soft serve that still swirls beautifully. Especially good as a post-workout dessert or a macro-friendly sweet treat.',
+            },
+            {
+              title: 'Fruit soft serve',
+              body: 'Mango, strawberry, passion fruit. Lighter and less creamy, closer to a soft-serve-meets-sorbet. Great for summer when you want something fresh rather than rich.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**How to use these recipes:** every recipe specifies the exact Soft-Serve program cycle (usually just one pass — no Re-Spin needed for soft serve), freeze time (24 hours), and which stabilizer works best. You\'ll see two techniques for dispensing: the built-in Soft-Serve Dispenser if you have the Deluxe accessory, and the spatula-and-swirl trick for anyone without it.
+
+**Don\'t have the Deluxe?** Most of these recipes also work on the Original Creami using the Ice Cream program followed by the Mix-In program — you won\'t get the perfect swirl dispensing, but the flavor and texture are essentially the same. We note which recipes work best on Original vs. Deluxe on each page.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'What\'s the difference between soft serve and regular ice cream in the Creami?',
+          answer: 'Soft serve is aerated and lighter, with a cloud-like pillowy texture; regular ice cream is dense and scoopable. The Deluxe Creami\'s Soft-Serve program incorporates more air into the pint as it spins, using a slightly different blade action and speed than the Ice Cream program. The base also matters — soft serve recipes typically include a stabilizer like instant pudding mix to hold that airy structure.',
+        },
+        {
+          question: 'Can I make soft serve on the Original Creami (not Deluxe)?',
+          answer: 'Not true soft serve dispensing — the Soft-Serve program is a Deluxe-only feature. But you can get close: use the Ice Cream program, then the Mix-In program on a slightly under-frozen pint (22 hours instead of 24). The flavor and texture will be nearly identical; you just won\'t get the swirl dispenser.',
+        },
+        {
+          question: 'Why does my Ninja Creami soft serve melt too fast?',
+          answer: 'Usually the base is too liquid or missing a stabilizer. Soft-serve bases benefit from 1–2 tablespoons of instant vanilla pudding mix, which traps air and slows melting. Also make sure your pint is fully frozen for 24 hours and your freezer is at 0°F (-18°C) or colder. A warm freezer gives you a melty soft serve even with a perfect recipe.',
+        },
+        {
+          question: 'Is instant pudding mix necessary for soft serve?',
+          answer: 'Not technically — you can make soft serve with just cream, milk, and sugar — but the pudding mix is the single biggest texture upgrade. It keeps the pint airy, holds the swirl longer, and produces that "melt-in-your-mouth" mouthfeel. For a pudding-free version, replace with 1 teaspoon of cornstarch whisked into warm milk.',
+        },
+        {
+          question: 'Which program do I use for soft serve on the Deluxe Creami?',
+          answer: 'The "Soft-Serve" program. It runs a single cycle at higher aeration than Ice Cream, producing the signature light, cloud-like texture. No Re-Spin is needed — one pass is the correct amount. If you spin it twice, it loses the air and becomes more like ice cream.',
+        },
+        {
+          question: 'How many servings does a Ninja Creami soft serve pint make?',
+          answer: 'Because soft serve is aerated, a 16oz pint gives you 4–5 medium servings (slightly more than ice cream since the volume expands). The 24oz Deluxe XL pint gives 6–7 servings. Each recipe lists servings and macros.',
+        },
+      ],
     },
     fr: {
       title: 'Recettes de Soft Serve pour Ninja Creami',
       description: 'Recettes de soft serve onctueuses pour votre Ninja Creami. De la vanille classique aux saveurs créatives, parfaitement distribuées avec la fonction soft serve — instructions étape par étape.',
       metaDescription: 'Recettes de soft serve Ninja Creami — instantané, onctueux, sans cuillère. Vanille, chocolat, mangue, matcha. Utilise la fonction Soft Serve du Deluxe.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Le soft serve, c\'est pour ça que le Creami Deluxe a été conçu. Le programme Soft-Serve du Deluxe ne se contente pas de turbiner le pot congelé — il l\'aère pour lui donner cette texture légère comme un nuage, aérienne, que vous connaissez du camion à glace et de la machine du centre commercial. Chaque recette de cette page a été réglée pour ce programme : les ratios exacts de la base, le temps de congélation et les astuces de distribution pour obtenir une spirale parfaite du premier coup.
+
+La clé du soft serve, c\'est la base. Les bases de soft serve sont légèrement différentes des bases de crème glacée classique — elles ont besoin d\'un stabilisateur qui maintient la structure aérienne plutôt que dense. La plupart de nos recettes utilisent une ou deux cuillères à soupe de préparation pour pudding instantané pour cela, et c\'est le plus gros levier de texture. Sans, vous obtenez quelque chose proche d\'une glace fondue ; avec, le pot garde sa forme même après le turbinage.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Les trois styles de soft serve sur ce site',
+          cards: [
+            {
+              title: 'Saveurs classiques de la machine du mall',
+              body: 'Vanille, chocolat, fraise, café. Les recettes qui reproduisent cette spirale nostalgique — sucrée, aérienne, légère comme un nuage. Commencez ici si vous venez d\'acheter le Deluxe et voulez tester le programme Soft-Serve.',
+            },
+            {
+              title: 'Soft serve protéiné',
+              body: 'Poudre de protéine + lait + préparation pour pudding instantané. Une version plus légère et riche en protéines qui garde une belle spirale. Parfaite comme dessert post-entraînement ou gourmandise adaptée aux macros.',
+            },
+            {
+              title: 'Soft serve aux fruits',
+              body: 'Mangue, fraise, fruit de la passion. Plus léger et moins crémeux, proche du soft-serve-rencontre-sorbet. Idéal en été quand on veut quelque chose de frais plutôt que riche.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Comment utiliser ces recettes :** chaque recette précise le cycle exact du programme Soft-Serve (généralement une seule passe — pas besoin de Re-Spin pour le soft serve), le temps de congélation (24 heures) et quel stabilisateur fonctionne le mieux. Vous verrez deux techniques de distribution : le distributeur Soft-Serve intégré si vous avez l\'accessoire Deluxe, et l\'astuce spatule-et-spirale pour ceux qui ne l\'ont pas.
+
+**Vous n\'avez pas le Deluxe ?** La plupart de ces recettes fonctionnent aussi sur l\'Original Creami avec le programme Ice Cream suivi du programme Mix-In — vous n\'aurez pas la distribution en spirale parfaite, mais la saveur et la texture sont essentiellement les mêmes. Nous indiquons sur chaque page quelles recettes fonctionnent le mieux sur Original vs. Deluxe.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Quelle est la différence entre soft serve et crème glacée classique avec le Creami ?',
+          answer: 'Le soft serve est aéré et plus léger, avec une texture façon nuage ; la crème glacée classique est dense et à la cuillère. Le programme Soft-Serve du Creami Deluxe incorpore plus d\'air dans le pot lors du turbinage, avec une action de lame et une vitesse légèrement différentes du programme Ice Cream. La base compte aussi — les recettes de soft serve incluent généralement un stabilisateur comme la préparation pour pudding instantané pour maintenir cette structure aérienne.',
+        },
+        {
+          question: 'Puis-je faire du soft serve sur le Creami Original (pas Deluxe) ?',
+          answer: 'Pas de vraie distribution soft serve — le programme Soft-Serve est exclusif au Deluxe. Mais vous pouvez vous en approcher : utilisez le programme Ice Cream, puis Mix-In sur un pot légèrement sous-congelé (22 heures au lieu de 24). La saveur et la texture seront presque identiques ; vous n\'aurez simplement pas le distributeur en spirale.',
+        },
+        {
+          question: 'Pourquoi mon soft serve Ninja Creami fond-il trop vite ?',
+          answer: 'En général la base est trop liquide ou manque de stabilisateur. Les bases de soft serve bénéficient de 1 à 2 cuillères à soupe de préparation pour pudding vanille instantané, qui piège l\'air et ralentit la fonte. Assurez-vous aussi que votre pot est bien congelé 24 heures et que votre congélateur est à -18°C ou plus froid. Un congélateur tiède donne un soft serve qui fond même avec une recette parfaite.',
+        },
+        {
+          question: 'La préparation pour pudding instantané est-elle nécessaire pour le soft serve ?',
+          answer: 'Techniquement non — vous pouvez faire du soft serve avec juste crème, lait et sucre — mais la préparation pour pudding est la plus grosse amélioration de texture. Elle garde le pot aérien, tient la spirale plus longtemps et produit cette sensation fondante en bouche. Pour une version sans pudding, remplacez par 1 cuillère à café de maïzena fouettée dans du lait tiède.',
+        },
+        {
+          question: 'Quel programme utiliser pour le soft serve sur le Creami Deluxe ?',
+          answer: 'Le programme "Soft-Serve". Il exécute un seul cycle avec plus d\'aération que Ice Cream, produisant cette texture légère et nuageuse caractéristique. Pas besoin de Re-Spin — une passe est la bonne quantité. Si vous le turbinez deux fois, il perd son air et se rapproche de la crème glacée.',
+        },
+        {
+          question: 'Combien de portions donne un pot de soft serve Ninja Creami ?',
+          answer: 'Comme le soft serve est aéré, un pot de 16oz donne 4–5 portions moyennes (un peu plus que la crème glacée car le volume augmente). Le pot Deluxe XL de 24oz donne 6–7 portions. Chaque recette indique les portions et les macros.',
+        },
+      ],
     },
     es: {
       title: 'Recetas de Soft Serve para Ninja Creami',
       description: 'Recetas de soft serve suaves y cremosas para tu Ninja Creami. Desde vainilla clásica hasta sabores creativos, servidas perfectamente con la función soft serve — instrucciones paso a paso.',
       metaDescription: 'Recetas de soft serve Ninja Creami — instantáneo, cremoso, sin cuchara. Vainilla, chocolate, mango, matcha. Usa la función Soft Serve del Deluxe.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `El soft serve es para lo que se diseñó el Creami Deluxe. El programa Soft-Serve del Deluxe no solo gira el pote congelado — lo airea hasta esa textura característica ligera como una nube que recuerdas del camión de helados y de la máquina del centro comercial. Cada receta de esta página está afinada para ese programa: las proporciones exactas de la base, el tiempo de congelado y los trucos de servido para conseguir una espiral perfecta a la primera.
+
+El truco del soft serve está en la base. Las bases de soft serve son algo distintas a las de helado normal — necesitan un estabilizante que mantenga la estructura aireada en lugar de densa. La mayoría de nuestras recetas usan una o dos cucharadas de mezcla de pudín instantáneo para esto, que es la mayor mejora de textura que existe. Sin eso quedas con algo cercano a helado derretido; con eso el pote mantiene su forma incluso después del giro.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Los tres estilos de soft serve en este sitio',
+          cards: [
+            {
+              title: 'Sabores clásicos de máquina de centro comercial',
+              body: 'Vainilla, chocolate, fresa, café. Las recetas que clavan la espiral nostálgica — dulce, aireada, ligera como una nube. Empieza aquí si acabas de comprar el Deluxe y quieres probar el programa Soft-Serve.',
+            },
+            {
+              title: 'Soft serve proteico',
+              body: 'Proteína en polvo + leche + mezcla de pudín instantáneo. Una versión más ligera y alta en proteína del soft serve que aún gira en una espiral preciosa. Excelente como postre post-entreno o capricho dulce adaptado a las macros.',
+            },
+            {
+              title: 'Soft serve de fruta',
+              body: 'Mango, fresa, maracuyá. Más ligero y menos cremoso, cercano al soft-serve-con-sorbete. Perfecto para el verano cuando quieres algo fresco en lugar de denso.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Cómo usar estas recetas:** cada receta especifica el ciclo exacto del programa Soft-Serve (normalmente una sola pasada — no hace falta Re-Spin para soft serve), tiempo de congelado (24 horas) y qué estabilizante funciona mejor. Verás dos técnicas de servido: el dispensador Soft-Serve integrado si tienes el accesorio Deluxe, y el truco de espátula-y-espiral para quien no lo tenga.
+
+**¿No tienes el Deluxe?** La mayoría de estas recetas también funcionan en el Original Creami usando el programa Ice Cream seguido de Mix-In — no conseguirás el dispensado en espiral perfecto, pero el sabor y la textura son prácticamente iguales. Indicamos en cada página qué recetas funcionan mejor en Original vs. Deluxe.`,
+        },
+      ],
+      faqs: [
+        {
+          question: '¿Cuál es la diferencia entre soft serve y helado normal en el Creami?',
+          answer: 'El soft serve es aireado y más ligero, con textura tipo nube; el helado normal es denso y para cuchara. El programa Soft-Serve del Creami Deluxe incorpora más aire al pote durante el giro, con una acción y velocidad de cuchilla algo distinta al programa Ice Cream. La base también importa — las recetas de soft serve suelen incluir un estabilizante como la mezcla de pudín instantáneo para mantener esa estructura aireada.',
+        },
+        {
+          question: '¿Puedo hacer soft serve en el Creami Original (no Deluxe)?',
+          answer: 'No un servido soft serve real — el programa Soft-Serve es exclusivo del Deluxe. Pero puedes acercarte: usa el programa Ice Cream, luego Mix-In en un pote algo menos congelado (22 horas en vez de 24). El sabor y la textura serán casi idénticos; simplemente no tendrás el dispensador en espiral.',
+        },
+        {
+          question: '¿Por qué mi soft serve Ninja Creami se derrite demasiado rápido?',
+          answer: 'Normalmente la base está muy líquida o le falta estabilizante. Las bases de soft serve se benefician de 1–2 cucharadas de mezcla de pudín de vainilla instantáneo, que atrapa aire y ralentiza el derretimiento. Asegúrate también de que el pote esté bien congelado 24 horas y tu congelador a -18°C o más frío. Un congelador templado da soft serve que se derrite incluso con receta perfecta.',
+        },
+        {
+          question: '¿Es necesaria la mezcla de pudín instantáneo para el soft serve?',
+          answer: 'Técnicamente no — puedes hacer soft serve con solo nata, leche y azúcar — pero la mezcla de pudín es la mayor mejora de textura posible. Mantiene el pote aireado, sostiene la espiral más tiempo y produce esa sensación de derretirse en la boca. Para una versión sin pudín, sustitúyela por 1 cucharadita de maicena batida en leche templada.',
+        },
+        {
+          question: '¿Qué programa uso para soft serve en el Creami Deluxe?',
+          answer: 'El programa "Soft-Serve". Ejecuta un único ciclo con mayor aireación que Ice Cream, produciendo esa textura ligera y tipo nube característica. No hace falta Re-Spin — una pasada es la cantidad correcta. Si lo giras dos veces, pierde el aire y se acerca más al helado.',
+        },
+        {
+          question: '¿Cuántas porciones da un pote de soft serve Ninja Creami?',
+          answer: 'Como el soft serve es aireado, un pote de 16oz da 4–5 porciones medianas (algo más que el helado porque el volumen aumenta). El pote Deluxe XL de 24oz da 6–7 porciones. Cada receta indica porciones y macros.',
+        },
+      ],
     },
     de: {
       title: 'Softeis-Rezepte für Ninja Creami',
       description: 'Glatte, cremige Softeis-Rezepte für deinen Ninja Creami. Von klassischer Vanille bis zu kreativen Geschmacksrichtungen — perfekt mit der Soft-Serve-Funktion — Schritt-für-Schritt-Anleitung.',
       metaDescription: 'Ninja Creami Softeis-Rezepte — sofort, cremig, ohne Löffel. Vanille, Schokolade, Mango, Matcha. Nutzt die Soft-Serve-Funktion des Deluxe.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `Softeis ist das, wofür der Creami Deluxe gebaut wurde. Das Soft-Serve-Programm am Deluxe verarbeitet das gefrorene Pint nicht einfach nur — es belüftet es in diese charakteristische, wolkenleichte, kissenweiche Textur, die du vom Eiswagen und der Mall-Maschine kennst. Jedes Rezept auf dieser Seite ist auf dieses Programm abgestimmt: die exakten Basis-Verhältnisse, die Gefrierzeit und die Dispenser-Tricks, die dir beim ersten Versuch einen perfekten Swirl liefern.
+
+Der Schlüssel beim Softeis ist die Basis. Softeis-Basen unterscheiden sich leicht von klassischen Eisbasen — sie brauchen einen Stabilisator, der die Struktur luftig statt dicht hält. Die meisten unserer Rezepte nutzen dafür einen bis zwei Esslöffel Instant-Puddingpulver, und das ist der größte Textur-Hebel überhaupt. Ohne bekommst du etwas Ähnliches wie geschmolzenes Eis; mit hält das Pint seine Form sogar nach dem Dreh.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Die drei Softeis-Stile auf dieser Seite',
+          cards: [
+            {
+              title: 'Klassische Mall-Maschinen-Sorten',
+              body: 'Vanille, Schokolade, Erdbeere, Kaffee. Die Rezepte, die den nostalgischen Swirl treffen — süß, luftig und wolkenleicht. Starte hier, wenn du gerade den Deluxe gekauft hast und das Soft-Serve-Programm testen willst.',
+            },
+            {
+              title: 'Protein-Softeis',
+              body: 'Proteinpulver + Milch + Instant-Pudding. Eine kalorienärmere, proteinreiche Variante von Softeis, die trotzdem schön swirlt. Besonders gut als Dessert nach dem Training oder als makro-freundliche Süßigkeit.',
+            },
+            {
+              title: 'Frucht-Softeis',
+              body: 'Mango, Erdbeere, Passionsfrucht. Leichter und weniger cremig, näher an Softeis-trifft-Sorbet. Ideal im Sommer, wenn du etwas Frisches statt Gehaltvolles willst.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**So nutzt du diese Rezepte:** Jedes Rezept gibt den exakten Soft-Serve-Zyklus an (normalerweise nur ein Durchgang — kein Re-Spin nötig), die Gefrierzeit (24 Stunden) und welcher Stabilisator am besten funktioniert. Du siehst zwei Dispenser-Techniken: den eingebauten Soft-Serve-Dispenser, falls du das Deluxe-Zubehör hast, und den Spatel-und-Swirl-Trick für alle, die ihn nicht haben.
+
+**Hast du nicht den Deluxe?** Die meisten dieser Rezepte funktionieren auch auf dem Original Creami mit dem Ice-Cream-Programm gefolgt vom Mix-In-Programm — du bekommst nicht den perfekten Swirl-Dispens, aber Geschmack und Textur sind im Grunde gleich. Wir markieren auf jeder Seite, welche Rezepte am besten auf Original vs. Deluxe laufen.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Was ist der Unterschied zwischen Softeis und normalem Eis im Creami?',
+          answer: 'Softeis ist belüftet und leichter, mit wolkenartiger, kissenweicher Textur; normales Eis ist dicht und löffelbar. Das Soft-Serve-Programm des Creami Deluxe bringt beim Dreh mehr Luft ins Pint, mit leicht anderer Klingenaktion und Geschwindigkeit als das Ice-Cream-Programm. Auch die Basis zählt — Softeis-Rezepte enthalten typischerweise einen Stabilisator wie Instant-Puddingpulver, um diese luftige Struktur zu halten.',
+        },
+        {
+          question: 'Kann ich Softeis auf dem Original Creami (nicht Deluxe) machen?',
+          answer: 'Kein echtes Softeis-Dispensing — das Soft-Serve-Programm ist Deluxe-exklusiv. Aber du kommst nah ran: Nutze das Ice-Cream-Programm, dann Mix-In auf einem etwas zu kurz eingefrorenen Pint (22 Stunden statt 24). Geschmack und Textur sind fast identisch; dir fehlt nur der Swirl-Dispenser.',
+        },
+        {
+          question: 'Warum schmilzt mein Ninja Creami Softeis zu schnell?',
+          answer: 'Meistens ist die Basis zu flüssig oder es fehlt ein Stabilisator. Softeis-Basen profitieren von 1–2 Esslöffeln Instant-Vanillepuddingpulver, das Luft einschließt und das Schmelzen verlangsamt. Stelle außerdem sicher, dass dein Pint 24 Stunden komplett gefroren ist und dein Gefrierschrank bei -18°C oder kälter steht. Ein zu warmer Gefrierschrank liefert schmelzendes Softeis selbst mit perfektem Rezept.',
+        },
+        {
+          question: 'Ist Instant-Puddingpulver für Softeis notwendig?',
+          answer: 'Technisch nicht — du kannst Softeis auch nur mit Sahne, Milch und Zucker machen — aber das Puddingpulver ist das größte Textur-Upgrade überhaupt. Es hält das Pint luftig, den Swirl länger und erzeugt dieses "Schmilzt-auf-der-Zunge"-Gefühl. Für eine puddingfreie Version ersetze es durch 1 Teelöffel Maisstärke, in warme Milch eingerührt.',
+        },
+        {
+          question: 'Welches Programm nutze ich für Softeis auf dem Creami Deluxe?',
+          answer: 'Das "Soft-Serve"-Programm. Es läuft einen einzigen Zyklus mit höherer Belüftung als Ice Cream und erzeugt die typische leichte, wolkenartige Textur. Kein Re-Spin nötig — ein Durchgang ist die richtige Menge. Drehst du zweimal, verliert es die Luft und wird mehr wie Eis.',
+        },
+        {
+          question: 'Wie viele Portionen ergibt ein Ninja Creami Softeis-Pint?',
+          answer: 'Da Softeis belüftet ist, ergibt ein 16oz-Pint 4–5 mittlere Portionen (etwas mehr als Eis, weil das Volumen wächst). Das 24oz Deluxe XL Pint ergibt 6–7 Portionen. Jedes Rezept nennt Portionen und Makros.',
+        },
+      ],
     },
     pt: {
       title: 'Receitas de Soft Serve para Ninja Creami',
       description: 'Receitas de soft serve suaves e cremosas para seu Ninja Creami. Da baunilha clássica a sabores criativos, servidas perfeitamente com a função soft serve — instruções passo a passo.',
       metaDescription: 'Receitas de soft serve Ninja Creami — instantâneo, cremoso, sem colher. Baunilha, chocolate, manga, matcha. Usa a função Soft Serve do Deluxe.',
+      longIntroSections: [
+        {
+          layout: 'two-col',
+          markdown: `O soft serve é para isso que o Creami Deluxe foi feito. O programa Soft-Serve do Deluxe não apenas gira o pote congelado — ele o arera até aquela textura característica, leve como uma nuvem e macia, que você lembra do caminhão de sorvete e da máquina do shopping. Cada receita desta página foi ajustada para esse programa: as proporções exatas da base, o tempo de congelamento e os truques de servir para conseguir uma espiral perfeita na primeira tentativa.
+
+O pulo do gato no soft serve é a base. As bases de soft serve são um pouco diferentes das de sorvete comum — precisam de um estabilizante que mantenha a estrutura aerada em vez de densa. A maioria das nossas receitas usa uma ou duas colheres de sopa de mistura para pudim instantâneo para isso, e é o maior ganho de textura que existe. Sem isso, você fica com algo parecido com sorvete derretido; com isso, o pote mantém a forma mesmo após o giro.`,
+        },
+        {
+          layout: 'cards',
+          heading: 'Os três estilos de soft serve neste site',
+          cards: [
+            {
+              title: 'Sabores clássicos de máquina de shopping',
+              body: 'Baunilha, chocolate, morango, café. As receitas que acertam aquela espiral nostálgica — doce, aerada, leve como nuvem. Comece por aqui se acabou de comprar o Deluxe e quer testar o programa Soft-Serve.',
+            },
+            {
+              title: 'Soft serve proteico',
+              body: 'Whey protein + leite + mistura para pudim instantâneo. Uma versão mais leve e rica em proteína do soft serve que ainda gira em uma espiral linda. Excelente como sobremesa pós-treino ou doce macro-friendly.',
+            },
+            {
+              title: 'Soft serve de fruta',
+              body: 'Manga, morango, maracujá. Mais leve e menos cremoso, próximo do soft-serve-com-sorbete. Ótimo no verão quando você quer algo fresco em vez de rico.',
+            },
+          ],
+        },
+        {
+          layout: 'two-col',
+          markdown: `**Como usar estas receitas:** cada receita especifica o ciclo exato do programa Soft-Serve (geralmente apenas uma passada — não precisa de Re-Spin para soft serve), tempo de congelamento (24 horas) e qual estabilizante funciona melhor. Você verá duas técnicas para servir: o dispensador Soft-Serve integrado se você tem o acessório Deluxe, e o truque da espátula-e-espiral para quem não tem.
+
+**Não tem o Deluxe?** A maioria dessas receitas também funciona no Original Creami usando o programa Ice Cream seguido do Mix-In — você não vai ter o servido em espiral perfeito, mas o sabor e a textura são praticamente os mesmos. Indicamos em cada página quais receitas funcionam melhor no Original vs. Deluxe.`,
+        },
+      ],
+      faqs: [
+        {
+          question: 'Qual a diferença entre soft serve e sorvete comum no Creami?',
+          answer: 'O soft serve é aerado e mais leve, com textura tipo nuvem; o sorvete comum é denso e para colher. O programa Soft-Serve do Creami Deluxe incorpora mais ar ao pote durante o giro, com uma ação e velocidade de lâmina um pouco diferentes do programa Ice Cream. A base também importa — receitas de soft serve geralmente incluem um estabilizante como a mistura para pudim instantâneo para manter essa estrutura aerada.',
+        },
+        {
+          question: 'Posso fazer soft serve no Creami Original (não Deluxe)?',
+          answer: 'Não com o servir soft serve real — o programa Soft-Serve é exclusivo do Deluxe. Mas você pode chegar perto: use o programa Ice Cream, depois Mix-In num pote um pouco menos congelado (22 horas em vez de 24). O sabor e a textura ficam quase idênticos; você só não terá o dispensador em espiral.',
+        },
+        {
+          question: 'Por que meu soft serve do Ninja Creami derrete rápido demais?',
+          answer: 'Normalmente a base está muito líquida ou sem estabilizante. Bases de soft serve se beneficiam de 1–2 colheres de sopa de mistura para pudim de baunilha instantâneo, que prende o ar e retarda o derretimento. Garanta também que seu pote esteja totalmente congelado por 24 horas e que seu freezer esteja a -18°C ou mais frio. Um freezer quente dá um soft serve que derrete mesmo com receita perfeita.',
+        },
+        {
+          question: 'A mistura para pudim instantâneo é necessária no soft serve?',
+          answer: 'Tecnicamente não — dá para fazer soft serve só com creme, leite e açúcar — mas a mistura para pudim é o maior upgrade de textura possível. Mantém o pote aerado, segura a espiral por mais tempo e produz aquela sensação de derreter na boca. Para uma versão sem pudim, substitua por 1 colher de chá de amido de milho dissolvido em leite morno.',
+        },
+        {
+          question: 'Qual programa uso para soft serve no Creami Deluxe?',
+          answer: 'O programa "Soft-Serve". Ele roda um único ciclo com mais aeração que o Ice Cream, produzindo aquela textura leve e tipo nuvem característica. Não precisa de Re-Spin — uma passada é a quantidade certa. Se você girar duas vezes, perde o ar e fica mais parecido com sorvete.',
+        },
+        {
+          question: 'Quantas porções rende um pote de soft serve do Ninja Creami?',
+          answer: 'Como o soft serve é aerado, um pote de 16oz rende 4–5 porções médias (um pouco mais que sorvete porque o volume aumenta). O pote Deluxe XL de 24oz rende 6–7 porções. Cada receita lista porções e macros.',
+        },
+      ],
     },
   },
 };
