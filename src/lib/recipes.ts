@@ -285,6 +285,31 @@ export async function getAllRecipeSlugs(client: Client): Promise<string[]> {
   return (data ?? []).map((r) => r.slug);
 }
 
+/**
+ * Look up a retired slug's current destination. Returns the new slug if a
+ * redirect row exists AND the target recipe is still published; null otherwise.
+ * Callers should emit a 301 when this returns a value.
+ */
+export async function getRecipeSlugRedirect(
+  client: Client,
+  oldSlug: string,
+): Promise<string | null> {
+  const { data: redirect } = await client
+    .from('recipe_slug_redirects')
+    .select('new_slug')
+    .eq('old_slug', oldSlug)
+    .maybeSingle();
+  if (!redirect?.new_slug) return null;
+
+  const { data: target } = await client
+    .from('recipes')
+    .select('slug')
+    .eq('slug', redirect.new_slug)
+    .eq('status', 'published')
+    .maybeSingle();
+  return target?.slug ?? null;
+}
+
 /** Get all categories */
 export async function getCategories(client: Client) {
   const { data, error } = await client

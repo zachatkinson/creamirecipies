@@ -55,34 +55,41 @@ export type Database = {
       }
       anonymous_ratings: {
         Row: {
-          id: string
-          recipe_id: string
-          rating: number
-          ip_hash: string
           created_at: string
+          id: string
+          ip_hash: string
+          rating: number
+          recipe_id: string
         }
         Insert: {
-          id?: string
-          recipe_id: string
-          rating: number
-          ip_hash: string
           created_at?: string
+          id?: string
+          ip_hash: string
+          rating: number
+          recipe_id: string
         }
         Update: {
-          id?: string
-          recipe_id?: string
-          rating?: number
-          ip_hash?: string
           created_at?: string
+          id?: string
+          ip_hash?: string
+          rating?: number
+          recipe_id?: string
         }
         Relationships: [
           {
             foreignKeyName: "anonymous_ratings_recipe_id_fkey"
             columns: ["recipe_id"]
             isOneToOne: false
+            referencedRelation: "recipe_model_compatibility"
+            referencedColumns: ["recipe_id"]
+          },
+          {
+            foreignKeyName: "anonymous_ratings_recipe_id_fkey"
+            columns: ["recipe_id"]
+            isOneToOne: false
             referencedRelation: "recipes"
             referencedColumns: ["id"]
-          }
+          },
         ]
       }
       categories: {
@@ -210,6 +217,7 @@ export type Database = {
         Row: {
           aliases: string[] | null
           allergens: string[] | null
+          amazon_asin: string | null
           calories_per_100g: number | null
           carbs_per_100g: number | null
           category: string
@@ -237,6 +245,7 @@ export type Database = {
         Insert: {
           aliases?: string[] | null
           allergens?: string[] | null
+          amazon_asin?: string | null
           calories_per_100g?: number | null
           carbs_per_100g?: number | null
           category?: string
@@ -264,6 +273,7 @@ export type Database = {
         Update: {
           aliases?: string[] | null
           allergens?: string[] | null
+          amazon_asin?: string | null
           calories_per_100g?: number | null
           carbs_per_100g?: number | null
           category?: string
@@ -405,6 +415,65 @@ export type Database = {
           },
         ]
       }
+      product_translations: {
+        Row: {
+          asin: string
+          description: string | null
+          id: string
+          locale: string
+          name: string
+        }
+        Insert: {
+          asin: string
+          description?: string | null
+          id?: string
+          locale: string
+          name: string
+        }
+        Update: {
+          asin?: string
+          description?: string | null
+          id?: string
+          locale?: string
+          name?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "product_translations_asin_fkey"
+            columns: ["asin"]
+            isOneToOne: false
+            referencedRelation: "products"
+            referencedColumns: ["asin"]
+          },
+        ]
+      }
+      products: {
+        Row: {
+          asin: string
+          created_at: string | null
+          description: string | null
+          image_url: string | null
+          name: string
+          updated_at: string | null
+        }
+        Insert: {
+          asin: string
+          created_at?: string | null
+          description?: string | null
+          image_url?: string | null
+          name: string
+          updated_at?: string | null
+        }
+        Update: {
+          asin?: string
+          created_at?: string | null
+          description?: string | null
+          image_url?: string | null
+          name?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           avatar_url: string | null
@@ -518,6 +587,24 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      recipe_slug_redirects: {
+        Row: {
+          created_at: string
+          new_slug: string
+          old_slug: string
+        }
+        Insert: {
+          created_at?: string
+          new_slug: string
+          old_slug: string
+        }
+        Update: {
+          created_at?: string
+          new_slug?: string
+          old_slug?: string
+        }
+        Relationships: []
       }
       recipe_tags: {
         Row: {
@@ -961,7 +1048,9 @@ export type Database = {
           total_count: number
         }[]
       }
+      increment_recipe_views: { Args: { p_slug: string }; Returns: number }
       link_ingredients_to_master: { Args: never; Returns: undefined }
+      publish_scheduled_content: { Args: never; Returns: undefined }
       show_limit: { Args: never; Returns: number }
       show_trgm: { Args: { "": string }; Returns: string[] }
     }

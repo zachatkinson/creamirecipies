@@ -12,7 +12,7 @@ import RateRecipe from '../../components/recipe/RateRecipe';
 export const prerender = false;
 
 import { supabase } from '../../lib/supabase';
-import { getRecipeBySlug, getCreamiModels } from '../../lib/recipes';
+import { getRecipeBySlug, getCreamiModels, getRecipeSlugRedirect } from '../../lib/recipes';
 import { buildRecipeJsonLd, buildRecipeFaqJsonLd, generateRecipeFaqs } from '../../lib/seo';
 import { getRecipeTranslation, applyTranslation, getIngredientTranslations, getStepTranslations, ui } from '../../lib/translations';
 import { t, localePath } from '../../i18n';
@@ -29,6 +29,11 @@ const locale = Astro.locals.locale;
 let recipe = await getRecipeBySlug(supabase, slug!);
 
 if (!recipe) {
+  const newSlug = await getRecipeSlugRedirect(supabase, slug!);
+  if (newSlug) {
+    const prefix = locale === 'en' ? '' : `/${locale}`;
+    return Astro.redirect(`${prefix}/recipes/${newSlug}`, 301);
+  }
   return Astro.redirect('/404');
 }
 
