@@ -183,11 +183,35 @@ caramels, toffees, pecans, figs, maples, pumpkins, chai spices, brown butter,
 bourbon, and prosecco additions. `OK` caramel-flan, caramelized-banana,
 fairlife-vanilla-caramel-lite.
 
+#### Batch 9 — drafts publishing 2026-10 (34 recipes fixed, 2 OK)
+
+`scripts/fixes/2026-04-20-batch9-audit-fixes.sql` covers 34 recipes including
+banana-caramel-crunch, bourbon-cherry, brown-butter-cookie-dough,
+caramel-apple/brownie/pecan, chocolate-chip/walnut/hazelnut/pecan variants,
+cinnamon-chocolate-chip (swapped cocoa→chips), cinnamon-pecan, cinnamon-toast
+(added Cinnamon Toast Crunch cereal), espresso-toffee, fig-walnut,
+hazelnut-praline, honey-walnut, maple-ginger-snap, miso-caramel,
+salted-caramel-almond/pretzel variants, smoked-butterscotch,
+sweet-potato-marshmallow, vanilla-almond-toffee, vanilla-chai-crumble,
+vanilla-fig-gelato. `OK` caramel-macchiato, vegan-caramel-pecan.
+
+#### Batch 10 — drafts publishing 2026-11 (42 recipes fixed)
+
+`scripts/fixes/2026-04-20-batch10-audit-fixes.sql` covers all 42 flagged
+November drafts — every one needed a fix. Major patterns this batch:
+- missing apple/pear in caramel-fruit-pie recipes
+- missing bourbon in bourbon-* recipes
+- missing brown butter in brown-butter-* recipes (with browning step)
+- missing pecans/walnuts/cashews in nut-named recipes
+- missing pumpkin spice in pumpkin-* recipes
+- cocoa→actual chocolate chips swap for *-chocolate-chip-* recipes
+- smoke element (smoked sea salt) in smoked-* recipes
+
 ---
 
 ### Session pause point — 2026-04-20
 
-**Total recipes processed this session: 138**
+**Total recipes processed this session: 214**
 - 8 already-fixed (pre-audit framework)
 - 22 reviewed in batch 1 (7 fixed + 15 OK)
 - 28 reviewed in batch 2 (16 fixed + 12 OK)
@@ -197,11 +221,13 @@ fairlife-vanilla-caramel-lite.
 - 21 fixed in batch 6 (July drafts)
 - 23 fixed + 1 OK in batch 7 (Aug drafts)
 - 32 fixed + 3 OK in batch 8 (Sep drafts)
+- 34 fixed + 2 OK in batch 9 (Oct drafts)
+- 42 fixed in batch 10 (Nov drafts)
 
-**Remaining flagged drafts (from `/tmp/flagged-v2.txt`): ~484 across 2026-10 through 2027-12**
-Breakdown: ~100 for 2026-10 through 2026-12, ~394 for 2027.
+**Remaining flagged drafts (from `/tmp/flagged-v2.txt`): ~416 across 2026-12 through 2027-12**
+Breakdown: ~22 for 2026-12, ~394 for 2027.
 
-Resume next session from 2026-10 publish dates onward. The synonym-aware audit
+Resume next session from 2026-12 publish dates onward. The synonym-aware audit
 script that generated `/tmp/flagged-v2.txt` can be re-run at any time to
 refresh the list (see query helpers in session transcript).
 
