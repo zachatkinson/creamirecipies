@@ -137,4 +137,49 @@ Reviewed and left as-is (117 recipes — all correctly aligned with their titles
 
 ---
 
+#### Batch 6 — drafts publishing 2026-07 (21 recipes fixed)
+
+`scripts/fixes/2026-04-20-batch6-audit-fixes.sql`:
+
+- `FIXED` apple-walnut-greek-frozen-yogurt — added cinnamon + toasted walnuts
+- `FIXED` banana-chocolate-chip-greek-frozen-yogurt — replaced cocoa with banana + mini chips (title says chip, not chocolate)
+- `FIXED` blackberry-lemon-greek-frozen-yogurt — added blackberry puree
+- `FIXED` blueberry-cardamom-ice-cream — added ground cardamom
+- `FIXED` blueberry-coconut-greek-frozen-yogurt — added toasted coconut flakes
+- `FIXED` blueberry-honey-ice-cream — added wildflower honey
+- `FIXED` blueberry-lavender-greek-frozen-yogurt — added dried lavender (cold-mixed, no infusion needed for froyo)
+- `FIXED` blueberry-lavender-ice-cream — added lavender + infusion step
+- `FIXED` coconut-caramel-crunch-ice-cream — added coconut cream + flaky sea salt + toasted coconut flakes
+- `FIXED` coconut-lime-leaf-ice-cream — fixed lemon→lime typo, added coconut cream + kaffir lime leaves + infusion step
+- `FIXED` coconut-macaroon-ice-cream — added sweetened shredded coconut + chocolate drizzle topping + toasting step
+- `FIXED` coconut-mango-turmeric-ice-cream — added coconut cream + turmeric + black pepper
+- `FIXED` lemon-raspberry-greek-frozen-yogurt — added lemon juice + zest
+- `FIXED` mango-basil-gelato — added basil + infusion step
+- `FIXED` mango-lime-chili-ice-cream — fixed lemon→lime typo, added mango + Tajin
+- `FIXED` mango-lime-mint-sorbet — added fresh mint
+- `FIXED` raspberry-chocolate-chip-ice-cream — added mini chocolate chips (had cocoa but no actual chips)
+- `FIXED` raspberry-lemonade-ice-cream — added raspberry puree
+- `FIXED` salted-caramel-frozen-yogurt — added flaky sea salt
+- `FIXED` tropical-mango-pineapple-greek-frozen-yogurt — added pineapple puree
+- `FIXED` turmeric-mango-ice-cream — added turmeric + black pepper
+
+---
+
+### Session pause point — 2026-04-20
+
+**Total recipes processed this session: 82**
+- 8 already-fixed (pre-audit framework)
+- 22 reviewed in batch 1 (7 fixed + 15 OK)
+- 28 reviewed in batch 2 (16 fixed + 12 OK)
+- 119 published reviewed in batch 3 (2 fixed + 117 OK)
+- 14 fixed in batch 4 (May 20–30 drafts)
+- 14 fixed in batch 5 (Jun 1–26 drafts)
+- 21 fixed in batch 6 (July drafts)
+
+**Remaining flagged drafts (from `/tmp/flagged-v2.txt`): ~540 across 2026-08 through 2027-12**
+
+Resume next session from 2026-08 publish dates onward. The synonym-aware audit
+script that generated `/tmp/flagged-v2.txt` can be re-run at any time to
+refresh the list (see query helpers in session transcript).
+
 <!-- New audits appended below by publish date ascending -->
