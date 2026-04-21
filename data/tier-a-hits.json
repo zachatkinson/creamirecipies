@@ -1,0 +1,3825 @@
+[
+  {
+    "id": "b4c15d70-6c21-4207-b1ab-73430496298d",
+    "recipe_id": "6f9edcc8-f7a4-4d64-9fd9-b605e805b46c",
+    "slug": "banana-soft-serve",
+    "locale": "de",
+    "en_title": "Banana Soft Serve",
+    "en_description": "Ripe banana soft serve for a naturally sweet treat.",
+    "current_title": "Bananen Soft Serve",
+    "current_description": "Ripe bananen soft serve für ein naturally süß treat.",
+    "labels_title": [
+      "soft serve"
+    ],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "40b12dc1-a633-412b-ab63-0f70b657fa01",
+    "recipe_id": "abc3a839-3a07-4b0f-90c4-261bf76754e7",
+    "slug": "birthday-cake-soft-serve",
+    "locale": "de",
+    "en_title": "Birthday Cake Soft Serve",
+    "en_description": "Festive birthday cake soft serve with sprinkles.",
+    "current_title": "Birthday Kuchen Soft Serve",
+    "current_description": "Festive birthday kuchen soft serve mit sprinkles.",
+    "labels_title": [
+      "soft serve"
+    ],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "d153befb-964b-4706-a188-1af4ff49a14c",
+    "recipe_id": "ea760ec0-3e55-47c1-b8ce-fa5d3d73ae6c",
+    "slug": "blueberry-brown-sugar-ice-cream",
+    "locale": "de",
+    "en_title": "Blueberry Brown Sugar Ice Cream",
+    "en_description": "Sweet blueberry ice cream with rich brown sugar.",
+    "current_title": "Blueberry Brown Sugar Eiscreme",
+    "current_description": "Süß bluebeeren Eiscreme mit reichhaltig brown sugar.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": [
+      "brown sugar"
+    ]
+  },
+  {
+    "id": "e89a3303-1bd4-4168-869a-c97718af4481",
+    "recipe_id": "9f40cce6-bf90-4f91-a2d2-7bfed89b7b05",
+    "slug": "blueberry-cheesecake-crumble-ice-cream",
+    "locale": "de",
+    "en_title": "Blueberry Cheesecake Crumble Ice Cream",
+    "en_description": "Blueberry cheesecake ice cream with graham cracker crumble.",
+    "current_title": "Blueberry Cheesecake Crumble Eiscreme",
+    "current_description": "Bluebeeren cheesekuchen Eiscreme mit graham cracker crumble.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "87e09f4d-362c-417a-a668-2d02003f7bd3",
+    "recipe_id": "5c70abea-3b37-45e7-b4b0-e03eb46b8185",
+    "slug": "blueberry-soft-serve",
+    "locale": "de",
+    "en_title": "Blueberry Soft Serve",
+    "en_description": "Sweet blueberry soft serve with gorgeous purple color.",
+    "current_title": "Blaubeer Soft Serve",
+    "current_description": "Süß bluebeeren soft serve mit gorgeous purple color.",
+    "labels_title": [
+      "soft serve"
+    ],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "fef25e70-420e-41ed-8d98-3c143560fc15",
+    "recipe_id": "91af46c5-3fbd-428d-8046-56eee1a0a138",
+    "slug": "bourbon-brown-sugar-ice-cream",
+    "locale": "de",
+    "en_title": "Bourbon Brown Sugar Ice Cream",
+    "en_description": "An artisan-style ice cream with premium ingredients and complex flavor.",
+    "current_title": "Bourbon Brown Sugar Eiscreme",
+    "current_description": "Ein handwerklich hergestelltes Eis mit Premium-Zutaten und komplexem Geschmack.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "a0274443-9526-4175-b28c-20ff25a06d17",
+    "recipe_id": "f00fe3f3-2dd0-4a94-a3d5-90a390918052",
+    "slug": "brown-sugar-bourbon-pecan-ice-cream",
+    "locale": "de",
+    "en_title": "Brown Sugar Bourbon Pecan Ice Cream",
+    "en_description": "A brown sugar bourbon pecan rich and creamy frozen dessert with layers of complementary flavors.",
+    "current_title": "Brown Sugar Bourbon Pekannuss Eiscreme",
+    "current_description": "Ein reichhaltiges und cremiges gefrorenes Dessert mit braunem Zucker, Bourbon und Pekannuessen in harmonischen Geschmacksschichten.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "79a83b94-148e-4891-bd3c-3fda22f12431",
+    "recipe_id": "e465c4b3-8999-455d-8893-c4b490925889",
+    "slug": "brown-sugar-cinnamon-soft-serve",
+    "locale": "de",
+    "en_title": "Brown Sugar Cinnamon Soft Serve",
+    "en_description": "Warm brown sugar and cinnamon soft serve.",
+    "current_title": "Brown Sugar Zimt Softeis",
+    "current_description": "Warmes Softeis mit braunem Zucker und Zimt.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "2c911e55-65d1-48aa-a1a2-acef5ad171f8",
+    "recipe_id": "aec91837-c168-4712-8ef5-b0211426fa69",
+    "slug": "brown-sugar-cookie-ice-cream",
+    "locale": "de",
+    "en_title": "Brown Sugar Cookie Ice Cream",
+    "en_description": "Warm brown sugar cookie ice cream with rich molasses notes.",
+    "current_title": "Brown Sugar Keks Eiscreme",
+    "current_description": "Warmes Braunzucker-Keks-Eis mit reichhaltigen Melassenoten.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "287f0ae8-b4ee-4d84-88bf-868715fa6706",
+    "recipe_id": "32d930cb-b046-4181-abba-49a87a11fb8c",
+    "slug": "brown-sugar-pecan-cookie-ice-cream",
+    "locale": "de",
+    "en_title": "Brown Sugar Pecan Cookie Ice Cream",
+    "en_description": "Warm brown sugar ice cream with pecan cookie crumbles.",
+    "current_title": "Brown Sugar Pekannuss Keks Eiscreme",
+    "current_description": "Warmes Braunzucker-Eis mit Pekannuss-Keks-Kruemeln.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "a0bc3154-f3d7-4b8a-bd6d-af251c8dbe2d",
+    "recipe_id": "280a28cc-354f-4a2e-9a2a-357526ec2b7a",
+    "slug": "brown-sugar-pecan-pie-ice-cream",
+    "locale": "de",
+    "en_title": "Brown Sugar Pecan Pie Ice Cream",
+    "en_description": "Delicious brown sugar pecan pie ice cream with a perfectly balanced blend of flavors for an elevated frozen treat.",
+    "current_title": "Brown Sugar Pekannuss Pie Eiscreme",
+    "current_description": "Koestliches Braunzucker-Pekankuchen-Eis mit perfekt ausgewogener Aromenvielfalt.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "fd7c7f3c-a35c-4d80-a661-1a9ddd6c3912",
+    "recipe_id": "1a640a8a-99e0-4d6a-8b14-31f48457792a",
+    "slug": "chocolate-cashew-butter-ice-cream",
+    "locale": "de",
+    "en_title": "Chocolate Cashew Butter Ice Cream",
+    "en_description": "Rich chocolate ice cream with smooth cashew butter swirl.",
+    "current_title": "Schokoladen Cashew Butter Eiscreme",
+    "current_description": "Rich schokoladen eiscreme mit glatt cashew butter wirbel.",
+    "labels_title": [
+      "cashew butter"
+    ],
+    "labels_description": [
+      "cashew butter"
+    ]
+  },
+  {
+    "id": "d21651a1-178a-4d98-a2b0-523480a487d6",
+    "recipe_id": "5d6e4c49-374a-45e4-8138-a601902a5a51",
+    "slug": "cinnamon-brown-sugar-pecan-ice-cream",
+    "locale": "de",
+    "en_title": "Cinnamon Brown Sugar Pecan Ice Cream",
+    "en_description": "A cinnamon brown sugar pecan unique and elevated frozen treat with perfectly balanced flavors.",
+    "current_title": "Zimt Brown Sugar Pekannuss Eiscreme",
+    "current_description": "Ein einzigartiges Zimt-Braunzucker-Pekannuss-Eisdessert mit perfekt ausgewogenen Aromen.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "2c5e1f20-319d-47eb-984a-10afa0cca974",
+    "recipe_id": "57f30b5a-db50-45cf-9d04-4ff2c84da6dc",
+    "slug": "cookies-and-cream-soft-serve",
+    "locale": "de",
+    "en_title": "Cookies and Cream Soft Serve",
+    "en_description": "Classic cookies and cream in soft serve form. Creamy vanilla base with crushed Oreo cookies folded in, then dispensed as smooth soft serve from the Ninja CREAMi Scoop & Swirl.",
+    "current_title": "Cookies and Cream Softeis",
+    "current_description": "Klassisches Cookies and Cream als Softeis. Cremige Vanillebasis mit eingearbeiteten Oreo-Kruemeln, als glattes Softeis aus dem Ninja CREAMi Scoop & Swirl.",
+    "labels_title": [
+      "cookies and cream"
+    ],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "774ad235-5a04-42da-ac37-dba5336e13e2",
+    "recipe_id": "bae68dbb-af06-4efb-be6a-716a3f432a12",
+    "slug": "frozen-yogurt-with-mixed-berries",
+    "locale": "de",
+    "en_title": "Frozen Yogurt with Mixed Berries",
+    "en_description": "Tangy and sweet frozen yogurt with a mixed berry swirl. A lighter alternative to ice cream that still feels like a treat.",
+    "current_title": "Frozen-Yogurt mit gemischten Beeren",
+    "current_description": "Sauerlich-suesser Frozen Yogurt mit einem gemischten Beeren-Wirbel. Eine leichtere Alternative zu Eis, die sich trotzdem wie ein Genuss anfuehlt.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "72afb15c-bfe1-454b-aca9-33b7973cfdbc",
+    "recipe_id": "9167931e-a0f3-4c87-bb11-f29c10eae913",
+    "slug": "graham-cracker-cookie-dough-ice-cream",
+    "locale": "de",
+    "en_title": "Graham Cracker Cookie Dough Ice Cream",
+    "en_description": "Sweet graham cracker ice cream with chocolate chip cookie dough.",
+    "current_title": "Graham Cracker Keks Dough Eiscreme",
+    "current_description": "Sweet graham cracker eiscreme mit schokoladen chip keks dough.",
+    "labels_title": [
+      "graham cracker(s)"
+    ],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "154d84f7-4b6e-4b48-89f7-be8b3f3567de",
+    "recipe_id": "50f320ff-dfe7-4d21-8b08-d64194ba758c",
+    "slug": "mango-lassi-frozen-yogurt",
+    "locale": "de",
+    "en_title": "Mango Lassi Frozen Yogurt",
+    "en_description": "Indian mango lassi transformed into frozen yogurt. Mango, yogurt, and cardamom create an exotic, refreshing treat.",
+    "current_title": "Mango-Lassi-Frozen-Yogurt",
+    "current_description": "Indischer Mango-Lassi in Frozen Yogurt verwandelt. Mango, Joghurt und Kardamom schaffen einen exotischen, erfrischenden Genuss.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "55187c39-c385-42a9-8e1f-ede6da1376a1",
+    "recipe_id": "999b66e4-3f9c-4311-817d-1c5b7ea635d9",
+    "slug": "mango-passion-fruit-greek-frozen-yogurt",
+    "locale": "de",
+    "en_title": "Mango Passion Fruit Greek Frozen Yogurt",
+    "en_description": "Greek yogurt frozen yogurt blended with fresh mango puree and passion fruit pulp — tangy, tropical, and naturally high in protein. Dense scoop, bright golden-orange, no added sugar needed.",
+    "current_title": "Mango Passionsfrucht Griechisch Frozen Joghurt",
+    "current_description": "Griechischer Frozen Yogurt mit frischem Mangopüree und Passionsfruchtmark — spritzig, tropisch und natürlich proteinreich. Dichte Kugel, leuchtend goldorange, ganz ohne zugesetzten Zucker.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "42e05084-446c-4f34-ba43-49de0115745c",
+    "recipe_id": "a1e3dfce-86a9-4143-97ac-d997ac7c1a15",
+    "slug": "oreo-frozen-yogurt",
+    "locale": "de",
+    "en_title": "Oreo Frozen Yogurt",
+    "en_description": "Tangy vanilla frozen yogurt with crushed Oreos. A lighter take on cookies and cream.",
+    "current_title": "Oreo-Frozen-Yogurt",
+    "current_description": "Sauerlicher Vanille-Frozen-Yogurt mit zerkleinerten Oreos. Eine leichtere Variante von Cookies and Cream.",
+    "labels_title": [],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "f07621a7-c836-472e-aa24-5b3a00f38816",
+    "recipe_id": "63991611-954f-4dcc-9e8e-51dfe1ea4002",
+    "slug": "pineapple-brown-sugar-ice-cream",
+    "locale": "de",
+    "en_title": "Pineapple Brown Sugar Ice Cream",
+    "en_description": "Caramelized pineapple ice cream with warm brown sugar sweetness.",
+    "current_title": "Ananas Brown Sugar Eiscreme",
+    "current_description": "Karamellisiertes Ananas-Eis mit warmer Braunzucker-Suesse.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "89204112-c526-46c7-8a14-af9c8b44ab2f",
+    "recipe_id": "f8af1b88-6064-43c8-89a7-342ebf6ea997",
+    "slug": "raspberry-cheesecake-frozen-yogurt",
+    "locale": "de",
+    "en_title": "Raspberry Cheesecake Frozen Yogurt",
+    "en_description": "Tangy cheesecake-flavored frozen yogurt with a raspberry swirl. Lighter than ice cream but just as indulgent.",
+    "current_title": "Himbeer-Cheesecake-Frozen-Yogurt",
+    "current_description": "Sauerlicher Frozen Yogurt mit Kaesekuchengeschmack und Himbeerwirbel. Leichter als Eis, aber genauso genussvoll.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "f719001c-639f-40a1-bf79-7a0daf993d3d",
+    "recipe_id": "ebddece6-e8c5-4f8e-a7ec-46a885910aac",
+    "slug": "smores-milkshake",
+    "locale": "de",
+    "en_title": "S'mores Milkshake",
+    "en_description": "Toasted marshmallow chocolate milkshake with graham cracker crumbles.",
+    "current_title": "S'mores-Milkshake",
+    "current_description": "Toasted marshmallow schokoladen milkshake mit graham cracker Krümel.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "fbdec45f-e405-45ab-bc76-54c2421d7b5e",
+    "recipe_id": "dc28c08c-562f-47c8-984d-9a5e8b0a57a2",
+    "slug": "strawberry-brown-sugar-ice-cream",
+    "locale": "de",
+    "en_title": "Strawberry Brown Sugar Ice Cream",
+    "en_description": "Fresh strawberry ice cream with warm brown sugar.",
+    "current_title": "Erdbeer Brown Sugar Eiscreme",
+    "current_description": "Frisches Erdbeereis mit warmem braunem Zucker.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "3ef01b27-2945-44c1-8d29-a8d275882631",
+    "recipe_id": "96f578d4-ee09-4153-a9ac-4e30510f01e3",
+    "slug": "strawberry-cheesecake-greek-frozen-yogurt",
+    "locale": "de",
+    "en_title": "Strawberry Cheesecake Greek Frozen Yogurt",
+    "en_description": "Tangy strawberry cheesecake frozen yogurt with Greek yogurt and graham cracker.",
+    "current_title": "Erdbeer Cheesecake Griechisch Frozen Joghurt",
+    "current_description": "Sauerliches Erdbeer-Kaesekuchen-Frozen-Yogurt mit griechischem Joghurt und Graham Cracker.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "398c3f22-d12f-4d2f-9a4f-351a88c8ecd8",
+    "recipe_id": "7f8a927d-784f-4289-8696-514feb4fd965",
+    "slug": "strawberry-cheesecake-milkshake",
+    "locale": "de",
+    "en_title": "Strawberry Cheesecake Milkshake",
+    "en_description": "Strawberry cheesecake milkshake with graham cracker crumbles.",
+    "current_title": "Erdbeer Cheesecake Milkshake",
+    "current_description": "Erdbeer cheesecake milkshake mit graham cracker Krümel.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "0387b953-7876-41bb-a132-9c3ef102db8b",
+    "recipe_id": "54bdfb8f-a414-4105-a585-0a9fb9265fef",
+    "slug": "strawberry-cheesecake-protein-lite-ice-cream",
+    "locale": "de",
+    "en_title": "Strawberry Cheesecake Protein Lite Ice Cream",
+    "en_description": "Strawberry cheesecake protein ice cream with graham cracker.",
+    "current_title": "Erdbeer Cheesecake Protein Leichtes Eis",
+    "current_description": "Erdbeer cheesecake protein eiscreme mit graham cracker.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "1c13ec0f-2587-47d3-a0e1-e3ba3d4549cb",
+    "recipe_id": "ea802c95-94b1-4397-9ca0-b8a4014008e5",
+    "slug": "toasted-oat-brown-sugar-ice-cream",
+    "locale": "de",
+    "en_title": "Toasted Oat Brown Sugar Ice Cream",
+    "en_description": "Nutty toasted oat ice cream sweetened with dark brown sugar.",
+    "current_title": "Toasted Oat Brown Sugar Eiscreme",
+    "current_description": "Nutty toasted oat eiscreme sweetened mit dunkel brown sugar.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": [
+      "brown sugar"
+    ]
+  },
+  {
+    "id": "76bfddfb-5bbf-4af9-9511-b96da6fecfd8",
+    "recipe_id": "8798ec1b-3722-4c0b-91a2-2a783adba153",
+    "slug": "toasted-pecan-pie-ice-cream",
+    "locale": "de",
+    "en_title": "Toasted Pecan Pie Ice Cream",
+    "en_description": "Buttery toasted pecan pie ice cream with brown sugar and vanilla.",
+    "current_title": "Toasted Pekannuss Pie Eiscreme",
+    "current_description": "Buttery toasted pekannuss pie eiscreme mit brown sugar und vanille.",
+    "labels_title": [],
+    "labels_description": [
+      "brown sugar"
+    ]
+  },
+  {
+    "id": "f5a80b15-e859-46dd-a201-834054d6009a",
+    "recipe_id": "4a8e57b7-6842-4374-8bd2-71696cabae3e",
+    "slug": "banana-chocolate-chip-greek-frozen-yogurt",
+    "locale": "es",
+    "en_title": "Banana Chocolate Chip Greek Frozen Yogurt",
+    "en_description": "Banana frozen yogurt with mini chocolate chips.",
+    "current_title": "Banana Chocolate Chip Griego Yogur Helado",
+    "current_description": "Banana yogur helado con mini chocolate chispas.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "7155005e-124b-4a90-aa23-a82865cf320a",
+    "recipe_id": "6f9edcc8-f7a4-4d64-9fd9-b605e805b46c",
+    "slug": "banana-soft-serve",
+    "locale": "es",
+    "en_title": "Banana Soft Serve",
+    "en_description": "Ripe banana soft serve for a naturally sweet treat.",
+    "current_title": "Soft Serve de Banana",
+    "current_description": "Ripe banana soft serve para un naturally dulce treat.",
+    "labels_title": [
+      "soft serve"
+    ],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "39234762-9a89-4e8e-b417-a334c7c9f790",
+    "recipe_id": "abc3a839-3a07-4b0f-90c4-261bf76754e7",
+    "slug": "birthday-cake-soft-serve",
+    "locale": "es",
+    "en_title": "Birthday Cake Soft Serve",
+    "en_description": "Festive birthday cake soft serve with sprinkles.",
+    "current_title": "Birthday Pastel Soft Serve",
+    "current_description": "Festive birthday pastel soft serve con sprinkles.",
+    "labels_title": [
+      "soft serve"
+    ],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "29df094e-fb37-4b32-bfd4-b09bbf24861b",
+    "recipe_id": "ea760ec0-3e55-47c1-b8ce-fa5d3d73ae6c",
+    "slug": "blueberry-brown-sugar-ice-cream",
+    "locale": "es",
+    "en_title": "Blueberry Brown Sugar Ice Cream",
+    "en_description": "Sweet blueberry ice cream with rich brown sugar.",
+    "current_title": "Blueberry Brown Sugar Helado",
+    "current_description": "Dulce bluefrutas del bosque helado con rico brown sugar.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": [
+      "brown sugar"
+    ]
+  },
+  {
+    "id": "d54a937c-3c6f-4bf8-b58d-e4b6ba998c00",
+    "recipe_id": "9f40cce6-bf90-4f91-a2d2-7bfed89b7b05",
+    "slug": "blueberry-cheesecake-crumble-ice-cream",
+    "locale": "es",
+    "en_title": "Blueberry Cheesecake Crumble Ice Cream",
+    "en_description": "Blueberry cheesecake ice cream with graham cracker crumble.",
+    "current_title": "Blueberry Cheesecake Crumble Helado",
+    "current_description": "Bluefrutas del bosque cheesepastel helado con graham cracker crumble.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "e6d5ffa7-02ea-452a-95c6-102339b252fb",
+    "recipe_id": "5c70abea-3b37-45e7-b4b0-e03eb46b8185",
+    "slug": "blueberry-soft-serve",
+    "locale": "es",
+    "en_title": "Blueberry Soft Serve",
+    "en_description": "Sweet blueberry soft serve with gorgeous purple color.",
+    "current_title": "Soft Serve de Arandano",
+    "current_description": "Dulce bluefrutas del bosque soft serve con gorgeous purple color.",
+    "labels_title": [
+      "soft serve"
+    ],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "f8169ca0-cb6c-45e1-ae0a-47a806ba181b",
+    "recipe_id": "91af46c5-3fbd-428d-8046-56eee1a0a138",
+    "slug": "bourbon-brown-sugar-ice-cream",
+    "locale": "es",
+    "en_title": "Bourbon Brown Sugar Ice Cream",
+    "en_description": "An artisan-style ice cream with premium ingredients and complex flavor.",
+    "current_title": "Bourbon Brown Sugar Helado",
+    "current_description": "Un helado de estilo artesanal con ingredientes premium y sabor complejo.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "98e84c4c-f151-46e1-9f31-c1ff3e6d69a7",
+    "recipe_id": "f00fe3f3-2dd0-4a94-a3d5-90a390918052",
+    "slug": "brown-sugar-bourbon-pecan-ice-cream",
+    "locale": "es",
+    "en_title": "Brown Sugar Bourbon Pecan Ice Cream",
+    "en_description": "A brown sugar bourbon pecan rich and creamy frozen dessert with layers of complementary flavors.",
+    "current_title": "Brown Sugar Bourbon Nuez Pecana Helado",
+    "current_description": "Un postre helado rico y cremoso de azucar moreno, bourbon y pecanas con capas de sabores complementarios.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "5721be87-6d89-4387-9752-7f2401b05eef",
+    "recipe_id": "e465c4b3-8999-455d-8893-c4b490925889",
+    "slug": "brown-sugar-cinnamon-soft-serve",
+    "locale": "es",
+    "en_title": "Brown Sugar Cinnamon Soft Serve",
+    "en_description": "Warm brown sugar and cinnamon soft serve.",
+    "current_title": "Brown Sugar Canela Helado Suave",
+    "current_description": "Soft serve calido de azucar moreno y canela.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "91986201-3c3c-4fce-8550-36855fed2978",
+    "recipe_id": "aec91837-c168-4712-8ef5-b0211426fa69",
+    "slug": "brown-sugar-cookie-ice-cream",
+    "locale": "es",
+    "en_title": "Brown Sugar Cookie Ice Cream",
+    "en_description": "Warm brown sugar cookie ice cream with rich molasses notes.",
+    "current_title": "Brown Sugar Galleta Helado",
+    "current_description": "Helado calido de galleta de azucar moreno con ricas notas de melaza.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "4733f1ef-45bb-46b0-b389-91408b5bce27",
+    "recipe_id": "32d930cb-b046-4181-abba-49a87a11fb8c",
+    "slug": "brown-sugar-pecan-cookie-ice-cream",
+    "locale": "es",
+    "en_title": "Brown Sugar Pecan Cookie Ice Cream",
+    "en_description": "Warm brown sugar ice cream with pecan cookie crumbles.",
+    "current_title": "Brown Sugar Nuez Pecana Galleta Helado",
+    "current_description": "Helado calido de azucar moreno con migas de galleta de pecanas.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "6003da6f-d3e7-4085-b396-22aa45c598b8",
+    "recipe_id": "280a28cc-354f-4a2e-9a2a-357526ec2b7a",
+    "slug": "brown-sugar-pecan-pie-ice-cream",
+    "locale": "es",
+    "en_title": "Brown Sugar Pecan Pie Ice Cream",
+    "en_description": "Delicious brown sugar pecan pie ice cream with a perfectly balanced blend of flavors for an elevated frozen treat.",
+    "current_title": "Brown Sugar Nuez Pecana Pie Helado",
+    "current_description": "Delicioso helado de tarta de pecanas con azucar moreno y sabores perfectamente equilibrados.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "05cc3227-6039-43da-bccc-d3186c543670",
+    "recipe_id": "f2ff07e1-e3c7-4902-9098-d981b38e3f50",
+    "slug": "butterscotch-soft-serve",
+    "locale": "es",
+    "en_title": "Butterscotch Soft Serve",
+    "en_description": "Warm butterscotch soft serve.",
+    "current_title": "Butterscotch Helado Suave",
+    "current_description": "Soft serve calido de butterscotch.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "59206437-6a38-4ce8-b266-296fe788c79a",
+    "recipe_id": "6ccc0a82-be87-452c-9334-1a55ca56e25d",
+    "slug": "caramel-white-chocolate-chip-ice-cream",
+    "locale": "es",
+    "en_title": "Caramel White Chocolate Chip Ice Cream",
+    "en_description": "Buttery caramel ice cream with white chocolate chips.",
+    "current_title": "Caramelo Blanco Chocolate Chip Helado",
+    "current_description": "Buttery caramelo helado con blanco chocolate chispas.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "704b352c-e854-4fa9-86e4-7a72fd8183c3",
+    "recipe_id": "fbcdca4b-2375-4f1e-a425-d83670496932",
+    "slug": "chai-chocolate-chip-ice-cream",
+    "locale": "es",
+    "en_title": "Chai Chocolate Chip Ice Cream",
+    "en_description": "A chai chocolate chip unique and elevated frozen treat with perfectly balanced flavors.",
+    "current_title": "Chai Chocolate Chip Helado",
+    "current_description": "Un postre helado unico de chai con chispas de chocolate y sabores perfectamente equilibrados.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "36e781f5-6251-403a-91b3-382e9b16239e",
+    "recipe_id": "1a640a8a-99e0-4d6a-8b14-31f48457792a",
+    "slug": "chocolate-cashew-butter-ice-cream",
+    "locale": "es",
+    "en_title": "Chocolate Cashew Butter Ice Cream",
+    "en_description": "Rich chocolate ice cream with smooth cashew butter swirl.",
+    "current_title": "Chocolate Cashew Butter Helado",
+    "current_description": "Rich chocolate helado con suave cashew butter remolino.",
+    "labels_title": [
+      "cashew butter"
+    ],
+    "labels_description": [
+      "cashew butter"
+    ]
+  },
+  {
+    "id": "8c00ab14-96e3-4e2c-8700-f5415997fc2a",
+    "recipe_id": "bfb04642-1927-4601-b41f-6ea65443833d",
+    "slug": "chocolate-chip-banana-bread-ice-cream",
+    "locale": "es",
+    "en_title": "Chocolate Chip Banana Bread Ice Cream",
+    "en_description": "Banana bread ice cream studded with mini chocolate chips.",
+    "current_title": "Chocolate Chip Banana Bread Helado",
+    "current_description": "Banana bread helado studded con mini chocolate chispas.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "4e54bcf4-629e-4b63-9abf-a9d5466a5340",
+    "recipe_id": "50627fa6-2235-4af7-bcae-d875e7a479e5",
+    "slug": "chocolate-chip-brownie-batter-ice-cream",
+    "locale": "es",
+    "en_title": "Chocolate Chip Brownie Batter Ice Cream",
+    "en_description": "Chocolate chip brownie batter ice cream.",
+    "current_title": "Chocolate Chip Brownie Batter Helado",
+    "current_description": "Chocolate chip brownie batter helado.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "d4f684e3-67e5-4564-9a9d-7684ca4be4d7",
+    "recipe_id": "79ed5338-84f1-48d1-86c6-9777976e9b2d",
+    "slug": "chocolate-chip-brownie-protein-lite-ice-cream",
+    "locale": "es",
+    "en_title": "Chocolate Chip Brownie Protein Lite Ice Cream",
+    "en_description": "Fudgy chocolate chip brownie protein ice cream.",
+    "current_title": "Chocolate Chip Brownie Proteína Helado Ligero",
+    "current_description": "Fudgy chocolate chip brownie proteína helado.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "6928d43b-51b5-4fdb-8ce2-e0185502cfb4",
+    "recipe_id": "c38e067c-eef4-46c6-8ee4-326b1e461154",
+    "slug": "chocolate-chip-caramel-cookie-ice-cream",
+    "locale": "es",
+    "en_title": "Chocolate Chip Caramel Cookie Ice Cream",
+    "en_description": "Chocolate chip ice cream with caramel and cookie pieces.",
+    "current_title": "Chocolate Chip Caramelo Galleta Helado",
+    "current_description": "Chocolate chip helado con caramelo y galleta trozos.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "6b711e6d-51bc-405e-a940-59310079feb4",
+    "recipe_id": "fde2cc21-9f39-423e-803a-a3a3f5d6a453",
+    "slug": "chocolate-chip-cookie-crumble-ice-cream",
+    "locale": "es",
+    "en_title": "Chocolate Chip Cookie Crumble Ice Cream",
+    "en_description": "Vanilla ice cream with chocolate chip cookie crumble pieces.",
+    "current_title": "Chocolate Chip Galleta Crumble Helado",
+    "current_description": "Vainilla helado con chocolate chip galleta crumble trozos.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "6ae43017-cbc1-415e-bc89-02cb870427f2",
+    "recipe_id": "5db59576-7452-4027-964f-674150537b01",
+    "slug": "chocolate-chip-cookie-milkshake",
+    "locale": "es",
+    "en_title": "Chocolate Chip Cookie Milkshake",
+    "en_description": "Thick chocolate chip cookie milkshake.",
+    "current_title": "Chocolate Chip Galleta Batido",
+    "current_description": "Thick chocolate chip galleta batido.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "ac322206-eade-4ad1-b794-cfa21692471e",
+    "recipe_id": "9ed82d00-4e73-4082-abbd-9d848788b6ed",
+    "slug": "chocolate-chip-cookie-protein-lite-ice-cream",
+    "locale": "es",
+    "en_title": "Chocolate Chip Cookie Protein Lite Ice Cream",
+    "en_description": "Cookie-flavored protein ice cream with chocolate chips.",
+    "current_title": "Chocolate Chip Galleta Proteína Helado Ligero",
+    "current_description": "Galleta-flavored proteína helado con chocolate chispas.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "10379c5d-4eef-4578-bb35-fbf4d47a3144",
+    "recipe_id": "71b9c5b2-1835-4c7d-ba13-2f1945bd0fad",
+    "slug": "chocolate-chip-espresso-ice-cream",
+    "locale": "es",
+    "en_title": "Chocolate Chip Espresso Ice Cream",
+    "en_description": "Bold espresso ice cream with mini chocolate chips.",
+    "current_title": "Chocolate Chip Espresso Helado",
+    "current_description": "Bold espresso helado con mini chocolate chispas.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "0f72c1ec-4e24-47e5-8675-325aa92f6697",
+    "recipe_id": "021465c3-4c6b-4f86-baaa-1f13fe3032bc",
+    "slug": "chocolate-chip-greek-frozen-yogurt",
+    "locale": "es",
+    "en_title": "Chocolate Chip Greek Frozen Yogurt",
+    "en_description": "Chocolate chip frozen yogurt with Greek yogurt for a simple treat.",
+    "current_title": "Chocolate Chip Griego Yogur Helado",
+    "current_description": "Chocolate chip yogur helado con griego yogurt para un simple treat.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "83cc6e77-7960-4011-92b2-f92745132211",
+    "recipe_id": "5e98ca82-b80e-4f18-b348-d14b6a6bd15a",
+    "slug": "chocolate-chip-walnut-ice-cream",
+    "locale": "es",
+    "en_title": "Chocolate Chip Walnut Ice Cream",
+    "en_description": "Classic chocolate chip ice cream with walnut pieces.",
+    "current_title": "Chocolate Chip Nuez Helado",
+    "current_description": "Classic chocolate chip helado con nuez trozos.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "8d0f14b3-ef89-48eb-900e-d52ed0d4ffae",
+    "recipe_id": "5d6e4c49-374a-45e4-8138-a601902a5a51",
+    "slug": "cinnamon-brown-sugar-pecan-ice-cream",
+    "locale": "es",
+    "en_title": "Cinnamon Brown Sugar Pecan Ice Cream",
+    "en_description": "A cinnamon brown sugar pecan unique and elevated frozen treat with perfectly balanced flavors.",
+    "current_title": "Canela Brown Sugar Nuez Pecana Helado",
+    "current_description": "Un postre helado unico de canela, azucar moreno y pecanas con sabores perfectamente equilibrados.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "0d21c8a7-269e-4435-b739-b5713c47a338",
+    "recipe_id": "36b705bb-2a85-438e-bf21-14b3acc48c33",
+    "slug": "cinnamon-chocolate-chip-ice-cream",
+    "locale": "es",
+    "en_title": "Cinnamon Chocolate Chip Ice Cream",
+    "en_description": "Warm cinnamon ice cream studded with chocolate chips.",
+    "current_title": "Canela Chocolate Chip Helado",
+    "current_description": "Helado calido de canela repleto de chispas de chocolate.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "2ca9a700-75b8-4a4d-86a7-925cea03a4a2",
+    "recipe_id": "4a465c7d-8509-43ca-ae7b-4d3638d8d30c",
+    "slug": "coffee-chocolate-chip-gelato",
+    "locale": "es",
+    "en_title": "Coffee Chocolate Chip Gelato",
+    "en_description": "Bold coffee gelato studded with dark chocolate chips.",
+    "current_title": "Café Chocolate Chip Gelato",
+    "current_description": "Gelato intenso de cafe repleto de chispas de chocolate negro.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "70d843eb-5c96-44af-bdaf-f0d7e35dd0fc",
+    "recipe_id": "b3639069-9025-4c9b-8f39-739702a11ab0",
+    "slug": "coffee-chocolate-chip-ice-cream",
+    "locale": "es",
+    "en_title": "Coffee Chocolate Chip Ice Cream",
+    "en_description": "Bold coffee ice cream studded with dark chocolate chips.",
+    "current_title": "Café Chocolate Chip Helado",
+    "current_description": "Helado intenso de cafe repleto de chispas de chocolate negro.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "79e7f7b5-8b4c-42c3-9c9c-5afb88f7b3ae",
+    "recipe_id": "bcb5dda4-aece-4e51-9733-8b384c1bc717",
+    "slug": "coffee-soft-serve",
+    "locale": "es",
+    "en_title": "Coffee Soft Serve",
+    "en_description": "Smooth espresso-flavored soft serve for coffee lovers. Instant espresso powder gives it a bold coffee kick, perfect dispensed into a cone or alongside a warm brownie.",
+    "current_title": "Helado Suave de Café",
+    "current_description": "Soft serve suave con sabor a espresso para amantes del cafe. El espresso instantaneo le da un intenso toque de cafe, perfecto en un cono o junto a un brownie caliente.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "2d03db31-215d-4c30-ba2e-6df6a1c0d815",
+    "recipe_id": "4fb8d045-75e1-4b07-9580-a4c3ab61ae15",
+    "slug": "cookies-and-cream-ice-cream",
+    "locale": "es",
+    "en_title": "Cookies and Cream Ice Cream",
+    "en_description": "Classic cookies and cream loaded with crushed Oreo cookies. A crowd-pleasing favorite that kids and adults both love.",
+    "current_title": "Helado de Oreo",
+    "current_description": "Clasico cookies and cream cargado de galletas Oreo trituradas. Un favorito que gusta a ninos y adultos por igual.",
+    "labels_title": [],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "00394b48-d573-4486-a0f2-7b17352d5892",
+    "recipe_id": "43054c9a-11b9-4e98-9402-fa868b63a783",
+    "slug": "cookies-and-cream-milkshake",
+    "locale": "es",
+    "en_title": "Cookies and Cream Milkshake",
+    "en_description": "Thick cookies and cream milkshake with Oreo cookie pieces. A diner classic perfected by the Ninja Creami.",
+    "current_title": "Malteada de Oreo",
+    "current_description": "Espeso batido de cookies and cream con trozos de galleta Oreo. Un clasico de diner perfeccionado por el Ninja Creami.",
+    "labels_title": [],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "7df9e042-97aa-4764-b6aa-766c27105c34",
+    "recipe_id": "36d2e9e4-c31d-455f-b1e2-60dd63d04645",
+    "slug": "cookies-and-cream-protein-ice-cream",
+    "locale": "es",
+    "en_title": "Cookies and Cream Protein Ice Cream",
+    "en_description": "All the cookies-and-cream flavor you love packed with protein. Crushed sugar-free Oreos give it authentic cookie flavor while keeping calories in check.",
+    "current_title": "Helado Proteico de Oreo",
+    "current_description": "Todo el sabor de cookies and cream que amas lleno de proteinas. Oreos sin azucar trituradas le dan sabor autentico de galleta manteniendo las calorias bajo control.",
+    "labels_title": [],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "8f45d9c7-0131-4089-93a6-291a434b1865",
+    "recipe_id": "57f30b5a-db50-45cf-9d04-4ff2c84da6dc",
+    "slug": "cookies-and-cream-soft-serve",
+    "locale": "es",
+    "en_title": "Cookies and Cream Soft Serve",
+    "en_description": "Classic cookies and cream in soft serve form. Creamy vanilla base with crushed Oreo cookies folded in, then dispensed as smooth soft serve from the Ninja CREAMi Scoop & Swirl.",
+    "current_title": "Helado Suave de Galletas y Crema",
+    "current_description": "Clasico cookies and cream en forma de soft serve. Base cremosa de vainilla con galletas Oreo trituradas, dispensado como suave soft serve del Ninja CREAMi Scoop & Swirl.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve",
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "014853c8-53d4-4178-9232-88f2830d9c17",
+    "recipe_id": "c2015bc1-7412-4bc6-9c57-ad9dc9747f37",
+    "slug": "espresso-chip-cookie-ice-cream",
+    "locale": "es",
+    "en_title": "Espresso Chip Cookie Ice Cream",
+    "en_description": "Bold espresso ice cream with chocolate chip cookie pieces.",
+    "current_title": "Espresso Chip Galleta Helado",
+    "current_description": "Bold espresso helado con chocolate chip galleta trozos.",
+    "labels_title": [],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "39e71b15-6017-47d7-9191-50b40c5b0732",
+    "recipe_id": "9167931e-a0f3-4c87-bb11-f29c10eae913",
+    "slug": "graham-cracker-cookie-dough-ice-cream",
+    "locale": "es",
+    "en_title": "Graham Cracker Cookie Dough Ice Cream",
+    "en_description": "Sweet graham cracker ice cream with chocolate chip cookie dough.",
+    "current_title": "Graham Cracker Galleta Dough Helado",
+    "current_description": "Sweet graham cracker helado con chocolate chip galleta dough.",
+    "labels_title": [
+      "graham cracker(s)"
+    ],
+    "labels_description": [
+      "chocolate chip(s)",
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "bc057726-fddd-4929-83d6-01d0fb6c356e",
+    "recipe_id": "88a84721-84cf-468a-a76b-1d988c217d23",
+    "slug": "mango-sorbet-soft-serve",
+    "locale": "es",
+    "en_title": "Mango Sorbet Soft Serve",
+    "en_description": "Tropical mango sorbet dispensed as soft serve. Made with frozen mango chunks, sugar, and lime juice for a refreshing dairy-free treat that's perfect for hot days.",
+    "current_title": "Sorbete de Mango en Helado Suave",
+    "current_description": "Sorbete tropical de mango dispensado como soft serve. Hecho con trozos de mango congelado, azucar y jugo de lima para un postre refrescante sin lacteos perfecto para dias calurosos.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "29979b92-b20f-41cf-9d6f-439648c8325e",
+    "recipe_id": "747651d9-c727-4212-b7cf-13c259752574",
+    "slug": "maple-cream-soft-serve",
+    "locale": "es",
+    "en_title": "Maple Cream Soft Serve",
+    "en_description": "Pure maple soft serve with Vermont-style sweetness.",
+    "current_title": "Arce Crema Helado Suave",
+    "current_description": "Soft serve puro de arce con dulzura estilo Vermont.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "7db5eff8-4b17-45b9-84fd-f80d0e304433",
+    "recipe_id": "f0642634-0241-49f6-844a-69a629cd4d72",
+    "slug": "matcha-white-chocolate-chip-ice-cream",
+    "locale": "es",
+    "en_title": "Matcha White Chocolate Chip Ice Cream",
+    "en_description": "Earthy matcha ice cream with sweet white chocolate chips throughout.",
+    "current_title": "Matcha Blanco Chocolate Chip Helado",
+    "current_description": "Earthy matcha helado con dulce blanco chocolate chispas throughout.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "a5f675ee-b18b-44c6-81e0-1c55530169ec",
+    "recipe_id": "a5f96f3f-32d0-4b38-b581-26dacc471fa3",
+    "slug": "mint-chocolate-chip-milkshake",
+    "locale": "es",
+    "en_title": "Mint Chocolate Chip Milkshake",
+    "en_description": "Cool mint milkshake with chocolate chips.",
+    "current_title": "Menta Chocolate Chip Batido",
+    "current_description": "Batido de menta fresca con chispas de chocolate.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "c9f8349c-7477-4960-86b9-18768975361b",
+    "recipe_id": "60c97255-79f9-44cc-adf0-ba001bf048af",
+    "slug": "mint-chocolate-chip-protein-lite-ice-cream",
+    "locale": "es",
+    "en_title": "Mint Chocolate Chip Protein Lite Ice Cream",
+    "en_description": "Cool mint protein ice cream with chocolate chips.",
+    "current_title": "Menta Chocolate Chip Proteína Helado Ligero",
+    "current_description": "Helado proteico de menta fresca con chispas de chocolate.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "9eb1b4f7-cda9-4b7b-a2c4-973533cc0320",
+    "recipe_id": "43022c9e-0f36-45fa-9f58-1d055c8cbcd6",
+    "slug": "mint-chocolate-chip-soft-serve",
+    "locale": "es",
+    "en_title": "Mint Chocolate Chip Soft Serve",
+    "en_description": "Cool mint soft serve with mini chocolate chips. The peppermint extract gives it that iconic green-mint flavor, and the chips add a satisfying crunch to every dispensed swirl.",
+    "current_title": "Helado Suave de Menta con Chispas de Chocolate",
+    "current_description": "Soft serve de menta fresca con mini chispas de chocolate. El extracto de menta le da ese iconico sabor verde-menta, y las chispas anaden un crujido satisfactorio a cada espiral.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "ebcc79a0-fe09-4d50-9ac7-9d987c1a6390",
+    "recipe_id": "a1e3dfce-86a9-4143-97ac-d997ac7c1a15",
+    "slug": "oreo-frozen-yogurt",
+    "locale": "es",
+    "en_title": "Oreo Frozen Yogurt",
+    "en_description": "Tangy vanilla frozen yogurt with crushed Oreos. A lighter take on cookies and cream.",
+    "current_title": "Yogur Helado de Oreo",
+    "current_description": "Yogur helado de vainilla acidulado con Oreos trituradas. Una version mas ligera del cookies and cream.",
+    "labels_title": [],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "035a862d-7f36-4fba-aad2-ea2520790601",
+    "recipe_id": "f08adcb9-b3c8-4e91-b64c-ba29c823e97c",
+    "slug": "peanut-butter-marshmallow-ice-cream",
+    "locale": "es",
+    "en_title": "Peanut Butter Marshmallow Ice Cream",
+    "en_description": "Smooth PB ice cream with marshmallow fluff swirl.",
+    "current_title": "Mantequilla de Maní Marshmallow Helado",
+    "current_description": "Helado suave de mantequilla de cacahuete con remolino de marshmallow fluff.",
+    "labels_title": [],
+    "labels_description": [
+      "marshmallow fluff"
+    ]
+  },
+  {
+    "id": "32473a79-4a48-47b8-9e8d-c6801204c128",
+    "recipe_id": "a8c5846f-10be-4cd0-8eaa-e547cec48858",
+    "slug": "peanut-butter-soft-serve",
+    "locale": "es",
+    "en_title": "Peanut Butter Soft Serve",
+    "en_description": "Creamy peanut butter soft serve with a smooth, nutty flavor. The pudding mix gives it that perfect soft serve consistency when dispensed from the Scoop & Swirl.",
+    "current_title": "Helado Suave de Mantequilla de Maní",
+    "current_description": "Soft serve cremoso de mantequilla de cacahuete con un suave sabor a frutos secos. La mezcla de pudin le da la consistencia perfecta de soft serve al dispensar del Scoop & Swirl.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "1f6dfa03-ec8a-4360-b339-f288752cacc0",
+    "recipe_id": "63991611-954f-4dcc-9e8e-51dfe1ea4002",
+    "slug": "pineapple-brown-sugar-ice-cream",
+    "locale": "es",
+    "en_title": "Pineapple Brown Sugar Ice Cream",
+    "en_description": "Caramelized pineapple ice cream with warm brown sugar sweetness.",
+    "current_title": "Piña Brown Sugar Helado",
+    "current_description": "Helado de pina caramelizada con calida dulzura de azucar moreno.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "d61e41b7-b978-40f4-8e15-bfbccc11e471",
+    "recipe_id": "6557f624-20ac-459e-b64b-06ffda8091ee",
+    "slug": "pistachio-chocolate-chip-gelato",
+    "locale": "es",
+    "en_title": "Pistachio Chocolate Chip Gelato",
+    "en_description": "Pistachio gelato with dark chocolate chips for a crunchy Italian classic.",
+    "current_title": "Pistacho Chocolate Chip Gelato",
+    "current_description": "Pistacho gelato con oscuro chocolate chispas para un crujiente Italian classic.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "233fb003-4086-4e0d-9cb0-acf585ccf3c9",
+    "recipe_id": "0ac359c1-286f-4a29-9053-f33842c44345",
+    "slug": "raspberry-chocolate-chip-greek-frozen-yogurt",
+    "locale": "es",
+    "en_title": "Raspberry Chocolate Chip Greek Frozen Yogurt",
+    "en_description": "Tart raspberry frozen yogurt with chocolate chips.",
+    "current_title": "Frambuesa Chocolate Chip Griego Yogur Helado",
+    "current_description": "Tart frambuesa yogur helado con chocolate chispas.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "aac4fa58-22e3-444f-948b-c64b93c002c1",
+    "recipe_id": "ebddece6-e8c5-4f8e-a7ec-46a885910aac",
+    "slug": "smores-milkshake",
+    "locale": "es",
+    "en_title": "S'mores Milkshake",
+    "en_description": "Toasted marshmallow chocolate milkshake with graham cracker crumbles.",
+    "current_title": "S'mores Batido",
+    "current_description": "Toasted marshmallow chocolate batido con graham cracker migas.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "eca5ffb1-33c6-44fa-8f25-2856218a8bfe",
+    "recipe_id": "dc28c08c-562f-47c8-984d-9a5e8b0a57a2",
+    "slug": "strawberry-brown-sugar-ice-cream",
+    "locale": "es",
+    "en_title": "Strawberry Brown Sugar Ice Cream",
+    "en_description": "Fresh strawberry ice cream with warm brown sugar.",
+    "current_title": "Fresa Brown Sugar Helado",
+    "current_description": "Helado fresco de fresa con calido azucar moreno.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "40544bfd-61d4-4d82-9fee-ed803f5c6a68",
+    "recipe_id": "96f578d4-ee09-4153-a9ac-4e30510f01e3",
+    "slug": "strawberry-cheesecake-greek-frozen-yogurt",
+    "locale": "es",
+    "en_title": "Strawberry Cheesecake Greek Frozen Yogurt",
+    "en_description": "Tangy strawberry cheesecake frozen yogurt with Greek yogurt and graham cracker.",
+    "current_title": "Fresa Cheesecake Griego Yogur Helado",
+    "current_description": "Tangy fresa cheesecake yogur helado con griego yogurt y graham cracker.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "94071540-619f-4dd7-ab6c-0cb1f6102309",
+    "recipe_id": "7f8a927d-784f-4289-8696-514feb4fd965",
+    "slug": "strawberry-cheesecake-milkshake",
+    "locale": "es",
+    "en_title": "Strawberry Cheesecake Milkshake",
+    "en_description": "Strawberry cheesecake milkshake with graham cracker crumbles.",
+    "current_title": "Fresa Cheesecake Batido",
+    "current_description": "Fresa cheesecake batido con graham cracker migas.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "4fb46a6a-88e5-495c-87c6-3867dbd0aa4b",
+    "recipe_id": "54bdfb8f-a414-4105-a585-0a9fb9265fef",
+    "slug": "strawberry-cheesecake-protein-lite-ice-cream",
+    "locale": "es",
+    "en_title": "Strawberry Cheesecake Protein Lite Ice Cream",
+    "en_description": "Strawberry cheesecake protein ice cream with graham cracker.",
+    "current_title": "Fresa Cheesecake Proteína Helado Ligero",
+    "current_description": "Fresa cheesecake proteína helado con graham cracker.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "ed7a91e1-f947-498c-abb0-044ff245346b",
+    "recipe_id": "11098cd2-dee6-4697-b4e1-84bb9a9f4187",
+    "slug": "strawberry-vanilla-swirl-soft-serve",
+    "locale": "es",
+    "en_title": "Strawberry Vanilla Swirl Soft Serve",
+    "en_description": "Classic strawberry and vanilla soft serve swirled together.",
+    "current_title": "Fresa Vainilla Remolino Helado Suave",
+    "current_description": "Clasico soft serve de fresa y vainilla arremolinados juntos.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "3cc69427-9b7a-499c-90f8-5b597d31adef",
+    "recipe_id": "6f6d1060-b425-47c0-8efc-ce598dc35e83",
+    "slug": "tahini-chocolate-chip-ice-cream",
+    "locale": "es",
+    "en_title": "Tahini Chocolate Chip Ice Cream",
+    "en_description": "A tahini chocolate chip rich and creamy frozen dessert with layers of complementary flavors.",
+    "current_title": "Tahini Chocolate Chip Helado",
+    "current_description": "Un postre helado rico de tahini con chispas de chocolate y capas de sabores complementarios.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "f70fa945-bf13-4116-b6c2-7ee22753e36f",
+    "recipe_id": "ea802c95-94b1-4397-9ca0-b8a4014008e5",
+    "slug": "toasted-oat-brown-sugar-ice-cream",
+    "locale": "es",
+    "en_title": "Toasted Oat Brown Sugar Ice Cream",
+    "en_description": "Nutty toasted oat ice cream sweetened with dark brown sugar.",
+    "current_title": "Toasted Oat Brown Sugar Helado",
+    "current_description": "Nutty toasted oat helado sweetened con oscuro brown sugar.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": [
+      "brown sugar"
+    ]
+  },
+  {
+    "id": "d596c971-afa3-4e4c-96ec-dfa40012214e",
+    "recipe_id": "8798ec1b-3722-4c0b-91a2-2a783adba153",
+    "slug": "toasted-pecan-pie-ice-cream",
+    "locale": "es",
+    "en_title": "Toasted Pecan Pie Ice Cream",
+    "en_description": "Buttery toasted pecan pie ice cream with brown sugar and vanilla.",
+    "current_title": "Toasted Nuez Pecana Pie Helado",
+    "current_description": "Buttery toasted nuez pecana pie helado con brown sugar y vainilla.",
+    "labels_title": [],
+    "labels_description": [
+      "brown sugar"
+    ]
+  },
+  {
+    "id": "c0f3beaf-7b29-4acb-a555-e43a77a79e4a",
+    "recipe_id": "fe1d614a-eeb5-4ca6-b4d1-b6172c6f3707",
+    "slug": "vanilla-soft-serve",
+    "locale": "es",
+    "en_title": "Vanilla Soft Serve",
+    "en_description": "Creamy vanilla soft serve dispensed right from your Ninja CREAMi Scoop & Swirl. Uses instant pudding mix for an ultra-smooth, shop-quality texture that rivals any soft serve stand.",
+    "current_title": "Helado Suave de Vainilla",
+    "current_description": "Soft serve cremoso de vainilla dispensado directamente desde tu Ninja CREAMi Scoop & Swirl. Usa mezcla de pudin instantaneo para una textura ultra suave de calidad de tienda.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "a4c1d63b-9366-4737-8a36-24fc0c132959",
+    "recipe_id": "f943841c-ff1c-4ac0-8f67-0c37f8e6a956",
+    "slug": "vegan-cherry-garcia-ice-cream",
+    "locale": "es",
+    "en_title": "Vegan Cherry Garcia Ice Cream",
+    "en_description": "Dairy-free cherry chocolate chip ice cream inspired by the classic Ben & Jerry flavor.",
+    "current_title": "Helado Vegano Cherry Garcia",
+    "current_description": "Dairy-free cereza chocolate chip helado inspirado en el clásico sabor Ben & Jerry's's.",
+    "labels_title": [],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "4d15c81c-cb6e-4e9d-80f2-f768de23d275",
+    "recipe_id": "78c888df-b70a-4dfa-a633-f557f1801277",
+    "slug": "vegan-cookies-and-cream-ice-cream",
+    "locale": "es",
+    "en_title": "Vegan Cookies and Cream Ice Cream",
+    "en_description": "Dairy-free cookies and cream using coconut milk and vegan sandwich cookies. Tastes just like the original, nobody will know the difference.",
+    "current_title": "Helado Vegano de Galletas y Crema",
+    "current_description": "Cookies and cream sin lacteos con leche de coco y galletas veganas. Sabe igual que el original, nadie notara la diferencia.",
+    "labels_title": [],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "3673e824-c730-4530-a824-29947a9592fb",
+    "recipe_id": "30e18a9c-bd5e-4dbb-a8cd-dc6eaa2fdab3",
+    "slug": "banana-caramel-milkshake",
+    "locale": "fr",
+    "en_title": "Banana Caramel Milkshake",
+    "en_description": "Ripe banana milkshake with caramel sauce swirl.",
+    "current_title": "Banane Caramel Milkshake",
+    "current_description": "Ripe banane milkshake avec caramel sauce tourbillon.",
+    "labels_title": [],
+    "labels_description": [
+      "caramel sauce"
+    ]
+  },
+  {
+    "id": "312cf3c6-7df9-4738-a77e-1283e2e98c2e",
+    "recipe_id": "6f9edcc8-f7a4-4d64-9fd9-b605e805b46c",
+    "slug": "banana-soft-serve",
+    "locale": "fr",
+    "en_title": "Banana Soft Serve",
+    "en_description": "Ripe banana soft serve for a naturally sweet treat.",
+    "current_title": "Soft Serve a la Banane",
+    "current_description": "Ripe banane soft serve pour un naturally sucré treat.",
+    "labels_title": [
+      "soft serve"
+    ],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "d5d166d4-1641-4c1e-9695-9696d0e5b51b",
+    "recipe_id": "abc3a839-3a07-4b0f-90c4-261bf76754e7",
+    "slug": "birthday-cake-soft-serve",
+    "locale": "fr",
+    "en_title": "Birthday Cake Soft Serve",
+    "en_description": "Festive birthday cake soft serve with sprinkles.",
+    "current_title": "Birthday Gâteau Soft Serve",
+    "current_description": "Festive birthday gâteau soft serve avec sprinkles.",
+    "labels_title": [
+      "soft serve"
+    ],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "769c14d1-4350-4179-af30-ae6155e2c475",
+    "recipe_id": "ea760ec0-3e55-47c1-b8ce-fa5d3d73ae6c",
+    "slug": "blueberry-brown-sugar-ice-cream",
+    "locale": "fr",
+    "en_title": "Blueberry Brown Sugar Ice Cream",
+    "en_description": "Sweet blueberry ice cream with rich brown sugar.",
+    "current_title": "Blueberry Brown Sugar Crème Glacée",
+    "current_description": "Sucré bluefruits rouges crème glacée avec riche brown sugar.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": [
+      "brown sugar"
+    ]
+  },
+  {
+    "id": "d540815d-56e3-4cd0-a10e-9472779a52bd",
+    "recipe_id": "9f40cce6-bf90-4f91-a2d2-7bfed89b7b05",
+    "slug": "blueberry-cheesecake-crumble-ice-cream",
+    "locale": "fr",
+    "en_title": "Blueberry Cheesecake Crumble Ice Cream",
+    "en_description": "Blueberry cheesecake ice cream with graham cracker crumble.",
+    "current_title": "Blueberry Cheesecake Crumble Crème Glacée",
+    "current_description": "Bluefruits rouges cheesegâteau crème glacée avec graham cracker crumble.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "7400a4e0-99ee-4d89-8de5-ce51b43e03bd",
+    "recipe_id": "5c70abea-3b37-45e7-b4b0-e03eb46b8185",
+    "slug": "blueberry-soft-serve",
+    "locale": "fr",
+    "en_title": "Blueberry Soft Serve",
+    "en_description": "Sweet blueberry soft serve with gorgeous purple color.",
+    "current_title": "Soft Serve aux Myrtilles",
+    "current_description": "Sucré bluefruits rouges soft serve avec gorgeous purple color.",
+    "labels_title": [
+      "soft serve"
+    ],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "e976a745-20a2-44d8-bdb2-7cf90206574e",
+    "recipe_id": "91af46c5-3fbd-428d-8046-56eee1a0a138",
+    "slug": "bourbon-brown-sugar-ice-cream",
+    "locale": "fr",
+    "en_title": "Bourbon Brown Sugar Ice Cream",
+    "en_description": "An artisan-style ice cream with premium ingredients and complex flavor.",
+    "current_title": "Bourbon Brown Sugar Crème Glacée",
+    "current_description": "Une glace de style artisanal avec des ingredients premium et un gout complexe.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "1622678e-ec54-4a7c-95e5-48e12c254f06",
+    "recipe_id": "f00fe3f3-2dd0-4a94-a3d5-90a390918052",
+    "slug": "brown-sugar-bourbon-pecan-ice-cream",
+    "locale": "fr",
+    "en_title": "Brown Sugar Bourbon Pecan Ice Cream",
+    "en_description": "A brown sugar bourbon pecan rich and creamy frozen dessert with layers of complementary flavors.",
+    "current_title": "Brown Sugar Bourbon Noix de Pécan Crème Glacée",
+    "current_description": "Un dessert glace riche et cremeux au sucre brun, bourbon et pacanes avec des couches de saveurs complementaires.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "28a729fc-b248-412c-9ae0-ba4ecca13141",
+    "recipe_id": "e465c4b3-8999-455d-8893-c4b490925889",
+    "slug": "brown-sugar-cinnamon-soft-serve",
+    "locale": "fr",
+    "en_title": "Brown Sugar Cinnamon Soft Serve",
+    "en_description": "Warm brown sugar and cinnamon soft serve.",
+    "current_title": "Brown Sugar Cannelle Glace Molle",
+    "current_description": "Glace molle chaude au sucre brun et cannelle.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "9597e32c-02cc-47b1-8f36-fc8292b9bcd0",
+    "recipe_id": "aec91837-c168-4712-8ef5-b0211426fa69",
+    "slug": "brown-sugar-cookie-ice-cream",
+    "locale": "fr",
+    "en_title": "Brown Sugar Cookie Ice Cream",
+    "en_description": "Warm brown sugar cookie ice cream with rich molasses notes.",
+    "current_title": "Brown Sugar Biscuit Crème Glacée",
+    "current_description": "Glace chaude au biscuit au sucre brun avec de riches notes de melasse.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "683daf27-f3b4-49c7-81e1-5c2fe04a3ddf",
+    "recipe_id": "32d930cb-b046-4181-abba-49a87a11fb8c",
+    "slug": "brown-sugar-pecan-cookie-ice-cream",
+    "locale": "fr",
+    "en_title": "Brown Sugar Pecan Cookie Ice Cream",
+    "en_description": "Warm brown sugar ice cream with pecan cookie crumbles.",
+    "current_title": "Brown Sugar Noix de Pécan Biscuit Crème Glacée",
+    "current_description": "Glace chaude au sucre brun avec des emiettes de biscuit aux pacanes.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "e3b5f653-ea02-4b0d-a98f-0776a537a508",
+    "recipe_id": "280a28cc-354f-4a2e-9a2a-357526ec2b7a",
+    "slug": "brown-sugar-pecan-pie-ice-cream",
+    "locale": "fr",
+    "en_title": "Brown Sugar Pecan Pie Ice Cream",
+    "en_description": "Delicious brown sugar pecan pie ice cream with a perfectly balanced blend of flavors for an elevated frozen treat.",
+    "current_title": "Brown Sugar Noix de Pécan Pie Crème Glacée",
+    "current_description": "Delicieuse glace tarte aux pacanes au sucre brun avec des saveurs parfaitement equilibrees.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "154958eb-537a-4712-8044-34126014f334",
+    "recipe_id": "1a640a8a-99e0-4d6a-8b14-31f48457792a",
+    "slug": "chocolate-cashew-butter-ice-cream",
+    "locale": "fr",
+    "en_title": "Chocolate Cashew Butter Ice Cream",
+    "en_description": "Rich chocolate ice cream with smooth cashew butter swirl.",
+    "current_title": "Chocolat Cashew Butter Crème Glacée",
+    "current_description": "Rich chocolat crème glacée avec onctueux cashew butter tourbillon.",
+    "labels_title": [
+      "cashew butter"
+    ],
+    "labels_description": [
+      "cashew butter"
+    ]
+  },
+  {
+    "id": "f5bb9956-c5e2-4cc6-b973-a65ebf2b10af",
+    "recipe_id": "5d6e4c49-374a-45e4-8138-a601902a5a51",
+    "slug": "cinnamon-brown-sugar-pecan-ice-cream",
+    "locale": "fr",
+    "en_title": "Cinnamon Brown Sugar Pecan Ice Cream",
+    "en_description": "A cinnamon brown sugar pecan unique and elevated frozen treat with perfectly balanced flavors.",
+    "current_title": "Cannelle Brown Sugar Noix de Pécan Crème Glacée",
+    "current_description": "Un dessert glace unique cannelle, sucre brun et pacanes avec des saveurs parfaitement equilibrees.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "e0a8620d-781e-44b5-9971-9ad186968437",
+    "recipe_id": "4459a51d-85c8-4fe6-b3d8-93d003e4017b",
+    "slug": "cookies-and-cream-brownie-ice-cream",
+    "locale": "fr",
+    "en_title": "Cookies and Cream Brownie Ice Cream",
+    "en_description": "Double dessert mashup of cookies and cream base with fudgy brownie chunks.",
+    "current_title": "Crème Glacée Cookies and Cream au Brownie",
+    "current_description": "Double mashup de desserts avec une base cookies and cream et des morceaux de brownie fondants.",
+    "labels_title": [
+      "cookies and cream"
+    ],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "9e9c93fd-e6af-478f-9141-706832059a76",
+    "recipe_id": "43054c9a-11b9-4e98-9402-fa868b63a783",
+    "slug": "cookies-and-cream-milkshake",
+    "locale": "fr",
+    "en_title": "Cookies and Cream Milkshake",
+    "en_description": "Thick cookies and cream milkshake with Oreo cookie pieces. A diner classic perfected by the Ninja Creami.",
+    "current_title": "Milkshake aux Oreo",
+    "current_description": "Milkshake epais cookies and cream avec des morceaux de biscuit Oreo. Un classique de diner perfectionne par le Ninja Creami.",
+    "labels_title": [],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "e7500fae-09bd-42fd-86ae-147f42c5b92b",
+    "recipe_id": "57f30b5a-db50-45cf-9d04-4ff2c84da6dc",
+    "slug": "cookies-and-cream-soft-serve",
+    "locale": "fr",
+    "en_title": "Cookies and Cream Soft Serve",
+    "en_description": "Classic cookies and cream in soft serve form. Creamy vanilla base with crushed Oreo cookies folded in, then dispensed as smooth soft serve from the Ninja CREAMi Scoop & Swirl.",
+    "current_title": "Glace Molle Cookies and Cream",
+    "current_description": "Classique cookies and cream en glace molle. Base vanille cremeuse avec des Oreos emietees, distribue en glace molle onctueuse depuis le Ninja CREAMi Scoop & Swirl.",
+    "labels_title": [
+      "cookies and cream"
+    ],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "8c873cb9-e183-457a-86fa-e4570f3521da",
+    "recipe_id": "9167931e-a0f3-4c87-bb11-f29c10eae913",
+    "slug": "graham-cracker-cookie-dough-ice-cream",
+    "locale": "fr",
+    "en_title": "Graham Cracker Cookie Dough Ice Cream",
+    "en_description": "Sweet graham cracker ice cream with chocolate chip cookie dough.",
+    "current_title": "Graham Cracker Biscuit Dough Crème Glacée",
+    "current_description": "Sweet graham cracker crème glacée avec chocolat chip biscuit dough.",
+    "labels_title": [
+      "graham cracker(s)"
+    ],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "9dea68cc-5e0c-47dd-ba63-1cbd0eb98575",
+    "recipe_id": "d5c501f9-4e28-49c6-9327-5b6f3122070f",
+    "slug": "keto-lemon-cheesecake-ice-cream",
+    "locale": "fr",
+    "en_title": "Keto Lemon Cheesecake Ice Cream",
+    "en_description": "Creamy lemon cheesecake ice cream sweetened with allulose — under 3g net carbs per serving, rich cream cheese texture, and bright real-lemon flavor. No sugar alcohols, no chalky aftertaste.",
+    "current_title": "Crème Glacée Céto Cheesecake au Citron",
+    "current_description": "Glace crémeuse au cheesecake citron sucrée à l'allulose — moins de 3 g de glucides nets par portion, texture riche de cream cheese et saveur vive de citron véritable. Sans polyols, sans arrière-goût farineux.",
+    "labels_title": [],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "a6eac22b-3ebe-418e-93da-910d7b9dc4fa",
+    "recipe_id": "fdbe0844-2b12-4909-ad06-5d6c1fbefc2c",
+    "slug": "mint-cookies-and-cream-ice-cream",
+    "locale": "fr",
+    "en_title": "Mint Cookies and Cream Ice Cream",
+    "en_description": "Cool peppermint ice cream loaded with crushed chocolate sandwich cookies.",
+    "current_title": "Crème Glacée Menthe Cookies and Cream",
+    "current_description": "Crème glacée menthe poivrée avec des biscuits au chocolat émiettés.",
+    "labels_title": [
+      "cookies and cream"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "83ba9b49-b58f-49ad-a129-8d607bece7ed",
+    "recipe_id": "a1e3dfce-86a9-4143-97ac-d997ac7c1a15",
+    "slug": "oreo-frozen-yogurt",
+    "locale": "fr",
+    "en_title": "Oreo Frozen Yogurt",
+    "en_description": "Tangy vanilla frozen yogurt with crushed Oreos. A lighter take on cookies and cream.",
+    "current_title": "Yaourt Glacé aux Oreo",
+    "current_description": "Yogourt glace vanille acidule avec des Oreos emietees. Une version plus legere du cookies and cream.",
+    "labels_title": [],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "6ad0786d-4a9f-48bf-be44-1d588add81a9",
+    "recipe_id": "63991611-954f-4dcc-9e8e-51dfe1ea4002",
+    "slug": "pineapple-brown-sugar-ice-cream",
+    "locale": "fr",
+    "en_title": "Pineapple Brown Sugar Ice Cream",
+    "en_description": "Caramelized pineapple ice cream with warm brown sugar sweetness.",
+    "current_title": "Ananas Brown Sugar Crème Glacée",
+    "current_description": "Caramelized ananas crème glacée avec chaud brown sugar sweetness.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": [
+      "brown sugar"
+    ]
+  },
+  {
+    "id": "d35be710-dac9-4700-8a12-64b2b1b84d5a",
+    "recipe_id": "ebddece6-e8c5-4f8e-a7ec-46a885910aac",
+    "slug": "smores-milkshake",
+    "locale": "fr",
+    "en_title": "S'mores Milkshake",
+    "en_description": "Toasted marshmallow chocolate milkshake with graham cracker crumbles.",
+    "current_title": "Milkshake S'mores",
+    "current_description": "Toasted marshmallow chocolat milkshake avec graham cracker miettes.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "be93a92b-66b0-4ac1-ac7f-d9b065f5132b",
+    "recipe_id": "dc28c08c-562f-47c8-984d-9a5e8b0a57a2",
+    "slug": "strawberry-brown-sugar-ice-cream",
+    "locale": "fr",
+    "en_title": "Strawberry Brown Sugar Ice Cream",
+    "en_description": "Fresh strawberry ice cream with warm brown sugar.",
+    "current_title": "Fraise Brown Sugar Crème Glacée",
+    "current_description": "Glace fraiche a la fraise avec du sucre brun chaud.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "84e11181-33b9-4328-b5e4-281c5e90a31b",
+    "recipe_id": "96f578d4-ee09-4153-a9ac-4e30510f01e3",
+    "slug": "strawberry-cheesecake-greek-frozen-yogurt",
+    "locale": "fr",
+    "en_title": "Strawberry Cheesecake Greek Frozen Yogurt",
+    "en_description": "Tangy strawberry cheesecake frozen yogurt with Greek yogurt and graham cracker.",
+    "current_title": "Fraise Cheesecake Grec Yaourt Glacé",
+    "current_description": "Tangy fraise cheesecake yaourt glacé avec grec yogurt et graham cracker.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "9fd5319c-1afe-432e-a255-c31f842bfdff",
+    "recipe_id": "7f8a927d-784f-4289-8696-514feb4fd965",
+    "slug": "strawberry-cheesecake-milkshake",
+    "locale": "fr",
+    "en_title": "Strawberry Cheesecake Milkshake",
+    "en_description": "Strawberry cheesecake milkshake with graham cracker crumbles.",
+    "current_title": "Fraise Cheesecake Milkshake",
+    "current_description": "Fraise cheesecake milkshake avec graham cracker miettes.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "e5ca7240-94bb-45b4-bb1a-069b04e99c1e",
+    "recipe_id": "54bdfb8f-a414-4105-a585-0a9fb9265fef",
+    "slug": "strawberry-cheesecake-protein-lite-ice-cream",
+    "locale": "fr",
+    "en_title": "Strawberry Cheesecake Protein Lite Ice Cream",
+    "en_description": "Strawberry cheesecake protein ice cream with graham cracker.",
+    "current_title": "Fraise Cheesecake Protéiné Crème Glacée Légère",
+    "current_description": "Fraise cheesecake protéiné crème glacée avec graham cracker.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "58453c6b-710c-414a-836b-45c6261da755",
+    "recipe_id": "ea802c95-94b1-4397-9ca0-b8a4014008e5",
+    "slug": "toasted-oat-brown-sugar-ice-cream",
+    "locale": "fr",
+    "en_title": "Toasted Oat Brown Sugar Ice Cream",
+    "en_description": "Nutty toasted oat ice cream sweetened with dark brown sugar.",
+    "current_title": "Toasted Oat Brown Sugar Crème Glacée",
+    "current_description": "Nutty toasted oat crème glacée sweetened avec noir brown sugar.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": [
+      "brown sugar"
+    ]
+  },
+  {
+    "id": "cc97ff7e-9945-46d8-843f-60019b7e4b53",
+    "recipe_id": "8798ec1b-3722-4c0b-91a2-2a783adba153",
+    "slug": "toasted-pecan-pie-ice-cream",
+    "locale": "fr",
+    "en_title": "Toasted Pecan Pie Ice Cream",
+    "en_description": "Buttery toasted pecan pie ice cream with brown sugar and vanilla.",
+    "current_title": "Toasted Noix de Pécan Pie Crème Glacée",
+    "current_description": "Buttery toasted noix de pécan pie crème glacée avec brown sugar et vanille.",
+    "labels_title": [],
+    "labels_description": [
+      "brown sugar"
+    ]
+  },
+  {
+    "id": "fbc1ac9a-a49d-41d9-a002-674ddb318ddc",
+    "recipe_id": "78c888df-b70a-4dfa-a633-f557f1801277",
+    "slug": "vegan-cookies-and-cream-ice-cream",
+    "locale": "fr",
+    "en_title": "Vegan Cookies and Cream Ice Cream",
+    "en_description": "Dairy-free cookies and cream using coconut milk and vegan sandwich cookies. Tastes just like the original, nobody will know the difference.",
+    "current_title": "Crème Glacée Végane Cookies and Cream",
+    "current_description": "Cookies and cream sans produits laitiers au lait de coco et biscuits vegans. Le gout est identique a l'original, personne ne verra la difference.",
+    "labels_title": [
+      "cookies and cream"
+    ],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "50f2caa9-a9e5-4670-9faa-882a06f18a0f",
+    "recipe_id": "4a8e57b7-6842-4374-8bd2-71696cabae3e",
+    "slug": "banana-chocolate-chip-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Banana Chocolate Chip Greek Frozen Yogurt",
+    "en_description": "Banana frozen yogurt with mini chocolate chips.",
+    "current_title": "Banana Chocolate Chip Grego Iogurte Gelado",
+    "current_description": "Banana iogurte gelado com mini chocolate gotas.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "57e1aeb9-f7b7-403b-9ea1-9f70d12a9d33",
+    "recipe_id": "3c0717d5-1d0b-468c-be26-2f0eefc9581f",
+    "slug": "banana-cream-cheese-ice-cream",
+    "locale": "pt",
+    "en_title": "Banana Cream Cheese Ice Cream",
+    "en_description": "Tangy cream cheese ice cream with ripe banana.",
+    "current_title": "Sorvete de Banana com Cream Cheese",
+    "current_description": "Sorvete acidulado de cream cheese com banana madura.",
+    "labels_title": [
+      "cream cheese"
+    ],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "4b8d5c63-b51c-4e6e-a429-4388b6b25129",
+    "recipe_id": "6f9edcc8-f7a4-4d64-9fd9-b605e805b46c",
+    "slug": "banana-soft-serve",
+    "locale": "pt",
+    "en_title": "Banana Soft Serve",
+    "en_description": "Ripe banana soft serve for a naturally sweet treat.",
+    "current_title": "Soft Serve de Banana",
+    "current_description": "Ripe banana soft serve para um naturally doce treat.",
+    "labels_title": [
+      "soft serve"
+    ],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "8b18b8d5-4825-46c0-84ee-b31eb6e553e8",
+    "recipe_id": "e4871005-07dd-4ad5-998c-e2ed13dcf156",
+    "slug": "banana-split-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Banana Split Frozen Yogurt",
+    "en_description": "Banana split frozen yogurt with all the sundae toppings. A lighter take on the classic.",
+    "current_title": "Frozen Yogurt de Banana Split",
+    "current_description": "Frozen yogurt de banana split com todas as coberturas de sundae. Uma versao mais leve do classico.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "4564e529-3e99-4dd8-8994-2b93e277c8f1",
+    "recipe_id": "d688989c-bcf8-4e2a-be86-0a56899362da",
+    "slug": "banana-walnut-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Banana Walnut Frozen Yogurt",
+    "en_description": "Banana frozen yogurt with crunchy walnut pieces. Naturally sweet and protein-rich.",
+    "current_title": "Frozen Yogurt de Banana com Nozes",
+    "current_description": "Frozen yogurt de banana com pedacos crocantes de nozes. Naturalmente doce e rico em proteinas.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "f8d9b388-384c-4dcc-930f-970fd6e2d58c",
+    "recipe_id": "abc3a839-3a07-4b0f-90c4-261bf76754e7",
+    "slug": "birthday-cake-soft-serve",
+    "locale": "pt",
+    "en_title": "Birthday Cake Soft Serve",
+    "en_description": "Festive birthday cake soft serve with sprinkles.",
+    "current_title": "Birthday Bolo Soft Serve",
+    "current_description": "Festive birthday bolo soft serve com sprinkles.",
+    "labels_title": [
+      "soft serve"
+    ],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "f937f147-6c4e-4d55-9a6b-76ea3c59628c",
+    "recipe_id": "5f8d5fb8-0dda-455f-8bb3-522118e1b5bb",
+    "slug": "biscoff-swirl-cheesecake-ice-cream",
+    "locale": "pt",
+    "en_title": "Biscoff Swirl Cheesecake Ice Cream",
+    "en_description": "Cream cheese ice cream with Biscoff cookie butter swirl. Two beloved flavors united in frozen form.",
+    "current_title": "Sorvete de Cheesecake com Redemoinho de Biscoff",
+    "current_description": "Sorvete de cream cheese com redemoinho de pasta de biscoito Biscoff. Dois sabores adorados unidos em forma congelada.",
+    "labels_title": [],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "8dac7f97-e938-40c6-9f82-9c52471251e1",
+    "recipe_id": "e1c7769e-fa5c-4c94-8059-267a1370ffab",
+    "slug": "blackberry-cheesecake-ice-cream",
+    "locale": "pt",
+    "en_title": "Blackberry Cheesecake Ice Cream",
+    "en_description": "Tangy cream cheese ice cream with sweet blackberry swirl and graham cracker bits.",
+    "current_title": "Sorvete de Cheesecake de Amora",
+    "current_description": "Sorvete acidulado de cream cheese com redemoinho de amora e pedaços de biscoito graham.",
+    "labels_title": [],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "2053c789-b980-4474-8c98-8b8016be5152",
+    "recipe_id": "3385b838-5184-4624-b0fc-fc295ce743ff",
+    "slug": "blackberry-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Blackberry Frozen Yogurt",
+    "en_description": "Bold blackberry frozen yogurt with intense berry flavor. Gorgeous dark purple.",
+    "current_title": "Frozen Yogurt de Amora",
+    "current_description": "Frozen yogurt de amora com intenso sabor de frutas vermelhas. Lindo roxo escuro.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "2e0e5275-1d43-4baa-8aa9-3bb91f154ffb",
+    "recipe_id": "ea760ec0-3e55-47c1-b8ce-fa5d3d73ae6c",
+    "slug": "blueberry-brown-sugar-ice-cream",
+    "locale": "pt",
+    "en_title": "Blueberry Brown Sugar Ice Cream",
+    "en_description": "Sweet blueberry ice cream with rich brown sugar.",
+    "current_title": "Blueberry Brown Sugar Sorvete",
+    "current_description": "Doce bluefrutas vermelhas sorvete com rico brown sugar.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": [
+      "brown sugar"
+    ]
+  },
+  {
+    "id": "0e723aab-d7fc-4577-97b2-3d92bf83da65",
+    "recipe_id": "9f40cce6-bf90-4f91-a2d2-7bfed89b7b05",
+    "slug": "blueberry-cheesecake-crumble-ice-cream",
+    "locale": "pt",
+    "en_title": "Blueberry Cheesecake Crumble Ice Cream",
+    "en_description": "Blueberry cheesecake ice cream with graham cracker crumble.",
+    "current_title": "Blueberry Cheesecake Crumble Sorvete",
+    "current_description": "Bluefrutas vermelhas cheesebolo sorvete com graham cracker crumble.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "dc24713f-64d7-4621-86d5-8b3447e14246",
+    "recipe_id": "350939c8-9038-442d-a310-79f9a01c6f77",
+    "slug": "blueberry-cheesecake-ice-cream",
+    "locale": "pt",
+    "en_title": "Blueberry Cheesecake Ice Cream",
+    "en_description": "Rich cream cheese ice cream with a blueberry compote swirl. Like a New York cheesecake topped with blueberry sauce, in frozen form.",
+    "current_title": "Sorvete de Cheesecake de Mirtilo",
+    "current_description": "Rico sorvete de cream cheese com redemoinho de compota de mirtilo. Como um cheesecake nova-iorquino coberto com calda de mirtilo, em forma congelada.",
+    "labels_title": [],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "ed198291-984f-400c-bf9a-930413f2c66a",
+    "recipe_id": "f18a1a8c-e27a-4bbc-8b69-9f109c9d938e",
+    "slug": "blueberry-cheesecake-swirl-ice-cream",
+    "locale": "pt",
+    "en_title": "Blueberry Cheesecake Swirl Ice Cream",
+    "en_description": "Tangy cream cheese ice cream swirled with blueberry compote. A frozen slice of blueberry cheesecake.",
+    "current_title": "Sorvete com Redemoinho de Cheesecake de Mirtilo",
+    "current_description": "Sorvete ácido de cream cheese com redemoinho de compota de mirtilo. Uma fatia congelada de cheesecake de mirtilo.",
+    "labels_title": [],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "4014e5d6-cbd3-46e3-aae5-90ca4dae3e33",
+    "recipe_id": "121b7758-a8be-40bf-87e3-d0025adc75cc",
+    "slug": "blueberry-cream-cheese-ice-cream",
+    "locale": "pt",
+    "en_title": "Blueberry Cream Cheese Ice Cream",
+    "en_description": "Tangy cream cheese ice cream with sweet blueberry swirl.",
+    "current_title": "Sorvete de Mirtilo com Cream Cheese",
+    "current_description": "Sorvete acidulado de cream cheese com redemoinho de mirtilos doces.",
+    "labels_title": [
+      "cream cheese"
+    ],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "7480bdfc-dff9-4b5f-a864-1cf671b22615",
+    "recipe_id": "bc593e3f-b21f-4a20-8bb9-86276e8d9a28",
+    "slug": "blueberry-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Blueberry Frozen Yogurt",
+    "en_description": "Creamy blueberry frozen yogurt bursting with antioxidant-rich berries. Light, tangy, and naturally sweetened with honey.",
+    "current_title": "Frozen Yogurt de Mirtilo",
+    "current_description": "Frozen yogurt cremoso de mirtilo repleto de antioxidantes. Leve, acidulado e naturalmente adocado com mel.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "4f8a80e3-ae72-4c83-9111-bd660443a616",
+    "recipe_id": "5378271d-8732-40e8-af11-e064a8667842",
+    "slug": "blueberry-lemon-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Blueberry Lemon Greek Frozen Yogurt",
+    "en_description": "Bright blueberry lemon frozen yogurt with Greek yogurt.",
+    "current_title": "Blueberry Limão Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt vibrante de mirtilo e limao com iogurte grego.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "395360a9-31c7-471a-aca0-1e7de92a1ea2",
+    "recipe_id": "5c70abea-3b37-45e7-b4b0-e03eb46b8185",
+    "slug": "blueberry-soft-serve",
+    "locale": "pt",
+    "en_title": "Blueberry Soft Serve",
+    "en_description": "Sweet blueberry soft serve with gorgeous purple color.",
+    "current_title": "Soft Serve de Mirtilo",
+    "current_description": "Doce bluefrutas vermelhas soft serve com gorgeous purple color.",
+    "labels_title": [
+      "soft serve"
+    ],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "7acf71be-5a82-4cf3-b029-101450e91264",
+    "recipe_id": "91af46c5-3fbd-428d-8046-56eee1a0a138",
+    "slug": "bourbon-brown-sugar-ice-cream",
+    "locale": "pt",
+    "en_title": "Bourbon Brown Sugar Ice Cream",
+    "en_description": "An artisan-style ice cream with premium ingredients and complex flavor.",
+    "current_title": "Bourbon Brown Sugar Sorvete",
+    "current_description": "Um sorvete de estilo artesanal com ingredientes premium e sabor complexo.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "b4162fd4-6501-472b-8f32-199e91e76a75",
+    "recipe_id": "f00fe3f3-2dd0-4a94-a3d5-90a390918052",
+    "slug": "brown-sugar-bourbon-pecan-ice-cream",
+    "locale": "pt",
+    "en_title": "Brown Sugar Bourbon Pecan Ice Cream",
+    "en_description": "A brown sugar bourbon pecan rich and creamy frozen dessert with layers of complementary flavors.",
+    "current_title": "Brown Sugar Bourbon Noz-Pecã Sorvete",
+    "current_description": "Uma sobremesa gelada rica e cremosa de acucar mascavo, bourbon e nozes pecas com camadas de sabores complementares.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "93486864-1c84-4ec5-a4a0-dee670a2b4fd",
+    "recipe_id": "e465c4b3-8999-455d-8893-c4b490925889",
+    "slug": "brown-sugar-cinnamon-soft-serve",
+    "locale": "pt",
+    "en_title": "Brown Sugar Cinnamon Soft Serve",
+    "en_description": "Warm brown sugar and cinnamon soft serve.",
+    "current_title": "Brown Sugar Canela Sorvete Soft",
+    "current_description": "Soft serve quente de acucar mascavo e canela.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "6806004d-62e1-4a2f-af50-ee723ae84c19",
+    "recipe_id": "aec91837-c168-4712-8ef5-b0211426fa69",
+    "slug": "brown-sugar-cookie-ice-cream",
+    "locale": "pt",
+    "en_title": "Brown Sugar Cookie Ice Cream",
+    "en_description": "Warm brown sugar cookie ice cream with rich molasses notes.",
+    "current_title": "Brown Sugar Biscoito Sorvete",
+    "current_description": "Sorvete quente de biscoito de acucar mascavo com ricas notas de melaco.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "67133842-8b8d-4910-8dae-5308f757c7e5",
+    "recipe_id": "32d930cb-b046-4181-abba-49a87a11fb8c",
+    "slug": "brown-sugar-pecan-cookie-ice-cream",
+    "locale": "pt",
+    "en_title": "Brown Sugar Pecan Cookie Ice Cream",
+    "en_description": "Warm brown sugar ice cream with pecan cookie crumbles.",
+    "current_title": "Brown Sugar Noz-Pecã Biscoito Sorvete",
+    "current_description": "Sorvete quente de acucar mascavo com farelos de biscoito de nozes pecas.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "30ce8e36-c50b-4359-9fd8-cc0958336f7c",
+    "recipe_id": "280a28cc-354f-4a2e-9a2a-357526ec2b7a",
+    "slug": "brown-sugar-pecan-pie-ice-cream",
+    "locale": "pt",
+    "en_title": "Brown Sugar Pecan Pie Ice Cream",
+    "en_description": "Delicious brown sugar pecan pie ice cream with a perfectly balanced blend of flavors for an elevated frozen treat.",
+    "current_title": "Brown Sugar Noz-Pecã Pie Sorvete",
+    "current_description": "Delicioso sorvete de torta de nozes pecas com acucar mascavo e sabores perfeitamente equilibrados.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "71a5b990-0912-47f8-bce2-27225eb6eff7",
+    "recipe_id": "f2ff07e1-e3c7-4902-9098-d981b38e3f50",
+    "slug": "butterscotch-soft-serve",
+    "locale": "pt",
+    "en_title": "Butterscotch Soft Serve",
+    "en_description": "Warm butterscotch soft serve.",
+    "current_title": "Butterscotch Sorvete Soft",
+    "current_description": "Soft serve quente de butterscotch.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "6432e983-4ada-4451-b2fd-439217d7bd61",
+    "recipe_id": "3be9a98d-3b79-46a1-9aba-d5a3d9ee13b7",
+    "slug": "caramel-apple-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Caramel Apple Frozen Yogurt",
+    "en_description": "Caramel apple frozen yogurt with warm spice. Fall farmers market in frozen form.",
+    "current_title": "Frozen Yogurt de Maçã com Caramelo",
+    "current_description": "Frozen yogurt de maca caramelizada com especiarias quentes. Feira de outono em forma gelada.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "4999c389-5798-44fa-8e05-77dbfbc6b4bd",
+    "recipe_id": "884f5d4a-6fab-4356-bc3a-1c51a6676215",
+    "slug": "caramel-apple-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Caramel Apple Greek Frozen Yogurt",
+    "en_description": "Sweet caramel apple frozen yogurt with Greek yogurt for a fall-inspired treat.",
+    "current_title": "Caramelo Maçã Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt doce de maca com caramelo e iogurte grego para uma sobremesa inspirada no outono.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "dfd4775a-8a69-4f2c-9ce4-392087651de5",
+    "recipe_id": "6ccc0a82-be87-452c-9334-1a55ca56e25d",
+    "slug": "caramel-white-chocolate-chip-ice-cream",
+    "locale": "pt",
+    "en_title": "Caramel White Chocolate Chip Ice Cream",
+    "en_description": "Buttery caramel ice cream with white chocolate chips.",
+    "current_title": "Caramelo Branco Chocolate Chip Sorvete",
+    "current_description": "Buttery caramelo sorvete com branco chocolate gotas.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "4f73496c-25a7-4967-a5b2-47121836c7db",
+    "recipe_id": "fbcdca4b-2375-4f1e-a425-d83670496932",
+    "slug": "chai-chocolate-chip-ice-cream",
+    "locale": "pt",
+    "en_title": "Chai Chocolate Chip Ice Cream",
+    "en_description": "A chai chocolate chip unique and elevated frozen treat with perfectly balanced flavors.",
+    "current_title": "Chai Chocolate Chip Sorvete",
+    "current_description": "Uma sobremesa gelada unica de chai com gotas de chocolate e sabores perfeitamente equilibrados.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "5c77a9ec-2b86-426a-9716-071d5d249dc2",
+    "recipe_id": "7ac369e1-06ce-4b80-8c2f-53b9bee5db97",
+    "slug": "cheesecake-swirl-ice-cream",
+    "locale": "pt",
+    "en_title": "Cheesecake Swirl Ice Cream",
+    "en_description": "New York style cheesecake ice cream. Cream cheese tang with graham cracker sweetness.",
+    "current_title": "Sorvete com Redemoinho de Cheesecake",
+    "current_description": "Sorvete de cheesecake estilo Nova York. Acidez do cream cheese com doçura de biscoito graham.",
+    "labels_title": [],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "19f1da33-ec54-4bda-b29d-2ec27d81ba98",
+    "recipe_id": "92864c3c-84a5-433a-8b5d-2254d217e7bd",
+    "slug": "cherry-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Cherry Frozen Yogurt",
+    "en_description": "Sweet cherry frozen yogurt with real fruit. Deep red color and classic cherry flavor.",
+    "current_title": "Frozen Yogurt de Cereja",
+    "current_description": "Frozen yogurt de cereja doce com fruta real. Cor vermelha intensa e sabor classico de cereja.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "d956e60f-dcd7-45ae-beb2-17212b35fd1c",
+    "recipe_id": "51b6ca00-fc72-442b-8955-63e8e55e2a02",
+    "slug": "cherry-vanilla-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Cherry Vanilla Frozen Yogurt",
+    "en_description": "Tangy vanilla frozen yogurt with sweet cherry swirls. Light, fruity, and delicious.",
+    "current_title": "Frozen Yogurt de Cereja e Baunilha",
+    "current_description": "Frozen yogurt de baunilha acidulado com redemoinhos doces de cereja. Leve, frutado e delicioso.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "ec0be197-0378-49e2-9ec7-ea92016910f1",
+    "recipe_id": "1a640a8a-99e0-4d6a-8b14-31f48457792a",
+    "slug": "chocolate-cashew-butter-ice-cream",
+    "locale": "pt",
+    "en_title": "Chocolate Cashew Butter Ice Cream",
+    "en_description": "Rich chocolate ice cream with smooth cashew butter swirl.",
+    "current_title": "Chocolate Cashew Butter Sorvete",
+    "current_description": "Rich chocolate sorvete com cremoso cashew butter redemoinho.",
+    "labels_title": [
+      "cashew butter"
+    ],
+    "labels_description": [
+      "cashew butter"
+    ]
+  },
+  {
+    "id": "0e787c90-a6f2-41e8-a89e-134fcdb0761e",
+    "recipe_id": "bfb04642-1927-4601-b41f-6ea65443833d",
+    "slug": "chocolate-chip-banana-bread-ice-cream",
+    "locale": "pt",
+    "en_title": "Chocolate Chip Banana Bread Ice Cream",
+    "en_description": "Banana bread ice cream studded with mini chocolate chips.",
+    "current_title": "Chocolate Chip Banana Bread Sorvete",
+    "current_description": "Banana bread sorvete studded com mini chocolate gotas.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "9a2df454-4855-436b-90df-1b134fff585b",
+    "recipe_id": "50627fa6-2235-4af7-bcae-d875e7a479e5",
+    "slug": "chocolate-chip-brownie-batter-ice-cream",
+    "locale": "pt",
+    "en_title": "Chocolate Chip Brownie Batter Ice Cream",
+    "en_description": "Chocolate chip brownie batter ice cream.",
+    "current_title": "Chocolate Chip Brownie Batter Sorvete",
+    "current_description": "Chocolate chip brownie batter sorvete.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "92a406ce-7457-48fa-86f3-1d9f4ffde638",
+    "recipe_id": "79ed5338-84f1-48d1-86c6-9777976e9b2d",
+    "slug": "chocolate-chip-brownie-protein-lite-ice-cream",
+    "locale": "pt",
+    "en_title": "Chocolate Chip Brownie Protein Lite Ice Cream",
+    "en_description": "Fudgy chocolate chip brownie protein ice cream.",
+    "current_title": "Chocolate Chip Brownie Proteína Sorvete Light",
+    "current_description": "Fudgy chocolate chip brownie proteína sorvete.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "c350e6f4-b5d6-48b1-a994-ba2b9a6f8082",
+    "recipe_id": "c38e067c-eef4-46c6-8ee4-326b1e461154",
+    "slug": "chocolate-chip-caramel-cookie-ice-cream",
+    "locale": "pt",
+    "en_title": "Chocolate Chip Caramel Cookie Ice Cream",
+    "en_description": "Chocolate chip ice cream with caramel and cookie pieces.",
+    "current_title": "Chocolate Chip Caramelo Biscoito Sorvete",
+    "current_description": "Chocolate chip sorvete com caramelo e biscoito pedaços.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "a17e3ddd-d472-4d9d-bd43-626aac583921",
+    "recipe_id": "fde2cc21-9f39-423e-803a-a3a3f5d6a453",
+    "slug": "chocolate-chip-cookie-crumble-ice-cream",
+    "locale": "pt",
+    "en_title": "Chocolate Chip Cookie Crumble Ice Cream",
+    "en_description": "Vanilla ice cream with chocolate chip cookie crumble pieces.",
+    "current_title": "Chocolate Chip Biscoito Crumble Sorvete",
+    "current_description": "Baunilha sorvete com chocolate chip biscoito crumble pedaços.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "15d95246-9295-41d3-835f-adf0036012b0",
+    "recipe_id": "5db59576-7452-4027-964f-674150537b01",
+    "slug": "chocolate-chip-cookie-milkshake",
+    "locale": "pt",
+    "en_title": "Chocolate Chip Cookie Milkshake",
+    "en_description": "Thick chocolate chip cookie milkshake.",
+    "current_title": "Chocolate Chip Biscoito Milkshake",
+    "current_description": "Thick chocolate chip biscoito milkshake.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "f145d59e-157e-468b-aa66-cd95f8100e54",
+    "recipe_id": "9ed82d00-4e73-4082-abbd-9d848788b6ed",
+    "slug": "chocolate-chip-cookie-protein-lite-ice-cream",
+    "locale": "pt",
+    "en_title": "Chocolate Chip Cookie Protein Lite Ice Cream",
+    "en_description": "Cookie-flavored protein ice cream with chocolate chips.",
+    "current_title": "Chocolate Chip Biscoito Proteína Sorvete Light",
+    "current_description": "Biscoito-flavored proteína sorvete com chocolate gotas.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "7b1dd26b-d5d8-4e63-94dd-787ad1d1b9f8",
+    "recipe_id": "71b9c5b2-1835-4c7d-ba13-2f1945bd0fad",
+    "slug": "chocolate-chip-espresso-ice-cream",
+    "locale": "pt",
+    "en_title": "Chocolate Chip Espresso Ice Cream",
+    "en_description": "Bold espresso ice cream with mini chocolate chips.",
+    "current_title": "Chocolate Chip Espresso Sorvete",
+    "current_description": "Bold espresso sorvete com mini chocolate gotas.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "ced8dfeb-e2bc-4f44-9f19-c7b33a64c920",
+    "recipe_id": "ef1784d1-eb5b-43dc-ace6-1ade78fbe619",
+    "slug": "chocolate-chip-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Chocolate Chip Frozen Yogurt",
+    "en_description": "Tangy vanilla frozen yogurt with mini chocolate chips scattered throughout.",
+    "current_title": "Frozen Yogurt com Gotas de Chocolate",
+    "current_description": "Frozen yogurt de baunilha acidulado com mini gotas de chocolate espalhadas por todo o sorvete.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "56319085-e0b4-4974-b765-d406b29f491d",
+    "recipe_id": "021465c3-4c6b-4f86-baaa-1f13fe3032bc",
+    "slug": "chocolate-chip-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Chocolate Chip Greek Frozen Yogurt",
+    "en_description": "Chocolate chip frozen yogurt with Greek yogurt for a simple treat.",
+    "current_title": "Chocolate Chip Grego Iogurte Gelado",
+    "current_description": "Chocolate chip iogurte gelado com grego yogurt para um simple treat.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "df6a31da-d6b1-4652-840e-604e93d504a1",
+    "recipe_id": "5e98ca82-b80e-4f18-b348-d14b6a6bd15a",
+    "slug": "chocolate-chip-walnut-ice-cream",
+    "locale": "pt",
+    "en_title": "Chocolate Chip Walnut Ice Cream",
+    "en_description": "Classic chocolate chip ice cream with walnut pieces.",
+    "current_title": "Chocolate Chip Nozes Sorvete",
+    "current_description": "Classic chocolate chip sorvete com nozes pedaços.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "70b1d19c-14ba-4200-a0a1-e763408f496e",
+    "recipe_id": "fffd696a-f9cf-491c-9a8a-752c204e2e41",
+    "slug": "chocolate-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Chocolate Frozen Yogurt",
+    "en_description": "Rich chocolate frozen yogurt with a lighter feel than traditional ice cream. The Greek yogurt tang perfectly balances the cocoa richness.",
+    "current_title": "Frozen Yogurt de Chocolate",
+    "current_description": "Frozen yogurt de chocolate rico com uma sensacao mais leve que o sorvete tradicional. A acidez do iogurte grego equilibra perfeitamente a riqueza do cacau.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "b8355a99-daae-4f39-9f61-d5f352d00f9c",
+    "recipe_id": "47b6c6eb-722f-430e-9d37-256ff9a60f5f",
+    "slug": "chocolate-peanut-butter-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Chocolate Peanut Butter Frozen Yogurt",
+    "en_description": "Chocolate PB frozen yogurt. High protein from Greek yogurt plus peanut butter goodness.",
+    "current_title": "Frozen Yogurt de Chocolate com Manteiga de Amendoim",
+    "current_description": "Frozen yogurt de chocolate e manteiga de amendoim. Alto em proteinas do iogurte grego mais a delicia da manteiga de amendoim.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "7320be2f-dfff-40fb-95d6-848fdc15613a",
+    "recipe_id": "99525f8e-06e8-4423-9281-f8a0ec86bfae",
+    "slug": "cinnamon-apple-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Cinnamon Apple Frozen Yogurt",
+    "en_description": "Warm cinnamon apple frozen yogurt. Like apple pie filling meets tangy yogurt.",
+    "current_title": "Frozen Yogurt de Maçã com Canela",
+    "current_description": "Frozen yogurt quente de maca com canela. Como recheio de torta de maca encontra iogurte acidulado.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "db4721ce-f23b-4baa-a1f0-afff2a5505de",
+    "recipe_id": "5d6e4c49-374a-45e4-8138-a601902a5a51",
+    "slug": "cinnamon-brown-sugar-pecan-ice-cream",
+    "locale": "pt",
+    "en_title": "Cinnamon Brown Sugar Pecan Ice Cream",
+    "en_description": "A cinnamon brown sugar pecan unique and elevated frozen treat with perfectly balanced flavors.",
+    "current_title": "Canela Brown Sugar Noz-Pecã Sorvete",
+    "current_description": "Uma sobremesa gelada unica de canela, acucar mascavo e pecas com sabores perfeitamente equilibrados.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "099d247c-2202-4973-b745-a0b0118614da",
+    "recipe_id": "36b705bb-2a85-438e-bf21-14b3acc48c33",
+    "slug": "cinnamon-chocolate-chip-ice-cream",
+    "locale": "pt",
+    "en_title": "Cinnamon Chocolate Chip Ice Cream",
+    "en_description": "Warm cinnamon ice cream studded with chocolate chips.",
+    "current_title": "Canela Chocolate Chip Sorvete",
+    "current_description": "Sorvete quente de canela repleto de gotas de chocolate.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "37c44040-3632-4b52-98b0-7e48c70f3604",
+    "recipe_id": "2ebf5afa-fc5e-4bf3-b7b9-f15cdd39969b",
+    "slug": "cinnamon-roll-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Cinnamon Roll Greek Frozen Yogurt",
+    "en_description": "Warm cinnamon roll frozen yogurt with Greek yogurt.",
+    "current_title": "Canela Roll Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt quente de rolo de canela com iogurte grego.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "491ede8d-dd96-45d2-9c34-38f206e4a086",
+    "recipe_id": "33573644-a933-43f0-9478-2e4acdfb044a",
+    "slug": "cinnamon-roll-swirl-ice-cream",
+    "locale": "pt",
+    "en_title": "Cinnamon Roll Swirl Ice Cream",
+    "en_description": "Warm cinnamon sugar ice cream with ribbons of cream cheese frosting.",
+    "current_title": "Sorvete de Rolo de Canela",
+    "current_description": "Sorvete de açúcar e canela com faixas de cobertura de cream cheese.",
+    "labels_title": [],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "dd00227d-dda5-4557-8164-71c96dc8d5b6",
+    "recipe_id": "05ac72a1-0c61-4572-89be-e2426f71b127",
+    "slug": "coconut-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Coconut Frozen Yogurt",
+    "en_description": "Coconut-infused frozen yogurt that is lighter than ice cream but creamy and tropical. Greek yogurt provides tang and protein.",
+    "current_title": "Frozen Yogurt de Coco",
+    "current_description": "Frozen yogurt com coco que e mais leve que sorvete mas cremoso e tropical. O iogurte grego proporciona acidez e proteina.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "3325ba66-3800-451b-94b4-8b7a62bae585",
+    "recipe_id": "69ab369b-1300-4f12-905b-39ac70c054eb",
+    "slug": "coffee-caramel-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Coffee Caramel Greek Frozen Yogurt",
+    "en_description": "Bold coffee caramel frozen yogurt with Greek yogurt.",
+    "current_title": "Café Caramelo Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt intenso de cafe e caramelo com iogurte grego.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "c96388e1-5c86-4cda-adc7-48bf769fdf69",
+    "recipe_id": "4a465c7d-8509-43ca-ae7b-4d3638d8d30c",
+    "slug": "coffee-chocolate-chip-gelato",
+    "locale": "pt",
+    "en_title": "Coffee Chocolate Chip Gelato",
+    "en_description": "Bold coffee gelato studded with dark chocolate chips.",
+    "current_title": "Café Chocolate Chip Gelato",
+    "current_description": "Gelato intenso de cafe repleto de gotas de chocolate amargo.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "2f6edc81-7ab5-4894-8289-eec9584b507c",
+    "recipe_id": "b3639069-9025-4c9b-8f39-739702a11ab0",
+    "slug": "coffee-chocolate-chip-ice-cream",
+    "locale": "pt",
+    "en_title": "Coffee Chocolate Chip Ice Cream",
+    "en_description": "Bold coffee ice cream studded with dark chocolate chips.",
+    "current_title": "Café Chocolate Chip Sorvete",
+    "current_description": "Sorvete intenso de cafe repleto de gotas de chocolate amargo.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "148349f7-9d76-4901-9bf7-f835cb03437d",
+    "recipe_id": "79c385f5-05ea-4d26-9158-4d994a264c0e",
+    "slug": "coffee-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Coffee Frozen Yogurt",
+    "en_description": "Bold coffee frozen yogurt with a tangy twist from Greek yogurt. A lighter way to enjoy your coffee fix in frozen form.",
+    "current_title": "Frozen Yogurt de Café",
+    "current_description": "Frozen yogurt de cafe marcante com um toque acido do iogurte grego. Uma forma mais leve de apreciar seu cafe em versao gelada.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "3e2c3e32-e54a-465f-9f9a-ae3058fcef1c",
+    "recipe_id": "0e7a51c5-11e0-4667-93ee-c6ea1a0608d8",
+    "slug": "coffee-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Coffee Greek Frozen Yogurt",
+    "en_description": "Bold coffee frozen yogurt made with Greek yogurt for an energizing afternoon treat.",
+    "current_title": "Café Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt intenso de cafe com iogurte grego para uma sobremesa energizante da tarde.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "a51e38fb-6a22-4007-8b83-9db5488aaa2f",
+    "recipe_id": "4459a51d-85c8-4fe6-b3d8-93d003e4017b",
+    "slug": "cookies-and-cream-brownie-ice-cream",
+    "locale": "pt",
+    "en_title": "Cookies and Cream Brownie Ice Cream",
+    "en_description": "Double dessert mashup of cookies and cream base with fudgy brownie chunks.",
+    "current_title": "Sorvete de Cookies and Cream com Brownie",
+    "current_description": "Duplo mashup de sobremesas com base de cookies and cream e pedacos de brownie fudge.",
+    "labels_title": [
+      "cookies and cream"
+    ],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "a7d9e89d-a832-405c-bd9e-67432a86e325",
+    "recipe_id": "ea131457-9fa2-41e6-a0e7-e6aa1b357522",
+    "slug": "cookies-and-cream-cheesecake-ice-cream",
+    "locale": "pt",
+    "en_title": "Cookies and Cream Cheesecake Ice Cream",
+    "en_description": "Cream cheese base with crushed Oreo cookies for the ultimate cookies and cream cheesecake flavor in frozen form.",
+    "current_title": "Sorvete de Cheesecake com Oreo",
+    "current_description": "Base de cream cheese com biscoitos Oreo triturados para o sabor definitivo de cheesecake cookies and cream em forma gelada.",
+    "labels_title": [],
+    "labels_description": [
+      "cream cheese",
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "0b7da72a-9274-47bd-9d0c-e3a865ac0b87",
+    "recipe_id": "a2293934-7199-4c61-9650-107dbf9e54a8",
+    "slug": "cookies-and-cream-cottage-cheese-protein-ice-cream",
+    "locale": "pt",
+    "en_title": "Cookies and Cream Cottage Cheese Protein Ice Cream",
+    "en_description": "Extra high-protein cookies and cream using cottage cheese base. Viral trend meets Oreo crunch.",
+    "current_title": "Sorvete Proteico de Oreo com Queijo Cottage",
+    "current_description": "Cookies and cream extra rico em proteinas com base de queijo cottage. Tendencia viral encontra crocancia de Oreo.",
+    "labels_title": [],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "7589d857-2d7c-438a-8e34-55019305b2f3",
+    "recipe_id": "977b5446-4051-47a6-b927-9dfc803c65f2",
+    "slug": "cookies-and-cream-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Cookies and Cream Frozen Yogurt",
+    "en_description": "Lighter cookies and cream using Greek yogurt base. All the cookie crunch, less guilt.",
+    "current_title": "Frozen Yogurt de Oreo",
+    "current_description": "Oreo mais leve com base de iogurte grego. Todo o crocante do biscoito, menos culpa.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "36ee5f61-a60a-467c-83cb-b8f5c62cb894",
+    "recipe_id": "4fb8d045-75e1-4b07-9580-a4c3ab61ae15",
+    "slug": "cookies-and-cream-ice-cream",
+    "locale": "pt",
+    "en_title": "Cookies and Cream Ice Cream",
+    "en_description": "Classic cookies and cream loaded with crushed Oreo cookies. A crowd-pleasing favorite that kids and adults both love.",
+    "current_title": "Sorvete de Oreo",
+    "current_description": "Classico cookies and cream carregado com biscoitos Oreo triturados. Um favorito que agrada criancas e adultos.",
+    "labels_title": [],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "59b538f1-3039-4b84-954e-2ce5776f8aa5",
+    "recipe_id": "36d2e9e4-c31d-455f-b1e2-60dd63d04645",
+    "slug": "cookies-and-cream-protein-ice-cream",
+    "locale": "pt",
+    "en_title": "Cookies and Cream Protein Ice Cream",
+    "en_description": "All the cookies-and-cream flavor you love packed with protein. Crushed sugar-free Oreos give it authentic cookie flavor while keeping calories in check.",
+    "current_title": "Sorvete Proteico de Oreo",
+    "current_description": "Todo o sabor de cookies and cream que voce ama repleto de proteinas. Oreos sem acucar triturados dao sabor autentico de biscoito mantendo as calorias sob controle.",
+    "labels_title": [],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "2a3f0402-5934-46c6-a3f3-10eb7ca93e91",
+    "recipe_id": "57f30b5a-db50-45cf-9d04-4ff2c84da6dc",
+    "slug": "cookies-and-cream-soft-serve",
+    "locale": "pt",
+    "en_title": "Cookies and Cream Soft Serve",
+    "en_description": "Classic cookies and cream in soft serve form. Creamy vanilla base with crushed Oreo cookies folded in, then dispensed as smooth soft serve from the Ninja CREAMi Scoop & Swirl.",
+    "current_title": "Sorvete Soft de Cookies and Cream",
+    "current_description": "Classico cookies and cream em forma de soft serve. Base cremosa de baunilha com biscoitos Oreo triturados, dispensado como soft serve suave do Ninja CREAMi Scoop & Swirl.",
+    "labels_title": [
+      "cookies and cream"
+    ],
+    "labels_description": [
+      "soft serve",
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "baa8a852-a8a3-4855-aaaa-4b706b0ce17c",
+    "recipe_id": "6e42b19b-1d66-44f8-bafd-b709b8b14484",
+    "slug": "cream-cheese-base-ice-cream",
+    "locale": "pt",
+    "en_title": "Cream Cheese Base Ice Cream",
+    "en_description": "A rich, ultra-creamy base recipe using cream cheese for an incredibly smooth and scoopable texture. Use it as-is for a New York cheesecake flavor, or add your favorite mix-ins.",
+    "current_title": "Sorvete Base de Cream Cheese",
+    "current_description": "Uma base rica e ultra cremosa com cream cheese para uma textura incrivelmente suave e facil de servir. Use como esta para sabor de cheesecake ou adicione seus ingredientes favoritos.",
+    "labels_title": [
+      "cream cheese"
+    ],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "839bf38b-9903-4986-98ed-af3c90b3b747",
+    "recipe_id": "e12b4faa-06e5-4232-915a-e900907c80b0",
+    "slug": "cream-cheese-chocolate-chip-ice-cream",
+    "locale": "pt",
+    "en_title": "Cream Cheese Chocolate Chip Ice Cream",
+    "en_description": "The ultra-creamy cream cheese base loaded with mini chocolate chips. The cream cheese creates an incredibly smooth texture that rivals any shop.",
+    "current_title": "Sorvete de Cream Cheese com Gotas de Chocolate",
+    "current_description": "A base ultra cremosa de cream cheese carregada com mini gotas de chocolate. O cream cheese cria uma textura incrivelmente suave que rivaliza com qualquer sorveteria.",
+    "labels_title": [
+      "cream cheese"
+    ],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "1f5175ff-7895-4d4b-908a-6bf4db9fdced",
+    "recipe_id": "7bcecf2b-feb4-4514-86af-7b26f0c3d3ee",
+    "slug": "cream-cheese-oreo-ice-cream",
+    "locale": "pt",
+    "en_title": "Cream Cheese Oreo Ice Cream",
+    "en_description": "The creamiest Oreo ice cream you will ever taste. Cream cheese base provides an unbelievably smooth texture with Oreo cookie crunch.",
+    "current_title": "Sorvete de Cream Cheese com Oreo",
+    "current_description": "O sorvete de Oreo mais cremoso que voce ja vai provar. A base de cream cheese proporciona textura incrivelmente suave com crocancia de biscoito Oreo.",
+    "labels_title": [
+      "cream cheese"
+    ],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "4e4065be-45a2-4e5b-8672-6f282df8717b",
+    "recipe_id": "3119b152-9a63-4347-8630-0d35e2d1b133",
+    "slug": "cream-cheese-strawberry-ice-cream",
+    "locale": "pt",
+    "en_title": "Cream Cheese Strawberry Ice Cream",
+    "en_description": "Tangy cream cheese ice cream swirled with real strawberry compote. Like a frozen strawberry cheesecake without the crust.",
+    "current_title": "Sorvete de Cream Cheese com Morango",
+    "current_description": "Sorvete acidulado de cream cheese com compota real de morango. Como um cheesecake de morango congelado sem a crosta.",
+    "labels_title": [
+      "cream cheese"
+    ],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "f7af0dc8-dbf0-4f20-9991-2e599fca4189",
+    "recipe_id": "fbf96aa9-b245-4c93-8515-bd9c193a29cb",
+    "slug": "dulce-de-leche-soft-serve",
+    "locale": "pt",
+    "en_title": "Dulce de Leche Soft Serve",
+    "en_description": "Rich dulce de leche soft serve.",
+    "current_title": "Dulce de Leche Sorvete Soft",
+    "current_description": "Soft serve cremoso de doce de leite.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "1dc32598-fac1-4229-a85f-18f510eaa281",
+    "recipe_id": "c2015bc1-7412-4bc6-9c57-ad9dc9747f37",
+    "slug": "espresso-chip-cookie-ice-cream",
+    "locale": "pt",
+    "en_title": "Espresso Chip Cookie Ice Cream",
+    "en_description": "Bold espresso ice cream with chocolate chip cookie pieces.",
+    "current_title": "Espresso Chip Biscoito Sorvete",
+    "current_description": "Bold espresso sorvete com chocolate chip biscoito pedaços.",
+    "labels_title": [],
+    "labels_description": [
+      "chocolate chip(s)"
+    ]
+  },
+  {
+    "id": "29cc5311-b134-47b6-b42c-fdc8613794d1",
+    "recipe_id": "bae68dbb-af06-4efb-be6a-716a3f432a12",
+    "slug": "frozen-yogurt-with-mixed-berries",
+    "locale": "pt",
+    "en_title": "Frozen Yogurt with Mixed Berries",
+    "en_description": "Tangy and sweet frozen yogurt with a mixed berry swirl. A lighter alternative to ice cream that still feels like a treat.",
+    "current_title": "Frozen Yogurt com Frutas Vermelhas",
+    "current_description": "Frozen yogurt acidulado e doce com redemoinho de frutas vermelhas mistas. Uma alternativa mais leve ao sorvete que ainda parece uma delicia.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "d05926f5-f770-450a-b64f-7080e30d5f86",
+    "recipe_id": "9167931e-a0f3-4c87-bb11-f29c10eae913",
+    "slug": "graham-cracker-cookie-dough-ice-cream",
+    "locale": "pt",
+    "en_title": "Graham Cracker Cookie Dough Ice Cream",
+    "en_description": "Sweet graham cracker ice cream with chocolate chip cookie dough.",
+    "current_title": "Graham Cracker Biscoito Dough Sorvete",
+    "current_description": "Sweet graham cracker sorvete com chocolate chip biscoito dough.",
+    "labels_title": [
+      "graham cracker(s)"
+    ],
+    "labels_description": [
+      "chocolate chip(s)",
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "3d0bcb55-2cb3-4d83-a849-6e6a2115e17e",
+    "recipe_id": "efc0878b-48c0-434b-82d4-f16b85455fe7",
+    "slug": "honey-vanilla-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Honey Vanilla Frozen Yogurt",
+    "en_description": "Classic honey vanilla frozen yogurt with a pleasant tang from Greek yogurt. The simplest frozen yogurt recipe you will ever make.",
+    "current_title": "Frozen Yogurt de Mel e Baunilha",
+    "current_description": "Frozen yogurt classico de mel e baunilha com um agradavel toque acido do iogurte grego. A receita de frozen yogurt mais simples que voce ja vai fazer.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "81550502-495a-4210-bfc3-0500339c9c23",
+    "recipe_id": "c7c2e119-125b-4972-8d65-faa522c3dec4",
+    "slug": "keto-cheesecake-ice-cream",
+    "locale": "pt",
+    "en_title": "Keto Cheesecake Ice Cream",
+    "en_description": "Tangy cream cheese keto ice cream that tastes exactly like frozen cheesecake. The cream cheese provides body and richness without carbs.",
+    "current_title": "Sorvete Keto de Cheesecake",
+    "current_description": "Sorvete keto ácido de cream cheese que tem exatamente o gosto de cheesecake congelado. O cream cheese fornece corpo e riqueza sem carboidratos.",
+    "labels_title": [],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "58295aaa-9c86-4c45-8af0-66fe71a2757c",
+    "recipe_id": "ca748375-1147-49e0-91a0-f590a1e07233",
+    "slug": "keto-chocolate-cheesecake-ice-cream",
+    "locale": "pt",
+    "en_title": "Keto Chocolate Cheesecake Ice Cream",
+    "en_description": "Keto chocolate cheesecake ice cream with cocoa and cream cheese. Fudgy and rich.",
+    "current_title": "Sorvete Keto de Cheesecake de Chocolate",
+    "current_description": "Sorvete keto de cheesecake de chocolate com cacau e cream cheese. Fundente e rico.",
+    "labels_title": [],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "05be04ef-7f9e-44ff-85cd-93807a8ccbef",
+    "recipe_id": "5c4dbcc5-062c-43c1-ad24-ca79a20b5da9",
+    "slug": "keto-cinnamon-roll-ice-cream",
+    "locale": "pt",
+    "en_title": "Keto Cinnamon Roll Ice Cream",
+    "en_description": "All the cinnamon roll flavor with none of the carbs. Brown sugar substitute and cinnamon in a keto cream cheese base.",
+    "current_title": "Sorvete Keto de Rolo de Canela",
+    "current_description": "Todo o sabor do rolo de canela sem os carboidratos. Substituto de açúcar mascavo e canela em uma base keto de cream cheese.",
+    "labels_title": [],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "4ab56a3e-a422-49c2-8824-671300c4b55e",
+    "recipe_id": "d5c501f9-4e28-49c6-9327-5b6f3122070f",
+    "slug": "keto-lemon-cheesecake-ice-cream",
+    "locale": "pt",
+    "en_title": "Keto Lemon Cheesecake Ice Cream",
+    "en_description": "Creamy lemon cheesecake ice cream sweetened with allulose — under 3g net carbs per serving, rich cream cheese texture, and bright real-lemon flavor. No sugar alcohols, no chalky aftertaste.",
+    "current_title": "Sorvete Keto de Cheesecake de Limão",
+    "current_description": "Sorvete cremoso de cheesecake de limão adoçado com alulose — menos de 3 g de carboidratos líquidos por porção, textura rica de cream cheese e sabor vivo de limão de verdade. Sem polióis e sem gosto arenoso.",
+    "labels_title": [],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "22c73b07-6016-460f-9756-afe22cad851d",
+    "recipe_id": "06b3e058-5e9c-4ea6-92e8-15cf29fb6393",
+    "slug": "key-lime-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Key Lime Frozen Yogurt",
+    "en_description": "Tangy key lime frozen yogurt with the perfect sweet-tart balance. Like a key lime pie in frozen yogurt form.",
+    "current_title": "Frozen Yogurt de Limão",
+    "current_description": "Frozen yogurt acidulado de limao com o equilibrio perfeito entre doce e acido. Como uma torta de limao em forma de frozen yogurt.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "f8b62436-cbed-465a-bdff-6897e02e2060",
+    "recipe_id": "b43f441d-5ffc-4c0b-be4f-97cb85746aaa",
+    "slug": "lemon-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Lemon Frozen Yogurt",
+    "en_description": "Bright, tangy lemon frozen yogurt that is refreshing and light. Real lemon juice gives it a punchy citrus kick.",
+    "current_title": "Frozen Yogurt de Limão",
+    "current_description": "Frozen yogurt de limao vibrante e acido, refrescante e leve. O suco de limao real da um toque citrico marcante.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "4f0b7a19-5c6c-4837-90d0-36edb85b5d2a",
+    "recipe_id": "fcfe6503-6f01-4873-8de9-d87c09f41b55",
+    "slug": "mango-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Mango Frozen Yogurt",
+    "en_description": "Tropical mango frozen yogurt with a creamy tang. Made with real mango for authentic fruit flavor in every spoonful.",
+    "current_title": "Frozen Yogurt de Manga",
+    "current_description": "Frozen yogurt tropical de manga com um toque cremoso e acido. Feito com manga real para sabor autentico de fruta em cada colherada.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "9c6e64c4-c5e4-4a42-a269-dc270c8689ee",
+    "recipe_id": "2e9575d6-358a-4779-88b4-07511172352c",
+    "slug": "mango-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Mango Greek Frozen Yogurt",
+    "en_description": "Tropical mango frozen yogurt with Greek yogurt for a tangy, fruity frozen snack.",
+    "current_title": "Manga Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt tropical de manga com iogurte grego para um lanche gelado acidulado e frutado.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "0cfa2fae-89f1-4d92-b02e-4ddc26d87049",
+    "recipe_id": "50f320ff-dfe7-4d21-8b08-d64194ba758c",
+    "slug": "mango-lassi-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Mango Lassi Frozen Yogurt",
+    "en_description": "Indian mango lassi transformed into frozen yogurt. Mango, yogurt, and cardamom create an exotic, refreshing treat.",
+    "current_title": "Frozen Yogurt de Lassi de Manga",
+    "current_description": "Lassi indiano de manga transformado em frozen yogurt. Manga, iogurte e cardamomo criam uma sobremesa exotica e refrescante.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "cddba872-69c0-41d6-8de8-b81165da5224",
+    "recipe_id": "161a27ec-59b0-4712-9cd1-a7f2562d7a73",
+    "slug": "mango-lime-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Mango Lime Greek Frozen Yogurt",
+    "en_description": "Tropical mango lime frozen yogurt with a citrusy kick.",
+    "current_title": "Manga Limão Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt tropical de manga e limao com um toque citrico.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "4dba7074-461f-4cfc-915f-51d382c37576",
+    "recipe_id": "f280f0a1-289f-407c-ae05-1323e8cebbea",
+    "slug": "maple-cinnamon-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Maple Cinnamon Frozen Yogurt",
+    "en_description": "Warm maple and cinnamon frozen yogurt with a cozy fall flavor. Made with pure maple syrup and tangy Greek yogurt.",
+    "current_title": "Frozen Yogurt de Maple e Canela",
+    "current_description": "Frozen yogurt quente de bordo e canela com um aconchegante sabor de outono. Feito com xarope de bordo puro e iogurte grego acidulado.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "cfe3f260-2df8-4e89-aa7b-7d97f7ae8d57",
+    "recipe_id": "747651d9-c727-4212-b7cf-13c259752574",
+    "slug": "maple-cream-soft-serve",
+    "locale": "pt",
+    "en_title": "Maple Cream Soft Serve",
+    "en_description": "Pure maple soft serve with Vermont-style sweetness.",
+    "current_title": "Bordo Creme Sorvete Soft",
+    "current_description": "Soft serve puro de bordo com docura estilo Vermont.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "eed1b26b-c559-457b-a929-3ef27d058b00",
+    "recipe_id": "f3adefd0-774b-4e0d-8fb9-c576f43a978d",
+    "slug": "matcha-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Matcha Frozen Yogurt",
+    "en_description": "Earthy matcha green tea frozen yogurt. Japanese-inspired and lighter than ice cream.",
+    "current_title": "Frozen Yogurt de Matcha",
+    "current_description": "Frozen yogurt terroso de cha verde matcha. De inspiracao japonesa e mais leve que sorvete.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "52ff2279-78e1-4fad-9398-e599290c295e",
+    "recipe_id": "f0642634-0241-49f6-844a-69a629cd4d72",
+    "slug": "matcha-white-chocolate-chip-ice-cream",
+    "locale": "pt",
+    "en_title": "Matcha White Chocolate Chip Ice Cream",
+    "en_description": "Earthy matcha ice cream with sweet white chocolate chips throughout.",
+    "current_title": "Matcha Branco Chocolate Chip Sorvete",
+    "current_description": "Earthy matcha sorvete com doce branco chocolate gotas throughout.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "9b03885d-019c-4ee9-88c2-5d5a02827ca4",
+    "recipe_id": "a5f96f3f-32d0-4b38-b581-26dacc471fa3",
+    "slug": "mint-chocolate-chip-milkshake",
+    "locale": "pt",
+    "en_title": "Mint Chocolate Chip Milkshake",
+    "en_description": "Cool mint milkshake with chocolate chips.",
+    "current_title": "Menta Chocolate Chip Milkshake",
+    "current_description": "Milkshake de menta fresca com gotas de chocolate.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "f3265f20-275a-49f2-90f0-59b86d4e8782",
+    "recipe_id": "60c97255-79f9-44cc-adf0-ba001bf048af",
+    "slug": "mint-chocolate-chip-protein-lite-ice-cream",
+    "locale": "pt",
+    "en_title": "Mint Chocolate Chip Protein Lite Ice Cream",
+    "en_description": "Cool mint protein ice cream with chocolate chips.",
+    "current_title": "Menta Chocolate Chip Proteína Sorvete Light",
+    "current_description": "Sorvete proteico de menta fresca com gotas de chocolate.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "efb01933-e70a-45bb-bdc5-addc50617061",
+    "recipe_id": "43022c9e-0f36-45fa-9f58-1d055c8cbcd6",
+    "slug": "mint-chocolate-chip-soft-serve",
+    "locale": "pt",
+    "en_title": "Mint Chocolate Chip Soft Serve",
+    "en_description": "Cool mint soft serve with mini chocolate chips. The peppermint extract gives it that iconic green-mint flavor, and the chips add a satisfying crunch to every dispensed swirl.",
+    "current_title": "Sorvete Soft de Menta com Gotas de Chocolate",
+    "current_description": "Soft serve de menta fresca com mini gotas de chocolate. O extrato de menta da aquele icLnico sabor verde-menta, e as gotas adicionam uma crocancia satisfatoria a cada espiral.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "a854063c-a457-4039-8edc-13bbf8df506b",
+    "recipe_id": "fdbe0844-2b12-4909-ad06-5d6c1fbefc2c",
+    "slug": "mint-cookies-and-cream-ice-cream",
+    "locale": "pt",
+    "en_title": "Mint Cookies and Cream Ice Cream",
+    "en_description": "Cool peppermint ice cream loaded with crushed chocolate sandwich cookies.",
+    "current_title": "Sorvete de Menta com Cookies and Cream",
+    "current_description": "Sorvete de menta com biscoitos de chocolate triturados.",
+    "labels_title": [
+      "cookies and cream"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "99f42c4a-d5bf-4dc9-a5a6-be120cbff949",
+    "recipe_id": "342335f0-d40b-4756-a550-9ade50a11397",
+    "slug": "mixed-berry-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Mixed Berry Frozen Yogurt",
+    "en_description": "Triple berry frozen yogurt with strawberries, blueberries, and raspberries. A berry bonanza.",
+    "current_title": "Frozen Yogurt de Frutas Vermelhas Mistas",
+    "current_description": "Frozen yogurt triplo de frutas vermelhas com morangos, mirtilos e framboesas. Uma bonanca de frutas.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "7cc28910-b011-48ca-9e32-81e09e6ab16b",
+    "recipe_id": "32f1471a-f575-4484-81fb-e2ec14833c35",
+    "slug": "one-ingredient-frozen-yogurt-soft-serve",
+    "locale": "pt",
+    "en_title": "One-Ingredient Frozen Yogurt Soft Serve",
+    "en_description": "The simplest soft serve recipe possible — just yogurt. Freeze it, spin it, and dispense creamy frozen yogurt soft serve. Try different flavored yogurts for endless variety.",
+    "current_title": "Sorvete Soft de Iogurte (Um Ingrediente)",
+    "current_description": "A receita de soft serve mais simples possivel. Apenas iogurte. Congele, processe e dispense cremoso frozen yogurt soft serve. Experimente diferentes sabores de iogurte para variedade infinita.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve",
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "52747e33-ed4f-49aa-8156-98e0a9c7f420",
+    "recipe_id": "a1e3dfce-86a9-4143-97ac-d997ac7c1a15",
+    "slug": "oreo-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Oreo Frozen Yogurt",
+    "en_description": "Tangy vanilla frozen yogurt with crushed Oreos. A lighter take on cookies and cream.",
+    "current_title": "Frozen Yogurt de Oreo",
+    "current_description": "Frozen yogurt de baunilha acidulado com Oreos triturados. Uma versao mais leve do cookies and cream.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt",
+      "cookies and cream"
+    ]
+  },
+  {
+    "id": "e957a1cd-a3c6-449a-bac7-c0328c5bef4c",
+    "recipe_id": "c4633374-a751-43a3-8fda-a7997a8ef7b2",
+    "slug": "passion-fruit-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Passion Fruit Frozen Yogurt",
+    "en_description": "Exotic passion fruit frozen yogurt. Tangy tropical flavor with Greek yogurt creaminess.",
+    "current_title": "Frozen Yogurt de Maracujá",
+    "current_description": "Frozen yogurt exotico de maracuja. Sabor tropical acidulado com a cremosidade do iogurte grego.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "6d471740-8da2-45e4-9d9f-5bd87fb32cc0",
+    "recipe_id": "b0dcce11-7d14-4931-8f30-1bdf94514a34",
+    "slug": "peach-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Peach Frozen Yogurt",
+    "en_description": "Sweet and tangy peach frozen yogurt made with fresh peaches and Greek yogurt. Light, refreshing, and perfect for summer.",
+    "current_title": "Frozen Yogurt de Pêssego",
+    "current_description": "Frozen yogurt doce e acido de pessego feito com pessegos frescos e iogurte grego. Leve, refrescante e perfeito para o verao.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "158d339f-64a8-4c89-b55f-1424f02684f2",
+    "recipe_id": "5e80f41c-f368-4b7f-ba34-18aefb5272fd",
+    "slug": "peach-ginger-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Peach Ginger Greek Frozen Yogurt",
+    "en_description": "Fresh peach ginger frozen yogurt with spicy-sweet warmth.",
+    "current_title": "Pêssego Gengibre Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt fresco de pessego e gengibre com calidez picante-doce.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "1e80b3d5-9d24-481b-b553-213d13e15c33",
+    "recipe_id": "807da2d1-aece-4b7f-ab08-4488dc2b6b8f",
+    "slug": "peach-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Peach Greek Frozen Yogurt",
+    "en_description": "Fresh peach frozen yogurt with tangy Greek yogurt for a light summer dessert.",
+    "current_title": "Pêssego Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt fresco de pessego com iogurte grego acidulado para uma sobremesa leve de verao.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "3313f83f-0f4e-4a34-9bd2-67b0c0a067ce",
+    "recipe_id": "0ba9459a-be43-4082-b269-f919d9266542",
+    "slug": "peach-mango-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Peach Mango Frozen Yogurt",
+    "en_description": "Tropical peach mango frozen yogurt. Bright, sunny flavor that is lighter than ice cream.",
+    "current_title": "Frozen Yogurt de Pêssego e Manga",
+    "current_description": "Frozen yogurt tropical de pessego e manga. Sabor brilhante e ensolarado mais leve que sorvete.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "260c77e6-b8ed-481c-8aa8-f4fbfe1dc244",
+    "recipe_id": "a0329958-63f0-44a1-bb59-b4fcfa22fdd2",
+    "slug": "peanut-butter-banana-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Peanut Butter Banana Frozen Yogurt",
+    "en_description": "Peanut butter banana frozen yogurt with a protein boost from Greek yogurt. Tastes like a PB banana smoothie, frozen thick.",
+    "current_title": "Frozen Yogurt de Manteiga de Amendoim e Banana",
+    "current_description": "Frozen yogurt de manteiga de amendoim e banana com proteinas extras do iogurte grego. Parece um smoothie de PB e banana, congelado e espesso.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "fdc402c9-676e-44c9-bfbf-edecafd87738",
+    "recipe_id": "5b35c33c-1108-44ea-998b-6f2c5da05d5a",
+    "slug": "peanut-butter-banana-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Peanut Butter Banana Greek Frozen Yogurt",
+    "en_description": "Creamy PB banana frozen yogurt with Greek yogurt for a filling dessert.",
+    "current_title": "Manteiga de Amendoim Banana Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt cremoso de manteiga de amendoim e banana com iogurte grego para uma sobremesa saciante.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "cf18735e-299a-4a7e-9d4a-5b5667e71135",
+    "recipe_id": "f08adcb9-b3c8-4e91-b64c-ba29c823e97c",
+    "slug": "peanut-butter-marshmallow-ice-cream",
+    "locale": "pt",
+    "en_title": "Peanut Butter Marshmallow Ice Cream",
+    "en_description": "Smooth PB ice cream with marshmallow fluff swirl.",
+    "current_title": "Manteiga de Amendoim Marshmallow Sorvete",
+    "current_description": "Sorvete suave de manteiga de amendoim com redemoinho de marshmallow fluff.",
+    "labels_title": [],
+    "labels_description": [
+      "marshmallow fluff"
+    ]
+  },
+  {
+    "id": "5abbafdb-d36f-47c1-96e1-685ed8b4cb77",
+    "recipe_id": "a8c5846f-10be-4cd0-8eaa-e547cec48858",
+    "slug": "peanut-butter-soft-serve",
+    "locale": "pt",
+    "en_title": "Peanut Butter Soft Serve",
+    "en_description": "Creamy peanut butter soft serve with a smooth, nutty flavor. The pudding mix gives it that perfect soft serve consistency when dispensed from the Scoop & Swirl.",
+    "current_title": "Sorvete Soft de Manteiga de Amendoim",
+    "current_description": "Soft serve cremoso de manteiga de amendoim com suave sabor de castanha. A mistura de pudim da a consistencia perfeita de soft serve ao dispensar do Scoop & Swirl.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "dd28d01e-130f-4c9f-af8c-6a603d2ed2d8",
+    "recipe_id": "63991611-954f-4dcc-9e8e-51dfe1ea4002",
+    "slug": "pineapple-brown-sugar-ice-cream",
+    "locale": "pt",
+    "en_title": "Pineapple Brown Sugar Ice Cream",
+    "en_description": "Caramelized pineapple ice cream with warm brown sugar sweetness.",
+    "current_title": "Abacaxi Brown Sugar Sorvete",
+    "current_description": "Caramelized abacaxi sorvete com quente brown sugar sweetness.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": [
+      "brown sugar"
+    ]
+  },
+  {
+    "id": "91d640b2-7bdc-4e60-b4e9-b325fe53eea4",
+    "recipe_id": "904d36d9-de48-4e20-967a-d907b7265440",
+    "slug": "pineapple-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Pineapple Frozen Yogurt",
+    "en_description": "Tropical pineapple frozen yogurt with a bright, sunny flavor. The acidity of pineapple pairs beautifully with tangy Greek yogurt.",
+    "current_title": "Frozen Yogurt de Abacaxi",
+    "current_description": "Frozen yogurt tropical de abacaxi com sabor brilhante e ensolarado. A acidez do abacaxi combina lindamente com o iogurte grego acidulado.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "a6b911b7-4aec-4d23-a9ca-befda2bdd502",
+    "recipe_id": "6557f624-20ac-459e-b64b-06ffda8091ee",
+    "slug": "pistachio-chocolate-chip-gelato",
+    "locale": "pt",
+    "en_title": "Pistachio Chocolate Chip Gelato",
+    "en_description": "Pistachio gelato with dark chocolate chips for a crunchy Italian classic.",
+    "current_title": "Pistache Chocolate Chip Gelato",
+    "current_description": "Pistache gelato com amargo chocolate gotas para um crocante Italian classic.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "5680055f-5b80-4e40-a4e0-1a19449ba7b0",
+    "recipe_id": "951d2bda-6b07-4cc2-a885-853673b29924",
+    "slug": "pistachio-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Pistachio Greek Frozen Yogurt",
+    "en_description": "Nutty pistachio frozen yogurt with Greek yogurt for an elegant treat.",
+    "current_title": "Pistache Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt de pistache com iogurte grego para uma sobremesa elegante.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "2688b4fa-e4ce-4860-8641-8f7eebff55b7",
+    "recipe_id": "3d07ee5f-05d7-44ab-8a4b-4934b75b5d0e",
+    "slug": "pomegranate-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Pomegranate Frozen Yogurt",
+    "en_description": "Antioxidant-rich pomegranate frozen yogurt with a jewel-toned color and tangy flavor.",
+    "current_title": "Frozen Yogurt de Romã",
+    "current_description": "Frozen yogurt de roma rico em antioxidantes com cor de pedra preciosa e sabor acidulado.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "f7cf932a-fcc4-4c52-af12-60169c99117e",
+    "recipe_id": "3d63585b-7756-4675-95b4-5ef637030b88",
+    "slug": "pomegranate-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Pomegranate Greek Frozen Yogurt",
+    "en_description": "Jewel-toned pomegranate frozen yogurt with Greek yogurt for an antioxidant boost.",
+    "current_title": "Romã Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt de roma com tons de joia e iogurte grego para um impulso de antioxidantes.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "a5edd047-6009-4c33-8f77-df5943ae042a",
+    "recipe_id": "47395da1-bfcf-47ac-807f-9ffa07771237",
+    "slug": "pumpkin-cheesecake-ice-cream",
+    "locale": "pt",
+    "en_title": "Pumpkin Cheesecake Ice Cream",
+    "en_description": "Pumpkin and cream cheese combine for a frozen cheesecake experience. Warm spices and tangy cream cheese make this a fall essential.",
+    "current_title": "Sorvete de Cheesecake de Abóbora",
+    "current_description": "Abóbora e cream cheese se combinam para uma experiência de cheesecake congelado. Especiarias quentes e cream cheese ácido fazem deste um essencial do outono.",
+    "labels_title": [],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "7cc08dc8-eb5e-4e5a-ac0b-ece1d7e2a4d2",
+    "recipe_id": "aaa23e6c-f0ba-4580-9d05-33135c4685d9",
+    "slug": "pumpkin-spice-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Pumpkin Spice Frozen Yogurt",
+    "en_description": "Seasonal pumpkin spice frozen yogurt. Lighter than ice cream with all the autumn flavor.",
+    "current_title": "Frozen Yogurt de Especiarias de Abóbora",
+    "current_description": "Frozen yogurt de abobora com especiarias de outono. Mais leve que sorvete com todo o sabor do outono.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "75b71ed6-9e06-4bae-95ec-dd8538826ad6",
+    "recipe_id": "f8af1b88-6064-43c8-89a7-342ebf6ea997",
+    "slug": "raspberry-cheesecake-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Raspberry Cheesecake Frozen Yogurt",
+    "en_description": "Tangy cheesecake-flavored frozen yogurt with a raspberry swirl. Lighter than ice cream but just as indulgent.",
+    "current_title": "Frozen Yogurt de Cheesecake de Framboesa",
+    "current_description": "Frozen yogurt com sabor de cheesecake e redemoinho de framboesa. Mais leve que sorvete mas igualmente indulgente.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "15ac973a-19bf-4801-95c3-a073a966685a",
+    "recipe_id": "0ac359c1-286f-4a29-9053-f33842c44345",
+    "slug": "raspberry-chocolate-chip-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Raspberry Chocolate Chip Greek Frozen Yogurt",
+    "en_description": "Tart raspberry frozen yogurt with chocolate chips.",
+    "current_title": "Framboesa Chocolate Chip Grego Iogurte Gelado",
+    "current_description": "Tart framboesa iogurte gelado com chocolate gotas.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "e9e2b591-3651-4edc-a002-58ed8e7ec75a",
+    "recipe_id": "bbba2497-ddf1-4e83-933a-f083756a5940",
+    "slug": "raspberry-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Raspberry Frozen Yogurt",
+    "en_description": "Vivid pink raspberry frozen yogurt with the perfect balance of tart and sweet. A gorgeous, lighter frozen treat.",
+    "current_title": "Frozen Yogurt de Framboesa",
+    "current_description": "Frozen yogurt de framboesa rosa vivo com o equilibrio perfeito entre acido e doce. Uma linda sobremesa gelada mais leve.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "89862857-9554-4c55-9dbb-ddc48520c0b1",
+    "recipe_id": "ff49e9af-c0b8-4e53-ab9b-7682df7025fb",
+    "slug": "raspberry-lemon-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Raspberry Lemon Greek Frozen Yogurt",
+    "en_description": "Bright raspberry lemon frozen yogurt with Greek yogurt.",
+    "current_title": "Framboesa Limão Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt vibrante de framboesa e limao com iogurte grego.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "be735111-5c62-4c80-9a31-a86bfa6a757b",
+    "recipe_id": "5d54760e-7588-44d2-bdc9-6abb1786a1a1",
+    "slug": "raspberry-peach-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Raspberry Peach Greek Frozen Yogurt",
+    "en_description": "Bright raspberry peach frozen yogurt with summer fruit.",
+    "current_title": "Framboesa Pêssego Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt vibrante de framboesa e pessego com frutas de verao.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "d0a6b0eb-92b8-4a12-9314-1c96df3be260",
+    "recipe_id": "91ac927d-b419-4d9d-a376-9211e84ca275",
+    "slug": "red-velvet-ice-cream",
+    "locale": "pt",
+    "en_title": "Red Velvet Ice Cream",
+    "en_description": "Red velvet cake turned into ice cream. A hint of cocoa, cream cheese tang, and that signature red color make this a showstopper.",
+    "current_title": "Sorvete Red Velvet",
+    "current_description": "Bolo red velvet transformado em sorvete. Um toque de cacau, acidez de cream cheese e aquela cor vermelha característica fazem deste um espetáculo.",
+    "labels_title": [],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "b38ab1ca-5b63-4fe3-bab9-a380b9eb661d",
+    "recipe_id": "2f4b33af-5801-4bbc-bc61-fafdca937ff7",
+    "slug": "salted-caramel-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Salted Caramel Frozen Yogurt",
+    "en_description": "Salted caramel frozen yogurt with a caramel drizzle. Sweet, salty, tangy perfection.",
+    "current_title": "Frozen Yogurt de Caramelo Salgado",
+    "current_description": "Frozen yogurt de caramelo salgado com fio de caramelo. Perfeicao doce, salgada e acidulada.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "f573b388-82a5-49e2-84b8-2dbdf4234e47",
+    "recipe_id": "dc08cc7a-4f1f-4361-8c62-5845b4989cc2",
+    "slug": "salted-caramel-soft-serve",
+    "locale": "pt",
+    "en_title": "Salted Caramel Soft Serve",
+    "en_description": "Indulgent salted caramel soft serve with the perfect sweet-salty balance. Caramel sauce and a pinch of sea salt create a luxurious soft serve that tastes like it came from a gourmet shop.",
+    "current_title": "Sorvete Soft de Caramelo Salgado",
+    "current_description": "Soft serve indulgente de caramelo salgado com o equilibrio doce-salgado perfeito. Calda de caramelo e uma pitada de sal marinho criam um soft serve luxuoso.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "bf2ddb98-abbd-4fbb-93b0-f143608c6c98",
+    "recipe_id": "ebddece6-e8c5-4f8e-a7ec-46a885910aac",
+    "slug": "smores-milkshake",
+    "locale": "pt",
+    "en_title": "S'mores Milkshake",
+    "en_description": "Toasted marshmallow chocolate milkshake with graham cracker crumbles.",
+    "current_title": "Milkshake de S'mores",
+    "current_description": "Toasted marshmallow chocolate milkshake com graham cracker migalhas.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "0050ebc4-786a-4e30-a82d-152a802b1211",
+    "recipe_id": "61156933-9acb-433e-ac7c-a7af85db3bb7",
+    "slug": "strawberry-banana-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Strawberry Banana Greek Frozen Yogurt",
+    "en_description": "Classic strawberry banana frozen yogurt with protein-packed Greek yogurt.",
+    "current_title": "Morango Banana Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt classico de morango e banana com iogurte grego rico em proteinas.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "c385b962-f4de-43a5-bee9-30d5cf7b45bc",
+    "recipe_id": "dc28c08c-562f-47c8-984d-9a5e8b0a57a2",
+    "slug": "strawberry-brown-sugar-ice-cream",
+    "locale": "pt",
+    "en_title": "Strawberry Brown Sugar Ice Cream",
+    "en_description": "Fresh strawberry ice cream with warm brown sugar.",
+    "current_title": "Morango Brown Sugar Sorvete",
+    "current_description": "Sorvete fresco de morango com quente acucar mascavo.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "8361f148-9cc1-4156-be39-08a9284d5ac5",
+    "recipe_id": "96f578d4-ee09-4153-a9ac-4e30510f01e3",
+    "slug": "strawberry-cheesecake-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Strawberry Cheesecake Greek Frozen Yogurt",
+    "en_description": "Tangy strawberry cheesecake frozen yogurt with Greek yogurt and graham cracker.",
+    "current_title": "Morango Cheesecake Grego Iogurte Gelado",
+    "current_description": "Tangy morango cheesecake iogurte gelado com grego yogurt e graham cracker.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "2333b17e-57fc-45d8-ac0f-13941d0fd9d0",
+    "recipe_id": "7f8a927d-784f-4289-8696-514feb4fd965",
+    "slug": "strawberry-cheesecake-milkshake",
+    "locale": "pt",
+    "en_title": "Strawberry Cheesecake Milkshake",
+    "en_description": "Strawberry cheesecake milkshake with graham cracker crumbles.",
+    "current_title": "Morango Cheesecake Milkshake",
+    "current_description": "Morango cheesecake milkshake com graham cracker migalhas.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "22532f94-1348-4c7c-b93f-fee5385ec1f1",
+    "recipe_id": "81b5b2cb-9b39-4086-b4dc-1bed9f010547",
+    "slug": "strawberry-cheesecake-protein-ice-cream",
+    "locale": "pt",
+    "en_title": "Strawberry Cheesecake Protein Ice Cream",
+    "en_description": "Strawberry cheesecake protein ice cream with real berries and cream cheese tang. High protein indulgence.",
+    "current_title": "Sorvete Proteico de Cheesecake de Morango",
+    "current_description": "Sorvete proteico de cheesecake de morango com frutas reais e acidez de cream cheese. Indulgência rica em proteínas.",
+    "labels_title": [],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "0b91880f-b0f7-4d3c-bd9b-3eddb0ddffb7",
+    "recipe_id": "54bdfb8f-a414-4105-a585-0a9fb9265fef",
+    "slug": "strawberry-cheesecake-protein-lite-ice-cream",
+    "locale": "pt",
+    "en_title": "Strawberry Cheesecake Protein Lite Ice Cream",
+    "en_description": "Strawberry cheesecake protein ice cream with graham cracker.",
+    "current_title": "Morango Cheesecake Proteína Sorvete Light",
+    "current_description": "Morango cheesecake proteína sorvete com graham cracker.",
+    "labels_title": [],
+    "labels_description": [
+      "graham cracker(s)"
+    ]
+  },
+  {
+    "id": "3411339a-6204-4706-bc76-cef82b02fc8a",
+    "recipe_id": "591041df-3397-44e8-b095-364c605b669c",
+    "slug": "strawberry-cream-cheese-ice-cream",
+    "locale": "pt",
+    "en_title": "Strawberry Cream Cheese Ice Cream",
+    "en_description": "Tangy cream cheese ice cream with sweet strawberry swirl.",
+    "current_title": "Sorvete de Morango com Cream Cheese",
+    "current_description": "Sorvete acidulado de cream cheese com redemoinho de morango.",
+    "labels_title": [
+      "cream cheese"
+    ],
+    "labels_description": [
+      "cream cheese"
+    ]
+  },
+  {
+    "id": "f6a4e636-2f54-4b52-976e-28583b4d2103",
+    "recipe_id": "a1eec8cb-b9f3-4f80-ad31-301b909186d1",
+    "slug": "strawberry-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Strawberry Frozen Yogurt",
+    "en_description": "Tangy strawberry frozen yogurt that is lighter than ice cream but just as satisfying. Real strawberries make all the difference.",
+    "current_title": "Frozen Yogurt de Morango",
+    "current_description": "Frozen yogurt acido de morango que e mais leve que sorvete mas igualmente satisfatorio. Morangos reais fazem toda a diferenca.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "ceac8a0f-dc59-4343-9821-d0ea08428ea9",
+    "recipe_id": "c42d46d5-662e-4389-9857-5b3701881914",
+    "slug": "strawberry-kiwi-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Strawberry Kiwi Greek Frozen Yogurt",
+    "en_description": "Fresh strawberry kiwi frozen yogurt with Greek yogurt.",
+    "current_title": "Morango Kiwi Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt fresco de morango e kiwi com iogurte grego.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "34aea6e7-1295-4d8d-b809-43e17bee04d9",
+    "recipe_id": "8ea279f5-5f24-4317-8a98-9d8e959da5fb",
+    "slug": "strawberry-mint-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Strawberry Mint Greek Frozen Yogurt",
+    "en_description": "Fresh strawberry mint frozen yogurt for a cooling treat.",
+    "current_title": "Morango Menta Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt fresco de morango e menta para uma sobremesa refrescante.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "0034c629-12f7-467f-a0ce-c5283d21b41f",
+    "recipe_id": "a6f3d3e4-cdf0-4a55-9d72-16010042bea0",
+    "slug": "strawberry-soft-serve",
+    "locale": "pt",
+    "en_title": "Strawberry Soft Serve",
+    "en_description": "Sweet strawberry soft serve with real berry puree.",
+    "current_title": "Morango Sorvete Soft",
+    "current_description": "Soft serve de morango doce com pure real de frutas vermelhas.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "2d466375-c8e3-4a94-8294-f5cac776c02c",
+    "recipe_id": "11098cd2-dee6-4697-b4e1-84bb9a9f4187",
+    "slug": "strawberry-vanilla-swirl-soft-serve",
+    "locale": "pt",
+    "en_title": "Strawberry Vanilla Swirl Soft Serve",
+    "en_description": "Classic strawberry and vanilla soft serve swirled together.",
+    "current_title": "Morango Baunilha Redemoinho Sorvete Soft",
+    "current_description": "Classico soft serve de morango e baunilha misturados juntos.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "07fc8209-fc96-4e4a-be27-0621fd97e0d2",
+    "recipe_id": "6f6d1060-b425-47c0-8efc-ce598dc35e83",
+    "slug": "tahini-chocolate-chip-ice-cream",
+    "locale": "pt",
+    "en_title": "Tahini Chocolate Chip Ice Cream",
+    "en_description": "A tahini chocolate chip rich and creamy frozen dessert with layers of complementary flavors.",
+    "current_title": "Tahini Chocolate Chip Sorvete",
+    "current_description": "Uma sobremesa gelada rica de tahini com gotas de chocolate e camadas de sabores complementares.",
+    "labels_title": [
+      "chocolate chip(s)"
+    ],
+    "labels_description": []
+  },
+  {
+    "id": "567c0629-a20c-452f-a02b-a9f53ab8f3e3",
+    "recipe_id": "56f9b421-d94e-43f4-9caa-62a4bfd87a87",
+    "slug": "tart-cherry-vanilla-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Tart Cherry Vanilla Greek Frozen Yogurt",
+    "en_description": "Tangy tart cherry frozen yogurt with vanilla for recovery and flavor.",
+    "current_title": "Tart Cereja Baunilha Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt acido de cereja azeda com baunilha para recuperacao e sabor.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "8d1a98c7-f403-4bba-a2a8-349f95a824a3",
+    "recipe_id": "ea802c95-94b1-4397-9ca0-b8a4014008e5",
+    "slug": "toasted-oat-brown-sugar-ice-cream",
+    "locale": "pt",
+    "en_title": "Toasted Oat Brown Sugar Ice Cream",
+    "en_description": "Nutty toasted oat ice cream sweetened with dark brown sugar.",
+    "current_title": "Toasted Oat Brown Sugar Sorvete",
+    "current_description": "Nutty toasted oat sorvete sweetened com amargo brown sugar.",
+    "labels_title": [
+      "brown sugar"
+    ],
+    "labels_description": [
+      "brown sugar"
+    ]
+  },
+  {
+    "id": "3f9c2947-4c20-40c9-8947-0ec130e88af3",
+    "recipe_id": "8798ec1b-3722-4c0b-91a2-2a783adba153",
+    "slug": "toasted-pecan-pie-ice-cream",
+    "locale": "pt",
+    "en_title": "Toasted Pecan Pie Ice Cream",
+    "en_description": "Buttery toasted pecan pie ice cream with brown sugar and vanilla.",
+    "current_title": "Toasted Noz-Pecã Pie Sorvete",
+    "current_description": "Buttery toasted noz-pecã pie sorvete com brown sugar e baunilha.",
+    "labels_title": [],
+    "labels_description": [
+      "brown sugar"
+    ]
+  },
+  {
+    "id": "bcef1c2c-6857-43f7-a710-29e8a412e5c0",
+    "recipe_id": "927d7513-09eb-4f65-a6ff-b303aace7b6b",
+    "slug": "tropical-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Tropical Frozen Yogurt",
+    "en_description": "Tropical fruit frozen yogurt with a mix of mango, pineapple, and papaya. Island vibes.",
+    "current_title": "Frozen Yogurt Tropical",
+    "current_description": "Frozen yogurt de frutas tropicais com uma mistura de manga, abacaxi e mamao. Clima de ilha.",
+    "labels_title": [
+      "frozen yogurt"
+    ],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "881ed2b1-529d-4a72-9d9b-446c20a786f5",
+    "recipe_id": "88c6d525-aa0f-4c0e-b165-ca45f03166a4",
+    "slug": "vanilla-bean-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Vanilla Bean Greek Frozen Yogurt",
+    "en_description": "Thick Greek yogurt frozen yogurt with real vanilla bean for a tangy, protein-packed treat.",
+    "current_title": "Baunilha Bean Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt espesso de iogurte grego com fava de baunilha real para uma sobremesa acidulada e rica em proteinas.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "df4bd53a-782f-47df-a3e5-e309b99957e0",
+    "recipe_id": "d3359975-ce8e-4531-87e2-88406cc81079",
+    "slug": "vanilla-caramel-greek-frozen-yogurt",
+    "locale": "pt",
+    "en_title": "Vanilla Caramel Greek Frozen Yogurt",
+    "en_description": "Sweet vanilla caramel frozen yogurt with tangy Greek yogurt.",
+    "current_title": "Baunilha Caramelo Grego Iogurte Gelado",
+    "current_description": "Frozen yogurt doce de baunilha e caramelo com iogurte grego acidulado.",
+    "labels_title": [],
+    "labels_description": [
+      "frozen yogurt"
+    ]
+  },
+  {
+    "id": "a0833627-be50-4735-90de-1bbb9bf694b3",
+    "recipe_id": "fe1d614a-eeb5-4ca6-b4d1-b6172c6f3707",
+    "slug": "vanilla-soft-serve",
+    "locale": "pt",
+    "en_title": "Vanilla Soft Serve",
+    "en_description": "Creamy vanilla soft serve dispensed right from your Ninja CREAMi Scoop & Swirl. Uses instant pudding mix for an ultra-smooth, shop-quality texture that rivals any soft serve stand.",
+    "current_title": "Sorvete Soft de Baunilha",
+    "current_description": "Soft serve cremoso de baunilha dispensado direto do seu Ninja CREAMi Scoop & Swirl. Usa mistura de pudim instantaneo para textura ultra suave de qualidade de loja.",
+    "labels_title": [],
+    "labels_description": [
+      "soft serve"
+    ]
+  },
+  {
+    "id": "78102026-b0bd-454c-bc25-72aa49d87598",
+    "recipe_id": "78c888df-b70a-4dfa-a633-f557f1801277",
+    "slug": "vegan-cookies-and-cream-ice-cream",
+    "locale": "pt",
+    "en_title": "Vegan Cookies and Cream Ice Cream",
+    "en_description": "Dairy-free cookies and cream using coconut milk and vegan sandwich cookies. Tastes just like the original, nobody will know the difference.",
+    "current_title": "Sorvete Vegano de Cookies and Cream",
+    "current_description": "Cookies and cream sem laticinios com leite de coco e biscoitos veganos. O sabor e igual ao original, ninguem vai notar a diferenca.",
+    "labels_title": [
+      "cookies and cream"
+    ],
+    "labels_description": [
+      "cookies and cream"
+    ]
+  }
+]

@@ -1,0 +1,869 @@
+[
+  {
+    "id": "50f2caa9-a9e5-4670-9faa-882a06f18a0f",
+    "slug": "banana-chocolate-chip-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Banana com Gotas de Chocolate",
+    "new_description": "Frozen yogurt de banana com mini gotas de chocolate."
+  },
+  {
+    "id": "57e1aeb9-f7b7-403b-9ea1-9f70d12a9d33",
+    "slug": "banana-cream-cheese-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "4b8d5c63-b51c-4e6e-a429-4388b6b25129",
+    "slug": "banana-soft-serve",
+    "new_title": "Sorvete Soft de Banana",
+    "new_description": "Sorvete soft de banana madura para uma sobremesa naturalmente doce."
+  },
+  {
+    "id": "8b18b8d5-4825-46c0-84ee-b31eb6e553e8",
+    "slug": "banana-split-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt de banana split com todas as coberturas de sundae. Uma versão mais leve do clássico."
+  },
+  {
+    "id": "4564e529-3e99-4dd8-8994-2b93e277c8f1",
+    "slug": "banana-walnut-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt de banana com pedaços crocantes de nozes. Naturalmente doce e rico em proteínas."
+  },
+  {
+    "id": "f8d9b388-384c-4dcc-930f-970fd6e2d58c",
+    "slug": "birthday-cake-soft-serve",
+    "new_title": "Sorvete Soft de Bolo de Aniversário",
+    "new_description": "Sorvete soft festivo de bolo de aniversário com granulado."
+  },
+  {
+    "id": "f937f147-6c4e-4d55-9a6b-76ea3c59628c",
+    "slug": "biscoff-swirl-cheesecake-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "8dac7f97-e938-40c6-9f82-9c52471251e1",
+    "slug": "blackberry-cheesecake-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2053c789-b980-4474-8c98-8b8016be5152",
+    "slug": "blackberry-frozen-yogurt",
+    "_skip_reason": "clean PT with Frozen Yogurt as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2e0e5275-1d43-4baa-8aa9-3bb91f154ffb",
+    "slug": "blueberry-brown-sugar-ice-cream",
+    "new_title": "Sorvete de Mirtilo com Açúcar Mascavo",
+    "new_description": "Doce sorvete de mirtilo com rico açúcar mascavo."
+  },
+  {
+    "id": "0e723aab-d7fc-4577-97b2-3d92bf83da65",
+    "slug": "blueberry-cheesecake-crumble-ice-cream",
+    "new_title": "Sorvete Cheesecake de Mirtilo com Crumble",
+    "new_description": "Sorvete cheesecake de mirtilo com crumble de biscoito Graham."
+  },
+  {
+    "id": "dc24713f-64d7-4621-86d5-8b3447e14246",
+    "slug": "blueberry-cheesecake-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "ed198291-984f-400c-bf9a-930413f2c66a",
+    "slug": "blueberry-cheesecake-swirl-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "4014e5d6-cbd3-46e3-aae5-90ca4dae3e33",
+    "slug": "blueberry-cream-cheese-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "7480bdfc-dff9-4b5f-a864-1cf671b22615",
+    "slug": "blueberry-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt cremoso de mirtilo repleto de antioxidantes. Leve, acidulado e naturalmente adoçado com mel."
+  },
+  {
+    "id": "4f8a80e3-ae72-4c83-9111-bd660443a616",
+    "slug": "blueberry-lemon-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Mirtilo e Limão",
+    "new_description": "Frozen yogurt vibrante de mirtilo e limão com iogurte grego."
+  },
+  {
+    "id": "395360a9-31c7-471a-aca0-1e7de92a1ea2",
+    "slug": "blueberry-soft-serve",
+    "new_title": "Sorvete Soft de Mirtilo",
+    "new_description": "Sorvete soft doce de mirtilo com linda cor roxa."
+  },
+  {
+    "id": "7acf71be-5a82-4cf3-b029-101450e91264",
+    "slug": "bourbon-brown-sugar-ice-cream",
+    "new_title": "Sorvete de Bourbon e Açúcar Mascavo",
+    "new_description": null
+  },
+  {
+    "id": "b4162fd4-6501-472b-8f32-199e91e76a75",
+    "slug": "brown-sugar-bourbon-pecan-ice-cream",
+    "new_title": "Sorvete de Açúcar Mascavo, Bourbon e Noz-Pecã",
+    "new_description": "Uma sobremesa gelada rica e cremosa de açúcar mascavo, bourbon e nozes-pecãs com camadas de sabores complementares."
+  },
+  {
+    "id": "93486864-1c84-4ec5-a4a0-dee670a2b4fd",
+    "slug": "brown-sugar-cinnamon-soft-serve",
+    "new_title": "Sorvete Soft de Açúcar Mascavo e Canela",
+    "new_description": "Sorvete soft quente de açúcar mascavo e canela."
+  },
+  {
+    "id": "6806004d-62e1-4a2f-af50-ee723ae84c19",
+    "slug": "brown-sugar-cookie-ice-cream",
+    "new_title": "Sorvete de Biscoito com Açúcar Mascavo",
+    "new_description": "Sorvete quente de biscoito de açúcar mascavo com ricas notas de melaço."
+  },
+  {
+    "id": "67133842-8b8d-4910-8dae-5308f757c7e5",
+    "slug": "brown-sugar-pecan-cookie-ice-cream",
+    "new_title": "Sorvete de Biscoito de Noz-Pecã com Açúcar Mascavo",
+    "new_description": "Sorvete quente de açúcar mascavo com farelos de biscoito de nozes-pecãs."
+  },
+  {
+    "id": "30ce8e36-c50b-4359-9fd8-cc0958336f7c",
+    "slug": "brown-sugar-pecan-pie-ice-cream",
+    "new_title": "Sorvete de Torta de Noz-Pecã com Açúcar Mascavo",
+    "new_description": "Delicioso sorvete de torta de nozes-pecãs com açúcar mascavo e sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "71a5b990-0912-47f8-bce2-27225eb6eff7",
+    "slug": "butterscotch-soft-serve",
+    "new_title": "Sorvete Soft de Butterscotch",
+    "new_description": "Sorvete soft quente de butterscotch."
+  },
+  {
+    "id": "6432e983-4ada-4451-b2fd-439217d7bd61",
+    "slug": "caramel-apple-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt de maçã caramelizada com especiarias quentes. Feira de outono em forma gelada."
+  },
+  {
+    "id": "4999c389-5798-44fa-8e05-77dbfbc6b4bd",
+    "slug": "caramel-apple-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Maçã com Caramelo",
+    "new_description": "Frozen yogurt doce de maçã com caramelo e iogurte grego para uma sobremesa inspirada no outono."
+  },
+  {
+    "id": "dfd4775a-8a69-4f2c-9ce4-392087651de5",
+    "slug": "caramel-white-chocolate-chip-ice-cream",
+    "new_title": "Sorvete de Caramelo com Gotas de Chocolate Branco",
+    "new_description": "Sorvete amanteigado de caramelo com gotas de chocolate branco."
+  },
+  {
+    "id": "4f73496c-25a7-4967-a5b2-47121836c7db",
+    "slug": "chai-chocolate-chip-ice-cream",
+    "new_title": "Sorvete Chai com Gotas de Chocolate",
+    "new_description": "Uma sobremesa gelada única de chai com gotas de chocolate e sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "5c77a9ec-2b86-426a-9716-071d5d249dc2",
+    "slug": "cheesecake-swirl-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "19f1da33-ec54-4bda-b29d-2ec27d81ba98",
+    "slug": "cherry-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt de cereja doce com fruta real. Cor vermelha intensa e sabor clássico de cereja."
+  },
+  {
+    "id": "d956e60f-dcd7-45ae-beb2-17212b35fd1c",
+    "slug": "cherry-vanilla-frozen-yogurt",
+    "_skip_reason": "clean PT with Frozen Yogurt as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "ec0be197-0378-49e2-9ec7-ea92016910f1",
+    "slug": "chocolate-cashew-butter-ice-cream",
+    "new_title": "Sorvete de Chocolate com Manteiga de Caju",
+    "new_description": "Rico sorvete de chocolate com cremoso redemoinho de manteiga de caju."
+  },
+  {
+    "id": "0e787c90-a6f2-41e8-a89e-134fcdb0761e",
+    "slug": "chocolate-chip-banana-bread-ice-cream",
+    "new_title": "Sorvete de Pão de Banana com Gotas de Chocolate",
+    "new_description": "Sorvete de pão de banana salpicado com mini gotas de chocolate."
+  },
+  {
+    "id": "9a2df454-4855-436b-90df-1b134fff585b",
+    "slug": "chocolate-chip-brownie-batter-ice-cream",
+    "new_title": "Sorvete de Massa de Brownie com Gotas de Chocolate",
+    "new_description": "Sorvete de massa de brownie com gotas de chocolate."
+  },
+  {
+    "id": "92a406ce-7457-48fa-86f3-1d9f4ffde638",
+    "slug": "chocolate-chip-brownie-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Brownie com Gotas de Chocolate",
+    "new_description": "Denso sorvete proteico de brownie com gotas de chocolate."
+  },
+  {
+    "id": "c350e6f4-b5d6-48b1-a994-ba2b9a6f8082",
+    "slug": "chocolate-chip-caramel-cookie-ice-cream",
+    "new_title": "Sorvete de Biscoito de Caramelo com Gotas de Chocolate",
+    "new_description": "Sorvete com gotas de chocolate, caramelo e pedaços de biscoito."
+  },
+  {
+    "id": "a17e3ddd-d472-4d9d-bd43-626aac583921",
+    "slug": "chocolate-chip-cookie-crumble-ice-cream",
+    "new_title": "Sorvete Crumble de Biscoito com Gotas de Chocolate",
+    "new_description": "Sorvete de baunilha com pedaços de crumble de biscoito com gotas de chocolate."
+  },
+  {
+    "id": "15d95246-9295-41d3-835f-adf0036012b0",
+    "slug": "chocolate-chip-cookie-milkshake",
+    "new_title": "Milkshake de Biscoito com Gotas de Chocolate",
+    "new_description": "Milkshake espesso de biscoito com gotas de chocolate."
+  },
+  {
+    "id": "f145d59e-157e-468b-aa66-cd95f8100e54",
+    "slug": "chocolate-chip-cookie-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Biscoito com Gotas de Chocolate",
+    "new_description": "Sorvete proteico sabor biscoito com gotas de chocolate."
+  },
+  {
+    "id": "7b1dd26b-d5d8-4e63-94dd-787ad1d1b9f8",
+    "slug": "chocolate-chip-espresso-ice-cream",
+    "new_title": "Sorvete de Espresso com Gotas de Chocolate",
+    "new_description": "Sorvete intenso de espresso com mini gotas de chocolate."
+  },
+  {
+    "id": "ced8dfeb-e2bc-4f44-9f19-c7b33a64c920",
+    "slug": "chocolate-chip-frozen-yogurt",
+    "_skip_reason": "clean PT with Frozen Yogurt as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "56319085-e0b4-4974-b765-d406b29f491d",
+    "slug": "chocolate-chip-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego com Gotas de Chocolate",
+    "new_description": "Frozen yogurt com gotas de chocolate e iogurte grego para uma sobremesa simples."
+  },
+  {
+    "id": "df6a31da-d6b1-4652-840e-604e93d504a1",
+    "slug": "chocolate-chip-walnut-ice-cream",
+    "new_title": "Sorvete de Nozes com Gotas de Chocolate",
+    "new_description": "Clássico sorvete com gotas de chocolate e pedaços de nozes."
+  },
+  {
+    "id": "70b1d19c-14ba-4200-a0a1-e763408f496e",
+    "slug": "chocolate-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt de chocolate rico com uma sensação mais leve que o sorvete tradicional. A acidez do iogurte grego equilibra perfeitamente a riqueza do cacau."
+  },
+  {
+    "id": "b8355a99-daae-4f39-9f61-d5f352d00f9c",
+    "slug": "chocolate-peanut-butter-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt de chocolate e manteiga de amendoim. Alto em proteínas do iogurte grego mais a delícia da manteiga de amendoim."
+  },
+  {
+    "id": "7320be2f-dfff-40fb-95d6-848fdc15613a",
+    "slug": "cinnamon-apple-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt quente de maçã com canela. Como recheio de torta de maçã encontra iogurte acidulado."
+  },
+  {
+    "id": "db4721ce-f23b-4baa-a1f0-afff2a5505de",
+    "slug": "cinnamon-brown-sugar-pecan-ice-cream",
+    "new_title": "Sorvete de Canela, Açúcar Mascavo e Noz-Pecã",
+    "new_description": "Uma sobremesa gelada única de canela, açúcar mascavo e nozes-pecãs com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "099d247c-2202-4973-b745-a0b0118614da",
+    "slug": "cinnamon-chocolate-chip-ice-cream",
+    "new_title": "Sorvete de Canela com Gotas de Chocolate",
+    "new_description": null
+  },
+  {
+    "id": "37c44040-3632-4b52-98b0-7e48c70f3604",
+    "slug": "cinnamon-roll-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Rolo de Canela",
+    "new_description": null
+  },
+  {
+    "id": "491ede8d-dd96-45d2-9c34-38f206e4a086",
+    "slug": "cinnamon-roll-swirl-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "dd00227d-dda5-4557-8164-71c96dc8d5b6",
+    "slug": "coconut-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt com coco que é mais leve que sorvete mas cremoso e tropical. O iogurte grego proporciona acidez e proteína."
+  },
+  {
+    "id": "3325ba66-3800-451b-94b4-8b7a62bae585",
+    "slug": "coffee-caramel-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Café e Caramelo",
+    "new_description": "Frozen yogurt intenso de café e caramelo com iogurte grego."
+  },
+  {
+    "id": "c96388e1-5c86-4cda-adc7-48bf769fdf69",
+    "slug": "coffee-chocolate-chip-gelato",
+    "new_title": "Gelato de Café com Gotas de Chocolate",
+    "new_description": "Gelato intenso de café repleto de gotas de chocolate amargo."
+  },
+  {
+    "id": "2f6edc81-7ab5-4894-8289-eec9584b507c",
+    "slug": "coffee-chocolate-chip-ice-cream",
+    "new_title": "Sorvete de Café com Gotas de Chocolate",
+    "new_description": "Sorvete intenso de café repleto de gotas de chocolate amargo."
+  },
+  {
+    "id": "148349f7-9d76-4901-9bf7-f835cb03437d",
+    "slug": "coffee-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt de café marcante com um toque ácido do iogurte grego. Uma forma mais leve de apreciar seu café em versão gelada."
+  },
+  {
+    "id": "3e2c3e32-e54a-465f-9f9a-ae3058fcef1c",
+    "slug": "coffee-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Café",
+    "new_description": "Frozen yogurt intenso de café com iogurte grego para uma sobremesa energizante da tarde."
+  },
+  {
+    "id": "a51e38fb-6a22-4007-8b83-9db5488aaa2f",
+    "slug": "cookies-and-cream-brownie-ice-cream",
+    "new_title": null,
+    "new_description": "Duplo mashup de sobremesas com base de cookies and cream e pedaços de brownie fudge."
+  },
+  {
+    "id": "a7d9e89d-a832-405c-bd9e-67432a86e325",
+    "slug": "cookies-and-cream-cheesecake-ice-cream",
+    "_skip_reason": "clean PT with cream cheese and cookies and cream as loanwords",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "0b7da72a-9274-47bd-9d0c-e3a865ac0b87",
+    "slug": "cookies-and-cream-cottage-cheese-protein-ice-cream",
+    "new_title": null,
+    "new_description": "Cookies and cream extra rico em proteínas com base de queijo cottage. Tendência viral encontra crocância de Oreo."
+  },
+  {
+    "id": "7589d857-2d7c-438a-8e34-55019305b2f3",
+    "slug": "cookies-and-cream-frozen-yogurt",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "36ee5f61-a60a-467c-83cb-b8f5c62cb894",
+    "slug": "cookies-and-cream-ice-cream",
+    "new_title": null,
+    "new_description": "Clássico cookies and cream carregado com biscoitos Oreo triturados. Um favorito que agrada crianças e adultos."
+  },
+  {
+    "id": "59b538f1-3039-4b84-954e-2ce5776f8aa5",
+    "slug": "cookies-and-cream-protein-ice-cream",
+    "new_title": null,
+    "new_description": "Todo o sabor de cookies and cream que você ama repleto de proteínas. Oreos sem açúcar triturados dão sabor autêntico de biscoito mantendo as calorias sob controle."
+  },
+  {
+    "id": "2a3f0402-5934-46c6-a3f3-10eb7ca93e91",
+    "slug": "cookies-and-cream-soft-serve",
+    "new_title": null,
+    "new_description": "Clássico cookies and cream em forma de sorvete soft. Base cremosa de baunilha com biscoitos Oreo triturados, dispensado como sorvete soft suave do Ninja CREAMi Scoop & Swirl."
+  },
+  {
+    "id": "baa8a852-a8a3-4855-aaaa-4b706b0ce17c",
+    "slug": "cream-cheese-base-ice-cream",
+    "new_title": null,
+    "new_description": "Uma base rica e ultra cremosa com cream cheese para uma textura incrivelmente suave e fácil de servir. Use como está para sabor de cheesecake ou adicione seus ingredientes favoritos."
+  },
+  {
+    "id": "839bf38b-9903-4986-98ed-af3c90b3b747",
+    "slug": "cream-cheese-chocolate-chip-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "1f5175ff-7895-4d4b-908a-6bf4db9fdced",
+    "slug": "cream-cheese-oreo-ice-cream",
+    "new_title": null,
+    "new_description": "O sorvete de Oreo mais cremoso que você já vai provar. A base de cream cheese proporciona textura incrivelmente suave com crocância de biscoito Oreo."
+  },
+  {
+    "id": "4e4065be-45a2-4e5b-8672-6f282df8717b",
+    "slug": "cream-cheese-strawberry-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f7af0dc8-dbf0-4f20-9991-2e599fca4189",
+    "slug": "dulce-de-leche-soft-serve",
+    "new_title": "Sorvete Soft de Doce de Leite",
+    "new_description": "Sorvete soft cremoso de doce de leite."
+  },
+  {
+    "id": "1dc32598-fac1-4229-a85f-18f510eaa281",
+    "slug": "espresso-chip-cookie-ice-cream",
+    "new_title": "Sorvete de Espresso com Biscoito de Gotas de Chocolate",
+    "new_description": "Sorvete intenso de espresso com pedaços de biscoito de gotas de chocolate."
+  },
+  {
+    "id": "29cc5311-b134-47b6-b42c-fdc8613794d1",
+    "slug": "frozen-yogurt-with-mixed-berries",
+    "new_title": null,
+    "new_description": "Frozen yogurt acidulado e doce com redemoinho de frutas vermelhas mistas. Uma alternativa mais leve ao sorvete que ainda parece uma delícia."
+  },
+  {
+    "id": "d05926f5-f770-450a-b64f-7080e30d5f86",
+    "slug": "graham-cracker-cookie-dough-ice-cream",
+    "new_title": "Sorvete de Biscoito Graham com Massa de Biscoito",
+    "new_description": "Sorvete doce de biscoito Graham com massa de biscoito com gotas de chocolate."
+  },
+  {
+    "id": "3d0bcb55-2cb3-4d83-a849-6e6a2115e17e",
+    "slug": "honey-vanilla-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt clássico de mel e baunilha com um agradável toque ácido do iogurte grego. A receita de frozen yogurt mais simples que você já vai fazer."
+  },
+  {
+    "id": "81550502-495a-4210-bfc3-0500339c9c23",
+    "slug": "keto-cheesecake-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "58295aaa-9c86-4c45-8af0-66fe71a2757c",
+    "slug": "keto-chocolate-cheesecake-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "05be04ef-7f9e-44ff-85cd-93807a8ccbef",
+    "slug": "keto-cinnamon-roll-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "4ab56a3e-a422-49c2-8824-671300c4b55e",
+    "slug": "keto-lemon-cheesecake-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "22c73b07-6016-460f-9756-afe22cad851d",
+    "slug": "key-lime-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt acidulado de limão com o equilíbrio perfeito entre doce e ácido. Como uma torta de limão em forma de frozen yogurt."
+  },
+  {
+    "id": "f8b62436-cbed-465a-bdff-6897e02e2060",
+    "slug": "lemon-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt de limão vibrante e ácido, refrescante e leve. O suco de limão real dá um toque cítrico marcante."
+  },
+  {
+    "id": "4f0b7a19-5c6c-4837-90d0-36edb85b5d2a",
+    "slug": "mango-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt tropical de manga com um toque cremoso e ácido. Feito com manga real para sabor autêntico de fruta em cada colherada."
+  },
+  {
+    "id": "9c6e64c4-c5e4-4a42-a269-dc270c8689ee",
+    "slug": "mango-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Manga",
+    "new_description": null
+  },
+  {
+    "id": "0cfa2fae-89f1-4d92-b02e-4ddc26d87049",
+    "slug": "mango-lassi-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Lassi indiano de manga transformado em frozen yogurt. Manga, iogurte e cardamomo criam uma sobremesa exótica e refrescante."
+  },
+  {
+    "id": "cddba872-69c0-41d6-8de8-b81165da5224",
+    "slug": "mango-lime-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Manga e Limão",
+    "new_description": "Frozen yogurt tropical de manga e limão com um toque cítrico."
+  },
+  {
+    "id": "4dba7074-461f-4cfc-915f-51d382c37576",
+    "slug": "maple-cinnamon-frozen-yogurt",
+    "_skip_reason": "clean PT with Frozen Yogurt as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "cfe3f260-2df8-4e89-aa7b-7d97f7ae8d57",
+    "slug": "maple-cream-soft-serve",
+    "new_title": "Sorvete Soft de Creme de Bordo",
+    "new_description": "Sorvete soft puro de bordo com doçura estilo Vermont."
+  },
+  {
+    "id": "eed1b26b-c559-457b-a929-3ef27d058b00",
+    "slug": "matcha-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt terroso de chá verde matcha. De inspiração japonesa e mais leve que sorvete."
+  },
+  {
+    "id": "52ff2279-78e1-4fad-9398-e599290c295e",
+    "slug": "matcha-white-chocolate-chip-ice-cream",
+    "new_title": "Sorvete de Matcha com Gotas de Chocolate Branco",
+    "new_description": "Sorvete terroso de matcha com doces gotas de chocolate branco por todo lado."
+  },
+  {
+    "id": "9b03885d-019c-4ee9-88c2-5d5a02827ca4",
+    "slug": "mint-chocolate-chip-milkshake",
+    "new_title": "Milkshake de Menta com Gotas de Chocolate",
+    "new_description": null
+  },
+  {
+    "id": "f3265f20-275a-49f2-90f0-59b86d4e8782",
+    "slug": "mint-chocolate-chip-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Menta com Gotas de Chocolate",
+    "new_description": null
+  },
+  {
+    "id": "efb01933-e70a-45bb-bdc5-addc50617061",
+    "slug": "mint-chocolate-chip-soft-serve",
+    "new_title": null,
+    "new_description": "Sorvete soft de menta fresca com mini gotas de chocolate. O extrato de menta dá aquele icônico sabor verde-menta, e as gotas adicionam uma crocância satisfatória a cada espiral."
+  },
+  {
+    "id": "a854063c-a457-4039-8edc-13bbf8df506b",
+    "slug": "mint-cookies-and-cream-ice-cream",
+    "_skip_reason": "clean PT with cookies and cream as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "99f42c4a-d5bf-4dc9-a5a6-be120cbff949",
+    "slug": "mixed-berry-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt triplo de frutas vermelhas com morangos, mirtilos e framboesas. Uma bonança de frutas."
+  },
+  {
+    "id": "7cc28910-b011-48ca-9e32-81e09e6ab16b",
+    "slug": "one-ingredient-frozen-yogurt-soft-serve",
+    "new_title": null,
+    "new_description": "A receita de sorvete soft mais simples possível. Apenas iogurte. Congele, processe e dispense como cremoso frozen yogurt soft. Experimente diferentes sabores de iogurte para variedade infinita."
+  },
+  {
+    "id": "52747e33-ed4f-49aa-8156-98e0a9c7f420",
+    "slug": "oreo-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt de baunilha acidulado com Oreos triturados. Uma versão mais leve do cookies and cream."
+  },
+  {
+    "id": "e957a1cd-a3c6-449a-bac7-c0328c5bef4c",
+    "slug": "passion-fruit-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt exótico de maracujá. Sabor tropical acidulado com a cremosidade do iogurte grego."
+  },
+  {
+    "id": "6d471740-8da2-45e4-9d9f-5bd87fb32cc0",
+    "slug": "peach-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt doce e ácido de pêssego feito com pêssegos frescos e iogurte grego. Leve, refrescante e perfeito para o verão."
+  },
+  {
+    "id": "158d339f-64a8-4c89-b55f-1424f02684f2",
+    "slug": "peach-ginger-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Pêssego e Gengibre",
+    "new_description": "Frozen yogurt fresco de pêssego e gengibre com calidez picante-doce."
+  },
+  {
+    "id": "1e80b3d5-9d24-481b-b553-213d13e15c33",
+    "slug": "peach-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Pêssego",
+    "new_description": "Frozen yogurt fresco de pêssego com iogurte grego acidulado para uma sobremesa leve de verão."
+  },
+  {
+    "id": "3313f83f-0f4e-4a34-9bd2-67b0c0a067ce",
+    "slug": "peach-mango-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt tropical de pêssego e manga. Sabor brilhante e ensolarado mais leve que sorvete."
+  },
+  {
+    "id": "260c77e6-b8ed-481c-8aa8-f4fbfe1dc244",
+    "slug": "peanut-butter-banana-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt de manteiga de amendoim e banana com proteínas extras do iogurte grego. Parece um smoothie de PB e banana, congelado e espesso."
+  },
+  {
+    "id": "fdc402c9-676e-44c9-bfbf-edecafd87738",
+    "slug": "peanut-butter-banana-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Manteiga de Amendoim e Banana",
+    "new_description": null
+  },
+  {
+    "id": "cf18735e-299a-4a7e-9d4a-5b5667e71135",
+    "slug": "peanut-butter-marshmallow-ice-cream",
+    "new_title": "Sorvete de Manteiga de Amendoim com Marshmallow",
+    "new_description": null
+  },
+  {
+    "id": "5abbafdb-d36f-47c1-96e1-685ed8b4cb77",
+    "slug": "peanut-butter-soft-serve",
+    "new_title": null,
+    "new_description": "Sorvete soft cremoso de manteiga de amendoim com suave sabor de castanha. A mistura de pudim dá a consistência perfeita de sorvete soft ao dispensar do Scoop & Swirl."
+  },
+  {
+    "id": "dd28d01e-130f-4c9f-af8c-6a603d2ed2d8",
+    "slug": "pineapple-brown-sugar-ice-cream",
+    "new_title": "Sorvete de Abacaxi com Açúcar Mascavo",
+    "new_description": "Sorvete de abacaxi caramelizado com a doçura quente do açúcar mascavo."
+  },
+  {
+    "id": "91d640b2-7bdc-4e60-b4e9-b325fe53eea4",
+    "slug": "pineapple-frozen-yogurt",
+    "_skip_reason": "clean PT with Frozen Yogurt as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a6b911b7-4aec-4d23-a9ca-befda2bdd502",
+    "slug": "pistachio-chocolate-chip-gelato",
+    "new_title": "Gelato de Pistache com Gotas de Chocolate",
+    "new_description": "Gelato de pistache com gotas de chocolate amargo para um crocante clássico italiano."
+  },
+  {
+    "id": "5680055f-5b80-4e40-a4e0-1a19449ba7b0",
+    "slug": "pistachio-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Pistache",
+    "new_description": null
+  },
+  {
+    "id": "2688b4fa-e4ce-4860-8641-8f7eebff55b7",
+    "slug": "pomegranate-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt de romã rico em antioxidantes com cor de pedra preciosa e sabor acidulado."
+  },
+  {
+    "id": "f7cf932a-fcc4-4c52-af12-60169c99117e",
+    "slug": "pomegranate-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Romã",
+    "new_description": "Frozen yogurt de romã com tons de joia e iogurte grego para um impulso de antioxidantes."
+  },
+  {
+    "id": "a5edd047-6009-4c33-8f77-df5943ae042a",
+    "slug": "pumpkin-cheesecake-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "7cc08dc8-eb5e-4e5a-ac0b-ece1d7e2a4d2",
+    "slug": "pumpkin-spice-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt de abóbora com especiarias de outono. Mais leve que sorvete com todo o sabor do outono."
+  },
+  {
+    "id": "75b71ed6-9e06-4bae-95ec-dd8538826ad6",
+    "slug": "raspberry-cheesecake-frozen-yogurt",
+    "_skip_reason": "clean PT with Frozen Yogurt and cheesecake as loanwords",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "15ac973a-19bf-4801-95c3-a073a966685a",
+    "slug": "raspberry-chocolate-chip-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Framboesa com Gotas de Chocolate",
+    "new_description": "Frozen yogurt ácido de framboesa com gotas de chocolate."
+  },
+  {
+    "id": "e9e2b591-3651-4edc-a002-58ed8e7ec75a",
+    "slug": "raspberry-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt de framboesa rosa vivo com o equilíbrio perfeito entre ácido e doce. Uma linda sobremesa gelada mais leve."
+  },
+  {
+    "id": "89862857-9554-4c55-9dbb-ddc48520c0b1",
+    "slug": "raspberry-lemon-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Framboesa e Limão",
+    "new_description": "Frozen yogurt vibrante de framboesa e limão com iogurte grego."
+  },
+  {
+    "id": "be735111-5c62-4c80-9a31-a86bfa6a757b",
+    "slug": "raspberry-peach-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Framboesa e Pêssego",
+    "new_description": "Frozen yogurt vibrante de framboesa e pêssego com frutas de verão."
+  },
+  {
+    "id": "d0a6b0eb-92b8-4a12-9314-1c96df3be260",
+    "slug": "red-velvet-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "b38ab1ca-5b63-4fe3-bab9-a380b9eb661d",
+    "slug": "salted-caramel-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt de caramelo salgado com fio de caramelo. Perfeição doce, salgada e acidulada."
+  },
+  {
+    "id": "f573b388-82a5-49e2-84b8-2dbdf4234e47",
+    "slug": "salted-caramel-soft-serve",
+    "new_title": null,
+    "new_description": "Sorvete soft indulgente de caramelo salgado com o equilíbrio doce-salgado perfeito. Calda de caramelo e uma pitada de sal marinho criam um sorvete soft luxuoso."
+  },
+  {
+    "id": "bf2ddb98-abbd-4fbb-93b0-f143608c6c98",
+    "slug": "smores-milkshake",
+    "new_title": null,
+    "new_description": "Milkshake de chocolate com marshmallow tostado e migalhas de biscoito Graham."
+  },
+  {
+    "id": "0050ebc4-786a-4e30-a82d-152a802b1211",
+    "slug": "strawberry-banana-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Morango e Banana",
+    "new_description": "Frozen yogurt clássico de morango e banana com iogurte grego rico em proteínas."
+  },
+  {
+    "id": "c385b962-f4de-43a5-bee9-30d5cf7b45bc",
+    "slug": "strawberry-brown-sugar-ice-cream",
+    "new_title": "Sorvete de Morango com Açúcar Mascavo",
+    "new_description": "Sorvete fresco de morango com açúcar mascavo quente."
+  },
+  {
+    "id": "8361f148-9cc1-4156-be39-08a9284d5ac5",
+    "slug": "strawberry-cheesecake-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego Cheesecake de Morango",
+    "new_description": "Frozen yogurt ácido cheesecake de morango com iogurte grego e biscoito Graham."
+  },
+  {
+    "id": "2333b17e-57fc-45d8-ac0f-13941d0fd9d0",
+    "slug": "strawberry-cheesecake-milkshake",
+    "new_title": "Milkshake Cheesecake de Morango",
+    "new_description": "Milkshake cheesecake de morango com migalhas de biscoito Graham."
+  },
+  {
+    "id": "22532f94-1348-4c7c-b93f-fee5385ec1f1",
+    "slug": "strawberry-cheesecake-protein-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "0b91880f-b0f7-4d3c-bd9b-3eddb0ddffb7",
+    "slug": "strawberry-cheesecake-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light Cheesecake de Morango",
+    "new_description": "Sorvete proteico cheesecake de morango com biscoito Graham."
+  },
+  {
+    "id": "3411339a-6204-4706-bc76-cef82b02fc8a",
+    "slug": "strawberry-cream-cheese-ice-cream",
+    "_skip_reason": "clean PT with cream cheese as loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f6a4e636-2f54-4b52-976e-28583b4d2103",
+    "slug": "strawberry-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt ácido de morango que é mais leve que sorvete mas igualmente satisfatório. Morangos reais fazem toda a diferença."
+  },
+  {
+    "id": "ceac8a0f-dc59-4343-9821-d0ea08428ea9",
+    "slug": "strawberry-kiwi-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Morango e Kiwi",
+    "new_description": null
+  },
+  {
+    "id": "34aea6e7-1295-4d8d-b809-43e17bee04d9",
+    "slug": "strawberry-mint-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Morango e Menta",
+    "new_description": null
+  },
+  {
+    "id": "0034c629-12f7-467f-a0ce-c5283d21b41f",
+    "slug": "strawberry-soft-serve",
+    "new_title": "Sorvete Soft de Morango",
+    "new_description": "Sorvete soft de morango doce com purê real de frutas vermelhas."
+  },
+  {
+    "id": "2d466375-c8e3-4a94-8294-f5cac776c02c",
+    "slug": "strawberry-vanilla-swirl-soft-serve",
+    "new_title": "Sorvete Soft Redemoinho de Morango e Baunilha",
+    "new_description": "Clássico sorvete soft de morango e baunilha misturados juntos."
+  },
+  {
+    "id": "07fc8209-fc96-4e4a-be27-0621fd97e0d2",
+    "slug": "tahini-chocolate-chip-ice-cream",
+    "new_title": "Sorvete de Tahini com Gotas de Chocolate",
+    "new_description": null
+  },
+  {
+    "id": "567c0629-a20c-452f-a02b-a9f53ab8f3e3",
+    "slug": "tart-cherry-vanilla-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Cereja Azeda e Baunilha",
+    "new_description": "Frozen yogurt ácido de cereja azeda com baunilha para recuperação e sabor."
+  },
+  {
+    "id": "8d1a98c7-f403-4bba-a2a8-349f95a824a3",
+    "slug": "toasted-oat-brown-sugar-ice-cream",
+    "new_title": "Sorvete de Aveia Tostada com Açúcar Mascavo",
+    "new_description": "Sorvete de aveia tostada com sabor de castanha, adoçado com açúcar mascavo escuro."
+  },
+  {
+    "id": "3f9c2947-4c20-40c9-8947-0ec130e88af3",
+    "slug": "toasted-pecan-pie-ice-cream",
+    "new_title": "Sorvete de Torta de Noz-Pecã Tostada",
+    "new_description": "Sorvete amanteigado de torta de noz-pecã tostada com açúcar mascavo e baunilha."
+  },
+  {
+    "id": "bcef1c2c-6857-43f7-a710-29e8a412e5c0",
+    "slug": "tropical-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Frozen yogurt de frutas tropicais com uma mistura de manga, abacaxi e mamão. Clima de ilha."
+  },
+  {
+    "id": "881ed2b1-529d-4a72-9d9b-446c20a786f5",
+    "slug": "vanilla-bean-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Fava de Baunilha",
+    "new_description": "Frozen yogurt espesso de iogurte grego com fava de baunilha real para uma sobremesa acidulada e rica em proteínas."
+  },
+  {
+    "id": "df4bd53a-782f-47df-a3e5-e309b99957e0",
+    "slug": "vanilla-caramel-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Baunilha e Caramelo",
+    "new_description": null
+  },
+  {
+    "id": "a0833627-be50-4735-90de-1bbb9bf694b3",
+    "slug": "vanilla-soft-serve",
+    "new_title": null,
+    "new_description": "Sorvete soft cremoso de baunilha dispensado direto do seu Ninja CREAMi Scoop & Swirl. Usa mistura de pudim instantâneo para textura ultra suave de qualidade de loja."
+  },
+  {
+    "id": "78102026-b0bd-454c-bc25-72aa49d87598",
+    "slug": "vegan-cookies-and-cream-ice-cream",
+    "new_title": null,
+    "new_description": "Cookies and cream sem laticínios com leite de coco e biscoitos veganos. O sabor é igual ao original, ninguém vai notar a diferença."
+  }
+]

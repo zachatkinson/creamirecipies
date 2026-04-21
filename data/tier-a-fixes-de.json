@@ -1,0 +1,172 @@
+[
+  {
+    "id": "b4c15d70-6c21-4207-b1ab-73430496298d",
+    "slug": "banana-soft-serve",
+    "new_title": "Bananen-Softeis",
+    "new_description": "Reifes Bananen-Softeis für einen natürlich süßen Genuss."
+  },
+  {
+    "id": "40b12dc1-a633-412b-ab63-0f70b657fa01",
+    "slug": "birthday-cake-soft-serve",
+    "new_title": "Geburtstagskuchen-Softeis",
+    "new_description": "Festliches Geburtstagskuchen-Softeis mit bunten Streuseln."
+  },
+  {
+    "id": "d153befb-964b-4706-a188-1af4ff49a14c",
+    "slug": "blueberry-brown-sugar-ice-cream",
+    "new_title": "Blaubeer-Braunzucker-Eiscreme",
+    "new_description": "Süße Blaubeer-Eiscreme mit reichhaltigem braunem Zucker."
+  },
+  {
+    "id": "e89a3303-1bd4-4168-869a-c97718af4481",
+    "slug": "blueberry-cheesecake-crumble-ice-cream",
+    "new_title": "Blaubeer-Cheesecake-Crumble-Eiscreme",
+    "new_description": "Blaubeer-Cheesecake-Eis mit Graham-Cracker-Streuseln."
+  },
+  {
+    "id": "87e09f4d-362c-417a-a668-2d02003f7bd3",
+    "slug": "blueberry-soft-serve",
+    "new_title": "Blaubeer-Softeis",
+    "new_description": "Süßes Blaubeer-Softeis mit herrlich lila Farbe."
+  },
+  {
+    "id": "fef25e70-420e-41ed-8d98-3c143560fc15",
+    "slug": "bourbon-brown-sugar-ice-cream",
+    "new_title": "Bourbon-Braunzucker-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "a0274443-9526-4175-b28c-20ff25a06d17",
+    "slug": "brown-sugar-bourbon-pecan-ice-cream",
+    "new_title": "Braunzucker-Bourbon-Pekannuss-Eiscreme",
+    "new_description": "Ein reichhaltiges und cremiges gefrorenes Dessert mit braunem Zucker, Bourbon und Pekannüssen in harmonischen Geschmacksschichten."
+  },
+  {
+    "id": "79a83b94-148e-4891-bd3c-3fda22f12431",
+    "slug": "brown-sugar-cinnamon-soft-serve",
+    "new_title": "Braunzucker-Zimt-Softeis",
+    "new_description": null
+  },
+  {
+    "id": "2c911e55-65d1-48aa-a1a2-acef5ad171f8",
+    "slug": "brown-sugar-cookie-ice-cream",
+    "new_title": "Braunzucker-Keks-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "287f0ae8-b4ee-4d84-88bf-868715fa6706",
+    "slug": "brown-sugar-pecan-cookie-ice-cream",
+    "new_title": "Braunzucker-Pekannuss-Keks-Eiscreme",
+    "new_description": "Warmes Braunzucker-Eis mit Pekannuss-Keks-Krümeln."
+  },
+  {
+    "id": "a0bc3154-f3d7-4b8a-bd6d-af251c8dbe2d",
+    "slug": "brown-sugar-pecan-pie-ice-cream",
+    "new_title": "Braunzucker-Pekannusskuchen-Eiscreme",
+    "new_description": "Köstliches Braunzucker-Pekannusskuchen-Eis mit perfekt ausgewogener Aromenvielfalt."
+  },
+  {
+    "id": "fd7c7f3c-a35c-4d80-a661-1a9ddd6c3912",
+    "slug": "chocolate-cashew-butter-ice-cream",
+    "new_title": "Schokoladen-Cashewbutter-Eiscreme",
+    "new_description": "Reichhaltige Schokoladeneiscreme mit cremigem Cashewbutter-Wirbel."
+  },
+  {
+    "id": "d21651a1-178a-4d98-a2b0-523480a487d6",
+    "slug": "cinnamon-brown-sugar-pecan-ice-cream",
+    "new_title": "Zimt-Braunzucker-Pekannuss-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "2c5e1f20-319d-47eb-984a-10afa0cca974",
+    "slug": "cookies-and-cream-soft-serve",
+    "new_title": null,
+    "new_description": "Klassisches Cookies and Cream als Softeis. Cremige Vanillebasis mit eingearbeiteten Oreo-Krümeln, als glattes Softeis aus dem Ninja CREAMi Scoop & Swirl."
+  },
+  {
+    "id": "774ad235-5a04-42da-ac37-dba5336e13e2",
+    "slug": "frozen-yogurt-with-mixed-berries",
+    "new_title": null,
+    "new_description": "Säuerlich-süßer Frozen Yogurt mit einem gemischten Beeren-Wirbel. Eine leichtere Alternative zu Eis, die sich trotzdem wie ein Genuss anfühlt."
+  },
+  {
+    "id": "72afb15c-bfe1-454b-aca9-33b7973cfdbc",
+    "slug": "graham-cracker-cookie-dough-ice-cream",
+    "new_title": "Graham-Cracker-Cookie-Dough-Eiscreme",
+    "new_description": "Süßes Graham-Cracker-Eis mit Cookie Dough und Schokoladenstückchen."
+  },
+  {
+    "id": "154d84f7-4b6e-4b48-89f7-be8b3f3567de",
+    "slug": "mango-lassi-frozen-yogurt",
+    "_skip_reason": "clean German with Frozen Yogurt as legitimate loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "55187c39-c385-42a9-8e1f-ede6da1376a1",
+    "slug": "mango-passion-fruit-greek-frozen-yogurt",
+    "new_title": "Griechischer Frozen Yogurt mit Mango & Passionsfrucht",
+    "new_description": null
+  },
+  {
+    "id": "42e05084-446c-4f34-ba43-49de0115745c",
+    "slug": "oreo-frozen-yogurt",
+    "_skip_reason": "clean German with Frozen Yogurt and Cookies and Cream as legitimate loanwords",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f07621a7-c836-472e-aa24-5b3a00f38816",
+    "slug": "pineapple-brown-sugar-ice-cream",
+    "new_title": "Ananas-Braunzucker-Eiscreme",
+    "new_description": "Karamellisiertes Ananas-Eis mit warmer Braunzucker-Süße."
+  },
+  {
+    "id": "89204112-c526-46c7-8a14-af9c8b44ab2f",
+    "slug": "raspberry-cheesecake-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Säuerlicher Frozen Yogurt mit Käsekuchengeschmack und Himbeerwirbel. Leichter als Eis, aber genauso genussvoll."
+  },
+  {
+    "id": "f719001c-639f-40a1-bf79-7a0daf993d3d",
+    "slug": "smores-milkshake",
+    "new_title": null,
+    "new_description": "Schokoladen-Milkshake mit gerösteten Marshmallows und Graham-Cracker-Krümeln."
+  },
+  {
+    "id": "fbdec45f-e405-45ab-bc76-54c2421d7b5e",
+    "slug": "strawberry-brown-sugar-ice-cream",
+    "new_title": "Erdbeer-Braunzucker-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "3ef01b27-2945-44c1-8d29-a8d275882631",
+    "slug": "strawberry-cheesecake-greek-frozen-yogurt",
+    "new_title": "Griechischer Erdbeer-Cheesecake-Frozen-Yogurt",
+    "new_description": "Säuerlicher Erdbeer-Cheesecake-Frozen-Yogurt mit griechischem Joghurt und Graham-Cracker."
+  },
+  {
+    "id": "398c3f22-d12f-4d2f-9a4f-351a88c8ecd8",
+    "slug": "strawberry-cheesecake-milkshake",
+    "new_title": "Erdbeer-Cheesecake-Milkshake",
+    "new_description": "Erdbeer-Cheesecake-Milkshake mit Graham-Cracker-Krümeln."
+  },
+  {
+    "id": "0387b953-7876-41bb-a132-9c3ef102db8b",
+    "slug": "strawberry-cheesecake-protein-lite-ice-cream",
+    "new_title": "Erdbeer-Cheesecake Protein-Lite-Eiscreme",
+    "new_description": "Erdbeer-Cheesecake-Protein-Eis mit Graham-Cracker."
+  },
+  {
+    "id": "1c13ec0f-2587-47d3-a0e1-e3ba3d4549cb",
+    "slug": "toasted-oat-brown-sugar-ice-cream",
+    "new_title": "Geröstete-Hafer-Braunzucker-Eiscreme",
+    "new_description": "Nussige Röst-Hafer-Eiscreme mit dunklem braunem Zucker gesüßt."
+  },
+  {
+    "id": "76bfddfb-5bbf-4af9-9511-b96da6fecfd8",
+    "slug": "toasted-pecan-pie-ice-cream",
+    "new_title": "Geröstete Pecan-Pie-Eiscreme",
+    "new_description": "Buttrige geröstete Pecan-Pie-Eiscreme mit braunem Zucker und Vanille."
+  }
+]

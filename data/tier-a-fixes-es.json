@@ -1,0 +1,368 @@
+[
+  {
+    "id": "f5a80b15-e859-46dd-a201-834054d6009a",
+    "slug": "banana-chocolate-chip-greek-frozen-yogurt",
+    "new_title": "Yogur Helado Griego de Banana con Chispas de Chocolate",
+    "new_description": "Yogur helado de banana con mini chispas de chocolate."
+  },
+  {
+    "id": "7155005e-124b-4a90-aa23-a82865cf320a",
+    "slug": "banana-soft-serve",
+    "new_title": "Helado Suave de Banana",
+    "new_description": "Helado suave de banana madura para un gusto naturalmente dulce."
+  },
+  {
+    "id": "39234762-9a89-4e8e-b417-a334c7c9f790",
+    "slug": "birthday-cake-soft-serve",
+    "new_title": "Helado Suave de Pastel de Cumpleaños",
+    "new_description": "Helado suave festivo de pastel de cumpleaños con chispitas de colores."
+  },
+  {
+    "id": "29df094e-fb37-4b32-bfd4-b09bbf24861b",
+    "slug": "blueberry-brown-sugar-ice-cream",
+    "new_title": "Helado de Arándanos con Azúcar Moreno",
+    "new_description": "Dulce helado de arándanos con rico azúcar moreno."
+  },
+  {
+    "id": "d54a937c-3c6f-4bf8-b58d-e4b6ba998c00",
+    "slug": "blueberry-cheesecake-crumble-ice-cream",
+    "new_title": "Helado Cheesecake de Arándanos con Crumble",
+    "new_description": "Helado cheesecake de arándanos con crumble de galleta Graham."
+  },
+  {
+    "id": "e6d5ffa7-02ea-452a-95c6-102339b252fb",
+    "slug": "blueberry-soft-serve",
+    "new_title": "Helado Suave de Arándanos",
+    "new_description": "Helado suave dulce de arándanos con un precioso color morado."
+  },
+  {
+    "id": "f8169ca0-cb6c-45e1-ae0a-47a806ba181b",
+    "slug": "bourbon-brown-sugar-ice-cream",
+    "new_title": "Helado de Bourbon y Azúcar Moreno",
+    "new_description": null
+  },
+  {
+    "id": "98e84c4c-f151-46e1-9f31-c1ff3e6d69a7",
+    "slug": "brown-sugar-bourbon-pecan-ice-cream",
+    "new_title": "Helado de Azúcar Moreno, Bourbon y Nueces Pecanas",
+    "new_description": "Un postre helado rico y cremoso de azúcar moreno, bourbon y nueces pecanas, con capas de sabores complementarios."
+  },
+  {
+    "id": "5721be87-6d89-4387-9752-7f2401b05eef",
+    "slug": "brown-sugar-cinnamon-soft-serve",
+    "new_title": "Helado Suave de Azúcar Moreno y Canela",
+    "new_description": "Helado suave cálido de azúcar moreno y canela."
+  },
+  {
+    "id": "91986201-3c3c-4fce-8550-36855fed2978",
+    "slug": "brown-sugar-cookie-ice-cream",
+    "new_title": "Helado de Galleta con Azúcar Moreno",
+    "new_description": "Helado cálido de galleta de azúcar moreno con ricas notas de melaza."
+  },
+  {
+    "id": "4733f1ef-45bb-46b0-b389-91408b5bce27",
+    "slug": "brown-sugar-pecan-cookie-ice-cream",
+    "new_title": "Helado de Galleta de Nuez Pecana con Azúcar Moreno",
+    "new_description": "Helado cálido de azúcar moreno con migas de galleta de nueces pecanas."
+  },
+  {
+    "id": "6003da6f-d3e7-4085-b396-22aa45c598b8",
+    "slug": "brown-sugar-pecan-pie-ice-cream",
+    "new_title": "Helado de Tarta de Nuez Pecana con Azúcar Moreno",
+    "new_description": "Delicioso helado de tarta de nueces pecanas con azúcar moreno y sabores perfectamente equilibrados."
+  },
+  {
+    "id": "05cc3227-6039-43da-bccc-d3186c543670",
+    "slug": "butterscotch-soft-serve",
+    "new_title": "Helado Suave de Butterscotch",
+    "new_description": "Helado suave cálido de butterscotch."
+  },
+  {
+    "id": "59206437-6a38-4ce8-b266-296fe788c79a",
+    "slug": "caramel-white-chocolate-chip-ice-cream",
+    "new_title": "Helado de Caramelo con Chispas de Chocolate Blanco",
+    "new_description": "Mantecoso helado de caramelo con chispas de chocolate blanco."
+  },
+  {
+    "id": "704b352c-e854-4fa9-86e4-7a72fd8183c3",
+    "slug": "chai-chocolate-chip-ice-cream",
+    "new_title": "Helado Chai con Chispas de Chocolate",
+    "new_description": "Un postre helado único de chai con chispas de chocolate y sabores perfectamente equilibrados."
+  },
+  {
+    "id": "36e781f5-6251-403a-91b3-382e9b16239e",
+    "slug": "chocolate-cashew-butter-ice-cream",
+    "new_title": "Helado de Chocolate con Mantequilla de Anacardos",
+    "new_description": "Rico helado de chocolate con un suave remolino de mantequilla de anacardos."
+  },
+  {
+    "id": "8c00ab14-96e3-4e2c-8700-f5415997fc2a",
+    "slug": "chocolate-chip-banana-bread-ice-cream",
+    "new_title": "Helado de Pan de Banana con Chispas de Chocolate",
+    "new_description": "Helado de pan de banana salpicado con mini chispas de chocolate."
+  },
+  {
+    "id": "4e54bcf4-629e-4b63-9abf-a9d5466a5340",
+    "slug": "chocolate-chip-brownie-batter-ice-cream",
+    "new_title": "Helado de Masa de Brownie con Chispas de Chocolate",
+    "new_description": "Helado de masa de brownie con chispas de chocolate."
+  },
+  {
+    "id": "d4f684e3-67e5-4564-9a9d-7684ca4be4d7",
+    "slug": "chocolate-chip-brownie-protein-lite-ice-cream",
+    "new_title": "Helado Proteico Ligero de Brownie con Chispas de Chocolate",
+    "new_description": "Denso helado proteico de brownie con chispas de chocolate."
+  },
+  {
+    "id": "6928d43b-51b5-4fdb-8ce2-e0185502cfb4",
+    "slug": "chocolate-chip-caramel-cookie-ice-cream",
+    "new_title": "Helado de Galleta de Caramelo con Chispas de Chocolate",
+    "new_description": "Helado con chispas de chocolate, caramelo y trozos de galleta."
+  },
+  {
+    "id": "6b711e6d-51bc-405e-a940-59310079feb4",
+    "slug": "chocolate-chip-cookie-crumble-ice-cream",
+    "new_title": "Helado Crumble de Galleta con Chispas de Chocolate",
+    "new_description": "Helado de vainilla con trozos de crumble de galleta con chispas de chocolate."
+  },
+  {
+    "id": "6ae43017-cbc1-415e-bc89-02cb870427f2",
+    "slug": "chocolate-chip-cookie-milkshake",
+    "new_title": "Batido de Galleta con Chispas de Chocolate",
+    "new_description": "Batido espeso de galleta con chispas de chocolate."
+  },
+  {
+    "id": "ac322206-eade-4ad1-b794-cfa21692471e",
+    "slug": "chocolate-chip-cookie-protein-lite-ice-cream",
+    "new_title": "Helado Proteico Ligero de Galleta con Chispas de Chocolate",
+    "new_description": "Helado proteico sabor galleta con chispas de chocolate."
+  },
+  {
+    "id": "10379c5d-4eef-4578-bb35-fbf4d47a3144",
+    "slug": "chocolate-chip-espresso-ice-cream",
+    "new_title": "Helado de Espresso con Chispas de Chocolate",
+    "new_description": "Intenso helado de espresso con mini chispas de chocolate."
+  },
+  {
+    "id": "0f72c1ec-4e24-47e5-8675-325aa92f6697",
+    "slug": "chocolate-chip-greek-frozen-yogurt",
+    "new_title": "Yogur Helado Griego con Chispas de Chocolate",
+    "new_description": "Yogur helado con chispas de chocolate y yogur griego para un dulce sencillo."
+  },
+  {
+    "id": "83cc6e77-7960-4011-92b2-f92745132211",
+    "slug": "chocolate-chip-walnut-ice-cream",
+    "new_title": "Helado de Nuez con Chispas de Chocolate",
+    "new_description": "Clásico helado con chispas de chocolate y trozos de nuez."
+  },
+  {
+    "id": "8d0f14b3-ef89-48eb-900e-d52ed0d4ffae",
+    "slug": "cinnamon-brown-sugar-pecan-ice-cream",
+    "new_title": "Helado de Canela, Azúcar Moreno y Nuez Pecana",
+    "new_description": "Un postre helado único de canela, azúcar moreno y nueces pecanas con sabores perfectamente equilibrados."
+  },
+  {
+    "id": "0d21c8a7-269e-4435-b739-b5713c47a338",
+    "slug": "cinnamon-chocolate-chip-ice-cream",
+    "new_title": "Helado de Canela con Chispas de Chocolate",
+    "new_description": "Helado cálido de canela repleto de chispas de chocolate."
+  },
+  {
+    "id": "2ca9a700-75b8-4a4d-86a7-925cea03a4a2",
+    "slug": "coffee-chocolate-chip-gelato",
+    "new_title": "Gelato de Café con Chispas de Chocolate",
+    "new_description": "Gelato intenso de café repleto de chispas de chocolate negro."
+  },
+  {
+    "id": "70d843eb-5c96-44af-bdaf-f0d7e35dd0fc",
+    "slug": "coffee-chocolate-chip-ice-cream",
+    "new_title": "Helado de Café con Chispas de Chocolate",
+    "new_description": "Helado intenso de café repleto de chispas de chocolate negro."
+  },
+  {
+    "id": "79e7f7b5-8b4c-42c3-9c9c-5afb88f7b3ae",
+    "slug": "coffee-soft-serve",
+    "new_title": null,
+    "new_description": "Helado suave con sabor a espresso para amantes del café. El espresso instantáneo le da un intenso toque de café, perfecto en un cono o junto a un brownie caliente."
+  },
+  {
+    "id": "2d03db31-215d-4c30-ba2e-6df6a1c0d815",
+    "slug": "cookies-and-cream-ice-cream",
+    "new_title": null,
+    "new_description": "Clásico cookies and cream cargado de galletas Oreo trituradas. Un favorito que gusta a niños y adultos por igual."
+  },
+  {
+    "id": "00394b48-d573-4486-a0f2-7b17352d5892",
+    "slug": "cookies-and-cream-milkshake",
+    "new_title": null,
+    "new_description": "Espeso batido de cookies and cream con trozos de galleta Oreo. Un clásico de diner perfeccionado por el Ninja Creami."
+  },
+  {
+    "id": "7df9e042-97aa-4764-b6aa-766c27105c34",
+    "slug": "cookies-and-cream-protein-ice-cream",
+    "new_title": null,
+    "new_description": "Todo el sabor de cookies and cream que amas lleno de proteínas. Oreos sin azúcar trituradas le dan sabor auténtico de galleta manteniendo las calorías bajo control."
+  },
+  {
+    "id": "8f45d9c7-0131-4089-93a6-291a434b1865",
+    "slug": "cookies-and-cream-soft-serve",
+    "new_title": null,
+    "new_description": "Clásico cookies and cream en forma de helado suave. Base cremosa de vainilla con galletas Oreo trituradas, dispensado como helado suave del Ninja CREAMi Scoop & Swirl."
+  },
+  {
+    "id": "014853c8-53d4-4178-9232-88f2830d9c17",
+    "slug": "espresso-chip-cookie-ice-cream",
+    "new_title": "Helado de Espresso con Galleta de Chispas de Chocolate",
+    "new_description": "Helado intenso de espresso con trozos de galleta con chispas de chocolate."
+  },
+  {
+    "id": "39e71b15-6017-47d7-9191-50b40c5b0732",
+    "slug": "graham-cracker-cookie-dough-ice-cream",
+    "new_title": "Helado de Galleta Graham con Masa de Galleta",
+    "new_description": "Dulce helado de galleta Graham con masa de galleta con chispas de chocolate."
+  },
+  {
+    "id": "bc057726-fddd-4929-83d6-01d0fb6c356e",
+    "slug": "mango-sorbet-soft-serve",
+    "new_title": null,
+    "new_description": "Sorbete tropical de mango dispensado como helado suave. Hecho con trozos de mango congelado, azúcar y jugo de lima para un postre refrescante sin lácteos perfecto para días calurosos."
+  },
+  {
+    "id": "29979b92-b20f-41cf-9d6f-439648c8325e",
+    "slug": "maple-cream-soft-serve",
+    "new_title": "Helado Suave de Crema de Arce",
+    "new_description": "Helado suave puro de arce con dulzura estilo Vermont."
+  },
+  {
+    "id": "7db5eff8-4b17-45b9-84fd-f80d0e304433",
+    "slug": "matcha-white-chocolate-chip-ice-cream",
+    "new_title": "Helado de Matcha con Chispas de Chocolate Blanco",
+    "new_description": "Helado terroso de matcha con dulces chispas de chocolate blanco por todas partes."
+  },
+  {
+    "id": "a5f675ee-b18b-44c6-81e0-1c55530169ec",
+    "slug": "mint-chocolate-chip-milkshake",
+    "new_title": "Batido de Menta con Chispas de Chocolate",
+    "new_description": null
+  },
+  {
+    "id": "c9f8349c-7477-4960-86b9-18768975361b",
+    "slug": "mint-chocolate-chip-protein-lite-ice-cream",
+    "new_title": "Helado Proteico Ligero de Menta con Chispas de Chocolate",
+    "new_description": null
+  },
+  {
+    "id": "9eb1b4f7-cda9-4b7b-a2c4-973533cc0320",
+    "slug": "mint-chocolate-chip-soft-serve",
+    "new_title": null,
+    "new_description": "Helado suave de menta fresca con mini chispas de chocolate. El extracto de menta le da ese icónico sabor verde-menta, y las chispas añaden un crujido satisfactorio a cada espiral."
+  },
+  {
+    "id": "ebcc79a0-fe09-4d50-9ac7-9d987c1a6390",
+    "slug": "oreo-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Yogur helado de vainilla acidulado con Oreos trituradas. Una versión más ligera del cookies and cream."
+  },
+  {
+    "id": "035a862d-7f36-4fba-aad2-ea2520790601",
+    "slug": "peanut-butter-marshmallow-ice-cream",
+    "new_title": "Helado de Mantequilla de Cacahuete con Malvavisco",
+    "new_description": "Helado suave de mantequilla de cacahuete con remolino de crema de malvavisco."
+  },
+  {
+    "id": "32473a79-4a48-47b8-9e8d-c6801204c128",
+    "slug": "peanut-butter-soft-serve",
+    "new_title": "Helado Suave de Mantequilla de Cacahuete",
+    "new_description": "Helado suave cremoso de mantequilla de cacahuete con un suave sabor a frutos secos. La mezcla de pudín le da la consistencia perfecta de helado suave al dispensar del Scoop & Swirl."
+  },
+  {
+    "id": "1f6dfa03-ec8a-4360-b339-f288752cacc0",
+    "slug": "pineapple-brown-sugar-ice-cream",
+    "new_title": "Helado de Piña con Azúcar Moreno",
+    "new_description": "Helado de piña caramelizada con cálida dulzura de azúcar moreno."
+  },
+  {
+    "id": "d61e41b7-b978-40f4-8e15-bfbccc11e471",
+    "slug": "pistachio-chocolate-chip-gelato",
+    "new_title": "Gelato de Pistacho con Chispas de Chocolate",
+    "new_description": "Gelato de pistacho con chispas de chocolate negro para un crujiente clásico italiano."
+  },
+  {
+    "id": "233fb003-4086-4e0d-9cb0-acf585ccf3c9",
+    "slug": "raspberry-chocolate-chip-greek-frozen-yogurt",
+    "new_title": "Yogur Helado Griego de Frambuesa con Chispas de Chocolate",
+    "new_description": "Ácido yogur helado de frambuesa con chispas de chocolate."
+  },
+  {
+    "id": "aac4fa58-22e3-444f-948b-c64b93c002c1",
+    "slug": "smores-milkshake",
+    "new_title": "Batido S'mores",
+    "new_description": "Batido de chocolate con malvavisco tostado y migas de galleta Graham."
+  },
+  {
+    "id": "eca5ffb1-33c6-44fa-8f25-2856218a8bfe",
+    "slug": "strawberry-brown-sugar-ice-cream",
+    "new_title": "Helado de Fresa con Azúcar Moreno",
+    "new_description": "Helado fresco de fresa con cálido azúcar moreno."
+  },
+  {
+    "id": "40544bfd-61d4-4d82-9fee-ed803f5c6a68",
+    "slug": "strawberry-cheesecake-greek-frozen-yogurt",
+    "new_title": "Yogur Helado Griego Cheesecake de Fresa",
+    "new_description": "Ácido yogur helado cheesecake de fresa con yogur griego y galleta Graham."
+  },
+  {
+    "id": "94071540-619f-4dd7-ab6c-0cb1f6102309",
+    "slug": "strawberry-cheesecake-milkshake",
+    "new_title": "Batido Cheesecake de Fresa",
+    "new_description": "Batido cheesecake de fresa con migas de galleta Graham."
+  },
+  {
+    "id": "4fb46a6a-88e5-495c-87c6-3867dbd0aa4b",
+    "slug": "strawberry-cheesecake-protein-lite-ice-cream",
+    "new_title": "Helado Proteico Ligero Cheesecake de Fresa",
+    "new_description": "Helado proteico cheesecake de fresa con galleta Graham."
+  },
+  {
+    "id": "ed7a91e1-f947-498c-abb0-044ff245346b",
+    "slug": "strawberry-vanilla-swirl-soft-serve",
+    "new_title": "Helado Suave Remolino de Fresa y Vainilla",
+    "new_description": "Clásico helado suave de fresa y vainilla arremolinados juntos."
+  },
+  {
+    "id": "3cc69427-9b7a-499c-90f8-5b597d31adef",
+    "slug": "tahini-chocolate-chip-ice-cream",
+    "new_title": "Helado de Tahini con Chispas de Chocolate",
+    "new_description": null
+  },
+  {
+    "id": "f70fa945-bf13-4116-b6c2-7ee22753e36f",
+    "slug": "toasted-oat-brown-sugar-ice-cream",
+    "new_title": "Helado de Avena Tostada con Azúcar Moreno",
+    "new_description": "Helado de avena tostada con sabor a frutos secos, endulzado con azúcar moreno oscuro."
+  },
+  {
+    "id": "d596c971-afa3-4e4c-96ec-dfa40012214e",
+    "slug": "toasted-pecan-pie-ice-cream",
+    "new_title": "Helado de Tarta de Nuez Pecana Tostada",
+    "new_description": "Helado mantecoso de tarta de nueces pecanas tostadas con azúcar moreno y vainilla."
+  },
+  {
+    "id": "c0f3beaf-7b29-4acb-a555-e43a77a79e4a",
+    "slug": "vanilla-soft-serve",
+    "new_title": null,
+    "new_description": "Helado suave cremoso de vainilla dispensado directamente desde tu Ninja CREAMi Scoop & Swirl. Usa mezcla de pudín instantáneo para una textura ultra suave de calidad de tienda."
+  },
+  {
+    "id": "a4c1d63b-9366-4737-8a36-24fc0c132959",
+    "slug": "vegan-cherry-garcia-ice-cream",
+    "new_title": null,
+    "new_description": "Helado sin lácteos de cereza con chispas de chocolate inspirado en el clásico sabor de Ben & Jerry's."
+  },
+  {
+    "id": "4d15c81c-cb6e-4e9d-80f2-f768de23d275",
+    "slug": "vegan-cookies-and-cream-ice-cream",
+    "new_title": null,
+    "new_description": "Cookies and cream sin lácteos con leche de coco y galletas veganas. Sabe igual que el original, nadie notará la diferencia."
+  }
+]

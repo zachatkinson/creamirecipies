@@ -1,0 +1,185 @@
+[
+  {
+    "id": "3673e824-c730-4530-a824-29947a9592fb",
+    "slug": "banana-caramel-milkshake",
+    "new_title": "Milkshake Banane-Caramel",
+    "new_description": "Milkshake à la banane mûre avec un tourbillon de sauce caramel."
+  },
+  {
+    "id": "312cf3c6-7df9-4738-a77e-1283e2e98c2e",
+    "slug": "banana-soft-serve",
+    "new_title": "Glace Molle à la Banane",
+    "new_description": "Glace molle à la banane mûre pour une gourmandise naturellement sucrée."
+  },
+  {
+    "id": "d5d166d4-1641-4c1e-9695-9696d0e5b51b",
+    "slug": "birthday-cake-soft-serve",
+    "new_title": "Glace Molle Gâteau d'Anniversaire",
+    "new_description": "Glace molle festive au gâteau d'anniversaire avec des vermicelles colorés."
+  },
+  {
+    "id": "769c14d1-4350-4179-af30-ae6155e2c475",
+    "slug": "blueberry-brown-sugar-ice-cream",
+    "new_title": "Crème Glacée Myrtille et Sucre Roux",
+    "new_description": "Crème glacée sucrée à la myrtille avec un sucre roux riche."
+  },
+  {
+    "id": "d540815d-56e3-4cd0-a10e-9472779a52bd",
+    "slug": "blueberry-cheesecake-crumble-ice-cream",
+    "new_title": "Crème Glacée Cheesecake Myrtille Crumble",
+    "new_description": "Crème glacée cheesecake à la myrtille avec un crumble de biscuit Graham."
+  },
+  {
+    "id": "7400a4e0-99ee-4d89-8de5-ce51b43e03bd",
+    "slug": "blueberry-soft-serve",
+    "new_title": "Glace Molle aux Myrtilles",
+    "new_description": "Glace molle sucrée aux myrtilles avec une magnifique couleur violette."
+  },
+  {
+    "id": "e976a745-20a2-44d8-bdb2-7cf90206574e",
+    "slug": "bourbon-brown-sugar-ice-cream",
+    "new_title": "Crème Glacée Bourbon et Sucre Roux",
+    "new_description": "Une glace de style artisanal avec des ingrédients premium et un goût complexe."
+  },
+  {
+    "id": "1622678e-ec54-4a7c-95e5-48e12c254f06",
+    "slug": "brown-sugar-bourbon-pecan-ice-cream",
+    "new_title": "Crème Glacée Sucre Roux, Bourbon et Noix de Pécan",
+    "new_description": "Un dessert glacé riche et crémeux au sucre roux, bourbon et noix de pécan, avec des couches de saveurs complémentaires."
+  },
+  {
+    "id": "28a729fc-b248-412c-9ae0-ba4ecca13141",
+    "slug": "brown-sugar-cinnamon-soft-serve",
+    "new_title": "Glace Molle Sucre Roux-Cannelle",
+    "new_description": "Glace molle chaude au sucre roux et à la cannelle."
+  },
+  {
+    "id": "9597e32c-02cc-47b1-8f36-fc8292b9bcd0",
+    "slug": "brown-sugar-cookie-ice-cream",
+    "new_title": "Crème Glacée Cookie au Sucre Roux",
+    "new_description": "Glace chaude au cookie au sucre roux avec de riches notes de mélasse."
+  },
+  {
+    "id": "683daf27-f3b4-49c7-81e1-5c2fe04a3ddf",
+    "slug": "brown-sugar-pecan-cookie-ice-cream",
+    "new_title": "Crème Glacée Sucre Roux et Cookie aux Noix de Pécan",
+    "new_description": "Glace chaude au sucre roux avec des miettes de cookie aux noix de pécan."
+  },
+  {
+    "id": "e3b5f653-ea02-4b0d-a98f-0776a537a508",
+    "slug": "brown-sugar-pecan-pie-ice-cream",
+    "new_title": "Crème Glacée Tarte aux Noix de Pécan et Sucre Roux",
+    "new_description": "Délicieuse glace tarte aux noix de pécan au sucre roux avec des saveurs parfaitement équilibrées."
+  },
+  {
+    "id": "154958eb-537a-4712-8044-34126014f334",
+    "slug": "chocolate-cashew-butter-ice-cream",
+    "new_title": "Crème Glacée Chocolat et Beurre de Cajou",
+    "new_description": "Crème glacée riche au chocolat avec un tourbillon onctueux de beurre de cajou."
+  },
+  {
+    "id": "f5bb9956-c5e2-4cc6-b973-a65ebf2b10af",
+    "slug": "cinnamon-brown-sugar-pecan-ice-cream",
+    "new_title": "Crème Glacée Cannelle, Sucre Roux et Noix de Pécan",
+    "new_description": "Un dessert glacé unique à la cannelle, au sucre roux et aux noix de pécan, avec des saveurs parfaitement équilibrées."
+  },
+  {
+    "id": "e0a8620d-781e-44b5-9971-9ad186968437",
+    "slug": "cookies-and-cream-brownie-ice-cream",
+    "_skip_reason": "clean FR, cookies and cream / brownie are legitimate loanwords",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9e9c93fd-e6af-478f-9141-706832059a76",
+    "slug": "cookies-and-cream-milkshake",
+    "new_title": null,
+    "new_description": "Milkshake épais cookies and cream avec des morceaux de biscuit Oreo. Un classique de dîner perfectionné par le Ninja Creami."
+  },
+  {
+    "id": "e7500fae-09bd-42fd-86ae-147f42c5b92b",
+    "slug": "cookies-and-cream-soft-serve",
+    "new_title": null,
+    "new_description": "Classique cookies and cream en glace molle. Base vanille crémeuse avec des Oreos émiettées, distribué en glace molle onctueuse depuis le Ninja CREAMi Scoop & Swirl."
+  },
+  {
+    "id": "8c873cb9-e183-457a-86fa-e4570f3521da",
+    "slug": "graham-cracker-cookie-dough-ice-cream",
+    "new_title": "Crème Glacée Biscuit Graham et Pâte à Cookies",
+    "new_description": "Crème glacée sucrée au biscuit Graham avec de la pâte à cookies aux pépites de chocolat."
+  },
+  {
+    "id": "9dea68cc-5e0c-47dd-ba63-1cbd0eb98575",
+    "slug": "keto-lemon-cheesecake-ice-cream",
+    "_skip_reason": "clean FR with cream cheese as legitimate loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a6eac22b-3ebe-418e-93da-910d7b9dc4fa",
+    "slug": "mint-cookies-and-cream-ice-cream",
+    "_skip_reason": "clean FR with cookies and cream as legitimate loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "83ba9b49-b58f-49ad-a129-8d607bece7ed",
+    "slug": "oreo-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Yaourt glacé vanille acidulé avec des Oreos émiettées. Une version plus légère du cookies and cream."
+  },
+  {
+    "id": "6ad0786d-4a9f-48bf-be44-1d588add81a9",
+    "slug": "pineapple-brown-sugar-ice-cream",
+    "new_title": "Crème Glacée Ananas et Sucre Roux",
+    "new_description": "Crème glacée ananas caramélisé avec la douceur chaude du sucre roux."
+  },
+  {
+    "id": "d35be710-dac9-4700-8a12-64b2b1b84d5a",
+    "slug": "smores-milkshake",
+    "new_title": null,
+    "new_description": "Milkshake chocolat à la guimauve grillée avec des miettes de biscuit Graham."
+  },
+  {
+    "id": "be93a92b-66b0-4ac1-ac7f-d9b065f5132b",
+    "slug": "strawberry-brown-sugar-ice-cream",
+    "new_title": "Crème Glacée Fraise et Sucre Roux",
+    "new_description": "Glace fraîche à la fraise avec du sucre roux chaud."
+  },
+  {
+    "id": "84e11181-33b9-4328-b5e4-281c5e90a31b",
+    "slug": "strawberry-cheesecake-greek-frozen-yogurt",
+    "new_title": "Yaourt Glacé Grec Cheesecake Fraise",
+    "new_description": "Yaourt glacé acidulé au cheesecake fraise avec yaourt grec et biscuit Graham."
+  },
+  {
+    "id": "9fd5319c-1afe-432e-a255-c31f842bfdff",
+    "slug": "strawberry-cheesecake-milkshake",
+    "new_title": "Milkshake Cheesecake Fraise",
+    "new_description": "Milkshake cheesecake fraise avec des miettes de biscuit Graham."
+  },
+  {
+    "id": "e5ca7240-94bb-45b4-bb1a-069b04e99c1e",
+    "slug": "strawberry-cheesecake-protein-lite-ice-cream",
+    "new_title": "Crème Glacée Légère Protéinée Cheesecake Fraise",
+    "new_description": "Crème glacée protéinée cheesecake fraise avec biscuit Graham."
+  },
+  {
+    "id": "58453c6b-710c-414a-836b-45c6261da755",
+    "slug": "toasted-oat-brown-sugar-ice-cream",
+    "new_title": "Crème Glacée Avoine Grillée et Sucre Roux",
+    "new_description": "Crème glacée à l'avoine grillée au goût de noisette, sucrée avec du sucre roux foncé."
+  },
+  {
+    "id": "cc97ff7e-9945-46d8-843f-60019b7e4b53",
+    "slug": "toasted-pecan-pie-ice-cream",
+    "new_title": "Crème Glacée Tarte aux Noix de Pécan Grillées",
+    "new_description": "Crème glacée beurrée tarte aux noix de pécan grillées avec sucre roux et vanille."
+  },
+  {
+    "id": "fbc1ac9a-a49d-41d9-a002-674ddb318ddc",
+    "slug": "vegan-cookies-and-cream-ice-cream",
+    "new_title": null,
+    "new_description": "Cookies and cream sans produits laitiers au lait de coco et biscuits végans. Le goût est identique à l'original, personne ne verra la différence."
+  }
+]
