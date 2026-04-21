@@ -6,12 +6,12 @@ ingredients and steps match the title/flavor. Started 2026-04-20.
 ## Audit criteria per recipe
 1. Do the ingredients include everything the title promises (hero ingredients, distinguishing components)?
 2. Do the steps reference anything special (roasting, infusing, toasting) implied by the title?
-3. After fixing, is the ingredient fingerprint still identical to another recipe's? If yes, flag to `recipe-audit-duplicates-for-review.md`.
+3. After fixing, is the ingredient fingerprint still identical to another recipe's? If yes, flag for review.
 
 ## Status codes
 - `OK` — audited, no changes needed
 - `FIXED` — audited + fixed (see commit)
-- `FLAGGED` — audited, cannot differentiate from sibling; needs your decision in duplicates file
+- `FLAGGED` — audited, cannot differentiate from sibling; needs your decision
 
 ## Session progress
 

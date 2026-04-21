@@ -51,7 +51,16 @@ const stepTranslations = await getStepTranslations(supabase, locale);
 if (locale !== 'en') {
   for (const ing of recipe.ingredients) {
     if (ing.master_ingredient_id && ingredientNames.has(ing.master_ingredient_id)) {
-      ing.translated_name = ingredientNames.get(ing.master_ingredient_id);
+      const translated = ingredientNames.get(ing.master_ingredient_id)!;
+      ing.translated_name = translated;
+      ing.name = translated;
+    }
+  }
+  for (const step of recipe.steps) {
+    const trans = stepTranslations.get(step.instruction);
+    if (trans) {
+      step.instruction = trans.instruction;
+      if (trans.hint) step.hint = trans.hint;
     }
   }
 }
