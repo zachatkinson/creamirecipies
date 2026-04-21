@@ -31,8 +31,6 @@ ingredients and steps match the title/flavor. Started 2026-04-20.
 
 #### Batch 1 — drafts publishing 2026-04-22 → 2026-05-04 (22 recipes reviewed)
 
-Fixes applied in `scripts/fixes/2026-04-20-batch1-audit-fixes.sql`:
-
 - `FIXED` kiwi-strawberry-sorbet — bumped strawberry from 1 tbsp to 1/4 cup (was a splash)
 - `FIXED` lavender-lemon-cream-ice-cream — added dried culinary lavender + warm-milk infusion step (title promised lavender, recipe had none)
 - `FIXED` strawberry-cream-cheese-ice-cream — added cream cheese to base (title promised it, was missing)
@@ -63,8 +61,6 @@ Reviewed and left as-is (title matches ingredients):
 
 #### Batch 2 — drafts publishing 2026-05-05 → 2026-05-18 (28 recipes reviewed)
 
-Fixes applied in `scripts/fixes/2026-04-20-batch2-audit-fixes.sql`:
-
 - `FIXED` cherry-almond-chip-ice-cream — added almond extract + mini chocolate chips (both missing)
 - `FIXED` cherry-pomegranate-sorbet — rebalanced pomegranate from 1 tbsp to 1/2 cup
 - `FIXED` chocolate-cherry-ice-cream — removed duplicate cocoa row + added cherry preserves as swirl
@@ -88,8 +84,6 @@ Reviewed and left as-is:
 
 #### Batch 3 — all 119 published recipes reviewed one-by-one
 
-Fixes applied in `scripts/fixes/2026-04-20-batch3-published-fixes.sql`:
-
 - `FIXED` banana-split-frozen-yogurt — added strawberry jam + chocolate sauce + crushed pineapple (title promised the banana split treatment, had plain banana-yogurt base)
 - `FIXED` frozen-yogurt-with-mixed-berries — added actual frozen mixed berries as mix-in (had only mixed-berry jam)
 
@@ -98,8 +92,6 @@ Reviewed and left as-is (117 recipes — all correctly aligned with their titles
 ---
 
 #### Batch 4 — drafts publishing 2026-05-20 → 2026-05-30 (14 recipes fixed)
-
-`scripts/fixes/2026-04-20-batch4-audit-fixes.sql`:
 
 - `FIXED` dark-chocolate-cherry-cordial-ice-cream — kirsch + maraschino cherries for "cordial" character
 - `FIXED` honey-bee-pollen-ice-cream — bee pollen granules
@@ -117,8 +109,6 @@ Reviewed and left as-is (117 recipes — all correctly aligned with their titles
 - `FIXED` toasted-almond-honey-ice-cream — toasted almonds + toasting step
 
 #### Batch 5 — drafts publishing 2026-06-01 → 2026-06-26 (14 recipes fixed)
-
-`scripts/fixes/2026-04-20-batch5-audit-fixes.sql`:
 
 - `FIXED` banana-walnut-greek-frozen-yogurt — chopped walnuts
 - `FIXED` blackberry-sage-honey-ice-cream — sage leaves + honey + sage infusion step
@@ -138,8 +128,6 @@ Reviewed and left as-is (117 recipes — all correctly aligned with their titles
 ---
 
 #### Batch 6 — drafts publishing 2026-07 (21 recipes fixed)
-
-`scripts/fixes/2026-04-20-batch6-audit-fixes.sql`:
 
 - `FIXED` apple-walnut-greek-frozen-yogurt — added cinnamon + toasted walnuts
 - `FIXED` banana-chocolate-chip-greek-frozen-yogurt — replaced cocoa with banana + mini chips (title says chip, not chocolate)
@@ -167,7 +155,7 @@ Reviewed and left as-is (117 recipes — all correctly aligned with their titles
 
 #### Batch 7 — drafts publishing 2026-08 (23 recipes fixed, 1 OK)
 
-`scripts/fixes/2026-04-20-batch7-audit-fixes.sql` covers 23 recipes including
+Covers 23 recipes including
 blackberry-lemon, blueberry-almond-crumble, caramel-apple-fy, cherry-chocolate-fy,
 chocolate-chip-mint-cookie, chocolate-coconut-fy, coffee-coconut-cream,
 mango-lime-italian-ice, mango-vanilla-bean, mint-cookie-dough, peach-cobbler(×2),
@@ -178,14 +166,14 @@ tropical-pineapple-coconut, vanilla-honey-almond-fy. `OK` berry-protein-power-sm
 
 #### Batch 8 — drafts publishing 2026-09 (32 recipes fixed, 3 OK)
 
-`scripts/fixes/2026-04-20-batch8-audit-fixes.sql` covers 32 recipes across
+Covers 32 recipes across
 caramels, toffees, pecans, figs, maples, pumpkins, chai spices, brown butter,
 bourbon, and prosecco additions. `OK` caramel-flan, caramelized-banana,
 fairlife-vanilla-caramel-lite.
 
 #### Batch 9 — drafts publishing 2026-10 (34 recipes fixed, 2 OK)
 
-`scripts/fixes/2026-04-20-batch9-audit-fixes.sql` covers 34 recipes including
+Covers 34 recipes including
 banana-caramel-crunch, bourbon-cherry, brown-butter-cookie-dough,
 caramel-apple/brownie/pecan, chocolate-chip/walnut/hazelnut/pecan variants,
 cinnamon-chocolate-chip (swapped cocoa→chips), cinnamon-pecan, cinnamon-toast
@@ -197,7 +185,7 @@ vanilla-fig-gelato. `OK` caramel-macchiato, vegan-caramel-pecan.
 
 #### Batch 10 — drafts publishing 2026-11 (42 recipes fixed)
 
-`scripts/fixes/2026-04-20-batch10-audit-fixes.sql` covers all 42 flagged
+Covers all 42 flagged
 November drafts — every one needed a fix. Major patterns this batch:
 - missing apple/pear in caramel-fruit-pie recipes
 - missing bourbon in bourbon-* recipes
@@ -246,9 +234,8 @@ Final counts:
   the flag was a false positive (descriptor/product-name words)
 - ~430 recipes actively fixed this session (either ingredient/step additions
   or the 2 published slug renames with redirects)
-- Every fix is captured in a per-batch SQL file under `scripts/fixes/` for
-  full reviewability The synonym-aware audit
-script that generated `/tmp/flagged-v2.txt` can be re-run at any time to
-refresh the list (see query helpers in session transcript).
+- Every fix is audited in git commit history (`git log --oneline --grep='recipe audit'`).
+  The synonym-aware audit script that generated `/tmp/flagged-v2.txt` can be
+  re-run at any time to refresh the list (see query helpers in session transcript).
 
 <!-- New audits appended below by publish date ascending -->

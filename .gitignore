@@ -48,3 +48,8 @@ token.json
 # === Misc ===
 *.pdf
 .vercel
+
+# === Local-only scratch / tool artifacts ===
+.playwright-mcp/
+.cgcignore
+latest-prompts.md
