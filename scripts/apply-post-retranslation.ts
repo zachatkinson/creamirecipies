@@ -19,6 +19,9 @@ const supabase = createClient(process.env.PUBLIC_SUPABASE_URL!, process.env.SUPA
 function wc(s: string | null | undefined): number {
   return (s ?? '').split(/\s+/).filter(Boolean).length;
 }
+function paras(s: string | null | undefined): number {
+  return ((s ?? '').split(/\n\n+/).filter(Boolean)).length;
+}
 
 const ACCEPTABLE: Record<string, [number, number]> = {
   fr: [0.90, 1.05],
@@ -36,15 +39,21 @@ const ACCEPTABLE: Record<string, [number, number]> = {
   const { data: post } = await supabase.from('posts').select('id, body').eq('slug', slug).single();
   if (!post) { console.error(`post not found: ${slug}`); process.exit(1); }
   const enWC = wc(post.body as string);
+  const enParas = paras(post.body as string);
 
   for (const [locale, tr] of Object.entries<any>(payload.translations)) {
     const trWC = wc(tr.body);
+    const trParas = paras(tr.body);
     const ratio = trWC / enWC;
+    const paraDelta = trParas - enParas;
     const [lo, hi] = ACCEPTABLE[locale] ?? [0, 99];
-    const ok = ratio >= lo;
-    console.log(`[${locale}] ${trWC}/${enWC} words, ratio ${(ratio*100).toFixed(1)}%  ${ok ? 'OK' : 'TOO SHORT'}`);
+    const okRatio = ratio >= lo;
+    const okParas = paraDelta >= -1;
+    const ok = okRatio && okParas;
+    console.log(`[${locale}] ${trWC}/${enWC}w (${(ratio*100).toFixed(1)}%)  ${trParas}/${enParas}p (Δ${paraDelta})  ${ok ? 'OK' : 'FAIL'}`);
     if (!ok) {
-      console.error(`  ${locale} below threshold ${(lo*100).toFixed(0)}% — refusing to apply`);
+      if (!okRatio) console.error(`  ${locale} below word-count threshold ${(lo*100).toFixed(0)}%`);
+      if (!okParas) console.error(`  ${locale} paragraph count Δ${paraDelta} — translations must match EN paragraph structure`);
       process.exit(1);
     }
     if (apply) {
