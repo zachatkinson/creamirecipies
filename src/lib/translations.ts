@@ -204,6 +204,7 @@ export async function translatePostNavigation(
 /** UI label translations for recipe pages */
 export const RECIPE_UI: Record<string, Record<Locale, string>> = {
   'stepImageAlt': { en: 'Step', fr: 'Étape', es: 'Paso', de: 'Schritt', pt: 'Passo' },
+  'recipeAltSuffix': { en: 'Ninja Creami Recipe', fr: 'Recette Ninja Creami', es: 'Receta Ninja Creami', de: 'Ninja Creami Rezept', pt: 'Receita Ninja Creami' },
   'previousArticle': { en: 'Previous', fr: 'Précédent', es: 'Anterior', de: 'Vorheriger', pt: 'Anterior' },
   'nextArticle': { en: 'Next', fr: 'Suivant', es: 'Siguiente', de: 'Nächster', pt: 'Próximo' },
   'relatedArticles': { en: 'Related Articles', fr: 'Articles connexes', es: 'Artículos relacionados', de: 'Verwandte Artikel', pt: 'Artigos relacionados' },

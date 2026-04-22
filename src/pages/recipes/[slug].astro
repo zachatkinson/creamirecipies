@@ -176,7 +176,7 @@ const matchingCollections = COLLECTIONS
                         src={img.src}
                         srcset={img.srcset}
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
-                        alt={`${recipe.title} - Ninja Creami Recipe`}
+                        alt={`${recipe.title} - ${ui('recipeAltSuffix', locale)}`}
                         class="w-full h-full object-cover scale-110"
                         fetchpriority="high"
                       />
