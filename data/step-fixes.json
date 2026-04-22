@@ -1,0 +1,99 @@
+[
+  {
+    "id": "112198c0-19e9-475c-ae55-25034722cf09",
+    "en": "Whisk all ingredients until brown sugar dissolves.",
+    "instruction_fr": "Fouettez tous les ingrédients jusqu'à ce que le sucre roux se dissolve.",
+    "instruction_es": "Bata todos los ingredientes hasta que el azúcar moreno se disuelva.",
+    "instruction_de": "Verquirlen Sie alle Zutaten, bis sich der braune Zucker aufgelöst hat.",
+    "instruction_pt": "Bata todos os ingredientes até o açúcar mascavo dissolver."
+  },
+  {
+    "id": "12492b56-e65e-42b9-b16e-6d0183d0acec",
+    "en": "Whisk apple cider, sugar, lemon juice, and cinnamon until sugar dissolves.",
+    "instruction_pt": "Bata a cidra de maçã, o açúcar, o suco de limão e a canela até o açúcar dissolver."
+  },
+  {
+    "id": "1a8c5c6b-a968-49f0-a88d-864e326238ed",
+    "en": "Whisk all ingredients until sugar dissolves.",
+    "instruction_fr": "Fouettez tous les ingrédients jusqu'à ce que le sucre se dissolve.",
+    "instruction_es": "Bata todos los ingredientes hasta que el azúcar se disuelva.",
+    "instruction_de": "Verquirlen Sie alle Zutaten, bis sich der Zucker aufgelöst hat.",
+    "instruction_pt": "Bata todos os ingredientes até o açúcar dissolver."
+  },
+  {
+    "id": "1cb4bd3d-ef04-4a98-9ea8-3c29a1007ef9",
+    "en": "Blend peaches, mango, water, and sugar until smooth.",
+    "instruction_fr": "Mixez les pêches, la mangue, l'eau et le sucre jusqu'à consistance lisse.",
+    "instruction_es": "Licúe los duraznos, el mango, el agua y el azúcar hasta que quede suave.",
+    "instruction_de": "Pfirsiche, Mango, Wasser und Zucker glatt mixen.",
+    "instruction_pt": "Bata os pêssegos, a manga, a água e o açúcar até ficar homogêneo."
+  },
+  {
+    "id": "28eb491d-8d50-4660-a3c2-ac9f8faa7ecb",
+    "en": "Re-spin once for an extra creamy, smooth texture.",
+    "instruction_fr": "Relancez une fois pour une texture encore plus crémeuse et onctueuse."
+  },
+  {
+    "id": "46a5320b-b797-455a-bd63-c0311ec228b3",
+    "en": "Re-spin once or twice for a smoother result.",
+    "instruction_fr": "Relancez une ou deux fois pour un résultat plus onctueux."
+  },
+  {
+    "id": "5085877e-59f1-45c8-8bab-5eefc0e66b2b",
+    "en": "Re-spin if needed for extra smoothness.",
+    "instruction_fr": "Relancez si nécessaire pour plus d'onctuosité.",
+    "instruction_es": "Re-procese si es necesario para mayor suavidad.",
+    "instruction_de": "Bei Bedarf erneut mixen für mehr Cremigkeit.",
+    "instruction_pt": "Re-processe se necessário para mais cremosidade."
+  },
+  {
+    "id": "86027569-b8a2-47a9-9a56-bfd7f955b88f",
+    "en": "Dissolve drink mix and sugar in water.",
+    "instruction_fr": "Dissolvez le mélange à boisson et le sucre dans l'eau.",
+    "instruction_es": "Disuelva la mezcla de bebida y el azúcar en agua.",
+    "instruction_de": "Lösen Sie das Getränkepulver und den Zucker in Wasser auf.",
+    "instruction_pt": "Dissolva o pó de bebida e o açúcar em água."
+  },
+  {
+    "id": "9c851c8b-908e-4e03-8eb0-af6bfcaf4a1e",
+    "en": "Dissolve espresso powder in a splash of warm milk.",
+    "instruction_fr": "Dissolvez la poudre d'espresso dans un trait de lait chaud.",
+    "instruction_es": "Disuelva el polvo de espresso en un chorrito de leche tibia.",
+    "instruction_de": "Lösen Sie das Espressopulver in einem Schuss warmer Milch auf.",
+    "instruction_pt": "Dissolva o pó de espresso em um pouco de leite morno."
+  },
+  {
+    "id": "9da2edfa-cce1-4f69-aa5e-4d3daf9db75e",
+    "en": "Re-spin if needed for a smoother, creamier texture.",
+    "instruction_fr": "Relancez si nécessaire pour une texture plus onctueuse et crémeuse.",
+    "instruction_es": "Re-procese si es necesario para una textura más suave y cremosa.",
+    "instruction_de": "Bei Bedarf erneut mixen für eine glattere, cremigere Textur.",
+    "instruction_pt": "Re-processe se necessário para uma textura mais suave e cremosa."
+  },
+  {
+    "id": "9f47860b-ab2c-418f-bbaa-a73223c5dff1",
+    "en": "Whisk pomegranate juice, sugar, and lemon juice until sugar dissolves.",
+    "instruction_pt": "Bata o suco de romã, o açúcar e o suco de limão até o açúcar dissolver."
+  },
+  {
+    "id": "a1928056-7c65-42af-94e7-0689ed194478",
+    "en": "Whisk black sesame paste with sugar until combined.",
+    "instruction_pt": "Bata a pasta de gergelim preto com o açúcar até incorporar."
+  },
+  {
+    "id": "d65acea9-1fd9-4b60-a73b-b5fb0e99dbe5",
+    "en": "Whisk all ingredients until smooth.",
+    "instruction_fr": "Fouettez tous les ingrédients jusqu'à consistance lisse.",
+    "instruction_es": "Bata todos los ingredientes hasta que quede suave.",
+    "instruction_de": "Verquirlen Sie alle Zutaten, bis alles glatt ist.",
+    "instruction_pt": "Bata todos os ingredientes até ficar homogêneo."
+  },
+  {
+    "id": "e6d59fb5-ccdc-4d32-9230-e77dac9469aa",
+    "en": "Add cream and allulose. Whisk until smooth.",
+    "instruction_fr": "Ajoutez la crème et l'allulose. Fouettez jusqu'à consistance lisse.",
+    "instruction_es": "Agregue la crema y la alulosa. Bata hasta que quede suave.",
+    "instruction_de": "Fügen Sie die Sahne und die Allulose hinzu. Verquirlen, bis alles glatt ist.",
+    "instruction_pt": "Adicione o creme de leite e a alulose. Bata até ficar homogêneo."
+  }
+]
