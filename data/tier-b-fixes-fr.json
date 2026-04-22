@@ -1,0 +1,602 @@
+[
+  {
+    "id": "ad337ad3-fe38-4d61-9a3f-bb95d71d124f",
+    "slug": "almond-coconut-ice-cream",
+    "new_title": null,
+    "new_description": "Glace à l'amande grillée et noix de coco inspirée de l'Almond Joy. Un bonheur tropical et gourmand."
+  },
+  {
+    "id": "5ee9180b-4085-464e-8360-956f688f2984",
+    "slug": "amarena-cherry-gelato",
+    "new_title": "Gelato Amarena à la Cerise",
+    "new_description": "Gelato italien à l'amarena avec des morceaux de cerises acidulées."
+  },
+  {
+    "id": "739b9a71-fe79-4fa4-9ff1-e4e27acaf7b4",
+    "slug": "amaretto-cream-gelato",
+    "new_title": "Gelato Amaretto et Crème",
+    "new_description": "Gelato onctueux à l'amaretto et à l'amande avec la saveur d'une liqueur italienne."
+  },
+  {
+    "id": "f1c99fda-56e7-4b45-bc60-f109f38ea4ba",
+    "slug": "apple-ginger-sorbet",
+    "new_title": "Sorbet Pomme-Gingembre",
+    "new_description": "Sorbet croquant à la pomme avec du gingembre réchauffant pour un dessert d'automne."
+  },
+  {
+    "id": "1b943e47-79b4-4e33-9c8d-f835cefb2142",
+    "slug": "apricot-lavender-sorbet",
+    "new_title": "Sorbet Abricot-Lavande",
+    "new_description": "Sorbet délicat à l'abricot avec de la lavande française aromatique."
+  },
+  {
+    "id": "e7f1fe1e-0c3f-4378-964e-7c539f062ebf",
+    "slug": "banana-miso-caramel-ice-cream",
+    "new_title": "Crème Glacée Banane, Miso et Caramel",
+    "new_description": "Une glace de style artisanal avec des ingrédients premium et un goût complexe."
+  },
+  {
+    "id": "67564514-d1ec-4ce2-bb06-b6b9f6140396",
+    "slug": "banana-oat-smoothie-bowl",
+    "new_title": "Smoothie Bowl Banane-Avoine",
+    "new_description": "Smoothie bowl copieux à la banane et à l'avoine pour un petit-déjeuner rassasiant."
+  },
+  {
+    "id": "fa9aa9d6-ceb6-4aca-a614-3b6dca2e862c",
+    "slug": "banana-split-milkshake",
+    "new_title": "Milkshake Banana Split",
+    "new_description": "Milkshake banana split classique avec fraise et chocolat."
+  },
+  {
+    "id": "d5dd405a-66af-4966-a7e4-f5c9f6323cb9",
+    "slug": "berry-banana-smoothie-bowl",
+    "new_title": "Smoothie Bowl Fruits Rouges-Banane",
+    "new_description": "Smoothie bowl classique aux fruits rouges mélangés et à la banane."
+  },
+  {
+    "id": "afba0bc9-2380-4aff-8fa0-346bf8602e75",
+    "slug": "berry-spinach-smoothie-bowl",
+    "new_title": "Smoothie Bowl Fruits Rouges-Épinards",
+    "new_description": "Smoothie bowl riche en nutriments aux fruits rouges et épinards."
+  },
+  {
+    "id": "88819af1-38ed-4acc-ad2c-4306e49bccb6",
+    "slug": "birthday-cake-ice-cream",
+    "new_title": null,
+    "new_description": "Glace festive à la vanille avec des vermicelles multicolores et une touche de saveur pâte à gâteau. Chaque jour mérite une célébration."
+  },
+  {
+    "id": "1fd75ab6-b14e-445d-92a4-c409bbea54fa",
+    "slug": "blackberry-italian-ice",
+    "new_title": "Granité Italien à la Mûre",
+    "new_description": "Granité italien à la mûre sauvage avec une profonde saveur de fruits rouges."
+  },
+  {
+    "id": "3e29501a-011c-4bed-bf47-3a5a3984357d",
+    "slug": "blackberry-sage-honey-ice-cream",
+    "new_title": "Crème Glacée Mûre, Sauge et Miel",
+    "new_description": "Un dessert glacé unique à la mûre, sauge et miel avec des saveurs parfaitement équilibrées."
+  },
+  {
+    "id": "d020eed8-e718-47b3-aa89-d9eefd71383b",
+    "slug": "blood-orange-gelato",
+    "new_title": null,
+    "new_description": "Gelato vibrant à l'orange sanguine avec une saveur d'agrumes intense."
+  },
+  {
+    "id": "6f6248ee-1394-48b7-9cc4-9b1077bc04db",
+    "slug": "blood-orange-ginger-sorbet",
+    "new_title": "Sorbet Orange Sanguine-Gingembre",
+    "new_description": "Sorbet éclatant à l'orange sanguine avec des notes chaudes de gingembre."
+  },
+  {
+    "id": "85efe90f-3155-424a-953a-9c7545d8558f",
+    "slug": "blood-orange-italian-ice",
+    "new_title": "Granité Italien à l'Orange Sanguine",
+    "new_description": "Granité italien éclatant à l'orange sanguine avec des agrumes profonds."
+  },
+  {
+    "id": "ac9e2f7f-79ea-4fba-8a12-4072f5c956b6",
+    "slug": "blood-orange-raspberry-sorbet",
+    "new_title": "Sorbet Orange Sanguine-Framboise",
+    "new_description": "Sorbet éclatant à l'orange sanguine avec un tourbillon de purée de framboises acidulées."
+  },
+  {
+    "id": "a06ca59e-1752-464c-bb91-4f79d67f28a1",
+    "slug": "blood-orange-vanilla-sorbet",
+    "new_title": "Sorbet Orange Sanguine-Vanille",
+    "new_description": "Sorbet éclatant à l'orange sanguine avec une touche de vanille et une couleur rubis."
+  },
+  {
+    "id": "b6b27660-0f97-41b9-862a-2ede8fdb24e5",
+    "slug": "blue-raspberry-italian-ice",
+    "new_title": null,
+    "new_description": "Glace italienne à la framboise bleue comme celles du chariot. Amusante, sucrée et un succès total auprès des enfants."
+  },
+  {
+    "id": "8644777d-6aaa-42eb-8245-c94d2fd18103",
+    "slug": "blueberry-almond-butter-smoothie-bowl",
+    "new_title": "Smoothie Bowl Myrtille-Beurre d'Amande",
+    "new_description": "Smoothie bowl antioxydant à la myrtille avec du beurre d'amande."
+  },
+  {
+    "id": "d2bea3b5-9bbd-489f-8241-730653ab5c8e",
+    "slug": "blueberry-cardamom-ice-cream",
+    "new_title": "Crème Glacée Myrtille-Cardamome",
+    "new_description": "Délicieuse glace myrtille-cardamome avec un mélange de saveurs parfaitement équilibré pour un dessert glacé raffiné."
+  },
+  {
+    "id": "977a8251-d482-4f35-baf0-9158393e3cc7",
+    "slug": "blueberry-ginger-sorbet",
+    "new_title": "Sorbet Myrtille-Gingembre",
+    "new_description": "Sorbet à la myrtille riche en antioxydants avec un coup de gingembre réchauffant."
+  },
+  {
+    "id": "57d002c9-6f63-4713-912f-586f8c6e9b2e",
+    "slug": "blueberry-italian-ice",
+    "new_title": "Granité Italien à la Myrtille",
+    "new_description": "Glace italienne douce à la myrtille avec un profond goût de baies."
+  },
+  {
+    "id": "8742c19e-0954-4573-9b7a-efa2c4059a00",
+    "slug": "blueberry-lemon-greek-frozen-yogurt",
+    "new_title": "Yaourt Glacé Grec Myrtille-Citron",
+    "new_description": "Yaourt glacé vif à la myrtille et au citron avec yaourt grec."
+  },
+  {
+    "id": "d1c7a5a6-85bf-4af7-b560-59be43a22f88",
+    "slug": "blueberry-lemon-italian-ice",
+    "new_title": "Granité Italien Myrtille-Citron",
+    "new_description": "Glace italienne douce à la myrtille avec un citron vif."
+  },
+  {
+    "id": "2e52056d-00ec-4d14-b432-e359abf4e5b1",
+    "slug": "blueberry-lime-basil-ice-cream",
+    "new_title": "Crème Glacée Myrtille-Citron Vert-Basilic",
+    "new_description": "Un dessert glacé riche et crémeux à la myrtille, citron vert et basilic avec des couches de saveurs complémentaires."
+  },
+  {
+    "id": "5d3dc199-b1ca-4ce8-9dc0-dca14fe40725",
+    "slug": "blueberry-lime-sorbet",
+    "new_title": "Sorbet Myrtille-Citron Vert",
+    "new_description": "Sorbet doux à la myrtille avec du citron vert piquant pour une combinaison vive."
+  },
+  {
+    "id": "54734a26-567e-4007-a06c-112947fdb17f",
+    "slug": "blueberry-muffin-protein-lite-ice-cream",
+    "new_title": "Crème Glacée Légère Protéinée Muffin aux Myrtilles",
+    "new_description": "Glace protéinée douce muffin aux myrtilles avec de vraies myrtilles."
+  },
+  {
+    "id": "3ebe0aeb-1c25-4cb7-997d-ed3db2a5431e",
+    "slug": "blueberry-pomegranate-sorbet",
+    "new_title": null,
+    "new_description": "Sorbet myrtille-grenade riche en antioxydants avec une couleur pourpre profonde."
+  },
+  {
+    "id": "20b95c7c-d98b-4e1a-8383-10dd52aae96e",
+    "slug": "bourbon-butterscotch-ice-cream",
+    "new_title": "Crème Glacée Bourbon-Butterscotch",
+    "new_description": "Une glace de style artisanal avec des ingrédients premium et un goût complexe."
+  },
+  {
+    "id": "2cea9396-05d8-4c94-bc36-6b57f81a7fd5",
+    "slug": "brown-butter-hazelnut-ice-cream",
+    "new_title": "Crème Glacée Beurre Noisette et Noisette",
+    "new_description": "Délicieuse glace beurre noisette-noisette avec un mélange de saveurs parfaitement équilibré."
+  },
+  {
+    "id": "d4b1eaae-63b2-45ca-a313-7aad14cb2153",
+    "slug": "brown-butter-sage-ice-cream",
+    "new_title": "Crème Glacée Beurre Noisette-Sauge",
+    "new_description": "Délicieuse glace beurre noisette-sauge avec un mélange de saveurs parfaitement équilibré."
+  },
+  {
+    "id": "36e008d3-b44e-415f-8099-086fd41d98ac",
+    "slug": "brown-butter-sage-pecan-ice-cream",
+    "new_title": "Crème Glacée Beurre Noisette, Sauge et Noix de Pécan",
+    "new_description": "Délicieuse glace beurre noisette, sauge et noix de pécan avec des saveurs parfaitement équilibrées."
+  },
+  {
+    "id": "08962381-43be-4f04-bcf9-52f1395909f4",
+    "slug": "brown-sugar-cinnamon-ice-cream",
+    "new_title": null,
+    "new_description": "Glace chaude au sucre roux et à la cannelle. Comme un toast à la cannelle et au sucre, glacé."
+  },
+  {
+    "id": "652fbd72-301a-4142-82bc-60d16868b335",
+    "slug": "brownie-batter-ice-cream",
+    "new_title": null,
+    "new_description": "A le goût de pâte à brownie non cuite sous forme glacée. Chocolat profond et fondant partout."
+  },
+  {
+    "id": "26a29fed-f392-4933-b308-72106ea47ce3",
+    "slug": "butter-pecan-brownie-ice-cream",
+    "new_title": "Crème Glacée Brownie Beurre-Noix de Pécan",
+    "new_description": "Un dessert glacé riche et crémeux brownie aux noix de pécan et beurre avec des couches de saveurs complémentaires."
+  },
+  {
+    "id": "b6c84e1b-2234-430a-8335-29555a9ac96f",
+    "slug": "butter-pecan-ice-cream",
+    "new_title": null,
+    "new_description": "Glace beurrée riche chargée de noix de pécan grillées. Un classique intemporel du sud donné vie dans le Ninja Creami."
+  },
+  {
+    "id": "3bfe8a50-f07d-4e4a-808f-4d628e36bf45",
+    "slug": "butterscotch-blondie-ice-cream",
+    "new_title": "Crème Glacée Butterscotch-Blondie",
+    "new_description": "Glace chaude au butterscotch avec des morceaux de blondie brownie moelleux."
+  },
+  {
+    "id": "2d92ddda-3672-49fd-9be4-478c673d5c47",
+    "slug": "butterscotch-milkshake",
+    "new_title": null,
+    "new_description": "Milkshake beurré au butterscotch avec une saveur caramélisée."
+  },
+  {
+    "id": "eee22f4f-486e-41ea-8c3a-bce4738ce2d3",
+    "slug": "cannoli-gelato",
+    "new_title": null,
+    "new_description": "Gelato doux à la ricotta avec pépites de chocolat et fruits confits."
+  },
+  {
+    "id": "580a560c-4a94-4756-9d2d-0346724279e4",
+    "slug": "cantaloupe-ginger-sorbet",
+    "new_title": "Sorbet Cantaloup-Gingembre",
+    "new_description": "Sorbet doux au cantaloup avec du gingembre réchauffant pour une combinaison melon-épice unique."
+  },
+  {
+    "id": "7b58d377-fe69-4161-b8eb-36d5b1900308",
+    "slug": "cantaloupe-sorbet",
+    "new_title": null,
+    "new_description": "Sorbet de cantaloup mûr et sucré qui capture la saveur pure des melons d'été. Léger, parfumé et naturellement faible en calories."
+  },
+  {
+    "id": "46e979ca-002f-4fc0-ba01-be66d00e2add",
+    "slug": "caramel-apple-cider-ice-cream",
+    "new_title": "Crème Glacée Caramel-Cidre de Pomme",
+    "new_description": "Un dessert glacé riche cidre de pomme caramel avec des couches de saveurs complémentaires."
+  },
+  {
+    "id": "653b84b9-747d-448c-864e-d0eaad30791d",
+    "slug": "caramel-apple-gelato",
+    "new_title": "Gelato Caramel-Pomme",
+    "new_description": "Gelato beurré au caramel avec des morceaux de pomme fraîche."
+  },
+  {
+    "id": "4e44be41-3197-454f-9780-08f3487d1a78",
+    "slug": "caramel-apple-greek-frozen-yogurt",
+    "new_title": "Yaourt Glacé Grec Pomme-Caramel",
+    "new_description": "Yaourt glacé doux pomme-caramel au yaourt grec pour un dessert inspiré de l'automne."
+  },
+  {
+    "id": "07424d03-cc1e-41a4-a834-54b666dbc03b",
+    "slug": "caramel-apple-pie-ice-cream",
+    "new_title": null,
+    "new_description": "Glace au beurre de pomme et caramel qui a le goût de tarte aux pommes nappée de caramel. Perfection automnale."
+  },
+  {
+    "id": "109ad1a8-f44f-4e06-88af-c9f0252e0986",
+    "slug": "caramel-brownie-milkshake",
+    "new_title": null,
+    "new_description": "Milkshake riche caramel-brownie avec des morceaux de brownie."
+  },
+  {
+    "id": "c3ed537d-79c6-4afa-afef-d3888cc85499",
+    "slug": "caramel-cookie-protein-lite-ice-cream",
+    "new_title": "Crème Glacée Légère Protéinée Caramel-Cookie",
+    "new_description": "Glace protéinée douce caramel-cookie avec émiettés de biscuit."
+  },
+  {
+    "id": "cc6af3e8-c1bc-440a-b4ff-6c5448b30644",
+    "slug": "caramel-flan-ice-cream",
+    "new_title": null,
+    "new_description": "Inspiré du flan caramel mexicain. Glace riche et onctueuse façon crème avec de profondes notes de caramel."
+  },
+  {
+    "id": "986f6be9-16fb-4cab-8c3d-b3cb919b5786",
+    "slug": "caramel-gelato",
+    "new_title": null,
+    "new_description": "Gelato beurré au caramel avec une profonde douceur ambrée."
+  },
+  {
+    "id": "8833ef75-e489-41ef-84c0-683b02357f8b",
+    "slug": "caramel-hazelnut-gelato",
+    "new_title": "Gelato Caramel-Noisette",
+    "new_description": "Gelato beurré au caramel avec des noisettes grillées."
+  },
+  {
+    "id": "35290757-b24f-4db4-b2b7-854908695eac",
+    "slug": "caramel-macchiato-protein-lite-ice-cream",
+    "new_title": "Crème Glacée Légère Protéinée Caramel Macchiato",
+    "new_description": "Glace protéinée espresso-caramel inspirée de la boisson au café."
+  },
+  {
+    "id": "864ee7e7-981a-43e0-98b1-498fc923e9fd",
+    "slug": "caramel-popcorn-ice-cream",
+    "new_title": "Crème Glacée Caramel-Popcorn",
+    "new_description": "Glace douce caramel-popcorn avec des morceaux de popcorn croquants."
+  },
+  {
+    "id": "f16300ab-bb13-46de-8e8b-915cde484e2a",
+    "slug": "caramel-soft-serve",
+    "new_title": "Glace Molle au Caramel",
+    "new_description": "Glace molle beurrée au caramel avec une douceur dorée."
+  },
+  {
+    "id": "ca5176a6-44cb-44bd-82d9-a1133c9a487d",
+    "slug": "caramelized-banana-foster-ice-cream",
+    "new_title": "Crème Glacée Banana Foster Caramélisée",
+    "new_description": "Glace profonde caramel-banane avec des épices chaudes et des notes de rhum."
+  },
+  {
+    "id": "571fd5a8-8e03-4c58-8d1d-0fceb6aa49f1",
+    "slug": "caramelized-fig-ice-cream",
+    "new_title": "Crème Glacée Figue Caramélisée",
+    "new_description": "Glace profonde à la figue caramélisée avec sucre roux et vanille."
+  },
+  {
+    "id": "3c3dfee6-f8d0-46c2-a1db-87769447ea48",
+    "slug": "caramelized-fig-walnut-ice-cream",
+    "new_title": "Crème Glacée Figue Caramélisée et Noix",
+    "new_description": "Un dessert glacé riche figue caramélisée et noix avec des couches de saveurs complémentaires."
+  },
+  {
+    "id": "910e9ba1-ee8c-4f2e-b7ba-2e6531962320",
+    "slug": "caramelized-peach-ice-cream",
+    "new_title": "Crème Glacée Pêche Caramélisée",
+    "new_description": "Glace profonde à la pêche caramélisée avec un glaçage au sucre roux."
+  },
+  {
+    "id": "02c4203d-fff6-45be-bdba-6e4fe63bd185",
+    "slug": "caramelized-pecan-butter-ice-cream",
+    "new_title": "Crème Glacée Beurre de Noix de Pécan Caramélisées",
+    "new_description": "Glace riche au beurre de noix de pécan caramélisées avec un goût de noix grillée."
+  },
+  {
+    "id": "f78cbc70-1f2f-4377-977d-ba1f6e350613",
+    "slug": "caramelized-white-chocolate-ice-cream",
+    "new_title": null,
+    "new_description": "Le chocolat blanc torréfié crée une saveur complexe proche du caramel. Unique, sophistiqué et absolument addictif."
+  },
+  {
+    "id": "996d287e-235d-497b-b6c3-85f854aad787",
+    "slug": "cardamom-pistachio-rose-ice-cream",
+    "new_title": "Crème Glacée Cardamome, Pistache et Rose",
+    "new_description": "Délicieuse glace cardamome, pistache et rose avec des saveurs parfaitement équilibrées."
+  },
+  {
+    "id": "9586e827-6808-4250-81de-5c57a470ad5c",
+    "slug": "cashew-butter-ice-cream",
+    "new_title": null,
+    "new_description": "Glace crémeuse au beurre de noix de cajou avec une douce saveur de noix beurrée. Ultra onctueuse et luxueuse."
+  },
+  {
+    "id": "d5d6cb0f-c7b1-448d-a01b-76b2ac3398a4",
+    "slug": "cashew-caramel-ice-cream",
+    "new_title": "Crème Glacée Cajou-Caramel",
+    "new_description": "Délicieuse glace cajou-caramel avec des saveurs parfaitement équilibrées."
+  },
+  {
+    "id": "703f8bb9-5d05-4b1c-915a-18f082b911dd",
+    "slug": "chai-chocolate-chip-ice-cream",
+    "new_title": "Crème Glacée Chai aux Pépites de Chocolat",
+    "new_description": "Un dessert glacé unique chai-pépites de chocolat avec des saveurs parfaitement équilibrées."
+  },
+  {
+    "id": "513cda22-a70f-421c-81bc-04c2a3b21d0f",
+    "slug": "cheesecake-swirl-ice-cream",
+    "new_title": null,
+    "new_description": "Glace cheesecake à la new-yorkaise. L'acidité du cream cheese avec la douceur du biscuit graham."
+  },
+  {
+    "id": "5ebed254-ed6c-4dbf-b563-c0bed90377da",
+    "slug": "cherry-berry-smoothie-bowl",
+    "new_title": "Smoothie Bowl Cerise-Fruits Rouges",
+    "new_description": "Smoothie bowl aux cerises noires et fruits rouges mélangés."
+  },
+  {
+    "id": "8de2a951-1b2d-4356-afe8-51f6a1cc4005",
+    "slug": "cherry-limeade-italian-ice",
+    "new_title": "Granité Italien Cerise-Citron Vert",
+    "new_description": "Granité doux à la cerise avec du citron vert pour une touche de soda fountain glacé."
+  },
+  {
+    "id": "c3841023-2971-47a9-ad92-5d5defb87b9b",
+    "slug": "cherry-pomegranate-sorbet",
+    "new_title": "Sorbet Cerise-Grenade",
+    "new_description": "Sorbet profond cerise-grenade avec une couleur rappelant les pierres précieuses."
+  },
+  {
+    "id": "40ce6c51-5742-4207-9ed0-4068d54f4265",
+    "slug": "cherry-vanilla-sorbet",
+    "new_title": "Sorbet Cerise-Vanille",
+    "new_description": "Sorbet doux à la cerise avec vanille pour un dessert glacé aux fruits simple et classique."
+  },
+  {
+    "id": "5527657f-c801-41e5-abb6-84ef4ad5d5fb",
+    "slug": "chocolate-amaretto-gelato",
+    "new_title": "Gelato Chocolat-Amaretto",
+    "new_description": "Gelato au chocolat noir avec liqueur d'amande amaretto."
+  },
+  {
+    "id": "d7fd1b1b-b74b-480f-9d2d-730eeb579fb0",
+    "slug": "chocolate-banana-almond-smoothie-bowl",
+    "new_title": "Smoothie Bowl Chocolat-Banane-Amande",
+    "new_description": "Smoothie bowl riche chocolat-banane avec du beurre d'amande."
+  },
+  {
+    "id": "e0253912-e3f8-4702-ab27-a9f362ef52f6",
+    "slug": "chocolate-banana-split-ice-cream",
+    "new_title": null,
+    "new_description": "Base chocolat avec des notes de banane, fraise et ananas. Un sundae banana split en un seul pot."
+  },
+  {
+    "id": "e389a4a7-8cc1-4584-919d-c36734c4e491",
+    "slug": "chocolate-brownie-milkshake",
+    "new_title": "Milkshake Chocolat-Brownie",
+    "new_description": "Milkshake épais chocolat-brownie avec des morceaux de brownie."
+  },
+  {
+    "id": "db38498f-f691-43e7-b1ce-cb4beb0d28c9",
+    "slug": "chocolate-caramel-swirl-gelato",
+    "new_title": "Gelato Tourbillon Chocolat-Caramel",
+    "new_description": "Gelato riche au chocolat avec un tourbillon de caramel beurré."
+  },
+  {
+    "id": "b646fef8-82a9-4181-b370-6511ef31fe91",
+    "slug": "chocolate-cherry-milkshake",
+    "new_title": "Milkshake Chocolat-Cerise",
+    "new_description": "Milkshake chocolat noir-cerise pour une expérience façon Forêt-Noire."
+  },
+  {
+    "id": "57a9654c-05b3-439a-b820-bc4b4bc42c32",
+    "slug": "chocolate-chip-cookie-dough-ice-cream",
+    "new_title": null,
+    "new_description": "Glace vanille classique garnie de bouchées de pâte à cookie comestible et de mini pépites de chocolat. Le favori ultime de tous."
+  },
+  {
+    "id": "c3874865-691b-4dac-964b-c8f1185a5033",
+    "slug": "chocolate-coconut-cream-ice-cream",
+    "new_title": null,
+    "new_description": "Chocolat et noix de coco réunis pour une glace inspirée de l'Almond Joy sans les amandes."
+  },
+  {
+    "id": "8fd6a155-2a76-49b4-a241-a4b8daaf2ea5",
+    "slug": "chocolate-coconut-protein-ice-cream",
+    "new_title": null,
+    "new_description": "Glace protéinée chocolat-coco rappelant une barre Mounds glacée. Riche en protéines et tropicale."
+  },
+  {
+    "id": "356c3dca-1beb-4e9e-b950-35fe22818e89",
+    "slug": "chocolate-fondente-gelato",
+    "new_title": "Gelato Chocolat Fondente",
+    "new_description": "Gelato au chocolat noir ultra-riche avec 70% de cacao."
+  },
+  {
+    "id": "1d8814c1-0be7-49ac-8d51-53e4cc033bf4",
+    "slug": "chocolate-malt-milkshake",
+    "new_title": "Milkshake Chocolat-Malt",
+    "new_description": "Milkshake épais au chocolat malté avec de la poudre de malt à l'ancienne."
+  },
+  {
+    "id": "235a6666-18d9-4ae1-bead-0d9868085617",
+    "slug": "chocolate-milkshake",
+    "new_title": null,
+    "new_description": "Milkshake au chocolat riche et épais directement du Ninja Creami. Saveur de cacao profonde à chaque gorgée."
+  },
+  {
+    "id": "1be5bd61-b90d-4ccf-a88f-a82eece3ef84",
+    "slug": "chocolate-nougat-ice-cream",
+    "new_title": "Crème Glacée Chocolat-Nougat",
+    "new_description": "Une glace de style artisanal avec des ingrédients premium et un goût complexe."
+  },
+  {
+    "id": "dad1d91c-4efe-41d9-bbb8-42a2423a8e09",
+    "slug": "chocolate-orange-gelato",
+    "new_title": "Gelato Chocolat-Orange",
+    "new_description": "Gelato riche au chocolat avec zeste d'orange pour un cioccolato-arancia à l'italienne."
+  },
+  {
+    "id": "4488292c-2b30-467e-9833-e3daf2877bc3",
+    "slug": "chocolate-peanut-butter-banana-smoothie-bowl",
+    "new_title": null,
+    "new_description": "Smoothie bowl riche chocolat, beurre de cacahuète et banane."
+  },
+  {
+    "id": "23bac182-9c34-401d-a0bb-f0c95a9ad7f9",
+    "slug": "chocolate-peanut-butter-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Yaourt glacé chocolat-beurre de cacahuète. Riche en protéines du yaourt grec plus les bienfaits du beurre de cacahuète."
+  },
+  {
+    "id": "7f88a327-76fe-4322-af86-ed01d7c0920a",
+    "slug": "chocolate-pistachio-gelato",
+    "new_title": "Gelato Chocolat-Pistache",
+    "new_description": "Gelato riche au chocolat avec pâte de pistache pour une combinaison noisetée."
+  },
+  {
+    "id": "7cbe04fa-9954-4ca0-9e39-877daf962658",
+    "slug": "chocolate-protein-shake-lite-ice-cream",
+    "new_title": "Crème Glacée Légère Protéinée Shake Chocolat",
+    "new_description": "Glace protéinée riche au chocolat à base de shake protéiné au chocolat."
+  },
+  {
+    "id": "3ab1e519-a810-49ae-a3d7-73b8896690a8",
+    "slug": "chocolate-sorbet",
+    "new_title": null,
+    "new_description": "Sorbet intensément chocolaté et complètement sans produits laitiers. La densité du cacao prouve qu'on n'a pas besoin de crème pour faire d'incroyables desserts glacés au chocolat."
+  },
+  {
+    "id": "e7d4d106-b54f-4640-9e5d-be3608201c85",
+    "slug": "chocolate-stout-ice-cream",
+    "new_title": "Crème Glacée Chocolat-Stout",
+    "new_description": "Un dessert glacé riche chocolat-stout avec des couches de saveurs complémentaires."
+  },
+  {
+    "id": "9f9386e2-f8a2-4400-9145-9aa0458d6e93",
+    "slug": "chocolate-tahini-ice-cream",
+    "new_title": "Crème Glacée Chocolat-Tahini",
+    "new_description": "Glace riche au chocolat avec tourbillon crémeux de tahini."
+  },
+  {
+    "id": "0b81daf8-061e-45a5-82b5-953d279c98c3",
+    "slug": "chocolate-tahini-swirl-ice-cream",
+    "new_title": "Crème Glacée Tourbillon Chocolat-Tahini",
+    "new_description": "Une glace de style artisanal avec des ingrédients premium et un goût complexe."
+  },
+  {
+    "id": "9253f191-02e2-47b2-8c3c-81246298bd4b",
+    "slug": "chocolate-truffle-gelato",
+    "new_title": "Gelato Truffe au Chocolat",
+    "new_description": "Gelato décadent à la truffe au chocolat avec une richesse intense de cacao."
+  },
+  {
+    "id": "e4235c3e-96ba-4b17-8666-3443e85130dd",
+    "slug": "chocolate-vanilla-twist-soft-serve",
+    "new_title": "Glace Molle Twist Chocolat-Vanille",
+    "new_description": "Twist iconique de glace molle chocolat et vanille."
+  },
+  {
+    "id": "e878fafa-f5dc-4351-9a26-bfce2d6e2dc4",
+    "slug": "chocolate-walnut-crunch-ice-cream",
+    "new_title": "Crème Glacée Chocolat-Noix Croquantes",
+    "new_description": "Glace riche au chocolat avec des morceaux de noix croquants."
+  },
+  {
+    "id": "29b50bce-84df-4032-ae29-371ec54e303b",
+    "slug": "cinnamon-banana-ice-cream",
+    "new_title": "Crème Glacée Banane-Cannelle",
+    "new_description": "Glace chaude à la banane épicée à la cannelle."
+  },
+  {
+    "id": "d8a37b14-263c-4a27-aa2b-be08ecbba1aa",
+    "slug": "cinnamon-chocolate-chip-ice-cream",
+    "new_title": "Crème Glacée Cannelle aux Pépites de Chocolat",
+    "new_description": "Glace chaude à la cannelle parsemée de pépites de chocolat."
+  },
+  {
+    "id": "a70f7cc0-8330-45f2-9594-7d06c4329101",
+    "slug": "cinnamon-churro-swirl-ice-cream",
+    "new_title": null,
+    "new_description": "Glace à la cannelle avec un tourbillon de caramel inspiré des churros. La cuisine de rue mexicaine rencontre le dessert glacé."
+  },
+  {
+    "id": "b441b451-4e3e-4f4a-bd9d-1de2d78bea3c",
+    "slug": "cinnamon-roll-greek-frozen-yogurt",
+    "new_title": "Yaourt Glacé Grec Cinnamon Roll",
+    "new_description": "Yaourt glacé chaud au cinnamon roll avec yaourt grec."
+  },
+  {
+    "id": "c42f1d75-6726-4112-b52b-fd8d41b06186",
+    "slug": "cinnamon-sugar-donut-ice-cream",
+    "new_title": "Crème Glacée Beignet Cannelle-Sucre",
+    "new_description": "Délicieuse glace beignet cannelle-sucre avec des saveurs parfaitement équilibrées."
+  },
+  {
+    "id": "accc4978-cd39-4b24-a8fe-4645d10679b3",
+    "slug": "cinnamon-toast-protein-lite-ice-cream",
+    "new_title": "Crème Glacée Légère Protéinée Cinnamon Toast",
+    "new_description": "Glace protéinée chaude cannelle-sucre inspirée de la céréale classique."
+  }
+]
