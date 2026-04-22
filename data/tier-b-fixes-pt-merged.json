@@ -1,0 +1,5042 @@
+[
+  {
+    "id": "a8c5247f-af6b-4d82-a8d1-1349ef15476e",
+    "slug": "acai-smoothie-bowl",
+    "new_title": null,
+    "new_description": "Bowl de smoothie de açaí espesso e cremoso feito no Ninja Creami. Cubra com granola, frutas frescas e mel para o café da manhã definitivo."
+  },
+  {
+    "id": "970a505e-b083-4fcb-bbea-8d72fd978cdf",
+    "slug": "almond-coconut-ice-cream",
+    "new_title": null,
+    "new_description": "Sorvete de amêndoa tostada e coco inspirado no Almond Joy. Felicidade tropical com castanhas."
+  },
+  {
+    "id": "a3859c6a-6820-41db-9ec9-613d08332e94",
+    "slug": "almond-joy-ice-cream",
+    "new_title": null,
+    "new_description": "Sorvete de coco com amêndoas e chocolate, inspirado na clássica barra de chocolate. O tropical encontra a indulgência do chocolate."
+  },
+  {
+    "id": "266f2303-76ff-4005-a05e-ab0a90a76efa",
+    "slug": "apple-crisp-ice-cream",
+    "new_title": null,
+    "new_description": "Sobremesa de crumble de maçã transformada em sorvete. Sabor quente de maçã com canela e final cremoso."
+  },
+  {
+    "id": "5acee6f8-dab5-4c87-aa41-22098ee96269",
+    "slug": "apple-pie-protein-ice-cream",
+    "new_title": null,
+    "new_description": "Sorvete proteico de torta de maçã com maçã real e canela quente. Uma sobremesa de outono rica em proteínas."
+  },
+  {
+    "id": "f421e08c-beaa-4394-ab14-a979c7a4141c",
+    "slug": "apricot-lavender-sorbet",
+    "new_title": "Sorbet de Damasco e Lavanda",
+    "new_description": "Delicado sorbet de damasco com aromática lavanda francesa."
+  },
+  {
+    "id": "6f3a62d2-c08a-4168-9476-182e9cb91e7c",
+    "slug": "apricot-vanilla-sorbet",
+    "new_title": "Sorbet de Damasco e Baunilha",
+    "new_description": "Sorbet doce de damasco com fava de baunilha para uma sobremesa de frutas simples e elegante."
+  },
+  {
+    "id": "3bb77de4-17bb-4a10-ac1c-9f4002d2a0f5",
+    "slug": "avocado-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "78de2e6c-c307-4325-ae5b-3fad9e4201af",
+    "slug": "baklava-honey-walnut-ice-cream",
+    "new_title": "Sorvete de Baklava com Mel e Nozes",
+    "new_description": "Sorvete de mel e nozes com folhas de massa filo inspirado no baklava turco."
+  },
+  {
+    "id": "55042da6-46f3-4bc2-9191-58942fdfdc45",
+    "slug": "banana-caramel-milkshake",
+    "new_title": "Milkshake de Banana e Caramelo",
+    "new_description": "Milkshake de banana madura com redemoinho de calda de caramelo."
+  },
+  {
+    "id": "50f2caa9-a9e5-4670-9faa-882a06f18a0f",
+    "slug": "banana-chocolate-chip-greek-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d1410a61-69be-4b11-bef0-ce1d57d73f6f",
+    "slug": "banana-chocolate-chip-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d877985d-f004-4864-a110-da96a3962a0a",
+    "slug": "banana-chocolate-cookie-ice-cream",
+    "new_title": "Sorvete de Banana e Chocolate com Biscoito",
+    "new_description": "Sorvete de banana e chocolate com crumble de biscoito."
+  },
+  {
+    "id": "08be3b86-a6ed-467f-a355-39a17a490be2",
+    "slug": "banana-chocolate-swirl-ice-cream",
+    "new_title": "Sorvete de Banana com Redemoinho de Chocolate",
+    "new_description": "Sorvete de banana madura com redemoinho de chocolate rico."
+  },
+  {
+    "id": "75371cab-aa3c-4219-abfb-d724abf936f3",
+    "slug": "banana-cookie-butter-ice-cream",
+    "new_title": "Sorvete de Banana com Cookie Butter",
+    "new_description": "Sorvete de banana madura com redemoinho de pasta de biscoito Biscoff."
+  },
+  {
+    "id": "ff633607-cb93-4639-a6f3-ab189ca71cdf",
+    "slug": "banana-cookie-crumble-ice-cream",
+    "new_title": "Sorvete de Banana com Crumble de Biscoito",
+    "new_description": "Sorvete de banana madura com crocantes pedacinhos de crumble de biscoito."
+  },
+  {
+    "id": "57e1aeb9-f7b7-403b-9ea1-9f70d12a9d33",
+    "slug": "banana-cream-cheese-ice-cream",
+    "_skip_reason": "clean PT with cream cheese loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d4417ed2-d0fe-4c10-b1f6-40450adecc30",
+    "slug": "banana-cream-pie-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "356f4a90-9484-4255-9dd5-00fedce675a1",
+    "slug": "banana-cream-protein-ice-cream",
+    "new_title": null,
+    "new_description": "Sorvete proteico inspirado na torta de creme de banana. A banana real proporciona doçura natural enquanto a proteína mantém os macros em dia."
+  },
+  {
+    "id": "4b9cf704-9bc8-48b4-8ce2-ed19f25ab923",
+    "slug": "banana-foster-caramel-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d0d48c00-b6df-437d-bcf8-00b800edf70d",
+    "slug": "banana-foster-rum-ice-cream",
+    "new_title": "Sorvete Banana Foster com Rum",
+    "new_description": "Um sorvete indulgente e saboroso com base cremosa e notas intensas de rum."
+  },
+  {
+    "id": "ef33e00c-25e4-4859-a843-8e3fb36220a2",
+    "slug": "banana-miso-caramel-ice-cream",
+    "new_title": "Sorvete de Banana com Miso e Caramelo",
+    "new_description": null
+  },
+  {
+    "id": "c7f81ac9-6024-46bf-a95e-e6c3aef5cc15",
+    "slug": "banana-nutella-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "798ed6d0-9f2e-4996-ac8a-2a59d784e70b",
+    "slug": "banana-oat-smoothie-bowl",
+    "new_title": null,
+    "new_description": "Bowl de smoothie substancioso de banana e aveia para um café da manhã saciante."
+  },
+  {
+    "id": "62823269-1c1c-4297-ba4d-c4dd636341e3",
+    "slug": "banana-pudding-cream-ice-cream",
+    "new_title": "Sorvete de Pudim de Banana com Creme",
+    "new_description": "Rico sorvete de pudim de banana com camadas de creme de baunilha."
+  },
+  {
+    "id": "4b8d5c63-b51c-4e6e-a429-4388b6b25129",
+    "slug": "banana-soft-serve",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "894f3f64-4ad9-491f-a135-5025904dd469",
+    "slug": "banana-split-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d4535bca-c9b2-4074-8c49-1fef82cbfc48",
+    "slug": "banana-toffee-ice-cream",
+    "new_title": "Sorvete de Banana com Toffee",
+    "new_description": "Sorvete de banana madura com pedacinhos crocantes de toffee inglês."
+  },
+  {
+    "id": "9dcead5a-bdda-42b6-b912-481e75740cfb",
+    "slug": "banana-walnut-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Banana e Nozes",
+    "new_description": "Cremoso frozen yogurt de banana e nozes com iogurte grego."
+  },
+  {
+    "id": "65c4e1f8-72e9-4b2d-bf56-39ef0f58742d",
+    "slug": "bananas-foster-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "8bc1d544-187f-43a6-8675-6ab43acd6dbc",
+    "slug": "berry-cobbler-crumble-ice-cream",
+    "new_title": "Sorvete Cobbler Crumble de Frutas Vermelhas",
+    "new_description": "Sorvete de frutas vermelhas mistas com cobertura quente de cobbler crumble."
+  },
+  {
+    "id": "a2ad5c19-f31d-4d70-9cec-1dae7296f0b6",
+    "slug": "berry-protein-smoothie-bowl",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d3eee0d5-1e34-496e-b784-f104ad009696",
+    "slug": "berry-spinach-smoothie-bowl",
+    "new_title": "Smoothie Bowl de Frutas Vermelhas e Espinafre",
+    "new_description": "Smoothie bowl rico em nutrientes com frutas vermelhas e espinafre."
+  },
+  {
+    "id": "69782917-6759-4980-9850-74ea6d0b3a58",
+    "slug": "birthday-cake-milkshake",
+    "new_title": "Milkshake de Bolo de Aniversário",
+    "new_description": "Milkshake festivo de bolo de aniversário com granulado."
+  },
+  {
+    "id": "8220856c-2390-4de4-be48-81ca290a31d4",
+    "slug": "biscoff-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "0f13f6bc-5f33-4844-b664-572ad8061041",
+    "slug": "biscoff-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f937f147-6c4e-4d55-9a6b-76ea3c59628c",
+    "slug": "biscoff-swirl-cheesecake-ice-cream",
+    "_skip_reason": "clean PT (already clean in Tier A)",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "8f63ea2f-4c88-419f-8bf1-a7bcf3c62282",
+    "slug": "black-forest-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f9d2cbcb-d51d-474e-b7bf-d19edc8d12c4",
+    "slug": "black-walnut-ice-cream",
+    "new_title": "Sorvete de Noz Preta",
+    "new_description": "Intenso sorvete de noz preta com sabor profundamente amanteigado e terroso."
+  },
+  {
+    "id": "b3f73381-e633-4831-ba84-fbddc5c99e51",
+    "slug": "blackberry-cobbler-crunch-ice-cream",
+    "new_title": "Sorvete Crocante Cobbler de Amora",
+    "new_description": "Doce sorvete de amora com pedacinhos de cobbler crumble."
+  },
+  {
+    "id": "201b67f5-cab8-4369-9a5f-f35a68560ed3",
+    "slug": "blackberry-cobbler-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2053c789-b980-4474-8c98-8b8016be5152",
+    "slug": "blackberry-frozen-yogurt",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "320811eb-7bbd-4fb2-b046-d614674eab95",
+    "slug": "blackberry-ginger-sorbet",
+    "new_title": "Sorbet de Amora e Gengibre",
+    "new_description": "Intenso sorbet de amora com gengibre aquecedor para uma sobremesa gelada condimentada."
+  },
+  {
+    "id": "9b53bc0b-4901-4030-b5e5-bd1d01ea4d6f",
+    "slug": "blackberry-honey-goat-cheese-ice-cream",
+    "new_title": "Sorvete de Amora com Mel e Queijo de Cabra",
+    "new_description": "Delicioso sorvete de amora com mel e queijo de cabra, com uma mistura de sabores perfeitamente equilibrada para uma sobremesa gelada sofisticada."
+  },
+  {
+    "id": "90787b06-d5a6-4ba9-9f6e-2405846022eb",
+    "slug": "blackberry-italian-ice",
+    "new_title": "Granita Italiana de Amora",
+    "new_description": "Granita italiana de amora silvestre com sabor profundo de frutas vermelhas."
+  },
+  {
+    "id": "9f1c5f9d-959f-4e46-9058-b1bf05887930",
+    "slug": "blackberry-sage-cream-ice-cream",
+    "new_title": "Sorvete de Creme de Sálvia com Amora",
+    "new_description": "Sorvete cremoso de sálvia terrosa com redemoinho de amora doce."
+  },
+  {
+    "id": "4247345c-736f-4066-9234-5f874cbac023",
+    "slug": "blackberry-sage-honey-ice-cream",
+    "new_title": "Sorvete de Amora, Sálvia e Mel",
+    "new_description": "Uma sobremesa gelada única e sofisticada de amora, sálvia e mel com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "e93ec5a0-7db0-4cdb-829c-e84970400f93",
+    "slug": "blackberry-vanilla-bean-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "66e03ec7-5ddd-4d68-97bd-69ceeb1ac683",
+    "slug": "blackberry-vanilla-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Amora e Baunilha",
+    "new_description": "Doce frozen yogurt de amora com baunilha e iogurte grego."
+  },
+  {
+    "id": "cbb69c5f-cf88-4c1b-bc54-9dd716db215f",
+    "slug": "blackberry-vanilla-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "ac51ba10-e0d8-4153-b4dd-cb2bd75d0acc",
+    "slug": "blackcurrant-sorbet",
+    "new_title": null,
+    "new_description": "Sorbet rico de groselha negra com sabor intenso, cor roxa profunda e gosto marcante."
+  },
+  {
+    "id": "fa59f78a-a932-4e43-a3c8-999224ee44f5",
+    "slug": "blood-orange-gelato",
+    "new_title": "Gelato de Laranja Sanguínea",
+    "new_description": "Vibrante gelato de laranja sanguínea com sabor intensamente cítrico."
+  },
+  {
+    "id": "4d41f40f-dad3-4883-a0c8-a05798a94e3a",
+    "slug": "blood-orange-ginger-sorbet",
+    "new_title": "Sorbet de Laranja Sanguínea com Gengibre",
+    "new_description": "Marcante sorbet de laranja sanguínea com notas quentes de gengibre."
+  },
+  {
+    "id": "39ed55f3-8627-430c-84d6-31f464674304",
+    "slug": "blood-orange-italian-ice",
+    "new_title": "Granita Italiana de Laranja Sanguínea",
+    "new_description": "Marcante granita italiana de laranja sanguínea com cítricos profundos."
+  },
+  {
+    "id": "f7c11949-4435-44da-ab69-c3b0420065f7",
+    "slug": "blood-orange-raspberry-sorbet",
+    "new_title": "Sorbet de Laranja Sanguínea e Framboesa",
+    "new_description": "Marcante sorbet de laranja sanguínea com redemoinho de purê de framboesa ácida."
+  },
+  {
+    "id": "caced5d3-698f-4743-8171-b6625847fd8f",
+    "slug": "blood-orange-vanilla-sorbet",
+    "new_title": "Sorbet de Laranja Sanguínea e Baunilha",
+    "new_description": "Marcante sorbet de laranja sanguínea com uma nota de baunilha e cor rubi."
+  },
+  {
+    "id": "8ebaf095-dcdd-47f8-9942-7ed13473a1bc",
+    "slug": "blue-raspberry-italian-ice",
+    "new_title": null,
+    "new_description": "Raspadinha de framboesa azul vibrante como as do carrinho. Divertida, doce e um sucesso total com as crianças."
+  },
+  {
+    "id": "05a81c6f-3f55-44ea-85ee-42cc85d4a441",
+    "slug": "blueberry-cardamom-ice-cream",
+    "new_title": "Sorvete de Mirtilo e Cardamomo",
+    "new_description": null
+  },
+  {
+    "id": "0e723aab-d7fc-4577-97b2-3d92bf83da65",
+    "slug": "blueberry-cheesecake-crumble-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "dc24713f-64d7-4621-86d5-8b3447e14246",
+    "slug": "blueberry-cheesecake-ice-cream",
+    "_skip_reason": "clean PT (Tier A)",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "c92f47d6-4bae-43cc-80c8-9203b7d97113",
+    "slug": "blueberry-cheesecake-milkshake",
+    "new_title": null,
+    "new_description": "Doce milkshake de cheesecake de mirtilo."
+  },
+  {
+    "id": "ed198291-984f-400c-bf9a-930413f2c66a",
+    "slug": "blueberry-cheesecake-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a1123d45-258c-4e9e-8511-65929d084f25",
+    "slug": "blueberry-cobbler-ice-cream",
+    "new_title": "Sorvete Cobbler de Mirtilo",
+    "new_description": "Doce sorvete de mirtilo com cobertura quente de cobbler crumble."
+  },
+  {
+    "id": "d5674a1b-f6da-4187-8206-5e1b67e5e840",
+    "slug": "blueberry-coconut-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Mirtilo e Coco",
+    "new_description": "Doce frozen yogurt de mirtilo e coco com toque tropical."
+  },
+  {
+    "id": "4014e5d6-cbd3-46e3-aae5-90ca4dae3e33",
+    "slug": "blueberry-cream-cheese-ice-cream",
+    "_skip_reason": "clean PT with cream cheese loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "1aba79ad-4b4b-4138-8eb9-9a25d9d90690",
+    "slug": "blueberry-ginger-sorbet",
+    "new_title": "Sorbet de Mirtilo e Gengibre",
+    "new_description": "Sorbet de mirtilo rico em antioxidantes com toque aquecedor de gengibre."
+  },
+  {
+    "id": "0257c0c2-0558-46e8-9ebb-a5e40dceec83",
+    "slug": "blueberry-honey-ice-cream",
+    "new_title": "Sorvete de Mirtilo e Mel",
+    "new_description": "Doce sorvete de mirtilo com mel dourado de flores silvestres."
+  },
+  {
+    "id": "4edb00ec-7bf8-4b7e-95ad-e9e4b22a0557",
+    "slug": "blueberry-italian-ice",
+    "new_title": "Granita Italiana de Mirtilo",
+    "new_description": null
+  },
+  {
+    "id": "cf226772-76ea-4400-8f26-7153afb40d4a",
+    "slug": "blueberry-lavender-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Mirtilo e Lavanda",
+    "new_description": "Delicado frozen yogurt de mirtilo e lavanda."
+  },
+  {
+    "id": "812c927d-befe-4318-a679-e56ed9a8d064",
+    "slug": "blueberry-lavender-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "85371a4d-0b60-4d10-9b26-94f4daba0a8f",
+    "slug": "blueberry-lavender-sorbet",
+    "new_title": "Sorbet de Mirtilo e Lavanda",
+    "new_description": "Doce sorbet de mirtilo com aromática lavanda francesa."
+  },
+  {
+    "id": "6093ff6b-873a-484c-8b88-1a184adc873e",
+    "slug": "blueberry-lemon-italian-ice",
+    "new_title": "Granita Italiana de Mirtilo e Limão",
+    "new_description": "Raspadinha doce de mirtilo com limão vibrante."
+  },
+  {
+    "id": "d600c0e2-6e5f-4e81-b1f3-58975e849a94",
+    "slug": "blueberry-lime-basil-ice-cream",
+    "new_title": "Sorvete de Mirtilo, Limão e Manjericão",
+    "new_description": "Uma sobremesa gelada rica e cremosa de mirtilo, limão e manjericão com camadas de sabores complementares."
+  },
+  {
+    "id": "5b26745f-5d13-496f-a1ba-73a0a6a81d59",
+    "slug": "blueberry-lime-sorbet",
+    "new_title": "Sorbet de Mirtilo e Limão",
+    "new_description": "Sorbet doce de mirtilo com limão vibrante para uma combinação brilhante."
+  },
+  {
+    "id": "c86aa3c1-1286-455a-8bc6-ce786078a69d",
+    "slug": "blueberry-maple-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "8ba545c1-553c-4826-b0a0-473080ecd8bf",
+    "slug": "blueberry-mint-sorbet",
+    "new_title": "Sorbet de Mirtilo e Menta",
+    "new_description": "Doce sorbet de mirtilo com menta refrescante para uma combinação refrescante."
+  },
+  {
+    "id": "9a1de7a9-0cac-46f2-b636-e7fd719aeffd",
+    "slug": "blueberry-muffin-protein-ice-cream",
+    "new_title": "Sorvete Proteico de Muffin de Mirtilo",
+    "new_description": "Sorvete proteico com sabor de muffin de mirtilo. Canela quente e frutas doces em um prazer congelado."
+  },
+  {
+    "id": "8eee6559-fec3-413c-a6aa-a4b631e88968",
+    "slug": "blueberry-muffin-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Muffin de Mirtilo",
+    "new_description": "Sorvete proteico doce de muffin de mirtilo com mirtilos reais."
+  },
+  {
+    "id": "b6d4d2d0-d616-4ad2-9157-631e568df1f5",
+    "slug": "blueberry-pomegranate-sorbet",
+    "new_title": "Sorbet de Mirtilo e Romã",
+    "new_description": "Sorbet de mirtilo e romã rico em antioxidantes com cor púrpura profunda."
+  },
+  {
+    "id": "395360a9-31c7-471a-aca0-1e7de92a1ea2",
+    "slug": "blueberry-soft-serve",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "bf19d95c-fe5e-4239-b03a-2050cb8af18f",
+    "slug": "blueberry-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "22fc528f-28ef-41a2-97a1-025a91ec9a4e",
+    "slug": "blueberry-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "8e3af426-3cc7-4ff1-9301-7ff0c90685fe",
+    "slug": "blueberry-vanilla-swirl-ice-cream",
+    "new_title": "Sorvete Baunilha com Redemoinho de Mirtilo",
+    "new_description": "Cremoso sorvete de baunilha com redemoinho vibrante de purê de mirtilo."
+  },
+  {
+    "id": "7acf71be-5a82-4cf3-b029-101450e91264",
+    "slug": "bourbon-brown-sugar-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "afc9057b-57f8-4f89-9668-3b85b7b937d8",
+    "slug": "bourbon-butterscotch-ice-cream",
+    "new_title": "Sorvete de Bourbon e Butterscotch",
+    "new_description": null
+  },
+  {
+    "id": "35d251ff-36d3-4e83-adbe-7bf399a56ad5",
+    "slug": "bourbon-salted-caramel-ice-cream",
+    "new_title": "Sorvete de Bourbon e Caramelo Salgado",
+    "new_description": "Sorvete quente de bourbon com redemoinho de caramelo salgado e flocos de sal marinho."
+  },
+  {
+    "id": "4113fb96-b9b2-409e-a4e8-0e67089edecd",
+    "slug": "brown-butter-cookie-dough-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2246ce31-5a4c-4671-9fe1-de219d9f3202",
+    "slug": "brown-butter-hazelnut-ice-cream",
+    "new_title": "Sorvete de Manteiga Dourada e Avelã",
+    "new_description": null
+  },
+  {
+    "id": "7caf559e-765a-49b5-a4a4-ca5fe6365884",
+    "slug": "brown-butter-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2ace957c-fa05-452f-8043-13f26579dc30",
+    "slug": "brown-butter-pecan-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "03fc42bc-04ae-4431-9ef8-7ddbf1a7e054",
+    "slug": "brown-butter-sage-ice-cream",
+    "new_title": "Sorvete de Manteiga Dourada e Sálvia",
+    "new_description": null
+  },
+  {
+    "id": "f7ec4bfd-8164-4f4f-b6d0-d7b046bdce17",
+    "slug": "brown-butter-sage-pecan-ice-cream",
+    "new_title": "Sorvete de Manteiga Dourada, Sálvia e Noz-Pecã",
+    "new_description": "Delicioso sorvete de manteiga dourada, sálvia e nozes-pecãs com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "43eb8340-d9e5-4cc4-a624-44341b4865e9",
+    "slug": "brown-sugar-vanilla-bean-ice-cream",
+    "new_title": null,
+    "new_description": "Açúcar mascavo quente adoça este sorvete premium de fava de baunilha."
+  },
+  {
+    "id": "b9ddb203-482d-40f1-8191-da3701842681",
+    "slug": "brownie-batter-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Massa de Brownie",
+    "new_description": "Fudgeado frozen yogurt de massa de brownie com iogurte grego para um prazer sem culpa."
+  },
+  {
+    "id": "7ff60391-c4c4-4dad-97ab-9ec7565208d1",
+    "slug": "brownie-batter-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "4bc68c52-c26c-4daa-aefa-7a75d516d636",
+    "slug": "butter-pecan-brownie-ice-cream",
+    "new_title": "Sorvete de Brownie com Noz-Pecã e Manteiga",
+    "new_description": "Uma sobremesa gelada rica e cremosa de brownie com nozes-pecãs e manteiga com camadas de sabores complementares."
+  },
+  {
+    "id": "09fd3fc7-103c-408e-b8f5-bc0771dffe74",
+    "slug": "butter-pecan-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f4462ba1-9b8c-4a85-a8d5-b6c2eca0569d",
+    "slug": "butterscotch-blondie-ice-cream",
+    "new_title": "Sorvete Butterscotch com Blondie",
+    "new_description": "Sorvete quente de butterscotch com pedaços mastigáveis de blondie brownie."
+  },
+  {
+    "id": "c48c8df6-a521-47a0-b38d-3eb049062f49",
+    "slug": "butterscotch-chip-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "e2c7382e-f216-444c-8164-9e267518bff1",
+    "slug": "butterscotch-cookie-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "85e91db3-ae89-465a-bcf4-48af6ee64cd2",
+    "slug": "butterscotch-milkshake",
+    "new_title": null,
+    "new_description": "Milkshake amanteigado de butterscotch com sabor caramelizado."
+  },
+  {
+    "id": "e83040aa-5a58-40b0-9bf7-bef6721d7859",
+    "slug": "butterscotch-ripple-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f3b90f22-3ca8-4dce-8cea-726bead8c917",
+    "slug": "cannoli-gelato",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "001cc105-48cd-4e27-bff0-c98073c963f8",
+    "slug": "cantaloupe-ginger-sorbet",
+    "new_title": "Sorbet de Melão e Gengibre",
+    "new_description": "Sorbet doce de melão com gengibre aquecedor para uma combinação única de melão e especiarias."
+  },
+  {
+    "id": "35b5ed30-40b5-40eb-807e-6d3584ecc9d7",
+    "slug": "caramel-apple-cider-ice-cream",
+    "new_title": "Sorvete de Cidra de Maçã com Caramelo",
+    "new_description": "Uma sobremesa gelada rica de cidra de maçã com caramelo e camadas de sabores complementares."
+  },
+  {
+    "id": "21a73ce1-be6a-450e-a957-84acc8fd2faf",
+    "slug": "caramel-apple-gelato",
+    "new_title": "Gelato de Maçã com Caramelo",
+    "new_description": "Gelato amanteigado de caramelo com pedaços de maçã fresca."
+  },
+  {
+    "id": "fe31548c-a260-4ddb-9c3e-272562be0026",
+    "slug": "caramel-apple-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "92df750d-253b-448e-b9de-ffee811282a5",
+    "slug": "caramel-banana-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Banana com Caramelo",
+    "new_description": "Sorvete amanteigado de banana com caramelo e crocância."
+  },
+  {
+    "id": "0c3991b7-d54e-4d85-84ea-d57aca190963",
+    "slug": "caramel-brownie-milkshake",
+    "new_title": "Milkshake de Caramelo com Brownie",
+    "new_description": "Milkshake rico de caramelo e brownie com pedaços de brownie."
+  },
+  {
+    "id": "0d2cda65-5b7b-429a-9005-d617c7bf5c25",
+    "slug": "caramel-cashew-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "8ae2ac25-3242-4a93-a6de-130bccb25a16",
+    "slug": "caramel-chocolate-chip-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "c0e2e6cc-5bd0-4388-9e56-dc336fcda23b",
+    "slug": "caramel-coconut-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "fa77ecb1-5d1e-4a9a-8e96-c417f5d2fbd5",
+    "slug": "caramel-cookie-crunch-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "13f6e39e-3fb2-4974-9d3d-4346ff42547b",
+    "slug": "caramel-cookie-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Biscoito com Caramelo",
+    "new_description": null
+  },
+  {
+    "id": "5be48fe7-92c0-4541-b248-43bf7f862692",
+    "slug": "caramel-espresso-gelato",
+    "new_title": "Gelato de Caramelo com Espresso",
+    "new_description": "Gelato amanteigado de caramelo com espresso intenso."
+  },
+  {
+    "id": "70166183-125c-4e96-9a25-1d7c1a322980",
+    "slug": "caramel-flan-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "fabd0856-bc77-4e96-a395-9e210a3b217f",
+    "slug": "caramel-gelato",
+    "new_title": "Gelato de Caramelo",
+    "new_description": "Gelato amanteigado de caramelo com profunda doçura âmbar."
+  },
+  {
+    "id": "f1d9d60e-bfc5-4046-9039-1e0e584bb08f",
+    "slug": "caramel-hazelnut-gelato",
+    "new_title": "Gelato de Caramelo e Avelã",
+    "new_description": "Gelato amanteigado de caramelo com avelãs tostadas."
+  },
+  {
+    "id": "b4b02094-3887-4525-bb2f-775e59f7a66a",
+    "slug": "caramel-macchiato-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2d9da467-8f40-4263-bd88-ee4ac86b2751",
+    "slug": "caramel-macchiato-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Caramelo Macchiato",
+    "new_description": "Sorvete proteico de espresso e caramelo inspirado na bebida de café."
+  },
+  {
+    "id": "26695d60-b4fc-48bd-929a-219b43ce3135",
+    "slug": "caramel-milkshake",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "81b4c588-2010-4040-b751-63235e9472c7",
+    "slug": "caramel-popcorn-ice-cream",
+    "new_title": "Sorvete de Pipoca com Caramelo",
+    "new_description": "Sorvete doce de pipoca com caramelo e pedaços crocantes de pipoca."
+  },
+  {
+    "id": "7653d36e-e032-492d-88b9-d37a850eb1ad",
+    "slug": "caramel-pretzel-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "635ceb83-89b4-428c-abbc-1eae1cbf83a1",
+    "slug": "caramel-soft-serve",
+    "new_title": "Sorvete Soft de Caramelo",
+    "new_description": "Sorvete soft amanteigado de caramelo com doçura dourada."
+  },
+  {
+    "id": "34e5e4d2-bc6d-4c6f-bf43-e37c7068d187",
+    "slug": "caramel-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "61ade93c-39c9-4815-be05-99001af6629c",
+    "slug": "caramel-waffle-cone-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "dfd4775a-8a69-4f2c-9ce4-392087651de5",
+    "slug": "caramel-white-chocolate-chip-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "67af63dc-1d6f-4bd5-a7b2-40f7493a1326",
+    "slug": "caramelized-banana-foster-ice-cream",
+    "new_title": "Sorvete Banana Foster Caramelizada",
+    "new_description": "Sorvete profundo de caramelo e banana com especiarias quentes e notas de rum."
+  },
+  {
+    "id": "55911eb8-96c0-472a-bd9e-e68239354b7a",
+    "slug": "caramelized-fig-ice-cream",
+    "new_title": "Sorvete de Figo Caramelizado",
+    "new_description": "Sorvete profundo de figo caramelizado com açúcar mascavo e baunilha."
+  },
+  {
+    "id": "635d1dc1-8768-4732-bb34-6b1e67796d82",
+    "slug": "caramelized-fig-walnut-ice-cream",
+    "new_title": "Sorvete de Figo Caramelizado com Nozes",
+    "new_description": "Uma sobremesa gelada rica de figo caramelizado e noz com camadas de sabores complementares."
+  },
+  {
+    "id": "de7b7a07-e964-4faf-ad20-5a192f3e4a23",
+    "slug": "caramelized-peach-ice-cream",
+    "new_title": "Sorvete de Pêssego Caramelizado",
+    "new_description": "Sorvete profundo de pêssego caramelizado com cobertura de açúcar mascavo."
+  },
+  {
+    "id": "9c1daa6f-dd6b-4dd0-8def-1317bc93b9d3",
+    "slug": "caramelized-pecan-butter-ice-cream",
+    "new_title": "Sorvete de Manteiga de Noz-Pecã Caramelizada",
+    "new_description": "Sorvete rico de manteiga de nozes-pecãs caramelizadas com sabor de castanha tostada."
+  },
+  {
+    "id": "707a004a-14b3-4803-9999-8e648c72390f",
+    "slug": "caramelized-white-chocolate-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "84a1cd63-ed49-4630-8e33-af26c4a15ed1",
+    "slug": "cardamom-pistachio-rose-ice-cream",
+    "new_title": "Sorvete de Cardamomo, Pistache e Rosa",
+    "new_description": "Delicioso sorvete de cardamomo, pistache e rosa com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "d6a197cb-7f58-43ab-9cb6-bbea6084f845",
+    "slug": "cashew-butter-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "b297e117-b5e8-47dd-a130-2672e4a0cbde",
+    "slug": "cashew-caramel-ice-cream",
+    "new_title": "Sorvete de Caju e Caramelo",
+    "new_description": "Delicioso sorvete de caju e caramelo com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "ff61b643-a085-4113-9860-748719702b49",
+    "slug": "chai-caramel-swirl-ice-cream",
+    "new_title": "Sorvete Chai com Redemoinho de Caramelo",
+    "new_description": "Sorvete chai especiado com redemoinho amanteigado de caramelo."
+  },
+  {
+    "id": "b44de9f0-ac62-4d28-97c5-1e7750c9ff5a",
+    "slug": "chai-honey-ice-cream",
+    "new_title": "Sorvete Chai com Mel",
+    "new_description": "Sorvete chai especiado adoçado com mel dourado de flores silvestres."
+  },
+  {
+    "id": "1bc303aa-ec7a-498c-89e8-b898279fbb89",
+    "slug": "chai-masala-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Chai Masala",
+    "new_description": "Delicioso sorvete crocante de chai masala com uma mistura de sabores perfeitamente equilibrada para uma sobremesa gelada sofisticada."
+  },
+  {
+    "id": "8472f2a5-be6e-49a4-ae96-624867bf7a7b",
+    "slug": "chai-spice-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "adf30a8e-38a7-4562-a7b0-ddd620f4dd52",
+    "slug": "chai-spice-milkshake",
+    "new_title": "Milkshake de Chai Especiado",
+    "new_description": "Milkshake quente de chai especiado com chá preto e especiarias."
+  },
+  {
+    "id": "a8d10f3b-1b40-4182-9def-6f61e861407e",
+    "slug": "charcoal-vanilla-ice-cream",
+    "new_title": "Sorvete de Carvão Ativado e Baunilha",
+    "new_description": "Uma sobremesa gelada rica e cremosa de carvão ativado e baunilha com camadas de sabores complementares."
+  },
+  {
+    "id": "c2c03f9a-1479-44b5-a12b-cd5b3ecdf5fa",
+    "slug": "cherry-balsamic-swirl-ice-cream",
+    "new_title": "Sorvete com Redemoinho de Cereja e Balsâmico",
+    "new_description": "Delicioso sorvete com redemoinho de cereja e balsâmico, com uma mistura de sabores perfeitamente equilibrada para uma sobremesa gelada sofisticada."
+  },
+  {
+    "id": "0ba4efd0-3a55-4e55-aba9-0faa9490c954",
+    "slug": "cherry-berry-smoothie-bowl",
+    "new_title": "Smoothie Bowl de Cereja e Frutas Vermelhas",
+    "new_description": "Smoothie bowl de cerejas escuras e frutas vermelhas mistas."
+  },
+  {
+    "id": "8a28f044-a58f-4cfc-b263-8ec71f39db53",
+    "slug": "cherry-bourbon-ice-cream",
+    "new_title": "Sorvete de Cereja e Bourbon",
+    "new_description": "Sorvete doce de cereja com um toque aquecedor de bourbon."
+  },
+  {
+    "id": "3fe6fa94-9a39-4a8a-89e1-51b033634dcf",
+    "slug": "cherry-chocolate-chip-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "93e02a03-06dd-4ba1-9023-90da9d78fe0a",
+    "slug": "cherry-chocolate-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Cereja e Chocolate",
+    "new_description": "Doce frozen yogurt de cereja e chocolate com iogurte grego."
+  },
+  {
+    "id": "1a0ab2a9-a8fc-4f8c-bd35-5ed6ac505e25",
+    "slug": "cherry-garcia-style-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "913a47ed-2625-43b2-97dd-da590ad56196",
+    "slug": "cherry-italian-ice",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d956e60f-dcd7-45ae-beb2-17212b35fd1c",
+    "slug": "cherry-vanilla-frozen-yogurt",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d8520901-27a9-4ada-94f1-36c451674323",
+    "slug": "cherry-vanilla-italian-ice",
+    "new_title": "Granita Italiana de Cereja e Baunilha",
+    "new_description": "Doce granita italiana de cereja com um toque de baunilha."
+  },
+  {
+    "id": "ba7e5a24-1bc7-4a43-b072-92a8219748ed",
+    "slug": "chocolate-avocado-ice-cream",
+    "new_title": "Sorvete de Chocolate com Abacate",
+    "new_description": "Cremoso sorvete de abacate e chocolate para uma sobremesa saudável e rica."
+  },
+  {
+    "id": "b050b53c-35c9-4db6-a616-c5672623802f",
+    "slug": "chocolate-avocado-mousse-ice-cream",
+    "new_title": "Sorvete de Mousse de Chocolate com Abacate",
+    "new_description": "Um sorvete sofisticado de mousse de chocolate e abacate com uma combinação de sabores inesperada porém harmoniosa."
+  },
+  {
+    "id": "99c3dd5e-bef1-479b-b8b2-885b7f36cc7b",
+    "slug": "chocolate-banana-gelato",
+    "new_title": null,
+    "new_description": "Gelato cremoso de chocolate e banana com equilíbrio perfeito entre cacau intenso e doçura natural da fruta. Uma combinação clássica em forma de sorvete italiano."
+  },
+  {
+    "id": "14f988ca-2075-4b1d-8f60-a731f858fb51",
+    "slug": "chocolate-banana-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Chocolate e Banana",
+    "new_description": "Frozen yogurt de chocolate e banana com iogurte grego para uma sobremesa saudável."
+  },
+  {
+    "id": "b9a67b97-fbc7-4bc3-b6b4-8299467d84e8",
+    "slug": "chocolate-banana-ice-cream",
+    "new_title": null,
+    "new_description": "Chocolate e banana são uma combinação perfeita. Este sorvete prova isso a cada mordida."
+  },
+  {
+    "id": "338bd370-69e0-4029-ae9f-fb17ea4b2b74",
+    "slug": "chocolate-banana-milkshake",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "6a13a683-ffab-41f0-8475-ec53a7f3be66",
+    "slug": "chocolate-banana-split-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2331e14d-a81c-4a42-b442-e37d758435d7",
+    "slug": "chocolate-brownie-batter-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "26fde185-70b1-42cc-b4bc-da35647ac559",
+    "slug": "chocolate-brownie-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "fd000662-9478-4660-be71-f2aaef0bae3e",
+    "slug": "chocolate-caramel-cookie-ice-cream",
+    "new_title": "Sorvete de Chocolate, Caramelo e Biscoito",
+    "new_description": "Indulgência tripla: sorvete de chocolate e caramelo com pedacinhos de biscoito."
+  },
+  {
+    "id": "546fc51d-d412-4713-b126-70ce89345ac1",
+    "slug": "chocolate-caramel-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "e41ae984-cb58-4223-a6af-8c4aca6354df",
+    "slug": "chocolate-caramel-sea-salt-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "761db90f-e08a-4582-8fd3-42dc27ce5873",
+    "slug": "chocolate-caramel-swirl-gelato",
+    "new_title": "Gelato com Redemoinho de Chocolate e Caramelo",
+    "new_description": "Rico gelato de chocolate com redemoinho amanteigado de caramelo."
+  },
+  {
+    "id": "ec0be197-0378-49e2-9ec7-ea92016910f1",
+    "slug": "chocolate-cashew-butter-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a9d1f00f-b187-45f5-84dd-d12f0c2bee22",
+    "slug": "chocolate-cherry-milkshake",
+    "new_title": "Milkshake de Chocolate com Cereja",
+    "new_description": "Milkshake de chocolate amargo com cereja para uma experiência Floresta Negra."
+  },
+  {
+    "id": "9a2df454-4855-436b-90df-1b134fff585b",
+    "slug": "chocolate-chip-brownie-batter-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "39fcb86e-79c5-4051-b364-551ca508e68c",
+    "slug": "chocolate-chip-brownie-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "92a406ce-7457-48fa-86f3-1d9f4ffde638",
+    "slug": "chocolate-chip-brownie-protein-lite-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "3a4a485e-d8c2-43df-8f72-7e1077e2ad67",
+    "slug": "chocolate-chip-cannoli-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "c350e6f4-b5d6-48b1-a994-ba2b9a6f8082",
+    "slug": "chocolate-chip-caramel-cookie-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a17e3ddd-d472-4d9d-bd43-626aac583921",
+    "slug": "chocolate-chip-cookie-crumble-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "291b093c-aab4-49d0-9fa9-74729c073e19",
+    "slug": "chocolate-chip-cookie-dough-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "b502b183-cd6d-469b-a139-0cd199150e96",
+    "slug": "chocolate-chip-cookie-dough-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "15d95246-9295-41d3-835f-adf0036012b0",
+    "slug": "chocolate-chip-cookie-milkshake",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f145d59e-157e-468b-aa66-cd95f8100e54",
+    "slug": "chocolate-chip-cookie-protein-lite-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "1fe3197b-0a95-4bf3-91a3-6243f83d39d8",
+    "slug": "chocolate-chip-cookie-sandwich-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "7b1dd26b-d5d8-4e63-94dd-787ad1d1b9f8",
+    "slug": "chocolate-chip-espresso-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "ced8dfeb-e2bc-4f44-9f19-c7b33a64c920",
+    "slug": "chocolate-chip-frozen-yogurt",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "56319085-e0b4-4974-b765-d406b29f491d",
+    "slug": "chocolate-chip-greek-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "3d01fd2d-3f15-4d7a-9de8-a2bb15fbaccd",
+    "slug": "chocolate-chip-mint-cookie-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9b81e9e9-e6b2-4e4f-ae02-3c2c11bfe253",
+    "slug": "chocolate-chip-pancake-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "40f4bf70-a89a-4c4e-959e-ce36df9a5f83",
+    "slug": "chocolate-coconut-caramel-ice-cream",
+    "new_title": "Sorvete de Chocolate, Coco e Caramelo",
+    "new_description": "Sorvete tropical triplo de chocolate e coco com caramelo."
+  },
+  {
+    "id": "03272ca7-4c9c-44ed-ac3b-d856bccb78bf",
+    "slug": "chocolate-coconut-cream-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f881ce14-813c-4417-9367-a96d47b7591d",
+    "slug": "chocolate-coconut-fudge-ice-cream",
+    "new_title": "Sorvete de Chocolate, Coco e Fudge",
+    "new_description": "Rico sorvete de chocolate e coco com redemoinho de fudge."
+  },
+  {
+    "id": "3c11aaf7-c126-41c6-9865-7922d0ea31d0",
+    "slug": "chocolate-coconut-gelato",
+    "new_title": "Gelato de Chocolate e Coco",
+    "new_description": "Rico gelato de chocolate com creme tropical de coco."
+  },
+  {
+    "id": "3f90deb6-2281-4e4f-863e-f1da9ba4a2a3",
+    "slug": "chocolate-cookie-butter-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "72517249-c1c7-4af7-ac9e-2fe0ef6fb018",
+    "slug": "chocolate-cookie-dough-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a096e1ea-6d89-4b41-8c46-17bfc341440b",
+    "slug": "chocolate-cookie-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9857d914-d927-4c05-9ba4-f201ede7dac0",
+    "slug": "chocolate-covered-banana-chip-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2204834d-1c98-454f-9d95-26c53d6e5993",
+    "slug": "chocolate-covered-banana-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f72c43ea-27db-4037-a336-e12039fbdb66",
+    "slug": "chocolate-covered-cherry-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2f935fb9-9a46-4590-8cc2-621f99fc69fd",
+    "slug": "chocolate-covered-fig-ice-cream",
+    "new_title": "Sorvete de Figo Coberto de Chocolate",
+    "new_description": "Um sorvete indulgente e saboroso com base cremosa e notas intensas."
+  },
+  {
+    "id": "3563d18a-7899-4885-8b53-e7f293b138c6",
+    "slug": "chocolate-covered-macadamia-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Macadâmia Coberta de Chocolate",
+    "new_description": "Uma sobremesa gelada rica e cremosa de macadâmia crocante coberta de chocolate com camadas de sabores complementares."
+  },
+  {
+    "id": "8afa2d99-381a-4fe4-9f5a-f01b74d727ec",
+    "slug": "chocolate-covered-pretzel-crunch-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "3fa6ad9b-ed95-4d32-a234-03d8021371e8",
+    "slug": "chocolate-covered-strawberry-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Morango Coberto de Chocolate",
+    "new_description": "Sorvete de chocolate amargo com morango crocante liofilizado."
+  },
+  {
+    "id": "3da7421f-bde3-43d0-84f5-bc38810d1f55",
+    "slug": "chocolate-covered-strawberry-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d4a4eeaa-0bca-41d3-ae25-9225484a2cb4",
+    "slug": "chocolate-crinkle-cookie-ice-cream",
+    "new_title": "Sorvete de Biscoito Crinkle de Chocolate",
+    "new_description": "Delicioso sorvete de biscoito crinkle de chocolate com uma mistura de sabores perfeitamente equilibrada para uma sobremesa gelada sofisticada."
+  },
+  {
+    "id": "f5dc5dd2-cfa8-4241-b628-3873f8445ac2",
+    "slug": "chocolate-espresso-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "4db27a41-08fc-4c9f-b437-149e47463db6",
+    "slug": "chocolate-fondente-gelato",
+    "new_title": null,
+    "new_description": "Gelato ultrarico de chocolate amargo com 70% de cacau."
+  },
+  {
+    "id": "2dcf03ee-e78c-440c-b69d-728807a08922",
+    "slug": "chocolate-fudge-cookie-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "956a8e42-43cc-4c36-b993-6923c0fdb384",
+    "slug": "chocolate-gelato",
+    "new_title": null,
+    "new_description": "Gelato italiano denso e intensamente achocolatado. A maior proporção de leite para creme dá aquela riqueza característica do gelato sem o peso."
+  },
+  {
+    "id": "e4933f24-2945-4d6c-9a35-7e389a7a4edc",
+    "slug": "chocolate-graham-cracker-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "3d8209dc-59ac-4015-b8e4-8b46160c38d3",
+    "slug": "chocolate-malt-milkshake",
+    "new_title": null,
+    "new_description": "Milkshake espesso de chocolate maltado com pó de malte tradicional."
+  },
+  {
+    "id": "5f2d208f-1f71-401b-b5f2-4d891d39163e",
+    "slug": "chocolate-marshmallow-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "c1054a82-e090-481f-bdf6-bbbc5527799e",
+    "slug": "chocolate-milkshake",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "0d699e98-1617-4c57-bd3b-272f70fca770",
+    "slug": "chocolate-mint-brownie-cookie-ice-cream",
+    "new_title": "Sorvete de Menta, Chocolate, Brownie e Biscoito",
+    "new_description": "Sorvete refrescante de menta e chocolate com pedaços de brownie e biscoito."
+  },
+  {
+    "id": "d24048a9-440b-457e-ae57-a98eadcce63b",
+    "slug": "chocolate-mint-cookie-crumble-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2e0daaef-90b6-4c73-bd74-f186a40c605d",
+    "slug": "chocolate-mint-oreo-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "ace3c7bb-4cea-4e98-a29e-4919f686ee95",
+    "slug": "chocolate-mint-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "924f9ce0-1c9c-4e09-9946-a39dc2f58b5c",
+    "slug": "chocolate-nougat-ice-cream",
+    "new_title": "Sorvete de Chocolate e Nougat",
+    "new_description": null
+  },
+  {
+    "id": "af8d71c8-f15c-4cd5-8a94-fa9bd44d9b78",
+    "slug": "chocolate-orange-espresso-ice-cream",
+    "new_title": "Sorvete de Chocolate, Laranja e Espresso",
+    "new_description": "Um sorvete indulgente e saboroso com base cremosa e notas intensas."
+  },
+  {
+    "id": "2d7bb714-84c1-43f4-86b3-80968a553de1",
+    "slug": "chocolate-orange-gelato",
+    "new_title": "Gelato de Chocolate com Laranja",
+    "new_description": "Rico gelato de chocolate com raspas de laranja para um cioccolato-arancia."
+  },
+  {
+    "id": "7d58c08f-17f8-40db-b4dc-3ded6765129c",
+    "slug": "chocolate-orange-truffle-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "e3b8e086-2054-4609-95b6-937f09da91e8",
+    "slug": "chocolate-peanut-butter-banana-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Chocolate, Manteiga de Amendoim e Banana",
+    "new_description": "Sorvete triplo de sabor com PB, banana e chocolate crocante."
+  },
+  {
+    "id": "1bf4ceb0-6438-4c7f-9e1e-441f20c328d2",
+    "slug": "chocolate-peanut-butter-banana-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "608714a8-7532-472d-a661-9d7b7ca917de",
+    "slug": "chocolate-peanut-butter-banana-smoothie-bowl",
+    "new_title": "Smoothie Bowl de Chocolate, Manteiga de Amendoim e Banana",
+    "new_description": "Smoothie bowl de chocolate, manteiga de amendoim e banana que parece sobremesa mas é cheio de nutrientes. Proteína, potássio e antioxidantes em cada colherada."
+  },
+  {
+    "id": "c1cc8763-c581-4516-b1ac-6ccef37f83fb",
+    "slug": "chocolate-peanut-butter-cup-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Peanut Butter Cup com Chocolate",
+    "new_description": "Sorvete de Peanut Butter Cup com pedaços extra crocantes de amendoim."
+  },
+  {
+    "id": "9d9fef48-3268-4461-8816-2dc3942a7b5a",
+    "slug": "chocolate-peanut-butter-cup-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "b8355a99-daae-4f39-9f61-d5f352d00f9c",
+    "slug": "chocolate-peanut-butter-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "68df9741-ab4f-4c55-8daa-4ed1bd3a4223",
+    "slug": "chocolate-peanut-butter-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Chocolate com Manteiga de Amendoim",
+    "new_description": "Rico frozen yogurt de chocolate e manteiga de amendoim com iogurte grego."
+  },
+  {
+    "id": "d10a888e-8b57-4d15-9d6d-a506f3f40c7b",
+    "slug": "chocolate-peanut-butter-milkshake",
+    "new_title": "Milkshake de Chocolate com Manteiga de Amendoim",
+    "new_description": "Milkshake espesso de chocolate e manteiga de amendoim."
+  },
+  {
+    "id": "6853d9e6-43f6-4b1b-adec-68c4fa39be4b",
+    "slug": "chocolate-peanut-butter-pretzel-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "837274f2-e9f5-464b-8ed9-dfd42c5f8a1e",
+    "slug": "chocolate-peanut-butter-smoothie-bowl",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "0bdf6f93-7fa0-4e95-98e4-46bd50b50d46",
+    "slug": "chocolate-peanut-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Chocolate com Amendoim",
+    "new_description": "Rico sorvete de chocolate com amendoins crocantes cobertos de chocolate."
+  },
+  {
+    "id": "fb3cddb2-9655-459c-a781-cf77d3d82ea7",
+    "slug": "chocolate-pecan-caramel-ice-cream",
+    "new_title": "Sorvete de Chocolate, Noz-Pecã e Caramelo",
+    "new_description": "Rico sorvete de chocolate com nozes-pecãs e redemoinho de caramelo."
+  },
+  {
+    "id": "efb1208e-b999-4fa8-8d15-bc595e10d2bb",
+    "slug": "chocolate-pistachio-gelato",
+    "new_title": "Gelato de Chocolate com Pistache",
+    "new_description": "Gelato rico de chocolate com pasta de pistache para uma combinação com sabor de castanha."
+  },
+  {
+    "id": "664cd6da-c138-438a-8682-889998253f30",
+    "slug": "chocolate-protein-shake-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Chocolate",
+    "new_description": "Sorvete proteico rico de chocolate a partir de uma base de shake proteico de chocolate."
+  },
+  {
+    "id": "0fd883b0-f138-4e9f-9f0a-141b9d92c3fc",
+    "slug": "chocolate-raspberry-cheesecake-ice-cream",
+    "new_title": "Sorvete Cheesecake de Chocolate com Framboesa",
+    "new_description": "Sorvete cheesecake de chocolate com redemoinho de framboesa."
+  },
+  {
+    "id": "e214aacb-e9b5-4e74-a164-d7a1d78d5b62",
+    "slug": "chocolate-raspberry-truffle-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "24e0cb9c-3280-4bdb-b5ab-4a6ee7e40aea",
+    "slug": "chocolate-stout-ice-cream",
+    "new_title": "Sorvete de Chocolate e Stout",
+    "new_description": null
+  },
+  {
+    "id": "97992880-9ad1-45e9-a826-db5e868e73a4",
+    "slug": "chocolate-strawberry-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "72e5ac27-763a-47ad-b351-e75f5780a2c2",
+    "slug": "chocolate-tahini-ice-cream",
+    "new_title": "Sorvete de Chocolate e Tahini",
+    "new_description": null
+  },
+  {
+    "id": "557e74ba-0c0f-4a3f-8bce-6673a0da3d91",
+    "slug": "chocolate-tahini-swirl-ice-cream",
+    "new_title": "Sorvete com Redemoinho de Chocolate e Tahini",
+    "new_description": null
+  },
+  {
+    "id": "730898ea-adab-4fb7-b722-79c53c6fae7f",
+    "slug": "chocolate-toffee-crunch-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "4f3a7643-34b0-4ef7-9f24-a32fd33802e4",
+    "slug": "chocolate-truffle-gelato",
+    "new_title": null,
+    "new_description": "Decadente gelato de trufa de chocolate com intensa riqueza de cacau."
+  },
+  {
+    "id": "12b4c0ff-193e-44dd-a4a6-edd276795d2b",
+    "slug": "chocolate-vanilla-twist-soft-serve",
+    "new_title": "Sorvete Soft Twist de Chocolate e Baunilha",
+    "new_description": "Icônico sorvete soft twist de chocolate e baunilha."
+  },
+  {
+    "id": "0e4f7705-ee7d-4324-af01-0165d9fa19cf",
+    "slug": "chocolate-walnut-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Chocolate com Nozes",
+    "new_description": "Sorvete rico de chocolate com pedaços crocantes de noz."
+  },
+  {
+    "id": "8583330b-db34-47e7-af06-855b8dcf65f2",
+    "slug": "cinnamon-banana-ice-cream",
+    "new_title": "Sorvete de Banana com Canela",
+    "new_description": null
+  },
+  {
+    "id": "099d247c-2202-4973-b745-a0b0118614da",
+    "slug": "cinnamon-chocolate-chip-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "66d24927-66a1-4588-ba33-d7213b759d3f",
+    "slug": "cinnamon-churro-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "ad486bb5-a12b-4fdf-a73f-37285e96c0ac",
+    "slug": "cinnamon-dulce-de-leche-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "3f92e5ca-1daf-471b-8567-4847b45d580e",
+    "slug": "cinnamon-raisin-bread-ice-cream",
+    "new_title": "Sorvete de Pão de Canela com Passas",
+    "new_description": "Um sorvete indulgente e saboroso com base cremosa e notas intensas."
+  },
+  {
+    "id": "37c44040-3632-4b52-98b0-7e48c70f3604",
+    "slug": "cinnamon-roll-greek-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f64ed877-046b-4179-a038-18eeb42f8a26",
+    "slug": "cinnamon-sugar-donut-ice-cream",
+    "new_title": "Sorvete de Rosquinha de Canela com Açúcar",
+    "new_description": "Delicioso sorvete de rosquinha de canela com açúcar e sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "c771157e-ffec-48fa-b920-94989397084d",
+    "slug": "cinnamon-toast-crunch-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "01afcd47-27e8-41ae-96c0-51c8a92a0515",
+    "slug": "cinnamon-toast-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "cae00df0-090c-4555-aff9-4142570f6ced",
+    "slug": "cinnamon-toast-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Cinnamon Toast",
+    "new_description": "Sorvete proteico quente de canela com açúcar inspirado no cereal clássico."
+  },
+  {
+    "id": "78636848-4a59-45f6-ae38-4d100f44a026",
+    "slug": "classic-vanilla-bean-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "854d6878-7d04-4f9c-a64f-944f1d20738a",
+    "slug": "classic-vanilla-milkshake",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d1792a79-9cce-46dc-a60b-b8223cf428ba",
+    "slug": "clementine-sorbet",
+    "new_title": null,
+    "new_description": "Sorbet doce de clementina com suave doçura cítrica."
+  },
+  {
+    "id": "a9285bc7-4d53-4850-9a20-a83daf5f5c58",
+    "slug": "coconut-berry-smoothie-bowl",
+    "new_title": "Smoothie Bowl de Coco e Frutas Vermelhas",
+    "new_description": "Smoothie bowl tropical de coco e frutas vermelhas."
+  },
+  {
+    "id": "9ae895e9-be82-4c6e-bcd4-415750957921",
+    "slug": "coconut-caramel-crunch-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d75d883f-347c-4170-8273-fe9c60d95ca1",
+    "slug": "coconut-cookie-cream-ice-cream",
+    "new_title": "Sorvete de Coco com Creme de Biscoito",
+    "new_description": "Sorvete tropical de coco com redemoinho de creme de biscoito."
+  },
+  {
+    "id": "e0e91abb-d044-483a-9de5-8043304ffc89",
+    "slug": "coconut-cream-gelato",
+    "new_title": "Gelato de Creme de Coco",
+    "new_description": "Gelato tropical de creme de coco com base estilo italiano."
+  },
+  {
+    "id": "b4881e67-ab0d-44af-b3b6-cbaa609eafae",
+    "slug": "coconut-cream-pie-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "34bc9ef9-f089-4393-8f8e-0ebc80751943",
+    "slug": "coconut-cream-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Creme de Coco",
+    "new_description": "Sorvete proteico tropical de coco para uma sobremesa leve em laticínios."
+  },
+  {
+    "id": "95512b5c-211e-48dd-b65d-1cff8d233584",
+    "slug": "coconut-dulce-de-leche-ice-cream",
+    "new_title": "Sorvete de Coco com Doce de Leite",
+    "new_description": "Delicioso sorvete de coco e doce de leite com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "3f28dfe3-bf82-4a76-aaa9-ff35d43bdb4f",
+    "slug": "coconut-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Coco",
+    "new_description": "Frozen yogurt tropical de coco com iogurte grego para um lanche cremoso e rico em laticínios."
+  },
+  {
+    "id": "456d083e-b2fa-410d-974a-2befb36155e5",
+    "slug": "coconut-lavender-ice-cream",
+    "new_title": "Sorvete de Coco com Lavanda",
+    "new_description": "Delicioso sorvete de coco e lavanda com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "63a63099-61c9-4eda-a8bf-a68136ca855b",
+    "slug": "coconut-lemon-curd-ice-cream",
+    "new_title": "Sorvete de Coco com Creme de Limão",
+    "new_description": "Delicioso sorvete de coco e creme de limão com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "83981605-f7a8-4417-8343-a25cadcfd9eb",
+    "slug": "coconut-lime-leaf-ice-cream",
+    "new_title": "Sorvete de Coco com Folha de Limão",
+    "new_description": "Delicioso sorvete de coco e folha de limão com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "b1f38c68-52c0-472f-ae72-8ac30e43af26",
+    "slug": "coconut-macaroon-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "8cdf1ed5-cff8-415d-889f-79c6f57b43cb",
+    "slug": "coconut-mango-lime-ice-cream",
+    "new_title": "Sorvete de Coco, Manga e Limão",
+    "new_description": "Sorvete tropical de coco e manga com um toque de limão."
+  },
+  {
+    "id": "62c330ec-241a-434d-9fa7-2d6f1e3a6a41",
+    "slug": "coconut-mango-turmeric-ice-cream",
+    "new_title": "Sorvete de Coco, Manga e Cúrcuma",
+    "new_description": "Delicioso sorvete de coco, manga e cúrcuma com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "6d45d333-c8b6-43b5-ac63-bf8a059b19fb",
+    "slug": "coconut-pandan-ice-cream",
+    "new_title": "Sorvete de Coco e Pandan",
+    "new_description": "Delicioso sorvete de coco e pandan com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "66ccc0b2-51b1-47b9-a3b9-3a16f35fbb1e",
+    "slug": "coconut-pineapple-sorbet",
+    "new_title": null,
+    "new_description": "Sorbet cremoso de coco e abacaxi que parece uma piña colada congelada sem o rum."
+  },
+  {
+    "id": "6674cfbd-15b6-4e63-9821-60852cba2bc3",
+    "slug": "coconut-tres-leches-ice-cream",
+    "new_title": "Sorvete Tres Leches de Coco",
+    "new_description": "Sorvete de coco com três leites inspirado no amado bolo latino-americano."
+  },
+  {
+    "id": "b507b7cc-de58-4974-b67a-8beb443b364c",
+    "slug": "coffee-almond-brownie-ice-cream",
+    "new_title": "Sorvete de Café, Amêndoa e Brownie",
+    "new_description": "Sorvete intenso de café com pedaços de amêndoa e brownie."
+  },
+  {
+    "id": "4deef1e2-bb53-4e5d-9507-de5811c97e85",
+    "slug": "coffee-almond-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Café com Amêndoa",
+    "new_description": "Sorvete intenso de café com amêndoas cristalizadas crocantes."
+  },
+  {
+    "id": "38807526-8b1f-43a8-b5e3-800ca0744797",
+    "slug": "coffee-almond-milk-ice-cream",
+    "new_title": "Sorvete de Café com Leite de Amêndoa",
+    "new_description": "Delicioso sorvete de café com leite de amêndoa e sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "d541f613-d6c4-4b5c-9b87-ec5aa07ffae6",
+    "slug": "coffee-biscotti-ice-cream",
+    "new_title": "Sorvete de Café com Biscotti",
+    "new_description": null
+  },
+  {
+    "id": "6d24e305-6319-48bc-bda6-2291c930254f",
+    "slug": "coffee-brownie-swirl-ice-cream",
+    "new_title": "Sorvete com Redemoinho de Café e Brownie",
+    "new_description": "Sorvete intenso de café com redemoinho de massa de brownie."
+  },
+  {
+    "id": "988458f7-82e5-4b2d-aa64-8b654b04b345",
+    "slug": "coffee-caramel-milkshake",
+    "new_title": "Milkshake de Café com Caramelo",
+    "new_description": "Milkshake intenso de café e caramelo para uma delícia com cafeína."
+  },
+  {
+    "id": "6c41b1e3-6e12-484e-91a2-4e8c59e2052a",
+    "slug": "coffee-caramel-pecan-ice-cream",
+    "new_title": "Sorvete de Café, Caramelo e Noz-Pecã",
+    "new_description": "Sorvete intenso de café com caramelo e pedaços de nozes-pecãs cristalizadas."
+  },
+  {
+    "id": "9648e085-0fc7-4374-b475-d8e0495b2cee",
+    "slug": "coffee-cardamom-ice-cream",
+    "new_title": "Sorvete de Café e Cardamomo",
+    "new_description": "Um sorvete indulgente e saboroso com base cremosa e notas intensas."
+  },
+  {
+    "id": "2609d914-500a-4af1-8272-4a34b6f3de2e",
+    "slug": "coffee-chip-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Café com Gotas",
+    "new_description": "Sorvete proteico intenso de café com gotas de chocolate amargo."
+  },
+  {
+    "id": "62ec1548-0caa-4a6e-91cd-a8b24be907db",
+    "slug": "coffee-coconut-cream-ice-cream",
+    "new_title": "Sorvete de Café com Creme de Coco",
+    "new_description": "Sorvete intenso de café com creme tropical de coco."
+  },
+  {
+    "id": "409453db-8198-484b-bcba-85934d5bfd54",
+    "slug": "coffee-cookie-crumble-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Café com Crumble de Biscoito",
+    "new_description": "Sorvete proteico intenso de café com farelos de biscoito."
+  },
+  {
+    "id": "57cfc4bb-22d4-4c49-85bd-adeddf959789",
+    "slug": "coffee-cookie-dough-ice-cream",
+    "new_title": "Sorvete de Café com Massa de Cookie",
+    "new_description": "Sorvete intenso de café com pedaços de massa de biscoito com gotas de chocolate."
+  },
+  {
+    "id": "77ddb8ae-cb36-4f38-b527-fbe2a1c08270",
+    "slug": "coffee-cream-cookie-ice-cream",
+    "new_title": "Sorvete de Creme de Café com Biscoito",
+    "new_description": "Sorvete de creme de café intenso com farelos de biscoito."
+  },
+  {
+    "id": "4330d4a2-0f79-4f29-8a89-0f8e5acb8af9",
+    "slug": "coffee-cream-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Creme de Café",
+    "new_description": "Sorvete proteico de creme de café intenso para uma sobremesa estilo latte."
+  },
+  {
+    "id": "7bc0e98a-39b6-40f7-b7c5-a762114d6416",
+    "slug": "coffee-oreo-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "ac07b783-7e9f-45df-b351-aee7ac4ab8c8",
+    "slug": "condensed-milk-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "8e361864-b368-4195-9aaa-37d920e958dd",
+    "slug": "cookie-butter-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "398c3345-d6e0-4039-b1d2-5b143238b52b",
+    "slug": "cookie-dough-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a51e38fb-6a22-4007-8b83-9db5488aaa2f",
+    "slug": "cookies-and-cream-brownie-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "7a514c63-bb7d-4469-9ca7-8303666ebedf",
+    "slug": "cookies-and-cream-brownie-milkshake",
+    "new_title": "Milkshake de Cookies and Cream com Brownie",
+    "new_description": "Duplo prazer: milkshake de cookies and cream com brownie."
+  },
+  {
+    "id": "a7d9e89d-a832-405c-bd9e-67432a86e325",
+    "slug": "cookies-and-cream-cheesecake-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "0b7da72a-9274-47bd-9d0c-e3a865ac0b87",
+    "slug": "cookies-and-cream-cottage-cheese-protein-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "7589d857-2d7c-438a-8e34-55019305b2f3",
+    "slug": "cookies-and-cream-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a3c3bd5f-fa97-48a4-9d8d-cc1446067470",
+    "slug": "cookies-and-cream-gelato",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "e3970171-9fe7-41dd-b4d2-82ef834b49a3",
+    "slug": "cookies-and-cream-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego Cookies and Cream",
+    "new_description": "Frozen yogurt com Oreo triturada e iogurte grego para uma versão mais leve de cookies and cream."
+  },
+  {
+    "id": "3c2fb47e-ea0b-4c8f-96c9-d78355d7d7cd",
+    "slug": "cornbread-honey-butter-ice-cream",
+    "new_title": "Sorvete de Pão de Milho com Manteiga e Mel",
+    "new_description": "Doce sorvete de pão de milho com redemoinho de manteiga e mel para uma sobremesa sulista."
+  },
+  {
+    "id": "187df3aa-f85f-426b-8c35-f4bfb90ebfa7",
+    "slug": "cottage-cheese-chocolate-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f84a1d7a-b8c7-4d37-b84f-13005eb7462e",
+    "slug": "cottage-cheese-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "ad96616d-ebfb-407e-8340-fc81e2e5c136",
+    "slug": "cotton-candy-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "5d463994-802f-4741-a244-c61769eeebf8",
+    "slug": "cotton-candy-italian-ice",
+    "new_title": "Granita Italiana de Algodão Doce",
+    "new_description": "Divertida granita italiana de algodão doce com sabor de parque de diversões."
+  },
+  {
+    "id": "fb5b9e63-acf5-40fa-bd6e-f8fb3a198c80",
+    "slug": "cotton-candy-vanilla-soft-serve",
+    "new_title": "Sorvete Soft de Baunilha com Algodão Doce",
+    "new_description": "Doce sorvete soft com sabor de algodão doce."
+  },
+  {
+    "id": "3c479a6d-5894-40ea-9af8-698028220208",
+    "slug": "cranberry-italian-ice",
+    "new_title": "Granita Italiana de Cranberry",
+    "new_description": "Granita italiana de cranberry ácida para uma sobremesa gelada festiva."
+  },
+  {
+    "id": "9213e97f-c578-42f1-9cc2-11ad7fb1fdfe",
+    "slug": "cranberry-orange-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Cranberry e Laranja",
+    "new_description": "Festivo frozen yogurt de cranberry e laranja com iogurte grego para um prazer natalino."
+  },
+  {
+    "id": "97767b53-3a52-44a3-b23d-11191ada6e3a",
+    "slug": "cranberry-orange-sorbet",
+    "new_title": null,
+    "new_description": "Sorbet festivo de cranberry com suco de laranja fresco. Ácido, doce e perfeito para a temporada de festas."
+  },
+  {
+    "id": "839bf38b-9903-4986-98ed-af3c90b3b747",
+    "slug": "cream-cheese-chocolate-chip-ice-cream",
+    "_skip_reason": "clean PT with cream cheese loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "4e4065be-45a2-4e5b-8672-6f282df8717b",
+    "slug": "cream-cheese-strawberry-ice-cream",
+    "_skip_reason": "clean PT with cream cheese loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9031558d-904c-48ae-8d38-9e2e7885b093",
+    "slug": "crema-gelato",
+    "new_title": null,
+    "new_description": "Simples gelato italiano crema com a riqueza de um creme de ovos."
+  },
+  {
+    "id": "231ec0b4-ab38-4451-8d01-408ba7e88f1a",
+    "slug": "creme-brulee-gelato",
+    "new_title": "Gelato de Crème Brûlée",
+    "new_description": "Gelato de creme de caramelo queimado com lascas de açúcar caramelizado."
+  },
+  {
+    "id": "b9fb8566-e46b-4d3e-9b8a-2f5cea992d53",
+    "slug": "dark-chocolate-almond-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Chocolate Amargo com Amêndoa",
+    "new_description": "Sorvete intenso de chocolate amargo com amêndoas crocantes."
+  },
+  {
+    "id": "74dfde5f-6751-4fe7-80d6-f3c1b83dea1d",
+    "slug": "dark-chocolate-avocado-ice-cream",
+    "new_title": "Sorvete de Chocolate Amargo com Abacate",
+    "new_description": "Um sorvete sofisticado de chocolate amargo com abacate, com uma combinação de sabores inesperada porém harmoniosa."
+  },
+  {
+    "id": "5dd0be66-4bef-4446-95f8-015e369ebf49",
+    "slug": "dark-chocolate-brownie-swirl-ice-cream",
+    "new_title": "Sorvete com Redemoinho de Chocolate Amargo e Brownie",
+    "new_description": "Sorvete intenso de chocolate amargo com redemoinho de massa de brownie."
+  },
+  {
+    "id": "8bdd3762-54ba-4fd8-b6fb-4ac4365db273",
+    "slug": "dark-chocolate-caramel-pretzel-ice-cream",
+    "new_title": "Sorvete de Chocolate Amargo, Caramelo e Pretzel",
+    "new_description": "Sorvete agridoce de chocolate amargo com caramelo e pedacinhos de pretzel."
+  },
+  {
+    "id": "d8fef710-5af6-499e-94f0-52948d869c2e",
+    "slug": "dark-chocolate-coconut-ice-cream",
+    "new_title": "Sorvete de Chocolate Amargo com Coco",
+    "new_description": "Sorvete intenso de chocolate amargo com coco tostado."
+  },
+  {
+    "id": "581d7182-3213-4b95-bf7d-68462a978d09",
+    "slug": "dark-chocolate-cookie-crumble-ice-cream",
+    "new_title": "Sorvete de Chocolate Amargo com Crumble de Biscoito",
+    "new_description": "Sorvete intenso de chocolate amargo com crumble de biscoito."
+  },
+  {
+    "id": "36675173-5837-4c97-8a84-538f9bb40c9c",
+    "slug": "dark-chocolate-espresso-chip-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "c8f31bdf-be8b-4427-90bb-8e1e48ea659e",
+    "slug": "dark-chocolate-ginger-ice-cream",
+    "new_title": "Sorvete de Chocolate Amargo com Gengibre",
+    "new_description": "Uma sobremesa gelada rica e cremosa de chocolate amargo e gengibre com camadas de sabores complementares."
+  },
+  {
+    "id": "adcd132d-b675-41a3-b9fe-7d6a69e77a2f",
+    "slug": "dark-chocolate-mint-chip-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "8415494e-c4c0-4ed2-91e7-9961504f6948",
+    "slug": "dark-chocolate-peanut-butter-swirl-ice-cream",
+    "new_title": "Sorvete com Redemoinho de Chocolate Amargo e Manteiga de Amendoim",
+    "new_description": "Sorvete agridoce de chocolate amargo com redemoinho de manteiga de amendoim."
+  },
+  {
+    "id": "5fbb616d-3144-4cee-8732-3b24c194a04b",
+    "slug": "dark-chocolate-raspberry-swirl-ice-cream",
+    "new_title": "Sorvete com Redemoinho de Chocolate Amargo e Framboesa",
+    "new_description": "Rico sorvete de chocolate amargo com vibrante redemoinho de framboesa."
+  },
+  {
+    "id": "c7dfc22b-b4bf-4ec1-8de0-601e169ac640",
+    "slug": "dark-chocolate-sea-salt-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "7258da5d-327b-4732-abd8-554f344e3c11",
+    "slug": "dark-chocolate-tahini-ice-cream",
+    "new_title": "Sorvete de Chocolate Amargo com Tahini",
+    "new_description": "Delicioso sorvete de chocolate amargo com tahini, com uma mistura de sabores perfeitamente equilibrada para uma sobremesa gelada sofisticada."
+  },
+  {
+    "id": "6bfeb9d4-7b43-4602-872b-1871fb90179c",
+    "slug": "dark-chocolate-truffle-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "602d5857-2a33-40a9-b71a-46d342283a4d",
+    "slug": "dragon-fruit-coconut-smoothie-bowl",
+    "new_title": "Smoothie Bowl de Pitaya e Coco",
+    "new_description": null
+  },
+  {
+    "id": "c8ba6b5e-cbbf-43e4-acf8-50884b25acb5",
+    "slug": "dragon-fruit-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "80725d2e-036e-430c-ba1c-193ea433c9a0",
+    "slug": "dulce-de-leche-banana-ice-cream",
+    "new_title": "Sorvete de Dulce de Leche com Banana",
+    "new_description": "Sorvete rico de doce de leite com banana madura para uma doce combinação."
+  },
+  {
+    "id": "9141cb93-c6d5-457b-a89a-353d59bf665f",
+    "slug": "dulce-de-leche-gelato",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "6ef0316d-74b9-4402-8139-11505ad046f1",
+    "slug": "dulce-de-leche-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "283899b0-0c7c-4c2a-8813-3173e921817f",
+    "slug": "espresso-caramel-chip-ice-cream",
+    "new_title": "Sorvete de Espresso com Caramelo e Gotas",
+    "new_description": "Sorvete intenso de espresso com gotas de caramelo e redemoinho de moca."
+  },
+  {
+    "id": "1dc32598-fac1-4229-a85f-18f510eaa281",
+    "slug": "espresso-chip-cookie-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "70266a8e-def0-4d62-86ca-609e9bd24f73",
+    "slug": "espresso-chip-gelato",
+    "new_title": null,
+    "new_description": "Gelato intenso de espresso com gotas de chocolate amargo."
+  },
+  {
+    "id": "bd90dcb8-25d0-4d0e-aab6-50f588706f81",
+    "slug": "espresso-chip-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "1951fcbe-e2b3-4de4-be78-4a3ee219dc33",
+    "slug": "espresso-cookie-crunch-milkshake",
+    "new_title": "Milkshake Crocante de Espresso com Biscoito",
+    "new_description": "Milkshake intenso de espresso com biscoitos de chocolate triturados."
+  },
+  {
+    "id": "890e7f16-5ef6-47a8-9e07-5ccfca292a71",
+    "slug": "espresso-dark-chocolate-ice-cream",
+    "new_title": "Sorvete de Espresso com Chocolate Amargo",
+    "new_description": "Sorvete intenso de espresso com lascas de chocolate amargo."
+  },
+  {
+    "id": "2de2458e-216a-414a-81f0-078e1d440ff8",
+    "slug": "espresso-dulce-de-leche-ice-cream",
+    "new_title": "Sorvete de Espresso com Dulce de Leche",
+    "new_description": "Um sorvete sofisticado de espresso com dulce de leche, com uma combinação de sabores inesperada porém harmoniosa."
+  },
+  {
+    "id": "f6d50f35-1da6-422b-b653-203d2c00b41b",
+    "slug": "espresso-marshmallow-ice-cream",
+    "new_title": "Sorvete de Espresso com Marshmallow",
+    "new_description": "Um sorvete indulgente e saboroso com base cremosa e notas intensas."
+  },
+  {
+    "id": "af6994c3-29ba-4a80-b0e7-3812f0267c2d",
+    "slug": "espresso-vanilla-bean-ice-cream",
+    "new_title": "Sorvete de Espresso com Fava de Baunilha",
+    "new_description": "Sorvete intenso de espresso com pedacinhos de fava de baunilha."
+  },
+  {
+    "id": "1940ba04-20aa-4d65-9b62-daaf0ae31add",
+    "slug": "fairlife-chocolate-caramel-lite-ice-cream",
+    "new_title": "Sorvete Fairlife Light de Chocolate com Caramelo",
+    "new_description": "Sorvete proteico de chocolate e caramelo feito com leite Fairlife."
+  },
+  {
+    "id": "20917019-739f-47c2-8743-31b32aa041c3",
+    "slug": "fairlife-cookies-and-cream-lite-ice-cream",
+    "new_title": "Sorvete Fairlife Light Cookies and Cream",
+    "new_description": "Sorvete proteico cookies and cream feito com leite Fairlife."
+  },
+  {
+    "id": "4c1f1753-1b21-4b4f-af9d-589b015fe0f4",
+    "slug": "fairlife-peanut-butter-lite-ice-cream",
+    "new_title": "Sorvete Fairlife Light de Manteiga de Amendoim",
+    "new_description": "Sorvete proteico de manteiga de amendoim feito com leite Fairlife."
+  },
+  {
+    "id": "201afd3f-9ecd-4a41-bd03-2e2568543c1c",
+    "slug": "fairlife-protein-shake-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "eef721a9-cd94-444e-81d5-d90e655cfcbd",
+    "slug": "fairlife-salted-caramel-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "32898f58-f17f-491e-ae97-fdc57f6f72c0",
+    "slug": "fairlife-vanilla-caramel-lite-ice-cream",
+    "new_title": "Sorvete Fairlife Light de Baunilha com Caramelo",
+    "new_description": "Sorvete proteico de caramelo e baunilha feito com leite Fairlife."
+  },
+  {
+    "id": "a6557fe4-87ce-42c7-b96a-f946cd0b88b6",
+    "slug": "fairlife-vanilla-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d7a71149-e696-4fa4-a37f-da33baae13e0",
+    "slug": "fig-balsamic-walnut-ice-cream",
+    "new_title": "Sorvete de Figo, Balsâmico e Nozes",
+    "new_description": "Delicioso sorvete de figo, balsâmico e nozes com uma mistura de sabores perfeitamente equilibrada para uma sobremesa gelada sofisticada."
+  },
+  {
+    "id": "3ec47d4d-142b-4cda-8c6d-3c5d5a4d0793",
+    "slug": "fig-honey-sorbet",
+    "new_title": "Sorbet de Figo com Mel",
+    "new_description": "Rico sorbet de figo adoçado com mel para uma sobremesa de inspiração mediterrânea."
+  },
+  {
+    "id": "b9a99b3a-269e-4a1e-b162-a7f5b4972fe2",
+    "slug": "fig-mascarpone-gelato",
+    "new_title": "Gelato de Figo com Mascarpone",
+    "new_description": "Rico gelato de figo com cremoso queijo mascarpone."
+  },
+  {
+    "id": "d6b1ac47-7a1a-4c7a-8095-db14d26e3f94",
+    "slug": "fior-di-latte-gelato",
+    "new_title": null,
+    "new_description": "Simples e elegante gelato italiano de creme doce que destaca o puro sabor lácteo."
+  },
+  {
+    "id": "b3fbcab0-c09f-4270-b1f4-b1922cbc530f",
+    "slug": "fresh-strawberry-soft-serve",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "28235315-ced4-4152-a4ed-ba7cc55fe357",
+    "slug": "fresh-strawberry-sorbet",
+    "new_title": null,
+    "new_description": "Sorbet de morango vibrante e refrescante transbordando de sabor real de frutas vermelhas. Naturalmente sem laticínios e vegano, perfeito para dias quentes de verão."
+  },
+  {
+    "id": "305c9315-34ed-47fd-aead-894da1332904",
+    "slug": "german-chocolate-ice-cream",
+    "new_title": null,
+    "new_description": "Sorvete inspirado no bolo alemão de chocolate com notas de coco e nozes-pecãs. Rico e em camadas."
+  },
+  {
+    "id": "8b6bcc11-59fd-427a-9838-8a23dc452b34",
+    "slug": "gianduja-gelato",
+    "new_title": null,
+    "new_description": "Clássico gelato italiano gianduja que une chocolate e avelãs tostadas."
+  },
+  {
+    "id": "abc9b262-56e0-425f-8d3b-2da5dc75226f",
+    "slug": "ginger-cardamom-ice-cream",
+    "new_title": "Sorvete de Gengibre com Cardamomo",
+    "new_description": "Um sorvete sofisticado de gengibre e cardamomo com uma combinação de sabores inesperada porém harmoniosa."
+  },
+  {
+    "id": "76b47348-b735-41e7-9def-b3e1e6c76bd5",
+    "slug": "ginger-snap-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "c500f2ec-e1a3-4150-9dd1-16574b64d20f",
+    "slug": "ginger-turmeric-honey-ice-cream",
+    "new_title": "Sorvete de Gengibre, Cúrcuma e Mel",
+    "new_description": "Um sorvete sofisticado de gengibre, cúrcuma e mel com uma combinação de sabores inesperada porém harmoniosa."
+  },
+  {
+    "id": "07ce6259-d8e0-4f52-9285-3a88f9862507",
+    "slug": "gingerbread-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "accb0321-2c46-4da4-b5d3-ebd5ce3c3668",
+    "slug": "gingerbread-latte-ice-cream",
+    "new_title": "Sorvete de Latte de Pão de Mel",
+    "new_description": "Delicioso sorvete de latte de pão de mel com uma mistura de sabores perfeitamente equilibrada para uma sobremesa gelada sofisticada."
+  },
+  {
+    "id": "c0fe24ad-7b34-4a97-b606-c119209fdd57",
+    "slug": "goji-berry-vanilla-ice-cream",
+    "new_title": "Sorvete de Goji Berry com Baunilha",
+    "new_description": "Uma sobremesa gelada rica e cremosa de goji berry e baunilha com camadas de sabores complementares."
+  },
+  {
+    "id": "d05926f5-f770-450a-b64f-7080e30d5f86",
+    "slug": "graham-cracker-cookie-dough-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "1444cd21-1725-44c6-b743-287bfa483689",
+    "slug": "grape-mint-sorbet",
+    "new_title": "Sorbet de Uva com Menta",
+    "new_description": "Clássico sorbet de uva com menta refrescante para uma sobremesa gelada."
+  },
+  {
+    "id": "765913d9-3423-4986-b451-786f2e579e06",
+    "slug": "grapefruit-campari-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9888f27b-9a17-4a1f-9a52-d54546fb6fae",
+    "slug": "grapefruit-ginger-sorbet",
+    "new_title": "Sorbet de Toranja com Gengibre",
+    "new_description": "Sorbet ácido de toranja com gengibre aquecedor para uma combinação intensa."
+  },
+  {
+    "id": "e8ea9c43-99bd-44a8-93f7-38b145b8ecc5",
+    "slug": "grapefruit-honey-ice-cream",
+    "new_title": "Sorvete de Toranja com Mel",
+    "new_description": "Sorvete ácido de toranja suavizado com mel dourado de flores silvestres."
+  },
+  {
+    "id": "effd34ff-35d6-49eb-88da-08806a9c4e44",
+    "slug": "greek-yogurt-vanilla-bean-lite-ice-cream",
+    "new_title": "Sorvete Light de Baunilha com Iogurte Grego",
+    "new_description": "Sorvete proteico denso de fava de baunilha com base de iogurte grego."
+  },
+  {
+    "id": "1a163aa0-3cdd-49e1-ad97-cabc4b8574e4",
+    "slug": "green-grape-sorbet",
+    "new_title": "Sorbet de Uva Verde",
+    "new_description": "Sorbet leve e refrescante de uva verde com um toque de limão."
+  },
+  {
+    "id": "4ce1456b-1fe9-40cb-b611-55e23f0faa2f",
+    "slug": "green-smoothie-bowl",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9831ad5a-5518-4d56-8675-b03e147fc8a1",
+    "slug": "green-spinach-banana-smoothie-bowl",
+    "new_title": null,
+    "new_description": "Bowl de smoothie verde saudável de espinafre e banana com cor verde vibrante e sabor surpreendentemente doce. Rico em ferro e potássio."
+  },
+  {
+    "id": "2ee12472-f7ca-446d-a9b2-19c8dfacca87",
+    "slug": "hazelnut-gelato",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a31fb1cc-65e5-40fb-a585-cb456f787087",
+    "slug": "honey-bee-pollen-ice-cream",
+    "new_title": "Sorvete de Mel e Pólen de Abelha",
+    "new_description": null
+  },
+  {
+    "id": "e064f149-5546-4df2-bfbf-daba397cbf4e",
+    "slug": "honey-ginger-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "b0766ec6-0de9-4682-a0b2-b40a64a2bd34",
+    "slug": "honey-vanilla-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Mel com Baunilha",
+    "new_description": "Simples frozen yogurt de baunilha adoçado com mel e iogurte grego para uma delícia limpa."
+  },
+  {
+    "id": "f81f48a9-0866-44e2-9c23-8024b979e54d",
+    "slug": "honeycomb-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Favo de Mel",
+    "new_description": null
+  },
+  {
+    "id": "f726eeb2-2085-497d-896b-c0761108ed03",
+    "slug": "horchata-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "342049c4-54c7-493d-899d-b1f67196d42e",
+    "slug": "hot-fudge-sundae-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9264c8a8-0456-45b1-8209-848e3ccf3d9d",
+    "slug": "jasmine-tea-honey-ice-cream",
+    "new_title": "Sorvete de Chá Jasmim com Mel",
+    "new_description": "Um sorvete único e sofisticado de chá jasmim e mel com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "58295aaa-9c86-4c45-8af0-66fe71a2757c",
+    "slug": "keto-chocolate-cheesecake-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "da8c789a-1f02-4f58-98f4-c87c13a87b8a",
+    "slug": "keto-mint-chocolate-chip-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "b0e37929-b1f1-4c94-946d-0891f3fa500d",
+    "slug": "keto-mocha-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "4896ddfb-904a-42ae-baa5-a59174dd5585",
+    "slug": "keto-pistachio-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "196efe01-7f41-4792-a0ed-ac56e71b36c7",
+    "slug": "keto-pumpkin-spice-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "5e5f040c-4013-412e-9eef-114aefba8ac6",
+    "slug": "keto-vanilla-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "de1e7f86-ec21-4423-936d-c229d27d1ceb",
+    "slug": "kiwi-banana-smoothie-bowl",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "7824c21c-9d39-4a73-9af0-41b5dc020e56",
+    "slug": "kiwi-strawberry-sorbet",
+    "new_title": "Sorbet de Kiwi e Morango",
+    "new_description": "Sorbet ácido de kiwi com morango doce para uma mistura vibrante de frutas."
+  },
+  {
+    "id": "80368b88-e530-4cf6-acde-3d838628940c",
+    "slug": "lavender-blueberry-cream-ice-cream",
+    "new_title": "Sorvete de Lavanda, Mirtilo e Creme",
+    "new_description": null
+  },
+  {
+    "id": "40363a3d-6f2c-482f-afac-f513cfdc73c1",
+    "slug": "lavender-earl-grey-ice-cream",
+    "new_title": "Sorvete de Lavanda com Earl Grey",
+    "new_description": "Delicioso sorvete de lavanda e Earl Grey com uma mistura de sabores perfeitamente equilibrada para uma sobremesa gelada sofisticada."
+  },
+  {
+    "id": "3b4d7a97-e9f3-45b2-9a4c-bf25cc80349b",
+    "slug": "lavender-honey-vanilla-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "cfed6bec-9543-4c74-9899-96505e05a6f6",
+    "slug": "lemon-curd-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "4e549f0b-d1ae-4a97-a4c3-fc62bb4f803c",
+    "slug": "lemon-olive-oil-ice-cream",
+    "new_title": "Sorvete de Limão com Azeite",
+    "new_description": "Um sorvete indulgente e saboroso com base cremosa e notas intensas."
+  },
+  {
+    "id": "f1fe846a-010f-4de1-90e9-23486f08895f",
+    "slug": "limoncello-gelato",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a36d1456-3841-4882-960f-ab994001126b",
+    "slug": "london-fog-earl-grey-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d5d9beac-287f-4c87-be85-139ac5b90efb",
+    "slug": "lychee-rose-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "e4807087-fac2-475b-a030-7110742acf75",
+    "slug": "macadamia-nut-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "6fe8f1d0-e01e-4a2d-9a43-7716400d95db",
+    "slug": "mango-basil-gelato",
+    "new_title": "Gelato de Manga com Manjericão",
+    "new_description": "Gelato tropical de manga com manjericão fresco para uma combinação de verão."
+  },
+  {
+    "id": "5a557a5f-8473-425f-b35e-8546380f9eeb",
+    "slug": "mango-basil-sorbet",
+    "new_title": "Sorbet de Manga com Manjericão",
+    "new_description": "Sorbet tropical de manga com manjericão fresco para uma fusão erva-fruta."
+  },
+  {
+    "id": "fa7ff2f5-26be-4a12-8e6c-1195da87b5be",
+    "slug": "mango-cardamom-ice-cream",
+    "new_title": "Sorvete de Manga com Cardamomo",
+    "new_description": "Sorvete tropical de manga com cardamomo aromático e especiado."
+  },
+  {
+    "id": "345538a5-189d-49d3-8336-55f324557455",
+    "slug": "mango-chili-italian-ice",
+    "new_title": "Granita Italiana de Manga com Pimenta",
+    "new_description": null
+  },
+  {
+    "id": "393c7b1e-ba60-474f-a295-7be03679c834",
+    "slug": "mango-chili-lime-ice-cream",
+    "new_title": "Sorvete de Manga, Pimenta e Limão",
+    "new_description": null
+  },
+  {
+    "id": "e3097a67-33d5-49ec-bd1e-a53ddf8b2916",
+    "slug": "mango-chili-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "8f637c19-f206-44db-87ba-db5ff28fedd4",
+    "slug": "mango-coconut-cream-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "0a931848-b744-4455-8977-77dee160f3b2",
+    "slug": "mango-coconut-sorbet",
+    "new_title": "Sorbet de Manga com Coco",
+    "new_description": "Sorbet cremoso de manga com coco para uma sobremesa tropical sem laticínios."
+  },
+  {
+    "id": "3dc4a602-75c1-4081-be1f-123bcd788c28",
+    "slug": "mango-cream-gelato",
+    "new_title": "Gelato de Creme de Manga",
+    "new_description": "Gelato tropical de manga com base de creme italiano para uma fusão frutada."
+  },
+  {
+    "id": "a6cf1959-a27c-46c2-a508-ad5054a127f7",
+    "slug": "mango-gelato",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "172d3703-d7a2-4816-81a6-8c02da68c509",
+    "slug": "mango-ginger-smoothie-bowl",
+    "new_title": "Smoothie Bowl de Manga com Gengibre",
+    "new_description": null
+  },
+  {
+    "id": "8f0c7893-7bda-4656-96d2-6d1503073537",
+    "slug": "mango-ginger-sorbet",
+    "new_title": "Sorbet de Manga com Gengibre",
+    "new_description": "Sorbet tropical de manga com gengibre aquecedor para uma sobremesa frutada e especiada."
+  },
+  {
+    "id": "d121237a-7225-4918-9f62-d88a9beb1ba7",
+    "slug": "mango-graham-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9c6e64c4-c5e4-4a42-a269-dc270c8689ee",
+    "slug": "mango-greek-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "da5c1861-3fee-4b1c-a8c8-e930e7cb45e8",
+    "slug": "mango-italian-ice",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "ed3aead5-d7fc-41c8-831b-984720406cfb",
+    "slug": "mango-lassi-milkshake",
+    "new_title": "Milkshake de Mango Lassi",
+    "new_description": "Milkshake de mango lassi de inspiração indiana com iogurte e cardamomo."
+  },
+  {
+    "id": "71ffaae0-da58-48d1-9958-932d4f9fa5a1",
+    "slug": "mango-lime-coconut-ice-cream",
+    "new_title": "Sorvete de Manga, Limão e Coco",
+    "new_description": "Uma sobremesa gelada única de manga, limão e coco com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "504c5a9a-51e1-4331-9d8b-8bf524bd0706",
+    "slug": "mango-pineapple-italian-ice",
+    "new_title": "Granita Italiana de Manga e Abacaxi",
+    "new_description": "Granita italiana tropical de manga e abacaxi."
+  },
+  {
+    "id": "940ed75e-4747-470f-9e60-db4f49649cbc",
+    "slug": "mango-raspberry-sorbet",
+    "new_title": "Sorbet de Manga com Framboesa",
+    "new_description": "Sorbet exótico de manga com framboesa ácida para uma combinação colorida."
+  },
+  {
+    "id": "245fca54-34ae-437e-9eb5-08104a90f604",
+    "slug": "mango-soft-serve",
+    "new_title": "Sorvete Soft de Manga",
+    "new_description": "Sorvete soft tropical de manga dispensado sedoso e suave."
+  },
+  {
+    "id": "abf04803-c636-42b5-bf79-56ab07d8582b",
+    "slug": "mango-turmeric-sorbet",
+    "new_title": "Sorbet de Manga com Cúrcuma",
+    "new_description": "Sorbet dourado de manga com cúrcuma anti-inflamatória para uma delícia vibrante."
+  },
+  {
+    "id": "40446946-90c0-429d-add3-02080636e768",
+    "slug": "mango-vanilla-bean-ice-cream",
+    "new_title": "Sorvete de Manga com Fava de Baunilha",
+    "new_description": null
+  },
+  {
+    "id": "2ead0fc4-861a-4be4-a25e-67817dc2011f",
+    "slug": "maple-almond-ice-cream",
+    "new_title": "Sorvete de Bordo com Amêndoa",
+    "new_description": "Sorvete puro de bordo com pedaços de amêndoa tostada."
+  },
+  {
+    "id": "3b3bff2e-2574-42ce-a4c0-f09cb98df5c9",
+    "slug": "maple-bacon-bourbon-ice-cream",
+    "new_title": "Sorvete de Bordo, Bacon e Bourbon",
+    "new_description": "Delicioso sorvete de bordo, bacon e bourbon com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "687b9642-d4cd-40ca-ae3a-e5472d9592cf",
+    "slug": "maple-bacon-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a68da550-a624-411b-9952-68032859b023",
+    "slug": "maple-cashew-ice-cream",
+    "new_title": "Sorvete de Bordo com Caju",
+    "new_description": "Sorvete puro de bordo com pedaços crocantes de caju tostado."
+  },
+  {
+    "id": "4dba7074-461f-4cfc-915f-51d382c37576",
+    "slug": "maple-cinnamon-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "088a2bd4-1234-4d2f-9f87-84fbc0925c1a",
+    "slug": "maple-cinnamon-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "567427e7-e50b-4dc6-97bb-e629993f1bc0",
+    "slug": "maple-ginger-snap-ice-cream",
+    "new_title": "Sorvete de Bordo com Biscoito de Gengibre",
+    "new_description": "Delicioso sorvete de bordo e biscoito de gengibre com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "3a3660a9-a167-49ad-95e2-3d3a5588d9e8",
+    "slug": "maple-pecan-milkshake",
+    "new_title": "Milkshake de Bordo com Noz-Pecã",
+    "new_description": "Milkshake rico de bordo com pedaços de nozes-pecãs."
+  },
+  {
+    "id": "cf39ec22-f0b5-4273-93f5-256c9d0eea0c",
+    "slug": "maple-walnut-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "c7ee4276-6929-433e-a230-974274946317",
+    "slug": "marshmallow-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "cdae8174-9b55-4d89-8647-2571cc6f47ad",
+    "slug": "mascarpone-honey-gelato",
+    "new_title": "Gelato de Mascarpone com Mel",
+    "new_description": "Sedoso gelato de mascarpone adoçado com mel italiano de flores silvestres."
+  },
+  {
+    "id": "2acf8a36-3348-439c-b4a6-09c1dd56fcfd",
+    "slug": "matcha-almond-butter-ice-cream",
+    "new_title": "Sorvete de Matcha com Manteiga de Amêndoa",
+    "new_description": "Delicioso sorvete de matcha e manteiga de amêndoa com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "f9afdddd-01f0-4906-83d3-dbcd57d57dcf",
+    "slug": "matcha-banana-smoothie-bowl",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "ab55b514-2c84-4922-bb3f-8022e05b073c",
+    "slug": "matcha-coconut-ice-cream",
+    "new_title": "Sorvete de Matcha com Coco",
+    "new_description": "Sorvete terroso de matcha com creme de coco para uma fusão tropical-asiática."
+  },
+  {
+    "id": "df51df7c-589d-49fe-a58f-b310c05c8348",
+    "slug": "matcha-gelato",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "64ee392f-979c-48eb-ad43-493f78a7ee9d",
+    "slug": "matcha-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Matcha",
+    "new_description": "Frozen yogurt terroso de matcha com iogurte grego para uma delícia de inspiração japonesa."
+  },
+  {
+    "id": "c41dd75b-6fad-4bab-be08-0c0df5a95756",
+    "slug": "matcha-honey-almond-ice-cream",
+    "new_title": "Sorvete de Matcha, Mel e Amêndoa",
+    "new_description": "Uma sobremesa gelada única de matcha, mel e amêndoa com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "36d485ad-b5a2-4f0c-9de2-006c2d6d8f2d",
+    "slug": "matcha-oreo-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "52ff2279-78e1-4fad-9398-e599290c295e",
+    "slug": "matcha-white-chocolate-chip-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "01a37cf9-4214-4608-89f8-7632f336abcc",
+    "slug": "matcha-white-chocolate-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "739c330a-4176-4888-9bc7-154b10abf899",
+    "slug": "melon-mint-sorbet",
+    "new_title": "Sorbet de Melão com Menta",
+    "new_description": "Sorbet doce de melão com menta fresca para uma refrescante sobremesa de verão."
+  },
+  {
+    "id": "29dabea8-6c5b-459d-a8ed-9cbcced26513",
+    "slug": "mexican-chocolate-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "06156b0a-3982-4419-8174-55b01801deee",
+    "slug": "mexican-hot-chocolate-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9359532d-4df0-4331-bb4c-10aa4e105c6b",
+    "slug": "mint-brownie-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9b03885d-019c-4ee9-88c2-5d5a02827ca4",
+    "slug": "mint-chocolate-chip-milkshake",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f3265f20-275a-49f2-90f0-59b86d4e8782",
+    "slug": "mint-chocolate-chip-protein-lite-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "efb01933-e70a-45bb-bdc5-addc50617061",
+    "slug": "mint-chocolate-chip-soft-serve",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "06cb74cc-238c-45bb-821d-4adac253fd14",
+    "slug": "mint-chocolate-gelato",
+    "new_title": "Gelato de Menta com Chocolate",
+    "new_description": "Gelato de menta fresca com pedaços de chocolate amargo."
+  },
+  {
+    "id": "09f92c96-f66e-4346-99a3-4690e5e56e39",
+    "slug": "mint-cookie-dough-ice-cream",
+    "new_title": "Sorvete de Menta com Massa de Cookie",
+    "new_description": "Sorvete de menta fresca com pedaços de massa de biscoito com gotas de chocolate."
+  },
+  {
+    "id": "a854063c-a457-4039-8edc-13bbf8df506b",
+    "slug": "mint-cookies-and-cream-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "1737cd47-2c91-455e-a044-9cbba6924f9a",
+    "slug": "mint-matcha-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "b46c0495-f8ef-4b3b-9389-492ca51e522c",
+    "slug": "mint-oreo-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "c36f6990-7430-4f72-9e7d-22fcb4c8b958",
+    "slug": "miso-caramel-ice-cream",
+    "new_title": "Sorvete de Miso com Caramelo",
+    "new_description": "Delicioso sorvete de miso e caramelo com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "0cd29c26-4170-4610-bc29-2319abd3aa09",
+    "slug": "mixed-berry-acai-smoothie-bowl",
+    "new_title": "Smoothie Bowl de Frutas Vermelhas com Açaí",
+    "new_description": null
+  },
+  {
+    "id": "99f42c4a-d5bf-4dc9-a5a6-be120cbff949",
+    "slug": "mixed-berry-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "05ccf21f-4e43-4475-9101-40a38e92b052",
+    "slug": "mixed-berry-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Frutas Vermelhas Mistas",
+    "new_description": "Frozen yogurt de frutas vermelhas variadas com iogurte grego para uma delícia vibrante e rica em antioxidantes."
+  },
+  {
+    "id": "155a5e6d-072b-421f-a4d2-381d3770f909",
+    "slug": "mixed-berry-italian-ice",
+    "new_title": "Granita Italiana de Frutas Vermelhas Mistas",
+    "new_description": "Colorida granita italiana de frutas vermelhas mistas."
+  },
+  {
+    "id": "d1bca2ac-ed01-4abe-9d3c-2dd93b3f8651",
+    "slug": "mixed-berry-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "aaa143e2-e516-4705-8486-86d5ae880e26",
+    "slug": "mixed-citrus-sorbet",
+    "new_title": null,
+    "new_description": "Uma mistura de laranja, limão, lima e toranja para um vibrante sorbet multi-cítrico."
+  },
+  {
+    "id": "7619b64d-957c-4d2a-ae46-11ad9b63b73b",
+    "slug": "mocha-almond-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Moca com Amêndoa",
+    "new_description": "Sorvete intenso de moca com pedaços crocantes de amêndoa tostada."
+  },
+  {
+    "id": "8a6fbf0f-d266-4019-a315-5fea9a7d2d81",
+    "slug": "mocha-chip-milkshake",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "5f480580-a4da-4045-960a-f5a2596e074c",
+    "slug": "mocha-cookie-crumble-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2ff2d3e4-a100-4c7b-b201-d03337d77f4c",
+    "slug": "mocha-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "241d0fc7-87c1-4167-be64-3f5127533a61",
+    "slug": "mocha-toffee-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Moca com Toffee",
+    "new_description": "Sorvete intenso de moca com pedacinhos crocantes de toffee."
+  },
+  {
+    "id": "2b0377e9-e6aa-48de-9b8b-5c859c77a2f1",
+    "slug": "nectarine-vanilla-sorbet",
+    "new_title": "Sorbet de Nectarina com Baunilha",
+    "new_description": "Sorbet doce de nectarina com um toque de baunilha para elegância de verão."
+  },
+  {
+    "id": "ed9aaa1d-0f93-4577-b1d7-eefe41cf77eb",
+    "slug": "oat-milk-vanilla-ice-cream",
+    "new_title": "Sorvete de Baunilha com Leite de Aveia",
+    "new_description": "Sorvete cremoso de baunilha com leite de aveia para uma opção mais leve em laticínios."
+  },
+  {
+    "id": "a2cae468-2886-4f83-b1ea-8517f4cc5575",
+    "slug": "oatmeal-raisin-cookie-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "4f7efe7d-cf2b-48ea-9975-77c4f50a00c5",
+    "slug": "olive-oil-sea-salt-ice-cream",
+    "new_title": "Sorvete de Azeite com Sal Marinho",
+    "new_description": "Delicioso sorvete de azeite de oliva e sal marinho com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "7cc28910-b011-48ca-9e32-81e09e6ab16b",
+    "slug": "one-ingredient-frozen-yogurt-soft-serve",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "831f3648-f894-4611-91db-1b05d3b031e4",
+    "slug": "orange-chocolate-chip-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9cdaaaf4-e876-4435-9a90-5807a8c00d9a",
+    "slug": "orange-cream-milkshake",
+    "new_title": "Milkshake de Creme de Laranja",
+    "new_description": "Milkshake de creme de laranja inspirado no creamsicle."
+  },
+  {
+    "id": "d35f36dd-bcbe-49f1-9113-85daa7f0526d",
+    "slug": "orange-cream-soft-serve",
+    "new_title": "Sorvete Soft de Creme de Laranja",
+    "new_description": "Sorvete soft de creme de laranja inspirado no creamsicle."
+  },
+  {
+    "id": "529a1e3c-1e8b-4394-bbae-5225369084e3",
+    "slug": "orange-creamsicle-crunch-ice-cream",
+    "new_title": "Sorvete Crocante Creamsicle de Laranja",
+    "new_description": "Sorvete creamsicle de laranja e baunilha com biscoito crocante."
+  },
+  {
+    "id": "e7ecfc0c-9f1f-4469-b7c5-c74a44f99b82",
+    "slug": "orange-creamsicle-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "1be0e643-3374-4a6f-bae0-5759b3b6b39a",
+    "slug": "orange-dreamsicle-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "4d19a37f-ce94-4737-9288-02ed730676c2",
+    "slug": "orange-ginger-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2502a330-b948-4579-9409-a39aa9e5ea53",
+    "slug": "orange-italian-ice",
+    "new_title": "Granita Italiana de Laranja",
+    "new_description": "Raspadinha vibrante de laranja com fresco sabor cítrico."
+  },
+  {
+    "id": "aa130150-43b1-4d47-86f5-63a23b24714c",
+    "slug": "orange-mint-sorbet",
+    "new_title": "Sorbet de Laranja com Menta",
+    "new_description": "Sorbet vibrante de laranja com menta fresca para uma refrescante sobremesa cítrica."
+  },
+  {
+    "id": "fd93554f-a641-4b63-a9a2-75121b60f8d5",
+    "slug": "orange-vanilla-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "6eb1411f-895f-4ef9-93f1-70025bdfed8c",
+    "slug": "panna-cotta-gelato",
+    "new_title": null,
+    "new_description": "Sedoso gelato de panna cotta capturando o delicado sabor de baunilha e creme."
+  },
+  {
+    "id": "cf1bff61-11d5-4b0a-8bcc-d89fb6f4d0a3",
+    "slug": "papaya-lime-sorbet",
+    "new_title": "Sorbet de Mamão com Limão",
+    "new_description": "Sorbet tropical de mamão com limão vibrante para um refrescante exótico."
+  },
+  {
+    "id": "da9e59a5-3996-45e2-91d8-1e3e53c902b1",
+    "slug": "pb-chocolate-banana-smoothie-bowl",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "e318dec0-b3af-4b65-9c1d-784c2516d13f",
+    "slug": "pbj-smoothie-bowl",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "841402d1-2938-4417-ac31-179c89c0405e",
+    "slug": "peach-almond-ice-cream",
+    "new_title": "Sorvete de Pêssego com Amêndoa",
+    "new_description": "Sorvete doce de pêssego com lascas de amêndoa tostada."
+  },
+  {
+    "id": "24d37857-8644-42c0-91d0-61d8118b26f2",
+    "slug": "peach-bellini-gelato",
+    "new_title": "Gelato de Pêssego Bellini",
+    "new_description": "Gelato doce de pêssego com notas de prosecco."
+  },
+  {
+    "id": "b6c91393-fa75-4865-a6c0-de7908591018",
+    "slug": "peach-berry-smoothie-bowl",
+    "new_title": "Smoothie Bowl de Pêssego e Frutas Vermelhas",
+    "new_description": "Bowl de smoothie doce de pêssego e frutas vermelhas."
+  },
+  {
+    "id": "ae398b8d-ff79-4691-9aa2-6feaf4507405",
+    "slug": "peach-bourbon-ice-cream",
+    "new_title": "Sorvete de Pêssego com Bourbon",
+    "new_description": "Sorvete doce de pêssego com um toque de bourbon de Kentucky."
+  },
+  {
+    "id": "58badefe-a683-4ee7-9e38-c10c482c90b5",
+    "slug": "peach-cobbler-milkshake",
+    "new_title": "Milkshake Cobbler de Pêssego",
+    "new_description": "Milkshake doce de cobbler de pêssego com crumble de canela."
+  },
+  {
+    "id": "6b658de5-b27f-49e2-9012-f5d851b93928",
+    "slug": "peach-cobbler-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "e36426ad-abe4-4f10-a7b2-e8a22aeea3a7",
+    "slug": "peach-ginger-sorbet",
+    "new_title": "Sorbet de Pêssego com Gengibre",
+    "new_description": "Sorbet doce de pêssego com gengibre picante para uma combinação quente-fria."
+  },
+  {
+    "id": "fb80a843-d100-4e9d-b781-9ec9dc8c76d5",
+    "slug": "peach-italian-ice",
+    "new_title": "Granita Italiana de Pêssego",
+    "new_description": "Raspadinha doce de pêssego feita com pêssegos maduros de verão."
+  },
+  {
+    "id": "243c2f20-f387-40eb-8529-d91e1a37c1a4",
+    "slug": "peach-lavender-honey-ice-cream",
+    "new_title": "Sorvete de Pêssego, Lavanda e Mel",
+    "new_description": "Um sorvete sofisticado de pêssego, lavanda e mel com uma combinação de sabores inesperada mas harmoniosa."
+  },
+  {
+    "id": "47602567-3cfe-4354-ba1b-2577c8811584",
+    "slug": "peach-mango-italian-ice",
+    "new_title": "Granita Italiana de Pêssego e Manga",
+    "new_description": "Raspadinha doce de pêssego e manga para uma sobremesa tropical."
+  },
+  {
+    "id": "9496b7e5-afba-4a23-acc9-080e3375b984",
+    "slug": "peach-mango-smoothie-bowl",
+    "new_title": "Smoothie Bowl de Pêssego e Manga",
+    "new_description": "Bowl de smoothie doce de pêssego e manga."
+  },
+  {
+    "id": "85758130-73f2-4f11-ab37-e4b1340d2b2d",
+    "slug": "peach-prosecco-ice-cream",
+    "new_title": "Sorvete de Pêssego com Prosecco",
+    "new_description": "Delicioso sorvete de pêssego e prosecco com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "2faa58ff-82d3-4866-abcf-323471c343eb",
+    "slug": "peach-vanilla-bean-sorbet",
+    "new_title": "Sorbet de Pêssego com Fava de Baunilha",
+    "new_description": "Sorbet doce de pêssego com fava de baunilha real para simplicidade elegante."
+  },
+  {
+    "id": "9b33c816-5e76-4904-82b1-ff30b33a38b7",
+    "slug": "peach-vanilla-cream-gelato",
+    "new_title": "Gelato de Pêssego com Creme de Baunilha",
+    "new_description": "Gelato doce de pêssego com base de creme de baunilha."
+  },
+  {
+    "id": "260c77e6-b8ed-481c-8aa8-f4fbfe1dc244",
+    "slug": "peanut-butter-banana-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "fdc402c9-676e-44c9-bfbf-edecafd87738",
+    "slug": "peanut-butter-banana-greek-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "6e301b08-0ffa-41e6-a082-6371898a9ae9",
+    "slug": "peanut-butter-banana-milkshake",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "68c48319-3780-4bd6-a835-d4d223cc17cc",
+    "slug": "peanut-butter-banana-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "fcc99914-e25d-4fa0-8a31-6ef18cb2a68b",
+    "slug": "peanut-butter-banana-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Manteiga de Amendoim e Banana",
+    "new_description": null
+  },
+  {
+    "id": "18ed4584-9f00-4bd7-844b-b68750dd0fa6",
+    "slug": "peanut-butter-berry-smoothie-bowl",
+    "new_title": "Smoothie Bowl de Manteiga de Amendoim com Frutas Vermelhas",
+    "new_description": null
+  },
+  {
+    "id": "f9643e5a-ddd8-44c5-b8e8-fa152c6f1d87",
+    "slug": "peanut-butter-brownie-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "99c54bee-f291-4006-bfe0-b25ecc082cd5",
+    "slug": "peanut-butter-chocolate-chip-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "85ad4dc6-bcdc-4733-9bf9-b6a338fd83d2",
+    "slug": "peanut-butter-chocolate-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Manteiga de Amendoim com Chocolate",
+    "new_description": "Frozen yogurt de manteiga de amendoim e chocolate com iogurte grego para uma indulgência proteica."
+  },
+  {
+    "id": "ba82c579-ce5c-4e95-8e41-d0198a8fcb37",
+    "slug": "peanut-butter-cookie-crunch-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "dbba9d54-68c7-42ea-b7e9-850188dc5d76",
+    "slug": "peanut-butter-cookie-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f579ec71-5c85-4bdb-8e26-34624c45f374",
+    "slug": "peanut-butter-crunch-candy-ice-cream",
+    "new_title": "Sorvete Crocante de Manteiga de Amendoim com Doces",
+    "new_description": "Sorvete crocante de manteiga de amendoim com doces com pedacinhos de doce."
+  },
+  {
+    "id": "73d92945-9772-41a6-aba5-c49457fbe3ad",
+    "slug": "peanut-butter-cup-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "99accd41-8f09-40d0-847f-e3f67b65cd34",
+    "slug": "peanut-butter-cup-milkshake",
+    "new_title": "Milkshake de Peanut Butter Cup",
+    "new_description": null
+  },
+  {
+    "id": "083abf04-cbe6-4381-9952-020fb71df6d2",
+    "slug": "peanut-butter-cup-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Peanut Butter Cup",
+    "new_description": null
+  },
+  {
+    "id": "9734f86f-8a45-47f8-9a09-a1f3b47c8e34",
+    "slug": "peanut-butter-fudge-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "1b8d3a34-7f2b-4082-bea9-ce7c243467b3",
+    "slug": "peanut-butter-fudge-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "156e3276-1de4-46ef-b621-41299edf3362",
+    "slug": "peanut-butter-jelly-swirl-ice-cream",
+    "new_title": "Sorvete com Redemoinho de Manteiga de Amendoim e Geleia",
+    "new_description": null
+  },
+  {
+    "id": "cf18735e-299a-4a7e-9d4a-5b5667e71135",
+    "slug": "peanut-butter-marshmallow-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "7be4b1e2-0349-4015-a5ea-8cc9afa3e1c7",
+    "slug": "peanut-butter-pretzel-brownie-ice-cream",
+    "new_title": "Sorvete de Manteiga de Amendoim com Pretzel e Brownie",
+    "new_description": "Sorvete de PB com pedaços de pretzel e brownie."
+  },
+  {
+    "id": "11a23aec-6fb0-4057-8964-ce439c67bca4",
+    "slug": "peanut-butter-pretzel-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "b11b032c-3deb-4f7b-9bc8-2d1d21d4e101",
+    "slug": "peanut-butter-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "32985db5-5285-44b0-8d1b-81d079f296e3",
+    "slug": "peanut-butter-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "87b58964-cb81-4bd6-8e03-60ab3d93bb42",
+    "slug": "pear-vanilla-bean-ice-cream",
+    "new_title": "Sorvete de Pêra com Fava de Baunilha",
+    "new_description": "Sorvete doce de pêra madura com fava de baunilha real."
+  },
+  {
+    "id": "fae47aec-dc09-4345-83d3-89586b4be9dd",
+    "slug": "pear-vanilla-bean-sorbet",
+    "new_title": "Sorbet de Pêra com Fava de Baunilha",
+    "new_description": "Sorbet elegante de pêra com fava de baunilha real para uma sobremesa refinada."
+  },
+  {
+    "id": "1fef8762-c667-455f-ac9b-4e9f4b9ce106",
+    "slug": "pecan-cookie-butter-ice-cream",
+    "new_title": "Sorvete de Noz-Pecã com Cookie Butter",
+    "new_description": "Sorvete rico de nozes-pecãs com redemoinho de creme de biscoito."
+  },
+  {
+    "id": "937bab98-9178-4d08-9263-643ba555476e",
+    "slug": "persian-saffron-ice-cream",
+    "new_title": "Sorvete Persa de Açafrão",
+    "new_description": "Um sorvete indulgente e saboroso com base cremosa e notas intensas."
+  },
+  {
+    "id": "22b43196-fe15-413a-81e5-f72d1bf3c5f7",
+    "slug": "pineapple-basil-sorbet",
+    "new_title": "Sorbet de Abacaxi com Manjericão",
+    "new_description": "Sorbet doce de abacaxi com manjericão fresco para uma combinação única tropical-erva."
+  },
+  {
+    "id": "05d89af1-e1a3-47ca-ac66-a464b93a97d7",
+    "slug": "pineapple-coconut-green-smoothie-bowl",
+    "new_title": "Smoothie Bowl Verde de Abacaxi e Coco",
+    "new_description": "Tropical smoothie bowl verde com espinafre escondido."
+  },
+  {
+    "id": "6a80ba2e-1c40-40bf-85d0-0a6c3a0def59",
+    "slug": "pineapple-coconut-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "91d640b2-7bdc-4e60-b4e9-b325fe53eea4",
+    "slug": "pineapple-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f9727317-512c-44e6-a835-32d3c6eb9733",
+    "slug": "pineapple-ginger-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a04f33c8-451e-4561-bcfa-edee90c4bd60",
+    "slug": "pineapple-mango-sorbet",
+    "new_title": "Sorbet de Abacaxi com Manga",
+    "new_description": "Sorbet tropical de abacaxi e manga para uma sobremesa gelada duplamente tropical."
+  },
+  {
+    "id": "54551626-d4e7-4b92-a9e4-572c8256a14d",
+    "slug": "pineapple-upside-down-cake-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "fc1f8e30-68ff-4f83-ad93-ebde755d95a1",
+    "slug": "pink-lemonade-italian-ice",
+    "new_title": "Granita Italiana de Limonada Rosa",
+    "new_description": "Raspadinha doce de limonada rosa para uma sobremesa refrescante."
+  },
+  {
+    "id": "0253d1e4-639e-4218-973a-c3ab28004429",
+    "slug": "pink-peppercorn-strawberry-ice-cream",
+    "new_title": "Sorvete de Morango com Pimenta Rosa",
+    "new_description": "Um sorvete indulgente e saboroso com base cremosa e notas intensas."
+  },
+  {
+    "id": "a6b911b7-4aec-4d23-a9ca-befda2bdd502",
+    "slug": "pistachio-chocolate-chip-gelato",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "ab8d490d-b720-480f-87bb-17ab8892e245",
+    "slug": "pistachio-cream-gelato",
+    "new_title": "Gelato de Creme de Pistache",
+    "new_description": "Gelato italiano autêntico de pistache com base cremosa e com sabor de castanha."
+  },
+  {
+    "id": "401d014f-2fd7-4bee-9d21-c05427da1931",
+    "slug": "pistachio-cream-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "5680055f-5b80-4e40-a4e0-1a19449ba7b0",
+    "slug": "pistachio-greek-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "1548b952-5998-458e-bc10-15d7c073c672",
+    "slug": "pistachio-honey-baklava-ice-cream",
+    "new_title": "Sorvete de Pistache, Mel e Baklava",
+    "new_description": "Uma sobremesa gelada única de pistache, mel e baklava com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "51eb378d-49d5-4ce5-bd0c-7eeced3f139e",
+    "slug": "pistachio-lemon-cream-ice-cream",
+    "new_title": "Sorvete de Pistache com Creme de Limão",
+    "new_description": "Delicioso sorvete de pistache e creme de limão com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "c09ed201-779c-46e3-8aef-928b7a857c0d",
+    "slug": "pistachio-lemon-ice-cream",
+    "new_title": "Sorvete de Pistache com Limão",
+    "new_description": "Sorvete vibrante de pistache com limão vibrante para uma combinação mediterrânea."
+  },
+  {
+    "id": "7a4291e8-b576-4b08-b6fd-3015870bbee4",
+    "slug": "pistachio-milkshake",
+    "new_title": "Milkshake de Pistache",
+    "new_description": "Milkshake amanteigado de pistache com linda cor verde."
+  },
+  {
+    "id": "0cde92d7-87b0-4e2c-8c3b-46b0392a137c",
+    "slug": "pistachio-olive-oil-ice-cream",
+    "new_title": "Sorvete de Pistache com Azeite",
+    "new_description": null
+  },
+  {
+    "id": "459c0775-da09-4458-8a59-39f182613c55",
+    "slug": "pistachio-raspberry-swirl-ice-cream",
+    "new_title": "Sorvete com Redemoinho de Pistache e Framboesa",
+    "new_description": "Sorvete amanteigado de pistache com redemoinho de purê de framboesa ácida."
+  },
+  {
+    "id": "52ca08f6-ce3f-4ae3-8a15-75c465f96df0",
+    "slug": "pistachio-saffron-ice-cream",
+    "new_title": "Sorvete de Pistache com Açafrão",
+    "new_description": "Elegante sorvete de açafrão e pistache com notas especiadas do Oriente Médio."
+  },
+  {
+    "id": "3d1af724-4b23-4fa0-a68d-b859030e7822",
+    "slug": "pistachio-soft-serve",
+    "new_title": "Sorvete Soft de Pistache",
+    "new_description": "Sorvete soft amanteigado de pistache com linda tonalidade verde."
+  },
+  {
+    "id": "9b00226f-de31-4185-9b9b-3c021edd2ff7",
+    "slug": "pistachio-vanilla-ice-cream",
+    "new_title": "Sorvete de Pistache com Baunilha",
+    "new_description": "Sorvete amanteigado de pistache com pura fava de baunilha."
+  },
+  {
+    "id": "8f970787-4abf-445d-bf42-8008f677519c",
+    "slug": "plum-cinnamon-sorbet",
+    "new_title": "Sorbet de Ameixa com Canela",
+    "new_description": "Sorbet profundo de ameixa com canela quente para uma sobremesa gelada com especiarias de outono."
+  },
+  {
+    "id": "f8d84506-cf80-4857-a0f4-4b7d6be6fcd1",
+    "slug": "plum-ginger-sorbet",
+    "new_title": "Sorbet de Ameixa com Gengibre",
+    "new_description": "Sorbet púrpura profundo de ameixa com gengibre fresco para uma sobremesa reconfortante de final de verão."
+  },
+  {
+    "id": "d79a9e83-c4b5-4f19-a5fa-0247c9595465",
+    "slug": "prickly-pear-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "29943a24-5c4d-452e-8e4a-3c3e9624dfe4",
+    "slug": "pumpkin-butter-pecan-ice-cream",
+    "new_title": "Sorvete de Abóbora com Manteiga e Noz-Pecã",
+    "new_description": "Delicioso sorvete de abóbora com manteiga e nozes-pecãs e sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "5961a28e-bec2-4a9f-ba97-a1fb5964dcad",
+    "slug": "pumpkin-gingersnap-ice-cream",
+    "new_title": "Sorvete de Abóbora com Biscoito de Gengibre",
+    "new_description": "Um sorvete sofisticado de abóbora e biscoito de gengibre com uma combinação de sabores inesperada mas harmoniosa."
+  },
+  {
+    "id": "44c181c7-d5c4-45a8-8789-7cb698643d5d",
+    "slug": "pumpkin-pie-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "c6d375ec-217a-406a-9d6f-44098ca3e252",
+    "slug": "rainbow-italian-ice",
+    "new_title": "Granita Italiana Arco-Íris",
+    "new_description": "Granita italiana arco-íris em camadas com múltiplos sabores de frutas."
+  },
+  {
+    "id": "bf4d31dd-eda4-45d7-81bc-ce9be7099cd7",
+    "slug": "raspberry-blackberry-sorbet",
+    "new_title": "Sorbet de Framboesa e Amora",
+    "new_description": "Sorbet intenso duplo de frutas com framboesa ácida e amora doce."
+  },
+  {
+    "id": "4810ed94-14ab-43f0-8dfd-8fe676abe57e",
+    "slug": "raspberry-champagne-sorbet",
+    "new_title": "Sorbet de Framboesa com Champanhe",
+    "new_description": "Luxuoso sorbet de framboesa com champanhe para uma sobremesa gelada comemorativa."
+  },
+  {
+    "id": "75b71ed6-9e06-4bae-95ec-dd8538826ad6",
+    "slug": "raspberry-cheesecake-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "15ac973a-19bf-4801-95c3-a073a966685a",
+    "slug": "raspberry-chocolate-chip-greek-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "4970e773-86bf-4a57-b1be-65b7bc17599f",
+    "slug": "raspberry-chocolate-chip-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "7d4cf573-8b82-4db3-9af4-30deefdeb95f",
+    "slug": "raspberry-chocolate-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "29f38116-c5ed-4901-a88b-d9330893395a",
+    "slug": "raspberry-coconut-cream-ice-cream",
+    "new_title": "Sorvete de Framboesa com Creme de Coco",
+    "new_description": "Sorvete ácido de framboesa com redemoinho de creme de coco."
+  },
+  {
+    "id": "8e70d836-9a6a-48e9-9314-bf97c4f199bd",
+    "slug": "raspberry-cream-gelato",
+    "new_title": "Gelato de Framboesa com Creme",
+    "new_description": null
+  },
+  {
+    "id": "0ea53bea-87ca-4a5e-8216-3c379c7fa84e",
+    "slug": "raspberry-gelato",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "c561b3a1-f0b6-4912-8fe4-ce519f2eacf4",
+    "slug": "raspberry-ginger-sorbet",
+    "new_title": "Sorbet de Framboesa com Gengibre",
+    "new_description": "Sorbet ácido de framboesa com raiz de gengibre aquecedora."
+  },
+  {
+    "id": "5b854f36-e557-4325-bdd8-fbb3e00cc09d",
+    "slug": "raspberry-italian-ice",
+    "new_title": "Granita Italiana de Framboesa",
+    "new_description": null
+  },
+  {
+    "id": "24e923f2-2f37-4a72-b6db-b1638cad67e1",
+    "slug": "raspberry-lemon-curd-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "bdede083-b9cc-4b4b-a0ca-6f92e4a410f9",
+    "slug": "raspberry-lemonade-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "de6491f7-6c86-49c4-bec9-2dc4f199f53e",
+    "slug": "raspberry-lychee-sorbet",
+    "new_title": "Sorbet de Framboesa com Lichia",
+    "new_description": "Sorbet exótico de framboesa e lichia para uma sobremesa elegante de inspiração asiática."
+  },
+  {
+    "id": "f0d776c8-c658-4f13-a596-f538ec2c4409",
+    "slug": "raspberry-mint-sorbet",
+    "new_title": "Sorbet de Framboesa com Menta",
+    "new_description": "Sorbet ácido de framboesa com menta fresca para um limpador de paladar refrescante."
+  },
+  {
+    "id": "9e870916-5235-40d3-b225-8731bebc0952",
+    "slug": "raspberry-pistachio-gelato",
+    "new_title": "Gelato de Framboesa com Pistache",
+    "new_description": "Gelato ácido de framboesa com pasta de pistache para uma combinação colorida."
+  },
+  {
+    "id": "8a75a847-9407-4008-80ab-d94b1983548f",
+    "slug": "raspberry-rose-cream-ice-cream",
+    "new_title": "Sorvete de Framboesa, Rosa e Creme",
+    "new_description": "Uma sobremesa gelada única de framboesa, rosa e creme com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "439649dc-ba06-4f87-a9a7-a7ab99dca82d",
+    "slug": "raspberry-rose-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "08d07864-2a10-4c2e-81f4-a366a61d198b",
+    "slug": "raspberry-soft-serve",
+    "new_title": "Sorvete Soft de Framboesa",
+    "new_description": "Sorvete soft ácido de framboesa com vibrante sabor de frutas vermelhas."
+  },
+  {
+    "id": "46627b39-318a-4e7a-b0fe-55d14dfe1875",
+    "slug": "raspberry-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "66faa0e1-56a3-4fde-bd12-d80e28aa378f",
+    "slug": "raspberry-vanilla-bean-ice-cream",
+    "new_title": "Sorvete de Framboesa com Fava de Baunilha",
+    "new_description": "Sorvete ácido de framboesa com fava de baunilha real."
+  },
+  {
+    "id": "15931584-82f0-44d8-9d30-0d06eb82b3fb",
+    "slug": "raspberry-vanilla-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "cb21bc1d-b2bc-4d88-80fa-ffa81e005238",
+    "slug": "raspberry-white-chocolate-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "937ec232-fc72-4ceb-b432-e472d38a3167",
+    "slug": "raspberry-white-chocolate-milkshake",
+    "new_title": "Milkshake de Framboesa com Chocolate Branco",
+    "new_description": "Milkshake ácido de framboesa com chocolate branco."
+  },
+  {
+    "id": "08a02371-ab3e-4491-a6b0-b55bb7596318",
+    "slug": "red-velvet-milkshake",
+    "new_title": null,
+    "new_description": "Festivo milkshake red velvet com sabor de cream cheese."
+  },
+  {
+    "id": "482e1b3c-04a3-4ecf-8f99-896e8d843e14",
+    "slug": "ricotta-honey-gelato",
+    "new_title": "Gelato de Ricota com Mel",
+    "new_description": "Cremoso gelato de ricota adoçado com mel italiano."
+  },
+  {
+    "id": "e3c868cb-5296-4089-9c68-687a7d8d081b",
+    "slug": "roasted-apricot-vanilla-ice-cream",
+    "new_title": "Sorvete de Damasco Assado com Baunilha",
+    "new_description": "Um sorvete indulgente e saboroso com base cremosa e notas intensas."
+  },
+  {
+    "id": "3d4c69aa-56e5-4018-9794-a6318c573022",
+    "slug": "roasted-cherry-vanilla-ice-cream",
+    "new_title": "Sorvete de Cereja Assada com Baunilha",
+    "new_description": "Delicioso sorvete de cereja assada com baunilha e uma mistura de sabores perfeitamente equilibrada para uma sobremesa gelada sofisticada."
+  },
+  {
+    "id": "591812fe-820b-47cb-970e-4de52d873ee6",
+    "slug": "roasted-grape-ice-cream",
+    "new_title": "Sorvete de Uva Assada",
+    "new_description": "Uma sobremesa gelada rica e cremosa de uva assada com camadas de sabores complementares."
+  },
+  {
+    "id": "b139df71-6ac5-4584-a080-004ec05ed99d",
+    "slug": "roasted-marshmallow-chocolate-ice-cream",
+    "new_title": "Sorvete de Marshmallow Tostado com Chocolate",
+    "new_description": "Defumado sorvete de marshmallow tostado com redemoinho de chocolate amargo."
+  },
+  {
+    "id": "566caea8-d864-4664-ae3d-7da4982250bb",
+    "slug": "roasted-pineapple-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "82ba9917-6a7b-4e8c-a3f2-980477df3da5",
+    "slug": "roasted-plum-vanilla-ice-cream",
+    "new_title": "Sorvete de Ameixa Assada com Baunilha",
+    "new_description": "Uma sobremesa gelada rica e cremosa de ameixa assada e baunilha com camadas de sabores complementares."
+  },
+  {
+    "id": "7091677a-2e4c-487d-a6a7-8b917e66c74e",
+    "slug": "roasted-strawberry-basil-ice-cream",
+    "new_title": "Sorvete de Morango Assado com Manjericão",
+    "new_description": "Uma sobremesa gelada rica e cremosa de morango assado com manjericão com camadas de sabores complementares."
+  },
+  {
+    "id": "1999f70f-ac78-42a7-ac24-ba8b1f3027bb",
+    "slug": "root-beer-float-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "397bd07a-53b3-49e2-be41-d0d08a273e7a",
+    "slug": "rosewater-cardamom-ice-cream",
+    "new_title": "Sorvete de Água de Rosas com Cardamomo",
+    "new_description": "Uma sobremesa gelada rica e cremosa de água de rosas e cardamomo com camadas de sabores complementares."
+  },
+  {
+    "id": "46db8ad6-783f-4ff1-92f6-85c098e36b7d",
+    "slug": "rosewater-pistachio-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Água de Rosas com Pistache",
+    "new_description": "Um sorvete indulgente e saboroso com base cremosa e notas intensas."
+  },
+  {
+    "id": "fe314fff-a037-4820-b524-8f0447e88c63",
+    "slug": "ruby-grapefruit-sorbet",
+    "new_title": "Sorbet de Toranja Ruby",
+    "new_description": "Sorbet ácido de toranja ruby para um limpador de paladar vibrante e sofisticado."
+  },
+  {
+    "id": "ef73e559-8ab9-4a9a-8358-9ac5d87d4be6",
+    "slug": "rum-punch-tropical-ice-cream",
+    "new_title": "Sorvete Tropical de Ponche de Rum",
+    "new_description": "Sorvete tropical de frutas com um toque de rum para uma vibe caribenha."
+  },
+  {
+    "id": "e17cf253-ac64-4bd1-a594-903bd929b2f5",
+    "slug": "rum-raisin-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d7d05835-67fb-4aee-a8c4-28bd17ea4130",
+    "slug": "saffron-rose-ice-cream",
+    "new_title": "Sorvete de Açafrão com Rosa",
+    "new_description": "Luxuoso sorvete infusionado com açafrão, água de rosas e pistaches triturados."
+  },
+  {
+    "id": "602e6cee-e204-4fb1-b938-a7d1b5cb80dd",
+    "slug": "salted-caramel-cookie-butter-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "95b5e035-ba66-4c0f-9798-f3272a9d0e19",
+    "slug": "salted-caramel-gelato",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "107c8cca-d710-4903-8937-7bd91d1b2be8",
+    "slug": "salted-caramel-hazelnut-gelato",
+    "new_title": "Gelato de Caramelo Salgado com Avelã",
+    "new_description": "Gelato doce-salgado de caramelo com avelãs."
+  },
+  {
+    "id": "ad81efb2-8733-4dbf-bd64-51cd84173b0f",
+    "slug": "salted-caramel-macaron-ice-cream",
+    "new_title": "Sorvete de Macaron de Caramelo Salgado",
+    "new_description": null
+  },
+  {
+    "id": "8d413563-b76e-4fd1-8b5e-03ee1be6ad9d",
+    "slug": "salted-caramel-milkshake",
+    "new_title": "Milkshake de Caramelo Salgado",
+    "new_description": "Milkshake doce e salgado de caramelo com consistência espessa."
+  },
+  {
+    "id": "f5993037-7a1a-431c-bdf7-6f5987c0c90f",
+    "slug": "salted-caramel-pretzel-crunch-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "cc35d848-4fef-4117-a332-213e1ca8c909",
+    "slug": "salted-caramel-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "1e120faa-bc21-4d50-8963-a89815c8b9a9",
+    "slug": "salted-dark-chocolate-almond-ice-cream",
+    "new_title": "Sorvete Salgado de Chocolate Amargo com Amêndoa",
+    "new_description": "Sorvete agridoce de chocolate amargo com amêndoas e sal marinho."
+  },
+  {
+    "id": "e0de429d-0721-4581-9d81-dd1741b9bf5b",
+    "slug": "salted-dark-chocolate-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "3c80c2bb-8648-4432-974e-1d58b5baa2b7",
+    "slug": "salted-honey-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "74312210-4563-4221-974d-c2af8f335199",
+    "slug": "salted-peanut-caramel-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Amendoim Salgado com Caramelo",
+    "new_description": "Delicioso sorvete crocante de amendoim salgado com caramelo e uma mistura de sabores perfeitamente equilibrada para uma sobremesa gelada sofisticada."
+  },
+  {
+    "id": "a7e9c165-a439-4c57-a638-2592fd1da26b",
+    "slug": "salted-peanut-caramel-ice-cream",
+    "new_title": "Sorvete de Amendoim Salgado com Caramelo",
+    "new_description": "Sorvete doce-salgado de amendoim com caramelo e pedacinhos crocantes de amendoim."
+  },
+  {
+    "id": "0e2333ed-f241-4be6-a8f3-3356b2897c28",
+    "slug": "salted-peanut-fudge-ice-cream",
+    "new_title": "Sorvete de Amendoim Salgado com Fudge",
+    "new_description": "Sorvete doce-salgado de amendoim com espesso redemoinho de fudge."
+  },
+  {
+    "id": "eadba7e5-f32f-4749-bbbf-96e1e5cac76e",
+    "slug": "salted-pistachio-caramel-ice-cream",
+    "new_title": "Sorvete de Pistache Salgado com Caramelo",
+    "new_description": "Uma sobremesa gelada única de pistache salgado e caramelo com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "fce129ae-19e7-4922-933d-7c8a107774fc",
+    "slug": "sambuca-gelato",
+    "new_title": null,
+    "new_description": "Gelato italiano de sambuca com anis com sabor herbáceo semelhante ao alcaçuz."
+  },
+  {
+    "id": "a9fcccfd-dcc1-4cf8-aaaf-ab25408a1253",
+    "slug": "samoa-cookie-ice-cream",
+    "new_title": "Sorvete de Biscoito Samoa",
+    "new_description": "Sorvete de caramelo, coco e chocolate inspirado no famoso biscoito Girl Scout."
+  },
+  {
+    "id": "242b09f8-66bf-4225-9bc6-81224ee640cb",
+    "slug": "sesame-halva-ice-cream",
+    "new_title": "Sorvete de Halva de Gergelim",
+    "new_description": "Uma sobremesa gelada única de halva de gergelim com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "1223ac4f-e5cf-4b4a-a094-180275915def",
+    "slug": "smoked-butterscotch-ice-cream",
+    "new_title": "Sorvete de Butterscotch Defumado",
+    "new_description": null
+  },
+  {
+    "id": "b2809068-9082-47ea-ab48-72e9b2a665fd",
+    "slug": "smoked-chocolate-ice-cream",
+    "new_title": "Sorvete de Chocolate Defumado",
+    "new_description": "Delicioso sorvete de chocolate defumado com uma mistura de sabores perfeitamente equilibrada para uma sobremesa gelada sofisticada."
+  },
+  {
+    "id": "5a4773ea-664e-4661-8c58-82717be35f22",
+    "slug": "smoked-salted-caramel-ice-cream",
+    "new_title": "Sorvete de Caramelo Salgado Defumado",
+    "new_description": "Um sorvete sofisticado de caramelo salgado defumado com uma combinação de sabores inesperada porém harmoniosa."
+  },
+  {
+    "id": "f46925be-e8c0-404b-965f-c86c7582bebf",
+    "slug": "smores-cookie-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f955dcc6-414a-4ced-9782-7a8552f463b9",
+    "slug": "smores-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "bf2ddb98-abbd-4fbb-93b0-f143608c6c98",
+    "slug": "smores-milkshake",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9a32500d-94ad-4098-80c4-9d74a2eabc10",
+    "slug": "snickerdoodle-cookie-butter-ice-cream",
+    "new_title": "Sorvete Snickerdoodle com Cookie Butter",
+    "new_description": "Sorvete quente de canela com açúcar e redemoinho de creme de biscoito."
+  },
+  {
+    "id": "04fa2af4-b453-4530-8afc-a24b8ac0480e",
+    "slug": "snickerdoodle-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "733982a1-717b-4840-839e-f60f5f9a71d1",
+    "slug": "snickers-bar-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "e4fce6e1-657f-4c2b-b222-d6d2dd364fe6",
+    "slug": "snickers-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "93b03095-2154-452c-91d5-b73a50c844c8",
+    "slug": "soursop-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "5ed4a1a8-b680-4092-9b50-73a4ce7c3791",
+    "slug": "spiced-rum-raisin-ice-cream",
+    "new_title": "Sorvete de Rum Especiado com Passas",
+    "new_description": "Sorvete quente de rum especiado com passas douradas rechonchudas e especiarias de festas."
+  },
+  {
+    "id": "1db91f60-48fa-4f91-a2cb-3fb1d023111f",
+    "slug": "starfruit-lime-sorbet",
+    "new_title": "Sorbet de Carambola com Limão",
+    "new_description": "Sorbet único de carambola com limão vibrante para uma inusual sobremesa tropical."
+  },
+  {
+    "id": "6723eaed-7687-40a1-80fa-bf1c88bddaf2",
+    "slug": "stracciatella-chocolate-gelato",
+    "new_title": "Gelato Stracciatella de Chocolate",
+    "new_description": "Gelato cremoso de baunilha com finas lascas de chocolate para a clássica stracciatella."
+  },
+  {
+    "id": "bd672f0f-c427-4f22-9606-fc817a233c68",
+    "slug": "stracciatella-gelato",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "0270dbe9-b7d2-4c72-9e0d-baaa1f999911",
+    "slug": "strawberry-acai-smoothie-bowl",
+    "new_title": "Smoothie Bowl de Morango e Açaí",
+    "new_description": "Bowl de smoothie doce de morango e açaí."
+  },
+  {
+    "id": "77130d75-ee4c-4308-b8e0-75d1ef100621",
+    "slug": "strawberry-almond-butter-ice-cream",
+    "new_title": "Sorvete de Morango com Manteiga de Amêndoa",
+    "new_description": "Sorvete fresco de morango com suave redemoinho de manteiga de amêndoa."
+  },
+  {
+    "id": "f327c060-f50e-49ec-8fe3-5658344690e6",
+    "slug": "strawberry-almond-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Morango com Amêndoa",
+    "new_description": "Sorvete doce de morango com pedaços crocantes de amêndoa."
+  },
+  {
+    "id": "85dddc49-1086-4957-af6d-5e545b61edea",
+    "slug": "strawberry-balsamic-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Morango com Balsâmico",
+    "new_description": "Gourmet frozen yogurt de morango com balsâmico e iogurte grego."
+  },
+  {
+    "id": "73cdc641-3666-4a05-8ef2-c50cbe63dc6d",
+    "slug": "strawberry-balsamic-sorbet",
+    "new_title": "Sorbet de Morango com Balsâmico",
+    "new_description": "Morangos doces com vinagre balsâmico envelhecido para um sorbet gourmet italiano."
+  },
+  {
+    "id": "88ea00dc-37c7-4bbd-ada8-d12ae5146e03",
+    "slug": "strawberry-banana-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "3f155a1f-7a1d-4cf5-87d6-12ed60fa068a",
+    "slug": "strawberry-banana-italian-ice",
+    "new_title": "Granita Italiana de Morango e Banana",
+    "new_description": null
+  },
+  {
+    "id": "5472b379-05ec-4f96-8310-42a00d6c52ce",
+    "slug": "strawberry-banana-milkshake",
+    "new_title": "Milkshake de Morango e Banana",
+    "new_description": null
+  },
+  {
+    "id": "84126824-ef49-4e17-bff4-05aa93a4f1c1",
+    "slug": "strawberry-banana-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Morango e Banana",
+    "new_description": null
+  },
+  {
+    "id": "73905302-5f50-47c1-bf50-f3c998752663",
+    "slug": "strawberry-basil-gelato",
+    "new_title": "Gelato de Morango com Manjericão",
+    "new_description": "Gelato fresco de morango com manjericão italiano aromático."
+  },
+  {
+    "id": "b41440ad-50f0-4f37-8340-aef29c8f5944",
+    "slug": "strawberry-caramel-swirl-ice-cream",
+    "new_title": "Sorvete com Redemoinho de Morango e Caramelo",
+    "new_description": null
+  },
+  {
+    "id": "691776d7-cf61-41f0-b277-e1e3ef3f40fd",
+    "slug": "strawberry-champagne-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "8361f148-9cc1-4156-be39-08a9284d5ac5",
+    "slug": "strawberry-cheesecake-greek-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "5edd9435-ba7c-477a-bf15-26545adc0369",
+    "slug": "strawberry-cheesecake-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2333b17e-57fc-45d8-ac0f-13941d0fd9d0",
+    "slug": "strawberry-cheesecake-milkshake",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "22532f94-1348-4c7c-b93f-fee5385ec1f1",
+    "slug": "strawberry-cheesecake-protein-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "0b91880f-b0f7-4d3c-bd9b-3eddb0ddffb7",
+    "slug": "strawberry-cheesecake-protein-lite-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a272e868-f9d9-43db-8e38-423c9aff8c82",
+    "slug": "strawberry-chocolate-truffle-ice-cream",
+    "new_title": "Sorvete de Morango com Trufa de Chocolate",
+    "new_description": "Sorvete doce de morango com pedaços de trufa de chocolate."
+  },
+  {
+    "id": "8da68d45-0f90-45e9-9625-fcad023bc401",
+    "slug": "strawberry-coconut-cream-ice-cream",
+    "new_title": "Sorvete de Morango com Creme de Coco",
+    "new_description": "Sorvete fresco de morango com creme tropical de coco."
+  },
+  {
+    "id": "f15d0aed-9273-47b5-914c-db7f257426b2",
+    "slug": "strawberry-cookie-butter-ice-cream",
+    "new_title": "Sorvete de Morango com Cookie Butter",
+    "new_description": "Sorvete fresco de morango com redemoinho de creme de biscoito Biscoff."
+  },
+  {
+    "id": "920c5264-07d7-40d2-adb9-eae99c5e639a",
+    "slug": "strawberry-cookie-crumble-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "3411339a-6204-4706-bc76-cef82b02fc8a",
+    "slug": "strawberry-cream-cheese-ice-cream",
+    "_skip_reason": "clean PT with cream cheese loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "0fc0c76b-b2ad-48b6-9917-001accb893fd",
+    "slug": "strawberry-cream-gelato",
+    "new_title": "Gelato de Morango com Creme",
+    "new_description": "Gelato fresco de morango com creme italiano para uma sobremesa cremosa e frutada."
+  },
+  {
+    "id": "913a6075-c2f3-4f18-9cfe-2de3effbf43e",
+    "slug": "strawberry-cream-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "12f1eff0-e75e-40dc-b372-c235628a7213",
+    "slug": "strawberry-crunch-cookie-ice-cream",
+    "new_title": "Sorvete Crocante de Morango com Biscoito",
+    "new_description": "Sorvete fresco de morango com pedaços crocantes de cobertura de biscoito."
+  },
+  {
+    "id": "fa8d5b1e-25f3-4206-b909-6cbb3b37988d",
+    "slug": "strawberry-ginger-sorbet",
+    "new_title": "Sorbet de Morango com Gengibre",
+    "new_description": "Sorbet doce de morango com toque aquecedor de gengibre."
+  },
+  {
+    "id": "bf83f7f5-bdc8-4c58-b5a2-21dc73cb997f",
+    "slug": "strawberry-graham-cracker-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "04ada90e-c4fe-4e68-88eb-4123f59b7163",
+    "slug": "strawberry-italian-ice",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "ceac8a0f-dc59-4343-9821-d0ea08428ea9",
+    "slug": "strawberry-kiwi-greek-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "bc873dfb-cdfc-4901-9dc1-a11a5d0a9ac9",
+    "slug": "strawberry-kiwi-sorbet",
+    "new_title": "Sorbet de Morango com Kiwi",
+    "new_description": "Combinação clássica de morango e kiwi congelada em um sorbet refrescante."
+  },
+  {
+    "id": "4969cf9b-eb19-404a-a536-ab74eb1b2dde",
+    "slug": "strawberry-lemonade-italian-ice",
+    "new_title": "Granita Italiana de Morango com Limonada",
+    "new_description": "Raspadinha doce de morango e limonada ácida."
+  },
+  {
+    "id": "15c50537-ea7a-461d-ab27-32e437ad7eb4",
+    "slug": "strawberry-lime-ice-cream",
+    "new_title": "Sorvete de Morango com Limão",
+    "new_description": "Sorvete doce de morango com limão vibrante para uma brilhante sobremesa de verão."
+  },
+  {
+    "id": "b28a214a-0021-4e0d-9f39-4bccafef0206",
+    "slug": "strawberry-mango-smoothie-bowl",
+    "new_title": "Smoothie Bowl de Morango e Manga",
+    "new_description": null
+  },
+  {
+    "id": "62751143-372b-49c7-a5b8-fad4affef348",
+    "slug": "strawberry-mango-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d3c493a3-f853-4bdf-a420-ac9a7cea1016",
+    "slug": "strawberry-matcha-ice-cream",
+    "new_title": "Sorvete de Morango com Matcha",
+    "new_description": null
+  },
+  {
+    "id": "9bafebee-f415-42c4-9e38-d603b3054217",
+    "slug": "strawberry-milkshake-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "34aea6e7-1295-4d8d-b809-43e17bee04d9",
+    "slug": "strawberry-mint-greek-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9eebaaa6-1d7a-41cd-bbd9-a79dabe651d3",
+    "slug": "strawberry-mint-ice-cream",
+    "new_title": "Sorvete de Morango com Menta",
+    "new_description": null
+  },
+  {
+    "id": "dbd66b3f-1d6d-4823-8074-caeb631a2ccf",
+    "slug": "strawberry-mint-italian-ice",
+    "new_title": "Granita Italiana de Morango com Menta",
+    "new_description": null
+  },
+  {
+    "id": "7e62ad8c-1563-4cde-a3bc-af2d97c708b7",
+    "slug": "strawberry-mint-sorbet",
+    "new_title": "Sorbet de Morango com Menta",
+    "new_description": "Sorbet doce de morango com hortelã refrescante."
+  },
+  {
+    "id": "448662ed-b749-4ae1-865f-f5fbe1dd4378",
+    "slug": "strawberry-oreo-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2ee6f0b3-d6ac-446c-b138-6fee4bb05edd",
+    "slug": "strawberry-passion-fruit-sorbet",
+    "new_title": "Sorbet de Morango com Maracujá",
+    "new_description": "Sorbet doce de morango com exótico toque de maracujá."
+  },
+  {
+    "id": "f02fd4bb-d3d9-44d8-9629-5f220cc8b577",
+    "slug": "strawberry-pecan-crumble-ice-cream",
+    "new_title": "Sorvete de Morango com Crumble de Noz-Pecã",
+    "new_description": "Sorvete fresco de morango com crumble de nozes-pecãs."
+  },
+  {
+    "id": "c53522ca-7274-405f-b311-ba80de90bf60",
+    "slug": "strawberry-pecan-ice-cream",
+    "new_title": "Sorvete de Morango com Noz-Pecã",
+    "new_description": "Sorvete doce de morango com pedaços crocantes de nozes-pecãs."
+  },
+  {
+    "id": "db26144f-eaa5-4033-9f5d-a3f77a23d65b",
+    "slug": "strawberry-pineapple-sorbet",
+    "new_title": "Sorbet de Morango com Abacaxi",
+    "new_description": "Sorbet doce de morango e abacaxi para uma sobremesa gelada tropical-frutas."
+  },
+  {
+    "id": "90574c98-c4b6-469e-97ad-fc35bdfd72c0",
+    "slug": "strawberry-pink-pepper-ice-cream",
+    "new_title": "Sorvete de Morango com Pimenta Rosa",
+    "new_description": "Delicioso sorvete de morango e pimenta rosa com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "359b79bd-e142-4f5f-8d29-e64c929209c5",
+    "slug": "strawberry-pistachio-ice-cream",
+    "new_title": "Sorvete de Morango com Pistache",
+    "new_description": "Sorvete doce de morango com pedaços de pistache triturado."
+  },
+  {
+    "id": "3a369198-8f9c-432e-883c-b39c9b359f1e",
+    "slug": "strawberry-pretzel-crumble-ice-cream",
+    "new_title": "Sorvete de Morango com Crumble de Pretzel",
+    "new_description": "Sorvete doce-salgado de morango com crumble de pretzel."
+  },
+  {
+    "id": "cbb2aaaa-fbc3-4ad4-9efb-74b201ef6547",
+    "slug": "strawberry-protein-shake-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Morango",
+    "new_description": "Sorvete proteico frutado de morango a partir de uma base de shake proteico."
+  },
+  {
+    "id": "6703e4a9-9052-4fa7-a52c-022cfbb099ff",
+    "slug": "strawberry-protein-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "af28f599-0579-4410-ad79-27544fe84029",
+    "slug": "strawberry-rose-sorbet",
+    "new_title": "Sorbet de Morango com Rosa",
+    "new_description": "Romântico sorbet de morango com água de rosas para uma delicada sobremesa floral."
+  },
+  {
+    "id": "19923367-45c5-4814-86f2-23ed2d2b79d9",
+    "slug": "strawberry-rose-water-ice-cream",
+    "new_title": "Sorvete de Morango com Água de Rosas",
+    "new_description": "Delicado sorvete de morango com fragrante água de rosas."
+  },
+  {
+    "id": "7f551202-6e0e-4c34-84fa-6a25516bf1aa",
+    "slug": "strawberry-shortbread-ice-cream",
+    "new_title": "Sorvete de Morango com Shortbread",
+    "new_description": "Sorvete fresco de morango com farelos de biscoito amanteigado."
+  },
+  {
+    "id": "90135781-c3b1-48ed-9ca5-d3ebad48ce27",
+    "slug": "strawberry-shortcake-crunch-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "af386097-6876-4b28-a5e2-5df2c7834ace",
+    "slug": "strawberry-shortcake-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "54dfb27f-2d31-4823-baac-32804a0924a3",
+    "slug": "strawberry-vanilla-bean-ice-cream",
+    "new_title": "Sorvete de Morango com Fava de Baunilha",
+    "new_description": null
+  },
+  {
+    "id": "5c2ebc3a-f410-47ea-bd7c-1317d861842b",
+    "slug": "strawberry-vanilla-cookie-ice-cream",
+    "new_title": "Sorvete de Morango com Baunilha e Biscoito",
+    "new_description": "Sorvete fresco de morango e baunilha com farelos de biscoito."
+  },
+  {
+    "id": "a3c6f4f9-4856-477c-a846-706494859f1c",
+    "slug": "strawberry-vanilla-milkshake",
+    "new_title": "Milkshake de Morango com Baunilha",
+    "new_description": "Milkshake clássico de morango e baunilha."
+  },
+  {
+    "id": "2d466375-c8e3-4a94-8294-f5cac776c02c",
+    "slug": "strawberry-vanilla-swirl-soft-serve",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d3f2c998-bac2-4609-b6ec-dfac7395dfdb",
+    "slug": "strawberry-walnut-ice-cream",
+    "new_title": "Sorvete de Morango com Nozes",
+    "new_description": "Sorvete doce de morango com pedaços de noz tostada."
+  },
+  {
+    "id": "5649f163-2ddc-470f-bd35-adea4d30c588",
+    "slug": "strawberry-white-chocolate-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "7774146a-6c89-4ed1-9965-025548e9cfd5",
+    "slug": "sweet-cream-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "fdad960b-9348-4bf1-a623-ca908c2db9f4",
+    "slug": "sweet-potato-marshmallow-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "07fc8209-fc96-4e4a-be27-0621fd97e0d2",
+    "slug": "tahini-chocolate-chip-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a5ddde4c-c740-4ed1-872c-e8b8da7be0fd",
+    "slug": "tahini-sesame-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Tahini com Gergelim",
+    "new_description": "Um sorvete sofisticado de tahini e gergelim crocante com uma combinação de sabores inesperada mas harmoniosa."
+  },
+  {
+    "id": "ce5ffc9d-5c88-4195-a0df-643baddb025a",
+    "slug": "tangerine-basil-sorbet",
+    "new_title": "Sorbet de Tangerina com Manjericão",
+    "new_description": "Sorbet vibrante de tangerina com manjericão aromático para uma combinação cítrica-erva."
+  },
+  {
+    "id": "567c0629-a20c-452f-a02b-a9f53ab8f3e3",
+    "slug": "tart-cherry-vanilla-greek-frozen-yogurt",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "7c0f1cfd-350a-4f1f-8599-6007eb6c6f7f",
+    "slug": "tigers-blood-italian-ice",
+    "new_title": "Granita Italiana Tiger's Blood",
+    "new_description": "Exótica granita italiana de morango, melancia e coco."
+  },
+  {
+    "id": "a0b93045-dd55-4074-9e7d-b5dd89945ddd",
+    "slug": "tiramisu-mascarpone-gelato",
+    "new_title": null,
+    "new_description": "Gelato de espresso e mascarpone com migalhas de biscoito champagne."
+  },
+  {
+    "id": "a33a0752-51e7-49f7-98c4-e05857bab934",
+    "slug": "toasted-almond-honey-ice-cream",
+    "new_title": "Sorvete de Amêndoa Tostada com Mel",
+    "new_description": "Delicioso sorvete de amêndoa tostada e mel com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "e658284b-9d6f-491e-9d18-8b14cf0277c6",
+    "slug": "toasted-coconut-cream-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "ce43d548-4820-4d87-a7e4-4d4bff09e140",
+    "slug": "toasted-marshmallow-mocha-ice-cream",
+    "new_title": "Sorvete de Marshmallow Tostado com Moca",
+    "new_description": "Delicioso sorvete de marshmallow tostado e moca com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "70848ccd-ce74-4c43-a3e6-55c67a9911ad",
+    "slug": "toasted-marshmallow-smores-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "49e14640-7907-4507-9380-3a03eb25ae04",
+    "slug": "toasted-oat-honey-ice-cream",
+    "new_title": "Sorvete de Aveia Tostada com Mel",
+    "new_description": "Delicioso sorvete de aveia tostada e mel com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "2ba8f8f2-6ead-4eeb-8c98-782d1098f3ed",
+    "slug": "toasted-pecan-brown-butter-ice-cream",
+    "new_title": "Sorvete de Noz-Pecã Tostada com Manteiga Dourada",
+    "new_description": "Delicioso sorvete de noz-pecã tostada e manteiga dourada com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "e4581b1d-d354-46c4-94e5-5daf520172ed",
+    "slug": "toasted-sesame-caramel-ice-cream",
+    "new_title": "Sorvete de Gergelim Tostado com Caramelo",
+    "new_description": "Um sorvete sofisticado de gergelim tostado e caramelo com uma combinação de sabores inesperada mas harmoniosa."
+  },
+  {
+    "id": "8edd7ee0-f3a9-48c1-a028-9a6ba3696a6e",
+    "slug": "toasted-sesame-honey-ice-cream",
+    "new_title": "Sorvete de Gergelim Tostado com Mel",
+    "new_description": "Delicioso sorvete de gergelim tostado e mel com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "e5fd12ad-a8e9-4135-9975-bbde67f23239",
+    "slug": "toasted-sesame-ice-cream",
+    "new_title": "Sorvete de Gergelim Tostado",
+    "new_description": "Sorvete de gergelim tostado com perfil de sabor de inspiração asiática."
+  },
+  {
+    "id": "7e67af33-488d-4d46-99a2-ce2289a98a95",
+    "slug": "torrone-gelato",
+    "new_title": null,
+    "new_description": "Gelato italiano com sabor de nougat, amêndoas e mel."
+  },
+  {
+    "id": "1a2a4855-6047-4575-b9fb-cb85e8a08f30",
+    "slug": "tres-leches-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "503a5560-e451-4210-b0b5-672b26345e96",
+    "slug": "triple-berry-jam-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "8cdb0c44-2c12-46f8-916b-5596987aedea",
+    "slug": "triple-caramel-crunch-ice-cream",
+    "new_title": "Sorvete Crocante Triple Caramelo",
+    "new_description": null
+  },
+  {
+    "id": "46cc3798-635e-444a-ba77-5b26b84928ef",
+    "slug": "triple-chocolate-truffle-ice-cream",
+    "new_title": "Sorvete Triple Chocolate com Trufa",
+    "new_description": null
+  },
+  {
+    "id": "a316eb45-fa62-49bb-b004-559632a07dca",
+    "slug": "triple-vanilla-bean-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "808ceeb0-8a8f-4ca4-b381-dd82553c4ca9",
+    "slug": "tropical-fruit-punch-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "e481cf0d-a743-4950-8dab-94b05da36907",
+    "slug": "tropical-green-power-smoothie-bowl",
+    "new_title": null,
+    "new_description": "Smoothie bowl verde de superalimentos com frutas tropicais."
+  },
+  {
+    "id": "9c44a155-a091-4263-8a8e-a9fd7c317fa5",
+    "slug": "tropical-guava-pineapple-sorbet",
+    "new_title": "Sorbet Tropical de Goiaba e Abacaxi",
+    "new_description": "Sorbet exótico de goiaba e abacaxi para uma delícia de inspiração caribenha."
+  },
+  {
+    "id": "29b17062-0a70-4461-a87b-e80fcd2d70ab",
+    "slug": "tropical-mango-pineapple-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego Tropical de Manga e Abacaxi",
+    "new_description": "Tropical frozen yogurt de manga e abacaxi com iogurte grego."
+  },
+  {
+    "id": "d4facb58-3eac-4080-a1ec-c4e0ef4db276",
+    "slug": "tropical-mango-sorbet",
+    "new_title": null,
+    "new_description": "Um sorbet de manga vibrante e brilhante como o sol que parece férias tropicais. Naturalmente sem laticínios e incrivelmente refrescante."
+  },
+  {
+    "id": "2912076e-3e7e-4c3c-ba27-de662d4237ff",
+    "slug": "tropical-papaya-smoothie-bowl",
+    "new_title": "Bowl de Smoothie Tropical de Mamão",
+    "new_description": "Exótico smoothie bowl de mamão com frutas tropicais."
+  },
+  {
+    "id": "b2f0e3f6-9853-415d-bf0e-6bd74d836bf6",
+    "slug": "tropical-pineapple-coconut-ice-cream",
+    "new_title": null,
+    "new_description": "Sorvete doce de abacaxi e creme de coco para uma piña colada gelada."
+  },
+  {
+    "id": "4731222e-cc55-421e-bea1-8b6a2d5c97ad",
+    "slug": "tropical-punch-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "726e26dc-a770-45fb-a24f-b9bc75ea5a94",
+    "slug": "tropical-punch-italian-ice",
+    "new_title": "Granita Italiana Tropical Punch",
+    "new_description": "Granita italiana de fruit punch com sabores tropicais."
+  },
+  {
+    "id": "40160253-e957-47e5-807b-0e7585d178d1",
+    "slug": "tropical-smoothie-bowl",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "fc37cfcc-478b-46e8-ba61-ffe346db8d91",
+    "slug": "tropical-sunrise-sorbet",
+    "new_title": null,
+    "new_description": "Sorbet tropical multi-fruta combinando manga, abacaxi e laranja."
+  },
+  {
+    "id": "48eec1d3-cb13-4781-83a3-f5745c5a6375",
+    "slug": "turmeric-golden-milk-ice-cream",
+    "new_title": "Sorvete de Leite Dourado com Cúrcuma",
+    "new_description": "Delicioso sorvete de leite dourado com cúrcuma e sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "98ff3089-503f-4bbb-929b-f4a7b192aa82",
+    "slug": "turmeric-mango-ice-cream",
+    "new_title": "Sorvete de Cúrcuma com Manga",
+    "new_description": "Uma sobremesa gelada única de cúrcuma e manga com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "53a5257c-c5f3-44eb-8850-c15036b595be",
+    "slug": "vanilla-almond-brownie-ice-cream",
+    "new_title": "Sorvete de Baunilha com Amêndoa e Brownie",
+    "new_description": "Sorvete doce de baunilha com pedaços de amêndoa e brownie."
+  },
+  {
+    "id": "ceba7c2e-1a72-426f-994b-31ed4d4d8000",
+    "slug": "vanilla-almond-cookie-ice-cream",
+    "new_title": "Sorvete de Baunilha com Biscoito de Amêndoa",
+    "new_description": "Sorvete doce de baunilha com crumble de biscoito de amêndoa."
+  },
+  {
+    "id": "29617069-a381-4e3b-8873-72bdaf515a08",
+    "slug": "vanilla-almond-gelato",
+    "new_title": "Gelato de Baunilha com Amêndoa",
+    "new_description": "Gelato clássico de baunilha com pedaços de amêndoa tostada."
+  },
+  {
+    "id": "ae3f9b02-1de9-44ff-841e-2f505e4e00d2",
+    "slug": "vanilla-almond-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Baunilha com Amêndoa",
+    "new_description": "Sorvete proteico suave de baunilha e amêndoa com extrato de amêndoa."
+  },
+  {
+    "id": "7fb5e76f-a9fe-4b87-9f33-993bd5a5055f",
+    "slug": "vanilla-almond-toffee-ice-cream",
+    "new_title": "Sorvete de Baunilha com Amêndoa e Toffee",
+    "new_description": "Sorvete doce de baunilha com pedaços de toffee de amêndoa."
+  },
+  {
+    "id": "ccd91446-3ed0-42cc-ba43-63b33a7518d1",
+    "slug": "vanilla-bean-custard-ice-cream",
+    "new_title": "Sorvete de Creme com Fava de Baunilha",
+    "new_description": "Uma sobremesa gelada única de creme de baunilha com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "1968685f-639f-4807-b14f-4a39a804e962",
+    "slug": "vanilla-bean-gelato",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "7c72339c-9baf-4c2e-83a3-bae964b7f89d",
+    "slug": "vanilla-bean-milkshake",
+    "new_title": "Milkshake de Fava de Baunilha",
+    "new_description": "Milkshake cremoso de fava de baunilha tão espesso que você precisa de colher."
+  },
+  {
+    "id": "ffcae799-0642-4cc9-8c9c-03338b36ef8a",
+    "slug": "vanilla-bean-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Fava de Baunilha",
+    "new_description": "Sorvete proteico premium de fava de baunilha com pasta real de baunilha."
+  },
+  {
+    "id": "aea425ee-d281-4994-9c11-2a77cea2a5d6",
+    "slug": "vanilla-blueberry-cobbler-ice-cream",
+    "new_title": "Sorvete de Baunilha com Cobbler de Mirtilo",
+    "new_description": "Sorvete doce de baunilha com pedaços de cobbler de mirtilo."
+  },
+  {
+    "id": "d019f358-2713-4ebb-bb08-5ea0aa950371",
+    "slug": "vanilla-brown-butter-ice-cream",
+    "new_title": "Sorvete de Baunilha com Manteiga Dourada",
+    "new_description": null
+  },
+  {
+    "id": "ace45fd1-a2ba-4ea2-a83b-1eb8613e9527",
+    "slug": "vanilla-caramel-cookie-milkshake",
+    "new_title": "Milkshake de Baunilha, Caramelo e Biscoito",
+    "new_description": "Milkshake doce de baunilha e caramelo com pedaços de biscoito."
+  },
+  {
+    "id": "3924f896-d0f7-4d36-b30f-dfc5d85471b3",
+    "slug": "vanilla-caramel-crunch-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light Crocante de Baunilha e Caramelo",
+    "new_description": null
+  },
+  {
+    "id": "df4bd53a-782f-47df-a3e5-e309b99957e0",
+    "slug": "vanilla-caramel-greek-frozen-yogurt",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "16020d16-1260-4994-b6bd-45bc457241af",
+    "slug": "vanilla-caramel-swirl-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "167d99b7-7544-46e8-932f-95032d0e8788",
+    "slug": "vanilla-chai-cookie-ice-cream",
+    "new_title": "Sorvete de Baunilha, Chai e Biscoito",
+    "new_description": "Sorvete quente de baunilha com especiarias chai e farelos de biscoito amanteigado."
+  },
+  {
+    "id": "e8af85c4-df9d-447a-8fe1-90940bd20ca7",
+    "slug": "vanilla-chai-crumble-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "34fec4a2-fba5-4dc9-aa56-b4f57bbd853f",
+    "slug": "vanilla-chai-swirl-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "baf1be23-524c-4eb6-b28d-be7fae58ddce",
+    "slug": "vanilla-chocolate-chunk-ice-cream",
+    "new_title": "Sorvete de Baunilha com Pedaços de Chocolate",
+    "new_description": "Sorvete doce de baunilha com generosos pedaços de chocolate amargo."
+  },
+  {
+    "id": "32f79ab8-8f53-4ff6-ac36-b8acc9053220",
+    "slug": "vanilla-chocolate-pretzel-ice-cream",
+    "new_title": "Sorvete de Baunilha com Pretzel de Chocolate",
+    "new_description": "Sorvete doce de baunilha com pedaços de pretzel cobertos de chocolate."
+  },
+  {
+    "id": "b352ce81-b08c-4fda-a658-d90c9f9595f0",
+    "slug": "vanilla-cinnamon-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Baunilha com Canela",
+    "new_description": "Sorvete proteico quente de baunilha e canela com especiaria doce."
+  },
+  {
+    "id": "67f76a6f-3a1f-4fcd-917d-245517b5356c",
+    "slug": "vanilla-cookie-butter-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "cc8c8eba-102b-4bbe-89bd-2a9f20fcdad9",
+    "slug": "vanilla-cookie-crumble-greek-frozen-yogurt",
+    "new_title": "Frozen Yogurt Grego de Baunilha com Crumble de Biscoito",
+    "new_description": "Frozen yogurt de baunilha com migalhas de biscoito e iogurte grego ácido."
+  },
+  {
+    "id": "464e43d3-33b4-4736-bb48-73dc8ea6b257",
+    "slug": "vanilla-cookie-crumble-ice-cream",
+    "new_title": "Sorvete de Baunilha com Crumble de Biscoito",
+    "new_description": "Sorvete doce de baunilha com pedaços de farelos de biscoitos variados."
+  },
+  {
+    "id": "a70f640d-b13d-499a-9981-e0d01fe8034d",
+    "slug": "vanilla-cookie-sandwich-ice-cream",
+    "new_title": "Sorvete de Baunilha com Biscoito Sanduíche",
+    "new_description": "Sorvete de creme doce com pedaços de sanduíche de biscoito de baunilha."
+  },
+  {
+    "id": "13d7fd44-7ee4-4dce-bbd1-16faeb65f8ea",
+    "slug": "vanilla-custard-gelato",
+    "new_title": "Gelato de Creme de Baunilha",
+    "new_description": "Gelato sedoso de creme de baunilha com riqueza de gema de ovo para autêntico estilo italiano."
+  },
+  {
+    "id": "d00e2aed-bb0c-42f3-832c-4a9726af689b",
+    "slug": "vanilla-fig-gelato",
+    "new_title": "Gelato de Baunilha com Figo",
+    "new_description": "Gelato suave de baunilha com redemoinho doce de figo."
+  },
+  {
+    "id": "82ec553c-58a9-4b5e-bc5a-50cf85678b3b",
+    "slug": "vanilla-fudge-protein-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Baunilha com Fudge",
+    "new_description": "Sorvete proteico doce de baunilha com redemoinho de fudge."
+  },
+  {
+    "id": "2efad2de-fc23-47eb-b09b-3fe355c3d115",
+    "slug": "vanilla-hazelnut-gelato",
+    "new_title": "Gelato de Baunilha com Avelã",
+    "new_description": "Gelato suave de baunilha com avelãs tostadas."
+  },
+  {
+    "id": "253eff0f-f232-4460-96ca-4d97cf6a73ec",
+    "slug": "vanilla-lavender-shortbread-ice-cream",
+    "new_title": "Sorvete de Baunilha, Lavanda e Shortbread",
+    "new_description": "Delicioso sorvete de baunilha, lavanda e biscoito amanteigado com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "a87e0c73-0ea7-4b11-86ed-f8638f024a6f",
+    "slug": "vanilla-nougat-ice-cream",
+    "new_title": "Sorvete de Baunilha com Nougat",
+    "new_description": "Sorvete doce de baunilha com pedaços de nougat macio."
+  },
+  {
+    "id": "c92e912c-eb18-44c4-8871-4420d1f16e64",
+    "slug": "vanilla-oreo-milkshake",
+    "new_title": "Milkshake de Baunilha com Oreo",
+    "new_description": "Milkshake clássico de baunilha batido com biscoitos Oreo."
+  },
+  {
+    "id": "a0fa90f1-c34a-471e-883c-24d09a8bb4bc",
+    "slug": "vanilla-oreo-protein-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "43248628-4960-44d6-bbdb-bd3d63a65804",
+    "slug": "vanilla-passion-fruit-swirl-ice-cream",
+    "new_title": "Sorvete de Baunilha com Redemoinho de Maracujá",
+    "new_description": "Delicioso sorvete de baunilha com redemoinho de maracujá e sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "86c474df-64f4-440c-97f6-379feeab462e",
+    "slug": "vanilla-peach-cobbler-ice-cream",
+    "new_title": "Sorvete de Baunilha com Cobbler de Pêssego",
+    "new_description": "Sorvete cremoso de baunilha com pedaços de crumble de cobbler de pêssego."
+  },
+  {
+    "id": "55775fef-7461-4953-a4dd-cf9f36e6539b",
+    "slug": "vanilla-pecan-cookie-ice-cream",
+    "new_title": "Sorvete de Baunilha com Biscoito de Noz-Pecã",
+    "new_description": "Sorvete doce de baunilha com crumble de biscoito de nozes-pecãs."
+  },
+  {
+    "id": "b8a9e935-3cab-470e-b83b-259f2734a7c3",
+    "slug": "vanilla-protein-ice-cream-thecreami",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "bf8b9c38-3393-45ac-8a44-76e0709b00c0",
+    "slug": "vanilla-protein-shake-lite-ice-cream",
+    "new_title": "Sorvete Proteico Light de Baunilha",
+    "new_description": "Sorvete proteico simples feito a partir de uma base de shake proteico de baunilha."
+  },
+  {
+    "id": "a385a212-21e1-400d-9c65-657975d91ff1",
+    "slug": "vanilla-pumpkin-swirl-ice-cream",
+    "new_title": "Sorvete de Baunilha com Redemoinho de Abóbora",
+    "new_description": "Sorvete doce de baunilha com redemoinho de abóbora especiada."
+  },
+  {
+    "id": "9dba06b9-7c79-4992-af33-9d641273ea82",
+    "slug": "vanilla-raspberry-swirl-ice-cream",
+    "new_title": "Sorvete de Baunilha com Redemoinho de Framboesa",
+    "new_description": "Sorvete doce de baunilha com vibrante redemoinho de purê de framboesa."
+  },
+  {
+    "id": "8b5c3d59-b763-4012-b736-12b9f1a99baa",
+    "slug": "vanilla-strawberry-crumble-ice-cream",
+    "new_title": "Sorvete de Baunilha com Crumble de Morango",
+    "new_description": "Sorvete doce de baunilha com crumble de morango."
+  },
+  {
+    "id": "b76273ac-8d23-4b04-a32c-cbf19e26c6ba",
+    "slug": "vegan-banana-nice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "519826cc-99ae-4621-a02b-54dbd46215ae",
+    "slug": "vegan-birthday-cake-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a9eaf63d-ae00-4aab-9c3a-65de87ddc347",
+    "slug": "vegan-cherry-garcia-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9e6fdcba-c57f-4aeb-b946-a5c0835882cc",
+    "slug": "vegan-cinnamon-roll-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2f53a284-b5da-4bf3-bae0-5d74419296d6",
+    "slug": "vegan-coconut-chocolate-chip-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "0e05062e-3c99-42be-b5d2-02d15fd860f2",
+    "slug": "vegan-coffee-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a9df4617-d10f-4f17-8fa6-8a62cec994a9",
+    "slug": "vegan-mint-chocolate-chip-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "0d408b61-8398-4e6f-8812-64d05f4bb377",
+    "slug": "vegan-peanut-butter-chocolate-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "cda4eca6-ac70-49b9-ac09-61b0477289ed",
+    "slug": "vietnamese-iced-coffee-ice-cream",
+    "new_title": "Sorvete de Café Gelado Vietnamita",
+    "new_description": "Uma sobremesa gelada única de café gelado vietnamita com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "0bd97a23-fe5f-4f03-ab4f-164015bf225b",
+    "slug": "walnut-maple-crunch-ice-cream",
+    "new_title": "Sorvete Crocante de Nozes com Bordo",
+    "new_description": "Sorvete puro de bordo com pedaços crocantes de noz cristalizada."
+  },
+  {
+    "id": "2a0f5740-adf8-4f0b-84c0-5608724c524a",
+    "slug": "watermelon-basil-sorbet",
+    "new_title": "Sorbet de Melancia com Manjericão",
+    "new_description": "Sorbet refrescante de melancia com manjericão herbáceo."
+  },
+  {
+    "id": "60d83a0f-814f-43c8-8da9-ed376d657a50",
+    "slug": "watermelon-berry-italian-ice",
+    "new_title": "Granita Italiana de Melancia com Frutas Vermelhas",
+    "new_description": "Refrescante granita italiana de melancia com frutas vermelhas."
+  },
+  {
+    "id": "262c44c3-451d-4008-bce1-5aca97581b9c",
+    "slug": "watermelon-berry-sorbet",
+    "new_title": "Sorbet de Melancia com Frutas Vermelhas",
+    "new_description": "Sorbet refrescante de melancia com frutas vermelhas mistas para um refresco de verão."
+  },
+  {
+    "id": "f68a66f9-71d7-4a47-9363-89913a915d78",
+    "slug": "watermelon-jalapeno-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9aa1505e-60c9-41aa-8e78-a10af6663097",
+    "slug": "watermelon-mint-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "99e012bc-4203-4f82-a6ad-be4a23f33991",
+    "slug": "watermelon-rose-sorbet",
+    "new_title": "Sorbet de Melancia com Rosa",
+    "new_description": "Sorbet refrescante de melancia com delicada água de rosas."
+  },
+  {
+    "id": "ec49dab3-e8d8-4782-9c86-bd9f86d2bef1",
+    "slug": "watermelon-sorbet",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "fe05eabd-ce3f-4f64-a458-e6716b23eb21",
+    "slug": "whiskey-caramel-pecan-ice-cream",
+    "new_title": "Sorvete de Whisky, Caramelo e Noz-Pecã",
+    "new_description": "Delicioso sorvete de whisky, caramelo e nozes-pecãs com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "a3868170-7aed-400e-b409-f89075699afa",
+    "slug": "white-chocolate-blueberry-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "c59e3868-2609-421c-b44b-0e4bbd342a4e",
+    "slug": "white-chocolate-cookie-dough-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "92847c35-19f1-4a8f-8334-a5f47626b2f0",
+    "slug": "white-chocolate-cranberry-ice-cream",
+    "new_title": "Sorvete de Chocolate Branco com Cranberry",
+    "new_description": "Sorvete doce de chocolate branco com pedaços de cranberry seco acidulado."
+  },
+  {
+    "id": "216fdc07-b8a8-4ee7-8e69-a368f30284bf",
+    "slug": "white-chocolate-espresso-ice-cream",
+    "new_title": "Sorvete de Chocolate Branco com Espresso",
+    "new_description": "Delicioso sorvete de chocolate branco e espresso com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "c2e8897e-05e9-4a27-b910-ac6d35d56693",
+    "slug": "white-chocolate-lavender-ice-cream",
+    "new_title": "Sorvete de Chocolate Branco com Lavanda",
+    "new_description": "Fragrante sorvete de chocolate branco com lavanda."
+  },
+  {
+    "id": "2c444484-aa81-4b57-bf28-715ef6a44c83",
+    "slug": "white-chocolate-lemon-ice-cream",
+    "new_title": "Sorvete de Chocolate Branco com Limão",
+    "new_description": "Sorvete cremoso de chocolate branco com vibrantes raspas de limão."
+  },
+  {
+    "id": "3787593c-2fc6-4ba9-9f80-b11ccc34a87d",
+    "slug": "white-chocolate-matcha-swirl-ice-cream",
+    "new_title": "Sorvete com Redemoinho de Chocolate Branco e Matcha",
+    "new_description": "Um sorvete sofisticado de chocolate branco com redemoinho de matcha e uma combinação inesperada mas harmoniosa."
+  },
+  {
+    "id": "b10d190f-bb01-46d8-8c08-425f9de8e2ad",
+    "slug": "white-chocolate-pistachio-gelato",
+    "new_title": "Gelato de Chocolate Branco com Pistache",
+    "new_description": "Luxuoso gelato de chocolate branco com pistache."
+  },
+  {
+    "id": "7a20dbb0-50d5-4521-8a59-cfe1ad4d02eb",
+    "slug": "white-chocolate-pistachio-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "6388ff8e-ef00-40a7-9c1b-d40f69144105",
+    "slug": "white-chocolate-raspberry-gelato",
+    "new_title": "Gelato de Chocolate Branco com Framboesa",
+    "new_description": "Gelato doce de chocolate branco com redemoinho de purê de framboesa."
+  },
+  {
+    "id": "0267201d-3fdb-41bc-97ce-a6d3558ce943",
+    "slug": "white-chocolate-raspberry-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a0464820-9638-4b36-b448-1277a00c07cf",
+    "slug": "white-chocolate-raspberry-truffle-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "8c73385a-56be-49fa-a7c8-b001c8095459",
+    "slug": "white-miso-caramel-ice-cream",
+    "new_title": "Sorvete de Miso Branco com Caramelo",
+    "new_description": "Delicioso sorvete de miso branco e caramelo com sabores perfeitamente equilibrados."
+  },
+  {
+    "id": "d2a00db5-0317-4596-b92d-9534cd926af4",
+    "slug": "white-mocha-ice-cream",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "7cf32629-757c-4286-a25a-358c103406c3",
+    "slug": "zabaglione-gelato",
+    "_skip_reason": "clean PT",
+    "new_title": null,
+    "new_description": null
+  }
+]
