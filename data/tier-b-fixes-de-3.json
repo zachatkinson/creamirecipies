@@ -1,0 +1,619 @@
+[
+  {
+    "id": "3cdd2ffc-3db6-4257-aa04-a9ebd28c8154",
+    "slug": "coconut-cream-gelato",
+    "new_title": "Kokos-Sahne-Gelato",
+    "new_description": "Tropisches Kokos-Sahne-Gelato mit italienischer Basis."
+  },
+  {
+    "id": "16bad5bf-d99f-4c52-90cb-bbe1fbdb4db7",
+    "slug": "coconut-cream-pie-ice-cream",
+    "new_title": null,
+    "new_description": "Kokoseis mit gerösteter Kokosnuss und Vanillekeks-Krümeln. Eine gefrorene Hommage an den klassischen Südstaaten-Sahne-Kuchen."
+  },
+  {
+    "id": "687e6435-e830-469e-95ae-3d52746660b4",
+    "slug": "coconut-cream-pie-swirl-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "8e5c9af7-a51f-4ae2-b41a-55cb56834df5",
+    "slug": "coconut-frozen-yogurt",
+    "new_title": null,
+    "new_description": "Kokos-Frozen-Yogurt, der leichter als Eis, aber cremig und tropisch ist. Griechischer Joghurt liefert Säure und Protein."
+  },
+  {
+    "id": "0f8f8525-7e04-456b-b441-319ac16b64ea",
+    "slug": "coconut-lime-italian-ice",
+    "new_title": "Italienisches Kokos-Limetten-Eis",
+    "new_description": "Tropisches italienisches Kokos-Eis mit Limette."
+  },
+  {
+    "id": "09cf8543-d49b-455a-a9a3-650cbfa0ba7b",
+    "slug": "coconut-lime-sorbet",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f5da48f5-d8bc-4d33-9c6d-eced143beba4",
+    "slug": "coconut-mango-lime-ice-cream",
+    "new_title": "Kokos-Mango-Limetten-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "9b4e3592-9a77-42b6-af75-7b0282f28a73",
+    "slug": "coconut-pineapple-sorbet",
+    "new_title": null,
+    "new_description": "Cremiges Kokos-Ananas-Sorbet, das wie eine gefrorene Piña Colada ohne Rum schmeckt."
+  },
+  {
+    "id": "fbc2b620-252c-4cc7-ad0d-0f974d3e5ee0",
+    "slug": "coconut-tres-leches-ice-cream",
+    "new_title": "Kokos-Tres-Leches-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "4e81cc08-23a1-4c0a-82ce-8b88cd579f36",
+    "slug": "coffee-almond-crunch-ice-cream",
+    "new_title": "Kaffee-Mandel-Crunch-Eiscreme",
+    "new_description": "Kräftiges Kaffee-Eis mit knusprigen kandierten Mandeln."
+  },
+  {
+    "id": "e99912e4-3f19-4d4f-97b0-285228ab6ef1",
+    "slug": "coffee-biscotti-ice-cream",
+    "new_title": "Kaffee-Biscotti-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "229bf38b-3a0f-4fa0-bebe-4b4819e30e7e",
+    "slug": "coffee-brownie-swirl-ice-cream",
+    "new_title": "Kaffee-Brownie-Wirbel-Eiscreme",
+    "new_description": "Kräftiges Kaffee-Eis mit Brownie-Teig-Wirbel."
+  },
+  {
+    "id": "423e97ae-0f10-4f42-bf62-d800909c0716",
+    "slug": "coffee-caramel-greek-frozen-yogurt",
+    "new_title": "Griechischer Kaffee-Karamell-Frozen-Yogurt",
+    "new_description": "Kräftiger Kaffee-Karamell-Frozen-Yogurt mit griechischem Joghurt."
+  },
+  {
+    "id": "9116a013-9b42-46c0-bbc3-f5ef3551d181",
+    "slug": "coffee-chip-protein-lite-ice-cream",
+    "new_title": "Kaffee-Stückchen Protein-Lite-Eis",
+    "new_description": "Kräftiges Kaffee-Protein-Eis mit dunklen Schokoladenstückchen."
+  },
+  {
+    "id": "dbfcc7d8-9783-4571-8ed5-4a40e4c12d46",
+    "slug": "coffee-chocolate-caramel-ice-cream",
+    "new_title": "Kaffee-Schokoladen-Karamell-Eiscreme",
+    "new_description": "Dreifach-Genuss: Kaffee-Schokoladen-Karamell-Eiscreme."
+  },
+  {
+    "id": "973ea7e6-0fac-4530-9708-d71a92669343",
+    "slug": "coffee-chocolate-chip-gelato",
+    "new_title": "Kaffee-Schokoladenstückchen-Gelato",
+    "new_description": "Kräftiges Kaffee-Gelato gespickt mit dunklen Schokoladenstückchen."
+  },
+  {
+    "id": "24fada05-2272-4ac1-a922-eaa3a129c7a2",
+    "slug": "coffee-chocolate-chip-ice-cream",
+    "new_title": "Kaffee-Schokoladenstückchen-Eiscreme",
+    "new_description": "Kräftiges Kaffee-Eis gespickt mit dunklen Schokoladenstückchen."
+  },
+  {
+    "id": "8430ecac-3e05-4142-a59f-9c3fa657c1db",
+    "slug": "coffee-coconut-cream-ice-cream",
+    "new_title": "Kaffee-Kokossahne-Eiscreme",
+    "new_description": "Kräftiges Kaffee-Eis mit tropischer Kokossahne."
+  },
+  {
+    "id": "8f88dfe0-0ff6-489f-ab61-17a15b5d9fe1",
+    "slug": "coffee-cookie-crumble-protein-lite-ice-cream",
+    "new_title": "Kaffee-Keks-Crumble Protein-Lite-Eis",
+    "new_description": "Kräftiges Kaffee-Protein-Eis mit Kekskrümeln."
+  },
+  {
+    "id": "5778cdce-a7b4-4bca-b5b4-3288935b49b5",
+    "slug": "coffee-cookies-and-cream-milkshake",
+    "new_title": "Kaffee Cookies-and-Cream-Milkshake",
+    "new_description": "Kaffee-Milkshake mit zerkleinerten Oreo-Keksen."
+  },
+  {
+    "id": "77800414-2432-465a-8165-8f908e453ce5",
+    "slug": "coffee-cream-cookie-ice-cream",
+    "new_title": "Kaffee-Sahne-Keks-Eiscreme",
+    "new_description": "Kräftiges Kaffeecreme-Eis mit Kekskrümeln."
+  },
+  {
+    "id": "0c38f64c-431c-4ec6-bf54-3dd24ed20c0f",
+    "slug": "coffee-cream-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "7670610a-0a0a-4cf5-8bbb-ffc717d98252",
+    "slug": "coffee-hazelnut-praline-ice-cream",
+    "new_title": "Kaffee-Haselnuss-Praline-Eiscreme",
+    "new_description": "Köstliche Kaffee-Haselnuss-Praline-Eiscreme mit perfekt ausgewogenen Aromen für einen gehobenen Genuss."
+  },
+  {
+    "id": "da2e14e8-9cf9-47ee-abae-883367dbe4d1",
+    "slug": "coffee-oreo-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "3fb08b4b-11dc-4f6a-a19e-66e6606e7150",
+    "slug": "coffee-walnut-crunch-ice-cream",
+    "new_title": "Kaffee-Walnuss-Crunch-Eiscreme",
+    "new_description": "Kräftige Kaffee-Eiscreme mit knusprigen kandierten Walnüssen."
+  },
+  {
+    "id": "9a325ce4-fed7-40cf-b6f6-eebdd681ff85",
+    "slug": "condensed-milk-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "a758b5f5-e26a-4d3d-893a-35af24c08c45",
+    "slug": "cookie-butter-swirl-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9ec87e65-96c1-4dbd-b447-dbbfaa327c9b",
+    "slug": "cookies-and-cream-brownie-milkshake",
+    "new_title": "Cookies-and-Cream-Brownie-Milkshake",
+    "new_description": "Doppelter Dessert-Genuss: Cookies-and-Cream-Brownie-Milkshake."
+  },
+  {
+    "id": "c5c41f7a-62df-4040-aa26-f08f4600472c",
+    "slug": "cookies-and-cream-greek-frozen-yogurt",
+    "new_title": "Griechischer Cookies-and-Cream-Frozen-Yogurt",
+    "new_description": "Frozen Yogurt mit zerkleinerten Oreos und griechischem Joghurt für leichtere Cookies and Cream."
+  },
+  {
+    "id": "60088fef-81d0-46c0-93f5-71c57a9340b3",
+    "slug": "cookies-and-cream-protein-lite-ice-cream",
+    "new_title": "Cookies-and-Cream Protein-Lite-Eis",
+    "new_description": "Proteinreiche Cookies-and-Cream-Eiscreme mit zerkleinerten Oreos."
+  },
+  {
+    "id": "cbe84e81-2a2c-4e99-a9d3-9fcbdd2b21bc",
+    "slug": "cottage-cheese-chocolate-lite-ice-cream",
+    "new_title": "Hüttenkäse-Schokoladen Lite-Eis",
+    "new_description": "Proteinreiche Schokoladen-Eiscreme mit Hüttenkäse zubereitet."
+  },
+  {
+    "id": "924af9e7-34b0-4c34-8818-63657cd40811",
+    "slug": "cottage-cheese-chocolate-protein-ice-cream",
+    "new_title": null,
+    "new_description": "Die virale Hüttenkäse-Basis mit Schokoladengeschmack. Unglaublich proteinreich, cremig wenn glatt gemixt und tiefschokoladig."
+  },
+  {
+    "id": "d8fa4503-382c-401c-9f3a-28b4c6b77b08",
+    "slug": "cottage-cheese-strawberry-lite-ice-cream",
+    "new_title": "Hüttenkäse-Erdbeer Lite-Eis",
+    "new_description": "Proteinreiche Erdbeer-Eiscreme mit Hüttenkäse zubereitet."
+  },
+  {
+    "id": "2b9d62d0-248b-4769-9da0-1927d7d4de41",
+    "slug": "cottage-cheese-vanilla-lite-ice-cream",
+    "new_title": "Hüttenkäse-Vanille Lite-Eis",
+    "new_description": "Ultra-proteinreiche Vanille-Eiscreme mit Hüttenkäse zubereitet."
+  },
+  {
+    "id": "94f90e3e-beec-4fbf-bc1d-6f82db487d53",
+    "slug": "cotton-candy-swirl-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "7f9f4ae1-88e8-4e5b-9e8f-de55cfb48413",
+    "slug": "cranberry-orange-greek-frozen-yogurt",
+    "new_title": "Griechischer Cranberry-Orangen-Frozen-Yogurt",
+    "new_description": "Festlicher Cranberry-Orangen-Frozen-Yogurt mit griechischem Joghurt für einen Feiertagsgenuss."
+  },
+  {
+    "id": "c35803ee-4745-4b5d-ae47-4618d04c9ea9",
+    "slug": "crema-gelato",
+    "new_title": null,
+    "new_description": "Einfaches italienisches Crema-Gelato mit der Reichhaltigkeit einer Eier-Crème."
+  },
+  {
+    "id": "fc5a1581-d2df-4b27-9eff-89be386b372f",
+    "slug": "creme-brulee-gelato",
+    "new_title": "Crème-Brûlée-Gelato",
+    "new_description": "Gelato mit gebrannter Karamell-Crème und karamellisierten Zuckersplittern."
+  },
+  {
+    "id": "9fd1fd02-3732-4c30-9526-0fc64c0d60ca",
+    "slug": "dark-chocolate-almond-crunch-ice-cream",
+    "new_title": "Dunkle-Schokoladen-Mandel-Crunch-Eiscreme",
+    "new_description": "Intensive dunkle Schokoladen-Eiscreme mit knusprigen Mandeln."
+  },
+  {
+    "id": "5a8b7b76-82a8-4178-96c1-27730a1b349a",
+    "slug": "dark-chocolate-avocado-ice-cream",
+    "new_title": "Dunkle-Schokoladen-Avocado-Eiscreme",
+    "new_description": "Eine raffinierte dunkle Schokoladen-Avocado-Eiscreme mit unerwartet harmonischen Geschmacksakzenten."
+  },
+  {
+    "id": "b75dcc22-7919-4010-867f-74818bb6da44",
+    "slug": "dark-chocolate-brownie-swirl-ice-cream",
+    "new_title": "Dunkle-Schokoladen-Brownie-Wirbel-Eiscreme",
+    "new_description": "Intensive dunkle Schokoladen-Eiscreme mit Brownie-Teig-Wirbel."
+  },
+  {
+    "id": "3a93fa7e-91bf-4c86-ae75-1042fe9734b9",
+    "slug": "dark-chocolate-caramel-pretzel-ice-cream",
+    "new_title": "Dunkle-Schokoladen-Karamell-Brezel-Eiscreme",
+    "new_description": "Bittersüße Schokoladen-Eiscreme mit Karamell und Brezelstückchen."
+  },
+  {
+    "id": "45ddb5ee-907d-4e8c-a3dd-6d31f0ec2ae1",
+    "slug": "dark-chocolate-cherry-cordial-ice-cream",
+    "new_title": null,
+    "new_description": "Bittersüße dunkle Schokoladen-Eiscreme mit Kirschstücken und einer Likörfüllung."
+  },
+  {
+    "id": "19d01fee-ac87-4bf8-80d4-1b42e1945a45",
+    "slug": "dark-chocolate-coconut-ice-cream",
+    "new_title": "Dunkle-Schokoladen-Kokos-Eiscreme",
+    "new_description": "Intensive dunkle Schokoladen-Eiscreme mit gerösteter Kokosnuss."
+  },
+  {
+    "id": "a9465079-3e1b-4c5e-98d3-caa00ac723ae",
+    "slug": "dark-chocolate-cookie-crumble-ice-cream",
+    "new_title": "Dunkle-Schokoladen-Keks-Crumble-Eiscreme",
+    "new_description": "Intensive dunkle Schokoladen-Eiscreme mit Keks-Crumble."
+  },
+  {
+    "id": "78cf39a9-d7ed-4cc0-b97e-c51715886dd4",
+    "slug": "dark-chocolate-espresso-chip-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "1b0c2efb-723f-4098-9a33-1f552bc94b17",
+    "slug": "dark-chocolate-ginger-ice-cream",
+    "new_title": "Dunkle-Schokoladen-Ingwer-Eiscreme",
+    "new_description": "Ein reichhaltiges und cremiges dunkles Schokoladen-Ingwer-Eisdessert mit harmonischen Geschmacksschichten."
+  },
+  {
+    "id": "c722b38d-d502-427e-9329-64fdbe282568",
+    "slug": "dark-chocolate-hazelnut-gelato",
+    "new_title": "Dunkle-Schokoladen-Haselnuss-Gelato",
+    "new_description": "Intensives dunkles Schokoladen-Gelato mit Haselnuss-Praline."
+  },
+  {
+    "id": "ccc12bad-c788-4642-baa0-c77512bf17c3",
+    "slug": "dark-chocolate-orange-ice-cream",
+    "new_title": null,
+    "new_description": "Reichhaltiges dunkles Schokoladeneis mit frischer Orangenschale. Eine klassische europäische Konfektur in gefrorener Form."
+  },
+  {
+    "id": "cca3b4be-57f0-4ca2-b351-099be9b9f966",
+    "slug": "dark-chocolate-peanut-butter-swirl-ice-cream",
+    "new_title": "Dunkle-Schokoladen-Erdnussbutter-Wirbel-Eiscreme",
+    "new_description": "Bittersüße dunkle Schokoladen-Eiscreme mit Erdnussbutter-Wirbel."
+  },
+  {
+    "id": "db1483ba-ba5b-433c-b547-bf2b26c6caa2",
+    "slug": "dark-chocolate-peppermint-bark-ice-cream",
+    "new_title": "Dunkle-Schokoladen-Pfefferminz-Bark-Eiscreme",
+    "new_description": "Bittersüße Schokoladen-Eiscreme mit Pfefferminz-Bark-Stückchen."
+  },
+  {
+    "id": "ea4d380a-907f-487c-a089-01d31b100347",
+    "slug": "dark-chocolate-raspberry-swirl-ice-cream",
+    "new_title": "Dunkle-Schokoladen-Himbeer-Wirbel-Eiscreme",
+    "new_description": "Reichhaltige dunkle Schokoladen-Eiscreme mit leuchtendem Himbeer-Wirbel."
+  },
+  {
+    "id": "3474de5e-ac06-4be1-ae06-5ac81c721348",
+    "slug": "dark-chocolate-sea-salt-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "4fe8aa98-ec2b-4601-9aae-8aa9bdd38679",
+    "slug": "dark-chocolate-tahini-ice-cream",
+    "new_title": "Dunkle-Schokoladen-Tahini-Eiscreme",
+    "new_description": "Köstliche dunkle Schokoladen-Tahini-Eiscreme mit perfekt ausgewogenen Aromen für einen gehobenen Genuss."
+  },
+  {
+    "id": "1d3f6d5c-a183-4e81-82d3-ec14cd4d7ddd",
+    "slug": "dragon-fruit-coconut-smoothie-bowl",
+    "new_title": "Drachenfrucht-Kokos-Smoothie-Bowl",
+    "new_description": "Drachenfrucht-Kokos-Smoothie-Bowl mit wunderschöner rosa Farbe und tropischem Geschmack. Garniert mit Kokosraspeln, Chiasamen und frischem Obst."
+  },
+  {
+    "id": "fe3e549f-330b-4a53-ad92-95d0614ab836",
+    "slug": "dulce-de-leche-ice-cream",
+    "new_title": null,
+    "new_description": "Seidig glattes Eis mit der tiefen Karamellsüße von Dulce de Leche. Ein lateinamerikanischer Klassiker in gefrorener Form."
+  },
+  {
+    "id": "ccda7f98-4528-41d5-98a6-bdc2e9106095",
+    "slug": "earl-grey-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "ad754d16-8ecb-422c-af4e-bff2a8338c63",
+    "slug": "espresso-cookie-crunch-milkshake",
+    "new_title": "Espresso-Keks-Crunch-Milkshake",
+    "new_description": "Kräftiger Espresso-Milkshake mit zerkleinerten Schokoladenkeksen."
+  },
+  {
+    "id": "312a4fcc-248c-4d2c-818c-4a03cf75e243",
+    "slug": "espresso-dark-chocolate-ice-cream",
+    "new_title": "Espresso-Dunkle-Schokoladen-Eiscreme",
+    "new_description": "Intensive Espresso-Eiscreme mit dunklen Schokoladen-Splittern."
+  },
+  {
+    "id": "e6d4b3ca-f5b6-461c-a9eb-38a90f170b65",
+    "slug": "espresso-dulce-de-leche-ice-cream",
+    "new_title": "Espresso-Dulce-de-Leche-Eiscreme",
+    "new_description": "Eine raffinierte Espresso-Dulce-de-Leche-Eiscreme mit unerwartet harmonischen Geschmacksakzenten."
+  },
+  {
+    "id": "85ddbaad-b440-43fb-b304-9901ee3a851d",
+    "slug": "espresso-gelato",
+    "new_title": null,
+    "new_description": "Kräftiges Espresso-Gelato mit intensivem Kaffeegeschmack."
+  },
+  {
+    "id": "1fc46c1e-92a1-4baa-86a8-a2a1b1b079c2",
+    "slug": "espresso-vanilla-bean-ice-cream",
+    "new_title": "Espresso-Vanille-Eiscreme",
+    "new_description": "Kräftige Espresso-Eiscreme mit Vanilleschotensprenkeln."
+  },
+  {
+    "id": "3f8569f5-7016-4c13-bece-b343ae88f60a",
+    "slug": "fairlife-birthday-cake-lite-ice-cream",
+    "new_title": "Fairlife Geburtstagskuchen Lite-Eis",
+    "new_description": "Festliche Geburtstagskuchen-Protein-Eiscreme mit Fairlife-Milch."
+  },
+  {
+    "id": "e96c33b6-2383-47d0-a659-ba9c5501b59d",
+    "slug": "fairlife-chocolate-caramel-lite-ice-cream",
+    "new_title": "Fairlife Schokoladen-Karamell Lite-Eis",
+    "new_description": "Schokoladen-Karamell-Protein-Eiscreme mit Fairlife-Milch zubereitet."
+  },
+  {
+    "id": "807d83fc-534d-4578-b416-d0eb97223d4a",
+    "slug": "fairlife-cookies-and-cream-lite-ice-cream",
+    "new_title": "Fairlife Cookies-and-Cream Lite-Eis",
+    "new_description": "Cookies-and-Cream-Protein-Eiscreme mit Fairlife-Milch zubereitet."
+  },
+  {
+    "id": "de96afda-baf5-4291-8c24-0846fbf94176",
+    "slug": "fairlife-mocha-chip-lite-ice-cream",
+    "new_title": "Fairlife Mokka-Stückchen Lite-Eis",
+    "new_description": "Mokka-Stückchen-Protein-Eiscreme mit Fairlife-Schokoladenmilch zubereitet."
+  },
+  {
+    "id": "c67a0206-641c-4117-adfe-e3447228946b",
+    "slug": "fairlife-peanut-butter-lite-ice-cream",
+    "new_title": "Fairlife Erdnussbutter Lite-Eis",
+    "new_description": "Erdnussbutter-Protein-Eiscreme mit Fairlife-Milch zubereitet."
+  },
+  {
+    "id": "955b4d5d-f278-4c29-8348-c2aa24cdb1d9",
+    "slug": "fairlife-salted-caramel-protein-ice-cream",
+    "new_title": null,
+    "new_description": "Fairlife-Salzkaramell-Protein-Shake in cremiges Eis verwandelt. Eine Zutat, maximaler Geschmack, höchstes Protein."
+  },
+  {
+    "id": "d612b213-aca1-43d3-a783-270c67e3fe20",
+    "slug": "fairlife-vanilla-caramel-lite-ice-cream",
+    "new_title": "Fairlife Vanille-Karamell Lite-Eis",
+    "new_description": "Karamell-Vanille-Protein-Eiscreme mit Fairlife-Milch zubereitet."
+  },
+  {
+    "id": "47a7da54-dbea-4433-9166-28975380e1cb",
+    "slug": "fairlife-vanilla-protein-ice-cream",
+    "new_title": null,
+    "new_description": "Gießen Sie einen Fairlife-Vanille-Protein-Shake in den Creami und frieren Sie ihn ein. Das einfachste Protein-Eis-Rezept überhaupt."
+  },
+  {
+    "id": "a40a6ee3-db0e-4fea-9a9c-b3faa977206a",
+    "slug": "fig-balsamic-walnut-ice-cream",
+    "new_title": "Feigen-Balsamico-Walnuss-Eiscreme",
+    "new_description": "Köstliche Feigen-Balsamico-Walnuss-Eiscreme mit perfekt ausgewogenen Aromen für einen gehobenen Genuss."
+  },
+  {
+    "id": "5972642a-ff33-455e-8cae-b4162a692d69",
+    "slug": "fig-mascarpone-gelato",
+    "new_title": "Feigen-Mascarpone-Gelato",
+    "new_description": "Reichhaltiges Feigen-Gelato mit cremigem Mascarpone."
+  },
+  {
+    "id": "a6686424-0fac-4c1f-966e-3caeda245237",
+    "slug": "funfetti-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "674ba7a1-f72d-4e94-8b4c-9ba1dbd7d2f7",
+    "slug": "german-chocolate-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "7744c8b5-266d-486b-b12e-ac7e8b1ce678",
+    "slug": "gianduja-gelato",
+    "new_title": null,
+    "new_description": "Klassisches italienisches Gianduja-Gelato, das Schokolade und geröstete Haselnüsse vereint."
+  },
+  {
+    "id": "d66157bc-f41a-4d68-b1c3-43b0c0281ed1",
+    "slug": "ginger-cardamom-ice-cream",
+    "new_title": "Ingwer-Kardamom-Eiscreme",
+    "new_description": "Eine raffinierte Ingwer-Kardamom-Eiscreme mit unerwartet harmonischen Geschmacksakzenten."
+  },
+  {
+    "id": "918bcbe3-4fd4-44da-be23-17aa97f131b3",
+    "slug": "ginger-turmeric-honey-ice-cream",
+    "new_title": "Ingwer-Kurkuma-Honig-Eiscreme",
+    "new_description": "Eine raffinierte Ingwer-Kurkuma-Honig-Eiscreme mit unerwartet harmonischen Geschmacksakzenten."
+  },
+  {
+    "id": "46ed7953-a6b2-4511-bffe-5f272d1e266f",
+    "slug": "gingerbread-latte-ice-cream",
+    "new_title": "Lebkuchen-Latte-Eiscreme",
+    "new_description": "Köstliche Lebkuchen-Latte-Eiscreme mit perfekt ausgewogenen Aromen für einen gehobenen Genuss."
+  },
+  {
+    "id": "d87be64f-c80e-4dc9-9d8e-732c3c269d27",
+    "slug": "goji-berry-vanilla-ice-cream",
+    "new_title": "Goji-Beeren-Vanille-Eiscreme",
+    "new_description": "Ein reichhaltiges und cremiges Goji-Beeren-Vanille-Eisdessert mit harmonischen Geschmacksschichten."
+  },
+  {
+    "id": "7976fcfd-fbb4-48a8-9ebe-a7897637f526",
+    "slug": "grapefruit-campari-sorbet",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "4e92e080-6ee6-4aa1-84fa-2a02634d7ae4",
+    "slug": "grapefruit-honey-ice-cream",
+    "new_title": "Grapefruit-Honig-Eiscreme",
+    "new_description": "Säuerliche Grapefruit-Eiscreme weich gerundet mit goldenem Wildblumenhonig."
+  },
+  {
+    "id": "3ca46ed0-cba0-49f8-9591-6d7de200baa6",
+    "slug": "grapefruit-rosemary-sorbet",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "9e727f97-70ce-4702-9722-e071cf0808e9",
+    "slug": "greek-yogurt-chocolate-lite-ice-cream",
+    "new_title": "Griechischer Joghurt Schokoladen Lite-Eis",
+    "new_description": "Reichhaltige Schokoladen-Protein-Eiscreme mit säuerlicher griechischer Joghurt-Basis."
+  },
+  {
+    "id": "b3d81531-9be5-4c62-b2f5-130fed4bcc10",
+    "slug": "greek-yogurt-vanilla-bean-lite-ice-cream",
+    "new_title": "Griechischer Joghurt Vanille Lite-Eis",
+    "new_description": "Dichtes Vanille-Protein-Eis mit griechischer Joghurt-Basis."
+  },
+  {
+    "id": "145e7f3a-1c04-43ef-b642-02aba9080021",
+    "slug": "green-apple-italian-ice",
+    "new_title": "Italienisches Grüner-Apfel-Eis",
+    "new_description": "Säuerliches italienisches Grüner-Apfel-Eis mit hellem, knackigem Geschmack."
+  },
+  {
+    "id": "51f11cbd-8ee0-4081-a3e9-64dd0cef17e8",
+    "slug": "green-grape-sorbet",
+    "new_title": "Grüntrauben-Sorbet",
+    "new_description": null
+  },
+  {
+    "id": "06f63e95-c82f-4b86-a5c5-2c3f5d2d55a5",
+    "slug": "green-spinach-banana-smoothie-bowl",
+    "new_title": "Grüne Spinat-Bananen-Smoothie-Bowl",
+    "new_description": "Nährstoffreiche grüne Smoothie-Bowl."
+  },
+  {
+    "id": "239ee45e-9e52-44c5-b6c9-67926f4bc73d",
+    "slug": "guava-lime-sorbet",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "abb92747-1c75-4879-a6a1-07145b77a1ab",
+    "slug": "guava-passion-fruit-sorbet",
+    "new_title": "Guave-Passionsfrucht-Sorbet",
+    "new_description": "Exotisches doppelt-tropisches Sorbet mit Guave und Passionsfrucht."
+  },
+  {
+    "id": "98c71862-44e6-414a-a50f-acc71a3da837",
+    "slug": "hazelnut-caramel-gelato",
+    "new_title": "Haselnuss-Karamell-Gelato",
+    "new_description": "Geröstetes Haselnuss-Gelato mit buttrigem Karamell-Wirbel."
+  },
+  {
+    "id": "47d58dc3-dff8-4b0a-b717-7a8543fa0ead",
+    "slug": "hazelnut-gelato",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "94fe6b7e-0e17-40a8-ba60-074c25f9c85a",
+    "slug": "hazelnut-vanilla-gelato",
+    "new_title": "Haselnuss-Vanille-Gelato",
+    "new_description": "Geröstetes Haselnuss-Gelato mit reiner Vanille."
+  },
+  {
+    "id": "f3bfb941-0b75-4781-af48-ad9b24a4b7ff",
+    "slug": "hibiscus-sorbet",
+    "new_title": null,
+    "new_description": "Blumiges und säuerliches Hibiskus-Sorbet mit einer atemberaubenden tiefroten Farbe. Inspiriert von Agua de Jamaica."
+  },
+  {
+    "id": "477c1c99-5d10-4747-8ad3-7d71481f04fd",
+    "slug": "honey-bee-pollen-ice-cream",
+    "new_title": "Honig-Bienenpollen-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "c0ce1cef-f2dd-4fee-970c-127364eece59",
+    "slug": "honey-cinnamon-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "79a9c344-0ae0-43b8-b7a1-b20880ec2f7f",
+    "slug": "honey-roasted-almond-ice-cream",
+    "new_title": "Honig-Geröstete-Mandel-Eiscreme",
+    "new_description": "Goldene Honig-Eiscreme mit gerösteten Mandelsplittern."
+  },
+  {
+    "id": "c33c4748-4bc6-4ec0-addb-48b5a34b5bd6",
+    "slug": "honeycomb-crunch-ice-cream",
+    "new_title": "Honigwaben-Crunch-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "78e448f6-ffb6-4506-ba21-deb1f981486c",
+    "slug": "hot-fudge-sundae-ice-cream",
+    "new_title": null,
+    "new_description": "Vanilleeis mit dicken Bändern von Fudge-Sauce. Wie ein Hot-Fudge-Sundae in jedem Bissen."
+  },
+  {
+    "id": "d2ea83a5-1e0a-42de-80aa-293f00cdfa71",
+    "slug": "irish-cream-ice-cream",
+    "new_title": "Irish-Cream-Eiscreme",
+    "new_description": "Glattes Irish-Cream-Likör-Eis mit einer Note von Kaffee-Schokolade."
+  },
+  {
+    "id": "9072a18c-c58d-46e8-9b66-6c008cfe10a4",
+    "slug": "jasmine-tea-honey-ice-cream",
+    "new_title": "Jasmin-Tee-Honig-Eiscreme",
+    "new_description": "Ein einzigartiger, raffinierter gefrorener Genuss aus Jasmin-Tee und Honig mit perfekt ausgewogenen Aromen."
+  }
+]

@@ -1,0 +1,632 @@
+[
+  {
+    "id": "fdfe0d28-97aa-4c88-b0c1-39df1625d30f",
+    "slug": "acai-berry-blast-smoothie-bowl",
+    "new_title": null,
+    "new_description": "Antioxidantienreiche Açaí-Smoothie-Bowl mit gemischten Beeren."
+  },
+  {
+    "id": "f91d441f-c13e-495e-9971-e27e8860fc06",
+    "slug": "almond-biscotti-gelato",
+    "new_title": "Mandel-Biscotti-Gelato",
+    "new_description": "Knuspriges Mandel-Biscotti-Gelato inspiriert vom klassischen italienischen Keks."
+  },
+  {
+    "id": "8a74e3fb-1474-427e-bac6-711f74bfc696",
+    "slug": "almond-butter-honey-crunch-ice-cream",
+    "new_title": "Mandel-Butter-Honig-Crunch-Eiscreme",
+    "new_description": "Eine raffinierte Mandel-Butter-Honig-Crunch-Eiscreme mit unerwartet harmonischen Geschmacksakzenten."
+  },
+  {
+    "id": "52156138-c290-4a37-9aa1-7e39356296d6",
+    "slug": "almond-joy-ice-cream",
+    "_skip_reason": "clean German with Almond Joy as brand loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "fba8ab2b-d117-4d01-b694-f2d5191730b0",
+    "slug": "amaretto-cream-gelato",
+    "new_title": "Amaretto-Sahne-Gelato",
+    "new_description": "Glattes Amaretto-Mandel-Gelato mit italienischer Likör-Note."
+  },
+  {
+    "id": "4aa095eb-176b-4515-9271-ca4c56934c7b",
+    "slug": "apple-butter-crunch-ice-cream",
+    "_skip_reason": "clean German (no umlauts needed)",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2d91f72c-04be-49ad-876c-7dc80bc01e70",
+    "slug": "apple-cider-sorbet",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "ad917a0f-e9e9-4b28-8204-cae094d30cfc",
+    "slug": "apple-crisp-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "6b09520b-3ebc-4f18-9026-538b2ebcb76b",
+    "slug": "apple-pie-protein-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "8eef1116-027f-4e8b-874e-e8bb6bf75c30",
+    "slug": "apricot-lavender-sorbet",
+    "new_title": "Aprikose-Lavendel-Sorbet",
+    "new_description": "Zartes Aprikosen-Sorbet mit aromatischem französischem Lavendel."
+  },
+  {
+    "id": "a0d36c80-323e-4151-81b8-2e3f08808c36",
+    "slug": "bacio-gelato",
+    "new_title": null,
+    "new_description": "Schokoladen-Haselnuss-Kiss-Gelato mit gehackten Haselnüssen, inspiriert von italienischer Schokolade."
+  },
+  {
+    "id": "e9ac730b-2102-4942-a575-1a78c3ede292",
+    "slug": "baklava-honey-walnut-ice-cream",
+    "new_title": "Baklava-Honig-Walnuss-Eiscreme",
+    "new_description": "Honig-Walnuss-Eiscreme mit Phyllo-Flocken inspiriert vom türkischen Baklava."
+  },
+  {
+    "id": "e41f32e1-d757-442c-8b02-80c3fb41cb84",
+    "slug": "banana-caramel-milkshake",
+    "new_title": "Bananen-Karamell-Milkshake",
+    "new_description": "Milkshake aus reifen Bananen mit einem Karamell-Soßen-Wirbel."
+  },
+  {
+    "id": "545ebd0b-92f4-4668-afb6-05bc60597837",
+    "slug": "banana-chocolate-chip-greek-frozen-yogurt",
+    "new_title": "Griechischer Bananen-Frozen-Yogurt mit Schokoladenstückchen",
+    "new_description": "Bananen-Frozen-Yogurt mit Mini-Schokoladenstückchen."
+  },
+  {
+    "id": "ef847646-dad8-4f89-9ae7-34d46c99ed16",
+    "slug": "banana-chocolate-cookie-ice-cream",
+    "new_title": "Bananen-Schokoladen-Keks-Eiscreme",
+    "new_description": "Bananen-Schokoladen-Eiscreme mit Keks-Crumble."
+  },
+  {
+    "id": "4372ff8b-6e44-49b6-b581-a3f4d9f4f774",
+    "slug": "banana-chocolate-swirl-ice-cream",
+    "new_title": "Bananen-Schokoladen-Wirbel-Eiscreme",
+    "new_description": "Eiscreme aus reifen Bananen mit reichhaltigem Schokoladen-Wirbel."
+  },
+  {
+    "id": "7e78c1c0-82bb-4594-b253-ec6e0b1954d0",
+    "slug": "banana-cookie-butter-ice-cream",
+    "new_title": "Bananen-Cookie-Butter-Eiscreme",
+    "new_description": "Eiscreme aus reifen Bananen mit einem Biscoff-Cookie-Butter-Wirbel."
+  },
+  {
+    "id": "c94ef13e-e1f0-48f5-a60f-fa47b6ab00c5",
+    "slug": "banana-cookie-crumble-ice-cream",
+    "new_title": "Bananen-Keks-Crumble-Eiscreme",
+    "new_description": "Eiscreme aus reifen Bananen mit knusprigen Keks-Crumble-Stückchen."
+  },
+  {
+    "id": "9c2aa4cb-6889-49fa-aa42-8b73d16c5ea7",
+    "slug": "banana-cream-protein-lite-ice-cream",
+    "new_title": "Bananen-Sahne Protein-Lite-Eiscreme",
+    "new_description": "Glatte Bananen-Sahne-Protein-Eiscreme mit reichhaltiger Vanille."
+  },
+  {
+    "id": "4980177b-c921-46d2-8714-ce4c345b2256",
+    "slug": "banana-miso-caramel-ice-cream",
+    "_skip_reason": "clean German template",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "21121dc6-cc02-4839-b229-2703705af7f2",
+    "slug": "banana-nutella-swirl-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "0e4e7c54-9da7-455a-af75-790e6d48726b",
+    "slug": "banana-pudding-cream-ice-cream",
+    "new_title": "Bananen-Pudding-Sahne-Eiscreme",
+    "new_description": "Reichhaltige Bananen-Pudding-Eiscreme mit Schichten aus Vanille-Sahne."
+  },
+  {
+    "id": "d8c70d81-71c5-42cd-9b00-d6822d8ec563",
+    "slug": "banana-split-frozen-yogurt",
+    "_skip_reason": "clean German with Frozen Yogurt loanword",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "55d5c739-7e14-4a33-8201-6fee2ee7e322",
+    "slug": "banana-split-milkshake",
+    "new_title": "Banana-Split-Milkshake",
+    "new_description": "Klassischer Banana-Split-Milkshake mit Erdbeere und Schokolade."
+  },
+  {
+    "id": "8f08b27b-1a05-4ea1-9524-9d849a5cd648",
+    "slug": "banana-split-sundae-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "5bb6ae14-ecea-430b-aa29-841b26f4769b",
+    "slug": "banana-toffee-ice-cream",
+    "new_title": "Bananen-Toffee-Eiscreme",
+    "new_description": "Eiscreme aus reifen Bananen mit knusprigen englischen Toffee-Stückchen."
+  },
+  {
+    "id": "de6bd17f-5696-49df-b480-e769d71b311d",
+    "slug": "banana-walnut-greek-frozen-yogurt",
+    "new_title": "Griechischer Bananen-Walnuss-Frozen-Yogurt",
+    "new_description": "Cremiger Bananen-Walnuss-Frozen-Yogurt mit griechischem Joghurt."
+  },
+  {
+    "id": "0de8b858-8a4a-494b-b6d3-d9e115ef6e39",
+    "slug": "bananas-foster-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "e6531640-aafb-4f06-9e36-119b0e9b929f",
+    "slug": "berry-banana-smoothie-bowl",
+    "new_title": "Beeren-Bananen-Smoothie-Bowl",
+    "new_description": "Klassische Smoothie-Bowl mit gemischten Beeren und Bananen."
+  },
+  {
+    "id": "c20ac417-c029-4aaf-ba1e-1990936ec05f",
+    "slug": "berry-cobbler-crumble-ice-cream",
+    "new_title": "Beeren-Cobbler-Crumble-Eiscreme",
+    "new_description": "Eiscreme mit gemischten Beeren und warmem Cobbler-Crumble-Topping."
+  },
+  {
+    "id": "647fd875-7959-45f9-8cad-75832afdef27",
+    "slug": "berry-protein-power-smoothie-bowl",
+    "new_title": "Beeren-Protein-Power-Smoothie-Bowl",
+    "new_description": "Proteinreiche Smoothie-Bowl mit gemischten Beeren."
+  },
+  {
+    "id": "a31bd12f-e68e-4ea9-b4c2-605a8a1176a2",
+    "slug": "berry-spinach-smoothie-bowl",
+    "new_title": "Beeren-Spinat-Smoothie-Bowl",
+    "new_description": "Nährstoffreiche Beeren-Spinat-Smoothie-Bowl."
+  },
+  {
+    "id": "571cc59d-2897-4ed8-8b00-433901b3904d",
+    "slug": "birthday-cake-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "f3290e4f-a9ab-43d6-99bf-dc8d562b2aad",
+    "slug": "birthday-cake-milkshake",
+    "new_title": "Geburtstagskuchen-Milkshake",
+    "new_description": "Festlicher Geburtstagskuchen-Milkshake mit bunten Streuseln."
+  },
+  {
+    "id": "3d8d5fea-c981-45fd-9ae3-2f45c665f3cb",
+    "slug": "birthday-cake-protein-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d0c1e23c-6754-4f3d-b75a-7391ff6e02bf",
+    "slug": "birthday-cake-protein-lite-ice-cream",
+    "new_title": "Geburtstagskuchen-Protein-Lite-Eis",
+    "new_description": "Festliche Geburtstagskuchen-Protein-Eiscreme mit bunten Streuseln."
+  },
+  {
+    "id": "40b12dc1-a633-412b-ab63-0f70b657fa01",
+    "slug": "birthday-cake-soft-serve",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "67e890cc-0047-4dc7-a82d-dedc9a04d2e5",
+    "slug": "biscoff-swirl-cheesecake-ice-cream",
+    "new_title": null,
+    "new_description": "Frischkäse-Eis mit Biscoff-Spekulatiuscreme-Wirbel. Zwei beliebte Geschmacksrichtungen vereint in gefrorener Form."
+  },
+  {
+    "id": "265123c2-21f2-4649-bb7e-94131a368a39",
+    "slug": "blackberry-italian-ice",
+    "new_title": "Italienisches Brombeer-Eis",
+    "new_description": "Italienisches Eis mit wilder Brombeere und tiefem Beerengeschmack."
+  },
+  {
+    "id": "7a8c1cc5-9a2f-4b4a-84ee-cab3281e311c",
+    "slug": "blackberry-lemon-greek-frozen-yogurt",
+    "new_title": "Griechischer Brombeer-Zitronen-Frozen-Yogurt",
+    "new_description": "Kräftiger Brombeer-Zitronen-Frozen-Yogurt mit säuerlichem griechischem Joghurt."
+  },
+  {
+    "id": "4eb9e6c5-94b5-4731-b2b6-d763416e936a",
+    "slug": "blackberry-lemon-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "3201b657-bba0-454b-96b7-773777376c94",
+    "slug": "blackberry-lime-sorbet",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "46f6e427-ef9f-4545-b0a9-394d24db8a5e",
+    "slug": "blackberry-sage-honey-ice-cream",
+    "new_title": "Brombeer-Salbei-Honig-Eiscreme",
+    "new_description": "Ein einzigartiges, raffiniertes gefrorenes Dessert aus Brombeere, Salbei und Honig mit perfekt ausgewogenen Aromen."
+  },
+  {
+    "id": "7cec6fff-3d34-4ff3-9da7-8b9bb3ef8579",
+    "slug": "blackberry-vanilla-bean-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "6ef89c28-8b82-4a0c-9f24-7eafbcac38e6",
+    "slug": "blackberry-vanilla-greek-frozen-yogurt",
+    "new_title": "Griechischer Brombeer-Vanille-Frozen-Yogurt",
+    "new_description": "Süßer Brombeer-Frozen-Yogurt mit Vanille und griechischem Joghurt."
+  },
+  {
+    "id": "2322a986-1d90-4002-9793-b311ca71ef68",
+    "slug": "blood-orange-gelato",
+    "new_title": "Blutorangen-Gelato",
+    "new_description": "Lebendiges Blutorangen-Gelato mit intensiv zitrusartigem Geschmack."
+  },
+  {
+    "id": "c430f654-c69b-4513-b310-cf84e984758b",
+    "slug": "blood-orange-ginger-sorbet",
+    "new_title": "Blutorangen-Ingwer-Sorbet",
+    "new_description": "Auffälliges Blutorangen-Sorbet mit warmen Ingwer-Noten."
+  },
+  {
+    "id": "473d3736-3506-4d85-934a-ea0a49a5160e",
+    "slug": "blood-orange-italian-ice",
+    "new_title": "Italienisches Blutorangen-Eis",
+    "new_description": "Auffälliges italienisches Blutorangen-Eis mit tiefem Zitrusaroma."
+  },
+  {
+    "id": "fe6de64f-951f-48dc-a51e-930ad76ccc28",
+    "slug": "blood-orange-raspberry-sorbet",
+    "new_title": "Blutorangen-Himbeer-Sorbet",
+    "new_description": "Auffälliges Blutorangen-Sorbet mit einem Wirbel aus säuerlichem Himbeer-Püree."
+  },
+  {
+    "id": "4d6c2b44-3916-4b27-8302-e268fb1c28b2",
+    "slug": "blood-orange-vanilla-sorbet",
+    "new_title": "Blutorangen-Vanille-Sorbet",
+    "new_description": "Auffälliges Blutorangen-Sorbet mit einer Vanille-Note und rubinroter Farbe."
+  },
+  {
+    "id": "629ce849-ea9d-4842-910d-32267bb2927e",
+    "slug": "blueberry-acai-smoothie-bowl",
+    "new_title": "Blaubeer-Açaí-Smoothie-Bowl",
+    "new_description": "Antioxidantienreiche Blaubeer-Açaí-Smoothie-Bowl."
+  },
+  {
+    "id": "00f0a68a-a6f1-4804-93e2-023524f9e201",
+    "slug": "blueberry-almond-butter-smoothie-bowl",
+    "new_title": "Blaubeer-Mandelbutter-Smoothie-Bowl",
+    "new_description": "Antioxidantienreiche Blaubeer-Smoothie-Bowl mit Mandelbutter."
+  },
+  {
+    "id": "b29d2c68-d867-416b-ad45-2d1cd7f053fd",
+    "slug": "blueberry-almond-greek-frozen-yogurt",
+    "new_title": "Griechischer Blaubeer-Mandel-Frozen-Yogurt",
+    "new_description": "Blaubeer-Frozen-Yogurt mit gerösteten Mandelsplittern."
+  },
+  {
+    "id": "16831978-d1a6-4d42-b5c4-5f7b30e5d5c8",
+    "slug": "blueberry-banana-protein-smoothie-bowl",
+    "new_title": "Blaubeer-Bananen-Protein-Smoothie-Bowl",
+    "new_description": "Proteinreiche Blaubeer-Bananen-Smoothie-Bowl."
+  },
+  {
+    "id": "e89a3303-1bd4-4168-869a-c97718af4481",
+    "slug": "blueberry-cheesecake-crumble-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "0ed5c9ec-fd3c-474b-bb64-192560d816f2",
+    "slug": "blueberry-coconut-greek-frozen-yogurt",
+    "_skip_reason": "clean German (description)",
+    "new_title": "Griechischer Blaubeer-Kokos-Frozen-Yogurt",
+    "new_description": null
+  },
+  {
+    "id": "fb6539d5-abb1-4452-9b34-22efec13da9a",
+    "slug": "blueberry-ginger-sorbet",
+    "new_title": "Blaubeer-Ingwer-Sorbet",
+    "new_description": "Antioxidantienreiches Blaubeer-Sorbet mit einem wärmenden Ingwer-Kick."
+  },
+  {
+    "id": "111cb761-0c69-4fd1-ab89-a22543eff3cd",
+    "slug": "blueberry-lavender-greek-frozen-yogurt",
+    "new_title": "Griechischer Blaubeer-Lavendel-Frozen-Yogurt",
+    "new_description": null
+  },
+  {
+    "id": "aa231076-d535-405f-8e86-9bd1c0b38987",
+    "slug": "blueberry-lemon-greek-frozen-yogurt",
+    "new_title": "Griechischer Blaubeer-Zitronen-Frozen-Yogurt",
+    "new_description": null
+  },
+  {
+    "id": "bcd938f9-5e11-49cb-be84-e97cb95c99e3",
+    "slug": "blueberry-lime-basil-ice-cream",
+    "new_title": "Blaubeer-Limetten-Basilikum-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "14de0261-8619-4bec-bd03-2eeb79d768dd",
+    "slug": "blueberry-pomegranate-sorbet",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2d1491c9-3ff4-4dcf-9fe4-548af907c8e8",
+    "slug": "blueberry-protein-lite-ice-cream",
+    "new_title": "Blaubeer-Protein-Lite-Eiscreme",
+    "new_description": "Frische Blaubeer-Protein-Eiscreme mit antioxidativer Wirkung."
+  },
+  {
+    "id": "b45e0379-1833-4778-bbb1-28107d5a7cf3",
+    "slug": "blueberry-sorbet",
+    "new_title": null,
+    "new_description": "Intensiv aromatisiertes Blaubeer-Sorbet mit wunderschönem Purpurton. Vollgepackt mit Antioxidantien und vor Beerengüte strotzend."
+  },
+  {
+    "id": "1ad6842b-cacb-47c5-98f8-41a1abb66f47",
+    "slug": "blueberry-vanilla-greek-frozen-yogurt",
+    "new_title": "Griechischer Blaubeer-Vanille-Frozen-Yogurt",
+    "new_description": null
+  },
+  {
+    "id": "a87d747e-ac5f-4e82-8bf0-12c520bb6711",
+    "slug": "blueberry-vanilla-swirl-ice-cream",
+    "new_title": "Blaubeer-Vanille-Wirbel-Eiscreme",
+    "new_description": "Glatte Vanille-Eiscreme mit einem leuchtenden Blaubeer-Püree-Wirbel."
+  },
+  {
+    "id": "fef25e70-420e-41ed-8d98-3c143560fc15",
+    "slug": "bourbon-brown-sugar-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "525df58e-5b9d-4ceb-bb38-d2155f3e765f",
+    "slug": "bourbon-butterscotch-ice-cream",
+    "new_title": "Bourbon-Butterscotch-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "988bf1fc-81c8-4a5d-8825-b7a5f20b5a19",
+    "slug": "bourbon-cherry-ice-cream",
+    "new_title": "Bourbon-Kirsch-Eiscreme",
+    "new_description": "Warmes Bourbon-Eis mit mazerierten Kirschstückchen."
+  },
+  {
+    "id": "9ed189b3-7782-4729-b04e-ccbeedcc4b93",
+    "slug": "bourbon-salted-caramel-ice-cream",
+    "new_title": "Bourbon-Salzkaramell-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "95e32621-9bf6-4f4b-abcb-721349e51fb9",
+    "slug": "brown-sugar-bourbon-ice-cream",
+    "new_title": null,
+    "new_description": "Eis mit dunklem braunem Zucker und warmen Bourbon-Untertönen. Südstaaten-Eleganz in gefrorener Form."
+  },
+  {
+    "id": "c519813f-be13-49a3-b5e4-89723b14a2f8",
+    "slug": "brown-sugar-cinnamon-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "79a83b94-148e-4891-bd3c-3fda22f12431",
+    "slug": "brown-sugar-cinnamon-soft-serve",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "2c911e55-65d1-48aa-a1a2-acef5ad171f8",
+    "slug": "brown-sugar-cookie-ice-cream",
+    "_skip_reason": "already fixed in Tier A",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "1c97ad09-8a14-4d59-8981-47fbe2ed0250",
+    "slug": "brown-sugar-vanilla-bean-ice-cream",
+    "new_title": "Braunzucker-Vanille-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "5aaf87dd-0335-4240-b54d-dcebf06a701d",
+    "slug": "brownie-batter-greek-frozen-yogurt",
+    "new_title": "Griechischer Brownie-Teig-Frozen-Yogurt",
+    "new_description": "Fudgeartiger Brownie-Teig-Frozen-Yogurt mit griechischem Joghurt für einen schuldfreien Genuss."
+  },
+  {
+    "id": "e3f111ed-4bd0-4925-84be-fdefbc962eda",
+    "slug": "brownie-batter-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "3907d4db-2a50-4e7a-bbcc-44e0ed516d97",
+    "slug": "butter-pecan-brownie-ice-cream",
+    "new_title": "Butter-Pekannuss-Brownie-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "177adb34-2c5a-4337-9ae5-5d6b681bb26d",
+    "slug": "butter-rum-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "e71578f1-d899-45d8-9de0-2de8522eb451",
+    "slug": "butterscotch-chip-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "e0971d4c-9dae-44cd-8354-1edfb172c8a8",
+    "slug": "butterscotch-cookie-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "d758acc0-ca7e-4c16-bb59-47763cdabc62",
+    "slug": "butterscotch-milkshake",
+    "new_title": null,
+    "new_description": "Butterschmalz-Butterscotch-Milkshake mit karamellisiertem Geschmack."
+  },
+  {
+    "id": "7aaff8de-0cdf-4eb3-9e80-22da6606fece",
+    "slug": "caramel-apple-cider-ice-cream",
+    "new_title": "Karamell-Apfelmost-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "dcc2f911-73dc-4027-8083-00527ad7f85e",
+    "slug": "caramel-apple-gelato",
+    "new_title": "Karamell-Apfel-Gelato",
+    "new_description": "Buttriges Karamell-Gelato mit frischen Apfelstückchen."
+  },
+  {
+    "id": "2af884f8-bf71-427c-b01b-1d7d1040a8e7",
+    "slug": "caramel-apple-greek-frozen-yogurt",
+    "new_title": "Griechischer Karamell-Apfel-Frozen-Yogurt",
+    "new_description": null
+  },
+  {
+    "id": "443908e0-71ab-4cba-a60d-9b398c15175c",
+    "slug": "caramel-apple-protein-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "4f5c4f0e-ef78-45bf-8c22-14ae844d9b77",
+    "slug": "caramel-apple-walnut-ice-cream",
+    "new_title": "Karamell-Apfel-Walnuss-Eiscreme",
+    "new_description": "Buttrige Karamell-Apfel-Eiscreme mit Walnuss-Crunch."
+  },
+  {
+    "id": "2ebe2d7d-0e2b-4cb5-804e-98f21b0778a6",
+    "slug": "caramel-banana-crunch-ice-cream",
+    "new_title": "Karamell-Bananen-Crunch-Eiscreme",
+    "new_description": "Buttrige Karamell-Bananen-Eiscreme mit knusprigem Crunch."
+  },
+  {
+    "id": "95361f4b-2a23-482d-a666-6dd789b0e56a",
+    "slug": "caramel-coffee-crunch-ice-cream",
+    "new_title": "Karamell-Kaffee-Crunch-Eiscreme",
+    "new_description": "Buttrige Karamell-Kaffee-Eiscreme mit knusprigen Stückchen."
+  },
+  {
+    "id": "186a1b63-6a6b-4c0d-898d-ac10659c0212",
+    "slug": "caramel-flan-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "0d1effc6-bd42-4d72-88d5-caa0a44c06af",
+    "slug": "caramel-hazelnut-gelato",
+    "new_title": "Karamell-Haselnuss-Gelato",
+    "new_description": "Buttriges Karamell-Gelato mit gerösteten Haselnüssen."
+  },
+  {
+    "id": "dfb02f6b-3222-4176-aef9-a0930e5f6688",
+    "slug": "caramel-latte-protein-ice-cream",
+    "new_title": null,
+    "new_description": "Karamell-Kaffee-Protein-Eiscreme, die wie ein gefrorener Latte schmeckt. Koffeinhaltig und makrofreundlich."
+  },
+  {
+    "id": "6b48e691-2dcc-4ed5-bbe4-f79feec5ccad",
+    "slug": "caramel-macchiato-protein-lite-ice-cream",
+    "new_title": "Karamell-Macchiato Protein-Lite-Eis",
+    "new_description": "Espresso-Karamell-Protein-Eis inspiriert vom Kaffeegetränk."
+  },
+  {
+    "id": "fded3300-da3f-48c5-9cb6-218368f6a7c4",
+    "slug": "caramel-soft-serve",
+    "new_title": "Karamell-Softeis",
+    "new_description": "Buttriges Karamell-Softeis mit goldener Süße."
+  },
+  {
+    "id": "5e4ed558-6f5e-4348-b9c5-48e2f1331789",
+    "slug": "caramelized-fig-ice-cream",
+    "new_title": "Karamellisierte-Feigen-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "cc45f0c8-9000-4341-800d-ce0326d6d88f",
+    "slug": "caramelized-fig-walnut-ice-cream",
+    "new_title": "Karamellisierte-Feigen-Walnuss-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "0ceecd35-5b12-4a02-b1bd-60de2c8f7974",
+    "slug": "caramelized-peach-ice-cream",
+    "new_title": "Karamellisierte-Pfirsich-Eiscreme",
+    "new_description": null
+  },
+  {
+    "id": "8d971b73-de98-469a-9870-4704f364f6fe",
+    "slug": "caramelized-pear-ice-cream",
+    "_skip_reason": "clean German",
+    "new_title": null,
+    "new_description": null
+  },
+  {
+    "id": "201f8639-31b2-4b3f-9e14-89e8f15c4a45",
+    "slug": "caramelized-pecan-butter-ice-cream",
+    "new_title": "Karamellisierte-Pekannussbutter-Eiscreme",
+    "new_description": "Reichhaltiges karamellisiertes Pekannussbutter-Eis mit geröstetem Nussgeschmack."
+  },
+  {
+    "id": "370197cb-8430-4d88-9cc7-5e048f41351c",
+    "slug": "caramelized-pecan-praline-ice-cream",
+    "new_title": "Karamellisierte-Pekannuss-Praline-Eiscreme",
+    "new_description": "Buttrige karamellisierte Pekannuss-Praline-Eiscreme mit Crunch."
+  },
+  {
+    "id": "c67e0af6-624d-4e3b-b706-119ff2a22fbf",
+    "slug": "chai-caramel-swirl-ice-cream",
+    "new_title": "Chai-Karamell-Wirbel-Eiscreme",
+    "new_description": "Chai-Gewürz-Eiscreme mit einem buttrigen Karamell-Wirbel."
+  }
+]
