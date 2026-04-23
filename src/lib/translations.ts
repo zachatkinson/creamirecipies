@@ -8,6 +8,8 @@ type Client = SupabaseClient<Database>;
 interface RecipeTranslation {
   title: string;
   description: string;
+  meta_title: string | null;
+  meta_description: string | null;
   steps: { instruction: string; hint: string }[] | null;
   ingredients: { name: string; amount: string; unit: string }[] | null;
 }
@@ -20,22 +22,32 @@ export async function getRecipeTranslation(
   if (locale === DEFAULT_LOCALE) return null;
   const { data } = await client
     .from('recipe_translations')
-    .select('title, description, steps, ingredients')
+    .select('title, description, meta_title, meta_description, steps, ingredients')
     .eq('recipe_id', recipeId)
     .eq('locale', locale)
     .single();
   return data as RecipeTranslation | null;
 }
 
-export function applyTranslation<T extends { title: string; description: string }>(
-  recipe: T,
-  translation: RecipeTranslation | null,
-): T {
+export function applyTranslation<
+  T extends {
+    title: string;
+    description: string;
+    meta_title?: string | null;
+    meta_description?: string | null;
+  },
+>(recipe: T, translation: RecipeTranslation | null): T {
   if (!translation) return recipe;
+  // Meta MUST match the rendered language. If the locale row has no meta,
+  // fall back to null (so [slug].astro falls through to the translated
+  // title/description) — never to the EN meta, which would produce a
+  // language-mismatched <title> / og:title on a localized page.
   return {
     ...recipe,
     title: translation.title || recipe.title,
     description: translation.description || recipe.description,
+    meta_title: translation.meta_title,
+    meta_description: translation.meta_description,
   };
 }
 

@@ -136,8 +136,8 @@ const matchingCollections = COLLECTIONS
 ---
 
 <BaseLayout
-  title={locale === 'en' ? (recipe.meta_title || recipe.title) : recipe.title}
-  description={locale === 'en' ? (recipe.meta_description || recipe.description) : recipe.description}
+  title={recipe.meta_title || recipe.title}
+  description={recipe.meta_description || recipe.description}
   image={recipe.hero_image_url ?? undefined}
   type="article"
   jsonLd={recipeJsonLd}
