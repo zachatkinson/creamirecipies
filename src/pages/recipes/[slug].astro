@@ -67,7 +67,7 @@ if (locale !== 'en') {
 
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
 const recipeFaqs = generateRecipeFaqs(recipe, locale);
-const recipeFaqJsonLd = buildRecipeFaqJsonLd(recipe);
+const recipeFaqJsonLd = buildRecipeFaqJsonLd(recipe, locale);
 
 const detectedAllergens = detectAllergens(recipe.ingredients);
 const breadcrumbs = [

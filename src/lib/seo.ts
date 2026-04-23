@@ -322,8 +322,8 @@ export function generateRecipeFaqs(recipe: RecipeWithDetails, locale: Locale = '
 }
 
 /** Generate auto-FAQ JSON-LD for a recipe */
-export function buildRecipeFaqJsonLd(recipe: RecipeWithDetails) {
-  return buildFaqJsonLd(generateRecipeFaqs(recipe));
+export function buildRecipeFaqJsonLd(recipe: RecipeWithDetails, locale: Locale = 'en') {
+  return buildFaqJsonLd(generateRecipeFaqs(recipe, locale));
 }
 
 /** Generate FAQ JSON-LD */
