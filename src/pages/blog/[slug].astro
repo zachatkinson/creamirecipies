@@ -33,6 +33,11 @@ if (postTranslation) {
   if (postTranslation.body) {
     (post as Record<string, unknown>).body = preserveShortcodes(originalBody ?? '', postTranslation.body);
   }
+  // Meta MUST match the rendered language: use locale meta only, never EN fallback.
+  // If the translation row has no meta, meta falls through to null so BaseLayout
+  // uses translated title/excerpt — avoids language-mismatched <title> / og:title.
+  (post as Record<string, unknown>).meta_title = postTranslation.meta_title;
+  (post as Record<string, unknown>).meta_description = postTranslation.meta_description;
 }
 
 const heroImage = post.hero_image_url || `/images/blog/${post.category || 'news'}.svg`;
@@ -55,8 +60,8 @@ const breadcrumbs = [
 ---
 
 <BaseLayout
-  title={post.title}
-  description={post.excerpt ?? undefined}
+  title={post.meta_title || post.title}
+  description={post.meta_description || post.excerpt || undefined}
   image={post.hero_image_url ?? undefined}
   type="article"
   jsonLd={blogPostJsonLd}

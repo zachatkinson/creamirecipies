@@ -134,6 +134,8 @@ export interface Post {
   hero_image_url: string | null;
   status: 'draft' | 'published';
   category: 'news' | 'tips' | 'reviews' | 'guides';
+  meta_title: string | null;
+  meta_description: string | null;
   created_at: string;
   updated_at: string;
   published_at: string | null;

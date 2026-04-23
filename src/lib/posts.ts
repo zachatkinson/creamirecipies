@@ -46,15 +46,15 @@ export async function getPostTranslation(
   client: Client,
   postId: string,
   locale: Locale,
-): Promise<{ title: string; excerpt: string | null; body: string } | null> {
+): Promise<{ title: string; excerpt: string | null; body: string; meta_title: string | null; meta_description: string | null } | null> {
   if (locale === 'en') return null;
 
   const { data } = await client
     .from('post_translations')
-    .select('title, excerpt, body')
+    .select('title, excerpt, body, meta_title, meta_description')
     .eq('post_id', postId)
     .eq('locale', locale)
-    .single() as { data: { title: string; excerpt: string | null; body: string } | null };
+    .single() as { data: { title: string; excerpt: string | null; body: string; meta_title: string | null; meta_description: string | null } | null };
 
   return data;
 }
