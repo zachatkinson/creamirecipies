@@ -42,10 +42,15 @@ Some recipes suggest toppings for serving. These sit on top of the scoop:
 ```
 
 ## Standard Settings
-- **Aspect ratio**: `--ar 4:3` (matches our 800x600 hero images)
+- **Aspect ratio** — depends on where the image is used:
+  - **Recipe hero images**: `--ar 4:3` → delivered at 800x600, `public/images/recipes/<slug>.avif`
+  - **Blog featured images**: `--ar 16:9` → delivered at 1200x675, `public/images/blog/<slug>.avif`
 - **Version**: `--v 6.1` (or latest)
 - **Style**: `--style raw` for realistic food photography
 - **Quality**: default (no `--q` flag needed)
+- **Format**: always deliver final as AVIF (project standard). After generating, downscale to the target size and convert to `.avif`.
+
+> Note: blog roundup posts (multiple recipes) look best as a festive overhead *spread* in 16:9, with each treat showing its correct color/texture per the base/mix-in rules above. Single-recipe posts can use a single hero scoop.
 
 ## Shot Types
 - `overhead shot` — best for bowls with visible toppings
