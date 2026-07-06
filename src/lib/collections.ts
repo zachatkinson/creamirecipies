@@ -15,52 +15,52 @@ export const COLLECTIONS: Collection[] = [
   {
     slug: 'protein-ice-cream',
     query: { dietary: ['high-protein'] },
-    sort: 'rating',
+    sort: 'newest',
   },
   {
     slug: 'ice-cream',
     query: { base: ['ice-cream'] },
-    sort: 'rating',
+    sort: 'newest',
   },
   {
     slug: 'sorbet',
     query: { base: ['sorbet'] },
-    sort: 'rating',
+    sort: 'newest',
   },
   {
     slug: 'gelato',
     query: { base: ['gelato'] },
-    sort: 'rating',
+    sort: 'newest',
   },
   {
     slug: 'frozen-yogurt',
     query: { base: ['frozen-yogurt'] },
-    sort: 'rating',
+    sort: 'newest',
   },
   {
     slug: 'milkshake',
     query: { base: ['milkshake'] },
-    sort: 'rating',
+    sort: 'newest',
   },
   {
     slug: 'smoothie-bowl',
     query: { base: ['smoothie-bowl'] },
-    sort: 'rating',
+    sort: 'newest',
   },
   {
     slug: 'lite-ice-cream',
     query: { base: ['lite-ice-cream'] },
-    sort: 'rating',
+    sort: 'newest',
   },
   {
     slug: 'italian-ice',
     query: { base: ['italian-ice'] },
-    sort: 'rating',
+    sort: 'newest',
   },
   {
     slug: 'soft-serve',
     query: { tag: ['soft-serve'] },
-    sort: 'rating',
+    sort: 'newest',
   },
 ];
 
