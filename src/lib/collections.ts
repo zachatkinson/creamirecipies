@@ -1330,6 +1330,14 @@ The technical difference is about fat ratio and air. Classic American ice cream 
       ],
       faqs: [
         {
+          question: 'Can you make gelato in a Ninja Creami?',
+          answer: 'Yes — the Ninja Creami makes excellent gelato. Both the Original and Deluxe have a Gelato program that spins slower and adds less air for that dense, silky texture; if your model doesn\'t have one, the Ice Cream setting works too. What matters most is the recipe, not the machine: gelato uses more milk and less cream than ice cream (typically 1 cup milk to 1/2 cup cream) plus a little extra sugar. Freeze the base for 24 hours, run the Gelato program, and Re-Spin once or twice until it\'s smooth.',
+        },
+        {
+          question: 'How do you make gelato in the Ninja Creami?',
+          answer: 'Start with a gelato-style base: about 1 cup whole milk to 1/2 cup cream, 1/3 cup sugar, and your flavoring (fruit, pistachio paste, cocoa). Warm it gently to dissolve the sugar for the silkiest result, then chill and freeze it in the Creami pint for a full 24 hours. Run the Gelato program (or Ice Cream if your model lacks it), then Re-Spin — the first pass often looks crumbly, which is normal. Add a tablespoon of warm milk before the final Re-Spin if it needs loosening. The lower fat and reduced air are what make it gelato rather than ice cream.',
+        },
+        {
           question: 'What\'s the difference between gelato and ice cream in the Ninja Creami?',
           answer: 'Gelato is lower in fat (4–9% vs 14–16% for ice cream) and incorporates less air during processing, giving it a denser, silkier texture and more intense flavor. The Ninja Creami\'s Gelato program is tuned for this — slower blade action, less aeration. Gelato recipes also use a different ratio: more milk, less cream.',
         },
@@ -1392,6 +1400,14 @@ La différence technique tient au ratio de matières grasses et d\'air. La crèm
         },
       ],
       faqs: [
+        {
+          question: 'Peut-on faire du gelato dans un Ninja Creami ?',
+          answer: 'Oui — le Ninja Creami fait un excellent gelato. L\'Original comme le Deluxe ont un programme Gelato qui tourne plus lentement et incorpore moins d\'air pour cette texture dense et soyeuse ; si votre modèle n\'en a pas, le programme Ice Cream fonctionne aussi. Ce qui compte le plus, c\'est la recette, pas la machine : le gelato utilise plus de lait et moins de crème que la crème glacée (typiquement 1 tasse de lait pour 1/2 tasse de crème) plus un peu de sucre en plus. Congelez la base pendant 24 heures, lancez le programme Gelato, et faites un ou deux Re-Spin jusqu\'à obtenir une texture lisse.',
+        },
+        {
+          question: 'Comment faire du gelato dans le Ninja Creami ?',
+          answer: 'Commencez par une base type gelato : environ 1 tasse de lait entier pour 1/2 tasse de crème, 1/3 de tasse de sucre, et votre parfum (fruits, pâte de pistache, cacao). Chauffez-la doucement pour dissoudre le sucre — c\'est ce qui donne la texture la plus soyeuse — puis refroidissez et congelez dans le pot Creami pendant 24 heures complètes. Lancez le programme Gelato (ou Ice Cream si votre modèle n\'en a pas), puis faites un Re-Spin — le premier passage a souvent l\'air friable, c\'est normal. Ajoutez une cuillère à soupe de lait tiède avant le dernier Re-Spin s\'il faut l\'assouplir. C\'est la teneur plus faible en matières grasses et le moindre air qui en font un gelato plutôt qu\'une crème glacée.',
+        },
         {
           question: 'Quelle est la différence entre gelato et crème glacée dans le Ninja Creami ?',
           answer: 'Le gelato est plus pauvre en matières grasses (4–9% contre 14–16% pour la crème glacée) et incorpore moins d\'air pendant le traitement, ce qui lui donne une texture plus dense et soyeuse et une saveur plus intense. Le programme Gelato du Ninja Creami est calibré pour cela — action de lame plus lente, moins d\'aération. Les recettes de gelato utilisent aussi un ratio différent : plus de lait, moins de crème.',
@@ -1456,6 +1472,14 @@ La diferencia técnica está en la grasa y el aire. El helado americano clásico
       ],
       faqs: [
         {
+          question: '¿Se puede hacer gelato en un Ninja Creami?',
+          answer: 'Sí — el Ninja Creami hace un gelato excelente. Tanto el Original como el Deluxe tienen un programa Gelato que gira más lento e incorpora menos aire para esa textura densa y sedosa; si tu modelo no lo tiene, el programa Ice Cream también sirve. Lo que más importa es la receta, no la máquina: el gelato usa más leche y menos nata que el helado (típicamente 1 taza de leche por 1/2 taza de nata) más un poco de azúcar extra. Congela la base 24 horas, ejecuta el programa Gelato y haz uno o dos Re-Spin hasta que quede suave.',
+        },
+        {
+          question: '¿Cómo se hace gelato en el Ninja Creami?',
+          answer: 'Empieza con una base estilo gelato: alrededor de 1 taza de leche entera por 1/2 taza de nata, 1/3 de taza de azúcar y tu saborizante (fruta, pasta de pistacho, cacao). Caliéntala suavemente para disolver el azúcar — eso da la textura más sedosa — luego enfría y congela en el pote Creami durante 24 horas completas. Ejecuta el programa Gelato (o Ice Cream si tu modelo no lo tiene), luego haz un Re-Spin — la primera pasada suele verse desmenuzada, es normal. Añade una cucharada de leche tibia antes del último Re-Spin si necesita soltarse. La menor grasa y el menor aire son lo que lo hacen gelato y no helado.',
+        },
+        {
           question: '¿Cuál es la diferencia entre gelato y helado en el Ninja Creami?',
           answer: 'El gelato tiene menos grasa (4–9% vs 14–16% del helado) e incorpora menos aire durante el procesado, lo que le da una textura más densa y sedosa y un sabor más intenso. El programa Gelato del Ninja Creami está ajustado a eso — acción de cuchilla más lenta, menos aireación. Las recetas de gelato también usan otra proporción: más leche, menos nata.',
         },
@@ -1519,6 +1543,14 @@ Der technische Unterschied liegt im Fettanteil und der Luft. Klassische amerikan
       ],
       faqs: [
         {
+          question: 'Kann man im Ninja Creami Gelato machen?',
+          answer: 'Ja — der Ninja Creami macht hervorragendes Gelato. Sowohl das Original als auch das Deluxe haben ein Gelato-Programm, das langsamer dreht und weniger Luft einarbeitet, für diese dichte, seidige Textur; hat dein Modell keines, funktioniert auch das Ice-Cream-Programm. Am wichtigsten ist das Rezept, nicht die Maschine: Gelato nutzt mehr Milch und weniger Sahne als Eiscreme (typisch 1 Tasse Milch auf 1/2 Tasse Sahne) plus etwas mehr Zucker. Friere die Basis 24 Stunden ein, starte das Gelato-Programm und mach ein bis zwei Re-Spins, bis es glatt ist.',
+        },
+        {
+          question: 'Wie macht man Gelato im Ninja Creami?',
+          answer: 'Beginne mit einer Gelato-Basis: etwa 1 Tasse Vollmilch auf 1/2 Tasse Sahne, 1/3 Tasse Zucker und dein Aroma (Früchte, Pistazienpaste, Kakao). Erwärme sie sanft, um den Zucker aufzulösen — das gibt die seidigste Textur — dann kühle sie ab und friere sie im Creami-Pint volle 24 Stunden ein. Starte das Gelato-Programm (oder Ice Cream, falls dein Modell keines hat), dann mach einen Re-Spin — der erste Durchgang sieht oft krümelig aus, das ist normal. Gib vor dem letzten Re-Spin einen Esslöffel warme Milch dazu, falls es aufgelockert werden muss. Der geringere Fettanteil und die geringere Luft machen es zu Gelato statt Eiscreme.',
+        },
+        {
           question: 'Was ist der Unterschied zwischen Gelato und Eiscreme im Ninja Creami?',
           answer: 'Gelato hat weniger Fett (4–9% vs 14–16% bei Eiscreme) und nimmt beim Verarbeiten weniger Luft auf, was zu dichterer, seidigerer Textur und intensiverem Geschmack führt. Das Gelato-Programm des Ninja Creami ist darauf ausgelegt — langsamere Klingenaktion, weniger Belüftung. Gelato-Rezepte nutzen zudem ein anderes Verhältnis: mehr Milch, weniger Sahne.',
         },
@@ -1581,6 +1613,14 @@ A diferença técnica está na gordura e no ar. Sorvete americano clássico tem 
         },
       ],
       faqs: [
+        {
+          question: 'Dá para fazer gelato no Ninja Creami?',
+          answer: 'Sim — o Ninja Creami faz um gelato excelente. Tanto o Original quanto o Deluxe têm um programa Gelato que gira mais devagar e incorpora menos ar para aquela textura densa e sedosa; se seu modelo não tiver, o programa Ice Cream também funciona. O que mais importa é a receita, não a máquina: o gelato usa mais leite e menos creme que o sorvete (tipicamente 1 xícara de leite para 1/2 xícara de creme de leite) mais um pouco de açúcar extra. Congele a base por 24 horas, rode o programa Gelato e faça um ou dois Re-Spin até ficar liso.',
+        },
+        {
+          question: 'Como fazer gelato no Ninja Creami?',
+          answer: 'Comece com uma base estilo gelato: cerca de 1 xícara de leite integral para 1/2 xícara de creme de leite, 1/3 de xícara de açúcar e seu sabor (fruta, pasta de pistache, cacau). Aqueça suavemente para dissolver o açúcar — é o que dá a textura mais sedosa — depois resfrie e congele no pote Creami por 24 horas completas. Rode o programa Gelato (ou Ice Cream se seu modelo não tiver), depois faça um Re-Spin — a primeira passada costuma parecer esfarelada, o que é normal. Adicione uma colher de sopa de leite morno antes do último Re-Spin se precisar soltar. A menor gordura e o menor ar são o que fazem dele gelato em vez de sorvete.',
+        },
         {
           question: 'Qual a diferença entre gelato e sorvete no Ninja Creami?',
           answer: 'O gelato tem menos gordura (4–9% vs 14–16% do sorvete) e incorpora menos ar durante o processamento, o que dá uma textura mais densa e sedosa e sabor mais intenso. O programa Gelato do Ninja Creami é ajustado para isso — ação de lâmina mais lenta, menos aeração. Receitas de gelato também usam outra proporção: mais leite, menos creme.',
