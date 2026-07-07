@@ -7,6 +7,7 @@ import HeroCanvas from '../components/animations/HeroCanvas';
 import { supabase } from '../lib/supabase';
 import { t, localePath } from '../i18n';
 import { translateRecipeArray, translatePostArray } from '../lib/translations';
+import { assembleFanFavorites } from '../lib/fanFavorites';
 
 const locale = Astro.locals.locale;
 
@@ -25,35 +26,49 @@ const RECIPE_CARD_FIELDS = `
   author:profiles!author_id (username, display_name, avatar_url)
 `;
 
-// Fan favorites: top 3 by view_count, falling back to rating_count × avg_rating
-// until view tracking builds up history. Mature data wins automatically.
-const { data: topViewedRaw } = await supabase
+// Fan favorites: blended score (recent-window views × Bayesian-smoothed rating)
+// via the get_fan_favorites RPC (migration 032), falling back to all-time
+// view_count when the rolling window has too little history yet (e.g. right
+// after deploy, before the event log fills). assembleFanFavorites merges + dedups.
+const FAN_FAVORITE_COUNT = 3;
+const nowIso = new Date().toISOString();
+
+// @ts-expect-error — get_fan_favorites added in migration 032, DB types not yet regenerated
+const { data: rankedRaw } = await supabase.rpc('get_fan_favorites', {
+  p_limit: FAN_FAVORITE_COUNT,
+  p_window_days: 30,
+});
+const rankedIds = ((rankedRaw ?? []) as { recipe_id: string }[]).map((r) => r.recipe_id);
+
+// All-time view_count pool: fills any ranking shortfall and is the sole source
+// pre-migration (when the RPC 404s, rankedRaw is null → rankedIds is empty).
+const { data: allTimeTopRaw } = await supabase
   .from('recipes')
   .select(RECIPE_CARD_FIELDS)
   .eq('status', 'published')
-  .lte('published_at', new Date().toISOString())
+  .lte('published_at', nowIso)
   .gt('view_count', 0)
   .order('view_count', { ascending: false })
-  .limit(3);
+  .limit(FAN_FAVORITE_COUNT * 2);
+const allTimeTop = (allTimeTopRaw ?? []) as Record<string, unknown>[];
 
-let fanFavoritesRaw = topViewedRaw ?? [];
-if (fanFavoritesRaw.length < 3) {
-  const { data: byRating } = await supabase
-    .from('recipes')
-    .select(RECIPE_CARD_FIELDS)
-    .eq('status', 'published')
-    .lte('published_at', new Date().toISOString())
-    .gt('rating_count', 0)
-    .order('rating_count', { ascending: false })
-    .order('avg_rating', { ascending: false })
-    .limit(3 - fanFavoritesRaw.length);
-  const existingIds = new Set(fanFavoritesRaw.map((r) => r.id));
-  fanFavoritesRaw = [
-    ...fanFavoritesRaw,
-    ...(byRating ?? []).filter((r) => !existingIds.has(r.id)),
-  ].slice(0, 3);
+// Card data for the RPC-ranked ids (final order comes from rankedIds, not this fetch).
+let rankedRows: Record<string, unknown>[] = [];
+if (rankedIds.length > 0) {
+  const { data } = await supabase.from('recipes').select(RECIPE_CARD_FIELDS).in('id', rankedIds);
+  rankedRows = (data ?? []) as Record<string, unknown>[];
 }
-const fanFavorites = fanFavoritesRaw as Record<string, unknown>[];
+const rankedById = new Map<string, Record<string, unknown>>(
+  rankedRows.map((r) => [r.id as string, r]),
+);
+
+const fanFavorites = assembleFanFavorites(
+  rankedIds,
+  rankedById,
+  allTimeTop,
+  FAN_FAVORITE_COUNT,
+  (r) => r.id as string,
+);
 
 // Get latest 6 published recipes (newest first) — excluding any already
 // featured above so cards don't appear twice on the page.
