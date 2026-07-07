@@ -23,6 +23,20 @@ Chunky pieces folded in after the first spin → **visible pieces distributed th
 - Crushed Oreos, graham cracker crumbs, toffee bits
 - Freeze-dried fruit pieces
 
+#### ⭐ Proven mix-in formula (IMPORTANT — read before writing any mix-in prompt)
+MidJourney defaults to a smooth scoop and either omits chunky pieces or renders them too small and fully buried, so they vanish. Three things make mix-ins read every time:
+
+1. **Force pieces to protrude, and put some on top.** Use the exact cues **"generously studded with [pieces], chunks poking out of the scooped surface, with a few scattered on top."** Fully-embedded pieces disappear — only protruding + on-top pieces read as chunks. Pair with a `45-degree angle` and **"dense creamy freshly scooped texture"** so the interior shows.
+2. **Make them big and explicit.** Say **"large chunky pieces"** / **"generous [X] chunks"**, never "small bits." Give a size/shape cue.
+3. **Maximize color contrast — this is the #1 failure.** Dark pieces on a dark base (brownie on chocolate, chocolate chips on chocolate) are brown-on-brown and disappear. When the mix-in shares the base's color family, either render the **base lighter** (e.g. "light mocha-brown" instead of "dark chocolate") so the dark chunks pop, describe the pieces with **defined edges / lighter fudgy cracks**, or lean on a contrasting piece (pale cookie). High-contrast pairings (dark chips on pale vanilla, golden crumble on purple) read best.
+
+Template that works:
+```
+45-degree angle of [base, rendered light enough to contrast the pieces] ice cream in a white ceramic bowl, generously studded with large [high-contrast mix-in] chunks throughout, pieces poking out of the scooped surface and a few scattered on top, dense creamy freshly scooped texture, [props] beside the bowl, [lighting], food photography --ar 4:3 --v 6.1 --style raw
+```
+
+**Avoid:** smooth closed scoops, "small bits/flecks" wording, and dark-on-dark base/mix-in pairings — all three hide the pieces.
+
 ### Swirls (`group_name: swirl`)
 Soft/liquid components rippled through the base → **ribbons or swirls, never chunks**:
 - Caramel sauce, chocolate sauce, fruit jam/preserves
