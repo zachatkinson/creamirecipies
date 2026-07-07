@@ -26,17 +26,42 @@ export const onRequest = defineMiddleware(async (context, next) => {
     return next(strippedPath);
   }
 
-  // No URL prefix — check cookie → Accept-Language → default
-  const cookieLocale = context.cookies.get('locale')?.value;
-  if (cookieLocale && SUPPORTED_LOCALES.includes(cookieLocale as Locale)) {
-    locale = cookieLocale as Locale;
-  } else {
-    const acceptLang = context.request.headers.get('accept-language') ?? '';
-    const detected = detectPreferredLocale(acceptLang);
-    if (detected) locale = detected;
-  }
-
+  // --- No URL prefix: this is the default-locale (English) surface. ---
+  // Prefix-less URLs ALWAYS render English, so the URL fully determines the
+  // language (deterministic, CDN-cacheable, and the switcher can reliably
+  // return you to English). Other languages are reached via their URL prefix
+  // (/fr, /es, …). A saved `locale` cookie no longer overrides the render — it
+  // only drives the one-time homepage redirect below.
+  locale = DEFAULT_LOCALE;
   context.locals.locale = locale;
+
+  // First-visit / returning-visitor auto-localization — homepage only, so that
+  // content pages stay deterministically English and shared-cacheable.
+  //   • saved cookie  → send the visitor to their chosen locale
+  //   • no cookie     → suggest from browser language, then Québec geo, and
+  //                     persist that guess so it only happens once
+  if (pathname === '/' && context.request.method === 'GET') {
+    const cookieLocale = context.cookies.get('locale')?.value;
+    const savedLocale =
+      cookieLocale && SUPPORTED_LOCALES.includes(cookieLocale as Locale)
+        ? (cookieLocale as Locale)
+        : null;
+    const target = savedLocale ?? suggestLocale(context.request.headers);
+
+    if (target && target !== DEFAULT_LOCALE) {
+      // Persist a fresh guess so we don't re-detect on every homepage visit.
+      if (!savedLocale) {
+        context.cookies.set('locale', target, {
+          path: '/',
+          maxAge: 60 * 60 * 24 * 365,
+          sameSite: 'lax',
+        });
+      }
+      const redirectRes = context.redirect(`/${target}`, 302);
+      redirectRes.headers.set('Cache-Control', 'private, no-store');
+      return redirectRes;
+    }
+  }
 
   // --- Supabase Auth ---
   const supabase = createServerClient(supabaseUrl, supabaseAnonKey, {
@@ -75,7 +100,10 @@ export const onRequest = defineMiddleware(async (context, next) => {
     if (path.match(/^\/(recipes|blog)\/[^/]+/)) {
       response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
     } else if (path === '/' || path === '') {
-      response.headers.set('Cache-Control', 'public, s-maxage=1800, stale-while-revalidate=43200');
+      // The homepage runs per-visitor locale detection and may redirect, so it
+      // must NOT be shared-cached at the CDN (that would bypass the redirect).
+      // Browsers may still privately cache it briefly.
+      response.headers.set('Cache-Control', 'private, no-store');
     } else if (path === '/recipes' || path === '/blog') {
       response.headers.set('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=3600');
     } else if (path.endsWith('.xml')) {
@@ -87,6 +115,25 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
   return response;
 });
+
+/**
+ * Suggest a locale for a first-time visitor on a prefix-less URL.
+ * Respects the person first (browser language), then falls back to a Québec
+ * geo signal so anglophone visitors in the rest of Canada stay in English.
+ * Returns null when English is the best guess.
+ */
+function suggestLocale(headers: Headers): Locale | null {
+  // 1. Explicit browser language preference wins (fr-CA browser → 'fr', etc.)
+  const detected = detectPreferredLocale(headers.get('accept-language') ?? '');
+  if (detected) return detected;
+
+  // 2. No clear browser signal — nudge Québec visitors to French (Bill 96).
+  const country = headers.get('x-vercel-ip-country');
+  const region = headers.get('x-vercel-ip-country-region');
+  if (country === 'CA' && region === 'QC') return 'fr';
+
+  return null;
+}
 
 function detectPreferredLocale(acceptLang: string): Locale | null {
   if (!acceptLang) return null;

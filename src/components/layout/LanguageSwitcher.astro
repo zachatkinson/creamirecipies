@@ -32,7 +32,7 @@ const basePath = match ? pathname.slice(match[1].length + 1) || '/' : pathname;
   >
     {localeEntries.map(([code, { label, flag }]) => (
       <a
-        href={localePath(basePath, code)}
+        href={`/api/set-locale?locale=${code}&to=${encodeURIComponent(localePath(basePath, code))}`}
         class:list={[
           'w-full flex items-center gap-2 px-4 py-2 text-sm hover:bg-cream transition-colors',
           code === currentLocale ? 'text-berry font-medium bg-blush/10' : 'text-slate-600',
