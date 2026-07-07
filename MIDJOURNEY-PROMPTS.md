@@ -44,18 +44,19 @@ Soft/liquid components rippled through the base → **ribbons or swirls, never c
 - Fruit purees swirled in (as opposed to blended into the base)
 
 #### ⭐ Proven swirl formula (IMPORTANT — read before writing any swirl prompt)
-MidJourney hides swirls inside a single smooth scoop, and renders "marbled tub" framings weakly. Two things make a swirl read clearly every time:
+MidJourney hides swirls inside a single smooth scoop, and renders "marbled tub" framings weakly. Three things make a swirl read clearly every time:
 
-1. **Show the cut interior.** Use a `side angle` and the exact phrase **"clean scoop ridges showing the [X] ribbons in cross-section"** plus **"dense velvety freshly scooped texture."** The scoop ridges expose the ribbon — a closed scoop or overhead tub does not.
-2. **Maximize color contrast.** A deep/saturated swirl on a pale base pops (deep red jam on ivory cream cheese). A low-contrast pairing (golden passion fruit on white vanilla) barely reads — so push the swirl color darker/more saturated to compensate (e.g. "vivid deep golden-orange").
+1. **Show the swirl in TWO places: surface + cut face.** Relying on the cut interior alone fails when MidJourney renders a rounded (uncut) scoop. Use a `side angle` with **"boldly marbled with thick distinct ribbons of [X] — the swirl clearly visible both streaking across the surface and exposed in cross-section on the freshly scooped face"** plus **"dense velvety two-tone texture."** Naming both places gives the ribbon two chances to render.
+2. **Maximize color contrast — this is the #1 swirl-killer.** A deep/saturated swirl on a pale base pops (deep red jam on ivory cream cheese). Low-contrast pairings barely read: golden passion fruit on white vanilla, **tan almond/peanut butter on green matcha**, white marshmallow on vanilla. When the swirl is naturally close to the base, **push it darker/richer** — e.g. render almond butter as "rich golden-brown caramelized almond butter," passion fruit as "vivid deep golden-orange." If it can't be pushed, expect a weak swirl.
+3. **Use bold marbling verbs, not gentle ones.** "boldly marbled," "thick distinct ribbons," "unmistakable two-tone swirl" — never "subtle," "hint of," or "delicate."
 
 Template that works:
 ```
-side angle of [pale base] ice cream in a white ceramic bowl, thick ribbons of [vivid, deep, saturated swirl color] swirled throughout, dense velvety freshly scooped texture, clean scoop ridges showing the [swirl] ribbons in cross-section, [props] beside the bowl, soft natural light from the left, [aesthetic], shallow depth of field, food photography --ar 4:3 --v 6.1 --style raw
+side angle of [pale base] ice cream in a white ceramic bowl, boldly marbled with thick distinct ribbons of [vivid, deep, saturated swirl color] — the swirl clearly visible both streaking across the surface and exposed in cross-section on the freshly scooped face, dense velvety two-tone texture, [props] beside the bowl, soft natural light from the left, [aesthetic], shallow depth of field, food photography --ar 4:3 --v 6.1 --style raw
 ```
 Reference (rendered well): *side angle of pale ivory cream cheese ice cream in a white ceramic bowl, thick ribbons of deep red strawberry jam swirled throughout, dense velvety freshly scooped texture, clean scoop ridges showing the jam ribbons in cross-section, fresh strawberries and a block of cream cheese as props beside the bowl, soft natural light from the left, frozen strawberry cheesecake aesthetic, shallow depth of field, food photography*
 
-**Avoid:** single closed scoops, overhead "marbled tub" framings, and low-contrast base/swirl color pairings — all three hide the ribbon.
+**Avoid:** single closed scoops, overhead "marbled tub" framings, "subtle/delicate swirl" wording, and low-contrast base/swirl color pairings — all hide the ribbon.
 
 ### Toppings (`group_name: topping`)
 On top of the scoop, not mixed in:
