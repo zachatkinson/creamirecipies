@@ -3,6 +3,12 @@ import { createServerClient, parseCookieHeader } from '@supabase/ssr';
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE, type Locale } from './i18n';
 
 export const onRequest = defineMiddleware(async (context, next) => {
+  // Ezoic ads.txt: 301 to Ezoic's Ads.txt Manager so the authorized-seller
+  // list stays auto-updated (IAB spec permits a single ads.txt redirect).
+  if (context.url.pathname === '/ads.txt') {
+    return context.redirect('https://srv.adstxtmanager.com/19390/eatcreami.com', 301);
+  }
+
   const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
   const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 
