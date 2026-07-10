@@ -37,6 +37,17 @@ Template that works:
 
 **Avoid:** smooth closed scoops, "small bits/flecks" wording, and dark-on-dark base/mix-in pairings — all three hide the pieces.
 
+#### ⭐ Cookie mix-ins (Oreo / cookies-and-cream / Thin Mint) — special case
+Describing "chocolate sandwich cookie chunks" backfires: MidJourney renders them as smooth glossy **chocolate chunks**, not cookies. Two fixes that work together:
+
+1. **Name the flavor, don't describe the piece.** Lead with the known dessert — **"cookies-and-cream ice cream"**, **"mint chocolate cookies-and-cream"** — MidJourney has strong training on these and renders the characteristic look correctly.
+2. **Ask for crumbs + speckle, not chunks.** Use **"densely speckled and studded throughout with crushed [cookie] — irregular matte-black cookie crumbs and small broken pieces, some showing white cream filling"**. Drop the "large chunks poking out" wording here — that's exactly what biases toward glossy chocolate. For Thin Mint / mint-choc, pair with a **pale mint-green base** for contrast (not mocha-brown).
+
+Template that works:
+```
+45-degree angle of [flavor] cookies-and-cream ice cream in a white ceramic bowl, creamy [base color] ice cream densely speckled and studded throughout with crushed [cookie] — irregular matte-black cookie crumbs and small broken pieces, some showing white cream filling, a few pieces on top, dense creamy freshly scooped texture, whole [cookie] and [props] beside the bowl, soft natural light from the left, shallow depth of field, food photography --ar 4:3 --v 6.1 --style raw
+```
+
 ### Swirls (`group_name: swirl`)
 Soft/liquid components rippled through the base → **ribbons or swirls, never chunks**:
 - Caramel sauce, chocolate sauce, fruit jam/preserves
