@@ -48,6 +48,18 @@ Template that works:
 45-degree angle of [flavor] cookies-and-cream ice cream in a white ceramic bowl, creamy [base color] ice cream densely speckled and studded throughout with crushed [cookie] — irregular matte-black cookie crumbs and small broken pieces, some showing white cream filling, a few pieces on top, dense creamy freshly scooped texture, whole [cookie] and [props] beside the bowl, soft natural light from the left, shallow depth of field, food photography --ar 4:3 --v 6.1 --style raw
 ```
 
+#### ⭐ Golden crumb mix-ins (graham cracker / pie crust / cobbler) — extends the cookie case
+Golden baked crumbs (graham cracker, pie crust, cobbler/biscuit) hit the **same** wall as cookies, but worse: MidJourney reads "graham cracker crumble" / "pie crust pieces" as a **crust or a topping pile on the crown**, never distributed. Fighting it word-by-word ("throughout", "in cross-section") fails. What works — hijack the cookies-and-cream render and recolor:
+
+1. **Lead with "cookies-and-cream ice cream," then swap the piece color.** "cookies-and-cream ice cream, but with a [base] and **golden [graham cracker / pie crust / cobbler] bits in place of the usual dark chocolate cookie pieces**." Anchoring to cookies-and-cream (a render MJ knows cold) forces the even internal distribution — you're only changing brown→golden.
+2. **Say "fine crumbs," not "pieces/chunks."** Default renders them too big — use **"fine golden crumbs, tiny crumb-size specks, small like fine cookie crumbs, not big chunks."**
+3. Proven on blueberry-cheesecake-crumble, blueberry-pie, vanilla-blueberry-cobbler (all had the mix-in only in the title — the recipe was fixed to add a real `mix-ins` row + Mix-In step first).
+
+Template:
+```
+45-degree angle of cookies-and-cream ice cream in a white ceramic bowl, but with a [base color/flavor] base and fine golden [graham cracker / pie crust / cobbler] crumbs in place of the usual dark chocolate cookie pieces — tiny crumb-size golden-brown specks scattered densely and evenly all the way through the scoop, small like fine cookie crumbs not big chunks, [base] with the crumbs suspended throughout and visible across the whole scooped surface, dense creamy freshly scooped texture, [props] beside the bowl, soft natural light from the left, shallow depth of field, food photography --ar 4:3 --v 6.1 --style raw
+```
+
 ### Swirls (`group_name: swirl`)
 Soft/liquid components rippled through the base → **ribbons or swirls, never chunks**:
 - Caramel sauce, chocolate sauce, fruit jam/preserves
@@ -58,7 +70,7 @@ Soft/liquid components rippled through the base → **ribbons or swirls, never c
 MidJourney hides swirls inside a single smooth scoop, and renders "marbled tub" framings weakly. Three things make a swirl read clearly every time:
 
 1. **Show the swirl in TWO places: surface + cut face.** Relying on the cut interior alone fails when MidJourney renders a rounded (uncut) scoop. Use a `side angle` with **"boldly marbled with thick distinct ribbons of [X] — the swirl clearly visible both streaking across the surface and exposed in cross-section on the freshly scooped face"** plus **"dense velvety two-tone texture."** Naming both places gives the ribbon two chances to render.
-2. **Maximize color contrast — this is the #1 swirl-killer.** A deep/saturated swirl on a pale base pops (deep red jam on ivory cream cheese). Low-contrast pairings barely read: golden passion fruit on white vanilla, **tan almond/peanut butter on green matcha**, white marshmallow on vanilla. When the swirl is naturally close to the base, **push it darker/richer** — e.g. render almond butter as "rich golden-brown caramelized almond butter," passion fruit as "vivid deep golden-orange." If it can't be pushed, expect a weak swirl.
+2. **Maximize color contrast — this is the #1 swirl-killer.** A deep/saturated swirl on a pale base pops (deep red jam on ivory cream cheese). Low-contrast pairings barely read: golden passion fruit on white vanilla, **tan almond/peanut butter on green matcha**, white marshmallow on vanilla, **golden caramel on pale ivory froyo** (drizzles on the crown instead of marbling — the classic caramel failure). When the swirl is naturally close to the base, **push it darker/richer** — e.g. render almond butter as "rich golden-brown caramelized almond butter," passion fruit as "vivid deep golden-orange," **caramel as "deep dark amber caramel"** (proven fix for salted-caramel froyo: dark amber marbles through the body, plain golden just drizzles). If it can't be pushed, expect a weak swirl.
 3. **Use bold marbling verbs, not gentle ones.** "boldly marbled," "thick distinct ribbons," "unmistakable two-tone swirl" — never "subtle," "hint of," or "delicate."
 
 Template that works:
