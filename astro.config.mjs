@@ -10,6 +10,9 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
   site: 'https://eatcreami.com',
   output: 'server',
+  // Keep Astro v6 whitespace behavior; the v7 'jsx' default can change
+  // spacing between inline elements in prose-heavy pages
+  compressHTML: true,
   adapter: vercel(),
   integrations: [react()],
   i18n: {
