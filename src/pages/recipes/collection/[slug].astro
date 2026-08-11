@@ -11,6 +11,8 @@ import { buildRecipeListJsonLd, buildFaqJsonLd } from '../../../lib/seo';
 import { t, localePath } from '../../../i18n';
 import { translateRecipeArray } from '../../../lib/translations';
 import { COLLECTIONS, getCollection, getCollectionMeta } from '../../../lib/collections';
+import { getGuidesForCollection } from '../../../lib/blogGuides';
+import GuideCallout from '../../../components/blog/GuideCallout.astro';
 import { marked } from 'marked';
 
 const { slug } = Astro.params;
@@ -77,6 +79,9 @@ const breadcrumbs = [
   { name: t('breadcrumb.recipes', locale), url: `${siteUrl}${lp('/recipes')}` },
   { name: meta.title, url: `${siteUrl}${lp(`/recipes/collection/${slug}`)}` },
 ];
+
+// Contextual blog-guide links for this hub
+const collectionGuides = getGuidesForCollection(slug!);
 
 // Other collections for cross-linking (exclude current)
 const otherCollections = COLLECTIONS
@@ -216,6 +221,15 @@ const otherCollections = COLLECTIONS
             ))}
           </div>
         </ScrollReveal>
+      </div>
+    </section>
+  )}
+
+  <!-- Contextual guide links -->
+  {collectionGuides.length > 0 && (
+    <section class="py-6">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <GuideCallout guides={collectionGuides} locale={locale} />
       </div>
     </section>
   )}

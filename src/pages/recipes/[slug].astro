@@ -22,6 +22,8 @@ import { calculateNutrition } from '../../lib/nutrition';
 import { getSimilarRecipes } from '../../lib/recommendations';
 import { buildRecipeImageSrcset } from '../../lib/images';
 import { COLLECTIONS, getCollectionMeta } from '../../lib/collections';
+import { getGuidesForRecipe } from '../../lib/blogGuides';
+import GuideCallout from '../../components/blog/GuideCallout.astro';
 const lp = (path: string) => localePath(path, locale);
 
 const { slug } = Astro.params;
@@ -133,6 +135,9 @@ const matchingCollections = COLLECTIONS
   })
   .map((col) => ({ slug: col.slug, meta: getCollectionMeta(col.slug, locale)! }))
   .filter((c) => c.meta);
+
+// Contextual blog-guide links (recipe → guide internal links)
+const recipeGuides = getGuidesForRecipe(recipe.categories.map((c: { slug: string }) => c.slug));
 ---
 
 <BaseLayout
@@ -522,6 +527,9 @@ const matchingCollections = COLLECTIONS
           )}
 
           <!-- Allergen info is in "{ui("beforeYouBegin", locale)}" section above -->
+
+          <!-- Contextual guide links -->
+          <GuideCallout guides={recipeGuides} locale={locale} />
 
           <!-- FAQ Section -->
           {recipeFaqs.length > 0 && (

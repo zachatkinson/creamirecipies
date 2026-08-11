@@ -1,0 +1,32 @@
+---
+import type { Locale } from '../../i18n';
+import { localePath } from '../../i18n';
+import { ui } from '../../lib/translations';
+import type { BlogGuide } from '../../lib/blogGuides';
+
+interface Props {
+  guides: BlogGuide[];
+  locale: Locale;
+}
+
+const { guides, locale } = Astro.props;
+---
+
+{guides.length > 0 && (
+  <aside class="print-hide mt-10 pt-8 border-t border-slate-100" aria-label={ui('fromOurGuides', locale)}>
+    <h2 class="font-display text-xl font-bold text-chocolate mb-4">{ui('fromOurGuides', locale)}</h2>
+    <div class="space-y-3">
+      {guides.map((guide) => (
+        <div class="p-5 bg-cream/50 rounded-xl border border-slate-100 hover:border-blush transition-colors">
+          <a
+            href={localePath(`/blog/${guide.postSlug}`, locale)}
+            class="font-semibold text-berry hover:text-berry/80 transition-colors"
+          >
+            {guide.label[locale]}
+          </a>
+          <p class="text-sm text-slate-600 mt-1">{guide.teaser[locale]}</p>
+        </div>
+      ))}
+    </div>
+  </aside>
+)}
