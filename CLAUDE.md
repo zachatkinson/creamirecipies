@@ -1,7 +1,7 @@
 # Creami Recipes - Development Guidelines
 
 ## Tech Stack
-- **Frontend**: Astro v5 (hybrid static + SSR), React islands for interactivity
+- **Frontend**: Astro v7 (hybrid static + SSR), React islands for interactivity
 - **Styling**: Tailwind CSS v4
 - **Backend**: Supabase (PostgreSQL, Auth, Storage)
 - **Animations**: GSAP + PixiJS

@@ -65,7 +65,7 @@ const config = sizeConfig[size];
   style={`max-width: ${config.width}; ${isDev ? `min-height: ${config.minHeight};` : ''} margin: 0 auto;`}
 >
   {isDev ? (
-    <!-- Dev placeholder: shows ad size for layout planning -->
+    /* Dev placeholder: shows ad size for layout planning */
     <div
       class="flex items-center justify-center border-2 border-dashed border-slate-300 rounded-lg bg-slate-50/50 text-slate-500 text-xs font-mono select-none"
       style={`width: 100%; height: ${config.responsive ? config.minHeight : config.height}; max-width: ${config.width};`}
@@ -73,12 +73,10 @@ const config = sizeConfig[size];
       AD: {config.label}
     </div>
   ) : (
-    <!-- Production: ad network script will fill this, min-height set by ad script -->
+    /* Production: ad network script will fill this; ad code injected by ad network script in BaseLayout */
     <div
       class="ad-container"
       style={`width: 100%; max-width: ${config.width};`}
-    >
-      <!-- Ad code injected by ad network script in BaseLayout -->
-    </div>
+    />
   )}
 </div>
