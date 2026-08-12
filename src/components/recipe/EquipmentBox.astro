@@ -1,0 +1,50 @@
+---
+import type { EquipmentProduct } from '../../lib/equipment';
+import type { Locale } from '../../i18n';
+import { t } from '../../i18n';
+import { ui } from '../../lib/translations';
+import { AMAZON_TAG } from '../../lib/affiliate';
+
+interface Props {
+  products: EquipmentProduct[];
+  locale: Locale;
+}
+
+const { products, locale } = Astro.props;
+---
+
+{products.length > 0 && (
+  <div class="print-hide bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+    <h2 class="font-display text-xl font-bold text-chocolate mb-4">{ui('equipmentTitle', locale)}</h2>
+    <ul class="space-y-3" role="list">
+      {products.map((product) => (
+        <li>
+          <a
+            href={`https://www.amazon.com/dp/${product.asin}?tag=${AMAZON_TAG}`}
+            rel="sponsored nofollow noopener"
+            target="_blank"
+            class="group flex items-center gap-3 p-2 -m-2 rounded-xl hover:bg-cream/60 transition-colors"
+          >
+            <img
+              src={product.image_url ?? `/images/products/${product.asin}.avif`}
+              alt={product.name}
+              width="48"
+              height="48"
+              loading="lazy"
+              class="w-12 h-12 object-contain rounded-lg shrink-0 bg-white"
+            />
+            <span class="min-w-0">
+              <span class="block text-sm font-medium text-chocolate group-hover:text-berry transition-colors leading-snug">
+                {product.name}
+              </span>
+              <span class="block text-xs text-berry mt-0.5">{t('shop.viewOnAmazon', locale)} &rarr;</span>
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p class="text-[11px] text-slate-400 leading-snug mt-4 pt-3 border-t border-slate-100">
+      {ui('affiliateDisclosure', locale)}
+    </p>
+  </div>
+)}

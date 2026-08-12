@@ -23,7 +23,9 @@ import { getSimilarRecipes } from '../../lib/recommendations';
 import { buildRecipeImageSrcset } from '../../lib/images';
 import { COLLECTIONS, getCollectionMeta } from '../../lib/collections';
 import { getGuidesForRecipe } from '../../lib/blogGuides';
+import { getEquipmentProducts } from '../../lib/equipment';
 import GuideCallout from '../../components/blog/GuideCallout.astro';
+import EquipmentBox from '../../components/recipe/EquipmentBox.astro';
 const lp = (path: string) => localePath(path, locale);
 
 const { slug } = Astro.params;
@@ -44,6 +46,10 @@ const translation = await getRecipeTranslation(supabase, recipe.id, locale);
 if (translation) {
   recipe = applyTranslation(recipe, translation);
 }
+
+// Equipment box matching runs on English ingredient names, captured before
+// the locale translation loop below mutates them in place.
+const englishIngredientNames = recipe.ingredients.map((i) => i.name);
 
 // Get ingredient and step translations
 const ingredientNames = await getIngredientTranslations(supabase, locale);
@@ -138,6 +144,9 @@ const matchingCollections = COLLECTIONS
 
 // Contextual blog-guide links (recipe → guide internal links)
 const recipeGuides = getGuidesForRecipe(recipe.categories.map((c: { slug: string }) => c.slug));
+
+// Equipment box: machine + up to two ingredient-matched products (localized)
+const equipmentProducts = await getEquipmentProducts(supabase, englishIngredientNames, locale);
 ---
 
 <BaseLayout
@@ -461,6 +470,8 @@ const recipeGuides = getGuidesForRecipe(recipe.categories.map((c: { slug: string
                 locale={locale}
               />
             </div>
+            <!-- Equipment / gear box (affiliate) -->
+            <EquipmentBox products={equipmentProducts} locale={locale} />
             <!-- Ad: sidebar medium rectangle (sticky with ingredients) -->
             <AdUnit size="medium-rectangle" slot="recipe-sidebar" />
           </div>

@@ -233,6 +233,7 @@ export const RECIPE_UI: Record<string, Record<Locale, string>> = {
   'sponsor': { en: 'Sponsor', fr: 'Sponsor', es: 'Patrocinador', de: 'Sponsor', pt: 'Patrocinador' },
   'sponsoredBy': { en: 'Sponsored by', fr: 'Sponsorisé par', es: 'Patrocinado por', de: 'Gesponsert von', pt: 'Patrocinado por' },
   'ingredients': { en: 'Ingredients', fr: 'Ingrédients', es: 'Ingredientes', de: 'Zutaten', pt: 'Ingredientes' },
+  'equipmentTitle': { en: "What You'll Need", fr: 'Ce qu\'il vous faut', es: 'Lo que necesitas', de: 'Was du brauchst', pt: 'O que você vai precisar' },
   'directions': { en: 'Directions', fr: 'Instructions', es: 'Instrucciones', de: 'Zubereitung', pt: 'Modo de Preparo' },
   'cookMode': { en: 'Cook Mode', fr: 'Mode Cuisine', es: 'Modo Cocina', de: 'Kochmodus', pt: 'Modo Cozinha' },
   'cookModeNext': { en: 'Next', fr: 'Suivant', es: 'Siguiente', de: 'Weiter', pt: 'Próximo' },
