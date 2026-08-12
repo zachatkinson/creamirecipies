@@ -8,15 +8,17 @@ import { AMAZON_TAG } from '../../lib/affiliate';
 interface Props {
   products: EquipmentProduct[];
   locale: Locale;
+  /** 'stack' fits narrow sidebars; 'row' spreads items across wide pages. */
+  layout?: 'stack' | 'row';
 }
 
-const { products, locale } = Astro.props;
+const { products, locale, layout = 'stack' } = Astro.props;
 ---
 
 {products.length > 0 && (
   <div class="print-hide bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
     <h2 class="font-display text-xl font-bold text-chocolate mb-4">{ui('equipmentTitle', locale)}</h2>
-    <ul class="space-y-3" role="list">
+    <ul class:list={[layout === 'row' ? 'grid grid-cols-1 sm:grid-cols-3 gap-3' : 'space-y-3']} role="list">
       {products.map((product) => (
         <li>
           <a

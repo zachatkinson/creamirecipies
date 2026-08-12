@@ -12,7 +12,9 @@ import { t, localePath } from '../../../i18n';
 import { translateRecipeArray } from '../../../lib/translations';
 import { COLLECTIONS, getCollection, getCollectionMeta } from '../../../lib/collections';
 import { getGuidesForCollection } from '../../../lib/blogGuides';
+import { getCollectionEquipment } from '../../../lib/equipment';
 import GuideCallout from '../../../components/blog/GuideCallout.astro';
+import EquipmentBox from '../../../components/recipe/EquipmentBox.astro';
 import { marked } from 'marked';
 
 const { slug } = Astro.params;
@@ -56,6 +58,9 @@ const recipeListJsonLd = buildRecipeListJsonLd(
   siteUrl,
   meta.title,
 );
+
+// Themed equipment box for this hub (affiliate)
+const equipmentProducts = await getCollectionEquipment(supabase, slug!, locale);
 
 // Render long-form intro markdown (optional per collection)
 const longIntroHtml = meta.longIntro ? await marked.parse(meta.longIntro) : null;
@@ -152,6 +157,15 @@ const otherCollections = COLLECTIONS
       )}
     </div>
   </section>
+
+  <!-- Themed equipment box (affiliate) -->
+  {equipmentProducts.length > 0 && (
+    <section class="pb-12">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <EquipmentBox products={equipmentProducts} locale={locale} layout="row" />
+      </div>
+    </section>
+  )}
 
   <!-- Structured long-form intro (preferred for richer pages) -->
   {introSections && (

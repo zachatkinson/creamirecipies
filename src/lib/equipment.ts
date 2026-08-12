@@ -66,6 +66,24 @@ export function selectEquipmentAsins(ingredientNames: string[]): string[] {
 }
 
 /**
+ * Themed equipment sets for collection hub pages: three products that fit the
+ * hub's category. Soft serve leads with the Scoop & Swirl; everything else
+ * leads with the 7-in-1.
+ */
+export const COLLECTION_EQUIPMENT: Readonly<Record<string, readonly string[]>> = {
+  'protein-ice-cream': [MACHINE_ASIN, 'B002TG3QPO', 'B00H4KDZZ6'],
+  'ice-cream': [MACHINE_ASIN, 'B01N6PM4AI', PINTS_ASIN],
+  'sorbet': [MACHINE_ASIN, 'B007TUQF9O', PINTS_ASIN],
+  'gelato': [MACHINE_ASIN, 'B0DZXPN7JQ', 'B006OD5ISG'],
+  'frozen-yogurt': [MACHINE_ASIN, 'B00WTR0CDM', 'B00CMQD3VS'],
+  'milkshake': [MACHINE_ASIN, 'B000VDSTV8', 'B0199CJ8K2'],
+  'smoothie-bowl': [MACHINE_ASIN, 'B00JB2QS7C', 'B00CMQD3VS'],
+  'lite-ice-cream': [MACHINE_ASIN, 'B07YBTWGPM', 'B000EDK7ZQ'],
+  'italian-ice': [MACHINE_ASIN, 'B007TUQF9O', PINTS_ASIN],
+  'soft-serve': ['B0DSJW8SFG', 'B000E1DSG8', 'B08464TZV5'],
+};
+
+/**
  * Fetch localized product data for the selected ASINs, preserving selection
  * order. Falls back to English name/description when no translation exists.
  */
@@ -74,8 +92,28 @@ export async function getEquipmentProducts(
   ingredientNames: string[],
   locale: Locale,
 ): Promise<EquipmentProduct[]> {
-  const asins = selectEquipmentAsins(ingredientNames);
+  return fetchProductsByAsins(client, selectEquipmentAsins(ingredientNames), locale);
+}
 
+/**
+ * Fetch the themed equipment set for a collection hub. Returns an empty array
+ * for collections without a configured set.
+ */
+export async function getCollectionEquipment(
+  client: SupabaseClient,
+  collectionSlug: string,
+  locale: Locale,
+): Promise<EquipmentProduct[]> {
+  const asins = COLLECTION_EQUIPMENT[collectionSlug];
+  if (!asins || asins.length === 0) return [];
+  return fetchProductsByAsins(client, [...asins], locale);
+}
+
+async function fetchProductsByAsins(
+  client: SupabaseClient,
+  asins: string[],
+  locale: Locale,
+): Promise<EquipmentProduct[]> {
   const { data: products } = await client
     .from('products')
     .select('asin, name, description, image_url')

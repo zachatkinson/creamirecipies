@@ -1,5 +1,6 @@
 import { describe, test, expect } from 'vitest';
-import { selectEquipmentAsins, MACHINE_ASIN, PINTS_ASIN, MAX_EQUIPMENT_ITEMS } from './equipment';
+import { selectEquipmentAsins, COLLECTION_EQUIPMENT, MACHINE_ASIN, PINTS_ASIN, MAX_EQUIPMENT_ITEMS } from './equipment';
+import { COLLECTIONS } from './collections';
 
 describe('selectEquipmentAsins', () => {
   test('always leads with the machine', () => {
@@ -64,5 +65,39 @@ describe('selectEquipmentAsins', () => {
     const result = selectEquipmentAsins(ingredients);
     // Assert
     expect(new Set(result).size).toBe(result.length);
+  });
+});
+
+describe('COLLECTION_EQUIPMENT', () => {
+  test('covers every collection hub', () => {
+    // Arrange
+    const hubSlugs = COLLECTIONS.map((c) => c.slug);
+    // Act
+    const mappedSlugs = Object.keys(COLLECTION_EQUIPMENT);
+    // Assert
+    for (const slug of hubSlugs) {
+      expect(mappedSlugs).toContain(slug);
+    }
+  });
+
+  test('every set has exactly three unique, well-formed ASINs', () => {
+    // Arrange
+    const asinFormat = /^B[A-Z0-9]{9}$/;
+    // Act & Assert
+    for (const [slug, asins] of Object.entries(COLLECTION_EQUIPMENT)) {
+      expect(asins.length, slug).toBe(MAX_EQUIPMENT_ITEMS);
+      expect(new Set(asins).size, slug).toBe(asins.length);
+      for (const asin of asins) expect(asin, slug).toMatch(asinFormat);
+    }
+  });
+
+  test('soft-serve leads with the Scoop & Swirl, others with the 7-in-1', () => {
+    // Arrange
+    const { 'soft-serve': softServe, ...rest } = COLLECTION_EQUIPMENT;
+    // Act & Assert
+    expect(softServe[0]).toBe('B0DSJW8SFG');
+    for (const [slug, asins] of Object.entries(rest)) {
+      expect(asins[0], slug).toBe(MACHINE_ASIN);
+    }
   });
 });
