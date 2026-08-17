@@ -112,7 +112,7 @@ The recipe's `base_type` field (matches `churn_program`) sets the overall look. 
 | **Ice Cream** | Classic creamy, smooth, scoopable. Rounded scoops in a white ceramic bowl. The default. |
 | **Lite Ice Cream** | Visually identical to ice cream (it's protein/low-cal) — creamy scoops. Do **not** imply a thin or "diet" look. |
 | **Gelato** | Denser and silkier than ice cream, glossier, less air. Render as dense, slightly flattened scoops or a smooth spade-swept surface; Italian styling suits it. |
-| **Frozen Yogurt** | Creamy but a touch softer and glossier, bright/fresh feel. Scoops or a soft swirl. Loanword "Frozen Yogurt" is fine in any locale. |
+| **Frozen Yogurt** | Creamy but a touch softer and glossier, bright/fresh feel. **Scoops only** — never a piped soft-serve swirl; Creami froyo is spun in a pint and scooped, it doesn't pipe. Loanword "Frozen Yogurt" is fine in any locale. |
 | **Sorbet** | Dairy-free, **dense and smooth** with vivid saturated fruit color, slightly glossy/wet look. Scoops in a bowl or glass with fresh fruit. **Not** crystalline, not airy. |
 | **Italian Ice** | **Coarse, crystalline, granita-like shaved-ice** — NOT creamy. Often a clear glass cup; icy crystals catching the light, condensation. |
 | **Milkshake** | Drinkable and thick. Serve in a **tall glass with a straw**, usually whipped cream on top and maybe a drizzle. Never a scoop in a bowl. |
