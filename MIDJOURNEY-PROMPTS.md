@@ -60,6 +60,20 @@ Template:
 45-degree angle of cookies-and-cream ice cream in a white ceramic bowl, but with a [base color/flavor] base and fine golden [graham cracker / pie crust / cobbler] crumbs in place of the usual dark chocolate cookie pieces — tiny crumb-size golden-brown specks scattered densely and evenly all the way through the scoop, small like fine cookie crumbs not big chunks, [base] with the crumbs suspended throughout and visible across the whole scooped surface, dense creamy freshly scooped texture, [props] beside the bowl, soft natural light from the left, shallow depth of field, food photography --ar 4:3 --v 6.1 --style raw
 ```
 
+#### ⭐ White flake mix-ins in dark bases (shredded coconut in chocolate) — named-flavor anchor
+Two approaches that FAIL for white flakes in a dark base: (1) plain description ("chocolate ice cream studded with shredded coconut, a few scattered on top") renders ALL the coconut as a garnish sprinkle on the crown — the training data for this pairing is dominated by garnish shots; (2) the inverted cookies-and-cream hijack ("cookies-and-cream but with a dark chocolate base and white coconut in place of the cookie pieces") loses to the anchor — it renders actual cookies-and-cream (pale base, dark crumbs).
+
+What works — **anchor to a named flavor whose reference photos natively have the pieces distributed**, then describe the flecks as embedded:
+
+1. **Lead with the candy/dessert name.** "Mounds candy bar inspired dark chocolate coconut ice cream" — distribution comes free from the anchor's imagery instead of from instructions MidJourney ignores.
+2. **Say "embedded across the freshly scooped face,"** never "scattered on top" — that phrase is what causes the garnish render.
+3. **Expect the anchor to drag in a glossy/melty fudge look** (candy-bar photography skews wet). Counter it with **"firm dense scoops straight from the freezer, matte frosty surface with sharp scoop ridges"** plus **`--no melting, drips, glossy sheen, syrup`** — the `--no` parameter actually works, unlike negations in prose.
+
+Proven on chocolate-coconut-cream-ice-cream (2026-08-17). Template:
+```
+45-degree angle of [named candy/dessert] inspired [base] ice cream in a white ceramic bowl, [base color] ice cream densely speckled all the way through with [white flake mix-in], flecks embedded across the whole freshly scooped face, firm dense scoops straight from the freezer, matte frosty surface with sharp scoop ridges, [props] beside the bowl, soft natural light from the left, shallow depth of field, food photography --ar 4:3 --style raw --no melting, drips, glossy sheen, syrup
+```
+
 ### Swirls (`group_name: swirl`)
 Soft/liquid components rippled through the base → **ribbons or swirls, never chunks**:
 - Caramel sauce, chocolate sauce, fruit jam/preserves
@@ -114,8 +128,9 @@ The recipe's `base_type` field (matches `churn_program`) sets the overall look. 
 - **Aspect ratio** — depends on where the image is used:
   - **Recipe hero images**: `--ar 4:3` → delivered at 800x600, `public/images/recipes/<slug>.avif`
   - **Blog featured images**: `--ar 16:9` → delivered at 1200x675, `public/images/blog/<slug>.avif`
-- **Version**: `--v 6.1` (or latest)
+- **Version**: do NOT pin `--v 6.1` — omit the version flag and use the current default. Newer versions have better prompt adherence (mix-in distribution especially). Older templates in this doc still show `--v 6.1`; drop it when using them.
 - **Style**: `--style raw` for realistic food photography
+- **Negatives**: `--no melting, drips, glossy sheen, syrup` when a render comes back wet/melty — the `--no` parameter works; negations written in prose ("no melting") do not
 - **Quality**: default (no `--q` flag needed)
 - **Format**: always deliver final as AVIF (project standard). After generating, downscale to the target size and convert to `.avif`.
 
