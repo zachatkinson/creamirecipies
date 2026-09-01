@@ -103,6 +103,15 @@ On top of the scoop, not mixed in:
 
 > ⚠️ Only a handful of recipes itemize toppings as `group_name: topping` rows — most garnishes are described only in the recipe **title/description/body**. Always read the description for garnish and styling cues, not just the ingredients table.
 
+
+#### ⭐ Base-type drift fixes (learned 2026-09-01)
+Even with the right words, MidJourney drifts toward the most-photographed version of a flavor. Four proven counters:
+
+1. **Berry-in-cream ice cream renders as SORBET.** A base like 1 cup cream + ½ cup milk + ⅓ cup blackberry puree is a *pastel* dairy color, but "deep violet blackberry ice cream" comes back saturated, glossy, and wet (sorbet). Say **"creamy pastel mauve, soft dairy-rich lilac like berries blended into cream, matte creamy texture"** + `--no sorbet, glossy sheen, wet, syrup, melting`.
+2. **Sorbet "glossy/wet sheen" wording drifts to a glazed/caramelized syrup coat.** Use **"firm dense scoops with a faint frosty sheen, clean sharp scoop ridges straight from the freezer"** + `--no syrup, glaze, caramelized, drips, melting, sauce, wet`. The sorbet still reads as sorbet from color + density.
+3. **Plain single-flavor scoops spawn phantom mix-ins** (a "bourbon vanilla" hero grew red bacon/cherry chunks). Say **"plain, uniform, no mix-ins and no visible pieces"** + `--no chunks, fruit, mix-ins, swirl`.
+4. **"Frozen yogurt" in the visual description pulls froyo-shop soft-serve imagery.** Keep the loanword in the title, but describe the food as **"firm freshly scooped [color] scoops"** and let props/color carry the froyo identity; add `--no soft serve, swirl`.
+
 ## Base Type → Texture & Presentation
 
 The recipe's `base_type` field (matches `churn_program`) sets the overall look. **Match it or the image will be wrong** — e.g. a sorbet rendered as fluffy creamy scoops, a milkshake rendered as a bowl, or an Italian ice rendered smooth instead of crystalline. The eight real base types and how to render each:
